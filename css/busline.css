@@ -1,7 +1,7 @@
 ﻿a{text-decoration:none}
 img {border: 0px}
 body{
- background-image:url("/img/line_background.jpg");
+ background-image:url("../img/line_background.jpg");
  background-attachment:fixed;
  font-family: 微軟正黑體;
 }
