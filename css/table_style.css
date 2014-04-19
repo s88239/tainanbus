@@ -1,0 +1,10 @@
+﻿table {
+  border-collapse: collapse;
+  border: none;
+  font: 微軟正黑體, helvetica, verdana, arial, sans-serif;
+  border-spacing: 1px;
+  }
+
+tbody tr:hover td{
+  background: #0E0E0E;
+  }

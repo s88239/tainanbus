@@ -1,0 +1,31 @@
+﻿td a{
+display:inline-block;
+height:100px;
+padding-top: 50px;
+text-decoration:none;
+}
+img {border: 0px}
+td{
+  color:#FFFFFF;
+  font-family:微軟正黑體;font-size:20;
+  text-align:center;
+}
+img.indexpic{
+  width:319;height:80;
+}
+a.box{
+  width:180px;
+}
+a.box2{
+  width:365px;
+}
+a.box3{
+  width:550px;
+  color: #000000;
+}
+#entext{
+  font-family:Verdana;font-size:16;
+}
+#text{
+  color:#000000;
+}

@@ -1,0 +1,426 @@
+﻿	html, body
+	{
+		height: 100%;
+	}
+	
+	body
+	{
+		margin: 0px;
+		padding: 0px;
+		background: #333333;
+		font-family: 微軟正黑體, 'Source Sans Pro', sans-serif;
+		font-size: 12pt;
+		font-weight: 400;
+		color: #000000;
+	}
+	
+	
+	h1, h2, h3
+	{
+		margin: 0;
+		padding: 0;
+	}
+	
+	p, ol, ul
+	{
+		margin-top: 0;
+	}
+	
+	ol, ul
+	{
+		padding: 0;
+		list-style: none;
+	}
+	
+	p
+	{
+		line-height: 180%;
+	}
+	
+	strong
+	{
+	}
+	
+	a
+	{
+		color: #0000FF;
+	}
+	
+	a:hover
+	{
+		text-decoration: none;
+	}
+	
+	table
+	{
+		border: 0;
+		margin:0 auto; /*表格居中*/
+	}
+	
+	th, td
+	{
+		padding: 5pt;
+	}
+	
+	.container
+	{
+		margin: 0px auto;
+		width: 1200px;
+	}
+	
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+	.button
+	{
+		display: inline-block;
+		margin-top: 2em;
+		padding: 1em 2em 1em 2em;
+		background: #8DCB89;
+		border-radius: 8px;
+		letter-spacing: 0.20em;
+		line-height: 1.8em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1.2em;
+		color: #FFF;
+	}
+	
+	.button:before
+	{
+		display: inline-block;
+		background: #8DCB89;
+		margin-right: 1em;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 20px;
+		text-align: center;
+		color: #272925;
+	}
+	
+	.button-small
+	{
+		padding: 0.9em 2em;
+		background: #8DCB89;
+		border-radius: 5px;
+		line-height: 1.8em;
+		font-size: 1em;
+	}
+		
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+
+	.title
+	{
+		margin-bottom: 3em;
+	}
+	
+	.title h2
+	{
+		font-size: 2.8em;
+		color: rgba(255,255,255,0.9);
+	}
+	
+	.title .byline
+	{
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1.1em;
+		color: #6F6F6F;
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header-wrapper
+	{
+		overflow: hidden;
+		padding: 2em 0em;
+		background: #8DCB89;
+	}
+
+	#header
+	{
+	}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+	#logo
+	{
+		padding: 1em 0em;
+		text-align: center;
+	}
+	
+	#logo h1
+	{
+		font-size: 3.5em;
+	}
+	
+	#logo a
+	{
+		text-decoration: none;
+		color: #FFF;
+	}
+	
+	#logo span
+	{
+		letter-spacing: 0.10em;
+		text-transform: uppercase;
+		font-size: 0.90em;
+		color: rgba(255,255,255,0.5);
+	}
+
+	#logo span a
+	{
+		color: rgba(255,255,255,0.8);
+	}
+	
+	
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+	#menu
+	{
+	}
+	
+	#menu ul
+	{
+		text-align: center;
+	}
+	
+	#menu li
+	{
+		display: inline-block;
+	}
+	
+	#menu li a, #menu li span
+	{
+		display: inline-block;
+		margin-left: 0.50em;
+		padding: 1em 1.5em;
+		letter-spacing: 0.20em;
+		text-decoration: none;
+		font-size: 0.90em;
+		font-weight: 600;
+		text-transform: uppercase;
+		outline: 0;
+		color: #FFF;
+	}
+	
+	#menu li:hover a, #menu li.active a, #menu li.active span
+	{
+	}
+	
+	#menu .current_page_item a
+	{
+		background: #6FC06A;
+		border-radius: 8px;
+		color: #FFF;
+	}
+
+
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+	#wrapper1
+	{
+		background: #242424;
+	}
+
+	#wrapper2
+	{
+		background: #EDEDED;
+	}
+
+	#wrapper3
+	{
+		background: #FFFF99;
+	}
+	
+	#wrapper4
+	{
+		background: #E74E59;
+	}
+
+/*********************************************************************************/
+/* routeinfo                                                                       */
+/*********************************************************************************/
+
+	#routeinfo
+	{
+		overflow: hidden;
+		padding: 8em 0em;
+		text-align: center;
+		color: rgba(255,255,255,0.3);
+	}
+	
+	#routeinfo .content
+	{
+		padding: 0em 8em;
+	}
+	
+	#routeinfo a,
+	#routeinfo strong
+	{
+		color: rgba(255,255,255,0.6);
+	}
+
+
+/*********************************************************************************/
+/* faretable                                                                     */
+/*********************************************************************************/
+
+	#faretable
+	{
+		padding: 8em 0em;
+	}
+	
+	#faretable h3
+	{
+		display: block;
+		padding-bottom: 1em;
+		text-transform: uppercase;
+		font-size: 16pt;
+		color: rgba(0,0,0,0.6);
+	}
+
+	#faretable .title
+	{
+		text-align: center;
+	}
+
+	#faretable .title h2
+	{
+		color: rgba(0,0,0,0.8);
+	}
+	
+	#faretable .content
+	{
+		text-align: center;
+		color: #660066;
+	}
+	
+	#faretable .content h1
+	{
+		color: blue;
+	}
+
+
+	#faretable .content tbody tr:hover td, #faretable .content tr:hover td a, #faretable .content tr.odd:hover td, #faretable .content tr.odd:hover td a {
+		color: #ffffff;
+	} /*指過來字顏色變成白色*/
+	
+	#faretable .content tbody th
+	{
+		color: #AA0000;
+		border-bottom: 1px solid #000000; /*儲存格底線*/
+	}
+
+
+/*********************************************************************************/
+/* timetable                                                                    */
+/*********************************************************************************/
+
+	#timetable
+	{
+		overflow: hidden;
+		padding: 8em 0em;
+		background: #D6ACFF;
+		text-align: center;
+	}
+	
+	#timetable .title h2
+	{
+		color: rgba(0,0,0,0.8);
+	}
+	
+	#timetable .content
+	{
+	}
+	
+	#timetable .content table
+	{
+		background: white;
+		tbody tr.odd {	background: #f0f0f0; }
+	}
+
+	#timetable .content th
+	{
+		background: #800080;
+		color: white;
+	}
+
+	#timetable .content tbody tr:hover td, tr:hover td a, tr.odd:hover td, tr.odd:hover td a {
+		background: #800000;
+		color: #ffffff;
+	}
+
+
+/*********************************************************************************/
+/* transfer                                                                        */
+/*********************************************************************************/
+
+	#transfer
+	{
+		text-align: center;
+		padding: 8em 0em;
+	}
+	
+	#transfer .title span
+	{
+		color: rgba(255,255,255,0.4);
+	}
+	
+	#transfer .content tbody th
+	{
+		border-bottom: 1px solid #800000; /*儲存格底線*/
+	}
+	
+	#transfer .content tbody td
+	{
+		
+		border-bottom: 1px solid #800000; /*儲存格底線*/
+	}
+	#transfer .content tbody tr:hover td, #transfer .content tr:hover td a, #transfer .content tr.odd:hover td, #transfer .content tr.odd:hover td a
+	{
+		background: #800000;
+		color: #ffffff;
+	} /*指過來變深紅色*/
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		overflow: hidden;
+		padding: 5em 0em;
+		border-top: 1px solid rgba(255,255,255,0.08);
+	}
+	
+	#copyright p
+	{
+		letter-spacing: 0.20em;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 0.80em;
+		color: rgba(255,255,255,0.3);
+	}
+	
+	#copyright a
+	{
+		text-decoration: none;
+		color: rgba(255,255,255,0.6);
+	}
