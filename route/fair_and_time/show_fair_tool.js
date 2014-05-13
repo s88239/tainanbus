@@ -25,7 +25,84 @@ function query_fair(theForm, fair_array){
 	//alert(fd + ' ' + td);
 	//alert(fair_array[td][fd]+" "+fair_array[fd][td]);
 	document.getElementById("cash_adult").innerHTML = price; // 現金全票
-	document.getElementById("cash_half").innerHTML = (price/2).toFixed(0); // 現金半票
+	document.getElementById("cash_half").innerHTML = Math.ceil(price/2); // 現金半票，無條件進位
 	document.getElementById("RFID_adult").innerHTML = price-26; // 刷卡全票
-	document.getElementById("RFID_half").innerHTML = ((price-26)/2).toFixed(0); // 刷卡半票
+	document.getElementById("RFID_half").innerHTML = Math.ceil((price-26)/2); // 刷卡半票，無條件進位
+}
+
+function create_time_schedule(main_stop_name, time_consume, important_stop, time){
+	document.write('<table><tr>');
+	for(var i=0; i<main_stop_name.length; ++i){
+		document.write('<th>'+main_stop_name[i]+'</th>');
+	}
+	document.write('</tr>');
+	for(var i=0; i<time.length; ++i){
+		var special_tag = '';
+		var start_stop = 0;
+		var end_stop = main_stop_name.length - 1;
+		switch(time[i].length){
+			case 1:
+				break;
+			case 2:
+				special_tag = get_special_tag(time[i][1]);
+				break;
+			case 3:
+				start_stop = time[i][1];
+				end_stop = time[i][2];
+				break;
+			case 4:
+				start_stop = time[i][1];
+				end_stop = time[i][2];
+				special_tag = get_special_tag(time[i][3]);
+				break;
+			default:
+				//alert('array length error!');
+				break;
+		}
+		document.write('<tr>');
+		for(var j=0; j<main_stop_name.length; ++j){
+			document.write('<td>');
+			if(j<start_stop || j>end_stop) ; // do nothing
+			else if(judge_important_stop(j, important_stop)==true){
+				document.write('<font face="Arial Rounded MT Bold">' + special_tag + get_time(time[i][0], time_consume[j] - time_consume[start_stop]) + '</font>');
+			}
+			else document.write(get_time(time[i][0], time_consume[j] - time_consume[start_stop]));
+			document.write('</td>');
+		}
+		document.write('</tr>');
+	}
+	document.write('</table>');
+}
+
+function get_special_tag(arr){
+	var special_event = ''; // initialize
+	for(var j=0; j<arr.length; ++j){
+		if(arr[j]=='W')
+			special_event += '<font color="#0000FF">W</font>';
+		else if(arr[j]=='L')
+			special_event += '<font color="#FF0000">L</font>';
+		else special_event += arr[j];
+	}
+	//alert(special_event);
+	return special_event;
+}
+function judge_important_stop(idx, arr){
+	for(var i=0; i<arr.length; ++i){
+		if(idx==arr[i]) return true;
+	}
+	return false;
+}
+function get_time(time_str, offset){ // get the time of the stop
+	time_split = time_str.split(':');
+	time_hr = parseInt(time_split[0]);
+	time_min = parseInt(time_split[1]);
+	time_min += offset;
+	if(time_min>=60){
+		time_hr += Math.floor(time_min/60);
+		time_min %= 60;
+	}
+	hr_zero = (time_hr<10)? '0':'' ;
+	min_zero = (time_min<10)?'0':'' ;
+	new_time = hr_zero + time_hr + ':' + min_zero + time_min;
+	return new_time;
 }

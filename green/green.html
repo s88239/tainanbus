@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>台南市公車 ─ 綠幹線 路線資訊</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+@import url("../css/table_style.css");
+@import url("../css/default.css");
+select.get_fair option.option1
+{background-color: #007700;}
+select.get_fair option.option2
+{background-color: #3F0;}
+select.get_fair option.option3
+{background-color: #360;}
+select.get_fair option.option4
+{background-color: #3C0;}
+select.get_fair option.option5
+{background-color: #393;}
+select.get_fair option.option6
+{background-color: #6F3;}
+</style>
+<script language="javascript" src="../route/msg.js"></script>
+<script language="javascript" src="../route/fair_and_time/green.js"></script>
+<script language="javascript" src="../route/fair_and_time/show_fair_tool.js"></script>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="menu">
+			<p align="center">
+			<a href="index.html"><img src="../img/green_logo.png"></a>
+			</p>
+			<ul>
+				<li class="current_page_item"><a href="#" accesskey="1" title="">
+				路線圖</a></li>
+				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
+				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
+				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
+				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
+			</ul>
+		</div>
+		<div id="logo">
+			<img src="../route/green/green.jpg">
+			<p></p>
+			<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k__oSMhm8dFA" width="800" height="500"></iframe>-->
+		</div>
+	</div>
+</div>
+<div id="wrapper1">
+	<a name="info"></a>
+	<div id="routeinfo" class="container">
+		<div class="title">
+			<h2>台南市公車 ─ 綠幹線　路線資訊</h2>
+			<span class="byline">Tainan Bus Green Line, Route Information</span> </div>
+		<div class="content">
+			<table border="0">
+				<tr>
+					<td>起訖點</td>
+					<td>台南公園 － 玉井</td>
+				</tr>
+				<tr>
+					<td>營運公司</td>
+					<td>興南客運</td>
+				</tr>
+				<tr>
+					<td>首／末班車發車時刻</td>
+					<td>往玉井：05:55／21:55<br />往台南公園：06:00／22:00</td>
+				</tr>
+				<tr>
+					<td>班距</td>
+					<td>固定班次 尖15離30</td>
+				</tr>
+				<tr>
+					<td>收費方式</td>
+					<td>里程計費</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1100&locale=zh_TW" class="button">公車動態資訊</a> </div>
+	</div>
+</div>
+<div id="wrapper3">
+	<a name="fare"></a>
+	<div id="faretable" class="container">
+		<div class="title">
+			<h2>票價表</h2>
+			<span class="byline">Ticket Fare</span> </div>
+		<div class="content">
+			<script language="javascript">
+				create_select_menu(green_interval_stop, 6, 'green');
+			</script>
+			<br/>
+			<table id="showFairInfo">
+				<tr>
+					<th></th><th>全票</th><th>半票</th>
+				</tr>
+				<tr>
+					<td><b>投現</b></td>
+					<td id="cash_adult">-</td>
+					<td id="cash_half">-</td>
+				</tr>
+				<tr>
+					<td><b>電子票證</b></td>
+					<td id="RFID_adult">-</td>
+					<td id="RFID_half">-</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<!--<h3><font color="red">刷電子票證(悠遊卡、一卡通、臺灣通、遠通ETC)8公里免費</font></h3>
+			<h3>2hr內轉乘再優惠9元</h3>
+			<h3>65歲以上台南市民憑身分證免費搭乘</h3>-->
+			<script type="text/javascript">
+			document.write(MeteredMSG + PromotionMSG);
+			</script>
+			<p>　</p>
+		</div>
+	</div>
+</div>
+<div id="wrapper2">
+	<a name="time"></a>
+	<div id="timetable">
+		<div class="title">
+			<h2>時刻表</h2>
+			<span class="byline">Bus schedule</span> </div>
+		<div class="content">
+			<script language="javascript">
+				document.write('<h2>台南公園-&gt;玉井</h2>');
+				create_time_schedule(green_main_stop_name, green_main_stop_time_consume, green_important_stop, green_time_go);
+			</script>
+			<p><h2>除了起站與火車站為發車時間，其餘站點皆為預估時間，敬請提早候車。</h2></p>
+			<p><h3><font color="#0000FF">W</font>表示平日行駛；<font color="#FF0000">L</font>表示低地板公車</h3></p>
+		</div>
+	</div>
+</div>
+<div id="wrapper4">
+	<a name="transfer"></a>
+	<div id="transfer" class="container">
+		<div class="title">
+			<h2>台南市公車 － 3路 主要轉乘點資訊</h2>
+			<span class="byline">Tainan city bus NO.3, Transfer information</span>
+		</div>
+		<div class="content">
+			<table>
+				<tr>
+					<th rowspan="2">海東國小</th>
+					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
+					<td>7、10、11路</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
+					<td>藍23、藍24</td>
+				</tr>
+				<tr>
+					<th>特力屋、好市多</th>
+					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
+					<td>10路</td>
+				</tr>
+				<tr>
+					<th>文賢國中</th>
+					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
+					<td>藍23、藍24</td>
+				</tr>
+				<tr>
+					<th>西門路三段口</th>
+					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
+					<td>7、18路</td>
+				</tr>
+				<tr>
+					<th rowspan="2">赤崁樓</th>
+					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
+					<td>5路</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/taiwantrip_logo.png"></td>
+					<td>88、99</td>
+				</tr>
+				<tr>
+					<th rowspan="7">台南火車站</th>
+					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
+					<td>台鐵台南站</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/taiwantrip_logo.png"></td>
+					<td>88、99</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
+					<td>市區公車(除15、20路)</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
+					<td>綠幹線</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
+					<td>藍幹線</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
+					<td>紅幹線、紅1、紅2、紅3、紅4</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
+					<td>橘3、橘12</td>
+				</tr>
+				<tr>
+					<th>衛生局</th>
+					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
+					<td>6路</td>
+				</tr>
+				<tr>
+					<th rowspan="2">文化中心</th>
+					<td style="text-align: center"><img src="../route/transfer/hsr_shuttle_logo.png"></td>
+					<td>高鐵快捷公車H62</td>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/taiwantrip_logo.png"></td>
+					<td>88路</td>
+				</tr>
+				<tr>
+					<th>崇德路口</th>
+					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
+					<td>15路</td>
+				</tr>
+				<tr>
+					<th>德高國小</th>
+					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
+					<td>紅4</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<script type="text/javascript">document.write(copyrightMSG);</script>
+	<!--<p>Copyright (c) 2013 Tainan bus. All rights reserved. | Contact with
+	<a href="mailto:s88239@hotmail.com" rel="nofollow">administrator</a>.</p>-->
+</div>
+</body>
+</html>
