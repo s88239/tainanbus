@@ -30,16 +30,18 @@ function query_fair(theForm, fair_array){
 	document.getElementById("RFID_half").innerHTML = Math.ceil((price-26)/2); // 刷卡半票，無條件進位
 }
 
-function create_time_schedule(main_stop_name, time_consume, important_stop, time){
+function create_time_schedule(main_stop_name, time_consume, important_stop, time, isReturn){
 	document.write('<table><tr>');
-	for(var i=0; i<main_stop_name.length; ++i){
+	var start_idx = (isReturn==false) ? 0 : main_stop_name.length - 1;
+	var end_idx = (isReturn==false) ? main_stop_name.length : -1;
+	for(var i=start_idx; i!=end_idx; i=(isReturn==false)?(i+1):(i-1) ){
 		document.write('<th>'+main_stop_name[i]+'</th>');
 	}
 	document.write('</tr>');
 	for(var i=0; i<time.length; ++i){
 		var special_tag = '';
-		var start_stop = 0;
-		var end_stop = main_stop_name.length - 1;
+		var start_stop = (isReturn==false) ? 0 : main_stop_name.length - 1;
+		var end_stop = (isReturn==false) ? main_stop_name.length - 1 : 0;
 		switch(time[i].length){
 			case 1:
 				break;
@@ -60,13 +62,14 @@ function create_time_schedule(main_stop_name, time_consume, important_stop, time
 				break;
 		}
 		document.write('<tr>');
-		for(var j=0; j<main_stop_name.length; ++j){
+		for(var j=start_idx; j!=end_idx; j=(isReturn==false)?(j+1):(j-1) ){
 			document.write('<td>');
-			if(j<start_stop || j>end_stop) ; // do nothing
+			if(isReturn==false && j<start_stop || isReturn==false && j>end_stop // not in the driving interval
+			|| isReturn==true && j>start_stop || isReturn==true && j<end_stop) ; // do nothing
 			else if(judge_important_stop(j, important_stop)==true){
-				document.write('<font face="Arial Rounded MT Bold">' + special_tag + get_time(time[i][0], time_consume[j] - time_consume[start_stop]) + '</font>');
+				document.write('<font face="Arial Rounded MT Bold">' + special_tag + get_time(time[i][0], Math.abs(time_consume[j] - time_consume[start_stop]) ) + '</font>');
 			}
-			else document.write(get_time(time[i][0], time_consume[j] - time_consume[start_stop]));
+			else document.write(get_time(time[i][0], Math.abs(time_consume[j] - time_consume[start_stop]) ) );
 			document.write('</td>');
 		}
 		document.write('</tr>');

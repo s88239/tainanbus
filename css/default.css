@@ -309,7 +309,7 @@
 	#faretable .content
 	{
 		text-align: center;
-		color: #660066;
+		color: #000066;
 	}
 	
 	#faretable .content h1
@@ -325,7 +325,7 @@
 	#faretable .content tbody th
 	{
 		color: #AA0000;
-		border-bottom: 1px solid #000000; /*儲存格底線*/
+		border-bottom: 1px solid #000066; /*儲存格底線*/
 	}
 
 
