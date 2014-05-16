@@ -2,23 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 紅幹線 路線資訊</title>
+<title>大台南公車 ─ 藍幹線 路線資訊</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
 @import url("../css/table_style.css");
 @import url("../css/default.css");
 select.get_fair option.option1
-{background-color: #CC0000; color: #FFFFFF;}
+{background-color: #0200BE;}
 select.get_fair option.option2
-{background-color: #FF3333;}
+{background-color: #7573FF;}
 select.get_fair option.option3
-{background-color: #AA0000; color: #FFFFFF;}
+{background-color: #3937FF;}
 select.get_fair option.option4
-{background-color: #FF9999;}
+{background-color: #B0AFFF;}
 </style>
 <script language="javascript" src="../route/msg.js"></script>
-<script language="javascript" src="../route/fair_and_time/red.js"></script>
+<script language="javascript" src="../route/fair_and_time/blue.js"></script>
 <script language="javascript" src="../route/fair_and_time/show_fair_tool.js"></script>
 </head>
 <body>
@@ -26,7 +26,7 @@ select.get_fair option.option4
 	<div id="header" class="container">
 		<div id="menu">
 			<p align="center">
-			<a href="index.html"><img src="../img/red_logo.png"></a>
+			<a href="index.html"><img src="../img/blue_logo.png"></a>
 			</p>
 			<ul>
 				<li class="current_page_item"><a href="#" accesskey="1" title="">路線圖</a></li>
@@ -37,9 +37,9 @@ select.get_fair option.option4
 			</ul>
 		</div>
 		<div id="logo">
-			<img src="../route/red/red.jpg">
-			<p> </p>
-			<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kumm7mBa3IrA" width="800" height="500"></iframe>
+			<img src="../route/blue/blue.jpg">
+			<p></p>
+			<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kL7z3ROLSKqk" width="800" height="500"></iframe>
 		</div>
 	</div>
 </div>
@@ -47,13 +47,13 @@ select.get_fair option.option4
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 紅幹線　路線資訊</h2>
-			<span class="byline">Tainan Bus red Line, Route Information</span> </div>
+			<h2>大台南公車 ─ 藍幹線　路線資訊</h2>
+			<span class="byline">Tainan Bus blue Line, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>安平工業區 － 關廟 -- 龍崎</td>
+					<td>安平工業區 － 佳里</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -61,7 +61,7 @@ select.get_fair option.option4
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 關　廟：05:45／22:00<br />往 龍　崎：06:30／21:30<br />往 安工區：05:50／22:00<br />　*發車地－龍 崎／關 廟</td>
+					<td>往 佳　里：06:00／22:00<br />往 安工區：06:00／22:00</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -73,7 +73,7 @@ select.get_fair option.option4
 				</tr>
 			</table>
 			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1600&locale=zh_TW" class="button">公車動態資訊</a> </div>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1200&locale=zh_TW" class="button">公車動態資訊</a> </div>
 	</div>
 </div>
 <div id="wrapper3">
@@ -84,7 +84,7 @@ select.get_fair option.option4
 			<span class="byline">Ticket Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
-				create_select_menu(red_interval_stop, 4, 'red');
+				create_select_menu(blue_interval_stop, 4, 'blue');
 			</script>
 			<br/>
 			<table id="showFairInfo">
@@ -118,14 +118,13 @@ select.get_fair option.option4
 			<span class="byline">Bus schedule</span> </div>
 		<div class="content">
 			<script language="javascript">
-				document.write('<h2><font color="red">安平工業區-&gt;關廟 -- 龍崎</font></h2>');
-				create_time_schedule(red_main_stop_name, red_main_stop_time_consume, red_important_stop, red_time_go, false);
+				document.write('<h2><font color="blue">安平工業區-&gt;佳里</font></h2>');
+				create_time_schedule(blue_main_stop_name, blue_main_stop_time_consume, blue_important_stop, blue_time_go, false);
 				document.write('<p>　</p>');
-				document.write('<h2><font color="red">龍崎 -- 關廟-&gt;安平工業區</font></h2>');
-				create_time_schedule(red_main_stop_name, red_main_stop_time_consume, red_important_stop, red_time_return, true);
+				document.write('<h2><font color="blue">佳里-&gt;安平工業區</font></h2>');
+				create_time_schedule(blue_main_stop_name, blue_main_stop_time_consume, blue_important_stop, blue_time_return, true);
 				document.write(TimeScheduleMSG);
 			</script>
-			<h3><font color="#000055">「繞」表示繞駛新豐高中</font></h3>
 		</div>
 	</div>
 </div>
@@ -133,8 +132,8 @@ select.get_fair option.option4
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－紅幹線 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus red line, Transfer information</span>
+			<h2>大台南公車－藍幹線 主要轉乘點資訊</h2>
+			<span class="byline">Tainan bus blue line, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
@@ -152,7 +151,7 @@ select.get_fair option.option4
 					<td>市區公車(除15、20路)</td>
 				</tr>
 				<tr>
-					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
+					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
 					<td>綠幹線</td>
 				</tr>
 				<tr>
