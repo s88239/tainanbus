@@ -8,18 +8,23 @@
 <style type="text/css">
 @import url("../css/table_style.css");
 @import url("../css/default.css");
-select.get_fair option.option1
-{background-color: #0200BE;}
-select.get_fair option.option2
+select.get_fare{background-color: #0191d8;}
+select.get_fare option.option1
+{background-color: #0191d8;}
+select.get_fare option.option2
 {background-color: #7573FF;}
-select.get_fair option.option3
-{background-color: #3937FF;}
-select.get_fair option.option4
+select.get_fare option.option3
+{background-color: #1C19FF;}
+select.get_fare option.option4
 {background-color: #B0AFFF;}
+select.get_fare option.option5
+{background-color: #0300DC;}
+select.get_fare option.option6
+{background-color: #5755FF;}
 </style>
 <script language="javascript" src="../route/msg.js"></script>
-<script language="javascript" src="../route/fair_and_time/blue.js"></script>
-<script language="javascript" src="../route/fair_and_time/show_fair_tool.js"></script>
+<script language="javascript" src="../route/fare_and_time/blue.js"></script>
+<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -84,10 +89,10 @@ select.get_fair option.option4
 			<span class="byline">Ticket Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
-				create_select_menu(blue_interval_stop, 4, 'blue');
+				create_select_menu(blue_interval_stop, 6, 'blue');
 			</script>
 			<br/>
-			<table id="showFairInfo">
+			<table id="showfareInfo">
 				<tr>
 					<th></th><th>全票</th><th>半票</th>
 				</tr>
@@ -104,6 +109,8 @@ select.get_fair option.option4
 			</table>
 			<p>　</p>
 			<script language="javascript">
+				print_fare_table(blue_interval_name, blue_fare, '#0191d8');
+				document.write('<p>　</p>');
 				document.write(MeteredMSG + PromotionMSG);
 			</script>
 			<p>　</p>

@@ -8,18 +8,19 @@
 <style type="text/css">
 @import url("../css/table_style.css");
 @import url("../css/default.css");
-select.get_fair option.option1
+select.get_fare{background-color: #e22500;}
+select.get_fare option.option1
 {background-color: #CC0000; color: #FFFFFF;}
-select.get_fair option.option2
+select.get_fare option.option2
 {background-color: #FF3333;}
-select.get_fair option.option3
+select.get_fare option.option3
 {background-color: #AA0000; color: #FFFFFF;}
-select.get_fair option.option4
+select.get_fare option.option4
 {background-color: #FF9999;}
 </style>
 <script language="javascript" src="../route/msg.js"></script>
-<script language="javascript" src="../route/fair_and_time/red.js"></script>
-<script language="javascript" src="../route/fair_and_time/show_fair_tool.js"></script>
+<script language="javascript" src="../route/fare_and_time/red.js"></script>
+<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -87,7 +88,7 @@ select.get_fair option.option4
 				create_select_menu(red_interval_stop, 4, 'red');
 			</script>
 			<br/>
-			<table id="showFairInfo">
+			<table id="showfareInfo">
 				<tr>
 					<th></th><th>全票</th><th>半票</th>
 				</tr>
@@ -104,6 +105,8 @@ select.get_fair option.option4
 			</table>
 			<p>　</p>
 			<script language="javascript">
+				print_fare_table(red_interval_name, red_fare, '#FFCECD');
+				document.write('<p>　</p>');
 				document.write(MeteredMSG + PromotionMSG);
 			</script>
 			<p>　</p>
@@ -152,7 +155,7 @@ select.get_fair option.option4
 					<td>市區公車(除15、20路)</td>
 				</tr>
 				<tr>
-					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
+					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
 					<td>綠幹線</td>
 				</tr>
 				<tr>
