@@ -1,9 +1,4 @@
-﻿	html, body
-	{
-		height: 100%;
-	}
-	
-	body
+﻿	body
 	{
 		margin: 0px;
 		padding: 0px;
@@ -65,7 +60,7 @@
 	.container
 	{
 		margin: 0px auto;
-		width: 1200px;
+		/*width: 1200px;*/
 	}
 	
 
@@ -141,7 +136,7 @@
 
 	#header-wrapper
 	{
-		overflow: hidden;
+		/*overflow: hidden;*/
 		padding: 2em 0em;
 		background: #8DCB89;
 	}
@@ -260,7 +255,7 @@
 
 	#routeinfo
 	{
-		overflow: hidden;
+		/*overflow: hidden;*/
 		padding: 8em 0em;
 		text-align: center;
 		color: rgba(255,255,255,0.3);
@@ -335,7 +330,7 @@
 
 	#timetable
 	{
-		overflow: hidden;
+		/*overflow: hidden;*/
 		padding: 8em 0em;
 		background: #D6ACFF;
 		text-align: center;
@@ -405,7 +400,7 @@
 
 	#copyright
 	{
-		overflow: hidden;
+		/*overflow: hidden;*/
 		padding: 5em 0em;
 		border-top: 1px solid rgba(255,255,255,0.08);
 	}
