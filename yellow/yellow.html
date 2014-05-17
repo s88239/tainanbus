@@ -2,28 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 橘幹線 路線資訊</title>
+<title>大台南公車 ─ 黃幹線 路線資訊</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
 @import url("../css/table_style.css");
 @import url("../css/default.css");
-select.get_fare{background-color: #ff7f05;}
+select.get_fare{background-color: #FFD306;}
 select.get_fare option.option1
-{background-color: #ff7f05;}
+{background-color: #FFD306;}
 select.get_fare option.option2
-{background-color: #FFC991;}
+{background-color: #FDFF73;}
 select.get_fare option.option3
-{background-color: #FFAC55;}
+{background-color: yellow;}
 select.get_fare option.option4
-{background-color: #FFD8AF;}
+{background-color: #FDFF55;}
 select.get_fare option.option5
-{background-color: #FF8F19;}
+{background-color: #D9B300;}
 select.get_fare option.option6
-{background-color: #FFBB73;}
+{background-color: #FCFF19;}
 </style>
 <script language="javascript" src="../route/msg.js"></script>
-<script language="javascript" src="../route/fare_and_time/orange.js"></script>
+<script language="javascript" src="../route/fare_and_time/yellow.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
 </head>
 <body>
@@ -31,7 +31,7 @@ select.get_fare option.option6
 	<div id="header" class="container">
 		<div id="menu">
 			<p align="center">
-			<a href="index.html"><img src="../img/orange_logo.png"></a>
+			<a href="index.html"><img src="../img/yellow_logo.png"></a>
 			</p>
 			<ul>
 				<li class="current_page_item"><a href="#" accesskey="1" title="">路線圖</a></li>
@@ -42,9 +42,9 @@ select.get_fare option.option6
 			</ul>
 		</div>
 		<div id="logo">
-			<img src="../route/orange/orange.jpg">
+			<img src="../route/yellow/yellow.jpg">
 			<p></p>
-			<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kR8K7xUyvQtw" width="800" height="500"></iframe>
+			<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kbnckjpTnNGs" width="800" height="500"></iframe>
 		</div>
 	</div>
 </div>
@@ -52,21 +52,21 @@ select.get_fare option.option6
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 橘幹線　路線資訊</h2>
-			<span class="byline">Tainan Bus orange Line, Route Information</span> </div>
+			<h2>大台南公車 ─ 黃幹線　路線資訊</h2>
+			<span class="byline">Tainan Bus yellow Line, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>佳里 － 玉井</td>
+					<td>白河 － 麻豆</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
-					<td>興南客運</td>
+					<td>新營客運、興南客運</td>
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 玉井：05:55／21:25<br />往 佳里：05:55／21:25</td>
+					<td>往 麻豆：06:00／20:00<br />往 白河：06:00／20:00</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -78,7 +78,7 @@ select.get_fare option.option6
 				</tr>
 			</table>
 			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1400&locale=zh_TW" class="button">公車動態資訊</a> </div>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1500&locale=zh_TW" class="button">公車動態資訊</a> </div>
 	</div>
 </div>
 <div id="wrapper3">
@@ -89,7 +89,7 @@ select.get_fare option.option6
 			<span class="byline">Ticket Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
-				create_select_menu(orange_interval_stop, 6, 'orange');
+				create_select_menu(yellow_interval_stop, 6, 'yellow');
 			</script>
 			<br/>
 			<table>
@@ -109,7 +109,7 @@ select.get_fare option.option6
 			</table>
 			<p>　</p>
 			<script language="javascript">
-				print_fare_table(orange_interval_name, orange_fare, '#FFC991');
+				print_fare_table(yellow_interval_name, yellow_fare, '#FDFF73');
 				document.write('<p>　</p>');
 				document.write(MeteredMSG + PromotionMSG);
 			</script>
@@ -125,13 +125,14 @@ select.get_fare option.option6
 			<span class="byline">Bus schedule</span> </div>
 		<div class="content">
 			<script language="javascript">
-				document.write('<h2><font color="orange">佳里-&gt;玉井</font></h2>');
-				create_time_schedule(orange_main_stop_name, orange_main_stop_time_consume, orange_important_stop, orange_time_go, false);
+				document.write('<h2><font color="orange">白河-&gt;麻豆</font></h2>');
+				create_time_schedule(yellow_main_stop_name, yellow_main_stop_time_consume, yellow_important_stop, yellow_time_go, false);
 				document.write('<p>　</p>');
-				document.write('<h2><font color="orange">玉井-&gt;佳里</font></h2>');
-				create_time_schedule(orange_main_stop_name, orange_main_stop_time_consume, orange_important_stop, orange_time_return, true);
+				document.write('<h2><font color="orange">麻豆-&gt;白河</font></h2>');
+				create_time_schedule(yellow_main_stop_name, yellow_main_stop_time_consume, yellow_important_stop, yellow_time_return, true);
 				document.write(TimeScheduleMSG);
 			</script>
+			<h3><font color="#000055">「繞」表示繞駛白河商工</font></h3>
 		</div>
 	</div>
 </div>
@@ -139,19 +140,19 @@ select.get_fare option.option6
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－橘幹線 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus orange line, Transfer information</span>
+			<h2>大台南公車－黃幹線 主要轉乘點資訊</h2>
+			<span class="byline">Tainan bus yellow line, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
 				<tr>
-					<th rowspan="7">善化火車站</th>
+					<th rowspan="7">新營</th>
 					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵善化站</td>
+					<td>台鐵新營站</td>
 				</tr>
 				<tr>
-					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
-					<td>橘幹線</td>
+					<td style="text-align: center"><img src="../route/transfer/brown_transfer_logo.png"></td>
+					<td>棕幹線</td>
 				</tr>
 				<tr>
 					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>

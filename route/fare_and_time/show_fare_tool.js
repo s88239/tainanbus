@@ -63,8 +63,8 @@ function create_time_schedule(main_stop_name, time_consume, important_stop, time
 		}
 		document.write('<tr>');
 		if( Array.isArray(special_tag)==true ){ // special_tag is an array storing forbidden stop
-			forbidden = special_tag; // store those stops in the array named 'forbidden'
-			special_tag = ''; // clear special_tag
+			forbidden = special_tag[1]; // store those stops in the array named 'forbidden'
+			special_tag = special_tag[0]; // store real special tag to special_tag 
 		}
 		else forbidden = []; // otherwise, be a empty array
 		for(var j=start_idx; j!=end_idx; j=(isReturn==false)?(j+1):(j-1) ){
@@ -89,16 +89,17 @@ function create_time_schedule(main_stop_name, time_consume, important_stop, time
 
 function get_special_tag(arr){ // add some tags of special events
 	var special_event = ''; // initialize
+	var skip_stop_array = [];
+	var count = 0;
 	for(var j=0; j<arr.length; ++j){
 		if(arr[j]=='W') // drive in weekdays
 			special_event += '<font color="#0000FF">W</font>';
 		else if(arr[j]=='L') // use low floor bus
 			special_event += '<font color="#FF0000">L</font>';
-		else if( !isNaN(arr[j]) ) return arr;
+		else if( !isNaN(arr[j]) ) skip_stop_array[count++] = arr[j];
 		else special_event += arr[j];
 	}
-	//alert(special_event);
-	return special_event;
+	return skip_stop_array.length==0 ? special_event : [special_event, skip_stop_array];
 }
 function judge_important_stop(idx, arr){ // find the index matching the important stop or not
 	for(var i=0; i<arr.length; ++i){
