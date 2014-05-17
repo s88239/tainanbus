@@ -62,14 +62,24 @@ function create_time_schedule(main_stop_name, time_consume, important_stop, time
 				break;
 		}
 		document.write('<tr>');
+		if( Array.isArray(special_tag)==true ){ // special_tag is an array storing forbidden stop
+			forbidden = special_tag;
+			special_tag = ''; // clear special_tag
+		}
+		else forbidden = -1;
 		for(var j=start_idx; j!=end_idx; j=(isReturn==false)?(j+1):(j-1) ){
 			document.write('<td>');
 			if(isReturn==false && j<start_stop || isReturn==false && j>end_stop // not in the driving interval
 			|| isReturn==true && j>start_stop || isReturn==true && j<end_stop) ; // do nothing
+			else if( judge_important_stop(j, forbidden)==true ){ // encounter forbidden stop, print '-' instead of time to skip
+				document.write('-');
+			}
 			else if(judge_important_stop(j, important_stop)==true){
 				document.write('<font face="Arial Rounded MT Bold">' + special_tag + get_time(time[i][0], Math.abs(time_consume[j] - time_consume[start_stop]) ) + '</font>');
 			}
-			else document.write(get_time(time[i][0], Math.abs(time_consume[j] - time_consume[start_stop]) ) );
+			else{ // general case
+				document.write(get_time(time[i][0], Math.abs(time_consume[j] - time_consume[start_stop]) ) );
+			}
 			document.write('</td>');
 		}
 		document.write('</tr>');
@@ -84,6 +94,7 @@ function get_special_tag(arr){ // add some tags of special events
 			special_event += '<font color="#0000FF">W</font>';
 		else if(arr[j]=='L') // use low floor bus
 			special_event += '<font color="#FF0000">L</font>';
+		else if( !isNaN(arr[j]) ) return arr;
 		else special_event += arr[j];
 	}
 	//alert(special_event);
