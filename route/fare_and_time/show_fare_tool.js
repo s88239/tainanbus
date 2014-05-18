@@ -74,7 +74,7 @@ function create_time_schedule(main_stop_name, time_consume, important_stop, time
 			else if( judge_important_stop(j, forbidden)==true ){ // encounter forbidden stop, print '-' instead of time to skip
 				document.write('-');
 			}
-			else if(judge_important_stop(j, important_stop)==true){ // it's important stop, change its font face, and add the special tag at the front of its time
+			else if( j==start_stop || judge_important_stop(j, important_stop)==true){ // it's important stop, change its font face, and add the special tag at the front of its time
 				document.write('<font face="Arial Rounded MT Bold">' + special_tag + get_time(time[i][0], Math.abs(time_consume[j] - time_consume[start_stop]) ) + '</font>');
 			}
 			else{ // general case, just print its time
