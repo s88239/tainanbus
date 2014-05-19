@@ -16,27 +16,37 @@
 <body>
 <div id="header-wrapper">
 	<div id="header" class="container">
-		<div id="menu">
+		<div id="logo">
+			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
 			<p align="center">
 			<a href="index.html"><img src="../img/city_bus_logo.png"></a>
 			</p>
+		</div>
+		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">
-				路線圖</a></li>
+				<li class="current_page_item"><a href="#route" accesskey="1" title="">路線圖</a></li>
 				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
 				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
 				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
 				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
 			</ul>
 		</div>
-		<div id="logo">
-			<img src="../route/city_bus/20.jpg">
-			<p> </p>
-			<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k7U0sQhq2PSo" width="800" height="500"></iframe>
-		</div>
 	</div>
 </div>
 <div id="wrapper1">
+	<a name="route"></a>
+	<div id="banner">&nbsp;</div>
+	<div id="route">
+		<div class="title">
+			<h2>大台南公車 ─ 20路 路線圖</h2>
+			<span class="byline">Tainan City Bus No.20, Route Map</span>
+		</div>
+		<img src="../route/city_bus/20.jpg">
+		<p></p>
+		<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k7U0sQhq2PSo" width="800" height="500"></iframe>
+	</div>
+</div>
+<div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
@@ -103,23 +113,21 @@
 		</div>
 	</div>
 </div>
-<div id="wrapper2">
+<div id="timetable">
 	<a name="time"></a>
-	<div id="timetable">
-		<div class="title">
-			<h2>時刻表</h2>
-			<span class="byline">Bus schedule</span>
-		</div>
-		<div class="content">
-			<script language="javascript">
-				document.write('<h2>崑山科大-&gt;安南醫院</h2>');
-				create_time_schedule(city_bus_20_main_stop_name, city_bus_20_main_stop_time_consume, city_bus_20_important_stop, city_bus_20_time_go, false);
-				document.write('<p>　</p>');
-				document.write('<h2>安南醫院-&gt;崑山科大</h2>');
-				create_time_schedule(city_bus_20_main_stop_name, city_bus_20_main_stop_time_consume, city_bus_20_important_stop, city_bus_20_time_return, true);
-				document.write(TimeScheduleMSG);
-			</script>
-		</div>
+	<div class="title">
+		<h2>時刻表</h2>
+		<span class="byline">Bus schedule</span>
+	</div>
+	<div class="content">
+		<script language="javascript">
+			document.write('<h2>崑山科大-&gt;安南醫院</h2>');
+			create_time_schedule(city_bus_20_main_stop_name, city_bus_20_main_stop_time_consume, city_bus_20_important_stop, city_bus_20_time_go, false);
+			document.write('<p>　</p>');
+			document.write('<h2>安南醫院-&gt;崑山科大</h2>');
+			create_time_schedule(city_bus_20_main_stop_name, city_bus_20_main_stop_time_consume, city_bus_20_important_stop, city_bus_20_time_return, true);
+			document.write(TimeScheduleMSG);
+		</script>
 	</div>
 </div>
 <div id="wrapper4">
