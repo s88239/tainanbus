@@ -57,14 +57,14 @@
 				<tr>
 					<td>起訖點</td>
 					<td>
-					<table>
-						<tr>
-							<td>崑山科大/</td><td rowspan="2"> － </td><td>崇義社區/三鯤鯓/四草/</td>
-						</tr>
-						<tr>
-							<td>復華里</td><td>觀光漁市場/白鷺灣社區</td>
-						</tr>
-					</table></td>
+						<table>
+							<tr>
+								<td>崑山科大/<br />復華里</td>
+								<td> － </td>
+								<td>崇義社區/三鯤鯓/四草/<br />觀光漁市場/白鷺灣社區</td>
+							</tr>
+						</table>
+					</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -129,11 +129,19 @@
 	</div>
 	<div class="content">
 		<script language="javascript">
+			document.write('<h1><font color="#0000AA">平日班表</font></h>');
 			document.write('<h2>崑山科大/復華里-&gt;崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草</h2>');
 			create_time_schedule(city_bus_2_main_stop_name, city_bus_2_main_stop_time_consume, city_bus_2_important_stop, city_bus_2_time_go, false);
 			document.write('<p>　</p>');
 			document.write('<h2>崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草-&gt;崑山科大/復華里</h2>');
 			create_time_schedule(city_bus_2_main_stop_name, city_bus_2_main_stop_time_consume, city_bus_2_important_stop, city_bus_2_time_return, true);
+			document.write('<p>　</p>');
+			document.write('<h1><font color="#CC0000">假日班表</font></h1>');
+			document.write('<h2>崑山科大/復華里-&gt;崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草</h2>');
+			create_time_schedule(city_bus_2_holiday_main_stop_name, city_bus_2_main_stop_time_consume, city_bus_2_important_stop, city_bus_2_holiday_time_go, false);
+			document.write('<p>　</p>');
+			document.write('<h2>崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草-&gt;崑山科大/復華里</h2>');
+			create_time_schedule(city_bus_2_holiday_main_stop_name, city_bus_2_main_stop_time_consume, city_bus_2_important_stop, city_bus_2_holiday_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
 	</div>
