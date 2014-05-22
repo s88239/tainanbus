@@ -114,12 +114,12 @@ function get_special_tag(arr){ // add some tags of special events
 	for(var j=0; j<arr.length; ++j){
 		if(arr[j]=='W') // drive in weekdays
 			special_event += '<font color="#0000FF">W</font>';
-		else if(arr[j]=='L') // use low floor bus
-			special_event += '<font color="#FF0000">L</font>';
+		else if(arr[j]=='L' || arr[j]=='H') // use low floor bus or only drive on holiday
+			special_event += '<font color="#FF0000">' + arr[j] + '</font>';
 		else if(Array.isArray(arr[j])==true) // have offset since some important stop
 			offset = arr[j];
 		else if( !isNaN(arr[j]) ) skip_stop_array[count++] = arr[j];
-		else special_event += arr[j];
+		else special_event = arr[j];
 	}
 	return skip_stop_array.length==0 ? [special_event, offset] : [special_event, offset, skip_stop_array];
 }

@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>台南市公車 ─ 6路 路線資訊</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+@import url("../css/table_style.css");
+@import url("../css/default.css");
+</style>
+<script language="javascript" src="../route/msg.js"></script>
+<script language="javascript" src="../route/fare_and_time/city_bus_6.js"></script>
+<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
+			<p align="center">
+			<a href="index.html"><img src="../img/city_bus_logo.png"></a>
+			</p>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="#route" accesskey="1" title="">路線圖</a></li>
+				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
+				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
+				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
+				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="wrapper1">
+	<a name="route"></a>
+	<div id="banner">&nbsp;</div>
+	<div id="route">
+		<div class="title">
+			<h2>大台南公車 ─ 6路 路線圖</h2>
+			<span class="byline">Tainan City Bus No.6, Route Map</span>
+		</div>
+		<img src="../route/city_bus/6.jpg">
+		<p></p>
+		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k7U0sQhq2PSo" width="800" height="500"></iframe>-->
+	</div>
+</div>
+<div id="wrapper2">
+	<a name="info"></a>
+	<div id="routeinfo" class="container">
+		<div class="title">
+			<h2>台南市公車 ─ 6路　路線資訊</h2>
+			<span class="byline">Tainan City Bus No.6, Route Information</span> </div>
+		<div class="content">
+			<table border="0">
+				<tr>
+					<td>起訖點</td>
+					<td>裕聖里 － 新興國宅/下鯤鯓</td>
+				</tr>
+				<tr>
+					<td>營運公司</td>
+					<td>府城客運</td>
+				</tr>
+				<tr>
+					<td>首／末班車發車時刻</td>
+					<td>往 新興國宅：06:00／21:08<br />往 　裕聖里：06:00／21:05</td>
+				</tr>
+				<tr>
+					<td>班距</td>
+					<td>固定班次 尖10~20離30</td>
+				</tr>
+				<tr>
+					<td>收費方式</td>
+					<td>一段票</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10165&locale=zh_TW" class="button">公車動態資訊</a> </div>
+	</div>
+</div>
+<div id="wrapper3">
+	<a name="fare"></a>
+	<div id="faretable" class="container">
+		<div class="title">
+			<h2>票價表</h2>
+			<span class="byline">Ticket Fare</span> </div>
+		<div class="content">
+			<h1>全路線一段票</h1>
+			<br/>
+			<table>
+				<tr>
+					<th></th>
+					<th>全票</th>
+					<th>半票</th>
+				</tr>
+				<tr>
+					<td><b>投現</b></td>
+					<td>18</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td><b>電子票證</b></td>
+					<td>18</td>
+					<td>9</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<script language="javascript">
+				document.write(CitybusMSG + PromotionMSG);
+			</script>
+			<p>　</p>
+		</div>
+	</div>
+</div>
+<div id="timetable">
+	<a name="time"></a>
+	<div class="title">
+		<h2>時刻表</h2>
+		<span class="byline">Bus schedule</span>
+	</div>
+	<div class="content">
+		<script language="javascript">
+			document.write('<h2>裕聖里-&gt;新興國宅/下鯤鯓</h2>');
+			create_time_schedule(city_bus_6_main_stop_name, city_bus_6_main_stop_time_consume, city_bus_6_important_stop, city_bus_6_time_go, false);
+			document.write('<p>　</p>');
+			document.write('<h2>新興國宅/下鯤鯓-&gt;裕聖里</h2>');
+			create_time_schedule(city_bus_6_main_stop_name, city_bus_6_main_stop_time_consume, city_bus_6_important_stop, city_bus_6_time_return, true);
+			document.write('<p>　</p>');
+			document.write(TimeScheduleMSG);
+		</script>
+		<h3><font color="red">H</font>表示僅假日行駛</h3><br />
+		<h3><font color="#000055">「義」表示經裕義路、南聖公園至裕聖里；「後」表示繞經後甲國中、大鵬新城</font></h3>
+	</div>
+</div>
+<div id="wrapper4">
+	<a name="transfer"></a>
+	<div id="transfer" class="container">
+		<div class="title">
+			<h2>台南市公車 － 6路 主要轉乘點資訊</h2>
+			<span class="byline">Tainan city bus NO.6, Transfer information</span>
+		</div>
+		<div class="content">
+			<table>
+				<tr>
+					<th rowspan="7">台南火車站</th>
+					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
+					<td>台鐵台南站</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/taiwantrip_logo.png"></td>
+					<td>88、99</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
+					<td>市區公車(除15、20路)</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
+					<td>綠幹線</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
+					<td>藍幹線</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
+					<td>紅幹線、紅1、紅2、紅3、紅4</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
+					<td>橘3、橘12</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<script type="text/javascript">document.write(copyrightMSG);</script>
+</div>
+</body>
+</html>
