@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>測試get_bus_time</title>
+</head>
+<script language="javascript" src="../tools/get_time_tool.js"></script>
+<body>
+<center>
+	<form>
+		<input name="bus_line" id="bus_line" type="text" value="綠幹線"><br />
+		from:<input name="start" type="text" value="火車站(北站)">to:<input name="end" type="text" value="玉井站"><br />
+		time: <input name="time" type="text" value="17:00"><br />
+		<input type="button" onclick="alert(get_bus_time(this.form.bus_line.value,this.form.start.value,this.form.end.value,this.form.time.value,false));" value="start">
+		<input type="button" onclick="alert(get_bus_time(this.form.bus_line.value,this.form.start.value,this.form.end.value,this.form.time.value,true));" value="arrive">
+	</form>
+</center>
+</body>
+</html>

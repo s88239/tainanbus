@@ -138,6 +138,10 @@ function get_time(time_str, offset){ // get the time of the stop
 		time_hr += Math.floor(time_min/60);
 		time_min %= 60;
 	}
+	else if(time_min < 0){
+		time_hr -= Math.ceil(-time_min/60);
+		time_min = 60 + (time_min % 60);
+	}
 	hr_zero = (time_hr<10)? '0':'' ;
 	min_zero = (time_min<10)?'0':'' ;
 	new_time = hr_zero + time_hr + ':' + min_zero + time_min;
