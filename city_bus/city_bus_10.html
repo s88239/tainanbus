@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>台南市公車 ─ 1路 路線資訊</title>
+<title>台南市公車 ─ 10路 路線資訊</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
@@ -10,7 +10,7 @@
 @import url("../css/default.css");
 </style>
 <script language="javascript" src="../route/msg.js"></script>
-<script language="javascript" src="../route/fare_and_time/city_bus_1.js"></script>
+<script language="javascript" src="../route/fare_and_time/city_bus_10.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
 </head>
 <body>
@@ -38,25 +38,26 @@
 	<div id="banner">&nbsp;</div>
 	<div id="route">
 		<div class="title">
-			<h2>大台南公車 ─ 1路 路線圖</h2>
-			<span class="byline">Tainan City Bus No.1, Route Map</span>
+			<h2>大台南公車 ─ 10路 路線圖</h2>
+			<span class="byline">Tainan City Bus No.10, Route Map</span>
 		</div>
-		<img src="../route/city_bus/1.jpg">
+		<img src="../route/city_bus/10.jpg">
 		<p></p>
-		<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kKhKiJoDSGUQ" width="800" height="500"></iframe>
+
+		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k7U0sQhq2PSo" width="800" height="500"></iframe>-->
 	</div>
 </div>
 <div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 1路　路線資訊</h2>
-			<span class="byline">Tainan City Bus No.1, Route Information</span> </div>
+			<h2>台南市公車 ─ 10路　路線資訊</h2>
+			<span class="byline">Tainan City Bus No.10, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>台南火車站 － 茄萣/興達港/情人碼頭</td>
+					<td>火車站 － 鹿耳門天后宮</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -64,19 +65,19 @@
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 茄　　　萣：06:40／22:20<br />往 台南火車站：05:55／21:30</td>
+					<td>往 鹿耳門：06:10／18:30<br />往 火車站：06:10／20:10</td>
 				</tr>
 				<tr>
 					<td>班距</td>
-					<td>固定班次 尖10離30</td>
+					<td>固定班次</td>
 				</tr>
 				<tr>
 					<td>收費方式</td>
-					<td>兩段票 分段點：威武廟</td>
+					<td>二段票 分段點：海東國小</td>
 				</tr>
 			</table>
 			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10160&locale=zh_TW" class="button">公車動態資訊</a> </div>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10168&locale=zh_TW" class="button">公車動態資訊</a> </div>
 	</div>
 </div>
 <div id="wrapper3">
@@ -87,8 +88,7 @@
 			<span class="byline">Ticket Fare</span> </div>
 		<div class="content">
 			<h1>兩段票收費</h1>
-			<h2><u>分段點：威武廟</u></h2><br />
-			<br/>
+			<h2><u>分段點：海東國小</u></h2><br />
 			<table>
 				<tr>
 					<th></th>
@@ -125,19 +125,12 @@
 	</div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h1><font color="#0000AA">平日班表</font></h>');
-			document.write('<h2>台南火車站-&gt;茄萣/興達港</h2>');
-			create_time_schedule(city_bus_1_main_stop_name, city_bus_1_main_stop_time_consume, city_bus_1_important_stop, city_bus_1_time_go, false);
+			document.write('<h2>火車站-&gt;鹿耳門天后宮</h2>');
+			create_time_schedule(city_bus_10_main_stop_name, city_bus_10_main_stop_time_consume, city_bus_10_important_stop, city_bus_10_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2>茄萣/興達港-&gt;台南火車站</h2>');
-			create_time_schedule(city_bus_1_main_stop_name, city_bus_1_main_stop_time_consume, city_bus_1_important_stop, city_bus_1_time_return, true);
+			document.write('<h2>鹿耳門天后宮-&gt;火車站</h2>');
+			create_time_schedule(city_bus_10_main_stop_name, city_bus_10_main_stop_time_consume, city_bus_10_important_stop, city_bus_10_time_return, true);
 			document.write('<p>　</p>');
-			document.write('<h1><font color="#CC0000">假日班表</font></h1>');
-			document.write('<h2>台南火車站-&gt;茄萣/興達港/情人碼頭</h2>');
-			create_time_schedule(city_bus_1_holiday_main_stop_name, city_bus_1_main_stop_time_consume, city_bus_1_important_stop, city_bus_1_holiday_time_go, false);
-			document.write('<p>　</p>');
-			document.write('<h2>茄萣/興達港/情人碼頭-&gt;台南火車站</h2>');
-			create_time_schedule(city_bus_1_holiday_main_stop_name, city_bus_1_main_stop_time_consume, city_bus_1_important_stop, city_bus_1_holiday_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
 	</div>
@@ -146,8 +139,8 @@
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車 － 1路 主要轉乘點資訊</h2>
-			<span class="byline">Tainan city bus NO.1, Transfer information</span>
+			<h2>台南市公車 － 10路 主要轉乘點資訊</h2>
+			<span class="byline">Tainan city bus NO.10, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
