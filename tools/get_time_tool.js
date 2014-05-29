@@ -25,12 +25,12 @@ var js_bus_num = [[1,7,10,17,20,27], // green
 ];
 // load all js file that stores the bus information
 for(var i=0; i<js_name.length; ++i){
-	if(i<6) loadScript('../route/fare_and_time/' + js_name[i] + '.js'); // load 六幹線
+	if(i<6) loadScript('route/fare_and_time/' + js_name[i] + '.js'); // load 六幹線
 	for(var j=0; j<js_bus_num[i].length; j+=2){
 		for(var k=js_bus_num[i][j]; k<=js_bus_num[i][j+1]; ++k){
 			//alert(js_name[i] + k);
 			if( i== 6 ) // just load city_bus
-			loadScript('../route/fare_and_time/' + js_name[i] + k + '.js'); // load 支線
+			loadScript('route/fare_and_time/' + js_name[i] + k + '.js'); // load 支線
 		}
 	}
 }
