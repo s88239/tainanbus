@@ -14,14 +14,15 @@ function loadScript(url)//, callback) // load the js file dynamically, and then 
     // Fire the loading
     head.appendChild(script);
 }
-var js_name = ['green','blue','red','brown','orange','yellow','city_bus_'];
+var js_name = ['green','blue','red','brown','orange','yellow','city_bus','tour_bus'];
 var js_bus_num = [[1,7,10,17,20,27], // green
 [1,3,10,13,20,25], // blue
 [1,4,10,14], // red
 [1,5,10,12,20,20], // orange
 [1,3,10,11], // brown
 [1,7,9,15,20,20], // yellow
-[0,3,5,7,9,11,14,15,18,18,20,21,88,88,99,99] // city bus
+[0,3,5,7,9,11,14,15,18,18,20,21], // city bus
+[88,88,99,99] // tour bus
 ];
 // load all js file that stores the bus information
 for(var i=0; i<js_name.length; ++i){
@@ -29,8 +30,8 @@ for(var i=0; i<js_name.length; ++i){
 	for(var j=0; j<js_bus_num[i].length; j+=2){
 		for(var k=js_bus_num[i][j]; k<=js_bus_num[i][j+1]; ++k){
 			//alert(js_name[i] + k);
-			if( i== 6 ) // just load city_bus
-			loadScript('route/fare_and_time/' + js_name[i] + k + '.js'); // load 支線
+			//if( i== 6 ) // just load city_bus
+			loadScript('route/fare_and_time/' + js_name[i] + '_' + k + '.js'); // load 支線
 		}
 	}
 }
@@ -54,11 +55,13 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 		case '黃':
 			route = 'yellow';
 			break;
+		case 't':
+			route = 'tour_bus';
 		default:
-			route = 'city_bus_';
+			route = 'city_bus';
 	}
 	if(!isNaN(theRoute)) route += theRoute;
-	else if(!isNaN(theRoute.substring(1,theRoute.length))) route += theRoute.substring(1,theRoute.length);
+	else if(!isNaN(theRoute.substring(1,theRoute.length))) route = route + '_' +theRoute.substring(1,theRoute.length);
 	//alert(theRoute);
 	//alert(route);
 	interval_stop_name = eval(route+'_interval_stop');
