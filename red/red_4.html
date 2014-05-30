@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 紅1 路線資訊</title>
+<title>大台南公車 ─ 紅4 路線資訊</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
@@ -19,7 +19,7 @@ select.get_fare option.option4
 {background-color: #FF9999;}
 </style>
 <script language="javascript" src="../route/msg.js"></script>
-<script language="javascript" src="../route/fare_and_time/red_1.js"></script>
+<script language="javascript" src="../route/fare_and_time/red_4.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
 </head>
 <body>
@@ -47,10 +47,10 @@ select.get_fare option.option4
 	<div id="banner">&nbsp;</div>
 	<div id="route">
 		<div class="title">
-			<h2>大台南公車 ─ 紅1 路線圖</h2>
-			<span class="byline">Tainan Bus Red 1, Route Map</span>
+			<h2>大台南公車 ─ 紅4 路線圖</h2>
+			<span class="byline">Tainan Bus Red 4, Route Map</span>
 		</div>
-		<img src="../route/red/r1.jpg">
+		<img src="../route/red/r4.jpg">
 		<p></p>
 		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kumm7mBa3IrA" width="800" height="500"></iframe>-->
 	</div>
@@ -59,13 +59,13 @@ select.get_fare option.option4
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 紅1　路線資訊</h2>
-			<span class="byline">Tainan Bus red 1, Route Information</span> </div>
+			<h2>大台南公車 ─ 紅4　路線資訊</h2>
+			<span class="byline">Tainan Bus Red 4, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>臺南公園(公園路) ─ 太子廟 ─ 關廟</td>
+					<td>臺南公園(公園路) ─ 臺南都會公園</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -73,7 +73,7 @@ select.get_fare option.option4
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 關　　廟：06:25／21:45<br />往 臺南公園：06:15／17:00</td>
+					<td>往 臺南都會公園：07:25／18:25<br />往 　臺南公園　：08:35／19:35</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -85,7 +85,7 @@ select.get_fare option.option4
 				</tr>
 			</table>
 			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1601&locale=zh_TW" class="button">公車動態資訊</a> </div>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1604&locale=zh_TW" class="button">公車動態資訊</a> </div>
 	</div>
 </div>
 <div id="wrapper3">
@@ -96,7 +96,7 @@ select.get_fare option.option4
 			<span class="byline">Ticket Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
-				create_select_menu(red_1_interval_stop, 4, 'red_1');
+				create_select_menu(red_4_interval_stop, 4, 'red_4');
 			</script>
 			<br/>
 			<table id="showfareInfo">
@@ -116,7 +116,7 @@ select.get_fare option.option4
 			</table>
 			<p>　</p>
 			<script language="javascript">
-				print_fare_table(red_1_interval_name, red_1_fare, '#FFCECD');
+				print_fare_table(red_4_interval_name, red_4_fare, '#FFCECD');
 				document.write('<p>　</p>');
 				document.write(MeteredMSG + PromotionMSG);
 			</script>
@@ -131,11 +131,11 @@ select.get_fare option.option4
 		<span class="byline">Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="red">臺南公園(公園路)-&gt;關廟</font></h2>');
-			create_time_schedule(red_1_main_stop_name, red_1_main_stop_time_consume, red_1_important_stop, red_1_time_go, false);
+			document.write('<h2><font color="red">臺南公園(公園路)-&gt;臺南都會公園</font></h2>');
+			create_time_schedule(red_4_main_stop_name, red_4_main_stop_time_consume, red_4_important_stop, red_4_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="red">關廟-&gt;臺南公園(公園路)</font></h2>');
-			create_time_schedule(red_1_main_stop_name, red_1_main_stop_time_consume, red_1_important_stop, red_1_time_return, true);
+			document.write('<h2><font color="red">臺南都會公園-&gt;臺南公園(公園路)</font></h2>');
+			create_time_schedule(red_4_main_stop_name, red_4_main_stop_time_consume, red_4_important_stop, red_4_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
 	</div>
@@ -144,8 +144,8 @@ select.get_fare option.option4
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－紅1 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus red 1, Transfer information</span>
+			<h2>大台南公車－紅4 主要轉乘點資訊</h2>
+			<span class="byline">Tainan bus Red 4, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
