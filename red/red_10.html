@@ -2,15 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>台南市公車 ─ 20路 路線資訊</title>
+<title>大台南公車 ─ 紅10 路線資訊</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
 @import url("../css/table_style.css");
 @import url("../css/default.css");
+select.get_fare{background-color: #e22500;}
+select.get_fare option.option1
+{background-color: #CC0000;}
+select.get_fare option.option2
+{background-color: #FF3333;}
+select.get_fare option.option3
+{background-color: #AA0000; color: #FFFFFF;}
+select.get_fare option.option4
+{background-color: #FF9999;}
 </style>
 <script language="javascript" src="../route/msg.js"></script>
-<script language="javascript" src="../route/fare_and_time/city_bus_20.js"></script>
+<script language="javascript" src="../route/fare_and_time/red_10.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
 </head>
 <body>
@@ -19,7 +28,7 @@
 		<div id="logo">
 			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
 			<p align="center">
-			<a href="index.html"><img src="../img/city_bus_logo.png"></a>
+			<a href="index.html"><img src="../img/red_logo.png"></a>
 			</p>
 		</div>
 		<div id="menu">
@@ -38,45 +47,45 @@
 	<div id="banner">&nbsp;</div>
 	<div id="route">
 		<div class="title">
-			<h2>大台南公車 ─ 20路 路線圖</h2>
-			<span class="byline">Tainan City Bus No.20, Route Map</span>
+			<h2>大台南公車 ─ 紅10 路線圖</h2>
+			<span class="byline">Tainan Bus Red 10, Route Map</span>
 		</div>
-		<img src="../route/city_bus/20.jpg">
+		<img src="../route/red/r10.jpg">
 		<p></p>
-		<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k7U0sQhq2PSo" width="800" height="500"></iframe>
+		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kumm7mBa3IrA" width="800" height="500"></iframe>-->
 	</div>
 </div>
-<div id="wrapper2">
+<div id="wrapper10">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>台南市公車 ─ 20路　路線資訊</h2>
-			<span class="byline">Tainan City Bus No.20, Route Information</span> </div>
+			<h2>大台南公車 ─ 紅10　路線資訊</h2>
+			<span class="byline">Tainan Bus Red 10, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>崑山科大 － 安南醫院 (經永康火車站)</td>
+					<td>關廟 ─ 永康 ─ 奇美醫院</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
-					<td>府城客運</td>
+					<td>興南客運</td>
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 安南醫院：06:00／22:00<br />往 崑山科大：05:54／21:54</td>
+					<td>往 奇美醫院：06:20／18:40<br />往 關　　廟：06:10／18:20</td>
 				</tr>
 				<tr>
 					<td>班距</td>
-					<td>固定班次 尖20離30</td>
+					<td>固定班次</td>
 				</tr>
 				<tr>
 					<td>收費方式</td>
-					<td>一段票</td>
+					<td>里程計費</td>
 				</tr>
 			</table>
 			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10020&locale=zh_TW" class="button">公車動態資訊</a> </div>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1610&locale=zh_TW" class="button">公車動態資訊</a> </div>
 	</div>
 </div>
 <div id="wrapper3">
@@ -86,28 +95,30 @@
 			<h2>票價表</h2>
 			<span class="byline">Ticket Fare</span> </div>
 		<div class="content">
-			<h1>全路線一段票</h1>
+			<script language="javascript">
+				create_select_menu(red_10_interval_stop, 4, 'red_10');
+			</script>
 			<br/>
-			<table>
+			<table id="showfareInfo">
 				<tr>
-					<th></th>
-					<th>全票</th>
-					<th>半票</th>
+					<th></th><th>全票</th><th>半票</th>
 				</tr>
 				<tr>
 					<td><b>投現</b></td>
-					<td>18</td>
-					<td>9</td>
+					<td id="cash_adult">-</td>
+					<td id="cash_half">-</td>
 				</tr>
 				<tr>
 					<td><b>電子票證</b></td>
-					<td>18</td>
-					<td>9</td>
+					<td id="RFID_adult">-</td>
+					<td id="RFID_half">-</td>
 				</tr>
 			</table>
 			<p>　</p>
 			<script language="javascript">
-				document.write(CitybusMSG + PromotionMSG);
+				print_fare_table(red_10_interval_name, red_10_fare, '#FFCECD');
+				document.write('<p>　</p>');
+				document.write(MeteredMSG + PromotionMSG);
 			</script>
 			<p>　</p>
 		</div>
@@ -117,15 +128,14 @@
 	<a name="time"></a>
 	<div class="title">
 		<h2>時刻表</h2>
-		<span class="byline">Bus schedule</span>
-	</div>
+		<span class="byline">Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2>崑山科大-&gt;安南醫院</h2>');
-			create_time_schedule(city_bus_20_main_stop_name, city_bus_20_main_stop_time_consume, city_bus_20_important_stop, city_bus_20_time_go, false);
+			document.write('<h2><font color="red">關廟-&gt;奇美醫院</font></h2>');
+			create_time_schedule(red_10_main_stop_name, red_10_main_stop_time_consume, red_10_important_stop, red_10_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2>安南醫院-&gt;崑山科大</h2>');
-			create_time_schedule(city_bus_20_main_stop_name, city_bus_20_main_stop_time_consume, city_bus_20_important_stop, city_bus_20_time_return, true);
+			document.write('<h2><font color="red">奇美醫院-&gt;關廟</font></h2>');
+			create_time_schedule(red_10_main_stop_name, red_10_main_stop_time_consume, red_10_important_stop, red_10_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
 	</div>
@@ -134,24 +144,19 @@
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>台南市公車 － 20路 主要轉乘點資訊</h2>
-			<span class="byline">Tainan city bus NO.20, Transfer information</span>
+			<h2>大台南公車－紅10 主要轉乘點資訊</h2>
+			<span class="byline">Tainan bus Red 10, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
 				<tr>
-					<th rowspan="2">崑山科大</th>
-					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
-					<td>2路</td>
+					<th rowspan="2">關廟</th>
+					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
+					<td>紅幹線、紅1、紅2、紅3、<br />紅10、紅11、紅12、紅13、紅14</td>
 				</tr>
 				<tr>
 					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td>綠17</td>
-				</tr>
-				<tr>
-					<th>大灣</th>
-					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
-					<td>紅10</td>
+					<td>綠16</td>
 				</tr>
 				<tr>
 					<th rowspan="4">永康火車站</th>
@@ -171,9 +176,25 @@
 					<td>紅10</td>
 				</tr>
 				<tr>
-					<th>台灣歷史博物館</th>
+					<th rowspan="5">奇美醫院</th>
+					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
+					<td>台鐵大橋站</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/hsr_shuttle_logo.png"></td>
+					<td>高鐵快捷公車H62</td>
+				</tr>
+				<tr>
 					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
-					<td>18路</td>
+					<td>5、15</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
+					<td>紅10</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
+					<td>橘12</td>
 				</tr>
 			</table>
 		</div>

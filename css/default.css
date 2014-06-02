@@ -38,9 +38,17 @@
 	
 	a
 	{
-		color: #0000FF;
+		text-decoration:none;
 	}
 	
+	#red a{color: #FFCECD;}
+	#green a{color: #33FF66;}
+	#blue a{color: #AFD6FF;}
+	#brown a{color: #D0BAA2;}
+	#orange a{color: #FFBB73;}
+	#yellow a{color: #FFFF00;}
+	#city_bus a{color: #C991FF;}
+	#tour_bus a{color: #FFFFFF;}
 	a:hover
 	{
 		text-decoration: none;
