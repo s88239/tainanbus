@@ -5,9 +5,10 @@
 
 
 <script type="text/javascript" src="tools/get_time_tool.js"></script>
-
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
 
 <script type="text/javascript">
+var global_test;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
@@ -56,7 +57,7 @@ function show(){
 	//if(n!=-1){
 	//	document.write("<xmp>");
 	//	document.write(string);
-	
+	var times="13:00"
 	var re = new RegExp('jstcache="38">[0-9]{3}(.*?)</td>','gi');
 	var match = string.match(re);
 	if(match) {
@@ -111,25 +112,46 @@ function show(){
 	for(i=0;i<stopname.length;i++){
 		stopname[i]=stopname[i].replace("興南客運","");
 	}
-	var route="綠幹線";
+	/*var route="綠幹線";
 	var start="火車站(北站)";
 	var end="玉井站";
 	var times="15:00";
-	var flag=true;
+	var flag=true;*/
+	var result = "";
+	var walk_time=10;
 	for(i=0;i<transit_way.length;i++){
-		if(transit_way[i]==2) {
-	//		document.write("haha");
-			quest_rail();
+		if(transit_way[i]==1){
+			 document.write((i+1)+statement[i]+"<br>");
+			 times = get_time(times,walk_time);
+			 
 		}
-		if(transit_way[i]==3) alert(stopname[i]+get_bus_time(transit_name[i], stopname[i], stopname[i+1], "17:00", true)+stopname[i+1]);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
+		else if(transit_way[i]==2) {
+	//	document.write("haha");
+			document.write(i+1);
+			quest_rail("2014/06/11","1227","1228","2","0600","2359");
+		//	sleep(4);
+			//document.write(global_test);
+		}
+		else if(transit_way[i]==3) {
+			businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
+			document.write((i+1)+businfo+"<br>");
+			times = businfo[1];
+		}
 	}
 
-	
+	//document.write(result);
 	routeArray.push(endpoint);
 }
-function quest_rail()
+function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)//need to remove ':' on time
 {
-	var url = "http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate=2014/06/08&fromstation=1227&tostation=1228&trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271110%27,%271120%27&fromtime=0600&totime=2359";
+	/*var searchdate="2014/06/11";
+	var fromstation="1227";
+	var tostation="1228";
+	var trainclass="2";
+	var fromtime="0600";
+	var totime="2359"*/
+	//var url ="http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate=2014/06/11&fromstation=1227&tostation=1228&trainclass=2&fromtime=0600&totime=2359";
+	var url = "http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate="+searchdate+"&fromstation="+fromstation+"&tostation="+tostation+"&trainclass="+trainclass+"&fromtime="+fromtime+"&totime="+totime;
 	//var temp = 'tools/parse_train.php';
 	//	var ajax = new Ajax.Request(temp,{method:'POST',parameters:queryString,onComplete:rail});
 	var http_request=false;
@@ -155,7 +177,7 @@ function quest_rail()
 		alert('Giving up :( Cannot create a XMLHTTP instance');
 		return false;
 	}
-
+	var test;
 	var by_post='url='+url; //將變數放進字串
 	http_request.onreadystatechange=show_area;
 	http_request.open('POST','tools/parse_train.php',true);
@@ -165,24 +187,42 @@ function quest_rail()
 	function show_area(){
 		if(http_request.readyState==4){
 			if(http_request.status==200){
-				var temp = http_request.responseText;
-			// $('#test').val('');  //將輸入框清空
-			//$('#show_area').append(http_request.responseText);  //將結果顯示出來
-				document.write("<xmp>1243");
-				document.write(temp);
-				document.write("</xmp>");
+				//global_test = ""+http_request.responseText;
+				//temp=remove_tags(temp);
+				document.write(http_request.responseText);
+				//document.write("</xmp>");
 			}
 		}
+	//	else document.write("fuck");
 	}
-}
-function rail(xmlHttpObj)
-{
-	document.write("ajax success");
+	//return test;
+	//document.write(http_request.onreadystatechange);*/
 }
 function remove_tags(html){
 	return html.replace(/<(?:.|\n)*?>/gm, '');
 }
-
+function sleep(sec) {
+    var time = new Date().getTime();
+    while(new Date().getTime() - time < sec * 1000);
+}
+function get_train_time(time_str){ // get the time of the stop
+	time_split = time_str.split(':');
+	time_hr = parseInt(time_split[0]);
+	time_min = parseInt(time_split[1]);
+	//time_min += offset;
+	if(time_min>=50){
+		time_hr += 1//Math.floor(time_min/60);
+		time_min = 0;
+	}
+	//else if(time_min < 0){
+	//	time_hr -= Math.ceil(-time_min/60);
+	//	time_min = 60 + (time_min % 60);
+	//}
+	hr_zero = (time_hr<10)? '0':'' ;
+	min_zero = (time_min<10)?'0':'' ;
+	new_time = hr_zero + time_hr + ':' + min_zero + time_min;
+	return new_time;
+}
 </script>
 </head>
 <body onload="initialize()">
@@ -205,14 +245,14 @@ function remove_tags(html){
 		<option value="0300">03:00</option>
 		<option value="0400">04:00</option>
 		<option value="0500">05:00</option>
-		<option selected="selected" value="0600">06:00</option>
+		<option value="0600">06:00</option>
 		<option value="0700">07:00</option>
 		<option value="0800">08:00</option>
 		<option value="0900">09:00</option>
 		<option value="1000">10:00</option>
 		<option value="1100">11:00</option>
 		<option value="1200">12:00</option>
-		<option value="1300">13:00</option>
+		<option selected="selected" value="1300">13:00</option>
 		<option value="1400">14:00</option>
 		<option value="1500">15:00</option>
 		<option value="1600">16:00</option>
