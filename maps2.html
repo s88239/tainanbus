@@ -1,0 +1,299 @@
+﻿<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+<script type="text/javascript" src="tools/get_time_tool.js"></script>
+<script type="text/javascript" src="tools/prototype.js"></script>
+<script type="text/javascript">
+    function initialize() {
+        var mapOptions = {
+			center: new google.maps.LatLng(22.996733,120.212465),
+			zoom: 15,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+		}
+				google.maps.event.addListener(map, 'click', function( event ){
+  alert( "Latitude: "+event.latLng.lat()+" "+", longitude: "+event.latLng.lng() ); 
+});
+</script>
+
+
+<script type="text/javascript">
+	var directionsDisplay;
+	var directionsService = new google.maps.DirectionsService();
+	var map;
+	var oldDirections = [];
+	var currentDirections = null;
+
+	function initialize2(pFrom,pEnd) {
+		var latlng = new google.maps.LatLng(23.973875,120.982024);
+		var myOptions = {
+			zoom: 15,
+			//center: document.getElementById("txtFrom").value,
+			center: latlng,//change!!
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+		}
+		
+		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		/*marker = new google.maps.Marker({
+			draggable:true,
+			position: latlng,
+			title:"台灣 Taiwan",
+			map:map
+		}); //add marker*/
+		directionsDisplay = new google.maps.DirectionsRenderer({
+			'map': map,
+			'preserveViewport': true,
+			'draggable': true
+		});	
+		directionsDisplay.setPanel(document.getElementById("directions_panel"));
+
+		google.maps.event.addListener(directionsDisplay, 'directions_changed',
+			function() {
+				if (currentDirections) {
+					oldDirections.push(currentDirections);          
+				}
+			currentDirections = directionsDisplay.getDirections();
+			});
+		calcRoute2(pFrom,pEnd);
+		var geoXml = new geoXML3.parser(
+  {
+    map: map, 
+    singleInfoWindow: true,
+    createMarker: function(p){
+      var that   = this,
+          marker = new google.maps.Marker({position:p.latlng,map:that.map});
+      google.maps.event.addListener(marker,'click',function(e){
+            that.infoWindow.setContent(e.latLng.toString());
+            that.infoWindow.open(that.map,this);
+    });
+   }});
+		/*google.maps.event.addListener(map, 'click', function( event ){
+		alert( "Latitude: "+event.latLng.lat()+" "+", longitude: "+event.latLng.lng() ); 
+});
+		marker = new google.maps.Marker({
+			draggable:true,
+			position: event.latLng,
+			title:"台灣 Taiwan",
+			map:map
+		}); */
+	}
+  
+	function calcRoute2(pFrom,pEnd) {
+		var selectedMode = document.getElementById("mode").value;
+		var start = pFrom;
+		var end = pEnd;
+		var request = {
+			origin:start,		//起始地
+			destination:end,	//目的地
+			//中途
+			travelMode: google.maps.TravelMode[selectedMode],
+			//provideRouteAlternatives: true,
+			transitOptions: {
+			departureTime: new Date(1337675679473) //arrivalTime date 物件?
+		}
+			
+			//travelMode: google.maps.DirectionsTravelMode.TRANSIT  //旅行工具 WALKING | DRIVING
+		};
+		directionsService.route(request, function(response, status) {
+			if (status == google.maps.DirectionsStatus.OK) {
+				directionsDisplay.setDirections(response);
+				//alert(directionsDisplay.getDirections().routes[0].legs[0].start_address);//起點地點：330台灣桃園縣桃園市興華路23號
+				//alert(directionsDisplay.getDirections().routes[0].legs[0].end_address);		//alert(directionsDisplay.getDirections().routes[0].legs[0].distance.text);//24.8公里
+				//alert(directionsDisplay.getDirections().routes[0].legs[0].duration.text);//31分鐘
+				//alert(directionsDisplay.getDirections().routes[0].copyrights);//地圖資料 2011 Kingway
+				//alert(directionsDisplay.getDirections().routes[0].legs[0].steps[0].instructions);//朝<b>西北</b>，走<b>興華路</b>，往<b>大智路</b>前進
+				//alert(directionsDisplay.getDirections().routes[0].legs[0].steps[0].distance.text);//0.3公里
+			
+			}/*
+			OK 表示回應包含有效的 DirectionsResult。
+NOT_FOUND 表示在要求的起點、目的地或路點指定的位置中，至少有一個位置無法進行地理編碼。
+ZERO_RESULTS 表示系統在起點和目的地之間找不到路線。
+MAX_WAYPOINTS_EXCEEDED 表示 DirectionsRequest 中提供了太多的 DirectionsWaypoint。允許的路點數上限為 8，且包含起點和目的地。Maps API for Business 客戶的要求最多可使用 23 個路點，包含起點和目的地。大眾運輸導航不支援路點。
+INVALID_REQUEST 表示提供的 DirectionsRequest 無效。這個錯誤碼最常見的原因是，要求中缺少起點或目的地，或是大眾運輸要求包含路點。
+OVER_QUERY_LIMIT 表示網頁在允許的時段內已傳送太多要求。
+REQUEST_DENIED 表示系統拒絕您的網頁使用導航服務。
+UNKNOWN_ERROR 表示因為伺服器發生錯誤，無法處理導航要求。如果您再試一次，該要求可能會成功。*/
+		});
+		
+	}
+	
+function show(){
+	var string=document.getElementById("directions_panel").innerHTML;
+	//string=remove_tags(string)
+	//var n= string.indexOf("麻豆");
+	//if(n!=-1){
+	//	document.write("<xmp>");
+	//	document.write(string);
+	
+	var re = new RegExp('jstcache="38">[0-9]{3}(.*?)</td>','gi');
+	var match = string.match(re);
+	if(match) {
+		match[0].search(re);
+		startpoint = RegExp.$1;
+		match[1].search(re);
+		endpoint = RegExp.$1;		//document.write(startpoint+"\n"+endpoint);
+	} //startpoint endpoint
+	var routeArray = new Array(startpoint);
+	//else document.write("no")
+	
+	var re2 = RegExp('jstcache="41">(.*?)</b>.*?jstcache="44"(.*?)</span>.*?jstcache="46">(.*?)</span>',"gi")
+	var match = string.match(re2);
+	//var ways="";
+	//var laststop="";
+	var stopname = new Array();
+	var transit_name = new Array(); //bus(橘幹) rail(自強/復興) or walk
+	var statement = new Array(); //statement ex:
+	var transit_way = new Array();
+	if(match) { /*to catch out*/
+		for (var i=0; i<match.length; i++){
+			match[i].search(re2);
+			var str = RegExp.$2;//ex: src="http://maps.gstatic.com/mapfiles/transit/iw/6/bus.png">紅幹線
+			//stop = RegExp.$1;//step name
+
+			if(str.indexOf("walk")!=-1) {
+				transit_way.push(1);
+				transit_name.push("walk");
+			}
+			else {
+				if(str.indexOf("rail")!=-1) {
+					str=str.replace('src="http://maps.gstatic.com/mapfiles/transit/iw/6/rail.png">',"");
+					transit_name.push(str);
+					transit_way.push(2);
+				}
+				if(str.indexOf("bus")!=-1) {
+					str=str.replace('src="http://maps.gstatic.com/mapfiles/transit/iw/6/bus.png">',"")
+					transit_name.push(str);
+					transit_way.push(3);
+				}
+			}
+			stopname.push(RegExp.$1);
+			statement.push(RegExp.$3);
+		}
+	}
+
+	for(i=0;i<transit_name.length;i++){
+		transit_name[i]=remove_tags(transit_name[i]);
+		transit_name[i]=transit_name[i].replace(/\s+/gi,"");
+	}
+
+	for(i=0;i<stopname.length;i++){
+		stopname[i]=stopname[i].replace("興南客運","");
+	}
+	var route="綠幹線";
+	var start="火車站(北站)";
+	var end="玉井站";
+	var times="15:00";
+	var flag=true;
+	for(i=0;i<transit_way.length;i++){
+		//if(transit_way[i]==3) alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
+	//	if(transit_way[i]==2) {
+			//document.write("haha");
+	//		quest_rail();
+	//	}
+		if(transit_way[i]==3) alert(stopname[i]+get_bus_time(transit_name[i], stopname[i], stopname[i+1], "17:00", true)+stopname[i+1]);
+	}
+
+	
+	routeArray.push(endpoint);
+}
+function quest_rail()
+{
+	var queryString = 'url='+"http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate=2014/06/08&fromstation=1227&tostation=1228&trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271110%27,%271120%27&fromtime=0600&totime=2359";
+	var temp = 'http://www.csie.ntu.edu.tw/~b00902098/parse_train.php';
+	var ajax = new Ajax.Request(temp,{method:'post',parameters:queryString,onComplete:rail});
+}
+function rail(xmlHttpObj)
+{
+	document.write("ajax success");
+}
+function remove_tags(html){
+	return html.replace(/<(?:.|\n)*?>/gm, '');
+}
+
+</script>
+</head>
+<body onload="initialize2(txtFrom.value,txtEnd.value)">
+測試路徑規劃</br>
+起始<input type="text" id="txtFrom" style="width:300px;"value="麻豆"></input></br>
+目的<input type="text" id="txtEnd" style="width:300px;"value="關廟"></input><br>
+  <button id="btnSubmit" onclick="show()">送出</button><br>
+
+交通方式：<select id="mode">
+  <option value="DRIVING">Driving</option>
+  <option value="WALKING">Walking</option>
+  <option value="BICYCLING">Bicycling</option>
+  <option value="TRANSIT" selected>Transit</option>
+</select>
+<br>時間： 
+<select name="FromTimeSelect" id="FromTimeSelect">
+		<option value="0000">00:00</option>
+		<option value="0100">01:00</option>
+		<option value="0200">02:00</option>
+		<option value="0300">03:00</option>
+		<option value="0400">04:00</option>
+		<option value="0500">05:00</option>
+		<option selected="selected" value="0600">06:00</option>
+		<option value="0700">07:00</option>
+		<option value="0800">08:00</option>
+		<option value="0900">09:00</option>
+		<option value="1000">10:00</option>
+		<option value="1100">11:00</option>
+		<option value="1200">12:00</option>
+		<option value="1300">13:00</option>
+		<option value="1400">14:00</option>
+		<option value="1500">15:00</option>
+		<option value="1600">16:00</option>
+		<option value="1700">17:00</option>
+		<option value="1800">18:00</option>
+		<option value="1900">19:00</option>
+		<option value="2000">20:00</option>
+		<option value="2100">21:00</option>
+		<option value="2200">22:00</option>
+		<option value="2300">23:00</option>
+
+	</select>
+至 
+        <select name="ToTimeSelect" id="ToTimeSelect">
+		<option value="0000">00:00</option>
+		<option value="0100">01:00</option>
+		<option value="0200">02:00</option>
+		<option value="0300">03:00</option>
+		<option value="0400">04:00</option>
+		<option value="0500">05:00</option>
+		<option value="0600">06:00</option>
+		<option value="0700">07:00</option>
+		<option value="0800">08:00</option>
+		<option value="0900">09:00</option>
+		<option value="1000">10:00</option>
+		<option value="1100">11:00</option>
+		<option value="1200">12:00</option>
+		<option value="1300">13:00</option>
+		<option value="1400">14:00</option>
+		<option value="1500">15:00</option>
+		<option value="1600">16:00</option>
+		<option value="1700">17:00</option>
+		<option value="1800">18:00</option>
+		<option value="1900">19:00</option>
+		<option value="2000">20:00</option>
+		<option value="2100">21:00</option>
+		<option value="2200">22:00</option>
+		<option value="2300">23:00</option>
+		<option selected="selected" value="2359">23:59</option>
+	</select>
+
+
+<br>
+  <div id="map_canvas" style="float:left;width:70%;height:100%"></div>
+  <div style="float:right;width:30%;height:100%;overflow:auto"> 
+
+  <div id="directions_panel" style="width:100%"></div>
+<div>
+</body>
+</html>
