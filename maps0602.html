@@ -11,9 +11,8 @@ var directionsService = new google.maps.DirectionsService();
 var map;
 
 function initialize() {
-
   directionsDisplay = new google.maps.DirectionsRenderer();
-var latlng = new google.maps.LatLng(23.973875,120.982024);
+var latlng = new google.maps.LatLng(22.996733,120.212465);
   var mapOptions = {
     zoom:13,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -22,7 +21,6 @@ var latlng = new google.maps.LatLng(23.973875,120.982024);
   map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
   directionsDisplay.setMap(map);
   directionsDisplay.setPanel(document.getElementById("directions_Panel"));
-
 }
 
 function calcRoute() {
@@ -34,7 +32,6 @@ function calcRoute() {
     destination:end,
 	travelMode: google.maps.TravelMode[selectedMode],
 	//provideRouteAlternatives: true,
-
 	transitOptions: {
 			departureTime: new Date(1337675679473) //arrivalTime date 物件?
 		}	
@@ -47,27 +44,53 @@ function calcRoute() {
 }
 function show_result(){
 	var string=document.getElementById("directions_Panel").innerHTML;
-	//string=remove_tags(string)
-	//var n= string.indexOf("麻豆");
-	//if(n!=-1){
-	//	document.write("<xmp>");
+		//document.write("<xmp>");
 	//	document.write(string);
+	var walk_time_array = new Array();
+	var walk_time = new RegExp('jstcache="50">(.*?)</span>','gi');
+	var match = string.match(walk_time);
+	if(match){ /*to catch out*/
+		for (var i=0;i<match.length;i++){
+			match[i].search(walk_time);
+			var str = RegExp.$1;
+			m=str.indexOf('分');
+			n=str.indexOf('小時');
+			if(m!=-1){//分
+				if(n!=-1){//小時
+					temp_hour=str.substring(2,n);//小時
+					temp_hour = parseInt(temp_hour);
+					str = str.substring(n,m);
+					str = parseInt(str)+temp_hour
+					document.write(str+"分<br>");
+				}
+					str=str.substring(2,m)
+					str=parseInt(str);
+					//document.write(str+"分");
+
+			}
+	//		document.write(str);
+			walk_time_array.push(str);
+	//	document.write(match.length);
+		}
+	}
+/*	for (var i=0;i<match.length;i++){
+			match[i].search(walk_time);
+			var str = RegExp.$1;
+			document.write("123"+walk_time_array[i]+"<br>");
+	}*/
 	var times="13:00"
-	var re = new RegExp('jstcache="38">[0-9]{3}(.*?)</td>','gi');
+	var re = new RegExp('jstcache="38">[0-9]{3}(.*?)</td>','gi');//start and end point
 	var match = string.match(re);
 	if(match) {
 		match[0].search(re);
 		startpoint = RegExp.$1;
 		match[1].search(re);
-		endpoint = RegExp.$1;		//document.write(startpoint+"\n"+endpoint);
+		endpoint = RegExp.$1;
 	} //startpoint endpoint
 	var routeArray = new Array(startpoint);
-	//else document.write("no")
 	
-	var re2 = RegExp('jstcache="41">(.*?)</b>.*?jstcache="44"(.*?)</span>.*?jstcache="46">(.*?)</span>',"gi")
+	var re2 = RegExp('jstcache="41">(.*?)</b>.*?jstcache="44"(.*?)</span>.*?jstcache="46">(.*?)</span>',"gi");
 	var match = string.match(re2);
-	//var ways="";
-	//var laststop="";
 	var stopname = new Array();
 	var transit_name = new Array(); //bus(橘幹) rail(自強/復興) or walk
 	var statement = new Array(); //statement ex:
@@ -76,7 +99,6 @@ function show_result(){
 		for (var i=0; i<match.length; i++){
 			match[i].search(re2);
 			var str = RegExp.$2;//ex: src="http://maps.gstatic.com/mapfiles/transit/iw/6/bus.png">紅幹線
-			//stop = RegExp.$1;//step name
 
 			if(str.indexOf("walk")!=-1) {
 				transit_way.push(1);
@@ -107,24 +129,19 @@ function show_result(){
 	for(i=0;i<stopname.length;i++){
 		stopname[i]=stopname[i].replace("興南客運","");
 	}
-	/*var route="綠幹線";
-	var start="火車站(北站)";
-	var end="玉井站";
-	var times="15:00";
-	var flag=true;*/
+	
 	var result = "";
-	var walk_time=10;
+	//var walk_time=10;
 	for(i=0;i<transit_way.length;i++){
 		if(transit_way[i]==1){
-			document.write((i+1)+statement[i]+"<br>");
-			times = get_time(times,walk_time);
+		//document.write("走了"+walk_time_array[i]+"分");
+			document.write((i+1)+statement[i]+"\t約"+walk_time_array[i]+"分鐘<br>");
+			times = get_time(times,walk_time_array[i]);
+			
 		}
 		else if(transit_way[i]==2) {
-	//	document.write("haha");
 			document.write(i+1);
 			quest_rail("2014/06/11","1227","1228","2","0600","2359");
-		//	sleep(4);
-			//document.write(global_test);
 		}
 		else if(transit_way[i]==3) {
 			businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
@@ -132,23 +149,76 @@ function show_result(){
 			times = businfo[1];
 		}
 	}
-
 	//document.write(result);
 	routeArray.push(endpoint);
+	document.write("start:"+routeArray[0]+ "endpoint"+routeArray[1] );
 }
 function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)//need to remove ':' on time
 {
+	/*var searchdate="2014/06/11";
+	var fromstation="1227";
+	var tostation="1228";
+	var trainclass="2";
+	var fromtime="0600";
+	var totime="2359"*/
+	//var url ="http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate=2014/06/11&fromstation=1227&tostation=1228&trainclass=2&fromtime=0600&totime=2359";
+	var url = "http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate="+searchdate+"&fromstation="+fromstation+"&tostation="+tostation+"&trainclass="+trainclass+"&fromtime="+fromtime+"&totime="+totime;
+	//var temp = 'tools/parse_train.php';
+	//	var ajax = new Ajax.Request(temp,{method:'POST',parameters:queryString,onComplete:rail});
+	var http_request=false;
+
+	if(window.XMLHttpRequest){
+		http_request=new XMLHttpRequest();
+		if(http_request.overrideMimeType){
+			http_request.overrideMimeType('text/xml');
+		}
+	}
+	else if(window.ActiveXObject){
+		try{ //6.0+
+		http_request=new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch(e){
+			try{ //5.5+
+				http_request=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch (e){}
+		}
+	}
+	if(!http_request){
+		alert('Giving up :( Cannot create a XMLHTTP instance');
+		return false;
+	}
+	var test;
+	var by_post='url='+url; //將變數放進字串
+	http_request.onreadystatechange=show_area;
+	http_request.open('POST','tools/parse_train.php',false);
+	http_request.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");  //**重要一定要加上
+	http_request.send(by_post);
+
+	function show_area(){
+		if(http_request.readyState==4){
+			if(http_request.status==200){
+				//global_test = ""+http_request.responseText;
+				//temp=remove_tags(temp);
+				document.write(http_request.responseText);
+				//document.write("</xmp>");
+			}
+		}
+	//	else document.write("fuck");
+	}
+	//return test;
+	//document.write(http_request.onreadystatechange);*/
+}
+
+/*function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)//need to remove ':' on time
+{
 	var queryString = {url:"http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate="+searchdate+"&fromstation="+fromstation+"&tostation="+tostation+"&trainclass="+trainclass+"&fromtime="+fromtime+"&totime="+totime};
 	//var queryString = {url:"http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate=2014/06/11&fromstation=1227&tostation=1228&trainclass=2&fromtime=0600&totime=2359"};
-	var temp = 'tools/parse_train.php'//'http://www.csie.ntu.edu.tw/~b00902098/parse_train.php';
+	var temp = 'tools/parse_train.php';//'http://www.csie.ntu.edu.tw/~b00902098/parse_train.php';
 	var ajax = new Ajax.Request(temp,{method:'post',parameters:queryString,onComplete:test_ajax})
-}
+}*/
 function remove_tags(html){
 	return html.replace(/<(?:.|\n)*?>/gm, '');
-}
-function test_ajax(xmlHttpObj) {
-	//document.write("jer")
-	document.write(xmlHttpObj.responseText);
 }
 function get_train_time(time_str){ // get the time of the stop
 	time_split = time_str.split(':');
