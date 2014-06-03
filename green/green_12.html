@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大台南公車 ─ 綠12 路線資訊</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+@import url("../css/table_style.css");
+@import url("../css/default.css");
+select.get_fare{background-color: #3eb034;}
+select.get_fare option.option1
+{background-color: #007700;}
+select.get_fare option.option2
+{background-color: #3F0;}
+select.get_fare option.option3
+{background-color: #360;}
+select.get_fare option.option4
+{background-color: #6F3;}
+select.get_fare option.option5
+{background-color: #393;}
+select.get_fare option.option6
+{background-color: #6F3;}
+</style>
+<script language="javascript" src="../route/msg.js"></script>
+<script language="javascript" src="../route/fare_and_time/green_12.js"></script>
+<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
+			<p align="center">
+			<a href="index.html"><img src="../img/green_logo.png"></a>
+			</p>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="#route" accesskey="1" title="">路線圖</a></li>
+				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
+				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
+				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
+				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="wrapper1">
+	<a name="route"></a>
+	<div id="banner">&nbsp;</div>
+	<div id="route">
+		<div class="title">
+			<h2>大台南公車 ─ 綠12 路線圖</h2>
+			<span class="byline">Tainan Bus Green 12, Route Map</span>
+		</div>
+		<img src="../route/green/g12.jpg">
+		<p></p>
+		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k__oSMhm8dFA" width="800" height="500"></iframe>-->
+	</div>
+</div>
+<div id="wrapper2">
+	<a name="info"></a>
+	<div id="routeinfo" class="container">
+		<div class="title">
+			<h2>大台南公車 ─ 綠12　路線資訊</h2>
+			<span class="byline">Tainan Bus Green 12, Route Information</span> </div>
+		<div class="content">
+			<table border="0">
+				<tr>
+					<td>起訖點</td>
+					<td>新化 － 南化 － 玉山</td>
+				</tr>
+				<tr>
+					<td>營運公司</td>
+					<td>興南客運</td>
+				</tr>
+				<tr>
+					<td>首／末班車發車時刻</td>
+					<td>往 玉山：05:25／21:20<br />往 新化：05:55／22:15</td>
+				</tr>
+				<tr>
+					<td>班距</td>
+					<td>固定班次</td>
+				</tr>
+				<tr>
+					<td>收費方式</td>
+					<td>里程計費</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1112&locale=zh_TW" class="button">公車動態資訊</a> </div>
+	</div>
+</div>
+<div id="wrapper3">
+	<a name="fare"></a>
+	<div id="faretable" class="container">
+		<div class="title">
+			<h2>票價表</h2>
+			<span class="byline">Ticket Fare</span> </div>
+		<div class="content">
+			<script language="javascript">
+				create_select_menu(green_12_interval_stop, 6, 'green_12');
+			</script>
+			<br/>
+			<table id="showfareInfo">
+				<tr>
+					<th></th><th>全票</th><th>半票</th>
+				</tr>
+				<tr>
+					<td><b>投現</b></td>
+					<td id="cash_adult">-</td>
+					<td id="cash_half">-</td>
+				</tr>
+				<tr>
+					<td><b>電子票證</b></td>
+					<td id="RFID_adult">-</td>
+					<td id="RFID_half">-</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<script language="javascript">
+				print_fare_table(green_12_interval_name, green_12_fare, '#3eb034');
+				document.write('<p>　</p>');
+				document.write(MeteredMSG + PromotionMSG);
+			</script>
+			<p>　</p>
+		</div>
+	</div>
+</div>
+<div id="timetable">
+	<a name="time"></a>
+	<div class="title">
+		<h2>時刻表</h2>
+		<span class="byline">Bus schedule</span> </div>
+	<div class="content">
+		<script language="javascript">
+			document.write('<h2><font color="green">新化-&gt;南化/玉山</font></h2>');
+			create_time_schedule(green_12_main_stop_name, green_12_main_stop_time_consume, green_12_important_stop, green_12_time_go, false);
+			document.write('<p>　</p>');
+			document.write('<h2><font color="green">南化/玉山-&gt;新化</font></h2>');
+			create_time_schedule(green_12_main_stop_name, green_12_main_stop_time_consume, green_12_important_stop, green_12_time_return, true);
+			document.write(TimeScheduleMSG);
+		</script>
+	</div>
+</div>
+<div id="wrapper4">
+	<a name="transfer"></a>
+	<div id="transfer" class="container">
+		<div class="title">
+			<h2>大台南公車－綠12 主要轉乘點資訊</h2>
+			<span class="byline">Tainan bus Green 12, Transfer information</span>
+		</div>
+		<div class="content">
+			<table>
+				<tr>
+					<th>新化</th>
+					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
+					<td id="green">
+					<p>
+						<a href="green.html" target="_blank">綠幹線</a>、<a href="green_1.html" target="_blank">綠1</a>、<a href="green_2.html" target="_blank">綠2</a>、<a href="green_3.html" target="_blank">綠3</a>、<a href="green_4.html" target="_blank">綠4</a>、
+					</p>
+					<p>
+						<a href="green_6.html" target="_blank">綠6</a>、<a href="green_7.html" target="_blank">綠7</a>、<a href="green_10.html" target="_blank">綠10</a>、<a href="green_11.html" target="_blank">綠11</a>、<a href="green_12.html" target="_blank">綠12</a>、
+					</p>
+					<a href="green_13.html" target="_blank">綠13</a>、<a href="green_14.html" target="_blank">綠14</a>、<a href="green_15.html" target="_blank">綠15</a>、<a href="green_16.html" target="_blank">綠16</a></td>
+				</tr>
+				<tr>
+					<th>左鎮公所</th>
+					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
+					<td id="green"><a href="green.html" target="_blank">綠幹線</a>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<script type="text/javascript">document.write(copyrightMSG);</script>
+</div>
+</body>
+</html>

@@ -10,7 +10,8 @@ $url = $_POST['url'];
 #$temp = $($url."&searchdate=".$searchdate."&fromstation=".$fromstation."&tostation=".$tostation."&trainclass=".$trainclass."&fromtime=".$fromtime."&totime=".$totime$fp = file($url));
 $fp = file($url);#."&searchdate=".$searchdate."&fromstation=".$fromstation."&tostation=".$tostation."&trainclass=".$trainclass."&fromtime=".$fromtime."&totime=".$totime);
 #echo '<xmp>';
-echo $fp[64].$fp[70].$fp[71];
-//print_r($fp);
+for($i=0;$i<4;++$i){
+	echo $fp[64+26*$i].$fp[70+26*$i].$fp[71+26*$i].'<br />';
+}
 #echo '</xmp>';
 ?>
