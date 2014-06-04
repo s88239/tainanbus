@@ -5,11 +5,3 @@ body{
  background-attachment:fixed;
  font-family: 微軟正黑體;
 }
-#mainline{
- font-size:20;font-weight:bold;
- padding:2 5 2 15;
-}
-#branch{
- font-size:16;
- padding:2 5 2 15;
-}

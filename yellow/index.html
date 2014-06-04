@@ -5,13 +5,49 @@
 <title>大台南公車 ─ 黃幹線</title>
 <style type="text/css">
 @import url("../css/busline.css");
-#mainline{
- color:#fab12e;
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f0e61f));
+	background:-moz-linear-gradient(top, #f0c911 5%, #f0e61f 100%);
+	background:-webkit-linear-gradient(top, #f0c911 5%, #f0e61f 100%);
+	background:-o-linear-gradient(top, #f0c911 5%, #f0e61f 100%);
+	background:-ms-linear-gradient(top, #f0c911 5%, #f0e61f 100%);
+	background:linear-gradient(to bottom, #f0c911 5%, #f0e61f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f0e61f',GradientType=0);
+	background-color:#f0c911;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #e6b845;
+	display:inline-block;
+	cursor:pointer;
+	color:#9e260e;
+	font-family:arial,微軟正黑體;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
 }
-#branch{
- color:#fab12e;
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0e61f), color-stop(1, #f0c911));
+	background:-moz-linear-gradient(top, #f0e61f 5%, #f0c911 100%);
+	background:-webkit-linear-gradient(top, #f0e61f 5%, #f0c911 100%);
+	background:-o-linear-gradient(top, #f0e61f 5%, #f0c911 100%);
+	background:-ms-linear-gradient(top, #f0e61f 5%, #f0c911 100%);
+	background:linear-gradient(to bottom, #f0e61f 5%, #f0c911 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0e61f', endColorstr='#f0c911',GradientType=0);
+	background-color:#f0e61f;
 }
-a { color:#fab12e; }
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+td{
+	padding-bottom: 8px;
+}
 </style>
 </head>
 
@@ -27,67 +63,67 @@ a { color:#fab12e; }
   <td valign="top">
    <table>
 	<tr>
-		<td id="mainline"><a href="yellow.html">黃幹線</a></td>
+		<td><a href="yellow.html" class="myButton">黃幹線</a></td>
 		<td>白河 ─ 新營 ─ 麻豆</td>
 	</tr>
 	<tr>
-		<td id="branch">黃1</td>
+		<td><a href="yellow_1.html" class="myButton">黃1</a></td>
 		<td>新營 ─ 柳營 ─ 六甲</td>
 	</tr>
 	<tr>
-		<td id="branch">黃2</td>
+		<td><a href="yellow_2.html" class="myButton">黃2</a></td>
 		<td>新營 ─ 柳營 ─ 六甲 ─王爺宮</td>
 	</tr>
 	<tr>
-		<td id="branch">黃3</td>
+		<td><a href="yellow_3.html" class="myButton">黃3</a></td>
 		<td>新營 ─ 柳營 ─ 果毅後</td>
 	</tr>
 	<tr>
-		<td id="branch">黃4</td>
+		<td><a href="yellow_4.html" class="myButton">黃4</a></td>
 		<td>新營 ─ 二重溪 ─ 六甲</td>
 	</tr>
 	<tr>
-		<td id="branch">黃5</td>
+		<td><a href="yellow_5.html" class="myButton">黃5</a></td>
 		<td>新營 ─ 紅毛厝 ─ 下營</td>
 	</tr>
 	<tr>
-		<td id="branch">黃6</td>
+		<td><a href="yellow_6.html" class="myButton">黃6</a></td>
 		<td>新營 ─ 白沙屯 ─ 後壁火車站</td>
 	</tr>
 	<tr>
-		<td id="branch">黃7</td>
+		<td><a href="yellow_7.html" class="myButton">黃7</a></td>
 		<td>新營 ─ 東山 ─ 青山</td>
 	</tr>
 	<tr>
-		<td id="branch">黃9</td>
+		<td><a href="yellow_9.html" class="myButton">黃9</a></td>
 		<td>新營 ─ 高鐵嘉義站</td>
 	</tr>
 	<tr>
-		<td id="branch">黃10</td>
+		<td><a href="yellow_10.html" class="myButton">黃10</a></td>
 		<td>後壁 ─ 白河 ─ 六重溪</td>
 	</tr>
 	<tr>
-		<td id="branch">黃11</td>
+		<td><a href="yellow_11.html" class="myButton">黃11</a></td>
 		<td>白河 ─ 青山</td>
 	</tr>
 	<tr>
-		<td id="branch">黃12</td>
+		<td><a href="yellow_12.html" class="myButton">黃12</a></td>
 		<td>白河 ─ 關子嶺</td>
 	</tr>
 	<tr>
-		<td id="branch">黃13</td>
+		<td><a href="yellow_13.html" class="myButton">黃13</a></td>
 		<td>白河 ─ 關子嶺 ─ 南寮</td>
 	</tr>
 	<tr>
-		<td id="branch">黃14</td>
+		<td><a href="yellow_14.html" class="myButton">黃14</a></td>
 		<td>白河 ─ 三層崎</td>
 	</tr>
 	<tr>
-		<td id="branch">黃15</td>
+		<td><a href="yellow_15.html" class="myButton">黃15</a></td>
 		<td>白河 ─ 詔安厝</td>
 	</tr>
 	<tr>
-		<td id="branch">黃20</td>
+		<td><a href="yellow_20.html" class="myButton">黃20</a></td>
 		<td>麻豆 ─ 下營 ─ 紅毛厝 ─ 臺鐵林鳳營</td>
 	</tr>
 	</table>

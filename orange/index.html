@@ -5,13 +5,49 @@
 <title>大台南公車 ─ 橘幹線</title>
 <style type="text/css">
 @import url("../css/busline.css");
-#mainline{
- color:#ff7f05;
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #faab4b), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #faab4b 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #faab4b 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #faab4b 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #faab4b 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #faab4b 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#faab4b', endColorstr='#fb9e25',GradientType=0);
+	background-color:#faab4b;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #e3ab4b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial,微軟正黑體;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
 }
-#branch{
- color:#ff7f05;
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #faab4b));
+	background:-moz-linear-gradient(top, #fb9e25 5%, #faab4b 100%);
+	background:-webkit-linear-gradient(top, #fb9e25 5%, #faab4b 100%);
+	background:-o-linear-gradient(top, #fb9e25 5%, #faab4b 100%);
+	background:-ms-linear-gradient(top, #fb9e25 5%, #faab4b 100%);
+	background:linear-gradient(to bottom, #fb9e25 5%, #faab4b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#faab4b',GradientType=0);
+	background-color:#fb9e25;
 }
-a { color:#ff7f05; }
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+td{
+	padding-bottom: 8px;
+}
 </style>
 </head>
 
@@ -27,43 +63,43 @@ a { color:#ff7f05; }
   <td valign="top">
    <table>
 	<tr>
-		<td id="mainline"><a href="orange.html">橘幹線</a></td>
+		<td><a href="orange.html" class="myButton">橘幹線</a></td>
 		<td>佳里 ─ 麻豆 ─ 善化 ─ 玉井</td>
 	</tr>
 	<tr>
-		<td id="branch">橘1</td>
+		<td><a href="orange_1.html" class="myButton">橘1</a></td>
 		<td>善化火車站 ─ 大內 ─ 蒙正</td>
 	</tr>
 	<tr>
-		<td id="branch">橘2</td>
+		<td><a href="orange_2.html" class="myButton">橘2</a></td>
 		<td>胡厝寮 ─ 善化 ─ 大內</td>
 	</tr>
 	<tr>
-		<td id="branch">橘3</td>
+		<td><a href="orange_3.html" class="myButton">橘3</a></td>
 		<td>善化火車站 ─ 安定 ─ 和順</td>
 	</tr>
 	<tr>
-		<td id="branch">橘4</td>
+		<td><a href="orange_4.html" class="myButton">橘4</a></td>
 		<td>善化火車站 ─ 南藝大 ─ 烏山頭水庫</td>
 	</tr>
 	<tr>
-		<td id="branch">橘5</td>
+		<td><a href="orange_5.html" class="myButton">橘5</a></td>
 		<td>善化火車站 ─ 六甲</td>
 	</tr>
 	<tr>
-		<td id="branch">橘10</td>
+		<td><a href="orange_10.html" class="myButton">橘10</a></td>
 		<td>真理大學 ─ 麻豆 ─ 官田 ─ 南藝大</td>
 	</tr>
 	<tr>
-		<td id="branch">橘11</td>
+		<td><a href="orange_11.html" class="myButton">橘11</a></td>
 		<td>下營 ─ 麻豆 ─ 西港 ─ 和順</td>
 	</tr>
 	<tr>
-		<td id="branch">橘12</td>
+		<td><a href="orange_12.html" class="myButton">橘12</a></td>
 		<td>麻豆 ─ 善化 ─ 臺南</td>
 	</tr>
 	<tr>
-		<td id="branch">橘20</td>
+		<td><a href="orange_20.html" class="myButton">橘20</a></td>
 		<td>大內公所 ─ 環湖 ─ 玉井</td>
 	</tr>
 	</table>
