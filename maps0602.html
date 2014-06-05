@@ -211,8 +211,32 @@ function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)
 	function show_area(){
 		if(http_request.readyState==4){
 			if(http_request.status==200){
-				temp=remove_tags(http_request.responseText);
-				result+=temp;
+				
+				var re = RegExp('<span.*?>(.*?)</span>','gi');//train_type
+				var match = http_request.responseText.match(re);
+				if(match) {
+					match[0].search(re);
+					car_type = RegExp.$1;				
+					//document.write("haha");
+				}
+				var re = RegExp('<a.*?>(.*?)</a>','gi');//train_type
+				var match = http_request.responseText.match(re);
+				if(match) {
+					match[0].search(re);
+					car_num = RegExp.$1;				
+				}				
+				var re = RegExp('</font></td><td align="center" width="25"><font color="Black">-</font></td><td align="center" width="120"><font color="Black">(.*?)</font></td><td class="SearchResult_Time" align="center" width="65"><font color="Black">(.*?)</font></td><td class="SearchResult_Time" align="center" width="65"><font color="Black">(.*?)</font></td><td align="center" width="80"><font color="Black">(.*?)</font>','gi');//train_type
+				var match = http_request.responseText.match(re);
+				if(match) {
+					match[0].search(re);
+					from_to = RegExp.$1;
+					start_time= RegExp.$2;
+					stop_time = RegExp.$3;
+					cost_time = RegExp.$4;
+					times = stop_time;
+				}
+				//document.write("cartype:"+car_type +"<br>car_num:"+car_num+"<br>方向:"+from_to+"<br>start_time:"+start_time+"<br>stop_time:"+stop_time+"<br>cost:"+cost_time);
+				result+=remove_tags(http_request.responseText);
 			}
 		}
 	}
