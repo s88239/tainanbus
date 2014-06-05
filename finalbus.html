@@ -1,0 +1,727 @@
+<html>
+<head>
+<title>旅遊城市選擇-台南分區圖</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script language="javascript">
+<!--
+
+
+
+
+function goto_next1()
+{
+target='mainframe';
+form1.action = 'search/city.htm';
+form1.submit();
+return false;
+
+}
+
+function mm_calljs(jsstr) { //v2.0
+  return eval(jsstr)
+}
+
+//-->
+</script>
+<script language="javascript">
+<!--
+
+
+<!--
+function mm_reloadpage(init) {  //reloads the window if nav4 resized
+  if (init==true) with (navigator) {if ((appName=="netscape")&&(parseint(appversion)==4)) {
+    document.mm_pgw=innerwidth; document.mm_pgh=innerheight; onresize=mm_reloadpage; }}
+  else if (innerwidth!=document.mm_pgw || innerheight!=document.mm_pgh) location.reload();
+}
+mm_reloadpage(true);
+// -->
+//-->
+</script>
+<link rel="stylesheet" href="../css/map.css" type="text/css">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+    <script type="text/javascript">
+      jing=[];
+      wei=[];
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 10
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      function gogogo(){
+        jing.push(jingjing);
+        wei.push(weiwei);
+        alert(jing[0]+" "+wei[0]);
+      }
+      function initialize2() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.306732, 120.323055),
+          zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">新營火車站</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>新營火車站</b></p>'+
+      '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">鹽水蜂炮</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>鹽水蜂炮</b></p>'+
+      '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">頑皮世界野生動物園</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>頑皮世界野生動物園</b></p>'+
+      '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.306732, 120.323055),
+      map: map,
+      title: '新營火車站'
+  });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.323823, 120.265778),
+      map: map,
+      title: '鹽水蜂炮'
+  });
+  var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.281004, 120.209471),
+      map: map,
+      title: '頑皮世界野生動物園'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  });
+  google.maps.event.addListener(marker2, 'click', function(event) {
+    infowindow2.open(map,marker2);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker3, 'click', function(event) {
+    infowindow3.open(map,marker3);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+      }
+
+      function initialize3() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.3292451, 120.4639661),
+          zoom: 13
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">台影文化城</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>台影文化城</b></p>'+
+      '<p>位在台南縣白河鎮的台影文化城創立於民國八十年，園區佔地約兩公頃，是提供拍攝影集取景的文化城。園區中主要為台灣光復初期時的傳統建築，在此拍攝的影劇有「愛」、「緣」以及較近期的「台灣阿誠」、「流氓教授」與「嫁妝一牛車」等本土劇。後來台影文化城雖有過一段時間的沒落，但是民國九十五年時林務局買下六溪電影文化城之經營權，與白河鎮每年的蓮花節盛會結合策劃旅遊動線，提升影城的知名度，吸引更多民眾前來遊玩。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">白河水庫風景區</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>白河水庫風景區</b></p>'+
+      '<p>白河水庫位於白河鎮東側，為白河、東山一帶農田灌溉主要水源，同時水庫也兼具有防洪、給水、觀光功能，自水庫的大門進入，您會看見兩排高聳的大王椰子樹及綠油油的草坪，正等著迎接您的到來，每逢周休假日，總成為遊客烤肉、露營的最佳休憩佇足點。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">好漢坡</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>好漢坡</b></p>'+
+      '<p>好漢坡在日治時期稱為「男人的坡」，原有兩百九十三階，但在拓寬縣道(南175)時，被從中截斷，僅餘兩百三十四階，這裡原為日軍醫療復建之所，因為階梯十分陡峭，登好漢坡需要有好的腳力，因此現今成為熱門的登山健行步道，登高可遠眺關子嶺風光。'+
+      '</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.315547, 120.444585),
+      map: map,
+      title: '台影文化城'
+  });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.353571, 120.472984),
+      map: map,
+      title: '白河水庫風景區'
+  });
+  var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.341028, 120.473328),
+      map: map,
+      title: '好漢坡'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1); 
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  });
+  google.maps.event.addListener(marker2, 'click', function(event) {
+    infowindow2.open(map,marker2);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker3, 'click', function(event) {
+    infowindow3.open(map,marker3);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+      }
+      function initialize4() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.339884, 120.504725),
+          zoom: 14
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">關子嶺溫泉</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>關子嶺溫泉</b></p>'+
+      '<p>關子嶺溫泉位於白河東境，海拔270公尺，因閩南語“高”與“關”發音近似，故得名。關子嶺溫泉與北投、陽明山、四重溪溫泉，並列台灣四大溫泉區，其泉水屬鹼性碳酸泉，濃濁且含有硫磺成分，並具滑膩感，因此也為台灣地區特有的「濁泉」。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">紅葉公園</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>紅葉公園</b></p>'+
+      '<p>紅葉公園位於台南縣白河鎮關子嶺枕頭山上，關子嶺溫泉區的上方，又稱為「關子嶺公園」，這兒的面積不大，但園內遍植變葉植物，每每到了秋季，滿目紅葉的景致，浪漫的詩情畫意氛圍即會湧上心頭，此外，「關嶺覽勝」巨石及大成殿內的溫泉展示館，更為此處的新興景點。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">水火同源</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>水火同源</b></p>'+
+      '<p>水火同源於關仔嶺風景區內，又稱「水火洞」，在台頗負盛名，水火同源一景為，崖壁上冒出的天然氣與泉水從壁縫中流出，只要點燃火焰，就形成了水中有火的特殊景觀，日據時代，這裡有尊石佛-水火神君（不動神君）在出火處之上，供居民膜拜，由於此景少有，因此逐而形成知名的旅遊據點。'+
+      '</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.339884, 120.504725),
+      map: map,
+      title: '關子嶺溫泉'
+  });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.3411737, 120.5063651),
+      map: map,
+      title: '紅葉公園'
+  });
+  var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.322234, 120.485447),
+      map: map,
+      title: '水火同源'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  });
+  google.maps.event.addListener(marker2, 'click', function(event) {
+    infowindow2.open(map,marker2);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker3, 'click', function(event) {
+    infowindow3.open(map,marker3);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+      }
+      function initialize5() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.1237711, 120.4600399),
+          zoom: 13
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">芒果產業文化資訊館</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>芒果產業文化資訊館</b></p>'+
+      '<p>台南縣玉井鄉被譽為是「芒果的故鄉」，高溫的氣候栽種出香甜多汁的芒果，為了讓更多人了解芒果的產業文化與自然生態，經過多個單位的積極推動下，約兩百坪的芒果產業文化資訊館於民國八十五年竣工啟用。芒果產業文化資訊館共有四層樓，收集了許多文字、圖片與模型等資訊展示，包括玉井鄉的芒果產業發展、芒果的種類、營養成分、自然生態與食譜等，蘊含多樣性的資訊。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">走馬瀨農場</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>走馬瀨農場</b></p>'+
+      '<p>以專業種草起家，再轉型升級為觀光休閒農場，並且第一批獲頒合法風景遊樂區標章，連續11年優等及特優考核園區。2004年11月，榮獲農委會委託台灣休閒農業協會評鑑，優級休閒農業標章。走馬瀨農場佔地120公頃，足足有四個台北大安森林公園大，由台南市農會於國民77年開發經營，是全國第一個休閒農業主題遊樂園。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">冰島芒果城</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>冰島芒果城</b></p>'+
+      '<p>好吃不解釋。'+
+      '</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.120266,120.465993),
+      map: map,
+      title: '芒果產業文化資訊館'
+  });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.13685,120.429857),
+      map: map,
+      title: '走馬瀨農場'
+  });
+  var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.1338113,120.4428603),
+      map: map,
+      title: '冰島芒果城'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  });
+  google.maps.event.addListener(marker2, 'click', function(event) {
+    infowindow2.open(map,marker2);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker3, 'click', function(event) {
+    infowindow3.open(map,marker3);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+      }
+      function initialize6() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.1800114,120.3248246),
+          zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">葫蘆埤自然生態公園</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>葫蘆埤自然生態公園</b></p>'+
+      '<p>葫蘆埤位於「隆田」與「麻豆」間的「葫蘆埤」建於乾隆35年，主要為灌溉蓄水之用，因為形狀像葫蘆而命名，縣道176線的闢建，則剛好成了葫蘆的腰繫，將它分成了兩半。葫蘆埤平常除了有白鷺鷥群聚居，水雉在此棲息，偶見舟影點綴著菱田，風情萬種，因此，葫蘆埤躍升為新南瀛八景之一「菱香舟影」。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">阿扁總統祖厝</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>阿扁總統祖厝</b></p>'+
+      '<p>阿扁總統祖厝位於官田鄉西庄村，西庄及東庄是官田鄉菱角生產最多的地方。「官田」原名「官佃」顧名思義，是鄭成功時代，設營屯墾的官屬田地，已有130餘年歷史。每到週末假日，道路兩旁攤販雲集，攤販販賣與陳水扁總統有關的各式紀念品，遊客絡繹不絕。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">麻豆鱷魚王</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>麻豆鱷魚王</b></p>'+
+      '<p>鱷魚場位於麻豆鎮小埤里91-1號，目前展示的種類達二百種之多，堪稱台灣第一家「稀有動物王國」。園內重達1250台斤的大鱷魚可供遊客坐在尾巴上面拍照外，另有兩棲爬蟲館，世界三大走禽區，突變種動物區，可愛動物區，水生植物區，鳥園。</p>'+
+      '<p>鱷魚大王邱鍚河表示：飼養的珍奇的稀有動物，有不少是在台灣難得一見的，種類近二百種，包括雪白玉米蛇、咬尾刺蜥、翠蟒蛇、水龍、花園石龍。巴西角蛇、肥尾守官、非洲牛蛙、四腳鵝、三頭龜、鱷魚、楓葉龜、紅毛猩猩、瑤山鱷蜥、恐龍蜥、鬆獅蜥、超級大鱉、肺魚、水角龍、蜥蜴（可表演催眠秀）豪豬、南美蜥、海帆蜥、毒蠍等，無奇不有的動物世叫人大開眼界。'+
+      '</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">林鳳營蓮花世界</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>林鳳營蓮花世界</b></p>'+
+      '<p>蓮花世界位於六甲鄉林鳳營109號，由林森津先生負責，他鑽研蓮花，時間達廿餘年，並且不斷開發出新品種，是位無師自通的傳奇人物，地方上都以「蓮花博士」來尊稱他，這廿幾年來，他已經研發出三百多種蓮花。在這裡，可以看到各式各樣的蓮花，有色彩繽紛的香水蓮花、難得一見的黑色睡蓮、僅1公分大小的世界最小蓮花，還有可以載重40公斤的大王蓮等，種類多到令人目不暇給。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString5 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">林家古厝</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>林家古厝</b></p>'+
+      '<p>古厝位於麻豆鎮興農里和平路20號，麻豆林家曾與板橋林家、霧峰林家並稱為「台灣三林」。麻豆林家古厝，建於清嘉慶年間，其開基祖是林文敏，清嘉慶四年由褊建泉州府安溪縣渡海來臺，林家大院在道光年間興建，為三落兩院式的大宅，是林家祖厝，稱為「舊四房」；其中最著名的是位於和平路20號的「新四房」，建於光緒元年（1875年），地方以「大厝九包五，三落百二門」形容，字裡行間可看出當時的風光與氣派。林家各房光復後在麻豆建有七座華宅，如今三房與八房古厝依舊保持完整，為「七包三」兩進四合院，精緻古樸。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString6 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">沈光文紀念廳</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>沈光文紀念廳</b></p>'+
+      '<p>沈光文，字文開，父祖輩曾是明朝宰相，自小飽讀詩書，明朝福王時，與史可法一起抗清，後隨魯王退守浙江，魯王兵敗，他隱居普陀山為僧，明鄭時期，鄭成功禮聘沈光文。鄭經嗣位，沈光文作賦諷刺政權，惹出殺身之危，遂逃往大崗山、羅漢門等地，並在羅漢門(今內門)出家為僧，之後，流離至目加溜灣社（今善化一帶），在此宣揚儒家思想，教導當地平埔族讀書識字，並為他們治病，乃至終老，葬於善化。1982年中秋節，善化居民為了紀念沈光文，造像入祀慶安宮後殿，與5位文昌君一起供奉，並為其建造一座紀念碑。慶安宮東側2樓新成立規劃的沈光文紀念廳，由文建會、原台南縣政府、廟方共同補助經費修建，慶安宮管委會特邀書法名家王九儒、謝永田等人書寫沈公詩文展出。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  var infowindow4 = new google.maps.InfoWindow({
+      content: contentString4
+  });
+  var infowindow5 = new google.maps.InfoWindow({
+      content: contentString5
+  });
+  var infowindow6 = new google.maps.InfoWindow({
+      content: contentString6
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.19799,120.297533),
+      map: map,
+      title: '葫蘆埤自然生態公園'
+  });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.187742,120.292289),
+      map: map,
+      title: '阿扁總統祖厝'
+  });
+  var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.189502,120.234997),
+      map: map,
+      title: '麻豆鱷魚王'
+  });
+  var marker4 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.243586,120.319299),
+      map: map,
+      title: '林鳳營蓮花世界'
+  });
+  var marker5 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.181079,120.245455),
+      map: map,
+      title: '林家古厝'
+  });
+  var marker6 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.136956,120.307127),
+      map: map,
+      title: '沈光文紀念廳'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  });
+  google.maps.event.addListener(marker2, 'click', function(event) {
+    infowindow2.open(map,marker2);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker3, 'click', function(event) {
+    infowindow3.open(map,marker3);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker4, 'click', function(event) {
+    infowindow4.open(map,marker4);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker5, 'click', function(event) {
+    infowindow5.open(map,marker5);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker6, 'click', function(event) {
+    infowindow6.open(map,marker6);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+      }
+      function initialize7() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.208692,120.369341),
+          zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">烏山頭水庫風景區</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>烏山頭水庫風景區</b></p>'+
+      '<p>水庫位於台南縣官田鄉嘉南村68之2號，由高空鳥瞰發現蜿蜒曲折的湖岸，彷彿就像一株碧綠的珊瑚礁，故命名為「珊瑚潭」。民國9年（1920年）由日本八田與一所設計監工，費了十年的光陰所建造完成，成為當時東南亞最大的水庫，對於供應嘉南地區農田之灌溉及供水有很大的貢獻。而八田與一更配農民尊稱為「烏山頭水庫之父」，園區內立有他的紀念銅像，及與其妻共葬的日式墓園。</p>'+
+      '<p>因水庫上方設有蓄水石壩，是世界目前僅存的半水力沖淤式土石壩結構，被堪稱國寶，在夕陽映照下形上萬水珠與夕陽共舞的景觀，更成為名聞遐邇的台南八景之一珊瑚飛泉。規劃有以親水設施為主體的「親水公園」、「三角埤公園」、「兒童遊樂設施」、「遊客服務中心」、「八田技師紀念館」。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">尖山埤水庫</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>尖山埤水庫</b></p>'+
+      '<p>尖山埤水庫建於民國二十七年，原本是一座台糖公司的專用水庫，因周圍風景秀麗，開放後吸引許多民眾前來休閒踏青，因而規劃為江南渡假村，並由台糖公司經營。江南渡假村總共約一百公頃，設置有泡湯、游泳ＳＰＡ、踩船、漆彈與遊湖生態導覽等。除露營區之外，有醉月小樓、江南會館與原木屋三種住宿型態供遊客選擇，讓遊客能夠看見尖山埤的晨曦之美。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.208692,120.369341),
+      map: map,
+      title: '烏山頭水庫風景區'
+  });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.2578872,120.3951954),
+      map: map,
+      title: '尖山埤水庫'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  });
+  google.maps.event.addListener(marker2, 'click', function(event) {
+    infowindow2.open(map,marker2);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+      }
+      function initialize8() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.026494,120.33694),
+          zoom: 14
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">虎頭埤風景區</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>虎頭埤風景區</b></p>'+
+      '<p>虎頭埤風景區位於台南縣新化鎮中興路42巷36號，因山勢像虎頭而得名，虎頭埤湖面廣闊，而休憩區則設有游泳池、烤肉區、釣魚區、露營區、餐飲中心、半島休閒區、吊橋虎月亭、平台觀湖涼亭、青年活動中心，來到這裡的遊客，也可以租借手划船及遊湖快艇，迎覽湖景。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">新化老街</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>新化老街</b></p>'+
+      '<p>老街位於今日的台南縣新化鎮中山路，是很早以前即形成商家行旅的交易、補給重鎮，中正路、中山路一帶街採歐洲文藝復興時期的巴洛克式建築，花紋與雕飾相當講究，具有古典、堅實、壯麗，帶來了新的建築風貌。</p>'+
+      '<p>目前這裡僅存中正路48戶，齡約80年之建築群。經鎮民多數表決，學者、文化工作者的努力爭取而保留下來，富藝術價值及歷史意義的建築，並重新整理美化老街的外觀，讓老街風華再現。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">草山月世界</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>草山月世界</b></p>'+
+      '<p>草山月世界是位在台南縣左鎮鄉的青灰岩地形，由砂岩與頁岩所組成，與高雄的田寮月世界及燕巢月世界的泥岩惡地為一體，是台灣僅有的三處月世界地形，屬於高鹼性的白堊土地形。月世界因地質鬆軟且鹽分含量高，不利於草木生長，沿途只有耐旱的刺竹，在不同的季節裡，刺竹呈現出紅黃綠相異的樣貌，爬上308公尺的至高點還可欣賞晨曦與夕陽，居高臨下的寬闊視野令人心曠神怡。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.026494,120.33694),
+      map: map,
+      title: '虎頭埤風景區'
+  });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.035458,120.308121),
+      map: map,
+      title: '新化老街'
+  });
+  var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.0248796,120.3482441),
+      map: map,
+      title: '草山月世界'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  });
+  google.maps.event.addListener(marker2, 'click', function(event) {
+    infowindow2.open(map,marker2);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+  google.maps.event.addListener(marker3, 'click', function(event) {
+    infowindow3.open(map,marker3);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  }); 
+      }
+      function initialize9() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.038338,120.253524),
+          zoom: 14
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">永康火車站</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>永康火車站</b></p>'+
+      '<p>永康可以搭車去保安，拿永保安康的票ㄏㄏ。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.038338,120.253524),
+      map: map,
+      title: '永康火車站'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+  });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0">
+<form name="search_1" method="post" action="">
+        <div style="float:left;width:44%;height 100%"><img src="twtnn.jpg" usemap="#twtnn" border="0">
+          <map name="twtnn">
+            <area shape="poly" coords="293,320" href="#">
+            <area shape="poly" coords="334,237" href="#">
+            <area shape="rect" coords="474,33,527,48" href="google.maps.event.addDomListener(window, 'load', initialize);">
+            <area shape="rect" coords="162,56,219,72" href="google.maps.event.addDomListener(window, 'load', initialize);">
+            <area shape="rect" coords="513,93,566,111" href="twtnn03.htm">
+            <area shape="rect" coords="459,153,508,169" href="twtnn05.htm">
+            <area shape="rect" coords="506,193,557,209" href="twtnn06.htm">
+            <area shape="rect" coords="497,257,560,275" href="twtnn02.htm">
+            <area shape="rect" coords="475,417,528,432" href="twtnn10.htm">
+            <area shape="rect" coords="512,320,567,337" href="twtnn01.htm">
+            <area shape="rect" coords="46,431,97,448" href="twtnn17.htm">
+            <area shape="rect" coords="64,457,115,476" href="twtnn14.htm">
+            <area shape="rect" coords="67,502,119,521" href="twtnn16.htm">
+            <area shape="rect" coords="85,526,138,543" href="twtnn13.htm">
+            <area shape="rect" coords="113,552,168,568" href="twtnn15.htm">
+            <area shape="rect" coords="32,221,96,236" href="twtnn07.htm">
+            <area shape="rect" coords="33,280,80,294" href="twtnn09.htm">
+            <area shape="rect" coords="24,359,77,375" href="twtnn18.htm">
+            <area shape="rect" coords="27,403,82,420" href="twtnn12.htm">
+            <area shape="poly" coords="97,254,121,253,154,254,182,265,196,274,187,309,171,335,161,340,135,343,113,351,92,368,74,352,74,324" href="twtnn09.htm">
+            <area shape="poly" coords="284,384,306,379,334,377,356,393,361,416,358,442,342,460,308,462,284,452,271,438,267,422,265,413" href="javascript:initialize8();">
+            <area shape="poly" coords="216,354,226,337,250,336,267,342,278,369,282,385,263,410,264,424,230,424,225,406,216,389,222,375,229,362" href="javascript:initialize9();">
+            <area shape="poly" coords="166,437,227,434,228,447,211,451,193,460,189,469,190,478,177,485,168,437" href="twtnn14.htm">
+            <area shape="poly" coords="194,409,215,407,216,417,209,425,208,434,193,433" href="twtnn13.htm">
+            <area shape="poly" coords="215,406,223,408,227,416,229,426,225,438,211,435,216,422" href="twtnn15.htm">
+            <area shape="poly" coords="189,393,211,390,223,400,209,407,193,408" href="twtnn12.htm">
+            <area shape="poly" coords="174,400,184,395,190,405,190,422,193,436,177,436,184,427,176,400" href="twtnn16.htm">
+            <area shape="poly" coords="141,408,153,423,163,433,177,438,184,428,178,409,175,399" href="twtnn17.htm">
+            <area shape="poly" coords="82,375,105,358,132,344,169,337,190,350,211,357,226,359,221,375,213,388,189,391,170,400,140,407,108,386,94,374" href="twtnn18.htm">
+            <area shape="poly" coords="334,206" href="#">
+            <area shape="poly" coords="328,206,317,232,320,261,339,269,359,266,383,258,381,239,390,214,381,204,356,218,330,206" href="javascript:initialize7();">
+            <area shape="poly" coords="322,200,328,183,344,169,356,174,372,171,381,185,381,204,356,219,322,199" href="twtnn05.htm">
+            <area shape="poly" coords="334,270,323,301,350,336,415,363,462,327,443,283,414,280,390,271,382,258" href="javascript:initialize5();">
+            <area shape="poly" coords="324,200,330,208,317,232,320,264,335,271,326,295,281,298,247,291,228,269,227,233,245,208,279,212,302,209" href="javascript:initialize6();">
+            <area shape="poly" coords="388,214,406,221,446,200,448,225,483,235,471,262,439,284,396,276,382,258" href="twtnn02.htm">
+            <area shape="poly" coords="211,166,216,187,229,206,251,206,275,208,302,206,324,200,334,185,350,170,328,159,308,143,303,122,301,96,285,97,270,114,260,119,252,127,245,139,233,138,225,147,213,163" href="javascript:initialize2();">
+            <area shape="poly" coords="299,99,307,96,309,86,331,82,350,79,379,74,405,81,408,112,400,137,384,170,356,176,331,164,305,146,299,98" href="javascript:initialize3();">
+            <area shape="poly" coords="377,174,383,187,383,209,409,223,447,203,450,166,459,151,434,127,440,117,425,105,418,111,424,97,429,83,409,79,410,104,405,129,394,158,379,172" href="javascript:initialize4();">
+            <area shape="rect" coords="387,514,440,532" href="javascript:initialize9();">
+          </map>
+        </div>
+</form>
+<div id="map-canvas" style="float:right;width:56%; height:100%"></div>
+</body>
+</html>
