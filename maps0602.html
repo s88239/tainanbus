@@ -1,13 +1,38 @@
 ﻿<html>
 <head>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
-<link rel="stylesheet" type="text/css" href="tools/calendar.css" />  
-<script type="text/javascript" src="tools/mootools.js"></script>  
-<script type="text/javascript" src="tools/calendar.js"></script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="tools/jquery.datePicker-2.1.1.js"></script> 
+<script type="text/javascript" src="tools/date.js"></script>  
+<link rel="stylesheet" type="text/css" href="tools/datePicker.css" />
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="tools/get_time_tool.js"></script>
-
-<script>window.addEvent('domready', function() { myCal = new Calendar({ date: 'Y/m/d' }); });  </script>
+<script>$(function() {  
+  Date.format = 'yyyy/mm/dd';  
+  $('#date').datePicker();  
+});  
+</script>
+<style type="text/css">  
+a.dp-choose-date {  
+  float: left;  
+  width: 16px;  
+  height: 16px;  
+  padding: 0;  
+  margin: 5px 3px 0;  
+  display: block;  
+  text-indent: -2000px;  
+  overflow: hidden;  
+  background: url(tools/calendar.png) no-repeat;  
+}  
+a.dp-choose-date.dp-disabled {  
+  background-position: 0 -20px;  
+  cursor: default;  
+}  
+input.dp-applied {  
+  width: 100px;  
+  float: left;  
+}  
+</style>
 <style type="text/css">
 html { height: 100% }
     body { height: 100%; margin: 0; padding: 0 }
@@ -27,6 +52,7 @@ td {
 } 
 .fail { 
   color:#FF0000; 
+  
 }
 </style>
 <script type="text/javascript">
@@ -294,7 +320,7 @@ function translate_train(name)
   <option value="BICYCLING">Bicycling</option>
   <option value="TRANSIT" selected>Transit</option>
 </select><br>
-Date：<div><input id="date" name="date" type="text" style="float: left" /></div>
+<input type="text" name="date" id="date" class="date-pick" />  
 <p>  
 
 
