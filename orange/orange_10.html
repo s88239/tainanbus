@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 橘4 路線資訊</title>
+<title>大台南公車 ─ 橘10 路線資訊</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
@@ -23,7 +23,7 @@ select.get_fare option.option6
 {background-color: #FFBB73;}
 </style>
 <script language="javascript" src="../route/msg.js"></script>
-<script language="javascript" src="../route/fare_and_time/orange_4.js"></script>
+<script language="javascript" src="../route/fare_and_time/orange_10.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
 </head>
 <body>
@@ -51,10 +51,10 @@ select.get_fare option.option6
 	<div id="banner">&nbsp;</div>
 	<div id="route">
 		<div class="title">
-			<h2>大台南公車 ─ 橘4 路線圖</h2>
-			<span class="byline">Tainan Bus Orange 4, Route Map</span>
+			<h2>大台南公車 ─ 橘10 路線圖</h2>
+			<span class="byline">Tainan Bus Orange 10, Route Map</span>
 		</div>
-		<img src="../route/orange/o4.jpg">
+		<img src="../route/orange/o10.jpg">
 		<p></p>
 		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kR8K7xUyvQtw" width="800" height="500"></iframe>-->
 	</div>
@@ -63,13 +63,13 @@ select.get_fare option.option6
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 橘4　路線資訊</h2>
-			<span class="byline">Tainan Bus Orange 4, Route Information</span> </div>
+			<h2>大台南公車 ─ 橘10　路線資訊</h2>
+			<span class="byline">Tainan Bus Orange 10, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>善化火車站 － 南藝大 － 烏山頭水庫</td>
+					<td>大地莊園 － 六甲 － 臺南藝術大學</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -77,7 +77,7 @@ select.get_fare option.option6
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 烏山頭水庫：07:50／19:30<br />往 善化火車站：08:20／20:00</td>
+					<td>往 臺南藝術大學：07:05／17:20<br />往 善化　火車站：07:50／19:00</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -89,7 +89,7 @@ select.get_fare option.option6
 				</tr>
 			</table>
 			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1404&locale=zh_TW" class="button">公車動態資訊</a> </div>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1410&locale=zh_TW" class="button">公車動態資訊</a> </div>
 	</div>
 </div>
 <div id="wrapper3">
@@ -100,7 +100,7 @@ select.get_fare option.option6
 			<span class="byline">Ticket Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
-				create_select_menu(orange_4_interval_stop, 6, 'orange_4');
+				create_select_menu(orange_10_interval_stop, 6, 'orange_10');
 			</script>
 			<br/>
 			<table>
@@ -120,7 +120,7 @@ select.get_fare option.option6
 			</table>
 			<p>　</p>
 			<script language="javascript">
-				print_fare_table(orange_4_interval_name, orange_4_fare, '#FFC991');
+				print_fare_table(orange_10_interval_name, orange_10_fare, '#FFC991');
 				document.write('<p>　</p>');
 				document.write(MeteredMSG + PromotionMSG);
 			</script>
@@ -135,11 +135,11 @@ select.get_fare option.option6
 		<span class="byline">Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="orange">善化火車站-&gt;烏山頭水庫</font></h2>');
-			create_time_schedule(orange_4_main_stop_name, orange_4_main_stop_time_consume, orange_4_important_stop, orange_4_time_go, false);
+			document.write('<h2><font color="orange">大地莊園-&gt;臺南藝術大學</font></h2>');
+			create_time_schedule(orange_10_main_stop_name, orange_10_main_stop_time_consume, orange_10_important_stop, orange_10_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="orange">烏山頭水庫-&gt;善化火車站</font></h2>');
-			create_time_schedule(orange_4_main_stop_name, orange_4_main_stop_time_consume, orange_4_important_stop, orange_4_time_return, true);
+			document.write('<h2><font color="orange">臺南藝術大學-&gt;大地莊園</font></h2>');
+			create_time_schedule(orange_10_main_stop_name, orange_10_main_stop_time_consume, orange_10_important_stop, orange_10_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
 	</div>
@@ -148,36 +148,45 @@ select.get_fare option.option6
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－橘4 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus Orange 4, Transfer information</span>
+			<h2>大台南公車－橘10 主要轉乘點資訊</h2>
+			<span class="byline">Tainan bus Orange 10, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
 				<tr>
-					<th rowspan="3">善化火車站</th>
+					<th rowspan="2">果菜市場</th>
+					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
+					<td id="orange"><a href="orange.html" target="_blank">橘幹線</a>、<a href="orange_10.html" target="_blank">橘10</a>、<a href="orange_11.html" target="_blank">橘11</a>、<a href="orange_12.html" target="_blank">橘12</a></td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
+					<td id="yellow"><a href="../yellow/yellow.html" target="_blank">黃幹線</a>、<a href="../yellow/yellow_20.html" target="_blank">黃20</a></td>
+				</tr>
+				<tr>
+					<th rowspan="2">隆田火車站</th>
 					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵善化站</td>
+					<td>台鐵隆田站</td>
 				</tr>
 				<tr>
 					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
-					<td id="orange">
-					<p>
-						<a href="orange.html" target="_blank">橘幹線</a>、<a href="orange_1.html" target="_blank">橘1</a>、<a href="orange_2.html" target="_blank">橘2</a>、<a href="orange_3.html" target="_blank">橘3</a>、<a href="orange_4.html" target="_blank">橘4</a>、
-					</p>
-					<a href="orange_5.html" target="_blank">橘5</a>、<a href="orange_12.html" target="_blank">橘12</a>
-					</td>
+					<td id="orange"><a href="orange_10.html" target="_blank">橘10</a></td>
 				</tr>
 				<tr>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td id="green"><a href="../green/green_1.html" target="_blank">綠1</a>、<a href="../green/green_2.html" target="_blank">綠2</a>、<a href="../green/green_3.html" target="_blank">綠3</a>、<a href="../green/green_4.html" target="_blank">綠4</a>、<a href="../green/green_11.html" target="_blank">綠11</a></td>
+					<th rowspan="2">六甲</th>
+					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
+					<td id="orange"><a href="orange_5.html" target="_blank">橘5</a>、<a href="orange_10.html" target="_blank">橘10</a></td>
 				</tr>
 				<tr>
-					<th>臺南藝術大學</th>
+					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
+					<td id="yellow"><a href="../yellow/yellow_1.html" target="_blank">黃1</a></td>
+				</tr>
+				<tr>
+					<th>烏山頭水庫</th>
 					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
 					<td id="orange"><a href="orange_4.html" target="_blank">橘4</a>、<a href="orange_10.html" target="_blank">橘10</a></td>
 				</tr>
 				<tr>
-					<th>烏山頭水庫</th>
+					<th>臺南藝術大學</th>
 					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
 					<td id="orange"><a href="orange_4.html" target="_blank">橘4</a>、<a href="orange_10.html" target="_blank">橘10</a></td>
 				</tr>
