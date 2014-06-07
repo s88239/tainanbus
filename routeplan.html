@@ -98,9 +98,9 @@ var latlng = new google.maps.LatLng(22.996733,120.212465);
   directionsDisplay.setPanel(document.getElementById("directions_Panel"));
 }
 
-function calcRoute() {
-  var start = document.getElementById("location1").value;
-  var end = document.getElementById("location2").value;
+function calcRoute(locationa,locationb) {
+  var start = document.getElementById(locationa).value;
+  var end = document.getElementById(locationb).value;
   var selectedMode = document.getElementById("mode").value;
   var request = {
     origin:start,
@@ -117,8 +117,8 @@ function calcRoute() {
     }
   });
 }
-function show_result(){
-	times=document.getElementById('FromTimeSelect').value;
+function show_result(now_time){
+	times = now_time;
 	var string=document.getElementById("directions_Panel").innerHTML;
 	//	document.write("<xmp>");
 	//	document.write(string);
@@ -194,7 +194,8 @@ function show_result(){
 	for(i=0;i<stopname.length;i++){
 		stopname[i]=stopname[i].replace("興南客運","");
 	}
-	result=document.getElementById('date').value;
+	result = "";
+	//result=document.getElementById('date').value;
 	result+='<table board="20">';
 
 	result+="<tr><th>route</th></tr>";
@@ -222,10 +223,11 @@ function show_result(){
 	//document.write(result);
 	routeArray.push(endpoint);
 	result+="</td></table>start:"+routeArray[0]+ "endpoint"+routeArray[1];
+	now_time = times ;
 	//document.write("<xmp>"+document.getElementById('date').value);
 	//result+=document.getElementById('date').value.length;
-	document.getElementById('ro_plan').innerHTML=result;
-
+	//document.getElementById('ro_plan').innerHTML=result;
+	return result;
 }
 function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)//need to remove ':' on time
 {
@@ -304,7 +306,7 @@ function get_latlng()
 
 	test_cookies = test_cookies.split(';');
 	for (var i=0;i<test_cookies.length;i++){
-		//document.write(test_cookies[i].slice(test_cookies[i].indexOf('=')+1)+"<br>");
+		alert(test_cookies[i].slice(test_cookies[i].indexOf('=')+1));
 		
 	}
 //document.write(test_cookies.slice(test_cookies.indexOf('=')+1));
@@ -327,14 +329,72 @@ function translate_train(name)
 		}
 	}
 }
+function show_map(number_of_map)
+{
+	document.getElementById('map_canvas').style.display = "";
+	//alert("location"+number_of_map);
+	if(number_of_map==0){
+		calcRoute("location0","location1");
+	}
+	else if(number_of_map==1){
+		calcRoute("location1","location2");//bug~~
+		//alert("haha");
+	}
+}
+function onclick_event()
+{
+	times=document.getElementById('FromTimeSelect').value;
+	document.getElementById('map_canvas').style.display = "none";
+	//document.getElementById('directions_Panel').style.display = "none";
+
+	document.getElementById('ro_plan').innerHTML=document.getElementById('date').value;
+	//alert(result);
+	var i=0;
+//	var j=1;
+	var location = "location";
+//	calcRoute(location+i,location+j);
+	for(i=0;i<2;i++,j++){
+		if(i==0){
+			setTimeout(function () {
+			//alert(  location+i+"br"+location+j);
+				calcRoute(location+"0",location+"1");
+			},(2*i)*200);
+		}
+		if(i==1){
+			setTimeout(function () {
+			//alert(  location+i+"br"+location+j);
+				calcRoute(location+"1",location+"2");
+			},(2*i)*200);
+		}
+		setTimeout(function () {
+			document.getElementById('ro_plan').innerHTML += show_result(times);
+		},(2*i+1)*200);
+	}
+	/*calcRoute(location+"1",location+"2");
+	setTimeout(function () { 
+		all_result += show_result();
+		alert(all_result);
+		document.getElementById('ro_plan').innerHTML = show_result();
+		// other dom animations (some triggering on previous ones)
+	}, 200);
+	setTimeout(function () { 
+		calcRoute(location+"2",location+"3");
+	},200);
+	setTimeout(function () { 
+		all_result = show_result(); // other dom animations (some triggering on previous ones)
+		document.getElementById('ro_plan').innerHTML+=all_result;
+
+	}, 400);*/
+	//document.getElementById('ro_plan').innerHTML=result;
+}
 </script>
 </head>
 <body onload="initialize()">
 測試路徑規劃</br>
-地點1<input type="text" id="location1" style="width:300px;"value="724台灣台南市七股區北堤堤坊"></input>  <button id="show_map1" onclick="show_map()">顯示地點1,2地圖</button>
+地點1<input type="text" id="location0" style="width:300px;"value="724台灣台南市七股區北堤堤坊"></input>  <button id="show_map1" onclick="show_map(0)">顯示地點1,2地圖</button>
 </br>
-地點2<input type="text" id="location2" style="width:300px;"value="關廟"></input> <button id="show_map2" onclick="show_map()">顯示地點2,3地圖</button><br>
-地點3<input type="text" id="location3" style="width:300px;"value="724台灣台南市七股區北堤堤坊"></input></br>
+地點2<input type="text" id="location1" style="width:300px;"value="關廟"></input> <button id="show_map2" onclick="show_map(1)">顯示地點2,3地圖</button><br>
+地點3<input type="text" id="location2" style="width:300px;"value="台南火車站"></input></br>
 <input type="text" id="latlng" style="width:300px;display:none"value="23.341028,120.47332800000004"></input><br>
 交通方式：<select id="mode">
   <option value="TRANSIT" selected>Transit</option>
@@ -342,11 +402,9 @@ function translate_train(name)
   <option value="WALKING">Walking</option>
   <option value="BICYCLING">Bicycling</option>
 </select><br>
-<input type="text" name="date" id="date" class="date-pick" />  
+<input type="text" name="date" id="date" class="date-pick" / value="2014/06/19">  
 <p>  
-
-
-<br>時間： 
+<br>起始時間： 
 <select name="FromTimeSelect" id="FromTimeSelect">
 		<option value="00:00">00:00</option>
 		<option value="01:00">01:00</option>
@@ -372,43 +430,14 @@ function translate_train(name)
 		<option value="21:00">21:00</option>
 		<option value="22:00">22:00</option>
 		<option value="23:00">23:00</option>
+	</select>
 
-	</select>
-至 
-        <select name="ToTimeSelect" id="ToTimeSelect">
-		<option value="00:00">00:00</option>
-		<option value="01:00">01:00</option>
-		<option value="02:00">02:00</option>
-		<option value="03:00">03:00</option>
-		<option value="04:00">04:00</option>
-		<option value="05:00">05:00</option>
-		<option value="06:00">06:00</option>
-		<option value="07:00">07:00</option>
-		<option value="08:00">08:00</option>
-		<option value="09:00">09:00</option>
-		<option value="10:00">10:00</option>
-		<option value="11:00">11:00</option>
-		<option value="12:00">12:00</option>
-		<option value="13:00">13:00</option>
-		<option value="14:00">14:00</option>
-		<option value="15:00">15:00</option>
-		<option value="16:00">16:00</option>
-		<option value="17:00">17:00</option>
-		<option value="18:00">18:00</option>
-		<option value="19:00">19:00</option>
-		<option value="20:00">20:00</option>
-		<option value="21:00">21:00</option>
-		<option value="22:00">22:00</option>
-		<option value="23:00">23:00</option>
-		<option selected="selected" value="23:59">23:59</option>
-	</select>
 <br>
 <select size=5>
 
 </select>
 <br>
-  <button id="btnSubmit" onclick="calcRoute()">送出</button><br>
-  <button id="show" onclick="show_result()">顯示路線</button><br>
+  <button id="btnSubmit" onclick="onclick_event()">送出</button><br>
   <button id="show2" onclick="get_latlng()">show all cookies</button><br>
   <button id="show3" onclick="reverseGeocode()">顯示地址</button><br>
 
