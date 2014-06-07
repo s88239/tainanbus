@@ -71,16 +71,16 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	// find_match_time
 	start_stop = replace_stop_name(start_stop);
 	end_stop = replace_stop_name(end_stop);
-	//alert(start_stop);
-	//alert(end_stop);
+	alert(start_stop);
+	alert(end_stop);
 	// find the index of the stop
 	var count = 0;
 	for(var i=0; i<interval_stop_name.length; ++i){
 		for(var j=0; j<interval_stop_name[i].length; ++j, ++count){
-			if(interval_stop_name[i][j]==start_stop){
+			if(replace_stop_name(interval_stop_name[i][j])==start_stop){
 				start_idx = [i,j,count]; // idx format: [interval, order in interval, index of total stops]
 			}
-			if(interval_stop_name[i][j]==end_stop){
+			if(replace_stop_name(interval_stop_name[i][j])==end_stop){
 				end_idx = [i,j,count]; // idx format: [interval, order in interval, index of total stops]
 			}
 		}
@@ -127,12 +127,17 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	 : [get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), target_time, fare];
 	// such as ["06:10","10:05", 30]
 }
-
+var replace_str_arr = [['台南','臺南'],['台灣','臺灣'],['南台','南臺'],['台電','臺電'],['關廟站','關廟'],['、','']];
 function replace_stop_name(stop){ // handle the exception
-	stop = stop.replace('台南','臺南');
-	stop = stop.replace('台灣','臺灣');
+	for(var i=0; i<replace_str_arr.length; ++i){
+		if(stop.indexOf(replace_str_arr[i][0]) >=0 ){
+			//document.write('i='+i+' ,name='+replace_str_arr[i][0]);
+			stop = stop.replace(replace_str_arr[i][0],replace_str_arr[i][1]);
+			break;
+		}
+	}
 	if(stop=='火車站(北站)' || stop=='火車站(南站)') stop = '臺南火車站';
-	if(stop.length==3 &&stop.charAt(stop.length-1)=='站') stop = stop.substring(0,stop.length-1); // replace XX站 to XX
+	if((stop.indexOf('新營客運')==0 || stop.indexOf('興南客運')==0)&&stop.charAt(stop.length-1)=='站') stop = stop.substring(4,stop.length-1); // replace XX站 to XX
 	return stop;
 }
 
