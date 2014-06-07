@@ -5,118 +5,7 @@
 <title>大台南公車 ─ 高鐵轉乘資訊</title>
 <style type="text/css">
 @import url("../css/busline.css");
-.myButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #fbafe3;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #fbafe3;
-	box-shadow:inset 0px 1px 0px 0px #fbafe3;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff5bb0), color-stop(1, #ef027d));
-	background:-moz-linear-gradient(top, #ff5bb0 5%, #ef027d 100%);
-	background:-webkit-linear-gradient(top, #ff5bb0 5%, #ef027d 100%);
-	background:-o-linear-gradient(top, #ff5bb0 5%, #ef027d 100%);
-	background:-ms-linear-gradient(top, #ff5bb0 5%, #ef027d 100%);
-	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bb0', endColorstr='#ef027d',GradientType=0);
-	background-color:#ff5bb0;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #ee1eb5;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 18px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #c70067;
-}
-.myButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff5bb0));
-	background:-moz-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
-	background:-webkit-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
-	background:-o-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
-	background:-ms-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
-	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef027d', endColorstr='#ff5bb0',GradientType=0);
-	background-color:#ef027d;
-}
-.myButton:active .redButton:active .yellowButton:active{
-	position:relative;
-	top:1px;
-}
-.redButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
-	box-shadow:inset 0px 1px 0px 0px #f5978e;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
-	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
-	background-color:#f24537;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #d02718;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:arial,微軟正黑體;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 18px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #810e05;
-}
-.redButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
-	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
-	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
-	background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
-	background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
-	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
-	background-color:#c62d1f;
-}
-.yellowButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f0e61f));
-	background:-moz-linear-gradient(top, #f0c911 5%, #f0e61f 100%);
-	background:-webkit-linear-gradient(top, #f0c911 5%, #f0e61f 100%);
-	background:-o-linear-gradient(top, #f0c911 5%, #f0e61f 100%);
-	background:-ms-linear-gradient(top, #f0c911 5%, #f0e61f 100%);
-	background:linear-gradient(to bottom, #f0c911 5%, #f0e61f 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f0e61f',GradientType=0);
-	background-color:#f0c911;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #e6b845;
-	display:inline-block;
-	cursor:pointer;
-	color:#9e260e;
-	font-family:arial,微軟正黑體;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 18px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ded17c;
-}
-.yellowButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0e61f), color-stop(1, #f0c911));
-	background:-moz-linear-gradient(top, #f0e61f 5%, #f0c911 100%);
-	background:-webkit-linear-gradient(top, #f0e61f 5%, #f0c911 100%);
-	background:-o-linear-gradient(top, #f0e61f 5%, #f0c911 100%);
-	background:-ms-linear-gradient(top, #f0e61f 5%, #f0c911 100%);
-	background:linear-gradient(to bottom, #f0e61f 5%, #f0c911 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0e61f', endColorstr='#f0c911',GradientType=0);
-	background-color:#f0e61f;
-}
+@import url("../css/bus_button.css");
 td{
 	padding-bottom: 8px;
 	padding-right: 5px;
@@ -136,11 +25,11 @@ td{
   <td valign="top">
    <table>
 	<tr>
-		<td><a href="hsr_shuttle_h31.html" class="myButton">H31</a></td>
+		<td><a href="hsr_shuttle_h31.html" class="hsrButton">H31</a></td>
 		<td>臺南市政府 ─ 高鐵台南站</td>
 	</tr>
 	<tr>
-		<td><a href="hsr_shuttle_h62.html" class="myButton">H62</a></td>
+		<td><a href="hsr_shuttle_h62.html" class="hsrButton">H62</a></td>
 		<td>奇美醫院 ─ 高鐵台南站</td>
 	</tr>
 	<tr>
