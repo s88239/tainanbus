@@ -45,6 +45,20 @@ mm_reloadpage(true);
     <script type="text/javascript">
       jing=[];
       wei=[];
+      fplace=[];
+      function deleteoption(){
+          indx=document.getElementById("selectlist").options.selectedIndex;
+          document.getElementById("selectlist").options.remove(indx);
+          jing.splice(indx, 1);
+          wei.splice(indx, 1);
+          fplace.splice(indx, 1);
+      }
+      function funplan(){
+        var i;
+        for(i=0; i<jing.length; i++){
+          document.cookie=(escape(fplace[i])+"="+jing[i]+"o"+wei[i]);
+        }
+      }
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(-34.397, 150.644),
@@ -56,7 +70,8 @@ mm_reloadpage(true);
       function gogogo(){
         jing.push(jingjing);
         wei.push(weiwei);
-        alert(jing[0]+" "+wei[0]);
+        fplace.push(funp);
+        document.getElementById("selectlist").innerHTML+=("<option value='"+funp+"''>"+funp);
       }
       function initialize2() {
         var mapOptions = {
@@ -127,16 +142,19 @@ mm_reloadpage(true);
     infowindow1.open(map,marker1);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="新營火車站";
   });
   google.maps.event.addListener(marker2, 'click', function(event) {
     infowindow2.open(map,marker2);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="鹽水蜂炮";
   }); 
   google.maps.event.addListener(marker3, 'click', function(event) {
     infowindow3.open(map,marker3);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="頑皮世界野生動物園";
   }); 
       }
 
@@ -204,16 +222,19 @@ mm_reloadpage(true);
     infowindow1.open(map,marker1); 
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="台影文化城";
   });
   google.maps.event.addListener(marker2, 'click', function(event) {
     infowindow2.open(map,marker2);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="白河水庫風景區";
   }); 
   google.maps.event.addListener(marker3, 'click', function(event) {
     infowindow3.open(map,marker3);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="好漢坡";
   }); 
       }
       function initialize4() {
@@ -280,16 +301,19 @@ mm_reloadpage(true);
     infowindow1.open(map,marker1);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="關子嶺溫泉";
   });
   google.maps.event.addListener(marker2, 'click', function(event) {
     infowindow2.open(map,marker2);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="紅葉公園";
   }); 
   google.maps.event.addListener(marker3, 'click', function(event) {
     infowindow3.open(map,marker3);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="水火同源";
   }); 
       }
       function initialize5() {
@@ -356,16 +380,19 @@ mm_reloadpage(true);
     infowindow1.open(map,marker1);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="芒果產業文化資訊館";
   });
   google.maps.event.addListener(marker2, 'click', function(event) {
     infowindow2.open(map,marker2);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="走馬瀨農場";
   }); 
   google.maps.event.addListener(marker3, 'click', function(event) {
     infowindow3.open(map,marker3);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="冰島芒果城";
   }); 
       }
       function initialize6() {
@@ -484,31 +511,37 @@ mm_reloadpage(true);
     infowindow1.open(map,marker1);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="葫蘆埤自然生態公園";
   });
   google.maps.event.addListener(marker2, 'click', function(event) {
     infowindow2.open(map,marker2);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="阿扁總統祖厝";
   }); 
   google.maps.event.addListener(marker3, 'click', function(event) {
     infowindow3.open(map,marker3);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="麻豆鱷魚王";
   }); 
   google.maps.event.addListener(marker4, 'click', function(event) {
     infowindow4.open(map,marker4);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="林鳳營蓮花世界";
   }); 
   google.maps.event.addListener(marker5, 'click', function(event) {
     infowindow5.open(map,marker5);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="林家古厝";
   }); 
   google.maps.event.addListener(marker6, 'click', function(event) {
     infowindow6.open(map,marker6);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="沈光文紀念廳";
   }); 
       }
       function initialize7() {
@@ -558,11 +591,13 @@ mm_reloadpage(true);
     infowindow1.open(map,marker1);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="烏山頭水庫風景區";
   });
   google.maps.event.addListener(marker2, 'click', function(event) {
     infowindow2.open(map,marker2);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="尖山埤水庫";
   }); 
       }
       function initialize8() {
@@ -629,16 +664,19 @@ mm_reloadpage(true);
     infowindow1.open(map,marker1);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="虎頭埤風景區";
   });
   google.maps.event.addListener(marker2, 'click', function(event) {
     infowindow2.open(map,marker2);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="新化老街";
   }); 
   google.maps.event.addListener(marker3, 'click', function(event) {
     infowindow3.open(map,marker3);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="草山月世界";
   }); 
       }
       function initialize9() {
@@ -670,7 +708,158 @@ mm_reloadpage(true);
     infowindow1.open(map,marker1);
     jingjing=event.latLng.lat();
     weiwei=event.latLng.lng();
+    funp="永康火車站";
   });
+      }
+      function initialize10() {
+        var mapOptions = {
+          center: new google.maps.LatLng(23.1399936,120.114298),
+          zoom: 12
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">七股鹽山</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>七股鹽山</b></p>'+
+      '<p>鹽山位於中七股近海岸的中寮，佔地2000多公頃，每年10月翌年5月是產鹽期，是台灣工業用鹽的最大產地。民國70年（西元1982年），台鹽為因應晒鹽產業逐漸面臨人力老化和工業成本不斷高漲的困境，直至民國77年（西元1988年）開始全面採用機械器具來收成，綿延西南海岸的鹽場都已陸續收攤，只剩此處七股鹽場引入機械產製的鹽田，國內用鹽來源也因高成本而逐漸用進口鹽，現今鹽山分為南、北兩堆，南堆為產地鹽，北堆則是進口鹽，作為工業用鹽，以「鹽田晒玉」為南瀛新八景之一。台鹽見觀光客日益增多，乃於工場旁設立簡易展示部，販售新產品，如沐浴乳等清潔用品。台鹽公司譽七股鹽山為「南台長白山」。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">七股潟湖</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>七股潟湖</b></p>'+
+      '<p>七股潟湖區域面積達1,600公頃，介於七股溪與將軍溪之間，當地人稱為「內海仔」，由於曾文溪的四次改道而造成今日的潟湖景觀，這是目前台灣最大的一個潟湖。這兒有著豐富旺盛的動植物生態，如魚、貝、蚵、蟹、蝦、紅樹林、白鷺鷥，以及國際級的貴客－黑面琵鷺，總計有125種魚類、73種貝類，以及30種以上的貝類。附近的龍山村大街上到處可以看到海產和鮮蚵的料理，喜歡海鮮的人不能錯過。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">黑面琵鷺保護區</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>黑面琵鷺保護區</b></p>'+
+      '<p>賞鳥區位於曾文溪出海口向北的海埔地，黑面琵鷺元棲息地在西伯利亞、中國東北和朝鮮半島，每年10月續飛抵曾文溪口過冬，一直到隔年的3、4月才離開。長期以來七股漁民即以「黑面仔」、「黑面鳥仔」或「撓杯」（台音：ㄌㄚˇㄅㄨㄟ）稱之。</p>'+
+      '<p>黑面琵鷺站立的平均高度約在80公分間，嘴長，先端扁平如湯匙狀，顏臉和雙腳皆黑。夏羽全身多白，胸部及後頭飾羽則呈黃色；冬天時全身皆白，飾羽會變短，故有「黑面舞者」之雅稱。目前全世界總數量不足800隻，民國90年在曾文溪口已超過600隻來台度冬，佔了世界的三分之二，使曾文溪口有「曾溪飛鷺」的美名。</p>'+
+      '<p>民國87年(1998)此地成立「黑面琵鷺保育學會」，積極研究和保護這類瀕臨絕種的國際名鳥。'+
+      '</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">溪南春休閒渡假漁村</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>溪南春休閒渡假漁村</b></p>'+
+      '<p>溪南春休閒渡假漁村位於七股鄉溪南村42-1號，以漁村特色結合生態旅遊，不僅規劃有海水健康步道、海水健康步道、混水摸魚區、釣魚區、烤肉區、兒童遊戲區、牛車巡禮區、卡拉ok、交誼廳、民宿區等，另外還養殖有虱目魚、吳郭魚及蚵等漁業，讓遊客對漁村生活有更多的體驗。園內附設的文物館收藏許多民俗文物與藝品。溪南春結合了吳郭魚池、虱目魚池及蚵寮，除了漁村生活體驗之外，還提供住宿和餐飲，其中「桶間寮」的住宿便是讓遊客體驗過去漁民的真實生活，這原先是早期漁民為了方便夜間照料魚塭時，所棲身而在水面上搭建的茅廬。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString5 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">南鯤鯓代天府</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>南鯤鯓代天府</b></p>'+
+      '<p>南鯤鯓的代天府囉。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+      var contentString6 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">佳里金唐殿</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>佳里金唐殿</b></p>'+
+      '<p>沈光文，字文開，父祖輩曾是明朝宰相，自小飽讀詩書，明朝福王時，與史可法一起抗清，後隨魯王退守浙江，魯王兵敗，他隱居普陀山為僧，明鄭時期，鄭成功禮聘沈光文。鄭經嗣位，沈光文作賦諷刺政權，惹出殺身之危，遂逃往大崗山、羅漢門等地，並在羅漢門(今內門)出家為僧，之後，流離至目加溜灣社（今善化一帶），在此宣揚儒家思想，教導當地平埔族讀書識字，並為他們治病，乃至終老，葬於善化。1982年中秋節，善化居民為了紀念沈光文，造像入祀慶安宮後殿，與5位文昌君一起供奉，並為其建造一座紀念碑。慶安宮東側2樓新成立規劃的沈光文紀念廳，由文建會、原台南縣政府、廟方共同補助經費修建，慶安宮管委會特邀書法名家王九儒、謝永田等人書寫沈公詩文展出。</p>'+
+      '</div>'+
+      '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  var infowindow4 = new google.maps.InfoWindow({
+      content: contentString4
+  });
+  var infowindow5 = new google.maps.InfoWindow({
+      content: contentString5
+  });
+  var infowindow6 = new google.maps.InfoWindow({
+      content: contentString6
+  });
+  var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.154163,120.100298),
+      map: map,
+      title: '七股鹽山'
+  });
+  var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.124526,120.078433),
+      map: map,
+      title: '七股潟湖'
+  });
+  var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.119574,120.104644),
+      map: map,
+      title: '黑面琵鷺保護區'
+  });
+  var marker4 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.126779,120.116685),
+      map: map,
+      title: '溪南春休閒渡假漁村'
+  });
+  var marker5 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.286087,120.143135),
+      map: map,
+      title: '南鯤鯓代天府'
+  });
+  var marker6 = new google.maps.Marker({
+      position: new google.maps.LatLng(23.1592534,120.150495),
+      map: map,
+      title: '佳里金唐殿'
+  });
+  google.maps.event.addListener(marker1, 'click', function(event) {
+    infowindow1.open(map,marker1);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+    funp="七股鹽山";
+  });
+  google.maps.event.addListener(marker2, 'click', function(event) {
+    infowindow2.open(map,marker2);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+    funp="七股潟湖";
+  }); 
+  google.maps.event.addListener(marker3, 'click', function(event) {
+    infowindow3.open(map,marker3);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+    funp="黑面琵鷺保護區";
+  }); 
+  google.maps.event.addListener(marker4, 'click', function(event) {
+    infowindow4.open(map,marker4);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+    funp="溪南春休閒渡假漁村";
+  }); 
+  google.maps.event.addListener(marker5, 'click', function(event) {
+    infowindow5.open(map,marker5);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+    funp="南鯤鯓代天府";
+  }); 
+  google.maps.event.addListener(marker6, 'click', function(event) {
+    infowindow6.open(map,marker6);
+    jingjing=event.latLng.lat();
+    weiwei=event.latLng.lng();
+    funp="佳里金唐殿";
+  }); 
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
@@ -699,7 +888,7 @@ mm_reloadpage(true);
             <area shape="rect" coords="33,280,80,294" href="twtnn09.htm">
             <area shape="rect" coords="24,359,77,375" href="twtnn18.htm">
             <area shape="rect" coords="27,403,82,420" href="twtnn12.htm">
-            <area shape="poly" coords="97,254,121,253,154,254,182,265,196,274,187,309,171,335,161,340,135,343,113,351,92,368,74,352,74,324" href="twtnn09.htm">
+            <area shape="poly" coords="97,254,121,253,154,254,182,265,196,274,187,309,171,335,161,340,135,343,113,351,92,368,74,352,74,324" href="javascript:initialize10();">
             <area shape="poly" coords="284,384,306,379,334,377,356,393,361,416,358,442,342,460,308,462,284,452,271,438,267,422,265,413" href="javascript:initialize8();">
             <area shape="poly" coords="216,354,226,337,250,336,267,342,278,369,282,385,263,410,264,424,230,424,225,406,216,389,222,375,229,362" href="javascript:initialize9();">
             <area shape="poly" coords="166,437,227,434,228,447,211,451,193,460,189,469,190,478,177,485,168,437" href="twtnn14.htm">
@@ -723,5 +912,12 @@ mm_reloadpage(true);
         </div>
 </form>
 <div id="map-canvas" style="float:right;width:56%; height:100%"></div>
+<form>
+  <select size=20 id="selectlist">
+  </select>
+  <input type=button id="deletebutton" onclick="javascript:deleteoption();" value="刪除景點">
+  <input type=button id="addplace" onclick="javascript:funplan();" value="規劃行程">
+  <input type=button id="cookplace" onclick="javascript:alert(document.cookie);" value="列出cookie">
+</form>
 </body>
 </html>
