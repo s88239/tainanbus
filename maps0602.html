@@ -1,11 +1,85 @@
 ﻿<html>
 <head>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="tools/jquery.datePicker-2.1.1.js"></script> 
+<script type="text/javascript" src="tools/date.js"></script>  
+<link rel="stylesheet" type="text/css" href="tools/datePicker.css" />
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="tools/get_time_tool.js"></script>
-<script type="text/javascript" src="tools/prototype.js"></script>
-
+<script>$(function() {  
+  Date.format = 'yyyy/mm/dd';  
+  $('#date').datePicker();  
+});  
+</script>
+<style type="text/css">  
+a.dp-choose-date {  
+  float: left;  
+  width: 16px;  
+  height: 16px;  
+  padding: 0;  
+  margin: 5px 3px 0;  
+  display: block;  
+  text-indent: -2000px;  
+  overflow: hidden;  
+  background: url(tools/calendar.png) no-repeat;  
+}  
+a.dp-choose-date.dp-disabled {  
+  background-position: 0 -20px;  
+  cursor: default;  
+}  
+input.dp-applied {  
+  width: 100px;  
+  float: left;  
+}  
+</style>
+<style type="text/css">
+html { height: 100% }
+    body { height: 100%; margin: 0; padding: 0 }
+    #map_canvas { float:left;width:70%; height:100% }
+	#directions_Panel {float:right;width:30%;height 100%}
+	#route_plan{ float:left;width:70%; height:100% }
+	table { 
+  border: 0; 
+  font-family: arial; 
+  font-size:14px; 
+} 
+th { 
+  background-color:yellow; 
+} 
+td { 
+  border-bottom:1 solid #000000; 
+} 
+.fail { 
+  color:#FF0000; 
+  
+}
+</style>
 <script type="text/javascript">
+//var address = "To be replaced later.";
+function reverseGeocode() {
+var geocoder = new google.maps.Geocoder();
+var input = document.getElementById('latlng').value;
+var latlngStr = input.split(',', 2);
+var lat = parseFloat(latlngStr[0]);
+var lng = parseFloat(latlngStr[1]);
+var latlng = new google.maps.LatLng(lat, lng);
+geocoder.geocode({'latLng': latlng}, function(results, status) {
+if (status == google.maps.GeocoderStatus.OK) {
+if (results[0]) {
+address = results[0].formatted_address;
+} else {
+alert("No results found");
+}
+} else {
+alert("Geocoder failed due to: " + status);
+}
+});
+document.write(address);
+}
+</script>
+<script type="text/javascript">
+result="";
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
@@ -43,6 +117,7 @@ function calcRoute() {
   });
 }
 function show_result(){
+	times=document.getElementById('FromTimeSelect').value;
 	var string=document.getElementById("directions_Panel").innerHTML;
 		//document.write("<xmp>");
 	//	document.write(string);
@@ -61,24 +136,14 @@ function show_result(){
 					temp_hour = parseInt(temp_hour);
 					str = str.substring(n,m);
 					str = parseInt(str)+temp_hour
-					document.write(str+"分<br>");
+					//document.write(str+"分<br>");
 				}
 					str=str.substring(2,m)
 					str=parseInt(str);
-					//document.write(str+"分");
-
 			}
-	//		document.write(str);
 			walk_time_array.push(str);
-	//	document.write(match.length);
 		}
 	}
-/*	for (var i=0;i<match.length;i++){
-			match[i].search(walk_time);
-			var str = RegExp.$1;
-			document.write("123"+walk_time_array[i]+"<br>");
-	}*/
-	var times="13:00"
 	var re = new RegExp('jstcache="38">[0-9]{3}(.*?)</td>','gi');//start and end point
 	var match = string.match(re);
 	if(match) {
@@ -99,7 +164,7 @@ function show_result(){
 		for (var i=0; i<match.length; i++){
 			match[i].search(re2);
 			var str = RegExp.$2;//ex: src="http://maps.gstatic.com/mapfiles/transit/iw/6/bus.png">紅幹線
-
+			
 			if(str.indexOf("walk")!=-1) {
 				transit_way.push(1);
 				transit_name.push("walk");
@@ -120,53 +185,53 @@ function show_result(){
 			statement.push(RegExp.$3);
 		}
 	}
-
 	for(i=0;i<transit_name.length;i++){
 		transit_name[i]=remove_tags(transit_name[i]);
 		transit_name[i]=transit_name[i].replace(/\s+/gi,"");
 	}
-
 	for(i=0;i<stopname.length;i++){
 		stopname[i]=stopname[i].replace("興南客運","");
 	}
-	
-	var result = "";
-	//var walk_time=10;
+	result=document.getElementById('date').value;
+	result+='<table board="20">';
+
+	result+="<tr><th>route</th></tr>";
 	for(i=0;i<transit_way.length;i++){
+		result+="<tr><th>";
 		if(transit_way[i]==1){
-		//document.write("走了"+walk_time_array[i]+"分");
-			document.write((i+1)+statement[i]+"\t約"+walk_time_array[i]+"分鐘<br>");
+			result+=(i+1)+"<br>"+times+statement[i]+"\t約"+walk_time_array[i]+"分鐘<br>";
 			times = get_time(times,walk_time_array[i]);
-			
 		}
 		else if(transit_way[i]==2) {
-			document.write(i+1);
-			quest_rail("2014/06/11","1227","1228","2","0600","2359");
+			result+=(i+1);
+			result+="<br>"+times;
+			//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
+			quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");
+			result+="<br>"+times;
+
+
 		}
 		else if(transit_way[i]==3) {
 			businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
-			document.write((i+1)+businfo+"<br>");
+			result+=(i+1)+"<br>"+times+statement[i]+businfo+"<br>";
 			times = businfo[1];
+			result +=times;
 		}
+		result+="</th></tr>";
 	}
 	//document.write(result);
 	routeArray.push(endpoint);
-	document.write("start:"+routeArray[0]+ "endpoint"+routeArray[1] );
+	result+="</td></table>start:"+routeArray[0]+ "endpoint"+routeArray[1];
+	//document.write("<xmp>"+document.getElementById('date').value);
+	//result+=document.getElementById('date').value.length;
+	document.getElementById('ro_plan').innerHTML=result;
+
 }
 function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)//need to remove ':' on time
 {
-	/*var searchdate="2014/06/11";
-	var fromstation="1227";
-	var tostation="1228";
-	var trainclass="2";
-	var fromtime="0600";
-	var totime="2359"*/
 	//var url ="http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate=2014/06/11&fromstation=1227&tostation=1228&trainclass=2&fromtime=0600&totime=2359";
 	var url = "http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate="+searchdate+"&fromstation="+fromstation+"&tostation="+tostation+"&trainclass="+trainclass+"&fromtime="+fromtime+"&totime="+totime;
-	//var temp = 'tools/parse_train.php';
-	//	var ajax = new Ajax.Request(temp,{method:'POST',parameters:queryString,onComplete:rail});
 	var http_request=false;
-
 	if(window.XMLHttpRequest){
 		http_request=new XMLHttpRequest();
 		if(http_request.overrideMimeType){
@@ -188,39 +253,67 @@ function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)
 		alert('Giving up :( Cannot create a XMLHTTP instance');
 		return false;
 	}
-	var test;
 	var by_post='url='+url; //將變數放進字串
 	http_request.onreadystatechange=show_area;
 	http_request.open('POST','tools/parse_train.php',false);
 	http_request.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");  //**重要一定要加上
 	http_request.send(by_post);
-
+	
 	function show_area(){
 		if(http_request.readyState==4){
 			if(http_request.status==200){
-				//global_test = ""+http_request.responseText;
-				//temp=remove_tags(temp);
-				document.write(http_request.responseText);
-				//document.write("</xmp>");
+				var re = RegExp('<span.*?>(.*?)</span>','gi');//train_type
+				var match = http_request.responseText.match(re);
+				if(match) {
+					match[0].search(re);
+					car_type = RegExp.$1;				
+				}
+				var re = RegExp('<a.*?>(.*?)</a>','gi');//train_type
+				var match = http_request.responseText.match(re);
+				if(match) {
+					match[0].search(re);
+					car_num = RegExp.$1;				
+				}				
+				var re = RegExp('</font></td><td align="center" width="25"><font color="Black">-</font></td><td align="center" width="120"><font color="Black">(.*?)</font></td><td class="SearchResult_Time" align="center" width="65"><font color="Black">(.*?)</font></td><td class="SearchResult_Time" align="center" width="65"><font color="Black">(.*?)</font></td><td align="center" width="80"><font color="Black">(.*?)</font>','gi');//train_type
+				var match = http_request.responseText.match(re);
+				if(match) {
+					match[0].search(re);
+					from_to = RegExp.$1;
+					start_time= RegExp.$2;
+					stop_time = RegExp.$3;
+					cost_time = RegExp.$4;
+					times = stop_time;
+				}
+			//	document.write("<xmp>")
+			//	document.write("cartype:"+car_type +"<br>car_num:"+car_num+"<br>方向:"+from_to+"<br>start_time:"+start_time+"<br><xmp>stop_time:"+stop_time+"</xmp><br>cost:"+cost_time);
+				result+=remove_tags(http_request.responseText);
 			}
 		}
-	//	else document.write("fuck");
 	}
-	//return test;
-	//document.write(http_request.onreadystatechange);*/
 }
-
-/*function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)//need to remove ':' on time
-{
-	var queryString = {url:"http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate="+searchdate+"&fromstation="+fromstation+"&tostation="+tostation+"&trainclass="+trainclass+"&fromtime="+fromtime+"&totime="+totime};
-	//var queryString = {url:"http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate=2014/06/11&fromstation=1227&tostation=1228&trainclass=2&fromtime=0600&totime=2359"};
-	var temp = 'tools/parse_train.php';//'http://www.csie.ntu.edu.tw/~b00902098/parse_train.php';
-	var ajax = new Ajax.Request(temp,{method:'post',parameters:queryString,onComplete:test_ajax})
-}*/
 function remove_tags(html){
 	return html.replace(/<(?:.|\n)*?>/gm, '');
 }
-function get_train_time(time_str){ // get the time of the stop
+function remove_Semicolon(html){
+	return html.replace(':','');
+}
+function translate_train(name)
+{
+	name=name.replace('火車站','');
+	train_name= new Array("後壁","新營","柳營","林鳳營","隆田","拔林","善化","新市","永康","台南","保安","中洲","長榮大學","沙崙","仁德","大橋","南科");
+	for(var i=0;i<train_name.length;i++){
+		if(name==train_name[i]){//
+			if(i<=11) return (i+1219);
+			else if(i==12) return 5101;
+			else if(i==13) return 5102;
+			else if(i==14) return 1243;
+			else if(i==15) return 1239;
+			else if(i==16) return 1244;
+			else return 1228;
+		}
+	}
+}
+/*function get_train_time(time_str){ // get the time of the stop
 	time_split = time_str.split(':');
 	time_hr = parseInt(time_split[0]);
 	time_min = parseInt(time_split[1]);
@@ -237,79 +330,85 @@ function get_train_time(time_str){ // get the time of the stop
 	min_zero = (time_min<10)?'0':'' ;
 	new_time = hr_zero + time_hr + ':' + min_zero + time_min;
 	return new_time;
-}
+}*/
 </script>
 </head>
 <body onload="initialize()">
 測試路徑規劃</br>
-起始<input type="text" id="txtFrom" style="width:300px;"value="麻豆"></input></br>
+起始<input type="text" id="txtFrom" style="width:300px;"value="724台灣台南市七股區北堤堤坊"></input></br>
 目的<input type="text" id="txtEnd" style="width:300px;"value="關廟"></input><br>
-  <button id="btnSubmit" onclick="calcRoute()">送出</button><br>
-  <button id="show" onclick="show_result()">顯示公車路線</button><br>
+latlng<input type="text" id="latlng" style="width:300px;"value="23,120"></input><br>
 交通方式：<select id="mode">
   <option value="DRIVING">Driving</option>
   <option value="WALKING">Walking</option>
   <option value="BICYCLING">Bicycling</option>
   <option value="TRANSIT" selected>Transit</option>
-</select>
+</select><br>
+<input type="text" name="date" id="date" class="date-pick" />  
+<p>  
+
+
 <br>時間： 
 <select name="FromTimeSelect" id="FromTimeSelect">
-		<option value="0000">00:00</option>
-		<option value="0100">01:00</option>
-		<option value="0200">02:00</option>
-		<option value="0300">03:00</option>
-		<option value="0400">04:00</option>
-		<option value="0500">05:00</option>
-		<option value="0600">06:00</option>
-		<option value="0700">07:00</option>
-		<option value="0800">08:00</option>
-		<option value="0900">09:00</option>
-		<option value="1000">10:00</option>
-		<option value="1100">11:00</option>
-		<option value="1200">12:00</option>
-		<option selected="selected" value="1300">13:00</option>
-		<option value="1400">14:00</option>
-		<option value="1500">15:00</option>
-		<option value="1600">16:00</option>
-		<option value="1700">17:00</option>
-		<option value="1800">18:00</option>
-		<option value="1900">19:00</option>
-		<option value="2000">20:00</option>
-		<option value="2100">21:00</option>
-		<option value="2200">22:00</option>
-		<option value="2300">23:00</option>
+		<option value="00:00">00:00</option>
+		<option value="01:00">01:00</option>
+		<option value="02:00">02:00</option>
+		<option value="03:00">03:00</option>
+		<option value="04:00">04:00</option>
+		<option value="05:00">05:00</option>
+		<option value="06:00">06:00</option>
+		<option value="07:00">07:00</option>
+		<option selected="selected" value="08:00">08:00</option>
+		<option value="09:00">09:00</option>
+		<option value="10:00">10:00</option>
+		<option value="11:00">11:00</option>
+		<option value="12:00">12:00</option>
+		<option value="13:00">13:00</option>
+		<option value="14:00">14:00</option>
+		<option value="15:00">15:00</option>
+		<option value="16:00">16:00</option>
+		<option value="17:00">17:00</option>
+		<option value="18:00">18:00</option>
+		<option value="19:00">19:00</option>
+		<option value="20:00">20:00</option>
+		<option value="21:00">21:00</option>
+		<option value="22:00">22:00</option>
+		<option value="23:00">23:00</option>
 
 	</select>
 至 
         <select name="ToTimeSelect" id="ToTimeSelect">
-		<option value="0000">00:00</option>
-		<option value="0100">01:00</option>
-		<option value="0200">02:00</option>
-		<option value="0300">03:00</option>
-		<option value="0400">04:00</option>
-		<option value="0500">05:00</option>
-		<option value="0600">06:00</option>
-		<option value="0700">07:00</option>
-		<option value="0800">08:00</option>
-		<option value="0900">09:00</option>
-		<option value="1000">10:00</option>
-		<option value="1100">11:00</option>
-		<option value="1200">12:00</option>
-		<option value="1300">13:00</option>
-		<option value="1400">14:00</option>
-		<option value="1500">15:00</option>
-		<option value="1600">16:00</option>
-		<option value="1700">17:00</option>
-		<option value="1800">18:00</option>
-		<option value="1900">19:00</option>
-		<option value="2000">20:00</option>
-		<option value="2100">21:00</option>
-		<option value="2200">22:00</option>
-		<option value="2300">23:00</option>
-		<option selected="selected" value="2359">23:59</option>
+		<option value="00:00">00:00</option>
+		<option value="01:00">01:00</option>
+		<option value="02:00">02:00</option>
+		<option value="03:00">03:00</option>
+		<option value="04:00">04:00</option>
+		<option value="05:00">05:00</option>
+		<option value="06:00">06:00</option>
+		<option value="07:00">07:00</option>
+		<option value="08:00">08:00</option>
+		<option value="09:00">09:00</option>
+		<option value="10:00">10:00</option>
+		<option value="11:00">11:00</option>
+		<option value="12:00">12:00</option>
+		<option value="13:00">13:00</option>
+		<option value="14:00">14:00</option>
+		<option value="15:00">15:00</option>
+		<option value="16:00">16:00</option>
+		<option value="17:00">17:00</option>
+		<option value="18:00">18:00</option>
+		<option value="19:00">19:00</option>
+		<option value="20:00">20:00</option>
+		<option value="21:00">21:00</option>
+		<option value="22:00">22:00</option>
+		<option value="23:00">23:00</option>
+		<option selected="selected" value="23:59">23:59</option>
 	</select>
 <br>
-<div id="map_canvas" style="float:left;width:70%; height:100%"></div>
-<div id="directions_Panel" style="float:right;width:30%;height 100%"></div>
+  <button id="btnSubmit" onclick="calcRoute()">送出</button><br>
+  <button id="show" onclick="show_result()">顯示公車路線</button><br>
+<div id="map_canvas"></div>
+<div id="directions_Panel"></div>
+<div id="ro_plan"></div>
 </body>
 </html>
