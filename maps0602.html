@@ -56,6 +56,29 @@ td {
 }
 </style>
 <script type="text/javascript">
+//var address = "To be replaced later.";
+function reverseGeocode() {
+var geocoder = new google.maps.Geocoder();
+var input = document.getElementById('latlng').value;
+var latlngStr = input.split(',', 2);
+var lat = parseFloat(latlngStr[0]);
+var lng = parseFloat(latlngStr[1]);
+var latlng = new google.maps.LatLng(lat, lng);
+geocoder.geocode({'latLng': latlng}, function(results, status) {
+if (status == google.maps.GeocoderStatus.OK) {
+if (results[0]) {
+address = results[0].formatted_address;
+} else {
+alert("No results found");
+}
+} else {
+alert("Geocoder failed due to: " + status);
+}
+});
+document.write(address);
+}
+</script>
+<script type="text/javascript">
 result="";
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
@@ -176,21 +199,23 @@ function show_result(){
 	for(i=0;i<transit_way.length;i++){
 		result+="<tr><th>";
 		if(transit_way[i]==1){
-			result+=(i+1)+"<br>"+statement[i]+"\t約"+walk_time_array[i]+"分鐘<br>";
+			result+=(i+1)+"<br>"+times+statement[i]+"\t約"+walk_time_array[i]+"分鐘<br>";
 			times = get_time(times,walk_time_array[i]);
 		}
 		else if(transit_way[i]==2) {
 			result+=(i+1);
-			//result+=times;
 			result+="<br>"+times;
 			//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
 			quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");
+			result+="<br>"+times;
+
 
 		}
 		else if(transit_way[i]==3) {
 			businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
-			result+=(i+1)+"<br>"+statement[i]+businfo+"<br>";
+			result+=(i+1)+"<br>"+times+statement[i]+businfo+"<br>";
 			times = businfo[1];
+			result +=times;
 		}
 		result+="</th></tr>";
 	}
@@ -237,13 +262,11 @@ function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)
 	function show_area(){
 		if(http_request.readyState==4){
 			if(http_request.status==200){
-				
 				var re = RegExp('<span.*?>(.*?)</span>','gi');//train_type
 				var match = http_request.responseText.match(re);
 				if(match) {
 					match[0].search(re);
 					car_type = RegExp.$1;				
-					//document.write("haha");
 				}
 				var re = RegExp('<a.*?>(.*?)</a>','gi');//train_type
 				var match = http_request.responseText.match(re);
@@ -261,7 +284,8 @@ function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)
 					cost_time = RegExp.$4;
 					times = stop_time;
 				}
-				//document.write("cartype:"+car_type +"<br>car_num:"+car_num+"<br>方向:"+from_to+"<br>start_time:"+start_time+"<br>stop_time:"+stop_time+"<br>cost:"+cost_time);
+			//	document.write("<xmp>")
+			//	document.write("cartype:"+car_type +"<br>car_num:"+car_num+"<br>方向:"+from_to+"<br>start_time:"+start_time+"<br><xmp>stop_time:"+stop_time+"</xmp><br>cost:"+cost_time);
 				result+=remove_tags(http_request.responseText);
 			}
 		}
@@ -311,9 +335,9 @@ function translate_train(name)
 </head>
 <body onload="initialize()">
 測試路徑規劃</br>
-起始<input type="text" id="txtFrom" style="width:300px;"value="麻豆"></input></br>
+起始<input type="text" id="txtFrom" style="width:300px;"value="724台灣台南市七股區北堤堤坊"></input></br>
 目的<input type="text" id="txtEnd" style="width:300px;"value="關廟"></input><br>
-
+latlng<input type="text" id="latlng" style="width:300px;"value="23,120"></input><br>
 交通方式：<select id="mode">
   <option value="DRIVING">Driving</option>
   <option value="WALKING">Walking</option>
