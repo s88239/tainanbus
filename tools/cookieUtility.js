@@ -42,7 +42,7 @@ function getCookie(name) {
 
 // Show the cookie string
 function showAllCookie() {
-	alert(document.cookie);
+	return(unescape(document.cookie));
 }
 
 function getCookieValueByIndex(startIndex) {
