@@ -13,6 +13,7 @@
   $('#date').datePicker();  
 });  
 </script>
+
 <style type="text/css">  
 a.dp-choose-date {  
   float: left;  
@@ -101,6 +102,11 @@ var latlng = new google.maps.LatLng(22.996733,120.212465);
 function calcRoute(locationa,locationb) {
   var start = document.getElementById(locationa).value;
   var end = document.getElementById(locationb).value;
+  if(getCookie(start)!=null) {
+  alert(getCookie(start));
+  start = getCookie(start);
+  }
+  if(getCookie(end)!=null) end = getCookie(end);
   var selectedMode = document.getElementById("mode").value;
   var request = {
     origin:start,
@@ -120,8 +126,7 @@ function calcRoute(locationa,locationb) {
 function show_result(now_time){
 	times = now_time;
 	var string=document.getElementById("directions_Panel").innerHTML;
-	//	document.write("<xmp>");
-	//	document.write(string);
+
 	var walk_time_array = new Array();
 	var walk_time = new RegExp('jstcache="50">(.*?)</span>','gi');
 	var match = string.match(walk_time);
@@ -182,7 +187,6 @@ function show_result(now_time){
 				transit_way.push(1);
 				transit_name.push("walk");
 			}
-			
 			stopname.push(RegExp.$1);
 			statement.push(RegExp.$3);
 		}
@@ -196,9 +200,7 @@ function show_result(now_time){
 	}
 	result = "";
 	//result=document.getElementById('date').value;
-	result+='<table board="20">';
-
-	result+="<tr><th>route</th></tr>";
+	result+='<table board="20"><tr><th>route</th></tr>';
 	for(i=0;i<transit_way.length;i++){
 		result+="<tr><th>";
 		if(transit_way[i]==1){
@@ -208,8 +210,7 @@ function show_result(now_time){
 		else if(transit_way[i]==2) {
 			result+=(i+1);
 			result+="<br>"+times;
-			//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
-			quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");
+			quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
 			result+="<br>"+times;
 		}
 		else if(transit_way[i]==3) {
@@ -299,20 +300,6 @@ function remove_tags(html){
 function remove_Semicolon(html){
 	return html.replace(':','');
 }
-function get_latlng()
-{
-	var test_cookies = showAllCookie();
-	document.write(test_cookies);
-
-	test_cookies = test_cookies.split(';');
-	for (var i=0;i<test_cookies.length;i++){
-		alert(test_cookies[i].slice(test_cookies[i].indexOf('=')+1));
-		
-	}
-//document.write(test_cookies.slice(test_cookies.indexOf('=')+1));
-	document.getElementById('location1').value = test_cookies[0].slice(test_cookies[0].indexOf('=')+1);
-	document.getElementById('location2').value = test_cookies[1].slice(test_cookies[1].indexOf('=')+1) ;
-}
 function translate_train(name)
 {
 	name=name.replace('火車站','');
@@ -338,7 +325,15 @@ function show_map(number_of_map)
 	}
 	else if(number_of_map==1){
 		calcRoute("location1","location2");//bug~~
-		//alert("haha");
+	}
+}
+function list_cookies()
+{
+	document.getElementById('cookies_list').innerHTML="";
+	var test_cookies = showAllCookie();
+	test_cookies = test_cookies.split(';');
+	for (var i=0;i<test_cookies.length;i++){
+		document.getElementById('cookies_list').innerHTML+="<option>"+test_cookies[i].substring(0,test_cookies[i].indexOf('='));	
 	}
 }
 function onclick_event()
@@ -350,51 +345,61 @@ function onclick_event()
 	document.getElementById('ro_plan').innerHTML=document.getElementById('date').value;
 	//alert(result);
 	var i=0;
-//	var j=1;
+	var j=1;
 	var location = "location";
-//	calcRoute(location+i,location+j);
-	for(i=0;i<2;i++,j++){
+	//calcRoute(location+i,location+j);
+	for(i=0;i<3;i++,j++){
+		//alert('location'+(i+1));
+		if(document.getElementById('location'+(i+1)).value=='') {
+		//	alert("haha");
+			break;
+		}
 		if(i==0){
 			setTimeout(function () {
-			//alert(  location+i+"br"+location+j);
+			
 				calcRoute(location+"0",location+"1");
-			},(2*i)*200);
+			},0);
+			setTimeout(function () {
+				document.getElementById('ro_plan').innerHTML += show_result(times);
+			},200);
 		}
 		if(i==1){
 			setTimeout(function () {
-			//alert(  location+i+"br"+location+j);
+			
 				calcRoute(location+"1",location+"2");
-			},(2*i)*200);
-		}
-		setTimeout(function () {
+			},200);
+			setTimeout(function () {
 			document.getElementById('ro_plan').innerHTML += show_result(times);
-		},(2*i+1)*200);
+			},400);
+		}
+		if(i==2){
+			setTimeout(function () {
+				calcRoute(location+"2",location+"3");
+			},400);
+			setTimeout(function () {
+			document.getElementById('ro_plan').innerHTML += show_result(times);
+			},600);
+		}
 	}
-	/*calcRoute(location+"1",location+"2");
-	setTimeout(function () { 
-		all_result += show_result();
-		alert(all_result);
-		document.getElementById('ro_plan').innerHTML = show_result();
-		// other dom animations (some triggering on previous ones)
-	}, 200);
-	setTimeout(function () { 
-		calcRoute(location+"2",location+"3");
-	},200);
-	setTimeout(function () { 
-		all_result = show_result(); // other dom animations (some triggering on previous ones)
-		document.getElementById('ro_plan').innerHTML+=all_result;
-
-	}, 400);*/
-	//document.getElementById('ro_plan').innerHTML=result;
+}
+function add_option(n)
+{
+	var changeString = 'location'+n;
+	document.getElementById(changeString).value = document.getElementById('cookies_list').value;
 }
 </script>
 </head>
-<body onload="initialize()">
+<body onload="initialize();list_cookies()">
 測試路徑規劃</br>
-地點1<input type="text" id="location0" style="width:300px;"value="724台灣台南市七股區北堤堤坊"></input>  <button id="show_map1" onclick="show_map(0)">顯示地點1,2地圖</button>
-</br>
-地點2<input type="text" id="location1" style="width:300px;"value="關廟"></input> <button id="show_map2" onclick="show_map(1)">顯示地點2,3地圖</button><br>
-地點3<input type="text" id="location2" style="width:300px;"value="台南火車站"></input></br>
+
+地點1<input type="text" id="location0" style="width:300px;"value="724台灣台南市七股區北堤堤坊"></input>  <button id="show_map1" onclick="show_map(0)">顯示地點1,2地圖</button> <button id="add_cookies1" onclick="add_option(0)">add the selected option to 地點1</button><br>
+
+地點2<input type="text" id="location1" style="width:300px;"value="關廟"></input> <button id="show_map2" onclick="show_map(1)">顯示地點2,3地圖</button><button id="add_cookies2" onclick="add_option(1)">add the selected option to 地點2</button><br>
+
+地點3<input type="text" id="location2" style="width:300px;"value="台南火車站"></input><button id="show_map2" onclick="show_map(1)">顯示地點3,4地圖</button><button id="add_cookies3" onclick="add_option(2)">add the selected option to 地點3</button><br>
+
+地點4<input type="text" id="location3" style="width:300px;"value="台南市永康"></input><button id="add_cookies4" onclick="add_option(3)">add the selected option to 地點4</button><br><br>
+
 <input type="text" id="latlng" style="width:300px;display:none"value="23.341028,120.47332800000004"></input><br>
 交通方式：<select id="mode">
   <option value="TRANSIT" selected>Transit</option>
@@ -433,12 +438,12 @@ function onclick_event()
 	</select>
 
 <br>
-<select size=5>
+<select id="cookies_list" size=5>
 
 </select>
 <br>
-  <button id="btnSubmit" onclick="onclick_event()">送出</button><br>
-  <button id="show2" onclick="get_latlng()">show all cookies</button><br>
+  <button id="btnSubmit" onclick="onclick_event()">規劃行程</button><br>
+  <button id="show2" onclick="list_cookies()">show your favorite</button><br>
   <button id="show3" onclick="reverseGeocode()">顯示地址</button><br>
 
 <div id="map_canvas"></div>
