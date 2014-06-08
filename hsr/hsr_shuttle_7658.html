@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高鐵快捷公車 ─ 7658(H31) 路線資訊</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+@import url("../css/table_style.css");
+@import url("../css/default.css");
+</style>
+<script language="javascript" src="../route/msg.js"></script>
+<script language="javascript" src="../route/fare_and_time/hsr_shuttle_7658.js"></script>
+<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
+			<p align="center">
+			<a href="index.html"><img src="../img/hsr_shuttle_logo.png"></a>
+			</p>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="#route" accesskey="1" title="">路線圖</a></li>
+				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
+				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
+				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
+				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="wrapper1">
+	<a name="route"></a>
+	<div id="banner">&nbsp;</div>
+	<div id="route">
+		<div class="title">
+			<h2>高鐵快捷公車 ─ 7658(H31) 路線圖</h2>
+			<span class="byline">Tainan Bus hsr shuttle bus 7658(H31), Route Map</span>
+		</div>
+		<img src="../route/hsr/h31.jpg">
+		<p></p>
+		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k__oSMhm8dFA" width="800" height="500"></iframe>-->
+	</div>
+</div>
+<div id="wrapper2">
+	<a name="info"></a>
+	<div id="routeinfo" class="container">
+		<div class="title">
+			<h2>高鐵快捷公車 ─ 7658(H31)　路線資訊</h2>
+			<span class="byline">Tainan Bus hsr shuttle bus 7658(H31), Route Information</span> </div>
+		<div class="content">
+			<table border="0">
+				<tr>
+					<td>起訖點</td>
+					<td>臺南市政府 － 高鐵臺南站</td>
+				</tr>
+				<tr>
+					<td>營運公司</td>
+					<td>興南客運</td>
+				</tr>
+				<tr>
+					<td>首／末班車發車時刻</td>
+					<td>往 高鐵臺南站：05:50／22:45<br />往 臺南市政府：07:00／23:55</td>
+				</tr>
+				<tr>
+					<td>班距</td>
+					<td>固定班次 尖15離30</td>
+				</tr>
+				<tr>
+					<td>收費方式</td>
+					<td>免費</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10262&locale=zh_TW" class="button">公車動態資訊</a> </div>
+	</div>
+</div>
+<div id="wrapper3">
+	<a name="fare"></a>
+	<div id="faretable" class="container">
+		<div class="title">
+			<h2>票價表</h2>
+			<span class="byline">Ticket Fare</span> </div>
+		<div class="content">
+			<h1><font color="red">FREE</font></h1>
+			<p> </p>
+			<h2>本路線上車往高鐵站免費</h2>
+			<p> </p>
+			<p>憑高鐵票根免費搭乘高鐵接駁車<br />惟起訖點其一須包含高鐵台南站</p>
+		</div>
+	</div>
+</div>
+<div id="timetable">
+	<a name="time"></a>
+	<div class="title">
+		<h2>時刻表</h2>
+		<span class="byline">Bus schedule</span> </div>
+	<div class="content">
+		<script language="javascript">
+			document.write('<h2><font color="#ff6ca6">臺南市政府/安億橋-&gt;高鐵臺南站</font></h2>');
+			create_time_schedule(hsr_shuttle_7658_main_stop_name, hsr_shuttle_7658_main_stop_time_consume, hsr_shuttle_7658_important_stop, hsr_shuttle_7658_time_go, false);
+			document.write('<p>　</p>');
+			document.write('<h2><font color="#ff6ca6">高鐵臺南站-&gt;臺南市政府/安億橋</font></h2>');
+			create_time_schedule(hsr_shuttle_7658_main_stop_name, hsr_shuttle_7658_main_stop_time_consume, hsr_shuttle_7658_important_stop, hsr_shuttle_7658_time_return, true);
+			document.write(TimeScheduleMSG);
+		</script>
+	</div>
+</div>
+<div id="wrapper4">
+	<a name="transfer"></a>
+	<div id="transfer" class="container">
+		<div class="title">
+			<h2>高鐵快捷公車－7658(H31) 主要轉乘點資訊</h2>
+			<span class="byline">Tainan bus hsr shuttle bus 7658(H31), Transfer information</span>
+		</div>
+		<div class="content">
+			<table>
+				<tr>
+					<th rowspan="4">高鐵台南站</th>
+					<td style="text-align: center"><img src="../route/transfer/HSR.png"></td>
+					<td>高鐵台南站</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/hsr_shuttle_logo.png"></td>
+					<td id="hsr_shuttle"><a href="hsr_shuttle_7658.html" target="_blank">H31(市府線)</a>、<a href="hsr_shuttle_7651.html" target="_blank">H62(奇美線)</a></td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
+					<td id="red"><a href="../red/red_3.html" target="_blank">紅3</a>、<a href="../red/red_14.html" target="_blank">紅14</a></td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
+					<td id="green"><a href="../green/green_16.html" target="_blank">綠16</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<script type="text/javascript">document.write(copyrightMSG);</script>
+</div>
+</body>
+</html>

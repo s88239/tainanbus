@@ -49,6 +49,7 @@
 	#yellow a{color: #FFFF00;}
 	#city_bus a{color: #C991FF;}
 	#tour_bus a{color: #FFFFFF;}
+	#hsr_shuttle a{color: #fc7cc6;}
 	a:hover
 	{
 		text-decoration: none;
