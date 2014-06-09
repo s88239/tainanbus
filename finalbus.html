@@ -64,9 +64,10 @@ mm_reloadpage(true);
       function list_cookies()
       {
         var test_cookies = showAllCookie();
+        if(test_cookies=='') return;
         test_cookies = test_cookies.split(';');
         for (var i=0;i<test_cookies.length;i++){
-          document.getElementById('selectlist').innerHTML+=("<option>"+test_cookies[i].substring(0,test_cookies[i].indexOf('=')));  
+          document.getElementById('selectlist').innerHTML+=("<option value='"+test_cookies[i].substring(0,test_cookies[i].indexOf('='))+"'>"+test_cookies[i].substring(0,test_cookies[i].indexOf('='))); //>"+test_cookies[i].substring(0,test_cookies[i].indexOf('=')));  
           jing.push(test_cookies[i].substring(test_cookies[i].indexOf('=')+1, test_cookies[i].indexOf(',')));
           wei.push(test_cookies[i].substring(test_cookies[i].indexOf(',')+1));
           fplace.push(test_cookies[i].substring(0,test_cookies[i].indexOf('=') ));
