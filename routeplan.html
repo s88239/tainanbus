@@ -365,18 +365,18 @@ function onclick_event()
 			setTimeout(function () {
 			
 				calcRoute(location+"1",location+"2");
-			},200);
-			setTimeout(function () {
-			document.getElementById('ro_plan').innerHTML += show_result(times);
-			},400);
-		}
-		if(i==2){
-			setTimeout(function () {
-				calcRoute(location+"2",location+"3");
 			},400);
 			setTimeout(function () {
 			document.getElementById('ro_plan').innerHTML += show_result(times);
 			},600);
+		}
+		if(i==2){
+			setTimeout(function () {
+				calcRoute(location+"2",location+"3");
+			},800);
+			setTimeout(function () {
+			document.getElementById('ro_plan').innerHTML += show_result(times);
+			},1000);
 		}
 	}
 }
