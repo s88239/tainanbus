@@ -245,16 +245,14 @@ function show_map(number_of_map)
 {
 	document.getElementById('map_canvas').style.display = "";
 	//document.getElementById('directions_Panel').style.display = "";
-
-	//alert("location"+number_of_map);
 	if(number_of_map==0){
 		calcRoute("location0","location1");
 	}
 	else if(number_of_map==1){
-		calcRoute("location1","location2");//bug~~
+		calcRoute("location1","location2");
 	}
 	else if(number_of_map==2){
-		calcRoute("location2","location3");//bug~~
+		calcRoute("location2","location3");
 	}
 }
 function list_cookies()
@@ -262,7 +260,6 @@ function list_cookies()
 	document.getElementById('cookies_list').innerHTML="";
 	var test_cookies = showAllCookie();
 	test_cookies = test_cookies.split(';');
-	//alert(test_cookies.length);
 	for (var i=0;i<test_cookies.length;i++){
 		document.getElementById('cookies_list').innerHTML+="<option>"+test_cookies[i].substring(0,test_cookies[i].indexOf('='));	
 	}
@@ -286,28 +283,23 @@ function onclick_event()
 		}
 	}	
 	document.getElementById('ro_plan').innerHTML=document.getElementById('date').value;
-	//alert(result);
 	var i=0;
 	var location = "location";
-	//calcRoute(location+i,location+j);
 	for(var i=0;i<3;i++){
 		if(document.getElementById('location'+(i+1)).value=='') {
 			break;
 		}
 			setTimeout(function () {	
-				//alert(i);
 				calcRoute(location+i.toString(),location+(i+1).toString());
-			//	alert(i+"<br>");
 				i++;
 			},i*300);
 			setTimeout(function () {
-				times = get_time(times,parseInt(document.getElementById('staytime'+(i-1).toString()).value));
 				document.getElementById('ro_plan').innerHTML += show_result(times);
+				times = get_time(times,parseInt(document.getElementById('staytime'+(i-1).toString()).value));
+
 			},(i+1)*300);
-			//alert(i);
 	}
-	//document.getElementById('directions_Panel').innerHTML='';
-	//result="";
+
 	i=0;
 }
 function add_option(n)
