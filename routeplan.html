@@ -59,7 +59,7 @@ td {
 </style>
 <script type="text/javascript">
 //var address = "To be replaced later.";
-function reverseGeocode() {
+/*function reverseGeocode() {
 var geocoder = new google.maps.Geocoder();
 var input = document.getElementById('latlng').value;
 var latlngStr = input.split(',', 2);
@@ -78,7 +78,8 @@ alert("Geocoder failed due to: " + status);
 }
 });
 alert(address);
-}
+//<button id="show3" onclick="reverseGeocode()">顯示地址</button><br>
+}*/
 </script>
 <script type="text/javascript">
 result="";
@@ -102,10 +103,7 @@ var latlng = new google.maps.LatLng(22.996733,120.212465);
 function calcRoute(locationa,locationb) {
   var start = document.getElementById(locationa).value;
   var end = document.getElementById(locationb).value;
-  if(getCookie(start)!=null) {
-  alert(getCookie(start));
-  start = getCookie(start);
-  }
+  if(getCookie(start)!=null) start = getCookie(start);
   if(getCookie(end)!=null) end = getCookie(end);
   var selectedMode = document.getElementById("mode").value;
   var request = {
@@ -195,9 +193,9 @@ function show_result(now_time){
 		transit_name[i]=remove_tags(transit_name[i]);
 		transit_name[i]=transit_name[i].replace(/\s+/gi,"");
 	}
-	for(i=0;i<stopname.length;i++){
-		stopname[i]=stopname[i].replace("興南客運","");
-	}
+	//for(i=0;i<stopname.length;i++){
+	//	stopname[i]=stopname[i].replace("興南客運","");
+	//}
 	result = "";
 	//result=document.getElementById('date').value;
 	result+='<table board="20"><tr><th>route</th></tr>';
@@ -326,6 +324,9 @@ function show_map(number_of_map)
 	else if(number_of_map==1){
 		calcRoute("location1","location2");//bug~~
 	}
+	else if(number_of_map==2){
+		calcRoute("location2","location3");//bug~~
+	}
 }
 function list_cookies()
 {
@@ -349,14 +350,11 @@ function onclick_event()
 	var location = "location";
 	//calcRoute(location+i,location+j);
 	for(i=0;i<3;i++,j++){
-		//alert('location'+(i+1));
 		if(document.getElementById('location'+(i+1)).value=='') {
-		//	alert("haha");
 			break;
 		}
 		if(i==0){
 			setTimeout(function () {
-			
 				calcRoute(location+"0",location+"1");
 			},0);
 			setTimeout(function () {
@@ -396,7 +394,7 @@ function add_option(n)
 
 地點2<input type="text" id="location1" style="width:300px;"value="關廟"></input> <button id="show_map2" onclick="show_map(1)">顯示地點2,3地圖</button><button id="add_cookies2" onclick="add_option(1)">add the selected option to 地點2</button><br>
 
-地點3<input type="text" id="location2" style="width:300px;"value="台南火車站"></input><button id="show_map2" onclick="show_map(1)">顯示地點3,4地圖</button><button id="add_cookies3" onclick="add_option(2)">add the selected option to 地點3</button><br>
+地點3<input type="text" id="location2" style="width:300px;"value="台南火車站"></input><button id="show_map2" onclick="show_map(2)">顯示地點3,4地圖</button><button id="add_cookies3" onclick="add_option(2)">add the selected option to 地點3</button><br>
 
 地點4<input type="text" id="location3" style="width:300px;"value="台南市永康"></input><button id="add_cookies4" onclick="add_option(3)">add the selected option to 地點4</button><br><br>
 
@@ -443,8 +441,7 @@ function add_option(n)
 </select>
 <br>
   <button id="btnSubmit" onclick="onclick_event()">規劃行程</button><br>
-  <button id="show2" onclick="list_cookies()">show your favorite</button><br>
-  <button id="show3" onclick="reverseGeocode()">顯示地址</button><br>
+  <button id="show2" onclick="list_cookies()">reload your favorite</button><br>
 
 <div id="map_canvas"></div>
 <div id="directions_Panel"></div>
