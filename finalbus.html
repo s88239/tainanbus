@@ -42,17 +42,37 @@ mm_reloadpage(true);
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?sensor=false">
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript" src="tools/cookieUtility.js">
       jing=[];
       wei=[];
       fplace=[];
       function deleteoption(){
           indx=document.getElementById("selectlist").options.selectedIndex;
-          document.getElementById("selectlist").options.remove(indx);
-          jing.splice(indx, 1);
-          wei.splice(indx, 1);
-          fplace.splice(indx, 1);
+          if(getCookie(document.getElementById("selectlist").options[document.getElementById("selectlist").options.selectedIndex].text)==NULL ){
+            document.getElementById("selectlist").options.remove(indx);
+            jing.splice(indx, 1);
+            wei.splice(indx, 1);
+            fplace.splice(indx, 1);
+          }
+          else{
+            delCookie(document.getElementById("selectlist").options[document.getElementById("selectlist").options.selectedIndex].text);
+            document.getElementById("selectlist").options.remove(indx);
+            jing.splice(indx, 1);
+            wei.splice(indx, 1);
+            fplace.splice(indx, 1);
+          }
       }
+      function list_cookies()
+{
+  var test_cookies = showAllCookie();
+  test_cookies = test_cookies.split(';');
+  for (var i=0;i<test_cookies.length;i++){
+    document.getElementById('selectlist').innerHTML+=("<option value='"+test_cookies[i].substring(0,test_cookies[i].indexOf('='))+"'>"+test_cookies[i].substring(0,test_cookies[i].indexOf('=')));  
+    jing.push(test_cookies[i].substring(test_cookies[i].indexOf('='))+1, test_cookies[i].indexOf(',')));
+    wei.push(test_cookies[i].substring(test_cookies[i].indexOf(','))+1);
+    fplace.push(test_cookies[i].substring(0,test_cookies[i].indexOf('=')) );
+  }
+}
       function funplan(){
         var i;
         for(i=0; i<jing.length; i++){
@@ -226,7 +246,7 @@ mm_reloadpage(true);
         jing.push(jingjing);
         wei.push(weiwei);
         fplace.push(funp);
-        document.getElementById("selectlist").innerHTML+=("<option value='"+funp+"''>"+funp);
+        document.getElementById("selectlist").innerHTML+=("<option value='"+funp+"'>"+funp);
       }
       function initialize2() {
         var mapOptions = {
@@ -1237,6 +1257,7 @@ mm_reloadpage(true);
     funp="億載金城";
   }); 
       }
+      list_cookies();
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 </head>
