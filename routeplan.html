@@ -225,7 +225,7 @@ function show_result(now_time){
 	//document.write(result);
 	routeArray.push(endpoint);
 	result+="</td></table>start:"+routeArray[0]+ "endpoint"+routeArray[1];
-	now_time = times ;
+	//now_time = times ;
 	//document.write("<xmp>"+document.getElementById('date').value);
 	//result+=document.getElementById('date').value.length;
 	//document.getElementById('ro_plan').innerHTML=result;
@@ -336,6 +336,7 @@ function list_cookies()
 	document.getElementById('cookies_list').innerHTML="";
 	var test_cookies = showAllCookie();
 	test_cookies = test_cookies.split(';');
+	//alert(test_cookies.length);
 	for (var i=0;i<test_cookies.length;i++){
 		document.getElementById('cookies_list').innerHTML+="<option>"+test_cookies[i].substring(0,test_cookies[i].indexOf('='));	
 	}
@@ -349,39 +350,31 @@ function onclick_event()
 	document.getElementById('ro_plan').innerHTML=document.getElementById('date').value;
 	//alert(result);
 	var i=0;
-	var j=1;
 	var location = "location";
 	//calcRoute(location+i,location+j);
-	for(i=0;i<3;i++,j++){
+	for(var i=0;i<3;i++){
 		if(document.getElementById('location'+(i+1)).value=='') {
 			break;
 		}
-		if(i==0){
+			setTimeout(function () {				
+				calcRoute(location+i.toString(),location+(i+1).toString());
+				i++;
+			},i*300);
 			setTimeout(function () {
-				calcRoute(location+"0",location+"1");
-			},0);
-			setTimeout(function () {
+				times = get_time(times,parseInt(document.getElementById('staytime'+(i-1).toString()).value));
 				document.getElementById('ro_plan').innerHTML += show_result(times);
-			},300);
-		}
-		if(i==1){
-			setTimeout(function () {
-			
-				calcRoute(location+"1",location+"2");
-			},300);
-			setTimeout(function () {
-			document.getElementById('ro_plan').innerHTML += show_result(times);
-			},600);
-		}
-		if(i==2){
-			setTimeout(function () {
-				calcRoute(location+"2",location+"3");
-			},600);
-			setTimeout(function () {
-			document.getElementById('ro_plan').innerHTML += show_result(times);
-			},900);
-		}
+				if(i==3) {
+					//document.getElementById('directions_Panel').innerHTML='';
+					result="";
+					//i=0;
+					//alert(i);
+				}
+			},(i+1)*300);
+			//alert(i);
 	}
+	//document.getElementById('directions_Panel').innerHTML='';
+	//result="";
+	i=0;
 }
 function add_option(n)
 {
@@ -399,7 +392,7 @@ function add_option(n)
 
 地點3<input type="text" id="location2" style="width:300px;"value="台南火車站"></input>stay time<input type="text" id="staytime1" style="width:300px;"value=50>分</input><button class="blueButton" id="show_map2" onclick="show_map(2)">顯示地點3,4地圖</button><button class="blueButton" id="add_cookies3" onclick="add_option(2)">add the selected option to 地點3</button><br>
 
-地點4<input type="text" id="location3" style="width:300px;"value="台南市永康"></input>stay time<input type="text" id="staytime1" style="width:300px;"value=50>分</input><button class="blueButton" id="add_cookies4" onclick="add_option(3)">add the selected option to 地點4</button><br><br>
+地點4<input type="text" id="location3" style="width:300px;"value="台南市永康"></input>stay time<input type="text" id="staytime2" style="width:300px;"value=50>分</input><button class="blueButton" id="add_cookies4" onclick="add_option(3)">add the selected option to 地點4</button><br><br>
 
 <input type="text" id="latlng" style="width:300px;display:none"value="23.341028,120.47332800000004"></input><br>
 交通方式：<select id="mode">
