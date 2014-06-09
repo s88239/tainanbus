@@ -64,10 +64,10 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	else if(theRoute=='88'||theRoute=='99') route = 'tour_bus_' + theRoute; // tour bus
 	else if(!isNaN(theRoute)) route = route + '_' + theRoute; // city_bus
 	else if(!isNaN(theRoute.substring(1,theRoute.length))) route = route + '_' +theRoute.substring(1,theRoute.length);
-	alert(theRoute);
-	alert(route);
+	//alert(theRoute);
+	//alert(route);
 	interval_stop_name = eval(route+'_interval_stop');
-	alert(interval_stop_name);
+	//alert(interval_stop_name);
 	stop_time_consume = eval(route+'_stop_time_consume');
 	//alert(stop_time_consume);
 	// find_match_time
@@ -91,11 +91,11 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	//alert('end:'+end_idx);
 	if( start_idx[2] < end_idx[2] ){
 		//alert('go');
-		time_table = eval(route+'_time_go');
+		time_table = (theRoute==88||theRoute==99)?eval(route+'_holiday_time_go') : eval(route+'_time_go');
 	}
 	else{
 		//alert('return');
-		time_table = eval(route+'_time_return');
+		time_table = (theRoute==88||theRoute==99)?eval(route+'_holiday_time_return') : eval(route+'_time_return');
 	}
 	//alert(time_table);
 	var temp = '';
@@ -121,6 +121,7 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 		fare_table = eval(route+'_fare');
 		fare = (start_idx[0]<=end_idx[0]) ? fare_table[end_idx[0]][start_idx[0]] : fare_table[start_idx[0]][end_idx[0]];
 	}
+	else if(interval_stop_name.length==2 && start_idx[0]!=end_idx[0]) fare = 36; // 二段票
 	else fare = 18;
 	
 	if(start_idx[2] < end_idx[2] ) return (!isArrive)?[target_time, get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), Math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare]
