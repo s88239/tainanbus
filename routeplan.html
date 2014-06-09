@@ -86,6 +86,7 @@ alert(address);
 </script>
 <script type="text/javascript">
 result="";
+flag=false;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
@@ -104,6 +105,7 @@ var latlng = new google.maps.LatLng(22.996733,120.212465);
 }
 
 function calcRoute(locationa,locationb) {
+//alert("display");
   var start = document.getElementById(locationa).value;
   var end = document.getElementById(locationb).value;
   if(getCookie(start)!=null) start = getCookie(start);
@@ -122,6 +124,9 @@ function calcRoute(locationa,locationb) {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
     }
+	else {
+		alert(status+"\n you will get error message");
+	}
   });
 }
 function show_result(now_time){
@@ -201,30 +206,31 @@ function show_result(now_time){
 	//}
 	result = "";
 	//result=document.getElementById('date').value;
-	result+='<table board="20"><tr><th>route</th></tr>';
+	result+='<table board="20"><tr><td colspan=3>start_point:'+startpoint+"endpoint"+endpoint+'</td></tr>';
 	for(i=0;i<transit_way.length;i++){
-		result+="<tr><th>";
+		result+="<tr>";
 		if(transit_way[i]==1){
-			result+=(i+1)+"<br>"+times+statement[i]+"\t約"+walk_time_array[i]+"分鐘<br>";
+			result+="<td>"+times+"</td><td>"+statement[i]+"</td><td>約"+walk_time_array[i]+"分鐘</td>";
 			times = get_time(times,walk_time_array[i]);
+			result+="<td>"+times+"</td>";
 		}
 		else if(transit_way[i]==2) {
-			result+=(i+1);
-			result+="<br>"+times;
+			//result+=(i+1);
+		//	result+="<td>"+times+"</td>";
 			quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
-			result+="<br>"+times;
+			//result+="<td>"+times+"</td>";
 		}
 		else if(transit_way[i]==3) {
 			businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
-			result+=(i+1)+"<br>"+times+statement[i]+businfo+"<br>";
+			result+="<td>"+businfo[0]+"</td><td>"+statement[i]+"</td>"+"<td>約"+businfo[2]+"分鐘</td>";
 			times = businfo[1];
-			result +=times;
+			result +="<td>"+times+"</td>";
 		}
-		result+="</th></tr>";
+		result+="</tr>";
 	}
 	//document.write(result);
 	routeArray.push(endpoint);
-	result+="</td></table>start:"+routeArray[0]+ "endpoint"+routeArray[1];
+	result+="</table>";
 	//now_time = times ;
 	//document.write("<xmp>"+document.getElementById('date').value);
 	//result+=document.getElementById('date').value.length;
@@ -290,7 +296,8 @@ function quest_rail(searchdate,fromstation,tostation,trainclass,fromtime,totime)
 				}
 			//	document.write("<xmp>")
 			//	document.write("cartype:"+car_type +"<br>car_num:"+car_num+"<br>方向:"+from_to+"<br>start_time:"+start_time+"<br><xmp>stop_time:"+stop_time+"</xmp><br>cost:"+cost_time);
-				result+=remove_tags(http_request.responseText);
+				result+="<td>"+start_time+"</td><td>"+car_type+car_num+from_to+"</td><td>約"+cost_time+"</td><td>"+stop_time+"</td>"
+				//result+="<td>"+remove_tags(http_request.responseText)+"</td>";
 			}
 		}
 	}
@@ -320,6 +327,8 @@ function translate_train(name)
 function show_map(number_of_map)
 {
 	document.getElementById('map_canvas').style.display = "";
+	//document.getElementById('directions_Panel').style.display = "";
+
 	//alert("location"+number_of_map);
 	if(number_of_map==0){
 		calcRoute("location0","location1");
@@ -345,8 +354,20 @@ function onclick_event()
 {
 	times=document.getElementById('FromTimeSelect').value;
 	document.getElementById('map_canvas').style.display = "none";
-	//document.getElementById('directions_Panel').style.display = "none";
-
+	document.getElementById('directions_Panel').style.display = "none";
+	if(!flag){ time1 = new Date();
+		flag=true;
+	}
+	else{
+		time2= new Date();
+		if(time2.getTime()-time1.getTime() >=30000){
+			time1 = time2;
+		}
+		else {
+			alert("you must wait for 30 second");
+			return;
+		}
+	}	
 	document.getElementById('ro_plan').innerHTML=document.getElementById('date').value;
 	//alert(result);
 	var i=0;
@@ -356,19 +377,15 @@ function onclick_event()
 		if(document.getElementById('location'+(i+1)).value=='') {
 			break;
 		}
-			setTimeout(function () {				
+			setTimeout(function () {	
+				//alert(i);
 				calcRoute(location+i.toString(),location+(i+1).toString());
+			//	alert(i+"<br>");
 				i++;
 			},i*300);
 			setTimeout(function () {
 				times = get_time(times,parseInt(document.getElementById('staytime'+(i-1).toString()).value));
 				document.getElementById('ro_plan').innerHTML += show_result(times);
-				if(i==3) {
-					//document.getElementById('directions_Panel').innerHTML='';
-					result="";
-					//i=0;
-					//alert(i);
-				}
 			},(i+1)*300);
 			//alert(i);
 	}
