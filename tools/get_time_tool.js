@@ -63,7 +63,7 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 			route = 'city_bus';
 	}
 	if(theRoute=='7651'||theRoute=='7658') route = 'hsr_shuttle_' + theRoute; // hsr shuttle
-	else if(!isNaN(theRoute)) route += theRoute; // city_bus
+	else if(!isNaN(theRoute)) route = route + '_' + theRoute; // city_bus
 	else if(!isNaN(theRoute.substring(1,theRoute.length))) route = route + '_' +theRoute.substring(1,theRoute.length);
 	//alert(theRoute);
 	//alert(route);
