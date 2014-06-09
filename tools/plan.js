@@ -135,8 +135,13 @@ function show_result(now_time){
 		else if(transit_way[i]==2) {
 			//result+=(i+1);
 		//	result+="<td>"+times+"</td>";
-			quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
+			if(i<transit_way.length-1){
+				quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");}//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
 			//result+="<td>"+times+"</td>";
+			else {
+			//	alert(endpoint.substr(endpoint.length-5,5));
+				quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(endpoint.substr(endpoint.length-5,5)),"2",remove_Semicolon(times),"2359");
+			}
 		}
 		else if(transit_way[i]==3) {
 			businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
@@ -229,6 +234,7 @@ function remove_Semicolon(html){
 function translate_train(name)
 {
 	name=name.replace('火車站','');
+	//alert(name);
 	train_name= new Array("後壁","新營","柳營","林鳳營","隆田","拔林","善化","新市","永康","台南","保安","中洲","長榮大學","沙崙","仁德","大橋","南科");
 	for(var i=0;i<train_name.length;i++){
 		if(name==train_name[i]){//
@@ -238,9 +244,21 @@ function translate_train(name)
 			else if(i==14) return 1243;
 			else if(i==15) return 1239;
 			else if(i==16) return 1244;
+			//else return 1228;
+		}
+	}
+	for(var i=0;i<train_name.length;i++){
+		if(name.indexOf(train_name[i].substr(train_name[i].length-2,2))!=-1){//
+			if(i<=11) return (i+1219);
+			else if(i==12) return 5101;
+			else if(i==13) return 5102;
+			else if(i==14) return 1243;
+			else if(i==15) return 1239;
+			else if(i==16) return 1244;
 			else return 1228;
 		}
 	}
+	
 }
 function show_map(number_of_map)
 {
