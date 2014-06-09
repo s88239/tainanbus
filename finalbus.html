@@ -39,10 +39,9 @@ mm_reloadpage(true);
 </script>
 <link rel="stylesheet" href="../css/map.css" type="text/css">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?sensor=false">
-    </script>
-    <script type="text/javascript" src="tools/cookieUtility.js">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="tools/cookieUtility.js"></script>
+<script type="text/javascript">
       jing=[];
       wei=[];
       fplace=[];
@@ -63,16 +62,16 @@ mm_reloadpage(true);
           }
       }
       function list_cookies()
-{
-  var test_cookies = showAllCookie();
-  test_cookies = test_cookies.split(';');
-  for (var i=0;i<test_cookies.length;i++){
-    document.getElementById('selectlist').innerHTML+=("<option value='"+test_cookies[i].substring(0,test_cookies[i].indexOf('='))+"'>"+test_cookies[i].substring(0,test_cookies[i].indexOf('=')));  
-    jing.push(test_cookies[i].substring(test_cookies[i].indexOf('='))+1, test_cookies[i].indexOf(',')));
-    wei.push(test_cookies[i].substring(test_cookies[i].indexOf(','))+1);
-    fplace.push(test_cookies[i].substring(0,test_cookies[i].indexOf('=')) );
-  }
-}
+      {
+        var test_cookies = showAllCookie();
+        test_cookies = test_cookies.split(';');
+        for (var i=0;i<test_cookies.length;i++){
+          document.getElementById('selectlist').innerHTML+=("<option>"+test_cookies[i].substring(0,test_cookies[i].indexOf('=')));  
+          jing.push(test_cookies[i].substring(test_cookies[i].indexOf('=')+1, test_cookies[i].indexOf(',')));
+          wei.push(test_cookies[i].substring(test_cookies[i].indexOf(',')+1));
+          fplace.push(test_cookies[i].substring(0,test_cookies[i].indexOf('=') ));
+        }
+      }
       function funplan(){
         var i;
         for(i=0; i<jing.length; i++){
@@ -1257,9 +1256,8 @@ mm_reloadpage(true);
     funp="億載金城";
   }); 
       }
-      list_cookies();
       google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+</script>
 </head>
 
 <body bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0">
@@ -1317,5 +1315,6 @@ mm_reloadpage(true);
   <input type=button id="cookplace" onclick="javascript:alert(document.cookie);" value="列出cookie">
   <input type=button id="addr" onclick="javascript:addroute();" value="加入公車路線">
 </form>
+<script type="text/javascript">list_cookies();</script>
 </body>
 </html>
