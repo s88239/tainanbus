@@ -124,10 +124,10 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	}
 	else fare = 18;
 	
-	if(start_idx[2] < end_idx[2] ) return (!isArrive)?[target_time, get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]], fare]
-	 : [get_time(target_time, stop_time_consume[start_idx[2]] - stop_time_consume[end_idx[2]]), target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]], fare];
-	else return (!isArrive)?[target_time, get_time(target_time, stop_time_consume[start_idx[2]] - stop_time_consume[end_idx[2]]), stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]], fare]
-	 : [get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]], fare];
+	if(start_idx[2] < end_idx[2] ) return (!isArrive)?[target_time, get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare]
+	 : [get_time(target_time, stop_time_consume[start_idx[2]] - stop_time_consume[end_idx[2]]), target_time, math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare];
+	else return (!isArrive)?[target_time, get_time(target_time, stop_time_consume[start_idx[2]] - stop_time_consume[end_idx[2]]), math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare]
+	 : [get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), target_time, math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare];
 	// such as ["06:10","10:05", 30]
 }
 var replace_str_arr = [['台南','臺南'],['台灣','臺灣'],['南台','南臺'],['台電','臺電'],['關廟站','關廟'],['、','']];
