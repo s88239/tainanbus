@@ -1,6 +1,7 @@
 $(function() {  
-  Date.format = 'yyyy/mm/dd';  
-  $('#date').datePicker();  
+  Date.format = 'yyyy/mm/dd'; 
+$('#date').datePicker().val(new Date().asString()).trigger('change');  
+//  $('#date').datePicker();  
 });  
 result="";
 flag=false;
