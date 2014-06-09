@@ -47,7 +47,7 @@ mm_reloadpage(true);
       fplace=[];
       function deleteoption(){
           indx=document.getElementById("selectlist").options.selectedIndex;
-          if(getCookie(document.getElementById("selectlist").options[document.getElementById("selectlist").options.selectedIndex].text)==NULL ){
+          if(getCookie(document.getElementById("selectlist").options[document.getElementById("selectlist").options.selectedIndex].text)==null ){
             document.getElementById("selectlist").options.remove(indx);
             jing.splice(indx, 1);
             wei.splice(indx, 1);
