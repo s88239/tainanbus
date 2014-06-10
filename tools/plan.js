@@ -144,10 +144,12 @@ function show_result(now_time){
 			}
 		}
 		else if(transit_way[i]==3) {
+			if(i!=transit_way.length-1){
 			businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
-			result+="<td>"+businfo[0]+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"</td>"+"<td>約"+businfo[2]+"分鐘</td>";
+			result+="<td>"+businfo[0]+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"<font color='green'>"+stopname[i+1]+"</font>"+"下車"+"<font color='red'>"+businfo[3]+"元</font></td>"+"<td>約"+businfo[2]+"分鐘</td>";
 			times = businfo[1];
 			result +="<td>"+times+"</td>";
+			}
 		}
 		result+="</tr>";
 	}
