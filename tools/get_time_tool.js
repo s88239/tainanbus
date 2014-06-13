@@ -73,8 +73,8 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	// find_match_time
 	start_stop = replace_stop_name(start_stop);
 	end_stop = replace_stop_name(end_stop);
-	//alert(start_stop);
-	//alert(end_stop);
+	alert(start_stop);
+	alert(end_stop);
 	// find the index of the stop
 	var count = 0;
 	for(var i=0; i<interval_stop_name.length; ++i){
@@ -131,7 +131,7 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	 : [get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), target_time, Math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare];
 	// such as ["06:10","10:05", 30]
 }
-var replace_str_arr = [['[台灣好行]',''],['台南','臺南'],['台灣','臺灣'],['南台','南臺'],['台電','臺電'],['關廟站','關廟'],['興南客運臺南站','臺南站'],['、','']];
+var replace_str_arr = [['[台灣好行]',''],['台南','臺南'],['台灣','臺灣'],['南台','南臺'],['台電','臺電'],['關廟站','關廟'],['、','']];
 function replace_stop_name(stop){ // handle the exception
 	for(var i=0; i<replace_str_arr.length; ++i){
 		if(stop.indexOf(replace_str_arr[i][0]) >=0 ){
@@ -140,7 +140,7 @@ function replace_stop_name(stop){ // handle the exception
 		}
 	}
 	if(stop=='火車站(北站)' || stop=='火車站(南站)') stop = '臺南火車站';
-	else if((stop.indexOf('新營客運')==0 || stop.indexOf('興南客運')==0)&&stop.charAt(stop.length-1)=='站') stop = stop.substring(4,stop.length-1); // replace XX站 to XX
+	else if((stop.indexOf('新營客運')==0 || stop.indexOf('興南客運')==0)&&stop.charAt(stop.length-1)=='站') stop = stop.substring(4,stop.length);
 	return stop;
 }
 
