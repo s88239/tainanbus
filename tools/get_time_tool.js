@@ -73,8 +73,8 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	// find_match_time
 	start_stop = replace_stop_name(start_stop);
 	end_stop = replace_stop_name(end_stop);
-	alert(start_stop);
-	alert(end_stop);
+	//alert(start_stop);
+	//alert(end_stop);
 	// find the index of the stop
 	var count = 0;
 	for(var i=0; i<interval_stop_name.length; ++i){
