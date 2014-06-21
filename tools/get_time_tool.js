@@ -58,13 +58,13 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 			route = 'yellow';
 			break;
 		default:
-			route = 'city_bus';
+			if(theRoute=='7651'||theRoute=='7658') route = 'hsr_shuttle_' + theRoute; // hsr shuttle
+			else if(theRoute=='88'||theRoute=='99') route = 'tour_bus_' + theRoute; // tour bus
+			else if(!isNaN(theRoute)) route = 'city_bus' + '_' + theRoute; // city_bus
+			else return null; // route not found
 	}
-	if(theRoute=='7651'||theRoute=='7658') route = 'hsr_shuttle_' + theRoute; // hsr shuttle
-	else if(theRoute=='88'||theRoute=='99') route = 'tour_bus_' + theRoute; // tour bus
-	else if(!isNaN(theRoute)) route = route + '_' + theRoute; // city_bus
-	else if(!isNaN(theRoute.substring(1,theRoute.length))) route = route + '_' +theRoute.substring(1,theRoute.length);
-	else return null; // route not found
+	if(!isNaN(theRoute.substring(1,theRoute.length))) route = route + '_' +theRoute.substring(1,theRoute.length);
+	if(!check_valid_bus(route)) return null;
 	//alert(theRoute);
 	//alert(route);
 	interval_stop_name = eval(route+'_interval_stop');
@@ -169,4 +169,20 @@ function get_time(time_str, offset){ // get the time of the stop
 	min_zero = (time_min<10)?'0':'' ;
 	new_time = hr_zero + time_hr + ':' + min_zero + time_min;
 	return new_time;
+}
+
+function check_valid_bus(bus_line){
+	for(var i=0; i<js_name.length; ++i){
+		if(i<6 && bus_line==js_name[i] ) return true; // 六幹線
+		for(var j=0; j<js_bus_num[i].length; j+=2){
+			for(var k=js_bus_num[i][j]; k<=js_bus_num[i][j+1]; ++k){
+				//alert(js_name[i] + k);
+				//if( i== 6 ) // just load city_bus
+				my_bus = js_name[i] + '_' + k ;
+				if( bus_line == my_bus) return true; // 支線
+				//document.write('route/fare_and_time/' + js_name[i] + '_' + k + '.js<br />');
+			}
+		}
+	}
+	return false;
 }
