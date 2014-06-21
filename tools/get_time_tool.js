@@ -59,6 +59,7 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 			break;
 		case '0': // o左 or 0右
 			route = 'city_bus_0';
+			break;
 		default:
 			if(theRoute=='7651'||theRoute=='7658') route = 'hsr_shuttle_' + theRoute; // hsr shuttle
 			else if(theRoute=='88'||theRoute=='99') route = 'tour_bus_' + theRoute; // tour bus
@@ -86,6 +87,7 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 		for(var j=0; j<interval_stop_name[i].length; ++j, ++count){
 			//alert('replace='+replace_stop_name(interval_stop_name[i][j])+' compare='+start_stop);
 			if(replace_stop_name(interval_stop_name[i][j])==start_stop){
+				if(theRoute=='0左' && start_idx!=null) continue; // to prevent search to the end of 台南火車站 
 				start_idx = [i,j,count]; // idx format: [interval, order in interval, index of total stops]
 			}
 			if(replace_stop_name(interval_stop_name[i][j])==end_stop){
@@ -121,16 +123,16 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 		}
 		//document.write(target_time+'<br />')
 	}
-	//alert(target_time);
+	//alert('targe_time: '+target_time);
 
 	// get the bus fare
-	if(isNaN(theRoute)){
+	if(isNaN(theRoute) && theRoute.charAt(0)!='0'){
 		fare_table = eval(route+'_fare');
 		fare = (start_idx[0]<=end_idx[0]) ? fare_table[end_idx[0]][start_idx[0]] : fare_table[start_idx[0]][end_idx[0]];
 	}
 	else if(interval_stop_name.length==2 && start_idx[0]!=end_idx[0]) fare = 36; // 二段票
 	else fare = 18;
-	
+	//alert('fare='+fare);
 	if(start_idx[2] < end_idx[2] ) return (!isArrive)?[target_time, get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), Math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare]
 	 : [get_time(target_time, stop_time_consume[start_idx[2]] - stop_time_consume[end_idx[2]]), target_time, Math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare];
 	else return (!isArrive)?[target_time, get_time(target_time, stop_time_consume[start_idx[2]] - stop_time_consume[end_idx[2]]), Math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare]
