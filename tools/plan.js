@@ -161,17 +161,26 @@ function show_result(now_time){
 		else if(transit_way[i]==2) {
 			//result+=(i+1);
 		//	result+="<td>"+times+"</td>";
-			if(i<transit_way.length-1){
-				quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");}//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
-			//result+="<td>"+times+"</td>";
-			else {
-			//	alert(endpoint.substr(endpoint.length-5,5));
-				quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(endpoint.substr(endpoint.length-5,5)),"2",remove_Semicolon(times),"2359");
+			if(stopname[i].indexOf('高鐵')==-1){
+				if(i<transit_way.length-1){
+					quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");}//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
+				//result+="<td>"+times+"</td>";
+				else {
+				//	alert(endpoint.substr(endpoint.length-5,5));
+					quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(endpoint.substr(endpoint.length-5,5)),"2",remove_Semicolon(times),"2359");
+				}
+			}
+			else{
+				statement[i]=statement[i].replace('火車','高鐵');
+				statement[i]=statement[i].slice(0,statement[i].indexOf(','));
+				result+="<td>"+times+"</td><td>"+statement[i]+"</td><td>約"+duration_time_array[i]+"分鐘</td>";
+				times = get_time(times,duration_time_array[i]);
+				result+="<td>"+times+"</td>";
 			}
 		}
 		else if(transit_way[i]==3) {
 			if(i!=transit_way.length-1){
-				businfo = get_bus_time(transit_name[i], stopname[i], 	stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
+				businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
 				if(businfo==null){
 					result+="<td>"+times+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"<font color='green'>"+stopname[i+1]+"</font>"+"下車</td>"+"<td>約"+duration_time_array[i]+"分鐘</td>";
 					times = get_time(times,duration_time_array[i]);
@@ -351,6 +360,7 @@ function onclick_event()
 			setTimeout(function () {
 				document.getElementById('ro_plan').innerHTML += show_result(times);
 				times = get_time(times,parseInt(document.getElementById('staytime'+(i-1).toString()).value));
+
 
 			},(i+1)*300);
 	}
