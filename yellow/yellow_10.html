@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大台南公車 ─ 黃10 路線資訊</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+@import url("../css/table_style.css");
+@import url("../css/default.css");
+select.get_fare{background-color: #FFD306;}
+select.get_fare option.option1
+{background-color: #FFD306;}
+select.get_fare option.option2
+{background-color: #FDFF73;}
+select.get_fare option.option3
+{background-color: yellow;}
+select.get_fare option.option4
+{background-color: #FDFF55;}
+select.get_fare option.option5
+{background-color: #D9B300;}
+select.get_fare option.option6
+{background-color: #FCFF19;}
+</style>
+<script language="javascript" src="../route/msg.js"></script>
+<script language="javascript" src="../route/fare_and_time/yellow_10.js"></script>
+<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
+			<p align="center">
+			<a href="index.html"><img src="../img/yellow_logo.png"></a>
+			</p>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="#route" accesskey="1" title="">路線圖</a></li>
+				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
+				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
+				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
+				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="wrapper1">
+	<a name="route"></a>
+	<div id="banner">&nbsp;</div>
+	<div id="route">
+		<div class="title">
+			<h2>大台南公車 ─ 黃10 路線圖</h2>
+			<span class="byline">Tainan Bus Yellow 10, Route Map</span>
+		</div>
+		<img src="../route/yellow/y10.jpg">
+		<p></p>
+		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kbnckjpTnNGs" width="800" height="500"></iframe>-->
+	</div>
+</div>
+<div id="wrapper2">
+	<a name="info"></a>
+	<div id="routeinfo" class="container">
+		<div class="title">
+			<h2>大台南公車 ─ 黃10　路線資訊</h2>
+			<span class="byline">Tainan Bus Yellow 10, Route Information</span> </div>
+		<div class="content">
+			<table border="0">
+				<tr>
+					<td>起訖點</td>
+					<td>後壁 － 白河 － 六重溪</td>
+				</tr>
+				<tr>
+					<td>營運公司</td>
+					<td>新營客運</td>
+				</tr>
+				<tr>
+					<td>首／末班車發車時刻</td>
+					<td>往 六重溪：07:20／17:25<br />往 後　壁：06:15／16:30</td>
+				</tr>
+				<tr>
+					<td>班距</td>
+					<td>固定班次</td>
+				</tr>
+				<tr>
+					<td>收費方式</td>
+					<td>里程計費</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1510&locale=zh_TW" class="button">公車動態資訊</a> </div>
+	</div>
+</div>
+<div id="wrapper3">
+	<a name="fare"></a>
+	<div id="faretable" class="container">
+		<div class="title">
+			<h2>票價表</h2>
+			<span class="byline">Ticket Fare</span> </div>
+		<div class="content">
+			<script language="javascript">
+				create_select_menu(yellow_10_interval_stop, 6, 'yellow_10');
+			</script>
+			<br/>
+			<table>
+				<tr>
+					<th></th><th>全票</th><th>半票</th>
+				</tr>
+				<tr>
+					<td><b>投現</b></td>
+					<td id="cash_adult">-</td>
+					<td id="cash_half">-</td>
+				</tr>
+				<tr>
+					<td><b>電子票證</b></td>
+					<td id="RFID_adult">-</td>
+					<td id="RFID_half">-</td>
+				</tr>
+			</table>
+			<p>　</p>
+			<script language="javascript">
+				print_fare_table(yellow_10_interval_name, yellow_10_fare, '#FDFF73');
+				document.write('<p>　</p>');
+				document.write(MeteredMSG + PromotionMSG);
+			</script>
+			<p>　</p>
+		</div>
+	</div>
+</div>
+<div id="timetable">
+	<a name="time"></a>
+	<div class="title">
+		<h2>時刻表</h2>
+		<span class="byline">Bus schedule</span> </div>
+	<div class="content">
+		<script language="javascript">
+			document.write('<h2><font color="orange">後壁-&gt;六重溪</font></h2>');
+			create_time_schedule(yellow_10_main_stop_name, yellow_10_main_stop_time_consume, yellow_10_important_stop, yellow_10_time_go, false);
+			document.write('<p>　</p>');
+			document.write('<h2><font color="orange">六重溪&gt;後壁</font></h2>');
+			create_time_schedule(yellow_10_main_stop_name, yellow_10_main_stop_time_consume, yellow_10_important_stop, yellow_10_time_return, true);
+			document.write(TimeScheduleMSG);
+		</script>
+		<h3><font color="#000055">「繞」表示繞駛白河國中</font></h3>
+	</div>
+</div>
+<div id="wrapper4">
+	<a name="transfer"></a>
+	<div id="transfer" class="container">
+		<div class="title">
+			<h2>大台南公車－黃10 主要轉乘點資訊</h2>
+			<span class="byline">Tainan bus Yellow 10, Transfer information</span>
+		</div>
+		<div class="content">
+			<table>
+				<tr>
+					<th rowspan="2">後壁火車站</th>
+					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
+					<td>台鐵後壁站</td>
+				</tr>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
+					<td id="yellow"><a href="../yellow/yellow_6.html" target="_blank">黃6</a>、<a href="../yellow/yellow_9.html" target="_blank">黃9</a>、<a href="../yellow/yellow_10.html" target="_blank">黃10</a></td>
+				</tr>
+				<tr>
+					<th>白河</th>
+					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
+					<td id="yellow">
+					<p>
+						<a href="../yellow/yellow.html" target="_blank">黃幹線</a>、<a href="../yellow/yellow_10.html" target="_blank">黃10</a>、<a href="../yellow/yellow_11.html" target="_blank">黃11</a>、<a href="../yellow/yellow_12.html" target="_blank">黃12</a>、
+					</p>
+					<a href="../yellow/yellow_13.html" target="_blank">黃13</a>、<a href="../yellow/yellow_14.html" target="_blank">黃14</a>、<a href="../yellow/yellow_15.html" target="_blank">黃15</a></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<script type="text/javascript">document.write(copyrightMSG);</script>
+</div>
+</body>
+</html>
