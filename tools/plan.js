@@ -237,27 +237,28 @@ function translate_train(name)
 {
 	name=name.replace('火車站','');
 	//alert(name);
-	train_name= new Array("後壁","新營","柳營","林鳳營","隆田","拔林","善化","新市","永康","台南","保安","中洲","長榮大學","沙崙","仁德","大橋","南科");
+	train_name= new Array("水上","南靖","後壁","新營","柳營","林鳳營","隆田","拔林","善化","新市","永康","台南","保安","中洲","長榮大學","沙崙","仁德","大橋","南科","嘉義");
 	for(var i=0;i<train_name.length;i++){
 		if(name==train_name[i]){//
-			if(i<=11) return (i+1219);
-			else if(i==12) return 5101;
-			else if(i==13) return 5102;
-			else if(i==14) return 1243;
-			else if(i==15) return 1239;
-			else if(i==16) return 1244;
+			if(i<=13) return (i+1217);
+			else if(i==14) return 5101;
+			else if(i==15) return 5102;
+			else if(i==16) return 1243;
+			else if(i==17) return 1239;
+			else if(i==18) return 1244;
+			else if(i==19) return 1215;
 			//else return 1228;
 		}
 	}
 	for(var i=0;i<train_name.length;i++){
 		if(name.indexOf(train_name[i].substr(train_name[i].length-2,2))!=-1){//
-			if(i<=11) return (i+1219);
-			else if(i==12) return 5101;
-			else if(i==13) return 5102;
-			else if(i==14) return 1243;
-			else if(i==15) return 1239;
-			else if(i==16) return 1244;
-			else return 1228;
+			if(i<=13) return (i+1217);
+			else if(i==14) return 5101;
+			else if(i==15) return 5102;
+			else if(i==16) return 1243;
+			else if(i==17) return 1239;
+			else if(i==18) return 1244;
+			else if(i==19) return 1215;
 		}
 	}
 	
