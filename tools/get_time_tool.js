@@ -57,13 +57,15 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 		case '黃':
 			route = 'yellow';
 			break;
+		case '0': // o左 or 0右
+			route = 'city_bus_0';
 		default:
 			if(theRoute=='7651'||theRoute=='7658') route = 'hsr_shuttle_' + theRoute; // hsr shuttle
 			else if(theRoute=='88'||theRoute=='99') route = 'tour_bus_' + theRoute; // tour bus
-			else if(!isNaN(theRoute)) route = 'city_bus' + '_' + theRoute; // city_bus
+			else if(!isNaN(theRoute)) route = 'city_bus_' + theRoute; // city_bus
 			else return null; // route not found
 	}
-	if(!isNaN(theRoute.substring(1,theRoute.length))) route = route + '_' +theRoute.substring(1,theRoute.length);
+	if(!isNaN(theRoute.substring(1,theRoute.length))) route = route + '_' +theRoute.substring(1,theRoute.length); // bus branch
 	if(!check_valid_bus(route)) return null;
 	//alert(theRoute);
 	//alert(route);
