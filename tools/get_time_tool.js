@@ -64,6 +64,7 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	else if(theRoute=='88'||theRoute=='99') route = 'tour_bus_' + theRoute; // tour bus
 	else if(!isNaN(theRoute)) route = route + '_' + theRoute; // city_bus
 	else if(!isNaN(theRoute.substring(1,theRoute.length))) route = route + '_' +theRoute.substring(1,theRoute.length);
+	else return null; // route not found
 	//alert(theRoute);
 	//alert(route);
 	interval_stop_name = eval(route+'_interval_stop');
@@ -76,6 +77,8 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	//alert(start_stop);
 	//alert(end_stop);
 	// find the index of the stop
+	var start_idx = null;
+	var end_idx = null;
 	var count = 0;
 	for(var i=0; i<interval_stop_name.length; ++i){
 		for(var j=0; j<interval_stop_name[i].length; ++j, ++count){
@@ -88,6 +91,7 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 			}
 		}
 	}
+	if(start_idx==null || end_idx==null) return null; // the stop not found
 	//alert('start:'+start_idx);
 	//alert('end:'+end_idx);
 	if( start_idx[2] < end_idx[2] ){
@@ -132,7 +136,9 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	// such as ["06:10","10:05", 30]
 }
 var replace_str_arr = [['[台灣好行]',''],['台南','臺南'],['台灣','臺灣'],['南台','南臺'],['台電','臺電'],['關廟站','關廟'],['、',''],
-['南靖(新營)','南靖火車站'],['[新營]',''],['(新營)',''] // 黃9
+['[新營]',''],['(新營)',''],['[興南]',''],['(興南)',''],
+['南靖(新營)','南靖火車站'], // 黃9
+['(新孝路口)',''],['西區公所','協和里'],['溪子墘社區','溪子墘'],['元寶樂園','十二佃橋'] // 藍23
 ];
 function replace_stop_name(stop){ // handle the exception
 	for(var i=0; i<replace_str_arr.length; ++i){
