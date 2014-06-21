@@ -74,6 +74,32 @@ function show_result(now_time){
 			walk_time_array.push(str);
 		}
 	}
+	var duration_time_array = new Array();
+	var duration_time = new RegExp('"duration.text" jstcache="53">(.*?)</span>','gi');
+	var match = string.match(duration_time);
+	if(match){ /*to catch out*/
+		for (var i=0;i<match.length;i++){
+			match[i].search(duration_time);
+			var str = RegExp.$1;
+			m=str.indexOf('分');
+			n=str.indexOf('小時');
+			if(m!=-1){//分
+				if(n!=-1){//小時
+					temp_hour=str.substring(0,n);//小時
+					temp_hour = parseInt(temp_hour);
+					str = str.substring(n+2,m);
+					str = parseInt(str)+temp_hour*60;
+					//document.write(str+"分<br>");
+				}
+				else {
+					str=str.substring(0,m)
+					str=parseInt(str);
+				}
+			}
+			duration_time_array.push(str);
+		}
+	}
+	//alert(duration_time_array);
 	var re = new RegExp('jstcache="38">[0-9]{3}(.*?)</td>','gi');//start and end point
 	var match = string.match(re);
 	if(match) {
@@ -145,10 +171,17 @@ function show_result(now_time){
 		}
 		else if(transit_way[i]==3) {
 			if(i!=transit_way.length-1){
-			businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
-			result+="<td>"+businfo[0]+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"<font color='green'>"+stopname[i+1]+"</font>"+"下車"+"<font color='red'>"+businfo[3]+"元</font></td>"+"<td>約"+businfo[2]+"分鐘</td>";
-			times = businfo[1];
-			result +="<td>"+times+"</td>";
+				businfo = get_bus_time(transit_name[i], stopname[i], 	stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
+				if(businfo==null){
+					result+="<td>"+times+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"<font color='green'>"+stopname[i+1]+"</font>"+"下車</td>"+"<td>約"+duration_time_array[i]+"分鐘</td>";
+					times = get_time(times,duration_time_array[i]);
+					result +="<td>"+times+"</td>";
+				}
+				else{
+					result+="<td>"+businfo[0]+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"<font color='green'>"+stopname[i+1]+"</font>"+"下車"+"<font color='red'>"+businfo[3]+"元</font></td>"+"<td>約"+businfo[2]+"分鐘</td>";
+					times = businfo[1];
+					result +="<td>"+times+"</td>";
+				}
 			}
 		}
 		result+="</tr>";
