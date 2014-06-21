@@ -1232,4 +1232,228 @@ google.maps.event.addListener(marker9, 'click', function(event) {
   funp="億載金城";
 }); 
     }
+    function initialize12() {
+      var mapOptions = {
+        center: new google.maps.LatLng(23.0272106,120.141997),
+        zoom: 13
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"),
+          mapOptions);
+      var contentString1 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">南寮</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>南寮</b></p>'+
+    '<p>南寮台南地區科技園區。</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+});
+var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(23.0272106,120.141997),
+    map: map,
+    title: '南寮'
+});
+google.maps.event.addListener(marker1, 'click', function(event) {
+  infowindow1.open(map,marker1);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="南寮";
+});
+    }
+    function initialize13() {
+      var mapOptions = {
+        center: new google.maps.LatLng(23.174143,120.486336),
+        zoom: 13
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"),
+          mapOptions);
+      var contentString1 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">楠西地區</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>楠西</b></p>'+
+    '<p>楠西地區。</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+});
+var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(23.174143,120.486336),
+    map: map,
+    title: '楠西'
+});
+google.maps.event.addListener(marker1, 'click', function(event) {
+  infowindow1.open(map,marker1);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="楠西";
+});
+    }
+    function initialize14() {
+      var mapOptions = {
+        center: new google.maps.LatLng(23.266519,120.393253),
+        zoom: 13
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"),
+          mapOptions);
+      var contentString1 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">尖山埤江南渡假村</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>尖山埤江南渡假村</b></p>'+
+    '<p>由台灣糖業公司經營的「尖山埤江南渡假村」，以秀麗的自然景觀、完善的設施規劃以及親切的專業服務，成為南台灣別具特色的渡假勝地。民國89年起，年年皆獲得交通部觀光局評鑑為「優等」風景遊樂區，97年至100年更獲得「特優等」榮譽，絕對值得顧客的信賴與推薦。</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+});
+var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(23.266519,120.393253),
+    map: map,
+    title: '尖山埤江南渡假村'
+});
+google.maps.event.addListener(marker1, 'click', function(event) {
+  infowindow1.open(map,marker1);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="尖山埤江南渡假村";
+});
+    }
+    function initialize15() {
+      var mapOptions = {
+        center: new google.maps.LatLng(23.0101279,120.2017249),
+        zoom: 14
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"),
+          mapOptions);
+      var contentString1 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">台南花園夜市</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>台南花園夜市</b></p>'+
+    '<p>夜市，幾乎可說是台南在地文化的代名詞之一。吃的、喝的、玩的、用的，在這裡一應俱全，因此夜市成為許多台南人晚上沒事閒晃，找好吃的好所在，台南人天天都有夜市逛。其中占地規模、攤位數量最多，同時也是最具指標性的，莫過於台南花園夜市。</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+});
+var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(23.0101279,120.2017249),
+    map: map,
+    title: '台南花園夜市'
+});
+google.maps.event.addListener(marker1, 'click', function(event) {
+  infowindow1.open(map,marker1);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="台南花園夜市";
+});
+    }
+    function initialize16() {
+      var mapOptions = {
+        center: new google.maps.LatLng(22.995946, 120.159067),
+        zoom: 14
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"),
+          mapOptions);
+      var contentString1 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">安平港渡船碼頭</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>安平港渡船碼頭</b></p>'+
+    '<p>安平港渡船碼頭。</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+});
+var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(22.995946, 120.159067),
+    map: map,
+    title: '安平港渡船碼頭'
+});
+google.maps.event.addListener(marker1, 'click', function(event) {
+  infowindow1.open(map,marker1);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="安平港渡船碼頭";
+});
+    }
+    function initialize17() {
+      var mapOptions = {
+        center: new google.maps.LatLng(22.9848497,120.2140972),
+        zoom: 14
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"),
+          mapOptions);
+      var contentString1 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">長榮高中</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>長榮高中</b></p>'+
+    '<p>長榮中學於1885年（清光緒十一年）由英國基督長老教會創辦臺灣第一所中學，當時校名『長老教中學』。</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+});
+var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(22.9848497,120.2140972),
+    map: map,
+    title: '長榮高中'
+});
+google.maps.event.addListener(marker1, 'click', function(event) {
+  infowindow1.open(map,marker1);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="長榮高中";
+});
+    }
+    function initialize18() {
+      var mapOptions = {
+        center: new google.maps.LatLng(22.9502026,120.1827314),
+        zoom: 14
+      };
+      map = new google.maps.Map(document.getElementById("map-canvas"),
+          mapOptions);
+      var contentString1 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">臺南航空站</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>臺南航空站</b></p>'+
+    '<p>臺南機場（IATA：TNN，ICAO：RCNN），位於臺南市南區，為軍民共用機場：包括交通部民用航空局臺南航空站、以及空軍臺南基地。機場至市中心約6公里。現有金門、馬公航線兼營國際線與兩岸包機。同時也是飛機維修商亞洲航空總部與維修基地所在地。</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+});
+var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(22.9502026,120.1827314),
+    map: map,
+    title: '臺南航空站'
+});
+google.maps.event.addListener(marker1, 'click', function(event) {
+  infowindow1.open(map,marker1);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="臺南航空站";
+});
+    }
     google.maps.event.addDomListener(window, 'load', initialize);
