@@ -165,7 +165,7 @@ function show_result(now_time){
 				if(i<transit_way.length-1){
 					quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(stopname[i+1]),"2",remove_Semicolon(times),"2359");}//quest_rail(document.getElementById('date').value,"1225","1228","2",remove_Semicolon(times),"2359");
 				//result+="<td>"+times+"</td>";
-				else {
+				else{
 				//	alert(endpoint.substr(endpoint.length-5,5));
 					quest_rail(document.getElementById('date').value,translate_train(stopname[i]),translate_train(endpoint.substr(endpoint.length-5,5)),"2",remove_Semicolon(times),"2359");
 				}
@@ -182,12 +182,28 @@ function show_result(now_time){
 			if(i!=transit_way.length-1){
 				businfo = get_bus_time(transit_name[i], stopname[i], stopname[i+1], times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
 				if(businfo==null){
+					times = get_time(times,10);
+
 					result+="<td>"+times+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"<font color='green'>"+stopname[i+1]+"</font>"+"下車</td>"+"<td>約"+duration_time_array[i]+"分鐘</td>";
 					times = get_time(times,duration_time_array[i]);
 					result +="<td>"+times+"</td>";
 				}
 				else{
 					result+="<td>"+businfo[0]+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"<font color='green'>"+stopname[i+1]+"</font>"+"下車"+"<font color='red'>"+businfo[3]+"元</font></td>"+"<td>約"+businfo[2]+"分鐘</td>";
+					times = businfo[1];
+					result +="<td>"+times+"</td>";
+				}
+			}
+			else {
+				businfo = get_bus_time(transit_name[i], stopname[i], endpoint.substr(-4,4), times, false);//alert(get_bus_time("綠幹線", "火車站(北站)", "玉井站", "16:00", true));
+				if(businfo==null){
+					times = get_time(times,10);
+					result+="<td>"+times+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"到<font color='green'>"+endpoint+"</font>"+"</td>"+"<td>約"+duration_time_array[i]+"分鐘</td>";
+					times = get_time(times,duration_time_array[i]);
+					result +="<td>"+times+"</td>";
+				}
+				else{
+					result+="<td>"+businfo[0]+"</td><td><font color='red'>"+transit_name[i]+'</font> '+statement[i]+"到<font color='green'>"+endpoint+"</font>"+"<font color='red'>"+businfo[3]+"元</font></td>"+"<td>約"+businfo[2]+"分鐘</td>";
 					times = businfo[1];
 					result +="<td>"+times+"</td>";
 				}
@@ -371,4 +387,44 @@ function add_option(n)
 {
 	var changeString = 'location'+n;
 	document.getElementById(changeString).value = document.getElementById('cookies_list').value;
+}
+function quest_asp()
+{
+		//var url = "http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate="+searchdate+"&fromstation="+fromstation+"&tostation="+tostation+"&trainclass="+trainclass+"&fromtime="+fromtime+"&totime="+totime;
+	var http_request=false;
+	if(window.XMLHttpRequest){
+		http_request=new XMLHttpRequest();
+		if(http_request.overrideMimeType){
+			http_request.overrideMimeType('text/xml');
+		}
+	}
+	else if(window.ActiveXObject){
+		try{ //6.0+
+		http_request=new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch(e){
+			try{ //5.5+
+				http_request=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch (e){}
+		}
+	}
+	if(!http_request){
+		alert('Giving up :( Cannot create a XMLHTTP instance');
+		return false;
+	}
+	var by_post='url=123'; //將變數放進字串
+	http_request.onreadystatechange=test_area;
+	http_request.open('POST','test.asp',false);
+	http_request.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");  //**重要一定要加上
+	http_request.send(by_post);
+	
+	function test_area(){
+		if(http_request.readyState==4){
+			if(http_request.status==200){
+				alert(http_request.responseText)
+
+			}
+		}
+	}
 }
