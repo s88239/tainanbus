@@ -5,19 +5,83 @@
 <title>大台南公車總覽</title>
 <style type="text/css">
 @import url("css/busline.css");
+@import url("css/bus_button.css");
+td{
+	padding: 8px;
+}
 </style>
 </head>
-
+<script type="text/javascript">
+function get_transfer_info(bus_stop){
+	var div_string = '<table align="center">';
+	if(bus_stop=='台南' || bus_stop=='安南' || bus_stop=='安定' || bus_stop=='西港' || bus_stop=='佳里'){
+		div_string += '<tr><td><a href="blue/blue.html" class="blueButton">藍幹線</a></td>'
+		+ '<td>安工區 ─ 西港 ─ 佳里</td></tr>';
+	}
+	if(bus_stop=='台南' || bus_stop=='永康' || bus_stop=='新化' || bus_stop=='山上' || bus_stop=='左鎮' || bus_stop=='玉井'){
+		div_string += '<tr><td><a href="green/green.html" class="greenButton">綠幹線</a></td>'
+		+ '<td>臺南 ─ 永康 ─ 新化 ─ 玉井</td></tr>';
+	}
+	if(bus_stop=='台南' || bus_stop=='仁德' || bus_stop=='歸仁' || bus_stop=='關廟' || bus_stop=='龍崎'){
+		div_string += '<tr><td><a href="red/red.html" class="redButton">綠幹線</a></td>'
+		+ '<td>安工區 ─ 仁德 ─ 關廟 ─ 龍崎</td></tr>';
+	}
+	if(bus_stop=='新營' || bus_stop=='鹽水' || bus_stop=='學甲' || bus_stop=='佳里'){
+		div_string += '<tr><td><a href="brown/brown.html" class="brownButton">棕幹線</a></td>'
+		+ '<td>新營 ─ 鹽水 ─ 學甲 ─ 佳里</td></tr>';
+	}
+	if(bus_stop=='白河' || bus_stop=='後壁' || bus_stop=='新營' || bus_stop=='柳營' || bus_stop=='六甲' || bus_stop=='下營' || bus_stop=='麻豆'){
+		div_string += '<tr><td><a href="yellow/yellow.html" class="yellowButton">黃幹線</a></td>'
+		+ '<td>白河 ─ 新營 ─ 麻豆</td></tr>';
+	}
+	if(bus_stop=='佳里' || bus_stop=='麻豆' || bus_stop=='善化' || bus_stop=='大內' || bus_stop=='玉井'){
+		div_string += '<tr><td><a href="orange.html" class="orangeButton">橘幹線</a></td>'
+		+ '<td>佳里 ─ 麻豆 ─ 善化 ─ 玉井</td></tr>';
+	}
+	div_string += '</table>';
+	document.getElementById('transfer_info').innerHTML = '<h1>' + bus_stop + '</h1>' + div_string;
+}
+</script>
 <body>
+<map name="tainan_map">
+	<!--<area shape="circle" coords="X1,Y1,R" href="#" />
+	<area shape="rect" coords="X1,Y1,X2,Y2" href="#" />
+	<area shape="poly" coords="X1,Y1,X2,Y2,...,Xn,Yn" href="#" />-->
+	<area shape="circle" coords="175,429,34" href="javascript:get_transfer_info('台南')" />
+	<area shape="circle" coords="135,240,34" href="javascript:get_transfer_info('佳里')" />
+	<area shape="circle" coords="287,270,34" href="javascript:get_transfer_info('麻豆')" />
+	<area shape="circle" coords="417,292,34" href="javascript:get_transfer_info('善化')" />
+	<area shape="circle" coords="600,299,34" href="javascript:get_transfer_info('玉井')" />
+	<area shape="circle" coords="350,74,34" href="javascript:get_transfer_info('新營')" />
+	<area shape="circle" coords="499,62,34" href="javascript:get_transfer_info('白河')" />
+	<area shape="circle" coords="416,394,34" href="javascript:get_transfer_info('新化')" />
+	<area shape="circle" coords="330,514,34" href="javascript:get_transfer_info('關廟')" />
+	<area shape="circle" coords="169.5,172.5,18.5" href="javascript:get_transfer_info('學甲')" />
+	<area shape="circle" coords="264.5,108.5,18.5" href="javascript:get_transfer_info('鹽水')" />
+	<area shape="circle" coords="123.5,297.5,18.5" href="javascript:get_transfer_info('西港')" />
+	<area shape="circle" coords="125.5,341.5,18.5" href="javascript:get_transfer_info('安定')" />
+	<area shape="circle" coords="135.5,384.5,18.5" href="javascript:get_transfer_info('安南')" />
+	<area shape="circle" coords="221.5,471.5,18.5" href="javascript:get_transfer_info('仁德')" />
+	<area shape="circle" coords="276.5,485.5,18.5" href="javascript:get_transfer_info('歸仁')" />
+	<area shape="circle" coords="386.5,547.5,18.5" href="javascript:get_transfer_info('龍崎')" />
+	<area shape="circle" coords="316.5,431.5,18.5" href="javascript:get_transfer_info('永康')" />
+	<area shape="circle" coords="479.5,348.5,18.5" href="javascript:get_transfer_info('山上')" />
+	<area shape="circle" coords="542.5,357.5,18.5" href="javascript:get_transfer_info('左鎮')" />
+	<area shape="circle" coords="529.5,291.5,18.5" href="javascript:get_transfer_info('大內')" />
+	<area shape="circle" coords="286.5,191.5,18.5" href="javascript:get_transfer_info('下營')" />
+	<area shape="circle" coords="336.5,157.5,18.5" href="javascript:get_transfer_info('六甲')" />
+	<area shape="circle" coords="346.5,122.5,18.5" href="javascript:get_transfer_info('柳營')" />
+	<area shape="circle" coords="431.5,63.5,18.5" href="javascript:get_transfer_info('後壁')" />
+</map>
 <div align="center">
  <table>
  <tr>
   <td ><a href="index.html">
 	<img src="img/Tainan_City_bus.png" width="242" height="60"/></a></td>
-  <td rowspan="2"><img src="img/tainan_bus_overview.png" alt="台南市鐵路及公車路線總圖" height="70%"></a></td>
+  <td rowspan="2"><img src="img/tainan_bus_overview.png" alt="台南市鐵路及公車路線總圖" height="600" usemap="#tainan_map"></a></td>
  </tr>
  <tr>
-  <td><a href="img/overview.jpg" target="_blank"><img src="img/tainan_bus_overview.png" alt="台南市六大幹線公車路線總圖" width="300" height="242"></a></td>
+  <td><div id="transfer_info" style="text-align:center; color: blue; width: 400px; height: 500px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"></div></td>
  </tr>
  </table>
 </div>
