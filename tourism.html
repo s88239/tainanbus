@@ -7,6 +7,7 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="tools/cookieUtility.js"></script>
 <script type="text/javascript" src="tools/tourism.js"></script>
+<script type="text/javascript" src="tools/jquery.csv-0.71.js"></script>
 <style type="text/css">
 @import url("css/busline.css");
 @import url("css/bus_button.css");
@@ -15,6 +16,18 @@
 
 <body bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0">
 <a href="index.html"><img src="img/Tainan_City_bus.png" align="left" width="250" style="position:absolute; top:0pt; left:10pt;"></a>
+<script>
+    /*fs = require('fs');
+    fs.readFile('tainanDiner.csv', 'utf8', function (err,data) {
+    if (err) {
+        return console.log(err);
+    }
+    console.log(data);
+    });
+    alert(fs);*/
+    //var data = $.csv.toObjects(fs);
+    //alert(data);
+</script>
 <form name="search_1" method="post" action="">
         <div style="float:left;width:44%;height 100%"><img src="img/tainan_tourism_map.png" usemap="#twtnn" border="0">
           <map name="twtnn">
@@ -44,7 +57,7 @@
             <area shape="poly" coords="194,409,215,407,216,417,209,425,208,434,193,433" href="javascript:initialize11();">
             <area shape="poly" coords="215,406,223,408,227,416,229,426,225,438,211,435,216,422" href="javascript:initialize17();">
             <area shape="poly" coords="189,393,211,390,223,400,209,407,193,408" href="javascript:initialize15();">
-            <area shape="poly" coords="174,400,184,395,190,405,190,422,193,436,177,436,184,427,176,400" href="twtnn16.htm">
+            <area shape="poly" coords="174,400,184,395,190,405,190,422,193,436,177,436,184,427,176,400" href="＃">
             <area shape="poly" coords="141,408,153,423,163,433,177,438,184,428,178,409,175,399" href="javascript:initialize16();">
             <area shape="poly" coords="82,375,105,358,132,344,169,337,190,350,211,357,226,359,221,375,213,388,189,391,170,400,140,407,108,386,94,374" href="javascript:initialize12();">
             <area shape="poly" coords="334,206" href="#">
