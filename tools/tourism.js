@@ -1092,6 +1092,7 @@ google.maps.event.addListener(marker6, 'click', function(event) {
     '<p><b>台南花園夜市</b></p>'+
     '<p>夜市，幾乎可說是台南在地文化的代名詞之一。吃的、喝的、玩的、用的，在這裡一應俱全，因此夜市成為許多台南人晚上沒事閒晃，找好吃的好所在，台南人天天都有夜市逛。其中占地規模、攤位數量最多，同時也是最具指標性的，莫過於台南花園夜市。</p>'+
     '</div>'+
+    '<div><img src="tools/flower.jpg" align="left"></div>'+
     '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
     var contentString9 = '<div id="content">'+
     '<div id="siteNotice">'+
@@ -1102,6 +1103,29 @@ google.maps.event.addListener(marker6, 'click', function(event) {
     '<p>又名「二鯤身砲台」，所謂的二鯤身即是昔日羅列在台江西岸的沙洲島名，當時安平古堡位於一鯤身，億載金城位在二鯤身。不過後來因為港口淤積，所以沙洲也就慢慢的連在一起。億載金城源於「牡丹社事件」所引起的日軍犯台事件，當時欽差大臣沈葆禎奏請朝廷架設仿西式的砲台獲得批准，延請法國人設計，於光緒二年(1876)完成，而此西式的砲台可是台灣的第一座。當時建構此砲台時，因地處沙洲所以材料取得和運送不易，據說所多城磚來自當時已成破牆殘瓦的安平古堡。</p>'+
     '<p>億載金城採西洋式紅磚建築，呈四方形，四隅有稜堡，用來放置大砲，而中央凹入的場地則是用來操練軍隊。城外引海水為護城濠，城上設有大炮，故稱大砲台。城門作拱形，外題「億載金城」，內題「萬流砥柱」皆為沈氏手筆，剛勁有力的筆觸更襯托出城堡的固若金湯。</p>'+
     '<p>目前億載金城離海漸遠，四周茂林密佈，早失軍事價值。城門右邊的紀念碑上面，記載著億載金城的建築歷史。城內有沈葆禎的紀念銅像，目前放置在城內供人參觀的砲台，是民國65年(1976)台南市政府推動觀光年，為紀念此砲台創建一百週年特別仿製的成品。億載金城現已列為國家一級古蹟。</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+    var contentString10 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">王品台塑牛排</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>王品台塑牛排</b></p>'+
+    '<p>王品為了烹調出這道獨具台灣口味的牛排，以特殊台灣口味佐料醃浸兩天兩夜，將完全入味的帶骨牛小排，慢火燒烤一個半小時，再以高溫瓷盤盛裝，以保持牛排的香嫩風味，使全熟的牛排雖不帶血絲，卻異常鮮嫩，咬勁十足。</p>'+
+    '<p>王品歷經數千小時的嚴格選材、精心研發之後，發現一頭牛只有最精華的第六至第八對肋骨，得以使『王品台塑牛排』的精髓脫穎而出，是全國唯一能在250℃烤箱烘烤一個半小時，還能保持100% 鮮嫩度的牛排。而且完全符合骨長17公分、重16盎斯的最佳規格。因此，一頭牛只能供應6客王品台塑牛排。</p>'+
+    '<p>訂位電話：886-6-2137966</p>'+
+    '</div>'+
+    '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
+    var contentString11 = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">茂記黑豆花大王</h1>'+
+    '<div id="bodyContent">'+
+    '<p><b>茂記黑豆花大王</b></p>'+
+    '<p>『茂』字號黑豆花所製作的黑豆花，細緻又綿密的特殊風味，著實能滿足消費者的口腹之慾。在府城小吃中，只有『茂』字號才是黑豆花的創始者。</p>'+
+    '<p>海陸兩棲蛙人軍官退伍的吳老闆，從《本草綱目》記載的『服食烏豆，令人潤肌膚、益顏色、填骨隨、長氣力、補虛能食』中得到靈感，以一種不破壞黑豆豐富營養成分的做法，將黑豆製作成黑豆花。</p>'+
+    '<p>餐廳電話：886-6-3911373</p>'+
+    '<p>營業時間：週一~週日11：00~22：00</p>'+
     '</div>'+
     '</div>'+'<p><input type=button onclick="gogogo()" id=myButtonId value="加入預定行程"></input></p>';
 
@@ -1131,6 +1155,12 @@ var infowindow8 = new google.maps.InfoWindow({
 });
 var infowindow9 = new google.maps.InfoWindow({
     content: contentString9
+});
+var infowindow10 = new google.maps.InfoWindow({
+    content: contentString10
+});
+var infowindow11 = new google.maps.InfoWindow({
+    content: contentString11
 });
 var marker1 = new google.maps.Marker({
     position: new google.maps.LatLng(22.997108,120.202215),
@@ -1176,6 +1206,16 @@ var marker9 = new google.maps.Marker({
     position: new google.maps.LatLng(22.987642,120.159048),
     map: map,
     title: '億載金城'
+});
+var marker10 = new google.maps.Marker({
+    position: new google.maps.LatLng(22.987005,120.204513),
+    map: map,
+    title: '王品台塑牛排'
+});
+var marker11 = new google.maps.Marker({
+    position: new google.maps.LatLng(22.99983,120.153188),
+    map: map,
+    title: '茂記黑豆花大王'
 });
 google.maps.event.addListener(marker1, 'click', function(event) {
   infowindow1.open(map,marker1);
@@ -1230,6 +1270,18 @@ google.maps.event.addListener(marker9, 'click', function(event) {
   jingjing=event.latLng.lat();
   weiwei=event.latLng.lng();
   funp="億載金城";
+}); 
+google.maps.event.addListener(marker10, 'click', function(event) {
+  infowindow10.open(map,marker10);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="王品台塑牛排";
+}); 
+google.maps.event.addListener(marker11, 'click', function(event) {
+  infowindow11.open(map,marker11);
+  jingjing=event.latLng.lat();
+  weiwei=event.latLng.lng();
+  funp="茂記黑豆花大王";
 }); 
     }
     function initialize12() {
