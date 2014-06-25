@@ -1,8 +1,8 @@
-﻿<html>
+<html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>大台南公車總覽</title>
+<title>大台南公車總覽 － Tainan Bus for FUN</title>
 <style type="text/css">
 @import url("css/busline.css");
 @import url("css/bus_button.css");
@@ -14,29 +14,379 @@ td{
 <script type="text/javascript">
 function get_transfer_info(bus_stop){
 	var div_string = '<table align="center">';
-	if(bus_stop=='台南' || bus_stop=='安南' || bus_stop=='安定' || bus_stop=='西港' || bus_stop=='佳里'){
-		div_string += '<tr><td><a href="blue/blue.html" class="blueButton">藍幹線</a></td>'
-		+ '<td>安工區 ─ 西港 ─ 佳里</td></tr>';
+	if(bus_stop=='臺南火車站' || bus_stop=='安南' || bus_stop=='安定' || bus_stop=='西港' || bus_stop=='佳里'){
+		div_string += '<tr><td><a href="blue/blue.html" class="blueButton">藍幹線</a></td><td>安工區 ─ 西港 ─ 佳里</td></tr>';
 	}
-	if(bus_stop=='台南' || bus_stop=='永康' || bus_stop=='新化' || bus_stop=='山上' || bus_stop=='左鎮' || bus_stop=='玉井'){
-		div_string += '<tr><td><a href="green/green.html" class="greenButton">綠幹線</a></td>'
-		+ '<td>臺南 ─ 永康 ─ 新化 ─ 玉井</td></tr>';
+	if(bus_stop=='臺南火車站' || bus_stop=='永康' || bus_stop=='新化' || bus_stop=='山上' || bus_stop=='左鎮' || bus_stop=='玉井'){
+		div_string += '<tr><td><a href="green/green.html" class="greenButton">綠幹線</a></td><td>臺南 ─ 永康 ─ 新化 ─ 玉井</td></tr>';
 	}
-	if(bus_stop=='台南' || bus_stop=='仁德' || bus_stop=='歸仁' || bus_stop=='關廟' || bus_stop=='龍崎'){
-		div_string += '<tr><td><a href="red/red.html" class="redButton">綠幹線</a></td>'
-		+ '<td>安工區 ─ 仁德 ─ 關廟 ─ 龍崎</td></tr>';
+	if(bus_stop=='臺南火車站' || bus_stop=='仁德' || bus_stop=='歸仁' || bus_stop=='關廟' || bus_stop=='龍崎'){
+		div_string += '<tr><td><a href="red/red.html" class="redButton">紅幹線</a></td><td>安工區 ─ 仁德 ─ 關廟 ─ 龍崎</td></tr>';
 	}
 	if(bus_stop=='新營' || bus_stop=='鹽水' || bus_stop=='學甲' || bus_stop=='佳里'){
-		div_string += '<tr><td><a href="brown/brown.html" class="brownButton">棕幹線</a></td>'
-		+ '<td>新營 ─ 鹽水 ─ 學甲 ─ 佳里</td></tr>';
+		div_string += '<tr><td><a href="brown/brown.html" class="brownButton">棕幹線</a></td><td>新營 ─ 鹽水 ─ 學甲 ─ 佳里</td></tr>';
 	}
-	if(bus_stop=='白河' || bus_stop=='後壁' || bus_stop=='新營' || bus_stop=='柳營' || bus_stop=='六甲' || bus_stop=='下營' || bus_stop=='麻豆'){
-		div_string += '<tr><td><a href="yellow/yellow.html" class="yellowButton">黃幹線</a></td>'
-		+ '<td>白河 ─ 新營 ─ 麻豆</td></tr>';
+	if(bus_stop=='佳里' || bus_stop=='麻豆' || bus_stop=='善化火車站' || bus_stop=='大內' || bus_stop=='玉井'){
+		div_string += '<tr><td><a href="orange.html" class="orangeButton">橘幹線</a></td><td>佳里 ─ 麻豆 ─ 善化 ─ 玉井</td></tr>';
 	}
-	if(bus_stop=='佳里' || bus_stop=='麻豆' || bus_stop=='善化' || bus_stop=='大內' || bus_stop=='玉井'){
-		div_string += '<tr><td><a href="orange.html" class="orangeButton">橘幹線</a></td>'
-		+ '<td>佳里 ─ 麻豆 ─ 善化 ─ 玉井</td></tr>';
+	if(bus_stop=='白河' || bus_stop=='後壁' || bus_stop=='新營' || bus_stop.indexOf('柳營')!=-1 || bus_stop=='六甲' || bus_stop=='下營' || bus_stop=='麻豆'){
+		div_string += '<tr><td><a href="yellow/yellow.html" class="yellowButton">黃幹線</a></td><td>白河 ─ 新營 ─ 麻豆</td></tr>';
+	}
+	
+	switch(bus_stop){
+		case '臺南火車站':
+		div_string += '<tr><td><a href="city_bus/city_bus_0.html" class="city_busButton">0</a></td><td>火車站 ─ 火車站</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_1.html" class="city_busButton">1</a></td><td>火車站 ─ 茄萣</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_2.html" class="city_busButton">2</a></td><td>崑山科大 ─ 安平</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_3.html" class="city_busButton">3</a></td><td>海東國小 ─ 竹篙厝</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_5.html" class="city_busButton">5</a></td><td>鹽行 ─ 市立醫院、嘉南科大</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_6.html" class="city_busButton">6</a></td><td>新興國宅 ─ 裕聖里</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_7.html" class="city_busButton">7</a></td><td>火車站 ─ 康寧大學</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_9.html" class="city_busButton">9</a></td><td>火車站 ─ 公親里</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_10.html" class="city_busButton">10</a></td><td>火車站 ─ 鹿耳門天后宮</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_11.html" class="city_busButton">11</a></td><td>大成路口 ─ 城西里</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_14.html" class="city_busButton">14</a></td><td>火車站 ─ 億載金城</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_18.html" class="city_busButton">18</a></td><td>台南站 ─ 塭南里</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_21.html" class="city_busButton">21</a></td><td>台南火車站 ─ 永康工業區</td></tr>'
+		+ '<tr><td><a href="tour_bus/tour_bus_88.html" class="tourButton">88</a></td><td>台南公園 ─ 觀夕平台</td></tr>'
+		+ '<tr><td><a href="tour_bus/tour_bus_99.html" class="tourButton">99</a></td><td>台南公園 ─ 鹽田生態文化村</td></tr>'
+		+ '<tr><td><a href="red/red_1.html" class="redButton">紅1</a></td><td>臺南公園 ─ 太子廟 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_2.html" class="redButton">紅2</a></td><td>臺南公園 ─ 仁德 ─ 上崙子 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>臺南公園 ─ 高鐵台南站 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_4.html" class="redButton">紅4</a></td><td>臺南火車站 ─ 臺南都會公園</td></tr>'
+		+ '<tr><td><a href="orange/orange_3.html" class="orangeButton">橘3</a></td><td>善化火車站 ─ 安定 ─ 和順 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>下營 ─ 麻豆 ─ 西港 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>麻豆 ─ 善化 ─ 臺南公園</td></tr>'
+		+ '<tr><td colspan="2"><br /><h1 align="center">臺南</h1></td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_15.html" class="city_busButton">15</a></td><td>奇美醫院 ─ 大成國中</td></tr>'
+		+ '<tr><td><a href="blue/blue_23.html" class="blueButton">藍23</a></td><td>安工區 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="blue/blue_24.html" class="blueButton">藍24</a></td><td>安工區 ─ 土城子 ─ 青草里</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7658.html" class="hsrButton">H31</a></td><td>臺南市政府 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7651.html" class="hsrButton">H62</a></td><td>桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站</td></tr>';
+		break;
+	case '新營':
+		div_string += '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>新營 ─ 柳營 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_2.html" class="yellowButton">黃2</a></td><td>新營 ─ 柳營 ─ 六甲 ─ 王爺宮</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_3.html" class="yellowButton">黃3</a></td><td>新營 ─ 柳營 ─ 果毅後</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_4.html" class="yellowButton">黃4</a></td><td>新營 ─ 二重溪 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_5.html" class="yellowButton">黃5</a></td><td>新營 ─ 紅毛厝 ─ 下營</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_6.html" class="yellowButton">黃6</a></td><td>新營 ─ 白沙屯 ─ 後壁火車站</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_7.html" class="yellowButton">黃7</a></td><td>新營 ─ 東山 ─ 青山</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_9.html" class="yellowButton">黃9</a></td><td>新營 ─ 高鐵嘉義站</td></tr>'
+		+ '<tr><td><a href="brown/brown_1.html" class="brownButton">棕1</a></td><td>新營 ─ 鹽水 ─ 南鯤鯓 ─ 雙春</td></tr>'
+		+ '<tr><td><a href="brown/brown_2.html" class="brownButton">棕2</a></td><td>新營 ─ 鹽水 ─ 下中</td></tr>'
+		+ '<tr><td><a href="brown/brown_3.html" class="brownButton">棕3</a></td><td>新營 ─ 鹽水 ─ 南港里</td></tr>'
+		+ '<tr><td><a href="brown/brown_3_1.html" class="brownButton">棕3-1</a></td><td>新營 ─ 鹽水 ─ 鐵線里</td></tr>';
+		break;
+	case '善化火車站':
+		div_string += '<tr><td><a href="orange/orange_1.html" class="orangeButton">橘1</a></td><td>善化火車站 ─ 大內 ─ 環湖 ─ 蒙正</td></tr>'
+		+ '<tr><td><a href="orange/orange_2.html" class="orangeButton">橘2</a></td><td>胡厝寮 ─ 善化 ─ 大內</td></tr>'
+		+ '<tr><td><a href="orange/orange_3.html" class="orangeButton">橘3</a></td><td>善化火車站 ─ 安定 ─ 和順 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="orange/orange_4.html" class="orangeButton">橘4</a></td><td>善化火車站 ─ 南藝大 ─ 烏山頭水庫</td></tr>'
+		+ '<tr><td><a href="orange/orange_5.html" class="orangeButton">橘5</a></td><td>善化火車站 ─ 官田 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>麻豆 ─ 善化 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="green/green_1.html" class="greenButton">綠1</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化 ─ 山上</td></tr>'
+		+ '<tr><td><a href="green/green_3.html" class="greenButton">綠3</a></td><td>新化 ─ 新市 ─ 看西 ─ 南科 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>新化 ─ 新市 ─ 陽光電城 ─ 善化火車站</td></tr>'
+		+ '<tr><td><a href="green/green_11.html" class="greenButton">綠11</a></td><td>新化 ─ 山上 ─ 善化</td></tr>';
+		break;
+	case '佳里':
+		div_string += '<tr><td><a href="blue/blue_1.html" class="blueButton">藍1</a></td><td>佳里 ─ 苓子寮 ─ 西埔內 ─ 南鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_2.html" class="blueButton">藍2</a></td><td>佳里 ─ 溪底寮 ─ 南鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_3.html" class="blueButton">藍3</a></td><td>佳里 ─ 蘆竹溝</td></tr>'
+		+ '<tr><td><a href="blue/blue_10.html" class="blueButton">藍10</a></td><td>佳里 ─ 馬沙溝 ─ 將軍漁港</td></tr>'
+		+ '<tr><td><a href="blue/blue_11.html" class="blueButton">藍11</a></td><td>佳里 ─ 城子內 ─ 青鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_12.html" class="blueButton">藍12</a></td><td>佳里 ─ 後港 ─ 青鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_13.html" class="blueButton">藍13</a></td><td>佳里 ─ 西寮</td></tr>'
+		+ '<tr><td><a href="blue/blue_20.html" class="blueButton">藍20</a></td><td>佳里 ─ 台區 ─ 青鯤鯓 ─ 將軍漁港</td></tr>'
+		+ '<tr><td><a href="blue/blue_21.html" class="blueButton">藍21</a></td><td>佳里 ─ 義合 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="blue/blue_22.html" class="blueButton">藍22</a></td><td>佳里 ─ 七十二份 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="blue/blue_25.html" class="blueButton">藍25</a></td><td>佳里 ─ 七股 ─ 土城子 ─ 科工區</td></tr>';
+		break;
+	case '關廟':
+		div_string += '<tr><td><a href="red/red_1.html" class="redButton">紅1</a></td><td>臺南公園 ─ 太子廟 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_2.html" class="redButton">紅2</a></td><td>臺南公園 ─ 仁德 ─ 上崙子 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>臺南公園 ─ 高鐵台南站 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>關廟 ─ 永康火車站 ─ 奇美醫院</td></tr>'
+		+ '<tr><td><a href="red/red_11.html" class="redButton">紅11</a></td><td>關廟 ─ 龍崎 ─ 牛埔農塘</td></tr>'
+		+ '<tr><td><a href="red/red_12.html" class="redButton">紅12</a></td><td>關廟 ─ 龍崎 ─ 烏山頭</td></tr>'
+		+ '<tr><td><a href="red/red_13.html" class="redButton">紅13</a></td><td>關廟 ─ 阿蓮</td></tr>'
+		+ '<tr><td><a href="red/red_14.html" class="redButton">紅14</a></td><td>關廟 ─ 歸仁 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="green/green_16.html" class="greenButton">綠16</a></td><td>新化 ─ 關廟 ─ 高鐵臺南站</td></tr>';
+		break;
+	case '白河':
+		div_string += '<tr><td><a href="yellow/yellow_10.html" class="yellowButton">黃10</a></td><td>後壁 ─ 白河 ─ 六重溪</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_11.html" class="yellowButton">黃11</a></td><td>白河 ─ 青山</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_12.html" class="yellowButton">黃12</a></td><td>白河 ─ 關子嶺</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_13.html" class="yellowButton">黃13</a></td><td>白河 ─ 關子嶺 ─ 南寮</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_14.html" class="yellowButton">黃14</a></td><td>白河 ─ 三層崎</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_15.html" class="yellowButton">黃15</a></td><td>白河 ─ 詔安厝</td></tr>';
+		break;
+	case '麻豆':
+		div_string += '<tr><td><a href="orange/orange_10.html" class="orangeButton">橘10</a></td><td>真理大學 ─ 隆田火車站 ─ 南藝大</td></tr>'
+		+ '<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>下營 ─ 麻豆 ─ 西港 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>麻豆 ─ 善化 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_20.html" class="yellowButton">黃20</a></td><td>麻豆 ─ 下營 ─ 紅毛厝 ─ 臺鐵林鳳營</td></tr>'
+		+ '<tr><td><a href="brown/brown_10.html" class="brownButton">棕10</a></td><td>學甲 ─ 麻豆</td></tr>';
+		break;
+	case '玉井':
+		div_string += '<tr><td><a href="green_20.html" class="greenButton">綠20</a></td><td>玉井 ─ 楠西 ─ 永興吊橋</td></tr>'
+		+ '<tr><td><a href="green/green_21.html" class="greenButton">綠21</a></td><td>玉井 ─ 龜丹油礦</td></tr>'
+		+ '<tr><td><a href="green/green_22.html" class="greenButton">綠22</a></td><td>玉井 ─ 梅嶺</td></tr>'
+		+ '<tr><td><a href="green/green_23.html" class="greenButton">綠23</a></td><td>玉井 ─ 雙溪新社區</td></tr>'
+		+ '<tr><td><a href="green/green_24.html" class="greenButton">綠24</a></td><td>玉井 ─ 曾文水庫管理局</td></tr>'
+		+ '<tr><td><a href="green/green_25.html" class="greenButton">綠25</a></td><td>玉井 ─ 大埔</td></tr>'
+		+ '<tr><td><a href="green/green_26.html" class="greenButton">綠26</a></td><td>玉井 ─ 甲仙</td></tr>'
+		+ '<tr><td><a href="green/green_27.html" class="greenButton">綠27</a></td><td>玉井 ─ 南化 ─ 茄苳橋</td></tr>'
+		+ '<tr><td><a href="orange/orange_20.html" class="orangeButton">橘20</a></td><td>大內公所 ─ 環湖 ─ 玉井</td></tr>';
+		break;
+	case '新化':
+		div_string += '<tr><td><a href="green/green_1.html" class="greenButton">綠1</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化 ─ 山上</td></tr>'
+		+ '<tr><td><a href="green/green_3.html" class="greenButton">綠3</a></td><td>新化 ─ 新市 ─ 看西 ─ 南科 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>新化 ─ 新市 ─ 陽光電城 ─ 善化火車站</td></tr>'
+		+ '<tr><td><a href="green/green_6.html" class="greenButton">綠6</a></td><td>新化 ─ 潭頂 ─ 大社</td></tr>'
+		+ '<tr><td><a href="green/green_7.html" class="greenButton">綠7</a></td><td>新化 ─ 大營 ─ 大社</td></tr>'
+		+ '<tr><td><a href="green/green_10.html" class="greenButton">綠10</a></td><td>新化 ─ 山上</td></tr>'
+		+ '<tr><td><a href="green/green_11.html" class="greenButton">綠11</a></td><td>新化 ─ 山上 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_12.html" class="greenButton">綠12</a></td><td>新化 ─ 南化</td></tr>'
+		+ '<tr><td><a href="green/green_13.html" class="greenButton">綠13</a></td><td>新化 ─ 岡林 ─ 左鎮</td></tr>'
+		+ '<tr><td><a href="green/green_14.html" class="greenButton">綠14</a></td><td>新化 ─ 九層嶺</td></tr>'
+		+ '<tr><td><a href="green/green_15.html" class="greenButton">綠15</a></td><td>新化 ─ 五甲勢</td></tr>'
+		+ '<tr><td><a href="green/green_16.html" class="greenButton">綠16</a></td><td>新化 ─ 關廟 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="green/green_17.html" class="greenButton">綠17</a></td><td>安工區 ─ 大灣 ─ 新化</td></tr>';
+		break;
+	case '龍崎':
+		div_string += '<tr><td><a href="red/red_11.html" class="redButton">紅11</a></td><td>關廟 ─ 龍崎 ─ 牛埔農塘</td></tr>'
+		+ '<tr><td><a href="red/red_12.html" class="redButton">紅12</a></td><td>關廟 ─ 龍崎 ─ 烏山頭</td></tr>';
+		break;
+	case '歸仁':
+		div_string += '<tr><td><a href="red/red_1.html" class="redButton">紅1</a></td><td>臺南公園 ─ 太子廟 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_2.html" class="redButton">紅2</a></td><td>臺南公園 ─ 仁德 ─ 上崙子 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>臺南公園 ─ 高鐵台南站 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>關廟 ─ 永康火車站 ─ 奇美醫院</td></tr>'
+		+ '<tr><td><a href="red/red_14.html" class="redButton">紅14</a></td><td>關廟 ─ 歸仁 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="green/green_16.html" class="greenButton">綠16</a></td><td>新化 ─ 關廟 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7658.html" class="hsrButton">H31</a></td><td>臺南市政府 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7651.html" class="hsrButton">H62</a></td><td>桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站</td></tr>';
+		break;
+	case '仁德':
+		div_string += '<tr><td><a href="red/red_1.html" class="redButton">紅1</a></td><td>臺南公園 ─ 太子廟 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_2.html" class="redButton">紅2</a></td><td>臺南公園 ─ 仁德 ─ 上崙子 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>臺南公園 ─ 高鐵台南站 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_4.html" class="redButton">紅4</a></td><td>臺南火車站 ─ 臺南都會公園</td></tr>'
+		+ '<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>關廟 ─ 永康火車站 ─ 奇美醫院</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7658.html" class="hsrButton">H31</a></td><td>臺南市政府 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7651.html" class="hsrButton">H62</a></td><td>桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站</td></tr>';
+		break;
+	case '永康':
+		div_string += '<tr><td><a href="city_bus/city_bus_2.html" class="city_busButton">2</a></td><td>崑山科大 ─ 安平</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_5.html" class="city_busButton">5</a></td><td>鹽行 ─ 市立醫院、嘉南科大</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_15.html" class="city_busButton">15</a></td><td>奇美醫院 ─ 大成國中</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_20.html" class="city_busButton">20</a></td><td>崑山科大 ─ 永大路 ─ 安南醫院</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_21.html" class="city_busButton">21</a></td><td>台南火車站 ─ 永康工業區</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7651.html" class="hsrButton">H62</a></td><td>桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="green/green_5.html" class="greenButton">綠5</a></td><td>臺鐵永康 ─ 潭頂 ─ 大社</td></tr>'
+		+ '<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>關廟 ─ 永康火車站 ─ 奇美醫院</td></tr>'
+		+ '<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>麻豆 ─ 善化 ─ 臺南公園</td></tr>';
+		break;
+	case '新市':
+		div_string += '<tr><td><a href="green/green_1.html" class="greenButton">綠1</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化 ─ 山上</td></tr>'
+		+ '<tr><td><a href="green/green_3.html" class="greenButton">綠3</a></td><td>新化 ─ 新市 ─ 看西 ─ 南科 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>新化 ─ 新市 ─ 陽光電城 ─ 善化火車站</td></tr>'
+		+ '<tr><td><a href="green/green_5.html" class="greenButton">綠5</a></td><td>臺鐵永康 ─ 潭頂 ─ 大社</td></tr>'
+		+ '<tr><td><a href="green/green_6.html" class="greenButton">綠6</a></td><td>新化 ─ 潭頂 ─ 大社</td></tr>'
+		+ '<tr><td><a href="green/green_7.html" class="greenButton">綠7</a></td><td>新化 ─ 大營 ─ 大社</td></tr>'
+		+ '<tr><td><a href="green/green_11.html" class="greenButton">綠11</a></td><td>新化 ─ 山上 ─ 善化</td></tr>'
+		+ '<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>麻豆 ─ 善化 ─ 臺南公園</td></tr>';
+		break;
+	case '山上':
+		div_string += '<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化 ─ 山上</td></tr>'
+		+ '<tr><td><a href="green/green_10.html" class="greenButton">綠10</a></td><td>新化 ─ 山上</td></tr>'
+		+ '<tr><td><a href="green/green_11.html" class="greenButton">綠11</a></td><td>新化 ─ 山上 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_12.html" class="greenButton">綠12</a></td><td>新化 ─ 南化</td></tr>';
+		break;
+	case '左鎮':
+		div_string += '<tr><td><a href="green/green_12.html" class="greenButton">綠12</a></td><td>新化 ─ 南化</td></tr>'
+		+ '<tr><td><a href="green/green_13.html" class="greenButton">綠13</a></td><td>新化 ─ 岡林 ─ 左鎮</td></tr>';
+		break;
+	case '南化':
+		div_string += '<tr><td><a href="green/green_12.html" class="greenButton">綠12</a></td><td>新化 ─ 南化</td></tr>'
+		+ '<tr><td><a href="green/green_26.html" class="greenButton">綠26</a></td><td>玉井 ─ 甲仙</td></tr>'
+		+ '<tr><td><a href="green/green_27.html" class="greenButton">綠27</a></td><td>玉井 ─ 南化 ─ 茄苳橋</td></tr>';
+		break;
+	case '楠西':
+		div_string += '<tr><td><a href="green_20.html" class="greenButton">綠20</a></td><td>玉井 ─ 楠西 ─ 永興吊橋</td></tr>'
+		+ '<tr><td><a href="green/green_21.html" class="greenButton">綠21</a></td><td>玉井 ─ 龜丹油礦</td></tr>'
+		+ '<tr><td><a href="green/green_22.html" class="greenButton">綠22</a></td><td>玉井 ─ 梅嶺</td></tr>'
+		+ '<tr><td><a href="green/green_23.html" class="greenButton">綠23</a></td><td>玉井 ─ 雙溪新社區</td></tr>'
+		+ '<tr><td><a href="green/green_24.html" class="greenButton">綠24</a></td><td>玉井 ─ 曾文水庫管理局</td></tr>'
+		+ '<tr><td><a href="green/green_25.html" class="greenButton">綠25</a></td><td>玉井 ─ 大埔</td></tr>';
+		break;
+	case '大內':
+		div_string += '<tr><td><a href="orange/orange_1.html" class="orangeButton">橘1</a></td><td>善化火車站 ─ 大內 ─ 環湖 ─ 蒙正</td></tr>'
+		+ '<tr><td><a href="orange/orange_2.html" class="orangeButton">橘2</a></td><td>胡厝寮 ─ 善化 ─ 大內</td></tr>'
+		+ '<tr><td><a href="orange/orange_20.html" class="orangeButton">橘20</a></td><td>大內公所 ─ 環湖 ─ 玉井</td></tr>';
+		break;
+	case '官田':
+		div_string += '<tr><td><a href="orange/orange_1.html" class="orangeButton">橘1</a></td><td>善化火車站 ─ 大內 ─ 環湖 ─ 蒙正</td></tr>'
+		+ '<tr><td><a href="orange/orange_2.html" class="orangeButton">橘2</a></td><td>胡厝寮 ─ 善化 ─ 大內</td></tr>'
+		+ '<tr><td><a href="orange/orange_4.html" class="orangeButton">橘4</a></td><td>善化火車站 ─ 南藝大 ─ 烏山頭水庫</td></tr>'
+		+ '<tr><td><a href="orange/orange_5.html" class="orangeButton">橘5</a></td><td>善化火車站 ─ 官田 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="orange/orange_10.html" class="orangeButton">橘10</a></td><td>真理大學 ─ 隆田火車站 ─ 南藝大</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>新營 ─ 柳營 ─ 六甲</td></tr>';
+		break;
+	case '下營':
+		div_string += '<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>下營 ─ 麻豆 ─ 西港 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_5.html" class="yellowButton">黃5</a></td><td>新營 ─ 紅毛厝 ─ 下營</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_20.html" class="yellowButton">黃20</a></td><td>麻豆 ─ 下營 ─ 紅毛厝 ─ 臺鐵林鳳營</td></tr>';
+		break;
+	case '六甲':
+		div_string += '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>新營 ─ 柳營 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_2.html" class="yellowButton">黃2</a></td><td>新營 ─ 柳營 ─ 六甲 ─ 王爺宮</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_4.html" class="yellowButton">黃4</a></td><td>新營 ─ 二重溪 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_20.html" class="yellowButton">黃20</a></td><td>麻豆 ─ 下營 ─ 紅毛厝 ─ 臺鐵林鳳營</td></tr>';
+		break;
+	case '柳營':
+		div_string += '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>新營 ─ 柳營 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_2.html" class="yellowButton">黃2</a></td><td>新營 ─ 柳營 ─ 六甲 ─ 王爺宮</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_3.html" class="yellowButton">黃3</a></td><td>新營 ─ 柳營 ─ 果毅後</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_4.html" class="yellowButton">黃4</a></td><td>新營 ─ 二重溪 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_5.html" class="yellowButton">黃5</a></td><td>新營 ─ 紅毛厝 ─ 下營</td></tr>';
+		break;
+	case '後壁':
+		div_string += '<tr><td><a href="yellow/yellow_6.html" class="yellowButton">黃6</a></td><td>新營 ─ 白沙屯 ─ 後壁火車站</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_9.html" class="yellowButton">黃9</a></td><td>新營 ─ 高鐵嘉義站</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_10.html" class="yellowButton">黃10</a></td><td>後壁 ─ 白河 ─ 六重溪</td></tr>';
+		break;
+	case '東山':
+		div_string += '<tr><td><a href="yellow/yellow_7.html" class="yellowButton">黃7</a></td><td>新營 ─ 東山 ─ 青山</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_11.html" class="yellowButton">黃11</a></td><td>白河 ─ 青山</td></tr>';
+		break;
+	case '鹽水':
+		div_string += '<tr><td><a href="brown/brown_1.html" class="brownButton">棕1</a></td><td>新營 ─ 鹽水 ─ 南鯤鯓 ─ 雙春</td></tr>'
+		+ '<tr><td><a href="brown/brown_2.html" class="brownButton">棕2</a></td><td>新營 ─ 鹽水 ─ 下中</td></tr>'
+		+ '<tr><td><a href="brown/brown_3.html" class="brownButton">棕3</a></td><td>新營 ─ 鹽水 ─ 南港里</td></tr>'
+		+ '<tr><td><a href="brown/brown_3_1.html" class="brownButton">棕3-1</a></td><td>新營 ─ 鹽水 ─ 鐵線里</td></tr>';
+		break;
+	case '學甲':
+		div_string += '<tr><td><a href="blue/blue_1.html" class="blueButton">藍1</a></td><td>佳里 ─ 苓子寮 ─ 西埔內 ─ 南鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_2.html" class="blueButton">藍2</a></td><td>佳里 ─ 溪底寮 ─ 南鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_3.html" class="blueButton">藍3</a></td><td>佳里 ─ 蘆竹溝</td></tr>'
+		+ '<tr><td><a href="brown/brown_10.html" class="brownButton">棕10</a></td><td>學甲 ─ 麻豆</td></tr>'
+		+ '<tr><td><a href="brown/brown_11.html" class="brownButton">棕11</a></td><td>學甲 ─ 頂洲</td></tr>';
+		break;
+	case '北門':
+		div_string += '<tr><td><a href="blue/blue_1.html" class="blueButton">藍1</a></td><td>佳里 ─ 苓子寮 ─ 西埔內 ─ 南鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_2.html" class="blueButton">藍2</a></td><td>佳里 ─ 溪底寮 ─ 南鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_3.html" class="blueButton">藍3</a></td><td>佳里 ─ 蘆竹溝</td></tr>'
+		+ '<tr><td><a href="brown/brown_2.html" class="brownButton">棕2</a></td><td>新營 ─ 鹽水 ─ 下中</td></tr>';
+		break;
+	case '將軍':
+		div_string += '<tr><td><a href="blue/blue_1.html" class="blueButton">藍1</a></td><td>佳里 ─ 苓子寮 ─ 西埔內 ─ 南鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_10.html" class="blueButton">藍10</a></td><td>佳里 ─ 馬沙溝 ─ 將軍漁港</td></tr>'
+		+ '<tr><td><a href="blue/blue_11.html" class="blueButton">藍11</a></td><td>佳里 ─ 城子內 ─ 青鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_12.html" class="blueButton">藍12</a></td><td>佳里 ─ 後港 ─ 青鯤鯓</td></tr>'
+		+ '<tr><td><a href="blue/blue_13.html" class="blueButton">藍13</a></td><td>佳里 ─ 西寮</td></tr>'
+		+ '<tr><td><a href="blue/blue_20.html" class="blueButton">藍20</a></td><td>佳里 ─ 台區 ─ 青鯤鯓 ─ 將軍漁港</td></tr>';
+		break;
+	case '七股':
+		div_string += '<tr><td><a href="blue/blue_13.html" class="blueButton">藍13</a></td><td>佳里 ─ 西寮</td></tr>'
+		+ '<tr><td><a href="blue/blue_20.html" class="blueButton">藍20</a></td><td>佳里 ─ 台區 ─ 青鯤鯓 ─ 將軍漁港</td></tr>'
+		+ '<tr><td><a href="blue/blue_21.html" class="blueButton">藍21</a></td><td>佳里 ─ 義合 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="blue/blue_22.html" class="blueButton">藍22</a></td><td>佳里 ─ 七十二份 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="blue/blue_23.html" class="blueButton">藍23</a></td><td>安工區 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="blue/blue_25.html" class="blueButton">藍25</a></td><td>佳里 ─ 七股 ─ 土城子 ─ 科工區</td></tr>'
+		+ '<tr><td><a href="tour_bus/tour_bus_99.html" class="tourButton">99</a></td><td>台南公園 ─ 鹽田生態文化村</td></tr>';
+		break;
+	case '西港':
+		div_string += '<tr><td><a href="blue/blue_21.html" class="blueButton">藍21</a></td><td>佳里 ─ 義合 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="blue/blue_22.html" class="blueButton">藍22</a></td><td>佳里 ─ 七十二份 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>下營 ─ 麻豆 ─ 西港 ─ 臺南公園</td></tr>';
+		break;
+	case '安定':
+		div_string += '<tr><td><a href="orange/orange_3.html" class="orangeButton">橘3</a></td><td>善化火車站 ─ 安定 ─ 和順 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>下營 ─ 麻豆 ─ 西港 ─ 臺南公園</td></tr>';
+		break;
+	case '安南':
+		div_string += '<tr><td><a href="city_bus/city_bus_3.html" class="city_busButton">3</a></td><td>海東國小 ─ 竹篙厝</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_7.html" class="city_busButton">7</a></td><td>火車站 ─ 康寧大學</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_9.html" class="city_busButton">9</a></td><td>火車站 ─ 公親里</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_10.html" class="city_busButton">10</a></td><td>火車站 ─ 鹿耳門天后宮</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_11.html" class="city_busButton">11</a></td><td>大成路口 ─ 城西里</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_18.html" class="city_busButton">18</a></td><td>台南站 ─ 塭南里</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_20.html" class="city_busButton">20</a></td><td>崑山科大 ─ 永大路 ─ 安南醫院</td></tr>'
+		+ '<tr><td><a href="tour_bus/tour_bus_99.html" class="tourButton">99</a></td><td>台南公園 ─ 鹽田生態文化村</td></tr>'
+		+ '<tr><td><a href="orange/orange_3.html" class="orangeButton">橘3</a></td><td>善化火車站 ─ 安定 ─ 和順 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>下營 ─ 麻豆 ─ 西港 ─ 臺南公園</td></tr>'
+		+ '<tr><td><a href="blue/blue_23.html" class="blueButton">藍23</a></td><td>安工區 ─ 九塊厝</td></tr>'
+		+ '<tr><td><a href="blue/blue_24.html" class="blueButton">藍24</a></td><td>安工區 ─ 土城子 ─ 青草里</td></tr>';
+		break;
+	case '後壁火車站':
+		div_string += '<tr><td><a href="yellow/yellow_6.html" class="yellowButton">黃6</a></td><td>新營 ─ 白沙屯 ─ 後壁火車站</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_9.html" class="yellowButton">黃9</a></td><td>新營 ─ 高鐵嘉義站</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_10.html" class="yellowButton">黃10</a></td><td>後壁 ─ 白河 ─ 六重溪</td></tr>';
+		break;
+	case '柳營火車站':
+		div_string += '<tr><td><a href="yellow/yellow_3.html" class="yellowButton">黃3</a></td><td>新營 ─ 柳營 ─ 果毅後</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_5.html" class="yellowButton">黃5</a></td><td>新營 ─ 紅毛厝 ─ 下營</td></tr>';
+		break;
+	case '林鳳營火車站':
+		div_string += '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>新營 ─ 柳營 ─ 六甲</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_2.html" class="yellowButton">黃2</a></td><td>新營 ─ 柳營 ─ 六甲 ─ 王爺宮</td></tr>'
+		+ '<tr><td><a href="yellow/yellow_20.html" class="yellowButton">黃20</a></td><td>麻豆 ─ 下營 ─ 紅毛厝 ─ 臺鐵林鳳營</td></tr>';
+		break;
+	case '隆田火車站':
+		div_string += '<tr><td><a href="orange/orange_10.html" class="orangeButton">橘10</a></td><td>真理大學 ─ 隆田火車站 ─ 南藝大</td></tr>';
+		break;
+	case '新市火車站':
+		div_string += '<tr><td><a href="green/green_1.html" class="greenButton">綠1</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>新化 ─ 新市 ─ 南科 ─ 善化 ─ 山上</td></tr>'
+		+ '<tr><td><a href="green/green_3.html" class="greenButton">綠3</a></td><td>新化 ─ 新市 ─ 看西 ─ 南科 ─ 善化</td></tr>'
+		+ '<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>新化 ─ 新市 ─ 陽光電城 ─ 善化火車站</td></tr>'
+		+ '<tr><td><a href="green/green_5.html" class="greenButton">綠5</a></td><td>臺鐵永康 ─ 潭頂 ─ 大社</td></tr>'
+		+ '<tr><td><a href="green/green_6.html" class="greenButton">綠6</a></td><td>新化 ─ 潭頂 ─ 大社</td></tr>'
+		+ '<tr><td><a href="green/green_7.html" class="greenButton">綠7</a></td><td>新化 ─ 大營 ─ 大社</td></tr>'
+		+ '<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>麻豆 ─ 善化 ─ 臺南公園</td></tr>';
+		break;
+	case '南科火車站':
+		div_string += '<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>新化 ─ 新市 ─ 陽光電城 ─ 善化火車站</td></tr>';
+		break;
+	case '永康火車站':
+		div_string += '<tr><td><a href="city_bus/city_bus_20.html" class="city_busButton">20</a></td><td>崑山科大 ─ 永大路 ─ 安南醫院</td></tr>'
+		+ '<tr><td><a href="green/green_5.html" class="greenButton">綠5</a></td><td>臺鐵永康 ─ 潭頂 ─ 大社</td></tr>'
+		+ '<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>關廟 ─ 永康火車站 ─ 奇美醫院</td></tr>';
+		break;
+	case '大橋火車站':
+		div_string += '<tr><td><a href="city_bus/city_bus_5.html" class="city_busButton">5</a></td><td>鹽行 ─ 市立醫院、嘉南科大</td></tr>'
+		+ '<tr><td><a href="city_bus/city_bus_15.html" class="city_busButton">15</a></td><td>奇美醫院 ─ 大成國中</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7651.html" class="hsrButton">H62</a></td><td>桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>關廟 ─ 永康火車站 ─ 奇美醫院</td></tr>'
+		+ '<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>麻豆 ─ 善化 ─ 臺南公園</td></tr>';
+		break;
+	case '保安火車站':
+		div_string += '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>臺南公園 ─ 高鐵台南站 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_4.html" class="redButton">紅4</a></td><td>臺南火車站 ─ 臺南都會公園</td></tr>';
+		break;
+	case '仁德火車站':
+		div_string += '<tr><td><a href="red/red_4.html" class="redButton">紅4</a></td><td>臺南火車站 ─ 臺南都會公園</td></tr>';
+		break;
+	case '中洲火車站':
+		div_string += '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>臺南公園 ─ 高鐵台南站 ─ 關廟</td></tr>'
+		break;
+	case '長榮大學火車站':
+		div_string += '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>臺南公園 ─ 高鐵台南站 ─ 關廟</td></tr>'
+		break;
+	case '沙崙火車站':
+		div_string += '<tr><td><img src="route/transfer/HSR.png"></td><td valign="center"><font color="orange" size="+2">台灣高鐵</font></td></tr>'
+		+ '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>臺南公園 ─ 高鐵台南站 ─ 關廟</td></tr>'
+		+ '<tr><td><a href="red/red_14.html" class="redButton">紅14</a></td><td>關廟 ─ 歸仁 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="green/green_16.html" class="greenButton">綠16</a></td><td>新化 ─ 關廟 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7658.html" class="hsrButton">H31</a></td><td>臺南市政府 ─ 高鐵臺南站</td></tr>'
+		+ '<tr><td><a href="hsr/hsr_shuttle_7651.html" class="hsrButton">H62</a></td><td>桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站</td></tr>';
+		break;
 	}
 	div_string += '</table>';
 	document.getElementById('transfer_info').innerHTML = '<h1>' + bus_stop + '</h1>' + div_string;
@@ -47,10 +397,10 @@ function get_transfer_info(bus_stop){
 	<!--<area shape="circle" coords="X1,Y1,R" href="#" />
 	<area shape="rect" coords="X1,Y1,X2,Y2" href="#" />
 	<area shape="poly" coords="X1,Y1,X2,Y2,...,Xn,Yn" href="#" />-->
-	<area shape="circle" coords="175,429,34" href="javascript:get_transfer_info('台南')" />
+	<area shape="circle" coords="175,429,34" href="javascript:get_transfer_info('臺南火車站')" />
 	<area shape="circle" coords="135,240,34" href="javascript:get_transfer_info('佳里')" />
 	<area shape="circle" coords="287,270,34" href="javascript:get_transfer_info('麻豆')" />
-	<area shape="circle" coords="417,292,34" href="javascript:get_transfer_info('善化')" />
+	<area shape="circle" coords="417,292,34" href="javascript:get_transfer_info('善化火車站')" />
 	<area shape="circle" coords="600,299,34" href="javascript:get_transfer_info('玉井')" />
 	<area shape="circle" coords="350,74,34" href="javascript:get_transfer_info('新營')" />
 	<area shape="circle" coords="499,62,34" href="javascript:get_transfer_info('白河')" />
@@ -58,7 +408,7 @@ function get_transfer_info(bus_stop){
 	<area shape="circle" coords="330,514,34" href="javascript:get_transfer_info('關廟')" />
 	<area shape="circle" coords="169.5,172.5,18.5" href="javascript:get_transfer_info('學甲')" />
 	<area shape="circle" coords="264.5,108.5,18.5" href="javascript:get_transfer_info('鹽水')" />
-	<area shape="circle" coords="123.5,297.5,18.5" href="javascript:get_transfer_info('西港')" />
+	<area shape="circle" coords="124.5,298.5,18.5" href="javascript:get_transfer_info('西港')" />
 	<area shape="circle" coords="125.5,341.5,18.5" href="javascript:get_transfer_info('安定')" />
 	<area shape="circle" coords="135.5,384.5,18.5" href="javascript:get_transfer_info('安南')" />
 	<area shape="circle" coords="221.5,471.5,18.5" href="javascript:get_transfer_info('仁德')" />
@@ -72,16 +422,51 @@ function get_transfer_info(bus_stop){
 	<area shape="circle" coords="336.5,157.5,18.5" href="javascript:get_transfer_info('六甲')" />
 	<area shape="circle" coords="346.5,122.5,18.5" href="javascript:get_transfer_info('柳營')" />
 	<area shape="circle" coords="431.5,63.5,18.5" href="javascript:get_transfer_info('後壁')" />
+	<area shape="circle" coords="62,315,14" href="javascript:get_transfer_info('七股')" />
+	<area shape="circle" coords="90,195,14" href="javascript:get_transfer_info('將軍')" />
+	<area shape="circle" coords="123,144,14" href="javascript:get_transfer_info('北門')" />
+	<area shape="circle" coords="324,371,14" href="javascript:get_transfer_info('新市')" />
+	<area shape="circle" coords="619,231,14" href="javascript:get_transfer_info('楠西')" />
+	<area shape="circle" coords="667,272,14" href="javascript:get_transfer_info('南化')" />
+	<area shape="circle" coords="426,203,14" href="javascript:get_transfer_info('官田')" />
+	<area shape="circle" coords="527,129,14" href="javascript:get_transfer_info('東山')" />
+	<area shape="circle" coords="395.5,25.5,6.5" href="javascript:get_transfer_info('後壁火車站')" />
+	<area shape="circle" coords="401.5,117.5,6.5" href="javascript:get_transfer_info('柳營火車站')" />
+	<area shape="circle" coords="431.5,148.5,6.5" href="javascript:get_transfer_info('林鳳營火車站')" />
+	<area shape="circle" coords="460.5,212.5,6.5" href="javascript:get_transfer_info('隆田火車站')" />
+	<area shape="circle" coords="453.5,245.5,6.5" href="javascript:get_transfer_info('拔林火車站')" />
+	<area shape="circle" coords="339.5,332.5,6.5" href="javascript:get_transfer_info('南科火車站')" />
+	<area shape="circle" coords="299.5,345.5,6.5" href="javascript:get_transfer_info('新市火車站')" />
+	<area shape="circle" coords="246.5,368.5,6.5" href="javascript:get_transfer_info('永康火車站')" />
+	<area shape="circle" coords="214.5,386.5,6.5" href="javascript:get_transfer_info('大橋火車站')" />
+	<area shape="circle" coords="174.5,477.5,6.5" href="javascript:get_transfer_info('保安火車站')" />
+	<area shape="circle" coords="186.5,498.5,6.5" href="javascript:get_transfer_info('仁德火車站')" />
+	<area shape="circle" coords="200.5,515.5,6.5" href="javascript:get_transfer_info('中洲火車站')" />
+	<area shape="circle" coords="233.5,517.5,6.5" href="javascript:get_transfer_info('長榮大學火車站')" />
+	<area shape="circle" coords="266.5,514.5,6.5" href="javascript:get_transfer_info('沙崙火車站')" />
+	<area shape="rect" coords="406,19,448,35.79" href="javascript:get_transfer_info('後壁火車站')" />
+	<area shape="rect" coords="414,105,456,121.79" href="javascript:get_transfer_info('柳營火車站')" />
+	<area shape="rect" coords="441,135,497,151.79" href="javascript:get_transfer_info('林鳳營火車站')" />
+	<area shape="rect" coords="473,202,515,218.79" href="javascript:get_transfer_info('隆田火車站')" />
+	<area shape="rect" coords="468,237,510,253.79" href="javascript:get_transfer_info('拔林火車站')" />
+	<area shape="rect" coords="292,313,334,329.79" href="javascript:get_transfer_info('南科火車站')" />
+	<area shape="rect" coords="247,330,289,346.79" href="javascript:get_transfer_info('新市火車站')" />
+	<area shape="rect" coords="196,351,238,367.79" href="javascript:get_transfer_info('永康火車站')" />
+	<area shape="rect" coords="164,375,206,391.79" href="javascript:get_transfer_info('大橋火車站')" />
+	<area shape="rect" coords="123,465,165,481.79" href="javascript:get_transfer_info('保安火車站')" />
+	<area shape="rect" coords="133,489,175,505.79" href="javascript:get_transfer_info('仁德火車站')" />
+	<area shape="rect" coords="149,511,191,527.79" href="javascript:get_transfer_info('中洲火車站')" />
+	<area shape="rect" coords="209,535,279,551.79" href="javascript:get_transfer_info('長榮大學火車站')" />
+	<area shape="rect" coords="257,519,299,535.79" href="javascript:get_transfer_info('沙崙火車站')" />
 </map>
 <div align="center">
  <table>
  <tr>
-  <td ><a href="index.html">
-	<img src="img/Tainan_City_bus.png" width="242" height="60"/></a></td>
-  <td rowspan="2"><img src="img/tainan_bus_overview.png" alt="台南市鐵路及公車路線總圖" height="600" usemap="#tainan_map"></a></td>
+  <td><a href="index.html"><img src="img/Tainan_City_bus.png" width="242" height="60"/></a></td>
+  <td rowspan="2"><img src="img/tainan_bus_overview.png" alt="台南市鐵路及公車路線總圖" height="600" usemap="#tainan_map"></td>
  </tr>
  <tr>
-  <td><div id="transfer_info" style="text-align:center; color: blue; width: 400px; height: 500px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"></div></td>
+  <td><div id="transfer_info" style="text-align:center; color: blue; width: 430px; height: 500px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"></div></td>
  </tr>
  </table>
 </div>
