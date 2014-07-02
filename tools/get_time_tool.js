@@ -139,7 +139,7 @@ function get_bus_time(theRoute, start_stop, end_stop, time, isArrive){
 	 : [get_time(target_time, stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), target_time, Math.abs(stop_time_consume[end_idx[2]] - stop_time_consume[start_idx[2]]), fare];
 	// such as ["06:10","10:05", 30]
 }
-var replace_str_arr = [['[台灣好行]',''],['台南','臺南'],['台灣','臺灣'],['南台','南臺'],['台電','臺電'],['關廟站','關廟'],['、',''],
+var replace_str_arr = [['[台灣好行]',''],['[市公車]',''],['台南','臺南'],['台灣','臺灣'],['南台','南臺'],['台電','臺電'],['關廟站','關廟'],['、',''],
 ['[新營]',''],['(新營)',''],['[興南]',''],['(興南)',''],
 ['南靖(新營)','南靖火車站'], // 黃9
 ['(新孝路口)',''],['西區公所','協和里'],['溪子墘社區','溪子墘'],['元寶樂園','十二佃橋'] // 藍23

@@ -77,7 +77,13 @@ select.get_fare option.option6
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 青山：06:00／18:15<br />往 白河：06:35／18:50</td>
+					<td>
+					<script language="javascript">
+					document.write('往 青山：'+yellow_11_time_go[0]+'／'+yellow_11_time_go[yellow_11_time_go.length-1]);
+					document.write('<br />');
+					document.write('往 白河：'+yellow_11_time_return[0]+'／'+yellow_11_time_return[yellow_11_time_return.length-1]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
