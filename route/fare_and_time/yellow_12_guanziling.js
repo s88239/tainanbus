@@ -3,7 +3,7 @@ yellow_12_guanziling_interval_stop = [
 ["關子嶺","關子嶺教會","頂關子嶺","南寮路口","水火同源","火山碧雲寺","大仙寺","仙草埔","白河榮家","灰窯","羌子崙","粗坑",
 "寶泉橋","好漢坡","關子嶺"] // 關子嶺
 ];
-yellow_12_guanziling_stop_time_consume = [0,1,3,4,5,7,9,10,10];
+yellow_12_guanziling_stop_time_consume = [0,1,2,5,9,12,23,25,26,27,28,30,31,32,35];
 yellow_12_guanziling_fare = [
 [26],
 [26,26]
