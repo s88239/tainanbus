@@ -75,7 +75,13 @@ select.get_fare option.option5
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 佳里：06:05／20:05<br />往 新營：06:05／20:05</td>
+					<td>
+					<script language="javascript">
+					document.write('往 佳里：'+brown_time_go[0][0]+'／'+brown_time_go[brown_time_go.length-1][0]);
+					document.write('<br />');
+					document.write('往 新營：'+brown_time_return[0][0]+'／'+brown_time_return[brown_time_return.length-1][0]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -158,7 +164,7 @@ select.get_fare option.option5
 				</tr>
 				<tr>
 					<td style="text-align: center"><img src="../route/transfer/brown_transfer_logo.png"></td>
-					<td id="brown"><a href="../brown/brown.html" target="_blank">棕幹線</a>、<a href="../brown/brown_1.html" target="_blank">棕1</a>、<a href="../brown/brown_2.html" target="_blank">棕2</a>、<a href="../brown/brown_3.html" target="_blank">棕3</a></td>
+					<td id="brown"><a href="../brown/brown.html" target="_blank">棕幹線</a>、<a href="../brown/brown_1.html" target="_blank">棕1</a>、<a href="../brown/brown_2.html" target="_blank">棕2</a>、<a href="../brown/brown_3.html" target="_blank">棕3</a>、<a href="../brown/brown_3_1.html" target="_blank">棕3-1</a></td>
 				</tr>
 				<tr>
 					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>

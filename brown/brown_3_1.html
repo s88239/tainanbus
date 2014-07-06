@@ -52,7 +52,7 @@ select.get_fare option.option5
 			<h2>大台南公車 ─ 棕3-1 路線圖</h2>
 			<span class="byline">Tainan Bus Brown 3-1, Route Map</span>
 		</div>
-		<img src="../route/brown/br3.jpg">
+		<img src="../route/brown/br3_1.jpg">
 		<p></p>
 		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kjdt4phnE_dw" width="800" height="500"></iframe>-->
 	</div>
@@ -67,7 +67,7 @@ select.get_fare option.option5
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>新營 － 鹽水 － 南鯤鯓 － 雙春</td>
+					<td>新營 － 鹽水 － 鐵線里</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -75,7 +75,12 @@ select.get_fare option.option5
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 雙春：09:45／17:40<br />往 新營：06:00／14:20</td>
+					<td><script language="javascript">
+					document.write('往 鐵線里：'+brown_3_1_time_go[0]+'／'+brown_3_1_time_go[brown_3_1_time_go.length-1]);
+					document.write('<br />');
+					document.write('往 新　營：'+brown_3_1_time_return[0]+'／'+brown_3_1_time_return[brown_3_1_time_return.length-1]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -133,10 +138,10 @@ select.get_fare option.option5
 		<span class="byline">Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="brown">新營-&gt;雙春</font></h2>');
+			document.write('<h2><font color="brown">新營-&gt;鐵線里</font></h2>');
 			create_time_schedule(brown_3_1_main_stop_name, brown_3_1_main_stop_time_consume, brown_3_1_important_stop, brown_3_1_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="brown">雙春-&gt;新營</font></h2>');
+			document.write('<h2><font color="brown">鐵線里-&gt;新營</font></h2>');
 			create_time_schedule(brown_3_1_main_stop_name, brown_3_1_main_stop_time_consume, brown_3_1_important_stop, brown_3_1_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
@@ -158,7 +163,7 @@ select.get_fare option.option5
 				</tr>
 				<tr>
 					<td style="text-align: center"><img src="../route/transfer/brown_transfer_logo.png"></td>
-					<td id="brown"><a href="../brown/brown.html" target="_blank">棕幹線</a>、<a href="../brown/brown_1.html" target="_blank">棕1</a>、<a href="../brown/brown_2.html" target="_blank">棕2</a>、<a href="../brown/brown_3.html" target="_blank">棕3</a></td>
+					<td id="brown"><a href="../brown/brown.html" target="_blank">棕幹線</a>、<a href="../brown/brown_3_1.html" target="_blank">棕1</a>、<a href="../brown/brown_2.html" target="_blank">棕2</a>、<a href="../brown/brown_3.html" target="_blank">棕3</a>、<a href="../brown/brown_3_1.html" target="_blank">棕3-1</a></td>
 				</tr>
 				<tr>
 					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
