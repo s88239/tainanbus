@@ -67,7 +67,7 @@ select.get_fare option.option5
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>新營 － 鹽水 － 南鯤鯓 － 雙春</td>
+					<td>新營 － 鹽水 － 下中</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -75,7 +75,13 @@ select.get_fare option.option5
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 雙春：09:45／17:40<br />往 新營：06:00／14:20</td>
+					<td>
+					<script language="javascript">
+					document.write('往 下中：'+brown_2_time_go[0]+'／'+brown_2_time_go[brown_2_time_go.length-1]);
+					document.write('<br />');
+					document.write('往 新營：'+brown_2_time_return[0]+'／'+brown_2_time_return[brown_2_time_return.length-1]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -87,7 +93,7 @@ select.get_fare option.option5
 				</tr>
 			</table>
 			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1301&locale=zh_TW" class="button">公車動態資訊</a> </div>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1302&locale=zh_TW" class="button">公車動態資訊</a> </div>
 	</div>
 </div>
 <div id="wrapper3">
@@ -133,10 +139,10 @@ select.get_fare option.option5
 		<span class="byline">Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="brown">新營-&gt;雙春</font></h2>');
+			document.write('<h2><font color="brown">新營-&gt;下中</font></h2>');
 			create_time_schedule(brown_2_main_stop_name, brown_2_main_stop_time_consume, brown_2_important_stop, brown_2_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="brown">雙春-&gt;新營</font></h2>');
+			document.write('<h2><font color="brown">下中-&gt;新營</font></h2>');
 			create_time_schedule(brown_2_main_stop_name, brown_2_main_stop_time_consume, brown_2_important_stop, brown_2_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>

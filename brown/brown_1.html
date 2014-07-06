@@ -75,7 +75,13 @@ select.get_fare option.option5
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 雙春：09:45／17:40<br />往 新營：06:00／14:20</td>
+					<td>
+					<script language="javascript">
+					document.write('往 雙春：'+brown_1_time_go[0]+'／'+brown_1_time_go[brown_1_time_go.length-1]);
+					document.write('<br />');
+					document.write('往 新營：'+brown_1_time_return[0]+'／'+brown_1_time_return[brown_1_time_return.length-1]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
