@@ -67,7 +67,7 @@ select.get_fare option.option5
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>新營 － 鹽水 － 南鯤鯓 － 雙春</td>
+					<td>學甲 － 麻豆</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -75,7 +75,13 @@ select.get_fare option.option5
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 雙春：09:45／17:40<br />往 新營：06:00／14:20</td>
+					<td>
+					<script language="javascript">
+					document.write('往 麻豆：'+brown_10_time_go[0]+'／'+brown_10_time_go[brown_10_time_go.length-1]);
+					document.write('<br />');
+					document.write('往 學甲：'+brown_10_time_return[0]+'／'+brown_10_time_return[brown_10_time_return.length-1]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -87,7 +93,7 @@ select.get_fare option.option5
 				</tr>
 			</table>
 			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1301&locale=zh_TW" class="button">公車動態資訊</a> </div>
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1310&locale=zh_TW" class="button">公車動態資訊</a> </div>
 	</div>
 </div>
 <div id="wrapper3">
@@ -133,10 +139,10 @@ select.get_fare option.option5
 		<span class="byline">Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="brown">新營-&gt;雙春</font></h2>');
+			document.write('<h2><font color="brown">學甲-&gt;麻豆</font></h2>');
 			create_time_schedule(brown_10_main_stop_name, brown_10_main_stop_time_consume, brown_10_important_stop, brown_10_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="brown">雙春-&gt;新營</font></h2>');
+			document.write('<h2><font color="brown">麻豆-&gt;學甲</font></h2>');
 			create_time_schedule(brown_10_main_stop_name, brown_10_main_stop_time_consume, brown_10_important_stop, brown_10_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
@@ -152,22 +158,13 @@ select.get_fare option.option5
 		<div class="content">
 			<table>
 				<tr>
-					<th rowspan="3">新營</th>
-					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵新營站</td>
-				</tr>
-				<tr>
+					<th rowspan="2">學甲</th>
 					<td style="text-align: center"><img src="../route/transfer/brown_transfer_logo.png"></td>
-					<td id="brown"><a href="../brown/brown.html" target="_blank">棕幹線</a>、<a href="../brown/brown_1.html" target="_blank">棕1</a>、<a href="../brown/brown_2.html" target="_blank">棕2</a>、<a href="../brown/brown_3.html" target="_blank">棕3</a></td>
+					<td id="brown"><a href="../brown/brown.html" target="_blank">棕幹線</a>、<a href="../brown/brown_10.html" target="_blank">棕10</a>、<a href="../brown/brown_11.html" target="_blank">棕11</a></td>
 				</tr>
 				<tr>
-					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
-					<td id="yellow">
-					<p>
-						<a href="../yellow/yellow.html" target="_blank">黃幹線</a>、<a href="../yellow/yellow_1.html" target="_blank">黃1</a>、<a href="../yellow/yellow_2.html" target="_blank">黃2</a>、<a href="../yellow/yellow_3.html" target="_blank">黃3</a>、<a href="../yellow/yellow_4.html" target="_blank">黃4</a>、
-					</p>
-					<a href="../yellow/yellow_5.html" target="_blank">黃5</a>、<a href="../yellow/yellow_6.html" target="_blank">黃6</a>、<a href="../yellow/yellow_7.html" target="_blank">黃7</a>
-					</td>
+					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
+					<td id="blue"><a href="../blue/blue_1.html" target="_blank">藍1</a>、<a href="../blue/blue_2.html" target="_blank">藍2</a>、<a href="../blue/blue_3.html" target="_blank">藍3</a></td>
 				</tr>
 			</table>
 		</div>
