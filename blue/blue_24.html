@@ -78,7 +78,13 @@ select.get_fare option.option6
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 青草里：07:50／18:25<br />往 安工區：06:00／15:40</td>
+					<td>
+					<script language="javascript">
+					document.write('往 青草里：'+blue_24_time_go[0]+'／'+blue_24_time_go[blue_24_time_go.length-1]);
+					document.write('<br />');
+					document.write('往 安工區：'+blue_24_time_return[0]+'／'+blue_24_time_return[blue_24_time_return.length-1]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -138,10 +144,10 @@ select.get_fare option.option6
 	<div class="content">
 		<script language="javascript">
 			document.write('<h2><font color="blue">安工區-&gt;青草里</font></h2>');
-			create_time_schedule(blue_24_main_stop_name, blue_24_main_stop_time_consume, blue_24_important_stop, blue_24_time_go, false);
+			create_time_schedule_go(blue_24_interval_stop, blue_24_stop_time_consume, blue_24_selected_stop, blue_24_important_stop, blue_24_time_go);
 			document.write('<p>　</p>');
 			document.write('<h2><font color="blue">青草里-&gt;安工區</font></h2>');
-			create_time_schedule(blue_24_main_stop_name, blue_24_main_stop_time_consume, blue_24_important_stop, blue_24_time_return, true);
+			create_time_schedule_return(blue_24_interval_stop, blue_24_stop_time_consume, blue_24_selected_stop, blue_24_important_stop, blue_24_time_return);
 			document.write(TimeScheduleMSG);
 		</script>
 	</div>

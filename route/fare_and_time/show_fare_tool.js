@@ -30,6 +30,158 @@ function query_fare(theForm, fare_array){
 	document.getElementById("RFID_half").innerHTML = Math.ceil((price-26)/2); // 刷卡半票，無條件進位
 }
 
+function create_time_schedule_go(stop_name, time_consume, select_stop_index, important_stop, time){ // print the time schedule for going
+	document.write('<table><tr>');
+	var index_x = 0, index_count = stop_name[0].length;
+	for(var i=0; i < select_stop_index.length; ++i ){
+		while(index_count - 1 < select_stop_index[i] && index_x < stop_name.length){
+			++index_x;
+			index_count += stop_name[index_x].length;
+		}
+		//document.write(index_x+", index_count="+index_count+", selected="+select_stop_index[i]+", y="+(select_stop_index[i]-index_count+stop_name[index_x].length)+"<br />");
+		document.write('<th>'
+			+ break_string_with_newline(stop_name[index_x][select_stop_index[i]-index_count+stop_name[index_x].length])
+			+ '</th>');
+	}
+	document.write('</tr>');
+	for(var i=0; i<time.length; ++i){
+		var special_event = ['',[-1,0],[]];
+		var start_stop = 0, end_stop = select_stop_index.length - 1;
+		switch(time[i].length){
+			case 1: // format: [time]
+				break;
+			case 2: // format: [time, others]
+				special_event = get_special_tag(time[i][1]);
+				break;
+			case 3: // format: [time, start_stop, end_stop]
+				start_stop = time[i][1];
+				end_stop = time[i][2];
+				break;
+			case 4: // format: [time, start_stop, end_stop , others]
+				start_stop = time[i][1];
+				end_stop = time[i][2];
+				special_event = get_special_tag(time[i][3]);
+				break;
+			default:
+				//alert('array length error!');
+				break;
+		}
+		document.write('<tr>');
+		var special_tag = special_event[0]; // store real special tag to special_tag
+		var stop_offset = special_event[1]; // store offset event
+		if( special_event.length==3 ){ // special_event is an array storing forbidden stop
+			forbidden = special_event[2]; // store those stops in the array named 'forbidden'
+		}
+		else forbidden = []; // otherwise, be a empty array
+
+		for(var j=0; j < select_stop_index.length; ++j){
+			document.write('<td>');
+			var k=0;
+			time_consume_offset = time_consume[select_stop_index[start_stop]];
+			for(k=0; k<stop_offset.length; k+=2){
+				if(stop_offset[k]==-1) break;
+				if(j>=stop_offset[k]) // have offset since stop No. stop_offset[0]
+				{
+					time_consume_offset -= stop_offset[k+1];
+					//document.write('g'+k+'<br />');
+				}
+				//document.write('oo ' + k +'= ' + time_consume_offset +'<br />');
+			}
+			//document.write('oo = ' + time_consume_offset +'<br />');
+			if( judge_important_stop(j, forbidden)==true ){ // encounter forbidden stop, print '-' instead of time to skip
+				document.write('-');
+			}
+			else if( j==start_stop || judge_important_stop(select_stop_index[j], important_stop)==true){ // it's important stop, change its font face, and add the special tag at the front of its time
+				document.write('<font face="Arial Rounded MT Bold">' + special_tag + get_time(time[i][0], Math.abs(time_consume[select_stop_index[j]] - time_consume_offset) ) + '</font>');
+				//document.write('c = '+time_consume[j]+' o = ' + time_consume_offset)
+			}
+			else{ // general case, just print its time
+				document.write(get_time(time[i][0], Math.abs(time_consume[select_stop_index[j]] - time_consume_offset) ) );
+				//document.write('c2 = '+time_consume[j]+' o2 = ' + time_consume_offset)
+			}
+			document.write('</td>');
+		}
+		document.write('</tr>');
+	}
+	document.write('</table>');
+}
+
+function create_time_schedule_return(stop_name, time_consume, select_stop_index, important_stop, time){ // print the time schedule for returning
+	document.write('<table><tr>');
+	var index_x = stop_name.length - 1;
+	var index_count = 0;
+	for(var i=0; i < stop_name.length - 1; ++i ){ // sumation
+		index_count += stop_name[i].length;
+	}
+	//document.write("index_count="+index_count+" sumation!!<br />");
+	for(var i = select_stop_index.length - 1; i>=0; --i){
+		while(index_count - 1 >= select_stop_index[i] && index_x >= 0){
+			index_count -= stop_name[index_x - 1].length;
+			--index_x;
+		}
+		//document.write(index_x+", index_count="+index_count+", selected="+select_stop_index[i]+", y="+(select_stop_index[i]-index_count+stop_name[index_x].length)+"<br />");
+		document.write('<th>'
+			+ break_string_with_newline(stop_name[index_x][select_stop_index[i]-index_count])
+			+ '</th>');
+	}
+	document.write('</tr>');
+	for(var i=0; i<time.length; ++i){
+		var special_event = ['',[-1,0],[]];
+		var start_stop = select_stop_index.length - 1, end_stop = 0;
+		switch(time[i].length){
+			case 1: // format: [time]
+				break;
+			case 2: // format: [time, others]
+				special_event = get_special_tag(time[i][1]);
+				break;
+			case 3: // format: [time, start_stop, end_stop]
+				start_stop = time[i][1];
+				end_stop = time[i][2];
+				break;
+			case 4: // format: [time, start_stop, end_stop , others]
+				start_stop = time[i][1];
+				end_stop = time[i][2];
+				special_event = get_special_tag(time[i][3]);
+				break;
+			default:
+				//alert('array length error!');
+				break;
+		}
+		document.write('<tr>');
+		var special_tag = special_event[0]; // store real special tag to special_tag
+		var stop_offset = special_event[1]; // store offset event
+		if( special_event.length==3 ){ // special_event is an array storing forbidden stop
+			forbidden = special_event[2]; // store those stops in the array named 'forbidden'
+		}
+		else forbidden = []; // otherwise, be a empty array
+
+		for(var j=select_stop_index.length-1; j >= 0; --j){
+			document.write('<td>');
+			var k=0;
+			time_consume_offset = time_consume[select_stop_index[start_stop]];
+			for(k=0; k<stop_offset.length; k+=2){
+				if(stop_offset[k]==-1) break;
+				if(j<=stop_offset[k]) // have offset since stop No. stop_offset[0]
+				{
+					time_consume_offset += stop_offset[k+1];
+				}
+			}
+			if( judge_important_stop(j, forbidden)==true ){ // encounter forbidden stop, print '-' instead of time to skip
+				document.write('-');
+			}
+			else if( j==start_stop || judge_important_stop(select_stop_index[j], important_stop)==true){ // it's important stop, change its font face, and add the special tag at the front of its time
+				document.write('<font face="Arial Rounded MT Bold">' + special_tag + get_time(time[i][0], Math.abs(time_consume[select_stop_index[j]] - time_consume_offset) ) + '</font>');
+			}
+			else{ // general case, just print its time
+				document.write(get_time(time[i][0], Math.abs(time_consume[select_stop_index[j]] - time_consume_offset) ) );
+			}
+			document.write('</td>');
+		}
+		document.write('</tr>');
+	}
+	document.write('</table>');
+}
+
 function create_time_schedule(main_stop_name, time_consume, important_stop, time, isReturn){ // print the time schedule
 	document.write('<table><tr>');
 	var start_idx = (isReturn==false) ? 0 : main_stop_name.length - 1;
@@ -106,6 +258,10 @@ function create_time_schedule(main_stop_name, time_consume, important_stop, time
 	document.write('</table>');
 }
 
+function break_string_with_newline(str){
+	if(str.length<4) return str;
+	return str.substring(0,str.length/2) + '<br />' +  str.substring(str.length/2, str.length);
+}
 function get_special_tag(arr){ // add some tags of special events
 	var special_event = ''; // initialize
 	var skip_stop_array = [];
@@ -123,6 +279,7 @@ function get_special_tag(arr){ // add some tags of special events
 	}
 	return skip_stop_array.length==0 ? [special_event, offset] : [special_event, offset, skip_stop_array];
 }
+
 function judge_important_stop(idx, arr){ // find the index matching the important stop or not
 	for(var i=0; i<arr.length; ++i){
 		if(idx==arr[i]) return true;

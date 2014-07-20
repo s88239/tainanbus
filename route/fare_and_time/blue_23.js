@@ -33,8 +33,11 @@ blue_23_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-blue_23_main_stop_name = ["安平<br />工業區","臺南<br />市政府","永樂<br />市場","特力屋、<br />好市多","協成<br />社區","海尾","海東<br />國小","南天宮","國姓<br />大橋","三股","九塊厝"];
-blue_23_main_stop_time_consume = [0, 7, 15, 22, 26, 32, 35, 42, 51, 57, 65];
-blue_23_important_stop = [0, 1, 6, 10]; // 安平工業區, 臺南市政府, 海東國小, 九塊厝
-blue_23_time_go = [["9:25"],["13:00"],["15:00"]];
+//blue_23_main_stop_name = ["安平<br />工業區","臺南<br />市政府","永樂<br />市場","特力屋、<br />好市多","協成<br />社區","海尾","海東<br />國小","南天宮","國聖<br />大橋","三股","九塊厝"];
+//blue_23_main_stop_time_consume = [0, 7, 15, 22, 26, 32, 35, 42, 51, 57, 65];
+//blue_23_important_stop = [0, 1, 6, 10]; // 安平工業區, 臺南市政府, 海東國小, 九塊厝
+blue_23_selected_stop = [0,5,12,16,19,25,27,31,38,41,45]; // 安平工業區, 臺南市政府, 永樂市場, 特力屋、好市多, 協成社區, 海尾, 海東國小, 南天宮, 國聖大橋, 三股, 九塊厝
+blue_23_important_stop = [0, 5, 27, 45]; // 安平工業區, 臺南市政府, 海東國小, 九塊厝
+blue_23_time_range = [null,null,null]; // start, end, targe_stop_name
+blue_23_time_go = [["09:25"],["13:00"],["15:00"]];
 blue_23_time_return = [["10:55"],["14:40"],["16:30"]];
