@@ -69,7 +69,7 @@ select.get_fare option.option6
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>善化火車站 － 大內 － 環湖 － 蒙正</td>
+					<td>大內 － 環湖 － 玉井</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -77,7 +77,13 @@ select.get_fare option.option6
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 　蒙　正　：05:40／15:10<br />往 善化火車站：07:10／16:10</td>
+					<td>
+					<script language="javascript">
+						document.write('往 玉井：'+orange_20_time_go[0]+'／'+orange_20_time_go[orange_20_time_go.length-1]);
+						document.write('<br />');
+						document.write('往 大內：'+orange_20_time_return[0]+'／'+orange_20_time_return[orange_20_time_return.length-1]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -135,10 +141,10 @@ select.get_fare option.option6
 		<span class="byline">Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="orange">善化火車站-&gt;蒙正</font></h2>');
+			document.write('<h2><font color="orange">大內-&gt;玉井</font></h2>');
 			create_time_schedule(orange_20_main_stop_name, orange_20_main_stop_time_consume, orange_20_important_stop, orange_20_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="orange">蒙正-&gt;善化火車站</font></h2>');
+			document.write('<h2><font color="orange">玉井-&gt;大內</font></h2>');
 			create_time_schedule(orange_20_main_stop_name, orange_20_main_stop_time_consume, orange_20_important_stop, orange_20_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
@@ -154,27 +160,21 @@ select.get_fare option.option6
 		<div class="content">
 			<table>
 				<tr>
-					<th rowspan="3">善化火車站</th>
-					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵善化站</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
-					<td id="orange">
-					<p>
-						<a href="orange.html" target="_blank">橘幹線</a>、<a href="orange_1.html" target="_blank">橘1</a>、<a href="orange_2.html" target="_blank">橘2</a>、<a href="orange_3.html" target="_blank">橘3</a>、<a href="orange_4.html" target="_blank">橘4</a>、
-					</p>
-					<a href="orange_5.html" target="_blank">橘5</a>、<a href="orange_12.html" target="_blank">橘12</a>
-					</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td id="green"><a href="../green/green_1.html" target="_blank">綠1</a>、<a href="../green/green_2.html" target="_blank">綠2</a>、<a href="../green/green_3.html" target="_blank">綠3</a>、<a href="../green/green_4.html" target="_blank">綠4</a>、<a href="../green/green_11.html" target="_blank">綠11</a></td>
-				</tr>
-				<tr>
 					<th>大內公所</th>
 					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
 					<td id="orange"><a href="orange.html" target="_blank">橘幹線</a>、<a href="orange_1.html" target="_blank">橘1</a>、<a href="orange_2.html" target="_blank">橘2</a>、<a href="orange_20.html" target="_blank">橘20</a></td>
+				</tr>
+				<tr>
+					<th rowspan="2">玉井</th>
+					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
+					<td id="green">
+					<p>
+						<a href="../green/green.html" target="_blank">綠幹線</a>、<a href="../green/green_20.html" target="_blank">綠20</a>、<a href="../green/green_21.html" target="_blank">綠21</a>、<a href="../green/green_22.html" target="_blank">綠22</a>、<a href="../green/green_23.html" target="_blank">綠23</a>、
+					</p>
+					<a href="../green/green_24.html" target="_blank">綠24</a>、<a href="../green/green_25.html" target="_blank">綠25</a>、<a href="../green/green_26.html" target="_blank">綠26</a>、<a href="../green/green_27.html" target="_blank">綠27</a></td>
+				<tr>
+					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
+					<td id="orange"><a href="orange.html" target="_blank">橘幹線</a>、<a href="orange_20.html" target="_blank">橘20</a></td>
 				</tr>
 			</table>
 		</div>
