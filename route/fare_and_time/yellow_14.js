@@ -30,5 +30,5 @@ yellow_14_fare = [
 yellow_14_main_stop_name = ["白河","三間厝","鹿寮水庫","三層崎"];
 yellow_14_main_stop_time_consume = [0, 5, 13, 20];
 yellow_14_important_stop = [0, 3]; // 白河, 三層崎
-yellow_14_time_go = [["07:50"],["10:20"],["11:50"],["17:40"]];
-yellow_14_time_return = [["06:15"],["08:20"],["10:50"],["12:20"]];
+yellow_14_time_go = [["06:40"],["07:50"],["10:20"],["17:40"]];
+yellow_14_time_return = [["06:10"],["07:05"],["08:20"],["10:50"]];
