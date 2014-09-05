@@ -22,5 +22,5 @@ green_23_fare = [
 green_23_main_stop_name = ["玉井","鹿陶","鹿陶洋","楠西","密枝","社區口","雙溪<br />新社區"];
 green_23_main_stop_time_consume = [0, 7, 9, 15, 25, 32, 35];
 green_23_important_stop = [0, 3, 6]; // 玉井, 楠西, 雙溪新社區
-green_23_time_go = [["6:00"],["9:35"],["11:40"]];
-green_23_time_return = [["6:30"],["10:05"],["12:10"]];
+green_23_time_go = [["06:00"],["09:35"],["11:40"]];
+green_23_time_return = [["06:30"],["10:05"],["12:10"]];

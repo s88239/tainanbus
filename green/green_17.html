@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 綠17 路線資訊</title>
+<title>大台南公車 － 綠17 路線資訊 | Tainan Bus for FUN</title>
+<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
@@ -22,9 +23,10 @@ select.get_fare option.option5
 select.get_fare option.option6
 {background-color: #6F3;}
 </style>
-<script language="javascript" src="../route/msg.js"></script>
 <script language="javascript" src="../route/fare_and_time/green_17.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+<script language="javascript" src="../tools/msg.js"></script>
+<script language="javascript" src="../tools/transfer_information.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -56,21 +58,24 @@ select.get_fare option.option6
 		</div>
 		<img src="../route/green/g17.jpg">
 		<p></p>
-		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k__oSMhm8dFA" width="800" height="500"></iframe>-->
+		<a href="javascript:alert('尚無提供此路線地圖')">
+			<img src="../img/google_map_logo.png"><br />
+			<strong><font color="green">查詢路線Google Map</font></strong>
+		</a>
 	</div>
 </div>
 <div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 綠17　路線資訊</h2>
+			<h2>大台南公車 ─ 綠17 路線資訊</h2>
 			<span class="byline">Tainan Bus Green 17, Route Information</span>
 		</div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>安工區 － 大灣 － 新化</td>
+					<td>安平工業區 － 大灣 － 新化</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -78,7 +83,13 @@ select.get_fare option.option6
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 新　化：06:10／21:25<br />往 安工區：06:10／21:00</td>
+					<td>
+					<script language="javascript">
+						document.write('往 新　化：'+green_17_time_go[0][0]+'／'+green_17_time_go[green_17_time_go.length-1][0]);
+						document.write('<br />');
+						document.write('往 安工區：'+green_17_time_return[0][0]+'／'+green_17_time_return[green_17_time_return.length-1][0]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -98,8 +109,8 @@ select.get_fare option.option6
 	<a name="fare"></a>
 	<div id="faretable" class="container">
 		<div class="title">
-			<h2>票價表</h2>
-			<span class="byline">Ticket Fare</span> </div>
+			<h2>大台南公車 ─ 綠17 票價表</h2>
+			<span class="byline">Tainan Bus Green 17, Bus Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
 				create_select_menu(green_17_interval_stop, 6, 'green_17');
@@ -133,14 +144,14 @@ select.get_fare option.option6
 <div id="timetable">
 	<a name="time"></a>
 	<div class="title">
-		<h2>時刻表</h2>
-		<span class="byline">Bus schedule</span> </div>
+		<h2>大台南公車 ─ 綠17 時刻表</h2>
+		<span class="byline">Tainan Bus Green 17, Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="green">安工區-&gt;新化</font></h2>');
+			document.write('<h2><font color="green">安平工業區-&gt;新化</font></h2>');
 			create_time_schedule(green_17_main_stop_name, green_17_main_stop_time_consume, green_17_important_stop, green_17_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="green">新化-&gt;安工區</font></h2>');
+			document.write('<h2><font color="green">新化-&gt;安平工業區</font></h2>');
 			create_time_schedule(green_17_main_stop_name, green_17_main_stop_time_consume, green_17_important_stop, green_17_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
@@ -150,52 +161,14 @@ select.get_fare option.option6
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－綠17 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus Green 17, Transfer information</span>
+			<h2>大台南公車 ─ 綠17 主要轉乘點資訊</h2>
+			<span class="byline">Tainan Bus Green 17, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
-				<tr>
-					<th rowspan="7">台南火車站</th>
-					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵台南站</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/taiwantrip_logo.png"></td>
-					<td id="tour_bus"><a href="../tour_bus/tour_bus_88.html" target="_blank">88</a>、<a href="../tour_bus/tour_bus_99.html" target="_blank">99</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
-					<td id="city_bus"><p><a href="../city_bus/city_bus_0.html" target="_blank">0左/右</a>、<a href="../city_bus/city_bus_1.html" target="_blank">1</a>、<a href="../city_bus/city_bus_2.html" target="_blank">2</a>、<a href="../city_bus/city_bus_3.html" target="_blank">3</a>、<a href="../city_bus/city_bus_5.html" target="_blank">5</a>、<a href="../city_bus/city_bus_6.html" target="_blank">6</a>、<a href="../city_bus/city_bus_7.html" target="_blank">7</a>、<a href="../city_bus/city_bus_9.html" target="_blank">9</a>、</p><a href="../city_bus/city_bus_10.html" target="_blank">10</a>、<a href="../city_bus/city_bus_11.html" target="_blank">11</a>、<a href="../city_bus/city_bus_14.html" target="_blank">14</a>、<a href="../city_bus/city_bus_18.html" target="_blank">18</a>、<a href="../city_bus/city_bus_21.html" target="_blank">21</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td id="green"><a href="green.html" target="_blank">綠幹線</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
-					<td id="blue"><a href="../blue/blue.html" target="_blank">藍幹線</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
-					<td id="red"><a href="../red/red.html" target="_blank">紅幹線</a>、<a href="../red/red_1.html" target="_blank">紅1</a>、<a href="../red/red_2.html" target="_blank">紅2</a>、<a href="../red/red_3.html" target="_blank">紅3</a>、<a href="../red/red_4.html" target="_blank">紅4</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
-					<td id="orange"><a href="../orange/orange_3.html" target="_blank">橘3</a>、<a href="../orange/orange_12.html" target="_blank">橘12</a></td>
-				</tr>
-				<tr>
-					<th>新化</th>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td id="green">
-					<p>
-						<a href="green.html" target="_blank">綠幹線</a>、<a href="green_1.html" target="_blank">綠1</a>、<a href="green_2.html" target="_blank">綠2</a>、<a href="green_3.html" target="_blank">綠3</a>、<a href="green_4.html" target="_blank">綠4</a>、
-					</p>
-					<p>
-						<a href="green_6.html" target="_blank">綠6</a>、<a href="green_7.html" target="_blank">綠7</a>、<a href="green_10.html" target="_blank">綠10</a>、<a href="green_11.html" target="_blank">綠11</a>、<a href="green_12.html" target="_blank">綠12</a>、
-					</p>
-					<a href="green_13.html" target="_blank">綠13</a>、<a href="green_14.html" target="_blank">綠14</a>、<a href="green_15.html" target="_blank">綠15</a>、<a href="green_16.html" target="_blank">綠16</a></td>
-				</tr>
+				<script type="text/javascript">
+					document.write(transfer_tainan_railway_station + transfer_hsinhua);
+				</script>
 			</table>
 		</div>
 	</div>

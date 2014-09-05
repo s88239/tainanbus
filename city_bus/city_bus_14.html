@@ -2,16 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>台南市公車 ─ 14路 路線資訊</title>
+<title>大台南公車 － 14路 路線資訊 | Tainan Bus for FUN</title>
+<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
 @import url("../css/table_style.css");
 @import url("../css/default.css");
 </style>
-<script language="javascript" src="../route/msg.js"></script>
 <script language="javascript" src="../route/fare_and_time/city_bus_14.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+<script language="javascript" src="../tools/msg.js"></script>
+<script language="javascript" src="../tools/transfer_information.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -43,21 +45,23 @@
 		</div>
 		<img src="../route/city_bus/14.jpg">
 		<p></p>
-
-		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k7U0sQhq2PSo" width="800" height="500"></iframe>-->
+		<a href="javascript:alert('尚無提供此路線地圖')">
+			<img src="../img/google_map_logo.png"><br />
+			<strong><font color="green">查詢路線Google Map</font></strong>
+		</a>
 	</div>
 </div>
 <div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>台南市公車 ─ 14路　路線資訊</h2>
+			<h2>大台南公車 ─ 14路 路線資訊</h2>
 			<span class="byline">Tainan City Bus No.14, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>火車站 － 億載金城</td>
+					<td>臺南火車站 － 億載金城</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -65,7 +69,13 @@
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 億載金城：07:00／18:00<br />往 　火車站：06:20／18:50</td>
+					<td>
+					<script language="javascript">
+						document.write('往 億載　金城：'+city_bus_14_time_go[0][0]+'／'+city_bus_14_time_go[city_bus_14_time_go.length-1][0]);
+						document.write('<br />');
+						document.write('往 臺南火車站：'+city_bus_14_time_return[0][0]+'／'+city_bus_14_time_return[city_bus_14_time_return.length-1][0]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -84,26 +94,23 @@
 	<a name="fare"></a>
 	<div id="faretable" class="container">
 		<div class="title">
-			<h2>票價表</h2>
-			<span class="byline">Ticket Fare</span> </div>
+			<h2>大台南公車 ─ 14路 票價表</h2>
+			<span class="byline">Tainan City Bus No.14, Bus Fare</span> </div>
 		<div class="content">
 			<h1>全路線一段票</h1>
 			<br/>
 			<table>
 				<tr>
 					<th></th>
-					<th>全票</th>
-					<th>半票</th>
+					<th>全票</th><th>半票</th>
 				</tr>
 				<tr>
 					<td><b>投現</b></td>
-					<td>18</td>
-					<td>9</td>
+					<td>18</td><td>9</td>
 				</tr>
 				<tr>
 					<td><b>電子票證</b></td>
-					<td>18</td>
-					<td>9</td>
+					<td>18</td><td>9</td>
 				</tr>
 			</table>
 			<p>　</p>
@@ -117,15 +124,15 @@
 <div id="timetable">
 	<a name="time"></a>
 	<div class="title">
-		<h2>時刻表</h2>
-		<span class="byline">Bus schedule</span>
+		<h2>大台南公車 ─ 14路 時刻表</h2>
+		<span class="byline">Tainan City Bus No.14, Bus schedule</span>
 	</div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2>火車站-&gt;億載金城</h2>');
+			document.write('<h2>臺南火車站-&gt;億載金城</h2>');
 			create_time_schedule(city_bus_14_main_stop_name, city_bus_14_main_stop_time_consume, city_bus_14_important_stop, city_bus_14_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2>億載金城-&gt;火車站</h2>');
+			document.write('<h2>億載金城-&gt;臺南火車站</h2>');
 			create_time_schedule(city_bus_14_return_main_stop_name, city_bus_14_main_stop_time_consume, city_bus_14_important_stop, city_bus_14_time_return, true);
 			document.write('<p>　</p>');
 			document.write(TimeScheduleMSG);
@@ -136,40 +143,14 @@
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>台南市公車 － 14路 主要轉乘點資訊</h2>
-			<span class="byline">Tainan city bus NO.14, Transfer information</span>
+			<h2>大台南公車 ─ 14路 主要轉乘點資訊</h2>
+			<span class="byline">Tainan City Bus No.14, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
-				<tr>
-					<th rowspan="7">台南火車站</th>
-					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵台南站</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/taiwantrip_logo.png"></td>
-					<td>88、99</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
-					<td>市區公車(除15、20路)</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td>綠幹線</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
-					<td>藍幹線</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
-					<td>紅幹線、紅1、紅2、紅3、紅4</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
-					<td>橘3、橘12</td>
-				</tr>
+				<script type="text/javascript">
+					document.write(transfer_tainan_railway_station);
+				</script>
 			</table>
 		</div>
 	</div>

@@ -28,5 +28,5 @@ orange_5_fare = [
 orange_5_main_stop_name = ["善化<br />火車站","善化<br />高中","善化<br />啤酒廠","新中","官田<br />國小","嘉南里","六甲"];
 orange_5_main_stop_time_consume = [0, 5, 8, 14, 22, 30, 35];
 orange_5_important_stop = [0, 6]; // 善化火車站, 六甲
-orange_5_time_go = [["9:05"],["11:25"],["17:10"]];
-orange_5_time_return = [["9:40"],["12:10"],["17:45"]];
+orange_5_time_go = [["09:05"],["11:25"],["17:10"]];
+orange_5_time_return = [["09:40"],["12:10"],["17:45"]];

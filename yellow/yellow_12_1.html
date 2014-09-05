@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 黃12-1 路線資訊</title>
+<title>大台南公車 － 黃12-1 路線資訊 | Tainan Bus for FUN</title>
+<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
@@ -22,9 +23,10 @@ select.get_fare option.option5
 select.get_fare option.option6
 {background-color: #FCFF19;}
 </style>
-<script language="javascript" src="../route/msg.js"></script>
 <script language="javascript" src="../route/fare_and_time/yellow_12_1.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+<script language="javascript" src="../tools/msg.js"></script>
+<script language="javascript" src="../tools/transfer_information.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -56,14 +58,17 @@ select.get_fare option.option6
 		</div>
 		<img src="../route/yellow/y12_1.jpg">
 		<p></p>
-		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kbnckjpTnNGs" width="800" height="500"></iframe>-->
+		<a href="javascript:alert('尚無提供此路線地圖')">
+			<img src="../img/google_map_logo.png"><br />
+			<strong><font color="green">查詢路線Google Map</font></strong>
+		</a>
 	</div>
 </div>
 <div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 黃12-1　路線資訊</h2>
+			<h2>大台南公車 ─ 黃12-1 路線資訊</h2>
 			<span class="byline">Tainan Bus Yellow 12-1, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
@@ -79,9 +84,9 @@ select.get_fare option.option6
 					<td>首／末班車發車時刻</td>
 					<td>
 					<script language="javascript">
-					document.write('往 福顯宮：'+yellow_12_1_time_go[0]+'／'+yellow_12_1_time_go[yellow_12_1_time_go.length-1]);
-					document.write('<br />');
-					document.write('往 白　河：'+yellow_12_1_time_return[0]+'／'+yellow_12_1_time_return[yellow_12_1_time_return.length-1]);
+						document.write('往 福顯宮：'+yellow_12_1_time_go[0][0]+'／'+yellow_12_1_time_go[yellow_12_1_time_go.length-1][0]);
+						document.write('<br />');
+						document.write('往 白　河：'+yellow_12_1_time_return[0]+'／'+yellow_12_1_time_return[yellow_12_1_time_return.length-1][0]);
 					</script>
 					</td>
 				</tr>
@@ -102,8 +107,8 @@ select.get_fare option.option6
 	<a name="fare"></a>
 	<div id="faretable" class="container">
 		<div class="title">
-			<h2>票價表</h2>
-			<span class="byline">Ticket Fare</span> </div>
+			<h2>大台南公車 ─ 黃12-1 票價表</h2>
+			<span class="byline">Tainan Bus Yellow 12-1, Bus Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
 				create_select_menu(yellow_12_1_interval_stop, 6, 'yellow_12_1');
@@ -137,8 +142,8 @@ select.get_fare option.option6
 <div id="timetable">
 	<a name="time"></a>
 	<div class="title">
-		<h2>時刻表</h2>
-		<span class="byline">Bus schedule</span> </div>
+		<h2>大台南公車 ─ 黃12-1 時刻表</h2>
+		<span class="byline">Tainan Bus Yellow 12-1, Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
 			document.write('<h2><font color="orange">白河-&gt;福顯宮</font></h2>');
@@ -154,21 +159,14 @@ select.get_fare option.option6
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－黃12-1 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus Yellow 12-1, Transfer information</span>
+			<h2>大台南公車 ─ 黃12-1 主要轉乘點資訊</h2>
+			<span class="byline">Tainan Bus Yellow 12-1, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
-				<tr>
-					<th>白河</th>
-					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
-					<td id="yellow">
-					<p>
-						<a href="../yellow/yellow.html" target="_blank">黃幹線</a>、<a href="../yellow/yellow_10.html" target="_blank">黃10</a>、<a href="../yellow/yellow_11.html" target="_blank">黃11</a>、<a href="../yellow/yellow_12.html" target="_blank">黃12</a>、
-					</p>
-					<a href="../yellow/yellow_13.html" target="_blank">黃13</a>、<a href="../yellow/yellow_14.html" target="_blank">黃14</a>、<a href="../yellow/yellow_15.html" target="_blank">黃15</a></a>
-					</td>
-				</tr>
+				<script type="text/javascript">
+					document.write(transfer_baihe);
+				</script>
 			</table>
 		</div>
 	</div>

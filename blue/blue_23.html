@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 藍23 路線資訊</title>
+<title>大台南公車 － 藍23 路線資訊 | Tainan Bus for FUN</title>
+<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
@@ -22,9 +23,10 @@ select.get_fare option.option5
 select.get_fare option.option6
 {background-color: #5755FF;}
 </style>
-<script language="javascript" src="../route/msg.js"></script>
 <script language="javascript" src="../route/fare_and_time/blue_23.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+<script language="javascript" src="../tools/msg.js"></script>
+<script language="javascript" src="../tools/transfer_information.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -56,21 +58,24 @@ select.get_fare option.option6
 		</div>
 		<img src="../route/blue/b23.jpg">
 		<p></p>
-		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k__oSMhm8dFA" width="800" height="500"></iframe>-->
+		<a href="javascript:alert('尚無提供此路線地圖')">
+			<img src="../img/google_map_logo.png"><br />
+			<strong><font color="green">查詢路線Google Map</font></strong>
+		</a>
 	</div>
 </div>
 <div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 藍23　路線資訊</h2>
+			<h2>大台南公車 ─ 藍23 路線資訊</h2>
 			<span class="byline">Tainan Bus Blue 23, Route Information</span>
 		</div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>安工區 － 海尾 － 九塊厝</td>
+					<td>安平工業區 － 海尾 － 九塊厝</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -80,9 +85,9 @@ select.get_fare option.option6
 					<td>首／末班車發車時刻</td>
 					<td>
 					<script language="javascript">
-					document.write('往 九塊厝：'+blue_23_time_go[0]+'／'+blue_23_time_go[blue_23_time_go.length-1]);
-					document.write('<br />');
-					document.write('往 安工區：'+blue_23_time_return[0]+'／'+blue_23_time_return[blue_23_time_return.length-1]);
+						document.write('往 九塊厝：'+blue_23_time_go[0][0]+'／'+blue_23_time_go[blue_23_time_go.length-1][0]);
+						document.write('<br />');
+						document.write('往 安工區：'+blue_23_time_return[0][0]+'／'+blue_23_time_return[blue_23_time_return.length-1][0]);
 					</script>
 					</td>
 				</tr>
@@ -104,8 +109,8 @@ select.get_fare option.option6
 	<a name="fare"></a>
 	<div id="faretable" class="container">
 		<div class="title">
-			<h2>票價表</h2>
-			<span class="byline">Ticket Fare</span> </div>
+			<h2>大台南公車 ─ 藍23 票價表</h2>
+			<span class="byline">Tainan Bus Blue 23, Bus Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
 				create_select_menu(blue_23_interval_stop, 6, 'blue_23');
@@ -139,15 +144,17 @@ select.get_fare option.option6
 <div id="timetable">
 	<a name="time"></a>
 	<div class="title">
-		<h2>時刻表</h2>
-		<span class="byline">Bus schedule</span> </div>
+		<h2>大台南公車 ─ 藍23 時刻表</h2>
+		<span class="byline">Tainan Bus Blue 23, Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="blue">安工區-&gt;九塊厝</font></h2>');
-			create_time_schedule_go(blue_23_interval_stop, blue_23_stop_time_consume, blue_23_selected_stop, blue_23_important_stop, blue_23_time_go);
+			document.write('<h2><font color="blue">安平工業區-&gt;九塊厝</font></h2>');
+			create_time_schedule(blue_23_main_stop_name, blue_23_main_stop_time_consume, blue_23_important_stop, blue_23_time_go, false);
+			//create_time_schedule_go(blue_23_interval_stop, blue_23_stop_time_consume, blue_23_selected_stop, blue_23_important_stop, blue_23_time_go);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="blue">九塊厝-&gt;安工區</font></h2>');
-			create_time_schedule_return(blue_23_interval_stop, blue_23_stop_time_consume, blue_23_selected_stop, blue_23_important_stop, blue_23_time_return);
+			document.write('<h2><font color="blue">九塊厝-&gt;安平工業區</font></h2>');
+			create_time_schedule(blue_23_main_stop_name, blue_23_main_stop_time_consume, blue_23_important_stop, blue_23_time_return, true);
+			//create_time_schedule_return(blue_23_interval_stop, blue_23_stop_time_consume, blue_23_selected_stop, blue_23_important_stop, blue_23_time_return);
 			document.write(TimeScheduleMSG);
 		</script>
 	</div>
@@ -156,37 +163,14 @@ select.get_fare option.option6
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－藍23 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus Blue 23, Transfer information</span>
+			<h2>大台南公車 ─ 藍23 主要轉乘點資訊</h2>
+			<span class="byline">Tainan Bus Blue 23, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
-				<tr>
-					<th rowspan="3">安平工業區</th>
-					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
-					<td id="blue"><a href="blue.html" target="_blank">藍幹線</a>、<a href="blue_23.html" target="_blank">藍23</a>、<a href="blue_24.html" target="_blank">藍24</a></td>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
-					<td id="red"><a href="../red/red.html" target="_blank">紅幹線</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td id="green"><a href="../green/green_17.html" target="_blank">綠17</a></td>
-				</tr>
-				<tr>
-					<th rowspan="2">海東國小</th>
-					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
-					<td id="city_bus"><a href="../city_bus/city_bus_3.html" target="_blank">3</a>、<a href="../city_bus/city_bus_7.html" target="_blank">7</a>、<a href="../city_bus/city_bus_10.html" target="_blank">10</a>、<a href="../city_bus/city_bus_11.html" target="_blank">11</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
-					<td id="blue"><a href="blue_23.html" target="_blank">藍23</a>、<a href="blue_24.html" target="_blank">藍24</a></td>
-				</tr>
-				<tr>
-					<th>九塊厝</th>
-					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
-					<td id="blue"><a href="blue_21.html" target="_blank">藍21</a>、<a href="blue_22.html" target="_blank">藍22</a>、<a href="blue_23.html" target="_blank">藍23</a></td>
-				</tr>
+				<script type="text/javascript">
+					document.write(transfer_anping_industrial_zone + transfer_haidong_elementary_school + transfer_jiukuaicuo);
+				</script>
 			</table>
 		</div>
 	</div>

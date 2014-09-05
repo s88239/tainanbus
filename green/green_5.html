@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 綠5 路線資訊</title>
+<title>大台南公車 － 綠5 路線資訊 | Tainan Bus for FUN</title>
+<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
@@ -22,9 +23,10 @@ select.get_fare option.option5
 select.get_fare option.option6
 {background-color: #6F3;}
 </style>
-<script language="javascript" src="../route/msg.js"></script>
 <script language="javascript" src="../route/fare_and_time/green_5.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+<script language="javascript" src="../tools/msg.js"></script>
+<script language="javascript" src="../tools/transfer_information.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -56,14 +58,17 @@ select.get_fare option.option6
 		</div>
 		<img src="../route/green/g5.jpg">
 		<p></p>
-		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k__oSMhm8dFA" width="800" height="500"></iframe>-->
+		<a href="javascript:alert('尚無提供此路線地圖')">
+			<img src="../img/google_map_logo.png"><br />
+			<strong><font color="green">查詢路線Google Map</font></strong>
+		</a>
 	</div>
 </div>
 <div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 綠5　路線資訊</h2>
+			<h2>大台南公車 ─ 綠5 路線資訊</h2>
 			<span class="byline">Tainan Bus Green 5, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
@@ -77,7 +82,13 @@ select.get_fare option.option6
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td>往 　大　社　：08:00／18:40<br />往 永康火車站：07:25／17:50</td>
+					<td>
+					<script language="javascript">
+						document.write('往 　大　社　：'+green_5_time_go[0][0]+'／'+green_5_time_go[green_5_time_go.length-1][0]);
+						document.write('<br />');
+						document.write('往 永康火車站：'+green_5_time_return[0][0]+'／'+green_5_time_return[green_5_time_return.length-1][0]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -96,8 +107,8 @@ select.get_fare option.option6
 	<a name="fare"></a>
 	<div id="faretable" class="container">
 		<div class="title">
-			<h2>票價表</h2>
-			<span class="byline">Ticket Fare</span> </div>
+			<h2>大台南公車 ─ 綠5 票價表</h2>
+			<span class="byline">Tainan Bus Green 5, Bus Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
 				create_select_menu(green_5_interval_stop, 6, 'green_5');
@@ -131,8 +142,8 @@ select.get_fare option.option6
 <div id="timetable">
 	<a name="time"></a>
 	<div class="title">
-		<h2>時刻表</h2>
-		<span class="byline">Bus schedule</span> </div>
+		<h2>大台南公車 ─ 綠5 時刻表</h2>
+		<span class="byline">Tainan Bus Green 5, Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
 			document.write('<h2><font color="green">永康火車站-&gt;大社</font></h2>');
@@ -148,34 +159,14 @@ select.get_fare option.option6
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－綠5 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus Green 5, Transfer information</span>
+			<h2>大台南公車 ─ 綠5 主要轉乘點資訊</h2>
+			<span class="byline">Tainan Bus Green 5, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
-				<tr>
-					<th rowspan="3">永康火車站</th>
-					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵永康站</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td id="green"><a href="green_5.html" target="_blank">綠5</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
-					<td id="red"><a href="../red/red_10.html" target="_blank">紅10</a></td>
-				</tr>
-				<tr>
-					<th>永康</th>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td id="green"><a href="green.html" target="_blank">綠幹線</a></td>
-				</tr>
-				<tr>
-					<th>新市火車站</th>
-					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵新市站</td>
-				</tr>
+				<script type="text/javascript">
+					document.write(transfer_yongkang_railway_station + transfer_yongkang + transfer_hsinhsih_railway_station);
+				</script>
 			</table>
 		</div>
 	</div>

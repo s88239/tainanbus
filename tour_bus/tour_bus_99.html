@@ -3,16 +3,18 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>台灣好行 ─ 99路 路線資訊</title>
+<title>大台南公車 － 台灣好行99路 路線資訊 | Tainan Bus for FUN</title>
+<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
 @import url("../css/table_style.css");
 @import url("../css/default.css");
 </style>
-<script language="javascript" src="../route/msg.js"></script>
 <script language="javascript" src="../route/fare_and_time/tour_bus_99.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+<script language="javascript" src="../tools/msg.js"></script>
+<script language="javascript" src="../tools/transfer_information.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -39,25 +41,28 @@
 	<div id="banner">&nbsp;</div>
 	<div id="route">
 		<div class="title">
-			<h2>台灣好行 ─ 99路 路線圖</h2>
+			<h2>大台南公車 ─ 台灣好行99路 路線圖</h2>
 			<span class="byline">Taiwan Tourist Shuttle No.99, Route Map</span>
 		</div>
 		<img src="../route/tour_bus/99.jpg">
 		<p></p>
-		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.k7U0sQhq2PSo" width="800" height="500"></iframe>-->
+		<a href="javascript:alert('尚無提供此路線地圖')">
+			<img src="../img/google_map_logo.png"><br />
+			<strong><font color="green">查詢路線Google Map</font></strong>
+		</a>
 	</div>
 </div>
 <div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>台灣好行 ─ 99路　路線資訊</h2>
+			<h2>大台南公車 ─ 台灣好行99路 路線資訊</h2>
 			<span class="byline">Taiwan Tourist Shuttle No.99, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>臺南公園 － 七股鹽山</td>
+					<td>臺南公園 － 四草 － 七股鹽山</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -65,7 +70,18 @@
 				</tr>
 				<tr>
 					<td>首／末班車發車時刻</td>
-					<td><b>平日</b><br />往 七股鹽山：09:45／14:45<br />往 臺南公園：11:55／16:55<br /><b>假日</b><br />往 七股鹽山：08:45／17:15<br />往 臺南公園：10:55／18:10</td>
+					<td>
+					<script language="javascript">
+						document.write('<font color="#FFFFFF">平日</font><br />');
+						document.write('往 七股鹽山：'+tour_bus_99_time_go[0][0]+'／'+tour_bus_99_time_go[tour_bus_99_time_go.length-1][0]);
+						document.write('<br />');
+						document.write('往 臺南公園：'+tour_bus_99_time_return[0][0]+'／'+tour_bus_99_time_return[tour_bus_99_time_return.length-1][0]+'<br />');
+						document.write('<font color="#FFFFFF">假日</font><br />');
+						document.write('往 七股鹽山：'+tour_bus_99_holiday_time_go[0][0]+'／'+tour_bus_99_holiday_time_go[tour_bus_99_holiday_time_go.length-1][0]);
+						document.write('<br />');
+						document.write('往 臺南公園：'+tour_bus_99_holiday_time_return[0][0]+'／'+tour_bus_99_holiday_time_return[tour_bus_99_holiday_time_return.length-1][0]);
+					</script>
+					</td>
 				</tr>
 				<tr>
 					<td>班距</td>
@@ -73,7 +89,7 @@
 				</tr>
 				<tr>
 					<td>收費方式</td>
-					<td>一段票</td>
+					<td>二段票 分段點：四草野生動物保護區</td>
 				</tr>
 			</table>
 			<p>　</p>
@@ -84,26 +100,23 @@
 	<a name="fare"></a>
 	<div id="faretable" class="container">
 		<div class="title">
-			<h2>票價表</h2>
-			<span class="byline">Ticket Fare</span> </div>
+			<h2>大台南公車 ─ 台灣好行99路 票價表</h2>
+			<span class="byline">Taiwan Tourist Shuttle No.99, Bus Fare</span> </div>
 		<div class="content">
-			<h1>全路線一段票</h1>
-			<br/>
+			<h1>兩段票收費</h1>
+			<h2><u>分段點：四草野生動物保護區</u></h2><br />
 			<table>
 				<tr>
 					<th></th>
-					<th>全票</th>
-					<th>半票</th>
+					<th>二段票</th><th>一段票</th>
 				</tr>
 				<tr>
 					<td><b>投現</b></td>
-					<td>18</td>
-					<td>9</td>
+					<td>30</td><td>18</td>
 				</tr>
 				<tr>
 					<td><b>電子票證</b></td>
-					<td>18</td>
-					<td>9</td>
+					<td>27</td><td>18</td>
 				</tr>
 			</table>
 			<p>　</p>
@@ -117,8 +130,8 @@
 <div id="timetable">
 	<a name="time"></a>
 	<div class="title">
-		<h2>時刻表</h2>
-		<span class="byline">Bus schedule</span>
+		<h2>大台南公車 ─ 台灣好行99路 時刻表</h2>
+		<span class="byline">Taiwan Tourist Shuttle No.99, Bus schedule</span>
 	</div>
 	<div class="content">
 		<script language="javascript">
@@ -130,10 +143,10 @@
 			create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_time_return, true);
 			document.write('<p>　</p>');
 			document.write('<h1><font color="#CC0000">假日班表</font></h1>');
-			document.write('<h2>臺南公園-&gt;七股鹽山</h2>');
+			document.write('<h2>臺南公園-&gt;四草野生動物保護區/七股鹽山</h2>');
 			create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_holiday_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2>七股鹽山-&gt;臺南公園</h2>');
+			document.write('<h2>四草野生動物保護區/七股鹽山-&gt;臺南公園</h2>');
 			create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_holiday_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>
@@ -156,40 +169,14 @@
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>台灣好行 ─ 99路 主要轉乘點資訊</h2>
+			<h2>大台南公車 ─ 台灣好行99路 主要轉乘點資訊</h2>
 			<span class="byline">Taiwan Tourist Shuttle No.99, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
-				<tr>
-					<th rowspan="7">台南火車站</th>
-					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵台南站</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/taiwantrip_logo.png"></td>
-					<td id="tour_bus"><a href="../tour_bus/tour_bus_99.html" target="_blank">99</a>、<a href="../tour_bus/tour_bus_99.html" target="_blank">99</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/city_bus_transfer_logo.png"></td>
-					<td id="city_bus"><p><a href="../city_bus/city_bus_0.html" target="_blank">0左/右</a>、<a href="../city_bus/city_bus_1.html" target="_blank">1</a>、<a href="../city_bus/city_bus_2.html" target="_blank">2</a>、<a href="../city_bus/city_bus_3.html" target="_blank">3</a>、<a href="../city_bus/city_bus_5.html" target="_blank">5</a>、<a href="../city_bus/city_bus_6.html" target="_blank">6</a>、<a href="../city_bus/city_bus_7.html" target="_blank">7</a>、<a href="../city_bus/city_bus_9.html" target="_blank">9</a>、</p><a href="../city_bus/city_bus_10.html" target="_blank">10</a>、<a href="../city_bus/city_bus_11.html" target="_blank">11</a>、<a href="../city_bus/city_bus_14.html" target="_blank">14</a>、<a href="../city_bus/city_bus_18.html" target="_blank">18</a>、<a href="../city_bus/city_bus_21.html" target="_blank">21</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/green_transfer_logo.png"></td>
-					<td id="green"><a href="../green/green.html" target="_blank">綠幹線</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/blue_transfer_logo.png"></td>
-					<td id="blue"><a href="../blue/blue.html" target="_blank">藍幹線</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/red_transfer_logo.png"></td>
-					<td id="red"><a href="../red/red.html" target="_blank">紅幹線</a>、<a href="../red/red_1.html" target="_blank">紅1</a>、<a href="../red/red_2.html" target="_blank">紅2</a>、<a href="../red/red_3.html" target="_blank">紅3</a>、<a href="../red/red_4.html" target="_blank">紅4</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
-					<td id="orange"><a href="../orange/orange_3.html" target="_blank">橘3</a>、<a href="../orange/orange_11.html" target="_blank">橘11</a>、<a href="../orange/orange_12.html" target="_blank">橘12</a></td>
-				</tr>
+				<script type="text/javascript">
+					document.write(transfer_tainan_railway_station);
+				</script>
 			</table>
 		</div>
 	</div>

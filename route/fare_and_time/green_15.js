@@ -14,5 +14,5 @@ green_15_fare = [
 green_15_main_stop_name = ["新化","新化國中","佛顓寺","知義營房","新和教會","五甲勢"];
 green_15_main_stop_time_consume = [0, 1, 5, 10, 13, 15];
 green_15_important_stop = [0, 5]; // 新化, 五甲勢
-green_15_time_go = [["7:50"],["9:40"],["10:50"]];
-green_15_time_return = [["8:05"],["9:55"],["11:05"]];
+green_15_time_go = [["07:50"],["09:40"],["10:50"]];
+green_15_time_return = [["08:05"],["09:55"],["11:05"]];

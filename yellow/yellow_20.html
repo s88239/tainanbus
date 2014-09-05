@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 ─ 黃20 路線資訊</title>
+<title>大台南公車 － 黃20 路線資訊 | Tainan Bus for FUN</title>
+<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <style type="text/css">
@@ -22,9 +23,10 @@ select.get_fare option.option5
 select.get_fare option.option6
 {background-color: #FCFF19;}
 </style>
-<script language="javascript" src="../route/msg.js"></script>
 <script language="javascript" src="../route/fare_and_time/yellow_20.js"></script>
 <script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
+<script language="javascript" src="../tools/msg.js"></script>
+<script language="javascript" src="../tools/transfer_information.js"></script>
 </head>
 <body>
 <div id="header-wrapper">
@@ -56,14 +58,17 @@ select.get_fare option.option6
 		</div>
 		<img src="../route/yellow/y20.jpg">
 		<p></p>
-		<!--<iframe src="https://mapsengine.google.com/map/embed?mid=zT0XIOZRtlhg.kbnckjpTnNGs" width="800" height="500"></iframe>-->
+		<a href="javascript:alert('尚無提供此路線地圖')">
+			<img src="../img/google_map_logo.png"><br />
+			<strong><font color="green">查詢路線Google Map</font></strong>
+		</a>
 	</div>
 </div>
 <div id="wrapper2">
 	<a name="info"></a>
 	<div id="routeinfo" class="container">
 		<div class="title">
-			<h2>大台南公車 ─ 黃20　路線資訊</h2>
+			<h2>大台南公車 ─ 黃20 路線資訊</h2>
 			<span class="byline">Tainan Bus Yellow 20, Route Information</span> </div>
 		<div class="content">
 			<table border="0">
@@ -79,9 +84,9 @@ select.get_fare option.option6
 					<td>首／末班車發車時刻</td>
 					<td>
 					<script language="javascript">
-					document.write('往 林鳯營：'+yellow_20_time_go[0]+'／'+yellow_20_time_go[yellow_20_time_go.length-1]);
-					document.write('<br />');
-					document.write('往 麻　豆：'+yellow_20_time_return[0]+'／'+yellow_20_time_return[yellow_20_time_return.length-1]);
+						document.write('往 林鳯營：'+yellow_20_time_go[0][0]+'／'+yellow_20_time_go[yellow_20_time_go.length-1][0]);
+						document.write('<br />');
+						document.write('往 麻　豆：'+yellow_20_time_return[0][0]+'／'+yellow_20_time_return[yellow_20_time_return.length-1][0]);
 					</script>
 					</td>
 				</tr>
@@ -102,8 +107,8 @@ select.get_fare option.option6
 	<a name="fare"></a>
 	<div id="faretable" class="container">
 		<div class="title">
-			<h2>票價表</h2>
-			<span class="byline">Ticket Fare</span> </div>
+			<h2>大台南公車 ─ 黃20 票價表</h2>
+			<span class="byline">Tainan Bus Yellow 20, Bus Fare</span> </div>
 		<div class="content">
 			<script language="javascript">
 				create_select_menu(yellow_20_interval_stop, 6, 'yellow_20');
@@ -137,8 +142,8 @@ select.get_fare option.option6
 <div id="timetable">
 	<a name="time"></a>
 	<div class="title">
-		<h2>時刻表</h2>
-		<span class="byline">Bus schedule</span> </div>
+		<h2>大台南公車 ─ 黃20 時刻表</h2>
+		<span class="byline">Tainan Bus Yellow 20, Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
 			document.write('<h2><font color="orange">果菜市場-&gt;林鳳營火車站</font></h2>');
@@ -154,37 +159,14 @@ select.get_fare option.option6
 	<a name="transfer"></a>
 	<div id="transfer" class="container">
 		<div class="title">
-			<h2>大台南公車－黃20 主要轉乘點資訊</h2>
-			<span class="byline">Tainan bus Yellow 20, Transfer information</span>
+			<h2>大台南公車 ─ 黃20 主要轉乘點資訊</h2>
+			<span class="byline">Tainan Bus Yellow 20, Transfer information</span>
 		</div>
 		<div class="content">
 			<table>
-				<tr>
-					<th rowspan="2">果菜市場</th>
-					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
-					<td id="orange"><a href="../orange/orange.html" target="_blank">橘幹線</a>、<a href="../orange/orange_10.html" target="_blank">橘10</a>、<a href="../orange/orange_11.html" target="_blank">橘11</a>、<a href="../orange/orange_12.html" target="_blank">橘12</a></td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
-					<td id="yellow"><a href="../yellow/yellow.html" target="_blank">黃幹線</a>、<a href="../yellow/yellow_20.html" target="_blank">黃20</a></td>
-				</tr>
-				<tr>
-					<th rowspan="2">下營公所</th>
-					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
-					<td id="yellow"><a href="../yellow/yellow_5.html" target="_blank">黃5</a>、<a href="../yellow/yellow_20.html" target="_blank">黃20</a></td>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>
-					<td id="orange"><a href="../orange/orange_11.html" target="_blank">橘11</a></td>
-				</tr>
-				<tr>
-					<th rowspan="2">林鳳營火車站</th>
-					<td style="text-align: center"><img src="../route/transfer/railway.png"></td>
-					<td>台鐵林鳳營站</td>
-				</tr>
-				<tr>
-					<td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>
-					<td id="yellow"><a href="../yellow/yellow_1.html" target="_blank">黃1</a>、<a href="../yellow/yellow_2.html" target="_blank">黃2</a>、<a href="../yellow/yellow_20.html" target="_blank">黃20</a></td>
-				</tr>
+				<script type="text/javascript">
+					document.write(transfer_madou + transfer_shiayin_district_office + transfer_linfengying_railway_station);
+				</script>
 			</table>
 		</div>
 	</div>

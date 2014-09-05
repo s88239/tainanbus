@@ -24,10 +24,10 @@ function query_fare(theForm, fare_array){
 	var price = (fd<=td)?fare_array[td][fd]:fare_array[fd][td];
 	//alert(fd + ' ' + td);
 	//alert(fare_array[td][fd]+" "+fare_array[fd][td]);
-	document.getElementById("cash_adult").innerHTML = price; // 現金全票
-	document.getElementById("cash_half").innerHTML = Math.ceil(price/2); // 現金半票，無條件進位
-	document.getElementById("RFID_adult").innerHTML = price-26; // 刷卡全票
-	document.getElementById("RFID_half").innerHTML = Math.ceil((price-26)/2); // 刷卡半票，無條件進位
+	document.getElementById("cash_adult").innerHTML = price < 0 ? 'none' : price; // 現金全票
+	document.getElementById("cash_half").innerHTML = price < 0 ? 'none' : Math.ceil(price/2); // 現金半票，無條件進位
+	document.getElementById("RFID_adult").innerHTML = price < 0 ? 'none' : price-26; // 刷卡全票
+	document.getElementById("RFID_half").innerHTML = price < 0 ? 'none' : Math.ceil((price-26)/2); // 刷卡半票，無條件進位
 }
 
 function create_time_schedule_go(stop_name, time_consume, select_stop_index, important_stop, time){ // print the time schedule for going
@@ -315,8 +315,9 @@ function print_fare_table(interval_name, fare, color){ // the function fo showin
 		document.write('<tr>');
 		for(var j=0; j<interval_name.length; ++j){
 			if(i==j) document.write('<th>' + interval_name[i] + '</th>');
-			else if( i>j ) document.write('<td>' + fare[i][j] + '</td>' );
-			else document.write('<td>' + (fare[j][i] - 26) + '</td>');
+			else if(fare[i][j]<0) document.write('<td>-</td>' );
+			else if( i>j ) fare[i][j] < 0 ? document.write('<td>-</td>') : document.write('<td>' + fare[i][j] + '</td>');
+			else fare[j][i] < 0 ? document.write('<td>-</td>') : document.write('<td>' + (fare[j][i] - 26) + '</td>');
 		}
 		document.write('</tr>');
 	}

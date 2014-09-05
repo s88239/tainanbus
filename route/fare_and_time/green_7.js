@@ -20,5 +20,5 @@ green_7_fare = [
 green_7_main_stop_name = ["新化","新市<br />火車站","新市","豐榮","大營里","大社"];
 green_7_main_stop_time_consume = [0, 10, 13, 18, 21, 25];
 green_7_important_stop = [0, 1, 5]; // 新化, 新市火車站, 大社
-green_7_time_go = [["7:00"],["10:00"],["17:25"]];
-green_7_time_return = [["6:25"],["13:10"],["15:35"]];
+green_7_time_go = [["07:00"],["10:00"],["17:25"]];
+green_7_time_return = [["06:25"],["13:10"],["15:35"]];
