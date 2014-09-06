@@ -13,8 +13,9 @@
 <meta name="description" content="" />
 </head>
 <script type="text/javascript">
+route_arr = ["0左/0右","1","2","3","5","6","7","9","10","11","14","15","18","20","21","88","99","綠幹線","綠1","綠2","綠3","綠4","綠5","綠6","綠7","綠10","綠11","綠12","綠13","綠14","綠15","綠16","綠17","綠20","綠21","綠22","綠23","綠24","綠25","綠26","綠27","藍幹線","藍1","藍2","藍3","藍10","藍11","藍12","藍13","藍20","藍21","藍22","藍23","藍24","藍25","紅幹線","紅1","紅2","紅3","紅4","紅10","紅11","紅12","紅13","紅14","橘幹線","橘1","橘2","橘3","橘4","橘5","橘10","橘11","橘12","橘20","棕幹線","棕1","棕2","棕3","棕3-1","棕10","棕11","黃幹線","黃1","黃2","黃3","黃4","黃5","黃6","黃7","黃9","黃10","黃11","黃11-1","黃12","黃12-1","黃13","黃14","黃15","黃20","關子嶺假日公車","高鐵快捷H31(市府線)","高鐵快捷H62(奇美線)"];
 function search_route(route_str){
-	isFinished = 0;
+	isFinished = false;
 	switch(route_str.charAt(0)){
 		case '綠':
 			route = 'green/green';
@@ -36,18 +37,18 @@ function search_route(route_str){
 			break;
 		case '關': // 關子嶺假日公車
 			route = 'yellow/yellow_12_guanziling';
-			isFinished = 1;
+			isFinished = true;
 			break;
 		case '0': // 0左/右
 			route = 'city_bus/city_bus_0';
-			isFinished = 1;
+			isFinished = true;
 			break;
 		default:
 			if(route_str=='高鐵快捷H31(市府線)') route = 'hsr/hsr_shuttle_7658';
 			else if(route_str=='高鐵快捷H62(奇美線)') route = 'hsr/hsr_shuttle_7651';
 			else if(route_str=='88'||route_str=='99') route = 'tour_bus/tour_bus_' + route_str; // tour bus
 			else if(!isNaN(route_str)) route = 'city_bus/city_bus_' + route_str; // city_bus
-			isFinished = 1;
+			isFinished = true;
 			break;;
 	}
 	if(!isFinished){
@@ -57,6 +58,25 @@ function search_route(route_str){
 	//alert(route);
 	location.assign(route + ".html");
 }
+$(document).ready(function($) {
+   // Workaround for bug in mouse item selection
+   $.fn.typeahead.Constructor.prototype.blur = function() {
+   var that = this;
+      setTimeout(function () { that.hide() }, 250);
+   };
+ 
+   $('#route_search').typeahead({
+      items: 18,
+      source: function(query, process) {
+         return route_arr;
+      },
+
+      updater: function(item) {
+         search_route( item );
+      return item;
+	}
+	});
+})
 </script>
 <body background="img/background.jpg">
 <div align="center">
@@ -66,9 +86,7 @@ function search_route(route_str){
 			<img src="img/Tainan_City_bus.png" align="left" height="80"></td>
 			<td colspan="3" style="text-align: right">
 			<label for="route_search"><font size="4.5">路線快速搜尋：</font></label>
-			<input id="route_search" onchange="javascript: search_route(this.value)" type="text" data-provide="typeahead" placeholder="請輸入欲搜尋的路線名稱" 
-			     data-source='["0左/右","1","2","3","5","6","7","9","10","11","14","15","18","20","21","88","99","綠幹線","綠1","綠2","綠3","綠4","綠5","綠6","綠7","綠10","綠11","綠12","綠13","綠14","綠15","綠16","綠17","綠20","綠21","綠22","綠23","綠24","綠25","綠26","綠27","藍幹線","藍1","藍2","藍3","藍10","藍11","藍12","藍13","藍20","藍21","藍22","藍23","藍24","藍25","紅幹線","紅1","紅2","紅3","紅4","紅10","紅11","紅12","紅13","紅14",
-			     "橘幹線","橘1","橘2","橘3","橘4","橘5","橘10","橘11","橘12","橘20","棕幹線","棕1","棕2","棕3","棕3-1","棕10","棕11","黃幹線","黃1","黃2","黃3","黃4","黃5","黃6","黃7","黃9","黃10","黃11","黃11-1","黃12","黃12-1","黃13","黃14","黃15","黃20","關子嶺假日公車","高鐵快捷H31(市府線)","高鐵快捷H62(奇美線)"]'>
+			<input id="route_search" type="text" data-provide="typeahead" placeholder="請輸入欲搜尋的路線名稱">
 			</td>
 		</tr>
 		<tr>
