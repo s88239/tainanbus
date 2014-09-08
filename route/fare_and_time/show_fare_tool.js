@@ -30,7 +30,7 @@ function query_fare(theForm, fare_array){
 	document.getElementById("RFID_half").innerHTML = price < 0 ? 'none' : Math.ceil((price-26)/2); // 刷卡半票，無條件進位
 }
 
-function create_time_schedule_go(stop_name, time_consume, select_stop_index, important_stop, time){ // print the time schedule for going
+/*function create_time_schedule_go(stop_name, time_consume, select_stop_index, important_stop, time){ // print the time schedule for going
 	document.write('<table><tr>');
 	var index_x = 0, index_count = stop_name[0].length;
 	for(var i=0; i < select_stop_index.length; ++i ){
@@ -180,7 +180,7 @@ function create_time_schedule_return(stop_name, time_consume, select_stop_index,
 		document.write('</tr>');
 	}
 	document.write('</table>');
-}
+}*/
 
 function create_time_schedule(main_stop_name, time_consume, important_stop, time, isReturn){ // print the time schedule
 	document.write('<table><tr>');
@@ -244,7 +244,7 @@ function create_time_schedule(main_stop_name, time_consume, important_stop, time
 				document.write('-');
 			}
 			else if( j==start_stop || judge_important_stop(j, important_stop)==true){ // it's important stop, change its font face, and add the special tag at the front of its time
-				document.write('<font face="Arial Rounded MT Bold">' + special_tag + get_time(time[i][0], Math.abs(time_consume[j] - time_consume_offset) ) + '</font>');
+				document.write('<font face="Arial"><strong>' + special_tag + get_time(time[i][0], Math.abs(time_consume[j] - time_consume_offset) ) + '</strong></font>');
 				//document.write('c = '+time_consume[j]+' o = ' + time_consume_offset)
 			}
 			else{ // general case, just print its time
@@ -258,10 +258,10 @@ function create_time_schedule(main_stop_name, time_consume, important_stop, time
 	document.write('</table>');
 }
 
-function break_string_with_newline(str){
+/*function break_string_with_newline(str){
 	if(str.length<4) return str;
 	return str.substring(0,str.length/2) + '<br />' +  str.substring(str.length/2, str.length);
-}
+}*/
 function get_special_tag(arr){ // add some tags of special events
 	var special_event = ''; // initialize
 	var skip_stop_array = [];

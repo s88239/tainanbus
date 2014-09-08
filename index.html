@@ -6,7 +6,7 @@
 <link rel="SHORTCUT ICON" href="img/web_icon.ico">
 <link href="bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="tools/jquery-v1.11.1.js"></script>
 <script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
 <script src="bootstrap-3.2.0/js/bootstrap-typeahead.js"></script>
 <meta name="keywords" content="" />
@@ -83,29 +83,90 @@ $(document).ready(function($) {
 	<table>
 		<tr>
 			<td colspan="2">
-			<img src="img/Tainan_City_bus.png" align="left" height="80"></td>
+				<img src="img/Tainan_City_bus.png" align="left" height="80">
+			</td>
 			<td colspan="3" style="text-align: right">
-			<label for="route_search"><font size="4.5">路線快速搜尋：</font></label>
-			<input id="route_search" type="text" data-provide="typeahead" placeholder="請輸入欲搜尋的路線名稱">
+				<label for="route_search"><font size="4.5">路線快速搜尋：</font></label>
+				<input id="route_search" type="text" data-provide="typeahead" placeholder="請輸入欲搜尋的路線名稱">
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2" bgcolor="#2c397d" onMouseOver="this.style.backgroundColor='#2c007d';" onMouseOut="this.style.backgroundColor='#2c397d';"><a href="overview.html" id="box2"><span id="text">大台南公車總覽</span><br/><span id="entext">Overview</span></a></td>
-			<td bgcolor="#fc5656" onMouseOver="this.style.backgroundColor='#BC3C56';" onMouseOut="this.style.backgroundColor='#fc5656';"><a href="tourism.html" id="box"><span id="text">台南觀光景點資訊</span><br/><span id="entext">Tainan Tourism</span></a></td>
-			<td bgcolor="#337c56" onMouseOver="this.style.backgroundColor='#49C347';" onMouseOut="this.style.backgroundColor='#337c56';"><a href="#" id="box"><span id="text">國道/公路客運</span><br/><span id="entext">Freeway/Highway Bus</span></a></td>
-			<td bgcolor="#fc7cc6" onMouseOver="this.style.backgroundColor='#E942C6';" onMouseOut="this.style.backgroundColor='#fc7cc6';"><a href="hsr/index.html" id="box"><span id="text">高鐵接駁車</span><br/><span id="entext">HSR Shuttle Bus</span></a></td>
+			<td colspan="2" bgcolor="#2c397d" onMouseOver="this.style.backgroundColor='#2c007d';" onMouseOut="this.style.backgroundColor='#2c397d';">
+				<a href="overview.html" id="box2">
+					<span id="text">大台南公車總覽</span><br/>
+					<span id="entext">Overview</span>
+				</a>
+			</td>
+			<td bgcolor="#fc5656" onMouseOver="this.style.backgroundColor='#BC3C56';" onMouseOut="this.style.backgroundColor='#fc5656';">
+				<a href="tourism.html" id="box">
+					<span id="text">台南觀光景點資訊</span><br/>
+					<span id="entext">Tainan Tourism</span>
+				</a>
+			</td>
+			<td bgcolor="#337c56" onMouseOver="this.style.backgroundColor='#49C347';" onMouseOut="this.style.backgroundColor='#337c56';">
+				<a href="#" id="box">
+					<span id="text">國道/公路客運</span><br/>
+					<span id="entext">Freeway/Highway Bus</span>
+				</a>
+			</td>
+			<td bgcolor="#fc7cc6" onMouseOver="this.style.backgroundColor='#E942C6';" onMouseOut="this.style.backgroundColor='#fc7cc6';">
+				<a href="hsr/index.html" id="box">
+					<span id="text">高鐵接駁車</span><br/>
+					<span id="entext">HSR Shuttle Bus</span>
+				</a>
+			</td>
 		</tr>
 		<tr>
-			<td bgcolor="#3eb034" onMouseOver="this.style.backgroundColor='#009900';" onMouseOut="this.style.backgroundColor='#3eb034';"><a href="green/index.html" id="box"><span id="text">綠線</span><br/><span id="entext">Green Line</span></a></td>
-			<td bgcolor="#0191d8" onMouseOver="this.style.backgroundColor='#00CCFF';" onMouseOut="this.style.backgroundColor='#0191d8';"><a href="blue/index.html" id="box"><span id="text">藍線</span><br/><span id="entext">Blue Line</span></a></td>
-			<td bgcolor="#e22500" onMouseOver="this.style.backgroundColor='#882700';" onMouseOut="this.style.backgroundColor='#e22500';"><a href="red/index.html" id="box"><span id="text">紅線</span><br/><span id="entext">Red Line</span></a></td>
-			<td colspan="2" bgcolor="#884556" onMouseOver="this.style.backgroundColor='#C1587C';" onMouseOut="this.style.backgroundColor='#884556';"><a href="routeplan.html" id="box2"><span id="text">行程規劃</span><br/><span id="entext">Trip Planning</span></a></td>
+			<td bgcolor="#3eb034" onMouseOver="this.style.backgroundColor='#009900';" onMouseOut="this.style.backgroundColor='#3eb034';">
+				<a href="green/index.html" id="box">
+					<span id="text">綠線</span><br/>
+					<span id="entext">Green Line</span>
+				</a>
+			</td>
+			<td bgcolor="#0191d8" onMouseOver="this.style.backgroundColor='#00CCFF';" onMouseOut="this.style.backgroundColor='#0191d8';">
+				<a href="blue/index.html" id="box">
+					<span id="text">藍線</span><br/>
+					<span id="entext">Blue Line</span>
+				</a>
+			</td>
+			<td bgcolor="#e22500" onMouseOver="this.style.backgroundColor='#882700';" onMouseOut="this.style.backgroundColor='#e22500';">
+				<a href="red/index.html" id="box">
+					<span id="text">紅線</span><br/>
+					<span id="entext">Red Line</span>
+				</a>
+			</td>
+			<td colspan="2" bgcolor="#884556" onMouseOver="this.style.backgroundColor='#C1587C';" onMouseOut="this.style.backgroundColor='#884556';">
+				<a href="routeplan.html" id="box2">
+					<span id="text">行程規劃</span><br/>
+					<span id="entext">Trip Planning</span>
+				</a>
+			</td>
 		</tr>
 		<tr>
-			<td colspan="2" bgcolor="#509197" onMouseOver="this.style.backgroundColor='#50DD97';" onMouseOut="this.style.backgroundColor='#509197';"><a href="city_bus/index.html" id="box2"><span id="text">市區公車</span><br/><span id="entext">Urban Bus</span></a></td>
-			<td bgcolor="#ff7f05" onMouseOver="this.style.backgroundColor='#FF9E34';" onMouseOut="this.style.backgroundColor='#ff7f05';"><a href="orange/index.html" id="box"><span id="text">橘線</span><br/><span id="entext">Orange Line</span></a></td>
-			<td bgcolor="#6b3b37" onMouseOver="this.style.backgroundColor='#7C6C37';" onMouseOut="this.style.backgroundColor='#6b3b37';"><a href="brown/index.html" id="box"><span id="text">棕線</span><br/><span id="entext">Brown Line</span></a></td>
-			<td bgcolor="#fdd100" onMouseOver="this.style.backgroundColor='#DC9700';" onMouseOut="this.style.backgroundColor='#fdd100';"><a href="yellow/index.html" id="box"><span id="text">黃線</span><br/><span id="entext">Yellow Line</span></a></td>
+			<td colspan="2" bgcolor="#509197" onMouseOver="this.style.backgroundColor='#50DD97';" onMouseOut="this.style.backgroundColor='#509197';">
+				<a href="city_bus/index.html" id="box2">
+					<span id="text">市區公車</span><br/>
+					<span id="entext">Urban Bus</span>
+				</a>
+			</td>
+			<td bgcolor="#ff7f05" onMouseOver="this.style.backgroundColor='#FF9E34';" onMouseOut="this.style.backgroundColor='#ff7f05';">
+				<a href="orange/index.html" id="box">
+					<span id="text">橘線</span><br/>
+					<span id="entext">Orange Line</span>
+				</a>
+			</td>
+			<td bgcolor="#6b3b37" onMouseOver="this.style.backgroundColor='#7C6C37';" onMouseOut="this.style.backgroundColor='#6b3b37';">
+				<a href="brown/index.html" id="box">
+					<span id="text">棕線</span><br/>
+					<span id="entext">Brown Line</span>
+				</a>
+			</td>
+			<td bgcolor="#fdd100" onMouseOver="this.style.backgroundColor='#DC9700';" onMouseOut="this.style.backgroundColor='#fdd100';">
+				<a href="yellow/index.html" id="box">
+					<span id="text">黃線</span><br/>
+					<span id="entext">Yellow Line</span>
+				</a>
+			</td>
 		</tr>
 	</table>
 </div>
