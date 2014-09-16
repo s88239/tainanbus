@@ -22,5 +22,5 @@ brown_3_1_fare = [
 brown_3_1_main_stop_name = ["新營","統聯<br />客運","鹽水","太子宮","五興里","鐵線里"];
 brown_3_1_main_stop_time_consume = [0, 12, 22, 29, 33, 35];
 brown_3_1_important_stop = [0, 2, 5]; // 新營, 鹽水, 鐵線里
-brown_3_1_time_go = [["08:15"],["11:15"],["15:15"]];
-brown_3_1_time_return = [["08:55"],["11:55"],["15:55"]];
+brown_3_1_time_go = [["08:15"],["11:15"],["15:00"]];
+brown_3_1_time_return = [["08:55"],["11:55"],["15:40"]];
