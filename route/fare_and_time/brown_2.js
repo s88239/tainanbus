@@ -21,4 +21,4 @@ brown_2_main_stop_name = ["新營","統聯<br />客運","鹽水","下中"];
 brown_2_main_stop_time_consume = [0, 12, 22, 30];
 brown_2_important_stop = [0, 2, 3]; // 新營, 鹽水, 下中
 brown_2_time_go = [["07:50"],["09:50"],["13:50"],["15:50"]];
-brown_2_time_return = [["08:20"],["10:20"],["14:20"],["16:20"]];
+brown_2_time_return = [["08:30"],["10:30"],["14:30"],["16:30"]];

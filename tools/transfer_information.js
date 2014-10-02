@@ -178,7 +178,7 @@ transfer_madou = '<tr><th rowspan="2">果菜市場</th>'
 + '<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>'
 	+ '<td id="yellow"><a href="../yellow/yellow.html" target="_blank">黃幹線</a>、<a href="../yellow/yellow_20.html" target="_blank">黃20</a></td></tr>';
 
-transfer_dane_district_office = '<tr><th>大內公所</th>'
+transfer_dane_district_office = '<tr><th>大內分駐所</th>'
 + '<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>'
 	+ '<td id="orange"><a href="../orange/orange.html" target="_blank">橘幹線</a>、<a href="../orange/orange_1.html" target="_blank">橘1</a>、<a href="../orange/orange_2.html" target="_blank">橘2</a>、<a href="../orange/orange_20.html" target="_blank">橘20</a></td></tr>';
 
