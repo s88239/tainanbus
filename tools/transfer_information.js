@@ -212,7 +212,7 @@ transfer_baihe = '<tr><th>白河</th>'
 + '<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>'
 	+ '<td id="yellow"><p><a href="../yellow/yellow.html" target="_blank">黃幹線</a>、<a href="../yellow/yellow_10.html" target="_blank">黃10</a>、<a href="../yellow/yellow_11.html" target="_blank">黃11</a>、<a href="../yellow/yellow_11_1.html" target="_blank">黃11-1</a>、</p>'
 	+ '<p><a href="../yellow/yellow_12.html" target="_blank">黃12</a>、<a href="../yellow/yellow_12_1.html" target="_blank">黃12-1</a>、<a href="../yellow/yellow_13.html" target="_blank">黃13</a>、<a href="../yellow/yellow_14.html" target="_blank">黃14</a>、</p>'
-	+ '<a href="../yellow/yellow_15.html" target="_blank">黃15</a></a></td></tr>';
+	+ '<a href="../yellow/yellow_14_1.html" target="_blank">黃14-1</a>、<a href="../yellow/yellow_15.html" target="_blank">黃15</a></a></td></tr>';
 
 transfer_hsinyin = '<tr><th rowspan="3">新營</th>'
 + '<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>'

@@ -1,6 +1,8 @@
 ﻿body {
 	margin-top: 10px;
 	font-family:"微軟正黑體";
+	background-repeat:no-repeat;/* no-repeat in the background image */
+	background-attachment:fixed;/* fix the position of the background image */
 }
 table { 
     border-spacing: 5px;
