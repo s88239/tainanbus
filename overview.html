@@ -28,7 +28,7 @@ function get_transfer_info(bus_stop){
 		div_string += '<tr><td><a href="brown/brown.html" class="brownButton">棕幹線</a></td><td>新營 ─ 鹽水 ─ 學甲 ─ 佳里</td></tr>';
 	}
 	if(bus_stop=='佳里' || bus_stop=='麻豆' || bus_stop=='善化火車站' || bus_stop=='大內' || bus_stop=='玉井'){
-		div_string += '<tr><td><a href="orange.html" class="orangeButton">橘幹線</a></td><td>佳里 ─ 麻豆 ─ 善化 ─ 玉井</td></tr>';
+		div_string += '<tr><td><a href="orange/orange.html" class="orangeButton">橘幹線</a></td><td>佳里 ─ 麻豆 ─ 善化 ─ 玉井</td></tr>';
 	}
 	if(bus_stop=='白河' || bus_stop=='後壁' || bus_stop=='新營' || bus_stop.indexOf('柳營')!=-1 || bus_stop=='六甲' || bus_stop=='下營' || bus_stop=='麻豆'){
 		div_string += '<tr><td><a href="yellow/yellow.html" class="yellowButton">黃幹線</a></td><td>白河 ─ 新營 ─ 麻豆</td></tr>';
@@ -137,7 +137,8 @@ function get_transfer_info(bus_stop){
 		+ '<tr><td><a href="brown/brown_10.html" class="brownButton">棕10</a></td><td>學甲 ─ 麻豆</td></tr>';
 		break;
 	case '玉井':
-		div_string += '<tr><td><a href="green_20.html" class="greenButton">綠20</a></td><td>玉井 ─ 楠西 ─ 永興吊橋</td></tr>'
+		div_string += '<tr><td><a href="green/green_20.html" class="greenButton">綠20</a></td><td>玉井 ─ 楠西 ─ 永興吊橋</td></tr>'
+		+ '<tr><td><a href="green/green_20_1.html" class="greenButton">綠20-1</a></td><td>玉井 ─ 虎頭山</td></tr>'
 		+ '<tr><td><a href="green/green_21.html" class="greenButton">綠21</a></td><td>玉井 ─ 龜丹油礦</td></tr>'
 		+ '<tr><td><a href="green/green_22.html" class="greenButton">綠22</a></td><td>玉井 ─ 梅嶺</td></tr>'
 		+ '<tr><td><a href="green/green_23.html" class="greenButton">綠23</a></td><td>玉井 ─ 雙溪新社區</td></tr>'

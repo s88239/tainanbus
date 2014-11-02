@@ -124,8 +124,9 @@ transfer_hsinhua = '<tr><th>新化</th>'
 
 transfer_yujing = '<tr><th rowspan="2">玉井</th>'
 + '<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>'
-	+ '<td id="green"><p><a href="../green/green.html" target="_blank">綠幹線</a>、<a href="../green/green_20.html" target="_blank">綠20</a>、<a href="../green/green_21.html" target="_blank">綠21</a>、<a href="../green/green_22.html" target="_blank">綠22</a>、<a href="../green/green_23.html" target="_blank">綠23</a>、</p>'
-	+ '<a href="../green/green_24.html" target="_blank">綠24</a>、<a href="../green/green_25.html" target="_blank">綠25</a>、<a href="../green/green_26.html" target="_blank">綠26</a>、<a href="../green/green_27.html" target="_blank">綠27</a></td></tr>'
+	+ '<td id="green"><p><a href="../green/green.html" target="_blank">綠幹線</a>、<a href="../green/green_20.html" target="_blank">綠20</a>、<a href="../green/green_20_1.html" target="_blank">綠20-1</a>、<a href="../green/green_21.html" target="_blank">綠21</a>、</p>'
+	+ '<p><a href="../green/green_22.html" target="_blank">綠22</a>、<a href="../green/green_23.html" target="_blank">綠23</a>、<a href="../green/green_24.html" target="_blank">綠24</a>、<a href="../green/green_25.html" target="_blank">綠25</a>、</p>'
+	+ '<a href="../green/green_26.html" target="_blank">綠26</a>、<a href="../green/green_27.html" target="_blank">綠27</a></td></tr>'
 + '<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>'
 	+ '<td id="orange"><a href="../orange/orange.html" target="_blank">橘幹線</a>、<a href="../orange/orange_20.html" target="_blank">橘20</a></td></tr>';
 
