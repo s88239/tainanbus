@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>大台南公車 － 綠線 | Tainan Bus for FUN</title>
 <link rel="SHORTCUT ICON" href="../img/web_icon.ico">
+<script src="../tools/route_infor.js"></script>
 <style type="text/css">
 @import url("../css/busline.css");
 @import url("../css/bus_button.css");
@@ -24,85 +25,35 @@ td{
   <td><a href="../route/overview/g_overview.htm" target="_blank"><img src="../img/green.jpg" alt="台南市綠幹線公車及其支線公車路線總圖" width="1000"></a></td>
  </tr>
   <td valign="top">
-   	<table align="center" style="margin-top: 50px; margin-bottom: 50px;">
-		<tr>
-			<td colspan="4" align="center">
-				<a href="green.html" class="greenButton"><font size="+2">綠幹線</font></a><font size="+2">　臺南 ─ 永康 ─ 新化 ─ 玉井</font>
-			</td>
-		</tr>
-		<tr>
-			<td><a href="green_1.html" class="greenButton">綠1</a></td>
-			<td>新化 ─ 新市 ─ 南科 ─ 善化</td>
-			<td><a href="green_15.html" class="greenButton">綠15</a></td>
-			<td>新化 ─ 五甲勢</td>
-		</tr>
-		<tr>
-			<td><a href="green_2.html" class="greenButton">綠2</a></td>
-			<td>新化 ─ 新市 ─ 南科 ─ 善化 ─ 山上</td>
-			<td><a href="green_16.html" class="greenButton">綠16</a></td>
-			<td>新化 ─ 關廟 ─ 高鐵臺南站</td>
-		</tr>
-		<tr>
-			<td><a href="green_3.html" class="greenButton">綠3</a></td>
-			<td>新化 ─ 新市 ─ 看西 ─ 南科 ─ 善化</td>
-			<td><a href="green_17.html" class="greenButton">綠17</a></td>
-			<td>安工區 ─ 大灣 ─ 新化</td>
-		</tr>
-		<tr>
-			<td><a href="green_4.html" class="greenButton">綠4</a></td>
-			<td>新化 ─ 新市 ─ 陽光電城 ─ 善化火車站</td>
-			<td><a href="green_20.html" class="greenButton">綠20</a></td>
-			<td>玉井 ─ 楠西 ─ 永興吊橋</td>
-		</tr>
-		<tr>
-			<td><a href="green_5.html" class="greenButton">綠5</a></td>
-			<td>臺鐵永康 ─ 潭頂 ─ 大社</td>
-			<td><a href="green_20_1.html" class="greenButton">綠20-1</a></td>
-			<td>玉井 ─ 虎頭山</td>
-		</tr>
-		<tr>
-			<td><a href="green_6.html" class="greenButton">綠6</a></td>
-			<td>新化 ─ 潭頂 ─ 大社</td>
-			<td><a href="green_21.html" class="greenButton">綠21</a></td>
-			<td>玉井 ─ 龜丹油礦</td>
-		</tr>
-		<tr>
-			<td><a href="green_7.html" class="greenButton">綠7</a></td>
-			<td>新化 ─ 大營 ─ 大社</td>
-			<td><a href="green_22.html" class="greenButton">綠22</a></td>
-			<td>玉井 ─ 梅嶺</td>
-		</tr>
-		<tr>
-			<td><a href="green_10.html" class="greenButton">綠10</a></td>
-			<td>新化 ─ 山上</td>
-			<td><a href="green_23.html" class="greenButton">綠23</a></td>
-			<td>玉井 ─ 雙溪新社區</td>
-		</tr>
-		<tr>
-			<td><a href="green_11.html" class="greenButton">綠11</a></td>
-			<td>新化 ─ 山上 ─ 善化</td>
-			<td><a href="green_24.html" class="greenButton">綠24</a></td>
-			<td>玉井 ─ 曾文水庫管理局</td>
-		</tr>
-		<tr>
-			<td><a href="green_12.html" class="greenButton">綠12</a></td>
-			<td>新化 ─ 南化</td>
-			<td><a href="green_25.html" class="greenButton">綠25</a></td>
-			<td>玉井 ─ 大埔</td>
-		</tr>
-		<tr>
-			<td><a href="green_13.html" class="greenButton">綠13</a></td>
-			<td>新化 ─ 岡林 ─ 左鎮</td>
-			<td><a href="green_26.html" class="greenButton">綠26</a></td>
-			<td>玉井 ─ 甲仙</td>
-		</tr>
-		<tr>
-			<td><a href="green_14.html" class="greenButton">綠14</a></td>
-			<td>新化 ─ 九層嶺</td>
-			<td><a href="green_27.html" class="greenButton">綠27</a></td>
-			<td>玉井 ─ 南化 ─ 茄苳橋</td>
-		</tr>
-	</table>
+    <table align="center" style="margin-top: 50px; margin-bottom: 50px;">
+   	  <script type="text/javascript">
+		document.write('<tr><td colspan="4" align="center"><a href="green.html" class="greenButton"><font size="+2">綠幹線</font></a><font size="+2">　'+ green_route +'</font></td></tr>'
+		+ '<tr><td><a href="green_1.html" class="greenButton">綠1</a></td><td>'+ green_1_route +'</td>'
+			+ '<td><a href="green_15.html" class="greenButton">綠15</a></td><td>'+ green_15_route +'</td></tr>'
+		+ '<tr><td><a href="green_2.html" class="greenButton">綠2</a></td><td>'+ green_2_route +'</td>'
+			+ '<td><a href="green_16.html" class="greenButton">綠16</a></td><td>'+ green_16_route +'</td></tr>'
+		+ '<tr><td><a href="green_3.html" class="greenButton">綠3</a></td><td>'+ green_3_route +'</td>'
+			+ '<td><a href="green_17.html" class="greenButton">綠17</a></td><td>'+ green_17_route +'</td></tr>'
+		+ '<tr><td><a href="green_4.html" class="greenButton">綠4</a></td><td>'+ green_4_route +'</td>'
+			+ '<td><a href="green_20.html" class="greenButton">綠20</a></td><td>'+ green_20_route +'</td></tr>'
+		+ '<tr><td><a href="green_5.html" class="greenButton">綠5</a></td><td>'+ green_5_route +'</td>'
+			+ '<td><a href="green_20_1.html" class="greenButton">綠20-1</a></td><td>'+ green_20_1_route +'</td></tr>'
+		+ '<tr><td><a href="green_6.html" class="greenButton">綠6</a></td><td>'+ green_6_route +'</td>'
+			+ '<td><a href="green_21.html" class="greenButton">綠21</a></td><td>'+ green_21_route +'</td></tr>'
+		+ '<tr><td><a href="green_7.html" class="greenButton">綠7</a></td><td>'+ green_7_route +'</td>'
+			+ '<td><a href="green_22.html" class="greenButton">綠22</a></td><td>'+ green_22_route +'</td></tr>'
+		+ '<tr><td><a href="green_10.html" class="greenButton">綠10</a></td><td>'+ green_10_route +'</td>'
+			+ '<td><a href="green_23.html" class="greenButton">綠23</a></td><td>'+ green_23_route +'</td></tr>'
+		+ '<tr><td><a href="green_11.html" class="greenButton">綠11</a></td><td>'+ green_11_route +'</td>'
+			+ '<td><a href="green_24.html" class="greenButton">綠24</a></td><td>'+ green_24_route +'</td></tr>'
+		+ '<tr><td><a href="green_12.html" class="greenButton">綠12</a></td><td>'+ green_12_route +'</td>'
+			+ '<td><a href="green_25.html" class="greenButton">綠25</a></td><td>'+ green_25_route +'</td></tr>'
+		+ '<tr><td><a href="green_13.html" class="greenButton">綠13</a></td><td>'+ green_13_route +'</td>'
+			+ '<td><a href="green_26.html" class="greenButton">綠26</a></td><td>'+ green_26_route +'</td></tr>'
+		+ '<tr><td><a href="green_14.html" class="greenButton">綠14</a></td><td>'+ green_14_route +'</td>'
+			+ '<td><a href="green_27.html" class="greenButton">綠27</a></td><td>'+ green_27_route +'</td></tr>');
+	  </script>
+    </table>
   </td>
  </tr>
  </table>

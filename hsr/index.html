@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>大台南公車 － 高鐵轉乘資訊 | Tainan Bus for FUN</title>
 <link rel="SHORTCUT ICON" href="../img/web_icon.ico">
+<script src="../tools/route_infor.js"></script>
 <style type="text/css">
 @import url("../css/busline.css");
 @import url("../css/bus_button.css");
@@ -24,31 +25,15 @@ td{
   <td valign="top"><a href="../route/overview/hsr_overview.htm" target="_blank">
 	<img src="../img/hsr_shuttle_all.jpg" alt="台南市高鐵轉乘路線總圖" width="800" height="1046"></a></td>
   <td valign="top">
-   <table>
-	<tr>
-		<td><a href="hsr_shuttle_7658.html" class="hsrButton">H31</a></td>
-		<td>臺南市政府 ─ 高鐵臺南站</td>
-	</tr>
-	<tr>
-		<td><a href="hsr_shuttle_7651.html" class="hsrButton">H62</a></td>
-		<td>桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站</td>
-	</tr>
-	<tr>
-		<td><a href="../yellow/yellow_9.html" class="yellowButton">黃9</a></td>
-		<td>新營 ─ 高鐵嘉義站</td>
-	</tr>
-	<tr>
-		<td><a href="../red/red_3.html" class="redButton">紅3</a></td>
-		<td>臺南火車站 ─ 高鐵臺南站 ─ 關廟</td>
-	</tr>
-	<tr>
-		<td><a href="../red/red_4.html" class="redButton">紅14</a></td>
-		<td>關廟 ─ 歸仁 ─ 高鐵臺南站</td>
-	</tr>
-	<tr>
-		<td><a href="../green/green_16.html" class="greenButton">綠16</a></td>
-		<td>新化 ─ 關廟 ─ 高鐵臺南站</td>
-	</tr>
+    <table>
+      <script type="text/javascript">
+      	document.write('<tr><td><a href="hsr_shuttle_7658.html" class="hsrButton">H31</a></td><td>'+ hsr_shuttle_h31_route +'</td></tr>'
+		+ '<tr><td><a href="hsr_shuttle_7651.html" class="hsrButton">H62</a></td><td>'+ hsr_shuttle_h62_route +'</td></tr>'
+		+ '<tr><td><a href="../yellow/yellow_9.html" class="yellowButton">黃9</a></td><td>'+ yellow_9_route +'</td></tr>'
+		+ '<tr><td><a href="../red/red_3.html" class="redButton">紅3</a></td><td>'+ red_3_route +'</td></tr>'
+		+ '<tr><td><a href="../red/red_14.html" class="redButton">紅14</a></td><td>'+ red_14_route +'</td></tr>'
+		+ '<tr><td><a href="../green/green_16.html" class="greenButton">綠16</a></td><td>'+ green_16_route +'</td></tr>');
+	  </script>
 	</table>
   </td>
  </tr>
