@@ -74,7 +74,7 @@ select.get_fare option.option6
 			<table border="0">
 				<tr>
 					<td>起訖點</td>
-					<td>新化 － 山上 － 善化火車站</td>
+					<td>新化 ─ 山上 ─ 善化轉運站</td>
 				</tr>
 				<tr>
 					<td>營運公司</td>
@@ -84,7 +84,7 @@ select.get_fare option.option6
 					<td>首／末班車發車時刻</td>
 					<td>
 					<script language="javascript">
-						document.write('往 善化火車站：'+green_11_time_go[0][0]+'／'+green_11_time_go[green_11_time_go.length-1][0]);
+						document.write('往 善化轉運站：'+green_11_time_go[0][0]+'／'+green_11_time_go[green_11_time_go.length-1][0]);
 						document.write('<br />');
 						document.write('往 　新　化　：'+green_11_time_return[0][0]+'／'+green_11_time_return[green_11_time_return.length-1][0]);
 					</script>
@@ -146,10 +146,10 @@ select.get_fare option.option6
 		<span class="byline">Tainan Bus Green 11, Bus schedule</span> </div>
 	<div class="content">
 		<script language="javascript">
-			document.write('<h2><font color="green">新化-&gt;善化火車站</font></h2>');
+			document.write('<h2><font color="green">新化-&gt;善化轉運站</font></h2>');
 			create_time_schedule(green_11_main_stop_name, green_11_main_stop_time_consume, green_11_important_stop, green_11_time_go, false);
 			document.write('<p>　</p>');
-			document.write('<h2><font color="green">善化火車站-&gt;新化</font></h2>');
+			document.write('<h2><font color="green">善化轉運站-&gt;新化</font></h2>');
 			create_time_schedule(green_11_main_stop_name, green_11_main_stop_time_consume, green_11_important_stop, green_11_time_return, true);
 			document.write(TimeScheduleMSG);
 		</script>

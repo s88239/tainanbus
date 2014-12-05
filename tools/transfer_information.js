@@ -137,7 +137,7 @@ transfer_hsinhsih_railway_station = '<tr><th rowspan="2">新市火車站</th>'
 	+ '<td id="green"><p><a href="../green/green_1.html" target="_blank">綠1</a>、<a href="../green/green_2.html" target="_blank">綠2</a>、<a href="../green/green_3.html" target="_blank">綠3</a>、<a href="../green/green_4.html" target="_blank">綠4</a>、<a href="../green/green_5.html" target="_blank">綠5</a>、</p>'
 	+ '<a href="../green/green_6.html" target="_blank">綠6</a>、<a href="../green/green_7.html" target="_blank">綠7</a></td></tr>';
 
-transfer_shanhua_railway_station = '<tr><th rowspan="3">善化火車站</th>'
+transfer_shanhua_railway_station = '<tr><th rowspan="3">善化轉運站</th>'
 + '<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>'
 	+ '<td><font color="#00AAFF">台鐵善化站</font></td></tr>'
 + '<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>'

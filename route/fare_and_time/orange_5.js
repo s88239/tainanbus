@@ -1,6 +1,6 @@
-orange_5_interval_name = ["善化<br />火車站","小新營","茄拔","新中","官田","官田里","湖山里","嘉南里","六甲"];
+orange_5_interval_name = ["善化<br />轉運站","小新營","茄拔","新中","官田","官田里","湖山里","嘉南里","六甲"];
 orange_5_interval_stop = [
-["善化火車站","善化高中","大成陸橋"], // 善化火車站
+["善化轉運站","善化高中","大成陸橋"], // 善化轉運站
 ["小新里","磚窯","善化啤酒廠"], // 小新營
 ["茄拔(省道)","北茄拔"], // 茄拔
 ["肉品市場","新中","渡子頭"], // 新中
@@ -25,8 +25,8 @@ orange_5_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-orange_5_main_stop_name = ["善化<br />火車站","善化<br />高中","善化<br />啤酒廠","新中","官田<br />國小","嘉南里","六甲"];
+orange_5_main_stop_name = ["善化<br />轉運站","善化<br />高中","善化<br />啤酒廠","新中","官田<br />國小","嘉南里","六甲"];
 orange_5_main_stop_time_consume = [0, 5, 8, 14, 22, 30, 35];
-orange_5_important_stop = [0, 6]; // 善化火車站, 六甲
+orange_5_important_stop = [0, 6]; // 善化轉運站, 六甲
 orange_5_time_go = [["09:05"],["11:25"],["17:10"]];
 orange_5_time_return = [["09:40"],["12:10"],["17:45"]];
