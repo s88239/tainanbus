@@ -66,7 +66,7 @@ orange_4_route = "善化轉運站 ─ 南藝大 ─ 烏山頭水庫";
 orange_5_route = "善化轉運站 ─ 官田 ─ 六甲";
 orange_10_route = "真理大學 ─ 隆田火車站 ─ 南藝大";
 orange_11_route = "下營 ─ 麻豆 ─ 西港 ─ 臺南公園";
-orange_12_route = "麻豆 ─ 善化 ─ 臺南公園";
+orange_12_route = "麻豆 ─ 善化 ─ 新市 ─ 臺南公園";
 orange_20_route = "大內公所 ─ 環湖 ─ 玉井";
 
 yellow_route = "白河 ─ 新營 ─ 麻豆";
