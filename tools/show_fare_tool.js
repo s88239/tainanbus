@@ -1,16 +1,33 @@
-function create_select_menu(name_array, max_color_num, LINE_NAME){ // print the fare menu
+function create_select_menu(name_array, color_name, LINE_NAME){ // print the fare menu
+	switch(color_name){
+		case 'green':
+		case 'blue':
+		case 'yellow':
+		case 'orange':
+			max_color_num = 6;
+			break;
+		case 'red':
+			max_color_num = 4;
+			break;
+		case 'brown':
+			max_color_num = 5;
+			break;
+		default:
+			max_color_num = 0;
+	}
 	var menu_name = ['from','to'];
 	document.write('<form name="fare_menu">');
 	for(var name_index = 0; name_index < menu_name.length ; ++name_index){
-		document.write('<select name="' + menu_name[name_index] + '" class="get_fare">');
+		document.write('<select name="' + menu_name[name_index] + '" class="' + color_name + '_fare">');
 		for(var i = 0, color_index = 1; i < name_array.length; ++i, ++color_index ){
+			color_index %= max_color_num;
 			for(var j = 0; j < name_array[i].length; ++j){
 				document.write('<option value="' + i + '" class="option' + color_index + '"');
-				if(name_index==menu_name.length-1&&i==name_array.length-1&&j==name_array[i].length-1) // select the last stop
+				if( name_index==0&&i==0&&j==0 // first stop in from menu
+				|| name_index==menu_name.length-1&&i==name_array.length-1&&j==name_array[i].length-1 ) // end stop in to menu
 					document.write(' selected');
 				document.write('>' + name_array[i][j] + '</option>');
 			}
-			if(color_index==max_color_num) color_index = 0; // up to the number of color,, set zero to reuse colors
 		}
 		document.write("</select>");
 	}

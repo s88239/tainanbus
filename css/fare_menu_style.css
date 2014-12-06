@@ -1,0 +1,44 @@
+select.green_fare{background-color: #3eb034;}
+select.green_fare option.option1{background-color: #007700;}
+select.green_fare option.option2{background-color: #3F0;}
+select.green_fare option.option3{background-color: #360;}
+select.green_fare option.option4{background-color: #3C0;}
+select.green_fare option.option5{background-color: #393;}
+select.green_fare option.option6{background-color: #6F3;}
+
+select.blue_fare{background-color: #0191d8;}
+select.blue_fare option.option1{background-color: #0191d8;}
+select.blue_fare option.option2{background-color: #7573FF;}
+select.blue_fare option.option3{background-color: #1C19FF;}
+select.blue_fare option.option4{background-color: #B0AFFF;}
+select.blue_fare option.option5{background-color: #0300DC;}
+select.blue_fare option.option6{background-color: #5755FF;}
+
+select.red_fare{background-color: #e22500;}
+select.red_fare option.option1{background-color: #CC0000;}
+select.red_fare option.option2{background-color: #FF3333;}
+select.red_fare option.option3{background-color: #AA0000; color: #FFFFFF;}
+select.red_fare option.option4{background-color: #FF9999;}
+
+select.yellow_fare{background-color: #FFD306;}
+select.yellow_fare option.option1{background-color: #FFD306;}
+select.yellow_fare option.option2{background-color: #FDFF73;}
+select.yellow_fare option.option3{background-color: yellow;}
+select.yellow_fare option.option4{background-color: #FDFF55;}
+select.yellow_fare option.option5{background-color: #D9B300;}
+select.yellow_fare option.option6{background-color: #FCFF19;}
+
+select.brown_fare{background-color: #D26900;}
+select.brown_fare option.option1{background-color: #D26900;}
+select.brown_fare option.option2{background-color: #966232;}
+select.brown_fare option.option3{background-color: #FF8F19;}
+select.brown_fare option.option4{background-color: #FFAF60;}
+select.brown_fare option.option5{background-color: #BD701F;}
+
+select.orange_fare{background-color: #ff7f05;}
+select.orange_fare option.option1{background-color: #ff7f05;}
+select.orange_fare option.option2{background-color: #FFC991;}
+select.orange_fare option.option3{background-color: #FFAC55;}
+select.orange_fare option.option4{background-color: #FFD8AF;}
+select.orange_fare option.option5{background-color: #FF8F19;}
+select.orange_fare option.option6{background-color: #FFBB73;}
