@@ -2,181 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 － 藍24 路線資訊 | Tainan Bus for FUN</title>
-<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<style type="text/css">
-@import url("../css/table_style.css");
-@import url("../css/default.css");
-select.get_fare{background-color: #0191d8;}
-select.get_fare option.option1
-{background-color: #0191d8;}
-select.get_fare option.option2
-{background-color: #7573FF;}
-select.get_fare option.option3
-{background-color: #1C19FF;}
-select.get_fare option.option4
-{background-color: #B0AFFF;}
-select.get_fare option.option5
-{background-color: #0300DC;}
-select.get_fare option.option6
-{background-color: #5755FF;}
-</style>
-<script language="javascript" src="../route/fare_and_time/blue_24.js"></script>
-<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
-<script language="javascript" src="../tools/msg.js"></script>
-<script language="javascript" src="../tools/transfer_information.js"></script>
+<script type="text/javascript">
+	route_name = '藍24';
+	route_name_en = 'Blue 24';
+	route_file_name = 'blue_24';
+	route_type = 'blue';
+	route_interval = ['安平工業區','土城子','青草里'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
 </head>
 <body>
-<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
-			<p align="center">
-			<a href="index.html"><img src="../img/blue_logo.png"></a>
-			</p>
-		</div>
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="#route" accesskey="1" title="">路線圖</a></li>
-				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
-				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
-				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
-				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div id="wrapper1">
-	<a name="route"></a>
-	<div id="banner">&nbsp;</div>
-	<div id="route">
-		<div class="title">
-			<h2>大台南公車 ─ 藍24 路線圖</h2>
-			<span class="byline">Tainan Bus Blue 24, Route Map</span>
-		</div>
-		<img src="../route/blue/b24.jpg">
-		<p></p>
-		<a href="https://mapsengine.google.com/map/edit?mid=zT0XIOZRtlhg.kj6E4qMc5n7Y" target="_blank">
-			<img src="../img/google_map_logo.png"><br />
-			<strong><font color="green">查詢路線Google Map</font></strong>
-		</a>
-	</div>
-</div>
-<div id="wrapper2">
-	<a name="info"></a>
-	<div id="routeinfo" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 藍24 路線資訊</h2>
-			<span class="byline">Tainan Bus Blue 24, Route Information</span>
-		</div>
-		<div class="content">
-			<table border="0">
-				<tr>
-					<td>起訖點</td>
-					<td>安平工業區 － 土城子 － 青草里</td>
-				</tr>
-				<tr>
-					<td>營運公司</td>
-					<td>興南客運</td>
-				</tr>
-				<tr>
-					<td>首／末班車發車時刻</td>
-					<td>
-					<script language="javascript">
-						document.write('往 青草里：'+blue_24_time_go[0][0]+'／'+blue_24_time_go[blue_24_time_go.length-1][0]);
-						document.write('<br />');
-						document.write('往 安工區：'+blue_24_time_return[0][0]+'／'+blue_24_time_return[blue_24_time_return.length-1][0]);
-					</script>
-					</td>
-				</tr>
-				<tr>
-					<td>班距</td>
-					<td>固定班次</td>
-				</tr>
-				<tr>
-					<td>收費方式</td>
-					<td>里程計費</td>
-				</tr>
-			</table>
-			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1224&locale=zh_TW" class="button">公車動態資訊</a>
-		</div>
-	</div>
-</div>
-<div id="wrapper3">
-	<a name="fare"></a>
-	<div id="faretable" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 藍24 票價表</h2>
-			<span class="byline">Tainan Bus Blue 24, Bus Fare</span> </div>
-		<div class="content">
-			<script language="javascript">
-				create_select_menu(blue_24_interval_stop, 6, 'blue_24');
-			</script>
-			<br/>
-			<table id="showfareInfo">
-				<tr>
-					<th></th><th>全票</th><th>半票</th>
-				</tr>
-				<tr>
-					<td><b>投現</b></td>
-					<td id="cash_adult">-</td>
-					<td id="cash_half">-</td>
-				</tr>
-				<tr>
-					<td><b>電子票證</b></td>
-					<td id="RFID_adult">-</td>
-					<td id="RFID_half">-</td>
-				</tr>
-			</table>
-			<p>　</p>
-			<script language="javascript">
-				print_fare_table(blue_24_interval_name, blue_24_fare, '#0191d8');
-				document.write('<p>　</p>');
-				document.write(MeteredMSG + PromotionMSG);
-			</script>
-			<p>　</p>
-		</div>
-	</div>
-</div>
-<div id="timetable">
-	<a name="time"></a>
-	<div class="title">
-		<h2>大台南公車 ─ 藍24 時刻表</h2>
-		<span class="byline">Tainan Bus Blue 24, Bus schedule</span> </div>
-	<div class="content">
-		<script language="javascript">
-			document.write('<h2><font color="blue">安平工業區-&gt;青草里</font></h2>');
-			create_time_schedule(blue_24_main_stop_name, blue_24_main_stop_time_consume, blue_24_important_stop, blue_24_time_go, false);
-			//create_time_schedule_go(blue_24_interval_stop, blue_24_stop_time_consume, blue_24_selected_stop, blue_24_important_stop, blue_24_time_go);
-			document.write('<p>　</p>');
-			document.write('<h2><font color="blue">青草里-&gt;安平工業區</font></h2>');
-			create_time_schedule(blue_24_main_stop_name, blue_24_main_stop_time_consume, blue_24_important_stop, blue_24_time_return, true);
-			//create_time_schedule_return(blue_24_interval_stop, blue_24_stop_time_consume, blue_24_selected_stop, blue_24_important_stop, blue_24_time_return);
-			document.write(TimeScheduleMSG);
-		</script>
-	</div>
-</div>
-<div id="wrapper4">
-	<a name="transfer"></a>
-	<div id="transfer" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 藍24 主要轉乘點資訊</h2>
-			<span class="byline">Tainan Bus Blue 24, Transfer information</span>
-		</div>
-		<div class="content">
-			<table>
-				<script type="text/javascript">
-					document.write(transfer_anping_industrial_zone + transfer_haidong_elementary_school);
-				</script>
-			</table>
-		</div>
-	</div>
-</div>
-<div id="copyright">
-	<script type="text/javascript">document.write(copyrightMSG);</script>
-</div>
+<script type="text/javascript">
+	block_header();
+	block_route_map('https://mapsengine.google.com/map/edit?mid=zT0XIOZRtlhg.kj6E4qMc5n7Y');
+	block_route_info(route_interval,'興南客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1224&locale=zh_TW');
+	block_fare(0, null);
+	block_time_schedule('安平工業區','青草里','');
+	block_transfer(transfer_anping_industrial_zone + transfer_haidong_elementary_school);
+	block_copyright();
+</script>
 </body>
 </html>

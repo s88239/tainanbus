@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '高鐵快捷公車H31';
+	route_name_en = 'HSR Shuttle Bus H31';
+	route_file_name = 'hsr_shuttle_h31';
+	route_type = 'hsr_shuttle';
+	route_interval = ['臺南市政府','高鐵臺南站'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'興南客運','15~30分一班','免費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10262&locale=zh_TW');
+	document.write('<div id="wrapper3">\
+	<a name="fare"></a>\
+	<div id="faretable" class="container">\
+		<div class="title">\
+			<h2>大台南公車 ─ ' + route_name + ' 票價表</h2>\
+			<span class="byline">Tainan Bus ' + route_name_en + ', Bus Fare</span>\
+		</div>\
+		<div class="content">\
+			<h1><font color="red">FREE</font></h1>\
+			<h1>免費</h1>\
+			<p>&nbsp;</p>\
+			<h2>本路線起訖點其一須包含高鐵臺南站</h2>\
+			<p> </p>\
+			<p>往高鐵站方向可於任一站上車<br />但僅限於在高鐵臺南站下車</p>\
+			<p>往市政府方向僅能於高鐵臺南站上車<br />上車時得出示高鐵票根才准許搭乘</p><p></p>\
+		</div>\
+	</div>\
+</div>');
+	block_time_schedule('臺南市政府','高鐵臺南站','');
+	block_transfer(transfer_hsr_tainan_station);
+	block_copyright();
+</script>
+</body>
+</html>

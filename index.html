@@ -43,8 +43,8 @@ function search_route(route_str){
 			isFinished = true;
 			break;
 		default:
-			if(route_str=='高鐵快捷H31(市府線)') route = 'hsr/hsr_shuttle_7658';
-			else if(route_str=='高鐵快捷H62(奇美線)') route = 'hsr/hsr_shuttle_7651';
+			if(route_str=='高鐵快捷H31(市府線)') route = 'hsr_shuttle/hsr_shuttle_h31';
+			else if(route_str=='高鐵快捷H62(奇美線)') route = 'hsr_shuttle/hsr_shuttle_h62';
 			else if(route_str=='88'||route_str=='99') route = 'tour_bus/tour_bus_' + route_str; // tour bus
 			else if(!isNaN(route_str)) route = 'city_bus/city_bus_' + route_str; // city_bus
 			isFinished = true;
@@ -109,7 +109,7 @@ $(document).ready(function($) {
 				</a>
 			</td>
 			<td bgcolor="#fc7cc6" onMouseOver="this.style.backgroundColor='#E942C6';" onMouseOut="this.style.backgroundColor='#fc7cc6';">
-				<a href="hsr/index.html" id="box">
+				<a href="hsr_shuttle/index.html" id="box">
 					<span id="text">高鐵接駁車</span><br/>
 					<span id="entext">HSR Shuttle Bus</span>
 				</a>

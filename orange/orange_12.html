@@ -2,177 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 － 橘12 路線資訊 | Tainan Bus for FUN</title>
-<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<style type="text/css">
-@import url("../css/table_style.css");
-@import url("../css/default.css");
-select.get_fare{background-color: #ff7f05;}
-select.get_fare option.option1
-{background-color: #ff7f05;}
-select.get_fare option.option2
-{background-color: #FFC991;}
-select.get_fare option.option3
-{background-color: #FFAC55;}
-select.get_fare option.option4
-{background-color: #FFD8AF;}
-select.get_fare option.option5
-{background-color: #FF8F19;}
-select.get_fare option.option6
-{background-color: #FFBB73;}
-</style>
-<script language="javascript" src="../route/fare_and_time/orange_12.js"></script>
-<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
-<script language="javascript" src="../tools/msg.js"></script>
-<script language="javascript" src="../tools/transfer_information.js"></script>
+<script type="text/javascript">
+	route_name = '橘12';
+	route_name_en = 'Orange 12';
+	route_file_name = 'orange_12';
+	route_type = 'orange';
+	route_interval = ['麻豆','善化','臺南公園'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
 </head>
 <body>
-<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
-			<p align="center">
-			<a href="index.html"><img src="../img/orange_logo.png"></a>
-			</p>
-		</div>
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="#route" accesskey="1" title="">路線圖</a></li>
-				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
-				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
-				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
-				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div id="wrapper1">
-	<a name="route"></a>
-	<div id="banner">&nbsp;</div>
-	<div id="route">
-		<div class="title">
-			<h2>大台南公車 ─ 橘12 路線圖</h2>
-			<span class="byline">Tainan Bus Orange 12, Route Map</span>
-		</div>
-		<img src="../route/orange/o12.jpg">
-		<p></p>
-		<a href="javascript:alert('尚無提供此路線地圖')">
-			<img src="../img/google_map_logo.png"><br />
-			<strong><font color="green">查詢路線Google Map</font></strong>
-		</a>
-	</div>
-</div>
-<div id="wrapper2">
-	<a name="info"></a>
-	<div id="routeinfo" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 橘12 路線資訊</h2>
-			<span class="byline">Tainan Bus Orange 12, Route Information</span> </div>
-		<div class="content">
-			<table border="0">
-				<tr>
-					<td>起訖點</td>
-					<td>麻豆 ─ 善化 ─ 臺南公園</td>
-				</tr>
-				<tr>
-					<td>營運公司</td>
-					<td>興南客運</td>
-				</tr>
-				<tr>
-					<td>首／末班車發車時刻</td>
-					<td>
-					<script language="javascript">
-						document.write('往 臺南公園：'+orange_12_time_go[0][0]+'／'+orange_12_time_go[orange_12_time_go.length-1][0]);
-						document.write('<br />');
-						document.write('往 麻　　豆：'+orange_12_time_return[0][0]+'／'+orange_12_time_return[orange_12_time_return.length-1][0]);
-					</script>
-					</td>
-				</tr>
-				<tr>
-					<td>班距</td>
-					<td>固定班次</td>
-				</tr>
-				<tr>
-					<td>收費方式</td>
-					<td>里程計費</td>
-				</tr>
-			</table>
-			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1412&locale=zh_TW" class="button">公車動態資訊</a> </div>
-	</div>
-</div>
-<div id="wrapper3">
-	<a name="fare"></a>
-	<div id="faretable" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 橘12 票價表</h2>
-			<span class="byline">Tainan Bus Orange 12, Bus Fare</span> </div>
-		<div class="content">
-			<script language="javascript">
-				create_select_menu(orange_12_interval_stop, 6, 'orange_12');
-			</script>
-			<br/>
-			<table>
-				<tr>
-					<th></th><th>全票</th><th>半票</th>
-				</tr>
-				<tr>
-					<td><b>投現</b></td>
-					<td id="cash_adult">-</td>
-					<td id="cash_half">-</td>
-				</tr>
-				<tr>
-					<td><b>電子票證</b></td>
-					<td id="RFID_adult">-</td>
-					<td id="RFID_half">-</td>
-				</tr>
-			</table>
-			<p>　</p>
-			<script language="javascript">
-				print_fare_table(orange_12_interval_name, orange_12_fare, '#FFC991');
-				document.write('<p>　</p>');
-				document.write(MeteredMSG + PromotionMSG);
-			</script>
-			<p>　</p>
-		</div>
-	</div>
-</div>
-<div id="timetable">
-	<a name="time"></a>
-	<div class="title">
-		<h2>大台南公車 ─ 橘12 時刻表</h2>
-		<span class="byline">Tainan Bus Orange 12, Bus schedule</span> </div>
-	<div class="content">
-		<script language="javascript">
-			document.write('<h2><font color="orange">麻豆-&gt;臺南公園</font></h2>');
-			create_time_schedule(orange_12_main_stop_name, orange_12_main_stop_time_consume, orange_12_important_stop, orange_12_time_go, false);
-			document.write('<p>　</p>');
-			document.write('<h2><font color="orange">臺南公園-&gt;麻豆</font></h2>');
-			create_time_schedule(orange_12_main_stop_name, orange_12_main_stop_time_consume, orange_12_important_stop, orange_12_time_return, true);
-			document.write(TimeScheduleMSG);
-		</script>
-	</div>
-</div>
-<div id="wrapper4">
-	<a name="transfer"></a>
-	<div id="transfer" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 橘12 主要轉乘點資訊</h2>
-			<span class="byline">Tainan Bus Orange 12, Transfer information</span>
-		</div>
-		<div class="content">
-			<table>
-				<script type="text/javascript">
-					document.write(transfer_madou + transfer_shanhua_railway_station + transfer_hsinhsih_railway_station + transfer_yanhang + transfer_chimei_hospital + transfer_tainan_railway_station);
-				</script>
-			</table>
-		</div>
-	</div>
-</div>
-<div id="copyright">
-	<script type="text/javascript">document.write(copyrightMSG);</script>
-</div>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'興南客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1412&locale=zh_TW');
+	block_fare(0, null);
+	block_time_schedule('麻豆','臺南公園(公園路)','');
+	block_transfer(transfer_madou + transfer_shanhua_railway_station + transfer_hsinhsih_railway_station + transfer_yanhang + transfer_chimei_hospital + transfer_tainan_railway_station);
+	block_copyright();
+</script>
 </body>
 </html>

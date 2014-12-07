@@ -2,169 +2,50 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>大台南公車 － 5路 路線資訊 | Tainan Bus for FUN</title>
-<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<style type="text/css">
-@import url("../css/table_style.css");
-@import url("../css/default.css");
-</style>
-<script language="javascript" src="../route/fare_and_time/city_bus_5.js"></script>
-<script language="javascript" src="../route/fare_and_time/show_fare_tool.js"></script>
-<script language="javascript" src="../tools/msg.js"></script>
-<script language="javascript" src="../tools/transfer_information.js"></script>
+<script type="text/javascript">
+	route_name = '5路';
+	route_name_en = 'No.5';
+	route_file_name = 'city_bus_5';
+	route_type = 'city_bus';
+	route_interval = ['鹽行','市立醫院','大甲里'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
 </head>
 <body>
-<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>
-			<p align="center">
-			<a href="index.html"><img src="../img/city_bus_logo.png"></a>
-			</p>
-		</div>
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="#route" accesskey="1" title="">路線圖</a></li>
-				<li><a href="#info" accesskey="2" title="">路線資訊</a></li>
-				<li><a href="#fare" accesskey="3" title="">票價表</a></li>
-				<li><a href="#time" accesskey="4" title="">時刻表</a></li>
-				<li><a href="#transfer" accesskey="5" title="">轉乘資訊</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div id="wrapper1">
-	<a name="route"></a>
-	<div id="banner">&nbsp;</div>
-	<div id="route">
-		<div class="title">
-			<h2>大台南公車 ─ 5路 路線圖</h2>
-			<span class="byline">Tainan City Bus No.5, Route Map</span>
-		</div>
-		<img src="../route/city_bus/5.jpg">
-		<p></p>
-		<a href="https://mapsengine.google.com/map/edit?mid=zT0XIOZRtlhg.kC3M0a-uikZY" target="_blank">
-			<img src="../img/google_map_logo.png"><br />
-			<strong><font color="green">查詢路線Google Map</font></strong>
-		</a>
-	</div>
-</div>
-<div id="wrapper2">
-	<a name="info"></a>
-	<div id="routeinfo" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 5路 路線資訊</h2>
-			<span class="byline">Tainan City Bus No.5, Route Information</span> </div>
-		<div class="content">
-			<table border="0">
-				<tr>
-					<td>起訖點</td>
-					<td>鹽行 － 市立醫院/機場/大甲里</td>
-				</tr>
-				<tr>
-					<td>營運公司</td>
-					<td>府城客運</td>
-				</tr>
-				<tr>
-					<td>首／末班車發車時刻</td>
-					<td>
-					<script language="javascript">
-						document.write('往 市立醫院：'+city_bus_5_time_go[0][0]+'／'+city_bus_5_time_go[city_bus_5_time_go.length-1][0]);
-						document.write('<br />');
-						document.write('往 鹽　　行：'+city_bus_5_time_return[0][0]+'／'+city_bus_5_time_return[city_bus_5_time_return.length-1][0]);
-					</script>
-					</td>
-				</tr>
-				<tr>
-					<td>班距</td>
-					<td>固定班次 尖10~20離30</td>
-				</tr>
-				<tr>
-					<td>收費方式</td>
-					<td>一段票</td>
-				</tr>
-			</table>
-			<p>　</p>
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10164&locale=zh_TW" class="button">公車動態資訊</a> </div>
-	</div>
-</div>
-<div id="wrapper3">
-	<a name="fare"></a>
-	<div id="faretable" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 5路 票價表</h2>
-			<span class="byline">Tainan city bus NO.5, Bus Fare</span> </div>
-		<div class="content">
-			<h1>全路線一段票</h1>
-			<br/>
-			<table>
-				<tr>
-					<th></th>
-					<th>全票</th><th>半票</th>
-				</tr>
-				<tr>
-					<td><b>投現</b></td>
-					<td>18</td><td>9</td>
-				</tr>
-				<tr>
-					<td><b>電子票證</b></td>
-					<td>18</td><td>9</td>
-				</tr>
-			</table>
-			<p>　</p>
-			<script language="javascript">
-				document.write(CitybusMSG + PromotionMSG);
-			</script>
-			<p>　</p>
-		</div>
-	</div>
-</div>
-<div id="timetable">
-	<a name="time"></a>
-	<div class="title">
-		<h2>大台南公車 ─ 5路 時刻表</h2>
-		<span class="byline">Tainan city bus NO.5, Bus schedule</span>
-	</div>
-	<div class="content">
-		<script language="javascript">
-			document.write('<h1><font color="#0000AA">平日班表</font></h>');
-			document.write('<h2>鹽行-&gt;市立醫院/機場/嘉南大學</h2>');
-			create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_time_go, false);
-			document.write('<p>　</p>');
-			document.write('<h2>市立醫院/機場/嘉南大學-&gt;鹽行</h2>');
-			create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_time_return, true);
-			document.write('<p>　</p>');
-			document.write('<h1><font color="#CC0000">假日班表</font></h1>');
-			document.write('<h2>鹽行-&gt;市立醫院/機場/嘉南大學</h2>');
-			create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_holiday_time_go, false);
-			document.write('<p>　</p>');
-			document.write('<h2>市立醫院/機場/嘉南大學-&gt;鹽行</h2>');
-			create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_holiday_time_return, true);
-			document.write(TimeScheduleMSG);
-		</script>
-		<h3><font color="#000055">「生」表示經生產路班次</font></h3>
-	</div>
-</div>
-<div id="wrapper4">
-	<a name="transfer"></a>
-	<div id="transfer" class="container">
-		<div class="title">
-			<h2>大台南公車 ─ 5路 主要轉乘點資訊</h2>
-			<span class="byline">Tainan city bus NO.5, Transfer information</span>
-		</div>
-		<div class="content">
-			<table>
-				<script type="text/javascript">
-					document.write(transfer_yanhang + transfer_chimei_hospital + transfer_tainan_railway_station);
-				</script>
-			</table>
-		</div>
-	</div>
-</div>
-<div id="copyright">
-	<script type="text/javascript">document.write(copyrightMSG);</script>
-</div>
+<script type="text/javascript">
+	block_header();
+	block_route_map('https://mapsengine.google.com/map/edit?mid=zT0XIOZRtlhg.kC3M0a-uikZY');
+	block_route_info(route_interval,'府城客運','尖10~20離30','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10164&locale=zh_TW');
+	block_fare(1, null);
+	document.write('<div id="timetable">\
+	<a name="time"></a>\
+	<div class="title">\
+		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
+	</div>\
+	<div class="content">\
+		<h1><font color="#0000AA">平日班表</font></h>\
+		<h2>鹽行-&gt;市立醫院/機場/大甲里</h2>');
+	create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_time_go, false);
+	document.write('<p>　</p>\
+		<h2>市立醫院/機場/大甲里-&gt;鹽行</h2>');
+	create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_time_return, true);
+	document.write('<p>　</p>\
+		<h1><font color="#CC0000">假日班表</font></h1>\
+		<h2>鹽行-&gt;市立醫院/機場/大甲里</h2>');
+	create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_holiday_time_go, false);
+	document.write('<p>　</p>\
+		<h2>市立醫院/機場/大甲里-&gt;鹽行</h2>');
+	create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_holiday_time_return, true);
+	document.write(TimeScheduleMSG +
+		'<h3><font color="#000055">「生」表示經生產路班次</font></h3>\
+	</div>\
+</div>')
+	block_transfer(transfer_yanhang + transfer_chimei_hospital + transfer_tainan_railway_station);
+	block_copyright();
+</script>
 </body>
 </html>
