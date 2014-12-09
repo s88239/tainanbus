@@ -2,11 +2,11 @@ function create_select_menu(name_array, color_name, LINE_NAME){ // print the far
 	switch(color_name){
 		case 'green':
 		case 'blue':
-		case 'yellow':
 		case 'orange':
 			max_color_num = 6;
 			break;
 		case 'red':
+		case 'yellow':
 			max_color_num = 4;
 			break;
 		case 'brown':
@@ -20,7 +20,6 @@ function create_select_menu(name_array, color_name, LINE_NAME){ // print the far
 	for(var name_index = 0; name_index < menu_name.length ; ++name_index){
 		document.write('<select name="' + menu_name[name_index] + '" class="' + color_name + '_fare">');
 		for(var i = 0, color_index = 1; i < name_array.length; ++i, ++color_index ){
-			color_index %= max_color_num;
 			for(var j = 0; j < name_array[i].length; ++j){
 				document.write('<option value="' + i + '" class="option' + color_index + '"');
 				if( name_index==0&&i==0&&j==0 // first stop in from menu
@@ -28,6 +27,7 @@ function create_select_menu(name_array, color_name, LINE_NAME){ // print the far
 					document.write(' selected');
 				document.write('>' + name_array[i][j] + '</option>');
 			}
+			if(color_index==max_color_num) color_index = 0;
 		}
 		document.write("</select>");
 	}
