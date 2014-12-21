@@ -1,7 +1,29 @@
-﻿a{text-decoration:none}
-img {border: 0px}
+﻿a{
+	text-decoration:none;
+}
+img {
+	border: 0px;
+}
 body{
- background-image:url("../img/line_background.jpg");
- background-attachment:fixed;
- font-family: 微軟正黑體;
+ background-image:url("../img/tainan_river.jpg");
+ background-repeat:no-repeat;  /*no-repeat in the background image*/
+ background-attachment:fixed;  /*fix the position of the background image */
+ background-position:center bottom; /*push the image on the left down side*/
+ font-family: "微軟正黑體";
+}
+#bg_table{
+	background: rgba(30%,0%,0%,0.6);
+	border-radius: 10px;
+	color: white;
+	padding: 30px 50px;
+}
+#bg_table td{
+	padding-bottom: 8px;
+	padding-right: 10px;
+}
+#bg_table_overview{
+	background: rgba(30%,0%,0%,0.6);
+	border-radius: 10px;
+	color: white;
+	padding: 10px;
 }
