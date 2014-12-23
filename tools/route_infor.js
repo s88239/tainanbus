@@ -103,6 +103,7 @@ city_bus_11_route = "大成路口 ─ 城西里";
 city_bus_14_route = "臺南火車站 ─ 億載金城";
 city_bus_15_route = "奇美醫院 ─ 大成國中";
 city_bus_18_route = "臺南站 ─ 塭南里 ─ 臺灣歷史博物館";
+city_bus_19_route = "安平 ─ 大灣";
 city_bus_20_route = "崑山科大 ─ 永康火車站 ─ 安南醫院";
 city_bus_21_route = "臺南火車站 ─ 鹽行 ─ 永康工業區";
 
