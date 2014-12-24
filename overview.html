@@ -14,391 +14,416 @@ td{
 </style>
 </head>
 <script type="text/javascript">
+function get_button_string(file_name, ch_name){
+	type = file_name.split('_')[0];
+	if(type=='city') type += '_' + file_name.split('_')[1];
+	line_string = '<tr><td><a href="' + type + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
+	+ ch_name + '</a></td><td>' + eval(file_name + '_route') + '</td></tr>';
+	return line_string;
+}
+
 function get_transfer_info(bus_stop){
 	var div_string = '<table id="bg_table_overview" align="center">';
-	if(bus_stop=='臺南火車站' || bus_stop=='安南' || bus_stop=='安定' || bus_stop=='西港' || bus_stop=='佳里'){
-		div_string += '<tr><td><a href="blue/blue.html" class="blueButton">藍幹線</a></td><td>' + blue_route + '</td></tr>';
-	}
-	if(bus_stop=='臺南火車站' || bus_stop=='永康' || bus_stop=='新化' || bus_stop=='山上' || bus_stop=='左鎮' || bus_stop=='玉井'){
-		div_string += '<tr><td><a href="green/green.html" class="greenButton">綠幹線</a></td><td>' + green_route + '</td></tr>';
-	}
-	if(bus_stop=='臺南火車站' || bus_stop=='仁德' || bus_stop=='歸仁' || bus_stop=='關廟' || bus_stop=='龍崎'){
-		div_string += '<tr><td><a href="red/red.html" class="redButton">紅幹線</a></td><td>' + red_route + '</td></tr>';
-	}
-	if(bus_stop=='新營' || bus_stop=='鹽水' || bus_stop=='學甲' || bus_stop=='佳里'){
-		div_string += '<tr><td><a href="brown/brown.html" class="brownButton">棕幹線</a></td><td>' + brown_route + '</td></tr>';
-	}
-	if(bus_stop=='佳里' || bus_stop=='麻豆' || bus_stop=='善化火車站' || bus_stop=='大內' || bus_stop=='玉井'){
-		div_string += '<tr><td><a href="orange/orange.html" class="orangeButton">橘幹線</a></td><td>' + orange_route + '</td></tr>';
-	}
-	if(bus_stop=='白河' || bus_stop=='後壁' || bus_stop=='新營' || bus_stop.indexOf('柳營')!=-1 || bus_stop=='六甲' || bus_stop=='下營' || bus_stop=='麻豆'){
-		div_string += '<tr><td><a href="yellow/yellow.html" class="yellowButton">黃幹線</a></td><td>' + yellow_route + '</td></tr>';
-	}
-	
+
 	switch(bus_stop){
 		case '臺南火車站':
-		div_string += '<tr><td><a href="city_bus/city_bus_0.html" class="city_busButton">0</a></td><td>' + city_bus_0_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_1.html" class="city_busButton">1</a></td><td>' + city_bus_1_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_2.html" class="city_busButton">2</a></td><td>' + city_bus_2_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_3.html" class="city_busButton">3</a></td><td>' + city_bus_3_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_5.html" class="city_busButton">5</a></td><td>' + city_bus_5_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_6.html" class="city_busButton">6</a></td><td>' + city_bus_6_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_7.html" class="city_busButton">7</a></td><td>' + city_bus_7_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_9.html" class="city_busButton">9</a></td><td>' + city_bus_9_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_10.html" class="city_busButton">10</a></td><td>' + city_bus_10_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_11.html" class="city_busButton">11</a></td><td>' + city_bus_11_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_14.html" class="city_busButton">14</a></td><td>' + city_bus_14_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_18.html" class="city_busButton">18</a></td><td>' + city_bus_18_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_21.html" class="city_busButton">21</a></td><td>' + city_bus_20_route + '</td></tr>\
-		<tr><td><a href="tour_bus/tour_bus_88.html" class="tourButton">88</a></td><td>' + tour_bus_88_route + '</td></tr>\
-		<tr><td><a href="tour_bus/tour_bus_99.html" class="tourButton">99</a></td><td>' + tour_bus_99_route + '</td></tr>\
-		<tr><td><a href="green/green_17.html" class="greenButton">綠17</a></td><td>' + green_17_route + '</td></tr>\
-		<tr><td><a href="red/red_1.html" class="redButton">紅1</a></td><td>' + red_1_route + '</td></tr>\
-		<tr><td><a href="red/red_2.html" class="redButton">紅2</a></td><td>' + red_2_route + '</td></tr>\
-		<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>' + red_3_route + '</td></tr>\
-		<tr><td><a href="red/red_4.html" class="redButton">紅4</a></td><td>' + red_4_route + '</td></tr>\
-		<tr><td><a href="orange/orange_3.html" class="orangeButton">橘3</a></td><td>' + orange_3_route + '</td></tr>\
-		<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>' + orange_11_route + '</td></tr>\
-		<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>' + orange_12_route + '</td></tr>\
-		</table>\
+		div_string += get_button_string('green', '綠幹線')
+		+ get_button_string('blue', '藍幹線')
+		+ get_button_string('red', '紅幹線')
+		+ get_button_string('city_bus_0', '0')
+		+ get_button_string('city_bus_1', '1')
+		+ get_button_string('city_bus_2', '2')
+		+ get_button_string('city_bus_3', '3')
+		+ get_button_string('city_bus_5', '5')
+		+ get_button_string('city_bus_6', '6')
+		+ get_button_string('city_bus_7', '7')
+		+ get_button_string('city_bus_9', '9')
+		+ get_button_string('city_bus_10', '10')
+		+ get_button_string('city_bus_11', '11')
+		+ get_button_string('city_bus_14', '14')
+		+ get_button_string('city_bus_18', '18')
+		+ get_button_string('city_bus_19', '19')
+		+ get_button_string('city_bus_21', '21')
+		+ get_button_string('tour_bus_88', '88')
+		+ get_button_string('tour_bus_99', '99')
+		+ get_button_string('green_17', '綠17')
+		+ get_button_string('red_1', '紅1')
+		+ get_button_string('red_2', '紅2')
+		+ get_button_string('red_3', '紅3')
+		+ get_button_string('red_4', '紅4')
+		+ get_button_string('orange_3', '橘3')
+		+ get_button_string('orange_11', '橘11')
+		+ get_button_string('orange_12', '橘12')
+		+ '</table>\
 		<h1 align="center">臺南</h1>\
-		<table id="bg_table_overview" align="center">\
-		<tr><td><a href="city_bus/city_bus_15.html" class="city_busButton">15</a></td><td>' + city_bus_15_route + '</td></tr>\
-		<tr><td><a href="blue/blue_23.html" class="blueButton">藍23</a></td><td>' + blue_23_route + '</td></tr>\
-		<tr><td><a href="blue/blue_24.html" class="blueButton">藍24</a></td><td>' + blue_24_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h31.html" class="hsrButton">H31</a></td><td>' + hsr_shuttle_h31_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h62.html" class="hsrButton">H62</a></td><td>' + hsr_shuttle_h62_route + '</td></tr>';
+		<table id="bg_table_overview" align="center">'
+		+ get_button_string('city_bus_15', '15')
+		+ get_button_string('blue_23', '藍23')
+		+ get_button_string('blue_24', '藍24')
+		+ get_button_string('hsr_shuttle_h31', 'H31')
+		+ get_button_string('hsr_shuttle_h62', 'H62');
 		break;
 	case '新營':
-		div_string += '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>' + yellow_1_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_2.html" class="yellowButton">黃2</a></td><td>' + yellow_2_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_3.html" class="yellowButton">黃3</a></td><td>' + yellow_3_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_4.html" class="yellowButton">黃4</a></td><td>' + yellow_4_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_5.html" class="yellowButton">黃5</a></td><td>' + yellow_5_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_6.html" class="yellowButton">黃6</a></td><td>' + yellow_6_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_7.html" class="yellowButton">黃7</a></td><td>' + yellow_7_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_9.html" class="yellowButton">黃9</a></td><td>' + yellow_9_route + '</td></tr>\
-		<tr><td><a href="brown/brown_1.html" class="brownButton">棕1</a></td><td>' + brown_1_route + '</td></tr>\
-		<tr><td><a href="brown/brown_2.html" class="brownButton">棕2</a></td><td>' + brown_2_route + '</td></tr>\
-		<tr><td><a href="brown/brown_3.html" class="brownButton">棕3</a></td><td>' + brown_3_route + '</td></tr>\
-		<tr><td><a href="brown/brown_3_1.html" class="brownButton">棕3-1</a></td><td>' + brown_3_1_route + '</td></tr>';
+		div_string += get_button_string('yellow', '黃幹線')
+		+ get_button_string('brown', '棕幹線')
+		+ get_button_string('yellow_1', '黃1')
+		+ get_button_string('yellow_2', '黃2')
+		+ get_button_string('yellow_3', '黃3')
+		+ get_button_string('yellow_4', '黃4')
+		+ get_button_string('yellow_5', '黃5')
+		+ get_button_string('yellow_6', '黃6')
+		+ get_button_string('yellow_7', '黃7')
+		+ get_button_string('yellow_9', '黃9')
+		+ get_button_string('brown_1', '棕1')
+		+ get_button_string('brown_2', '棕2')
+		+ get_button_string('brown_3', '棕3')
+		+ get_button_string('brown_3_1', '棕3-1');
 		break;
 	case '善化火車站':
-		div_string += '<tr><td><a href="orange/orange_1.html" class="orangeButton">橘1</a></td><td>' + orange_1_route + '</td></tr>\
-		<tr><td><a href="orange/orange_2.html" class="orangeButton">橘2</a></td><td>' + orange_2_route + '</td></tr>\
-		<tr><td><a href="orange/orange_3.html" class="orangeButton">橘3</a></td><td>' + orange_3_route + '</td></tr>\
-		<tr><td><a href="orange/orange_4.html" class="orangeButton">橘4</a></td><td>' + orange_4_route + '</td></tr>\
-		<tr><td><a href="orange/orange_5.html" class="orangeButton">橘5</a></td><td>' + orange_5_route + '</td></tr>\
-		<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>' + orange_12_route + '</td></tr>\
-		<tr><td><a href="green/green_1.html" class="greenButton">綠1</a></td><td>' + green_1_route + '</td></tr>\
-		<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>' + green_2_route + '</td></tr>\
-		<tr><td><a href="green/green_3.html" class="greenButton">綠3</a></td><td>' + green_3_route + '</td></tr>\
-		<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>' + green_4_route + '</td></tr>\
-		<tr><td><a href="green/green_11.html" class="greenButton">綠11</a></td><td>' + green_11_route + '</td></tr>';
+		div_string += get_button_string('orange', '橘幹線')
+		+ get_button_string('orange_1', '橘1')
+		+ get_button_string('orange_2', '橘2')
+		+ get_button_string('orange_3', '橘3')
+		+ get_button_string('orange_4', '橘4')
+		+ get_button_string('orange_5', '橘5')
+		+ get_button_string('orange_12', '橘12')
+		+ get_button_string('green_1', '綠1')
+		+ get_button_string('green_2', '綠2')
+		+ get_button_string('green_3', '綠3')
+		+ get_button_string('green_4', '綠4')
+		+ get_button_string('green_11', '綠11');
 		break;
 	case '佳里':
-		div_string += '<tr><td><a href="blue/blue_1.html" class="blueButton">藍1</a></td><td>' + blue_1_route + '</td></tr>\
-		<tr><td><a href="blue/blue_2.html" class="blueButton">藍2</a></td><td>' + blue_2_route + '</td></tr>\
-		<tr><td><a href="blue/blue_3.html" class="blueButton">藍3</a></td><td>' + blue_3_route + '</td></tr>\
-		<tr><td><a href="blue/blue_10.html" class="blueButton">藍10</a></td><td>' + blue_10_route + '</td></tr>\
-		<tr><td><a href="blue/blue_11.html" class="blueButton">藍11</a></td><td>' + blue_11_route + '</td></tr>\
-		<tr><td><a href="blue/blue_12.html" class="blueButton">藍12</a></td><td>' + blue_12_route + '</td></tr>\
-		<tr><td><a href="blue/blue_13.html" class="blueButton">藍13</a></td><td>' + blue_13_route + '</td></tr>\
-		<tr><td><a href="blue/blue_20.html" class="blueButton">藍20</a></td><td>' + blue_20_route + '</td></tr>\
-		<tr><td><a href="blue/blue_21.html" class="blueButton">藍21</a></td><td>' + blue_21_route + '</td></tr>\
-		<tr><td><a href="blue/blue_22.html" class="blueButton">藍22</a></td><td>' + blue_22_route + '</td></tr>\
-		<tr><td><a href="blue/blue_25.html" class="blueButton">藍25</a></td><td>' + blue_25_route + '</td></tr>';
+		div_string += get_button_string('blue', '藍幹線')
+		+ get_button_string('brown', '棕幹線')
+		+ get_button_string('orange', '橘幹線')
+		+ get_button_string('blue_1', '藍1')
+		+ get_button_string('blue_2', '藍2')
+		+ get_button_string('blue_3', '藍3')
+		+ get_button_string('blue_10', '藍10')
+		+ get_button_string('blue_11', '藍11')
+		+ get_button_string('blue_12', '藍12')
+		+ get_button_string('blue_13', '藍13')
+		+ get_button_string('blue_20', '藍20')
+		+ get_button_string('blue_21', '藍21')
+		+ get_button_string('blue_22', '藍22')
+		+ get_button_string('blue_25', '藍25');
 		break;
 	case '關廟':
-		div_string += '<tr><td><a href="red/red_1.html" class="redButton">紅1</a></td><td>' + red_1_route + '</td></tr>\
-		<tr><td><a href="red/red_2.html" class="redButton">紅2</a></td><td>' + red_2_route + '</td></tr>\
-		<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>' + red_3_route + '</td></tr>\
-		<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>' + red_10_route + '</td></tr>\
-		<tr><td><a href="red/red_11.html" class="redButton">紅11</a></td><td>' + red_11_route + '</td></tr>\
-		<tr><td><a href="red/red_12.html" class="redButton">紅12</a></td><td>' + red_12_route + '</td></tr>\
-		<tr><td><a href="red/red_13.html" class="redButton">紅13</a></td><td>' + red_13_route + '</td></tr>\
-		<tr><td><a href="red/red_14.html" class="redButton">紅14</a></td><td>' + red_14_route + '</td></tr>\
-		<tr><td><a href="green/green_16.html" class="greenButton">綠16</a></td><td>' + green_16_route + '</td></tr>';
+		div_string += get_button_string('red', '紅幹線')
+		+ get_button_string('red_1', '紅1')
+		+ get_button_string('red_2', '紅2')
+		+ get_button_string('red_3', '紅3')
+		+ get_button_string('red_10', '紅10')
+		+ get_button_string('red_11', '紅11')
+		+ get_button_string('red_12', '紅12')
+		+ get_button_string('red_13', '紅13')
+		+ get_button_string('red_14', '紅14')
+		+ get_button_string('green_16', '綠16');
 		break;
 	case '白河':
-		div_string += '<tr><td><a href="yellow/yellow_10.html" class="yellowButton">黃10</a></td><td>' + yellow_10_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_11.html" class="yellowButton">黃11</a></td><td>' + yellow_11_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_11_1.html" class="yellowButton">黃11-1</a></td><td>' + yellow_11_1_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_12.html" class="yellowButton">黃12</a></td><td>' + yellow_12_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_12_1.html" class="yellowButton">黃12-1</a></td><td>' + yellow_12_1_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_13.html" class="yellowButton">黃13</a></td><td>' + yellow_13_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_14.html" class="yellowButton">黃14</a></td><td>' + yellow_14_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_14_1.html" class="yellowButton">黃14-1</a></td><td>' + yellow_14_1_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_15.html" class="yellowButton">黃15</a></td><td>' + yellow_15_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_12_guanziling.html" class="yellowButton" align="center">關子嶺<br />假日公車</a></td><td>' + yellow_12_guanziling_route + '</td></tr>';
+		div_string += get_button_string('yellow', '黃幹線')
+		+ get_button_string('yellow_10', '黃10')
+		+ get_button_string('yellow_11', '黃11')
+		+ get_button_string('yellow_11_1', '黃11-1')
+		+ get_button_string('yellow_12', '黃12')
+		+ get_button_string('yellow_12_1', '黃12-1')
+		+ get_button_string('yellow_13', '黃13')
+		+ get_button_string('yellow_14', '黃14')
+		+ get_button_string('yellow_14_1', '黃14-1')
+		+ get_button_string('yellow_15', '黃15')
+		+ get_button_string('yellow_12_guanziling', '關子嶺<br />假日公車');
 		break;
 	case '麻豆':
-		div_string += '<tr><td><a href="orange/orange_10.html" class="orangeButton">橘10</a></td><td>' + orange_10_route + '</td></tr>\
-		<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>' + orange_11_route + '</td></tr>\
-		<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>' + orange_12_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_20.html" class="yellowButton">黃20</a></td><td>' + yellow_20_route + '</td></tr>\
-		<tr><td><a href="brown/brown_10.html" class="brownButton">棕10</a></td><td>' + brown_10_route + '</td></tr>';
+		div_string += get_button_string('orange', '橘幹線')
+		+ get_button_string('yellow', '黃幹線')
+		+ get_button_string('orange_10', '橘10')
+		+ get_button_string('orange_11', '橘11')
+		+ get_button_string('orange_12', '橘12')
+		+ get_button_string('yellow_20', '黃20')
+		+ get_button_string('brown_10', '棕10');
 		break;
 	case '玉井':
-		div_string += '<tr><td><a href="green/green_20.html" class="greenButton">綠20</a></td><td>' + green_20_route + '</td></tr>\
-		<tr><td><a href="green/green_20_1.html" class="greenButton">綠20-1</a></td><td>' + green_20_1_route + '</td></tr>\
-		<tr><td><a href="green/green_21.html" class="greenButton">綠21</a></td><td>' + green_21_route + '</td></tr>\
-		<tr><td><a href="green/green_22.html" class="greenButton">綠22</a></td><td>' + green_22_route + '</td></tr>\
-		<tr><td><a href="green/green_23.html" class="greenButton">綠23</a></td><td>' + green_23_route + '</td></tr>\
-		<tr><td><a href="green/green_24.html" class="greenButton">綠24</a></td><td>' + green_24_route + '</td></tr>\
-		<tr><td><a href="green/green_25.html" class="greenButton">綠25</a></td><td>' + green_25_route + '</td></tr>\
-		<tr><td><a href="green/green_26.html" class="greenButton">綠26</a></td><td>' + green_26_route + '</td></tr>\
-		<tr><td><a href="green/green_27.html" class="greenButton">綠27</a></td><td>' + green_27_route + '</td></tr>\
-		<tr><td><a href="orange/orange_20.html" class="orangeButton">橘20</a></td><td>' + orange_20_route + '</td></tr>';
+		div_string += get_button_string('green', '綠幹線')
+		+ get_button_string('orange', '橘幹線')
+		+ get_button_string('green_20', '綠20')
+		+ get_button_string('green_20_1', '綠20-1')
+		+ get_button_string('green_21', '綠21')
+		+ get_button_string('green_22', '綠22')
+		+ get_button_string('green_23', '綠23')
+		+ get_button_string('green_24', '綠24')
+		+ get_button_string('green_25', '綠25')
+		+ get_button_string('green_26', '綠26')
+		+ get_button_string('green_27', '綠27')
+		+ get_button_string('orange_20', '橘20');
 		break;
 	case '新化':
-		div_string += '<tr><td><a href="green/green_1.html" class="greenButton">綠1</a></td><td>' + green_1_route + '</td></tr>\
-		<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>' + green_2_route + '</td></tr>\
-		<tr><td><a href="green/green_3.html" class="greenButton">綠3</a></td><td>' + green_3_route + '</td></tr>\
-		<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>' + green_4_route + '</td></tr>\
-		<tr><td><a href="green/green_6.html" class="greenButton">綠6</a></td><td>' + green_6_route + '</td></tr>\
-		<tr><td><a href="green/green_7.html" class="greenButton">綠7</a></td><td>' + green_7_route + '</td></tr>\
-		<tr><td><a href="green/green_10.html" class="greenButton">綠10</a></td><td>' + green_10_route + '</td></tr>\
-		<tr><td><a href="green/green_11.html" class="greenButton">綠11</a></td><td>' + green_11_route + '</td></tr>\
-		<tr><td><a href="green/green_12.html" class="greenButton">綠12</a></td><td>' + green_12_route + '</td></tr>\
-		<tr><td><a href="green/green_13.html" class="greenButton">綠13</a></td><td>' + green_13_route + '</td></tr>\
-		<tr><td><a href="green/green_14.html" class="greenButton">綠14</a></td><td>' + green_14_route + '</td></tr>\
-		<tr><td><a href="green/green_15.html" class="greenButton">綠15</a></td><td>' + green_15_route + '</td></tr>\
-		<tr><td><a href="green/green_16.html" class="greenButton">綠16</a></td><td>' + green_16_route + '</td></tr>\
-		<tr><td><a href="green/green_17.html" class="greenButton">綠17</a></td><td>' + green_17_route + '</td></tr>';
+		div_string += get_button_string('green', '綠幹線')
+		+ get_button_string('green_1', '綠1')
+		+ get_button_string('green_2', '綠2')
+		+ get_button_string('green_3', '綠3')
+		+ get_button_string('green_4', '綠4')
+		+ get_button_string('green_6', '綠6')
+		+ get_button_string('green_7', '綠7')
+		+ get_button_string('green_10', '綠10')
+		+ get_button_string('green_11', '綠11')
+		+ get_button_string('green_12', '綠12')
+		+ get_button_string('green_13', '綠13')
+		+ get_button_string('green_14', '綠14')
+		+ get_button_string('green_15', '綠15')
+		+ get_button_string('green_16', '綠16')
+		+ get_button_string('green_17', '綠17');
 		break;
 	case '龍崎':
-		div_string += '<tr><td><a href="red/red_11.html" class="redButton">紅11</a></td><td>' + red_11_route + '</td></tr>\
-		<tr><td><a href="red/red_12.html" class="redButton">紅12</a></td><td>' + red_12_route + '</td></tr>';
+		div_string += get_button_string('red', '紅幹線')
+		+ get_button_string('red_11', '紅11')
+		+ get_button_string('red_12', '紅12');
 		break;
 	case '歸仁':
-		div_string += '<tr><td><a href="red/red_1.html" class="redButton">紅1</a></td><td>' + red_1_route + '</td></tr>\
-		<tr><td><a href="red/red_2.html" class="redButton">紅2</a></td><td>' + red_2_route + '</td></tr>\
-		<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>' + red_3_route + '</td></tr>\
-		<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>' + red_10_route + '</td></tr>\
-		<tr><td><a href="red/red_14.html" class="redButton">紅14</a></td><td>' + red_14_route + '</td></tr>\
-		<tr><td><a href="green/green_16.html" class="greenButton">綠16</a></td><td>' + green_16_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h31.html" class="hsrButton">H31</a></td><td>' + hsr_shuttle_h31_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h62.html" class="hsrButton">H62</a></td><td>' + hsr_shuttle_h62_route + '</td></tr>';
+		div_string += get_button_string('red', '紅幹線')
+		+ get_button_string('red_1', '紅1')
+		+ get_button_string('red_2', '紅2')
+		+ get_button_string('red_3', '紅3')
+		+ get_button_string('red_10', '紅10')
+		+ get_button_string('red_14', '紅14')
+		+ get_button_string('green_16', '綠16')
+		+ get_button_string('hsr_shuttle_h31', 'H31')
+		+ get_button_string('hsr_shuttle_h62', 'H62');
 		break;
 	case '仁德':
-		div_string += '<tr><td><a href="red/red_1.html" class="redButton">紅1</a></td><td>' + red_1_route + '</td></tr>\
-		<tr><td><a href="red/red_2.html" class="redButton">紅2</a></td><td>' + red_2_route + '</td></tr>\
-		<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>' + red_3_route + '</td></tr>\
-		<tr><td><a href="red/red_4.html" class="redButton">紅4</a></td><td>' + red_4_route + '</td></tr>\
-		<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>' + red_10_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h31.html" class="hsrButton">H31</a></td><td>' + hsr_shuttle_h31_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h62.html" class="hsrButton">H62</a></td><td>' + hsr_shuttle_h62_route + '</td></tr>';
+		div_string += get_button_string('red', '紅幹線')
+		+ get_button_string('red_1', '紅1')
+		+ get_button_string('red_2', '紅2')
+		+ get_button_string('red_3', '紅3')
+		+ get_button_string('red_4', '紅4')
+		+ get_button_string('red_10', '紅10')
+		+ get_button_string('hsr_shuttle_h31', 'H31')
+		+ get_button_string('hsr_shuttle_h62', 'H62');
 		break;
 	case '永康':
-		div_string += '<tr><td><a href="city_bus/city_bus_2.html" class="city_busButton">2</a></td><td>' + city_bus_2_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_5.html" class="city_busButton">5</a></td><td>' + city_bus_5_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_15.html" class="city_busButton">15</a></td><td>' + city_bus_15_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_20.html" class="city_busButton">20</a></td><td>' + city_bus_20_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_21.html" class="city_busButton">21</a></td><td>' + city_bus_20_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h62.html" class="hsrButton">H62</a></td><td>' + hsr_shuttle_h62_route + '</td></tr>\
-		<tr><td><a href="green/green_5.html" class="greenButton">綠5</a></td><td>' + green_5_route + '</td></tr>\
-		<tr><td><a href="green/green_17.html" class="greenButton">綠17</a></td><td>' + green_17_route + '</td></tr>\
-		<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>' + red_10_route + '</td></tr>\
-		<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>' + orange_12_route + '</td></tr>';
+		div_string += get_button_string('green', '綠幹線')
+		+ get_button_string('city_bus_2', '2')
+		+ get_button_string('city_bus_5', '5')
+		+ get_button_string('city_bus_15', '15')
+		+ get_button_string('city_bus_19', '19')
+		+ get_button_string('city_bus_20', '20')
+		+ get_button_string('city_bus_21', '21')
+		+ get_button_string('hsr_shuttle_h62', 'H62')
+		+ get_button_string('green_5', '綠5')
+		+ get_button_string('green_17', '綠17')
+		+ get_button_string('red_10', '紅10')
+		+ get_button_string('orange_12', '橘12');
 		break;
 	case '新市':
-		div_string += '<tr><td><a href="green/green_1.html" class="greenButton">綠1</a></td><td>' + green_1_route + '</td></tr>\
-		<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>' + green_2_route + '</td></tr>\
-		<tr><td><a href="green/green_3.html" class="greenButton">綠3</a></td><td>' + green_3_route + '</td></tr>\
-		<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>' + green_4_route + '</td></tr>\
-		<tr><td><a href="green/green_5.html" class="greenButton">綠5</a></td><td>' + green_5_route + '</td></tr>\
-		<tr><td><a href="green/green_6.html" class="greenButton">綠6</a></td><td>' + green_6_route + '</td></tr>\
-		<tr><td><a href="green/green_7.html" class="greenButton">綠7</a></td><td>' + green_7_route + '</td></tr>\
-		<tr><td><a href="green/green_11.html" class="greenButton">綠11</a></td><td>' + green_11_route + '</td></tr>\
-		<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>' + orange_12_route + '</td></tr>';
+		div_string += get_button_string('green_1', '綠1')
+		+ get_button_string('green_2', '綠2')
+		+ get_button_string('green_3', '綠3')
+		+ get_button_string('green_4', '綠4')
+		+ get_button_string('green_5', '綠5')
+		+ get_button_string('green_6', '綠6')
+		+ get_button_string('green_7', '綠7')
+		+ get_button_string('green_11', '綠11')
+		+ get_button_string('orange_12', '橘12');
 		break;
 	case '山上':
-		div_string += '<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>' + green_2_route + '</td></tr>\
-		<tr><td><a href="green/green_10.html" class="greenButton">綠10</a></td><td>' + green_10_route + '</td></tr>\
-		<tr><td><a href="green/green_11.html" class="greenButton">綠11</a></td><td>' + green_11_route + '</td></tr>\
-		<tr><td><a href="green/green_12.html" class="greenButton">綠12</a></td><td>' + green_12_route + '</td></tr>';
+		div_string += get_button_string('green', '綠幹線')
+		+ get_button_string('green_2', '綠2')
+		+ get_button_string('green_10', '綠10')
+		+ get_button_string('green_11', '綠11')
+		+ get_button_string('green_12', '綠12');
 		break;
 	case '左鎮':
-		div_string += '<tr><td><a href="green/green_12.html" class="greenButton">綠12</a></td><td>' + green_12_route + '</td></tr>\
-		<tr><td><a href="green/green_13.html" class="greenButton">綠13</a></td><td>' + green_13_route + '</td></tr>';
+		div_string += get_button_string('green', '綠幹線')
+		+ get_button_string('green_12', '綠12')
+		+ get_button_string('green_13', '綠13');
 		break;
 	case '南化':
-		div_string += '<tr><td><a href="green/green_12.html" class="greenButton">綠12</a></td><td>' + green_12_route + '</td></tr>\
-		<tr><td><a href="green/green_26.html" class="greenButton">綠26</a></td><td>' + green_26_route + '</td></tr>\
-		<tr><td><a href="green/green_27.html" class="greenButton">綠27</a></td><td>' + green_27_route + '</td></tr>';
+		div_string += get_button_string('green_12', '綠12')
+		+ get_button_string('green_26', '綠26')
+		+ get_button_string('green_27', '綠27');
 		break;
 	case '楠西':
-		div_string += '<tr><td><a href="green_20.html" class="greenButton">綠20</a></td><td>' + green_20_route + '</td></tr>\
-		<tr><td><a href="green/green_21.html" class="greenButton">綠21</a></td><td>' + green_21_route + '</td></tr>\
-		<tr><td><a href="green/green_22.html" class="greenButton">綠22</a></td><td>' + green_22_route + '</td></tr>\
-		<tr><td><a href="green/green_23.html" class="greenButton">綠23</a></td><td>' + green_23_route + '</td></tr>\
-		<tr><td><a href="green/green_24.html" class="greenButton">綠24</a></td><td>' + green_24_route + '</td></tr>\
-		<tr><td><a href="green/green_25.html" class="greenButton">綠25</a></td><td>' + green_25_route + '</td></tr>';
+		div_string += get_button_string('green_20', '綠20')
+		+ get_button_string('green_21', '綠21')
+		+ get_button_string('green_22', '綠22')
+		+ get_button_string('green_23', '綠23')
+		+ get_button_string('green_24', '綠24')
+		+ get_button_string('green_25', '綠25');
 		break;
 	case '大內':
-		div_string += '<tr><td><a href="orange/orange_1.html" class="orangeButton">橘1</a></td><td>' + orange_1_route + '</td></tr>\
-		<tr><td><a href="orange/orange_2.html" class="orangeButton">橘2</a></td><td>' + orange_2_route + '</td></tr>\
-		<tr><td><a href="orange/orange_20.html" class="orangeButton">橘20</a></td><td>' + orange_20_route + '</td></tr>';
+		div_string += get_button_string('orange', '橘幹線')
+		+ get_button_string('orange_1', '橘1')
+		+ get_button_string('orange_2', '橘2')
+		+ get_button_string('orange_20', '橘20');
 		break;
 	case '官田':
-		div_string += '<tr><td><a href="orange/orange_1.html" class="orangeButton">橘1</a></td><td>' + orange_1_route + '</td></tr>\
-		<tr><td><a href="orange/orange_2.html" class="orangeButton">橘2</a></td><td>' + orange_2_route + '</td></tr>\
-		<tr><td><a href="orange/orange_4.html" class="orangeButton">橘4</a></td><td>' + orange_4_route + '</td></tr>\
-		<tr><td><a href="orange/orange_5.html" class="orangeButton">橘5</a></td><td>' + orange_5_route + '</td></tr>\
-		<tr><td><a href="orange/orange_10.html" class="orangeButton">橘10</a></td><td>' + orange_10_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>' + yellow_1_route + '</td></tr>';
+		div_string += get_button_string('orange_1', '橘1')
+		+ get_button_string('orange_2', '橘2')
+		+ get_button_string('orange_4', '橘4')
+		+ get_button_string('orange_5', '橘5')
+		+ get_button_string('orange_10', '橘10')
+		+ get_button_string('yellow_1', '黃1');
 		break;
 	case '下營':
-		div_string += '<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>' + orange_11_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_5.html" class="yellowButton">黃5</a></td><td>' + yellow_5_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_20.html" class="yellowButton">黃20</a></td><td>' + yellow_20_route + '</td></tr>';
+		div_string += get_button_string('yellow', '黃幹線')
+		+ get_button_string('orange_11', '橘11')
+		+ get_button_string('yellow_5', '黃5')
+		+ get_button_string('yellow_20', '黃20');
 		break;
 	case '六甲':
-		div_string += '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>' + yellow_1_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_2.html" class="yellowButton">黃2</a></td><td>' + yellow_2_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_4.html" class="yellowButton">黃4</a></td><td>' + yellow_4_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_20.html" class="yellowButton">黃20</a></td><td>' + yellow_20_route + '</td></tr>';
+		div_string += get_button_string('yellow', '黃幹線')
+		+ get_button_string('yellow_1', '黃1')
+		+ get_button_string('yellow_2', '黃2')
+		+ get_button_string('yellow_4', '黃4')
+		+ get_button_string('yellow_20', '黃20');
 		break;
 	case '柳營':
-		div_string += '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>' + yellow_1_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_2.html" class="yellowButton">黃2</a></td><td>' + yellow_2_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_3.html" class="yellowButton">黃3</a></td><td>' + yellow_3_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_4.html" class="yellowButton">黃4</a></td><td>' + yellow_4_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_5.html" class="yellowButton">黃5</a></td><td>' + yellow_5_route + '</td></tr>';
+		div_string += get_button_string('yellow', '黃幹線')
+		+ get_button_string('yellow_1', '黃1')
+		+ get_button_string('yellow_2', '黃2')
+		+ get_button_string('yellow_3', '黃3')
+		+ get_button_string('yellow_4', '黃4')
+		+ get_button_string('yellow_5', '黃5');
 		break;
 	case '後壁':
-		div_string += '<tr><td><a href="yellow/yellow_6.html" class="yellowButton">黃6</a></td><td>' + yellow_6_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_9.html" class="yellowButton">黃9</a></td><td>' + yellow_9_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_10.html" class="yellowButton">黃10</a></td><td>' + yellow_10_route + '</td></tr>';
+		div_string += get_button_string('yellow', '黃幹線')
+		+ get_button_string('yellow_6', '黃6')
+		+ get_button_string('yellow_9', '黃9')
+		+ get_button_string('yellow_10', '黃10');
 		break;
 	case '東山':
-		div_string += '<tr><td><a href="yellow/yellow_7.html" class="yellowButton">黃7</a></td><td>' + yellow_7_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_11.html" class="yellowButton">黃11</a></td><td>' + yellow_11_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_11_1.html" class="yellowButton">黃11-1</a></td><td>' + yellow_11_1_route + '</td></tr>';
+		div_string += get_button_string('yellow_7', '黃7')
+		+ get_button_string('yellow_11', '黃11')
+		+ get_button_string('yellow_11_1', '黃11-1');
 		break;
 	case '鹽水':
-		div_string += '<tr><td><a href="brown/brown_1.html" class="brownButton">棕1</a></td><td>' + brown_1_route + '</td></tr>\
-		<tr><td><a href="brown/brown_2.html" class="brownButton">棕2</a></td><td>' + brown_2_route + '</td></tr>\
-		<tr><td><a href="brown/brown_3.html" class="brownButton">棕3</a></td><td>' + brown_3_route + '</td></tr>';
+		div_string += get_button_string('brown', '棕幹線')
+		+ get_button_string('brown_1', '棕1')
+		+ get_button_string('brown_2', '棕2')
+		+ get_button_string('brown_3', '棕3');
 		break;
 	case '學甲':
-		div_string += '<tr><td><a href="blue/blue_1.html" class="blueButton">藍1</a></td><td>' + blue_1_route + '</td></tr>\
-		<tr><td><a href="blue/blue_2.html" class="blueButton">藍2</a></td><td>' + blue_2_route + '</td></tr>\
-		<tr><td><a href="blue/blue_3.html" class="blueButton">藍3</a></td><td>' + blue_3_route + '</td></tr>\
-		<tr><td><a href="brown/brown_10.html" class="brownButton">棕10</a></td><td>' + brown_10_route + '</td></tr>\
-		<tr><td><a href="brown/brown_11.html" class="brownButton">棕11</a></td><td>' + brown_11_route + '</td></tr>';
+		div_string += get_button_string('brown', '棕幹線')
+		+ get_button_string('blue_1', '藍1')
+		+ get_button_string('blue_2', '藍2')
+		+ get_button_string('blue_3', '藍3')
+		+ get_button_string('brown_10', '棕10')
+		+ get_button_string('brown_11', '棕11');
 		break;
 	case '北門':
-		div_string += '<tr><td><a href="blue/blue_1.html" class="blueButton">藍1</a></td><td>' + blue_1_route + '</td></tr>\
-		<tr><td><a href="blue/blue_2.html" class="blueButton">藍2</a></td><td>' + blue_2_route + '</td></tr>\
-		<tr><td><a href="blue/blue_3.html" class="blueButton">藍3</a></td><td>' + blue_3_route + '</td></tr>\
-		<tr><td><a href="brown/brown_2.html" class="brownButton">棕2</a></td><td>' + brown_2_route + '</td></tr>';
+		div_string += get_button_string('blue_1', '藍1')
+		+ get_button_string('blue_2', '藍2')
+		+ get_button_string('blue_3', '藍3')
+		+ get_button_string('brown_2', '棕2');
 		break;
 	case '將軍':
-		div_string += '<tr><td><a href="blue/blue_1.html" class="blueButton">藍1</a></td><td>' + blue_1_route + '</td></tr>\
-		<tr><td><a href="blue/blue_10.html" class="blueButton">藍10</a></td><td>' + blue_10_route + '</td></tr>\
-		<tr><td><a href="blue/blue_11.html" class="blueButton">藍11</a></td><td>' + blue_11_route + '</td></tr>\
-		<tr><td><a href="blue/blue_12.html" class="blueButton">藍12</a></td><td>' + blue_12_route + '</td></tr>\
-		<tr><td><a href="blue/blue_13.html" class="blueButton">藍13</a></td><td>' + blue_13_route + '</td></tr>\
-		<tr><td><a href="blue/blue_20.html" class="blueButton">藍20</a></td><td>' + blue_20_route + '</td></tr>';
+		div_string += get_button_string('blue_1', '藍1')
+		+ get_button_string('blue_10', '藍10')
+		+ get_button_string('blue_11', '藍11')
+		+ get_button_string('blue_12', '藍12')
+		+ get_button_string('blue_13', '藍13')
+		+ get_button_string('blue_20', '藍20');
 		break;
 	case '七股':
-		div_string += '<tr><td><a href="blue/blue_13.html" class="blueButton">藍13</a></td><td>' + blue_13_route + '</td></tr>\
-		<tr><td><a href="blue/blue_20.html" class="blueButton">藍20</a></td><td>' + blue_20_route + '</td></tr>\
-		<tr><td><a href="blue/blue_21.html" class="blueButton">藍21</a></td><td>' + blue_21_route + '</td></tr>\
-		<tr><td><a href="blue/blue_22.html" class="blueButton">藍22</a></td><td>' + blue_22_route + '</td></tr>\
-		<tr><td><a href="blue/blue_23.html" class="blueButton">藍23</a></td><td>' + blue_23_route + '</td></tr>\
-		<tr><td><a href="blue/blue_25.html" class="blueButton">藍25</a></td><td>' + blue_25_route + '</td></tr>\
-		<tr><td><a href="tour_bus/tour_bus_99.html" class="tourButton">99</a></td><td>' + tour_bus_99_route + '</td></tr>';
+		div_string += get_button_string('blue_13', '藍13')
+		+ get_button_string('blue_20', '藍20')
+		+ get_button_string('blue_21', '藍21')
+		+ get_button_string('blue_22', '藍22')
+		+ get_button_string('blue_23', '藍23')
+		+ get_button_string('blue_25', '藍25')
+		+ get_button_string('tour_bus_99', '99');
 		break;
 	case '西港':
-		div_string += '<tr><td><a href="blue/blue_21.html" class="blueButton">藍21</a></td><td>' + blue_21_route + '</td></tr>\
-		<tr><td><a href="blue/blue_22.html" class="blueButton">藍22</a></td><td>' + blue_22_route + '</td></tr>\
-		<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>' + orange_11_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_9.html" class="city_busButton">9</a></td><td>' + city_bus_9_route + '</td></tr>';
+		div_string += get_button_string('blue', '藍幹線')
+		+ get_button_string('blue_21', '藍21')
+		+ get_button_string('blue_22', '藍22')
+		+ get_button_string('orange_11', '橘11')
+		+ get_button_string('city_bus_9', '9');
 		break;
 	case '安定':
-		div_string += '<tr><td><a href="orange/orange_3.html" class="orangeButton">橘3</a></td><td>' + orange_3_route + '</td></tr>\
-		<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>' + orange_11_route + '</td></tr>';
+		div_string += get_button_string('blue', '藍幹線')
+		+ get_button_string('orange_3', '橘3')
+		+ get_button_string('orange_11', '橘11');
 		break;
 	case '安南':
-		div_string += '<tr><td><a href="city_bus/city_bus_3.html" class="city_busButton">3</a></td><td>' + city_bus_3_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_7.html" class="city_busButton">7</a></td><td>' + city_bus_7_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_9.html" class="city_busButton">9</a></td><td>' + city_bus_9_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_10.html" class="city_busButton">10</a></td><td>' + city_bus_10_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_11.html" class="city_busButton">11</a></td><td>' + city_bus_11_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_18.html" class="city_busButton">18</a></td><td>' + city_bus_18_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_20.html" class="city_busButton">20</a></td><td>' + city_bus_20_route + '</td></tr>\
-		<tr><td><a href="tour_bus/tour_bus_99.html" class="tourButton">99</a></td><td>' + tour_bus_99_route + '</td></tr>\
-		<tr><td><a href="orange/orange_3.html" class="orangeButton">橘3</a></td><td>' + orange_3_route + '</td></tr>\
-		<tr><td><a href="orange/orange_11.html" class="orangeButton">橘11</a></td><td>' + orange_11_route + '</td></tr>\
-		<tr><td><a href="blue/blue_23.html" class="blueButton">藍23</a></td><td>' + blue_23_route + '</td></tr>\
-		<tr><td><a href="blue/blue_24.html" class="blueButton">藍24</a></td><td>' + blue_24_route + '</td></tr>\
-		<tr><td><a href="blue/blue_25.html" class="blueButton">藍25</a></td><td>' + blue_25_route + '</td></tr>';
+		div_string += get_button_string('blue', '藍幹線')
+		+ get_button_string('city_bus_3', '3')
+		+ get_button_string('city_bus_7', '7')
+		+ get_button_string('city_bus_9', '9')
+		+ get_button_string('city_bus_10', '10')
+		+ get_button_string('city_bus_11', '11')
+		+ get_button_string('city_bus_18', '18')
+		+ get_button_string('city_bus_20', '20')
+		+ get_button_string('tour_bus_99', '99')
+		+ get_button_string('orange_3', '橘3')
+		+ get_button_string('orange_11', '橘11')
+		+ get_button_string('blue_23', '藍23')
+		+ get_button_string('blue_24', '藍24')
+		+ get_button_string('blue_25', '藍25');
 		break;
 	case '後壁火車站':
-		div_string += '<tr><td><a href="yellow/yellow_6.html" class="yellowButton">黃6</a></td><td>' + yellow_6_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_9.html" class="yellowButton">黃9</a></td><td>' + yellow_9_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_10.html" class="yellowButton">黃10</a></td><td>' + yellow_10_route + '</td></tr>';
+		div_string += get_button_string('yellow_6', '黃6')
+		+ get_button_string('yellow_9', '黃9')
+		+ get_button_string('yellow_10', '黃10');
 		break;
 	case '柳營火車站':
-		div_string += '<tr><td><a href="yellow/yellow_3.html" class="yellowButton">黃3</a></td><td>' + yellow_3_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_5.html" class="yellowButton">黃5</a></td><td>' + yellow_5_route + '</td></tr>';
+		div_string += get_button_string('yellow', '黃幹線')
+		+ get_button_string('yellow_3', '黃3')
+		+ get_button_string('yellow_5', '黃5');
 		break;
 	case '林鳳營火車站':
-		div_string += '<tr><td><a href="yellow/yellow_1.html" class="yellowButton">黃1</a></td><td>' + yellow_1_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_2.html" class="yellowButton">黃2</a></td><td>' + yellow_2_route + '</td></tr>\
-		<tr><td><a href="yellow/yellow_20.html" class="yellowButton">黃20</a></td><td>' + yellow_20_route + '</td></tr>';
+		div_string += get_button_string('yellow_1', '黃1')
+		+ get_button_string('yellow_2', '黃2')
+		+ get_button_string('yellow_20', '黃20');
 		break;
 	case '隆田火車站':
-		div_string += '<tr><td><a href="orange/orange_10.html" class="orangeButton">橘10</a></td><td>' + orange_10_route + '</td></tr>';
+		div_string += get_button_string('orange_10', '橘10');
 		break;
 	case '新市火車站':
-		div_string += '<tr><td><a href="green/green_1.html" class="greenButton">綠1</a></td><td>' + green_1_route + '</td></tr>\
-		<tr><td><a href="green/green_2.html" class="greenButton">綠2</a></td><td>' + green_2_route + '</td></tr>\
-		<tr><td><a href="green/green_3.html" class="greenButton">綠3</a></td><td>' + green_3_route + '</td></tr>\
-		<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>' + green_4_route + '</td></tr>\
-		<tr><td><a href="green/green_5.html" class="greenButton">綠5</a></td><td>' + green_5_route + '</td></tr>\
-		<tr><td><a href="green/green_6.html" class="greenButton">綠6</a></td><td>' + green_6_route + '</td></tr>\
-		<tr><td><a href="green/green_7.html" class="greenButton">綠7</a></td><td>' + green_7_route + '</td></tr>\
-		<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>' + orange_12_route + '</td></tr>';
+		div_string += get_button_string('green_1', '綠1')
+		+ get_button_string('green_2', '綠2')
+		+ get_button_string('green_3', '綠3')
+		+ get_button_string('green_4', '綠4')
+		+ get_button_string('green_5', '綠5')
+		+ get_button_string('green_6', '綠6')
+		+ get_button_string('green_7', '綠7')
+		+ get_button_string('orange_12', '橘12');
 		break;
 	case '南科火車站':
-		div_string += '<tr><td><a href="green/green_4.html" class="greenButton">綠4</a></td><td>' + green_4_route + '</td></tr>';
+		div_string += get_button_string('green_4', '綠4');
 		break;
 	case '永康火車站':
-		div_string += '<tr><td><a href="city_bus/city_bus_20.html" class="city_busButton">20</a></td><td>' + city_bus_20_route + '</td></tr>\
-		<tr><td><a href="green/green_5.html" class="greenButton">綠5</a></td><td>' + green_5_route + '</td></tr>\
-		<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>' + red_10_route + '</td></tr>';
+		div_string += get_button_string('city_bus_20', '20')
+		+ get_button_string('green_5', '綠5')
+		+ get_button_string('red_10', '紅10');
 		break;
 	case '大橋火車站':
-		div_string += '<tr><td><a href="city_bus/city_bus_5.html" class="city_busButton">5</a></td><td>' + city_bus_5_route + '</td></tr>\
-		<tr><td><a href="city_bus/city_bus_15.html" class="city_busButton">15</a></td><td>' + city_bus_15_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h62.html" class="hsrButton">H62</a></td><td>' + hsr_shuttle_h62_route + '</td></tr>\
-		<tr><td><a href="red/red_10.html" class="redButton">紅10</a></td><td>' + red_10_route + '</td></tr>\
-		<tr><td><a href="orange/orange_12.html" class="orangeButton">橘12</a></td><td>' + orange_12_route + '</td></tr>';
+		div_string += get_button_string('city_bus_5', '5')
+		+ get_button_string('city_bus_15', '15')
+		+ get_button_string('hsr_shuttle_h62', 'H62')
+		+ get_button_string('red_10', '紅10')
+		+ get_button_string('orange_12', '橘12');
 		break;
 	case '保安火車站':
-		div_string += '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>' + red_3_route + '</td></tr>\
-		<tr><td><a href="red/red_4.html" class="redButton">紅4</a></td><td>' + red_4_route + '</td></tr>';
+		div_string += get_button_string('red_3', '紅3')
+		+ get_button_string('red_4', '紅4');
 		break;
 	case '仁德火車站':
-		div_string += '<tr><td><a href="red/red_4.html" class="redButton">紅4</a></td><td>' + red_4_route + '</td></tr>';
+		div_string += get_button_string('red_4', '紅4');
 		break;
 	case '中洲火車站':
-		div_string += '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>' + red_3_route + '</td></tr>';
+		div_string += get_button_string('red_3', '紅3');
 		break;
 	case '長榮大學火車站':
-		div_string += '<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>' + red_3_route + '</td></tr>';
+		div_string += get_button_string('red_3', '紅3');
 		break;
 	case '沙崙火車站':
-		div_string += '<tr><td><img src="route/transfer/HSR.png"></td><td valign="center"><font color="orange" size="+2">台灣高鐵</font></td></tr>\
-		<tr><td><a href="red/red_3.html" class="redButton">紅3</a></td><td>' + red_3_route + '</td></tr>\
-		<tr><td><a href="red/red_14.html" class="redButton">紅14</a></td><td>' + red_14_route + '</td></tr>\
-		<tr><td><a href="green/green_16.html" class="greenButton">綠16</a></td><td>' + green_16_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h31.html" class="hsrButton">H31</a></td><td>' + hsr_shuttle_h31_route + '</td></tr>\
-		<tr><td><a href="hsr_shuttle/hsr_shuttle_h62.html" class="hsrButton">H62</a></td><td>' + hsr_shuttle_h62_route + '</td></tr>';
+		div_string += '<tr><td><img src="route/transfer/HSR.png"></td><td valign="center"><font color="orange" size="+2">台灣高鐵</font></td></tr>'
+		+ get_button_string('red_3', '紅3')
+		+ get_button_string('red_14', '紅14')
+		+ get_button_string('green_16', '綠16')
+		+ get_button_string('hsr_shuttle_h31', 'H31')
+		+ get_button_string('hsr_shuttle_h62', 'H62');
 		break;
 	}
 	div_string += '</table>';
@@ -480,7 +505,7 @@ function get_transfer_info(bus_stop){
   <td rowspan="2"><img src="img/tainan_bus_overview.png" alt="臺南市鐵路及公車路線總圖" height="600" usemap="#tainan_map"></td>
  </tr>
  <tr>
-  <td><div id="transfer_info" style="text-align:center; color: blue; width: 430px; height: 500px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"><h1>請點擊右方地圖查詢路線</h1>
+  <td><div id="transfer_info" style="text-align:center; color: blue; width: 430px; height: 520px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"><h1>請點擊右方地圖查詢路線</h1>
   <font color="red">目前憑電子票證搭乘大臺南幹支線公車享8公里免費，大臺南公車2小時內轉乘再優惠9元，台鐵轉公車亦享單向轉乘優惠9元，歡迎多加利用。
   </font>
   </div></td>
