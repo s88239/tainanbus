@@ -7,7 +7,7 @@
 	route_name_en = 'No.20';
 	route_file_name = 'city_bus_20';
 	route_type = 'city_bus';
-	route_interval = ['崑山科大','永大路','安南醫院'];
+	route_interval = ['南紡夢時代','永大路','安南醫院'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -18,9 +18,9 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map('https://mapsengine.google.com/map/edit?mid=zT0XIOZRtlhg.k7U0sQhq2PSo');
-	block_route_info(route_interval,'府城客運','尖20離30','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10020&locale=zh_TW');
+	block_route_info(route_interval,'府城客運','尖20離40','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10020&locale=zh_TW');
 	block_fare(1, null);
-	block_time_schedule('崑山科大','安南醫院','');
+	block_time_schedule('南紡夢時代','安南醫院','');
 	block_transfer(transfer_kun_shan_university + transfer_yongkang_railway_station + transfer_yanhang + transfer_taiwan_history_museum + transfer_annan_hospital);
 	block_copyright();
 </script>

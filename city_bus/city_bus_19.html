@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '19路';
+	route_name_en = 'No.19';
+	route_file_name = 'city_bus_19';
+	route_type = 'city_bus';
+	route_interval = ['安平','大灣'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null,'2014/12/25-2015/01/24 開通首月免費搭乘');
+	block_route_info(route_interval,'府城客運','尖20離45','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10019&locale=zh_TW');
+	block_fare(1, null);
+	block_time_schedule('安平','大灣','');
+	block_transfer(transfer_tainan_railway_station + transfer_kun_shan_university );
+	block_copyright();
+</script>
+</body>
+</html>

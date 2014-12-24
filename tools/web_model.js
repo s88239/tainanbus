@@ -101,7 +101,7 @@ function block_route_info(route_interval, company_name, density, charging_method
 		<div class="content">\
 			<table border="0">\
 				<tr>\
-					<td>起訖點</td>\
+					<td>起迄點</td>\
 					<td>');
 	for(item in route_interval){
 		document.write(route_interval[item]);
@@ -186,7 +186,7 @@ function block_fare(section_type, section_point){
 				</tr>\
 			</table>');
 	}
-	else if(section_type==2){ // charge by two section
+	else if(section_type==2 || section_type==22){ // charge by two section
 		document.write('<h1>兩段票收費</h1>\
 			<h2><u>分段點：' + section_point + '</u></h2><br />\
 			<table>\
@@ -196,7 +196,10 @@ function block_fare(section_type, section_point){
 				</tr>\
 				<tr>\
 					<td><b>投現</b></td>\
-					<td>30</td><td>18</td>\
+					<td>');
+		if(section_type==2) document.write('30');
+		else document.write('36'); // doubling
+		document.write('</td><td>18</td>\
 				</tr>\
 				<tr>\
 					<td><b>電子票證</b></td>\
