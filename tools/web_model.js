@@ -103,9 +103,9 @@ function block_route_info(route_interval, company_name, density, charging_method
 				<tr>\
 					<td>起迄點</td>\
 					<td>');
-	for(item in route_interval){
-		document.write(route_interval[item]);
-		if(item < route_interval.length - 1 ) document.write(' ─ ');
+	for(i = 0; i < route_interval.length; ++i){
+		document.write(route_interval[i]);
+		if(i < route_interval.length - 1 ) document.write(' ─ ');
 	}
 	document.write('</td>\
 				</tr>\
