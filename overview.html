@@ -17,7 +17,9 @@ td{
 function get_button_string(file_name, ch_name){
 	type = file_name.split('_')[0];
 	if(type=='city') type += '_' + file_name.split('_')[1];
-	line_string = '<tr><td><a href="' + type + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
+	category = (type=='hsr' || type=='tour') ? type + '_' + file_name.split('_')[1] : type;
+
+	line_string = '<tr><td><a href="' + category + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
 	+ ch_name + '</a></td><td>' + eval(file_name + '_route') + '</td></tr>';
 	return line_string;
 }
