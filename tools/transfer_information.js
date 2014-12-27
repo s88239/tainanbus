@@ -113,8 +113,8 @@ link_city_bus_21 = '<a href="../city_bus/city_bus_21.html" target="_blank">21</a
 link_tour_bus_88 = '<a href="../tour_bus/tour_bus_88.html" target="_blank">88</a>';
 link_tour_bus_99 = '<a href="../tour_bus/tour_bus_99.html" target="_blank">99</a>';
 
-link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">高鐵快捷H31(市府線)</a>';
-link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">高鐵快捷H62(奇美線)</a>';
+link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31(市府線)</a>';
+link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62(奇美線)</a>';
 
 
 transfer_tainan_railway_station = '<tr><th rowspan="7">臺南火車站</th>\
