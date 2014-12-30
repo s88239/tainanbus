@@ -154,9 +154,11 @@ transfer_culture_center = '<tr><th rowspan="3">文化中心</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_88 + '</td></tr>';
 
-transfer_yanhang = '<tr><th rowspan="2">鹽行</th>\
+transfer_yanhang = '<tr><th rowspan="3">鹽行</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus">' + link_city_bus_5 + '、' +link_city_bus_20+ '、' +link_city_bus_21 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
+	<td id="hsr_shuttle">' + link_hsr_shuttle_h62 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_12 + '</td></tr>';
 

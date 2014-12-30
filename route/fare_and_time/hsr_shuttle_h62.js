@@ -8,8 +8,8 @@ hsr_shuttle_h62_stop_time_consume = [0,5,10,14,14,19,22,27,30,32,35,40,45,50,65]
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-hsr_shuttle_h62_main_stop_name = ["桂田酒店","奇美醫院","國賓影城","文化中心","富農街口","仁德交流道","高鐵臺南站"];
-hsr_shuttle_h62_main_stop_time_consume = [0, 15, 25, 40, 50, 55, 80];
+hsr_shuttle_h62_main_stop_name = ["桂田酒店","奇美醫院","南紡夢時代","文化中心","富農街口","仁德交流道","高鐵臺南站"];
+hsr_shuttle_h62_main_stop_time_consume = [0, 15, 27, 40, 50, 55, 80];
 hsr_shuttle_h62_important_stop = [0, 1, 6]; // 桂田酒店, 奇美醫院, 高鐵臺南站
 hsr_shuttle_h62_time_go = [["05:35",1,6],["5:50",1,6,["一"]],["6:00",1,6],["6:35",1,6],["7:00",1,6],["7:35",1,6],["8:00",1,6],
 ["8:35",1,6],["8:45"],["9:20",1,6],["9:35",1,6],["10:00",1,6],["10:20"],["11:00",1,6],["11:20"],["12:00",1,6],["12:20",1,6],
