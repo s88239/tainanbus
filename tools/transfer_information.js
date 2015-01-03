@@ -386,3 +386,21 @@ transfer_baoan_railway_station = '<tr><th rowspan="2">保安轉運站</th>\
 	<td><font color="#00AAFF">台鐵保安站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red">' + link_red_3 + '、' + link_red_4 + '</td></tr>';
+
+transfer_rende_railway_station = '<tr><th rowspan="2">保安工業區</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
+	<td><font color="#00AAFF">台鐵仁德站</font></td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
+	<td id="red">' + link_red_4 + '</td></tr>';
+
+transfer_chungchou_railway_station = '<tr><th rowspan="2">中洲</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
+	<td><font color="#00AAFF">台鐵中洲站</font></td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
+	<td id="red">' + link_red_3 + '</td></tr>';
+
+transfer_CJCU_railway_station = '<tr><th rowspan="2">南大潭</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
+	<td><font color="#00AAFF">台鐵長榮大學站</font></td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
+	<td id="red">' + link_red_3 + '</td></tr>';
