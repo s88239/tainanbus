@@ -28,7 +28,7 @@
 		<div class="content">\
 			<table border="0">\
 				<tr>\
-					<td>起訖點</td>\
+					<td>起迄點</td>\
 					<td>臺南公園 ─ 觀夕平台</td>\
 				</tr>\
 				<tr>\
@@ -71,11 +71,11 @@
 	</div>\
 	<div class="content">\
 		<h1><font color="#0000AA">平日班表</font></h>\
-		<h2>臺南公園-&gt;觀夕平台</h2>');
+		<h2><font color="purple">臺南公園-&gt;觀夕平台</font></h2>');
 	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_time_go, false);
 
-	document.write('<p>　</p>\
-		<h2>觀夕平台-&gt;臺南公園</h2>');
+	document.write('<p><b>以上班表包含寒暑假平日</b></p>\
+		<h2><font color="purple">觀夕平台-&gt;臺南公園</font></h2>');
 	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_time_return, true);
 
 	document.write('<h3><font color="red">2、7、8月寒暑假平日</font></h3>');
@@ -83,11 +83,11 @@
 
 	document.write('<p>　</p>\
 		<h1><font color="#CC0000">假日班表</font></h1>\
-		<h2>臺南公園-&gt;觀夕平台</h2>');
+		<h2><font color="purple">臺南公園-&gt;觀夕平台</font></h2>');
 	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_holiday_time_go, false);
 
 	document.write('<p>　</p>\
-		<h2>觀夕平台-&gt;臺南公園</h2>');
+		<h2><font color="purple">觀夕平台-&gt;臺南公園</font></h2>');
 	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_holiday_time_return, true);
 
 	document.write(TimeScheduleMSG + '</div>\
