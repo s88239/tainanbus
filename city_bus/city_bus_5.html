@@ -28,20 +28,20 @@
 	</div>\
 	<div class="content">\
 		<h1><font color="#0000AA">平日班表</font></h>\
-		<h2>鹽行-&gt;市立醫院/機場/大甲里</h2>');
+		<h2><font color="purple">鹽行-&gt;市立醫院/機場/大甲里</font></h2>');
 	create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_time_go, false);
 	document.write('<p>　</p>\
-		<h2>市立醫院/機場/大甲里-&gt;鹽行</h2>');
+		<h2><font color="purple">市立醫院/機場/大甲里-&gt;鹽行</font></h2>');
 	create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_time_return, true);
 	document.write('<p>　</p>\
 		<h1><font color="#CC0000">假日班表</font></h1>\
-		<h2>鹽行-&gt;市立醫院/機場/大甲里</h2>');
+		<h2><font color="purple">鹽行-&gt;市立醫院/機場/大甲里</font></h2>');
 	create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_holiday_time_go, false);
 	document.write('<p>　</p>\
-		<h2>市立醫院/機場/大甲里-&gt;鹽行</h2>');
+		<h2><font color="purple">市立醫院/機場/大甲里-&gt;鹽行</font></h2>');
 	create_time_schedule(city_bus_5_main_stop_name, city_bus_5_main_stop_time_consume, city_bus_5_important_stop, city_bus_5_holiday_time_return, true);
 	document.write(TimeScheduleMSG +
-		'<h3><font color="#000055">「生」表示經生產路班次</font></h3>\
+		'<h3><font color="#000055">「<font color="red">生</font>」表示經生產路班次</font></h3>\
 	</div>\
 </div>')
 	block_transfer(transfer_yanhang + transfer_chimei_hospital + transfer_tainan_railway_station);

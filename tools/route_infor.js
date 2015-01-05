@@ -67,7 +67,7 @@ orange_5_route = "善化轉運站 ─ 官田 ─ 六甲";
 orange_10_route = "真理大學 ─ 隆田火車站 ─ 南藝大";
 orange_11_route = "下營 ─ 麻豆 ─ 西港 ─ 臺南公園";
 orange_12_route = "麻豆 ─ 善化 ─ 新市 ─ 臺南公園";
-orange_20_route = "大內公所 ─ 環湖 ─ 玉井";
+orange_20_route = "大內 ─ 環湖 ─ 玉井";
 
 yellow_route = "白河 ─ 新營 ─ 麻豆";
 yellow_1_route = "新營 ─ 柳營 ─ 六甲";
@@ -94,7 +94,7 @@ city_bus_0_route = "臺南火車站 ─ 臺南火車站";
 city_bus_1_route = "臺南火車站 ─ 茄萣 ─ 興達港";
 city_bus_2_route = "崑山科大 ─ 安平";
 city_bus_3_route = "海東國小 ─ 竹篙厝";
-city_bus_5_route = "鹽行 ─ 市立醫院、嘉南科大";
+city_bus_5_route = "鹽行 ─ 市立醫院、嘉南藥大";
 city_bus_6_route = "裕聖里 ─ 新興國宅";
 city_bus_7_route = "臺南火車站 ─ 康寧大學";
 city_bus_9_route = "臺南火車站 ─ 公親里、溪埔寮";
