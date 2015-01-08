@@ -36,8 +36,8 @@ function create_select_menu(name_array, color_name, LINE_NAME){ // print the far
 }
 
 function query_fare(theForm, fare_array){
-	var fd = parseInt(theForm.from.value);
-	var td = parseInt(theForm.to.value);
+	var fd = parseInt(theForm.from.value,10);
+	var td = parseInt(theForm.to.value,10);
 	var price = (fd<=td)?fare_array[td][fd]:fare_array[fd][td];
 	//alert(fd + ' ' + td);
 	//alert(fare_array[td][fd]+" "+fare_array[fd][td]);
@@ -305,8 +305,8 @@ function judge_important_stop(idx, arr){ // find the index matching the importan
 }
 function get_time(time_str, offset){ // get the time of the stop
 	time_split = time_str.split(':');
-	time_hr = parseInt(time_split[0]);
-	time_min = parseInt(time_split[1]);
+	time_hr = parseInt(time_split[0],10);
+	time_min = parseInt(time_split[1],10);
 	time_min += offset;
 	if(time_min>=60){
 		time_hr += Math.floor(time_min/60);
