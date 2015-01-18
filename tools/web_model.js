@@ -65,7 +65,7 @@ function block_header(){
 </div>');
 }
 
-function block_route_map(map_link, announce_str){
+function block_route_map(announce_str){
 	document.write('<div id="wrapper1">\
 	<a name="route"></a>\
 	<div id="banner">&nbsp;</div>\
@@ -78,13 +78,9 @@ function block_route_map(map_link, announce_str){
 
 	if(announce_str!=null) Announcement(announce_str); // have something news to announce
 	document.write('<p></p>\
-		<a href="');
-
-	if(map_link==null) document.write('javascript:alert(\'尚無提供此路線地圖\')")>'); // no map link
-	else document.write( map_link + '" target="_blank">');
-
-	document.write('<img src="../img/google_map_logo.png"><br />\
-			<strong><font color="green">查詢路線Google Map</font></strong>\
+		<a href="../TainanBusMap/show_map.php?route=' + route_file_name + '" target="_blank">\
+			<img src="../img/google_map_logo.png"><br />\
+			<strong><font color="green">查詢路線地圖 By Kagami</font></strong>\
 		</a>\
 	</div>\
 </div>');
