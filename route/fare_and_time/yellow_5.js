@@ -22,5 +22,5 @@ yellow_5_fare = [
 yellow_5_main_stop_name = ["新營","柳營火車站","八老爺","紅毛厝","下營廟前"];
 yellow_5_main_stop_time_consume = [0, 11, 17, 26, 30];
 yellow_5_important_stop = [0, 1, 4]; // 新營, 柳營火車站, 下營廟前
-yellow_5_time_go = [["09:30"],["11:20"],["16:00"]];
-yellow_5_time_return = [["08:50"],["12:20"],["16:40"]];
+yellow_5_time_go = [["08:20"],["09:30"],["16:00"]];
+yellow_5_time_return = [["09:00"],["12:20"],["16:40"]];

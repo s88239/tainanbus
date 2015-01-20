@@ -119,7 +119,7 @@
 		"RouteCategory":1
 	},
 	{
-		"RouteCodeName":"Red",
+		"RouteCodeName":"red",
 		"RouteName":"紅幹線",
 		"RouteOSMRelation":3905767,
 		"RouteCode":1600,
