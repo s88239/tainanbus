@@ -8,8 +8,8 @@ hsr_shuttle_h31_stop_time_consume = [0,10,15,20,23,27,30,33,36,40,60];
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-hsr_shuttle_h31_main_stop_name = ["原住民文化會館<br /><font color=\"red\">(假日延駛)</font>","臺南市政府","臺南站","延平郡王祠<br />(國立臺南大學)","臺南航空站","臺南都會公園","高鐵臺南站"];
-hsr_shuttle_h31_main_stop_time_consume = [0, 10, 15, 23, 36, 40, 60];
+hsr_shuttle_h31_main_stop_name = ["原住民文化會館<br /><font color=\"red\">(假日延駛)</font>","臺南市政府","興南客運<br />臺南站","延平郡王祠<br />(國立臺南大學)","臺南航空站","臺南都會公園","高鐵臺南站"];
+hsr_shuttle_h31_main_stop_time_consume = [0, 10, 15, 23, 36, 40, 55];
 hsr_shuttle_h31_important_stop = [0, 1, 4, 6]; // 桂田酒店, 奇美醫院, 高鐵臺南站
 hsr_shuttle_h31_time_go = [["05:50",1,6],["6:05",1,6,["一"]],["6:20",1,6],["6:55",1,6],["7:10",1,6],["7:30",1,6],["7:55",1,6],
 ["8:10",1,6],["8:30",1,6],["8:55",1,6],["9:10",1,6],["9:30",1,6],["9:55",1,6],["10:00"],["10:30",1,6],["10:55",1,6],["11:00"],
