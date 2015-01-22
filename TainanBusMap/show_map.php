@@ -18,9 +18,11 @@
 <?php
 	$route_name = $_GET['route'];
 	$str_sec = explode("_",$route_name);
+	$branch_flag = false;
 	switch ($str_sec[0]) {
 		case 'green':
 			$ch_name = (count($str_sec)==1)?'綠幹線':'綠'.$str_sec[1];
+			if(count($str_sec)>2) $branch_flag = true;
 			break;
 		case 'blue':
 			$ch_name = (count($str_sec)==1)?'藍幹線':'藍'.$str_sec[1];
@@ -30,12 +32,14 @@
 			break;
 		case 'brown':
 			$ch_name = (count($str_sec)==1)?'棕幹線':'棕'.$str_sec[1];
+			if(count($str_sec)>2) $branch_flag = true;
 			break;
 		case 'orange':
 			$ch_name = (count($str_sec)==1)?'橘幹線':'橘'.$str_sec[1];
 			break;
 		case 'yellow':
 			$ch_name = (count($str_sec)==1)?'黃幹線':'黃'.$str_sec[1];
+			if(count($str_sec)>2) $branch_flag = true;
 			break;
 		case 'hsr':
 			$ch_name = '高鐵快捷公車'.strtoupper($str_sec[2]);
@@ -46,6 +50,11 @@
 		default:
 			$ch_name = $str_sec[2].'路';
 			break;
+	}
+	if($branch_flag){
+		$route_name = $str_sec[0].'_'.$str_sec[1];
+		if( strcmp($str_sec[2], 'guanziling')==0 ) $ch_name = '關子嶺假日公車';
+		else $ch_name = $ch_name.'-'.$str_sec[2];
 	}
 	echo '<title>'.$ch_name.' ─ 路線地圖 | Tainan Bus for FUN</title>';
 ?>
