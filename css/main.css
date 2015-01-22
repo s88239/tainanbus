@@ -5,7 +5,11 @@
 	background-attachment:fixed; /* fix the position of the background image */
 	background-position:center top; /*push the image on the center top side*/
 }
-table { 
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+table .button{ 
     border-spacing: 5px;
     border-collapse: separate;
 }
