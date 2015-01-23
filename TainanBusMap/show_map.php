@@ -3,12 +3,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
-	<link rel="stylesheet" href="build/TDivBus.min.css">
+	<link href="build/TDivbus.min.css" rel="stylesheet">
 	<link href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
 	<link href="css/MarkerCluster.css" rel="stylesheet" />
 	<link href="css/MarkerCluster.Default.css" rel="stylesheet" />
 	<link href="../css/default.css" rel="stylesheet" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/jquery.blockUI.js"></script>
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="js/leaflet.markercluster.js"></script>
