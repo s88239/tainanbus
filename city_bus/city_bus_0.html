@@ -17,7 +17,7 @@
 <body>
 <script type="text/javascript">
 	block_header();
-	block_route_map(null);
+	block_route_map('因應本市健康路（金華路至體育路）路面改善工程，影響本市現有0右、2、5、15等公車路線停靠站位，自即日起至104年2月9日止暫時取消停靠「體育公園」、「臺南高商」、「家齊女中」等3站位，敬請前往前後鄰近站位搭乘，造成不便敬請見諒。');
 	document.write('<div id="wrapper2">\
 	<a name="info"></a>\
 	<div id="routeinfo" class="container">\
@@ -28,7 +28,7 @@
 		<div class="content">\
 			<table border="0">\
 				<tr>\
-					<td>起訖點</td>\
+					<td>起迄點</td>\
 					<td>臺南火車站 － 臺南火車站</td>\
 				</tr>\
 				<tr>\
@@ -56,7 +56,7 @@
 			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10451&locale=zh_TW" class="button"><font color="blue">0右</font>公車動態資訊</a>\
 			</div>\
 	</div>\
-</div>')
+</div>');
 	block_fare(1, null);
 	document.write('<div id="timetable">\
 	<a name="time"></a>\
@@ -66,15 +66,15 @@
 	</div>\
 	<div class="content">\
 		<h2><font color="purple">0左</font> 往成功路逆時針方向</h2>');
-	create_time_schedule(city_bus_0_main_stop_name, city_bus_0_main_stop_time_consume, city_bus_0_important_stop, city_bus_0_time_go, false);
-	document.write('<p>　</p>\
-		<h2><font color="#509197">0右</font> 往北門路順時針方向</h2>');
-	create_time_schedule(city_bus_0_main_stop_name, city_bus_0_main_stop_time_consume, city_bus_0_important_stop, city_bus_0_time_return, true);
-	document.write(TimeScheduleMSG + '<h3>' + W_message + '</h3>\
+	document.write(create_time_schedule(city_bus_0_main_stop_name, city_bus_0_main_stop_time_consume, city_bus_0_important_stop, city_bus_0_time_go, false)
+	+ '<p>　</p>\
+		<h2><font color="#509197">0右</font> 往北門路順時針方向</h2>'
+	+ create_time_schedule(city_bus_0_main_stop_name, city_bus_0_main_stop_time_consume, city_bus_0_important_stop, city_bus_0_time_return, true)
+	+ TimeScheduleMSG + '<h3>' + W_message + '</h3>\
 		<h3><font color="red">週四、六、日臺南火車站17:10起班次繞經花園夜市</font></h3>\
 		<h3><font color="#000055">「夜」表示僅四、六、日發車；「正」表示僅一、二、三、五發車</font></h3>\
 	</div>\
-</div>')
+</div>');
 	block_transfer(transfer_tainan_railway_station);
 	block_copyright();
 </script>
