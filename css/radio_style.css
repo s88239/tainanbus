@@ -1,0 +1,15 @@
+.radio-toolbar input[type="radio"] {
+    display:none;
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:5px 11px;
+    font-size:32px;
+    font-weight: bold;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color: pink;
+}

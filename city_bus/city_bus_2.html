@@ -8,7 +8,10 @@
 	route_file_name = 'city_bus_2';
 	route_type = 'city_bus';
 	route_interval = ['崑山科大','崇義社區'];
+	route_start_stop = '崑山科大/復華里';
+	route_end_stop = '崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草';
 </script>
+<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -20,29 +23,7 @@
 	block_route_map(null);
 	block_route_info(route_interval,'府城客運','尖20離30','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10162&locale=zh_TW');
 	block_fare(1, null);
-	document.write('<div id="timetable">\
-	<a name="time"></a>\
-	<div class="title">\
-		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
-		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
-	</div>\
-	<div class="content">\
-		<h1><font color="#0000AA">平日班表</font></h>\
-		<h2>崑山科大/復華里-&gt;崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草</h2>');
-	create_time_schedule(city_bus_2_main_stop_name, city_bus_2_main_stop_time_consume, city_bus_2_important_stop, city_bus_2_time_go, false);
-	document.write('<p>　</p>\
-		<h2>崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草-&gt;崑山科大/復華里</h2>');
-	create_time_schedule(city_bus_2_main_stop_name, city_bus_2_main_stop_time_consume, city_bus_2_important_stop, city_bus_2_time_return, true);
-	document.write('<p>　</p>\
-		<h1><font color="#CC0000">假日班表</font></h1>\
-		<h2>崑山科大/復華里-&gt;崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草</h2>');
-	create_time_schedule(city_bus_2_holiday_main_stop_name, city_bus_2_main_stop_time_consume, city_bus_2_important_stop, city_bus_2_holiday_time_go, false);
-	document.write('<p>　</p>\
-		<h2>崇義社區/三鯤鯓/觀光漁市場/白鷺灣社區/四草-&gt;崑山科大/復華里</h2>');
-	create_time_schedule(city_bus_2_holiday_main_stop_name, city_bus_2_main_stop_time_consume, city_bus_2_important_stop, city_bus_2_holiday_time_return, true);
-	document.write(TimeScheduleMSG + '<h3>' + L_message + '</h3>\
-	</div>\
-</div>');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], L_message + '；「<font color="blue">海事</font>」表示迄站為臺南海事');
 	block_transfer(transfer_kun_shan_university + transfer_tainan_railway_station);
 	block_copyright();
 </script>

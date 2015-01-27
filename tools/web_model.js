@@ -38,6 +38,7 @@ function header_code(){
 	@import url("../css/fare_menu_style.css");\
 	</style>\
 	<script language="javascript" src="../tools/show_fare_tool.js"></script>\
+	<script language="javascript" src="../tools/show_time_schedule_tool.js"></script>\
 	<script language="javascript" src="../tools/msg.js"></script>\
 	<script language="javascript" src="../tools/transfer_information.js"></script>\
 	<script language="javascript" src="../route/fare_and_time/' + route_file_name +'.js"></script>');
@@ -222,13 +223,30 @@ function block_time_schedule(start_stop, end_stop, message){
 		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
 	</div>\
 	<div class="content">\
-		<h2><font color="' + time_schedule_title_color + '">' + start_stop + '-&gt;' + end_stop + '</font></h2>');
-	create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_go'), false);
-	document.write('<p>　</p>\
-		<h2><font color="' + time_schedule_title_color + '">' + end_stop + '-&gt;' + start_stop + '</font></h2>');
-	create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_return'), true);
-	document.write( '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
+		<h2><font color="' + time_schedule_title_color + '">' + start_stop + '-&gt;' + end_stop + '</font></h2>'
+	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_go'), false)
+	+ '<p>　</p>\
+		<h2><font color="' + time_schedule_title_color + '">' + end_stop + '-&gt;' + start_stop + '</font></h2>'
+	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_return'), true)
+	+ '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
 </div>');
+}
+
+function block_multiple_time_schedule(type_list, message){
+	document.write('<div id="timetable">\
+	<a name="time"></a>\
+	<div class="title">\
+		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
+	</div>\
+	<div class="content">');
+	create_multiple_time_schedule(type_list);
+	document.write('<br /><div id="time_schedule_panel" name="time_schedule_panel">'+ show_time_schedule('normal')+'</div>\
+		<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
+	</div>');
+	window.onload = function() { // solve the bug for refreshing input raidio still checked with previous action
+		document.getElementById('multiple_type').reset();
+	}
 }
 
 function block_transfer(transfer_stops){
