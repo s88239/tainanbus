@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
-	<link href="build/TDivbus.min.css" rel="stylesheet">
+	<link href="build/TDivbus.min.css" rel="stylesheet" />
 	<link href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
 	<link href="css/MarkerCluster.css" rel="stylesheet" />
 	<link href="css/MarkerCluster.Default.css" rel="stylesheet" />
