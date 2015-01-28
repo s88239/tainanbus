@@ -8,7 +8,10 @@
 	route_file_name = 'tour_bus_88';
 	route_type = 'tour_bus';
 	route_interval = ['臺南公園','觀夕平台'];
+	route_start_stop = '臺南公園';
+	route_end_stop = '觀夕平台';
 </script>
+<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -17,7 +20,7 @@
 <body>
 <script type="text/javascript">
 	block_header();
-	block_route_map(null);
+	block_route_map('配合本府工務局104年1月28日至1月30日、2月4日至2月11日健康路路平專案交通管制，88路公車取消停靠「大南門城」、「體育公園」、「竹溪寺(健康路)」等3站。另配合104學年度學科能力測驗，1月31日至2月3日間之影響路線皆恢復正常行駛及站位停靠。<br /><font color="blue">改道動線：原路線－南門路－府前路－開山路－大同路－原路線</font>');
 	document.write('<div id="wrapper2">\
 	<a name="info"></a>\
 	<div id="routeinfo" class="container">\
@@ -63,35 +66,7 @@
 	</div>\
 </div>');
 	block_fare(1, null);
-	document.write('<div id="timetable">\
-	<a name="time"></a>\
-	<div class="title">\
-		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
-		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
-	</div>\
-	<div class="content">\
-		<h1><font color="#0000AA">平日班表</font></h>\
-		<h2><font color="purple">臺南公園-&gt;觀夕平台</font></h2>');
-	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_time_go, false);
-
-	document.write('<p><b>以上班表包含寒暑假平日</b></p>\
-		<h2><font color="purple">觀夕平台-&gt;臺南公園</font></h2>');
-	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_time_return, true);
-
-	document.write('<h3><font color="red">2、7、8月寒暑假平日</font></h3>');
-	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_summer_vacation_time_return, true);
-
-	document.write('<p>　</p>\
-		<h1><font color="#CC0000">假日班表</font></h1>\
-		<h2><font color="purple">臺南公園-&gt;觀夕平台</font></h2>');
-	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_holiday_time_go, false);
-
-	document.write('<p>　</p>\
-		<h2><font color="purple">觀夕平台-&gt;臺南公園</font></h2>');
-	create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_holiday_time_return, true);
-
-	document.write(TimeScheduleMSG + '</div>\
-</div>');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday'],['2、7、8月寒暑假平日','vacation']], '');
 	block_transfer(transfer_tainan_railway_station + transfer_culture_center);
 	block_copyright();
 </script>
