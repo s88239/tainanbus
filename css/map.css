@@ -1,0 +1,13 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: '微軟正黑體', 'Source Sans Pro', sans-serif;
+}
+input{
+	background-color:#c00;
+	color:#fff;
+}
+.map_img{
+	width: 100%;
+}

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="SHORTCUT ICON" href="../img/web_icon.ico">
+	<link href="../img/web_icon.ico" rel="SHORTCUT ICON" />
 	<link href="build/TDivbus.min.css" rel="stylesheet" />
 	<link href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
 	<link href="css/MarkerCluster.css" rel="stylesheet" />
