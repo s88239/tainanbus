@@ -8,7 +8,10 @@
 	route_file_name = 'tour_bus_99';
 	route_type = 'tour_bus';
 	route_interval = ['臺南公園','四草','七股鹽山'];
+	route_start_stop = '臺南公園';
+	route_end_stop = '四草野生動物保護區/七股鹽山';
 </script>
+<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -72,17 +75,17 @@
 	<div class="content">\
 		<h1><font color="#0000AA">平日班表</font></h>\
 		<h2><font color="purple">臺南公園-&gt;七股鹽山</font></h2>');
-	create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_time_go, false);
+	document.write( create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_time_go, false) );
 	document.write('<p>　</p>\
 		<h2><font color="purple">七股鹽山-&gt;臺南公園</font></h2>');
-	create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_time_return, true);
+	document.write( create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_time_return, true) );
 	document.write('<p>　</p><h1><font color="red"><u>寒暑假期間平日</u>只運行假日班表之<font color="blue">「全程車」</font>班次，<br />不開台南公園-&gt;四草野生動物保護區之區間車</font></h1><p>　</p>\
 		<h1><font color="#CC0000">假日班表</font></h1>\
 		<h2><font color="purple">臺南公園-&gt;四草野生動物保護區/七股鹽山</font></h2>');
-	create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_holiday_time_go, false);
+	document.write( create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_holiday_time_go, false) );
 	document.write('<p>　</p>\
 		<h2><font color="purple">四草野生動物保護區/七股鹽山-&gt;臺南公園</font></h2>');
-	create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_holiday_time_return, true);
+	document.write( create_time_schedule(tour_bus_99_main_stop_name, tour_bus_99_main_stop_time_consume, tour_bus_99_important_stop, tour_bus_99_holiday_time_return, true) );
 	document.write(TimeScheduleMSG + '<p>&nbsp;</p>\
 		<h2><font color="blue">七股鹽山-&gt;黑面琵鷺賞鳥亭</font></h2>\
 		<h3>黑面琵鷺賞鳥路線【10月-隔年4月】</h3>\

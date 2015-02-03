@@ -53,7 +53,7 @@
 			<p>　</p>\
 			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1511&locale=zh_TW" class="button">公車動態資訊</a> </div>\
 	</div>\
-</div>')
+</div>');
 	block_fare(0, null);
 	document.write('<div id="timetable">\
 	<a name="time"></a>\
@@ -62,15 +62,15 @@
 		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
 	</div>\
 	<div class="content">\
-		<h2><font color="orange">白河-&gt;二坑埔-&gt;李子園-&gt;青山-&gt;白河</font></h2>');
-	create_time_schedule(yellow_11_1_main_stop_name, yellow_11_1_main_stop_time_consume, yellow_11_1_important_stop, yellow_11_1_time_go, false);
-	document.write('<p>　</p>\
-		<h2><font color="orange">白河-&gt;青山-&gt;李子園-&gt;二坑埔-&gt;白河</font></h2>');
-	create_time_schedule(yellow_11_1_main_stop_name_reverse, yellow_11_1_main_stop_time_consume_reverse, yellow_11_1_important_stop, yellow_11_1_time_return, false);
-	document.write(TimeScheduleMSG +
-		'<h1><font color="blue">僅週一至週五行駛</font></h1>\
+		<h2><font color="orange">白河-&gt;二坑埔-&gt;李子園-&gt;青山-&gt;白河</font></h2>'
+	+ create_time_schedule(yellow_11_1_main_stop_name, yellow_11_1_main_stop_time_consume, yellow_11_1_important_stop, yellow_11_1_time_go, false)
+	+ '<p>　</p>\
+		<h2><font color="orange">白河-&gt;青山-&gt;李子園-&gt;二坑埔-&gt;白河</font></h2>'
+	+ create_time_schedule(yellow_11_1_main_stop_name_reverse, yellow_11_1_main_stop_time_consume_reverse, yellow_11_1_important_stop, yellow_11_1_time_return, false)
+	+ TimeScheduleMSG
+	+ 	'<h1><font color="blue">僅週一至週五行駛</font></h1>\
 	</div>\
-</div>')
+</div>');
 	block_transfer(transfer_baihe);
 	block_copyright();
 </script>

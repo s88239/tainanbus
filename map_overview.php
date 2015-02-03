@@ -35,7 +35,7 @@
 	}
 ?>
 <title>大台南公車 ─ <?php echo $ch_name; ?>路線總覽</title>
-<link href="../img/web_icon.ico" rel="SHORTCUT ICON" />
+<link href="img/web_icon.ico" rel="SHORTCUT ICON" />
 <link href="css/map.css" rel="stylesheet" />
 <script language="javascript" src="tools/zoom.js"></script>
 </head>

@@ -54,7 +54,7 @@
 			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1512&locale=zh_TW" class="button">公車動態資訊</a>\
 		</div>\
 	</div>\
-</div>')
+</div>');
 	block_fare(0, null);
 	document.write('<div id="timetable">\
 	<a name="time"></a>\
@@ -63,11 +63,11 @@
 		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
 	</div>\
 	<div class="content">\
-		<h2><font color="orange">關子嶺-&gt;水火同源-&gt;關子嶺</font></h2>');
-	create_time_schedule(yellow_12_guanziling_main_stop_name, yellow_12_guanziling_main_stop_time_consume, yellow_12_guanziling_important_stop, yellow_12_guanziling_time_go, false);
-	document.write(TimeScheduleMSG + '<h1><font color="red">本路線僅「假日行駛」</font></h1>\
+		<h2><font color="orange">關子嶺-&gt;水火同源-&gt;關子嶺</font></h2>'
+	+ create_time_schedule(yellow_12_guanziling_main_stop_name, yellow_12_guanziling_main_stop_time_consume, yellow_12_guanziling_important_stop, yellow_12_guanziling_time_go, false)
+	+ TimeScheduleMSG + '<h1><font color="red">本路線僅「假日行駛」</font></h1>\
 	</div>\
-</div>')
+</div>');
 	block_transfer(transfer_guanziling);
 	block_copyright();
 </script>
