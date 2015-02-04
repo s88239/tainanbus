@@ -328,3 +328,13 @@
 	position:relative;
 	top:1px;
 }
+.sub_title{
+	margin:0 auto;
+	display: table;
+	display: inline-block;
+	background-color: #13BF21;
+	border-radius: 4px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	padding: 0px 5px;
+}

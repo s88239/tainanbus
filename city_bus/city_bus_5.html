@@ -21,7 +21,7 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map('配合本府工務局104年1月28日至1月30日、2月4日至2月11日健康路路平專案交通管制，5路公車取消停靠「小西門(大億麗緻)」、「新光三越新天地」、「西門路一段」、「臺南站」、「家齊女中」、「臺南高商」、「體育公園」、「竹溪寺(健康路)」等8站。另配合104學年度學科能力測驗，1月31日至2月3日間之影響路線皆恢復正常行駛及站位停靠。<br /><font color="blue">改道動線：原路線－大同路－開山路－府前路1段－西門路2段－原路線</font>');
-	block_route_info(route_interval,'府城客運','尖10~20離30','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10164&locale=zh_TW');
+	block_route_info(route_interval,'府城客運','尖10~20離30','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10164&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(1, null);
 	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], L_message + '；「<font color="blue">生</font>」表示經生產路班次');
 	block_transfer(transfer_yanhang + transfer_chimei_hospital + transfer_tainan_railway_station);

@@ -1,4 +1,4 @@
-function create_select_menu(name_array, color_name, LINE_NAME){ // print the fare menu
+function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // print the fare menu
 	switch(color_name){
 		case 'green':
 		case 'blue':
@@ -13,7 +13,9 @@ function create_select_menu(name_array, color_name, LINE_NAME){ // print the far
 			max_color_num = 5;
 			break;
 		default:
-			max_color_num = 0;
+			color_name = 'blue';
+			max_color_num = 6;
+			break;
 	}
 	var menu_name = ['from','to'];
 	document.write('<form name="fare_menu">');
@@ -31,21 +33,23 @@ function create_select_menu(name_array, color_name, LINE_NAME){ // print the far
 		}
 		document.write("</select>");
 	}
-	document.write('<input type="button" value="查詢" onClick="query_fare(this.form, ' + LINE_NAME + '_fare)">');
+	document.write('<input type="button" value="查詢" onClick="query_fare(this.form, ' + LINE_NAME + '_fare, \'' + fare_type + '\')">');
 	document.write('</form>');
 }
 
-function query_fare(theForm, fare_array){
+function query_fare(theForm, fare_array, fare_type){
+	//alert('fuck');
 	var fd = parseInt(theForm.from.value,10);
 	var td = parseInt(theForm.to.value,10);
 	var price = (fd<=td)?fare_array[td][fd]:fare_array[fd][td];
+	var card_price = (fare_type=='8km') ? price - 26 : (fd<=td)?fare_array[fd][td]:fare_array[td][fd];
 	document.getElementById("cash_adult").innerHTML = price < 0 ? 'none' : price; // 現金全票
 	document.getElementById("cash_half").innerHTML = price < 0 ? 'none' : Math.ceil(price/2); // 現金半票，無條件進位
-	document.getElementById("RFID_adult").innerHTML = price < 0 ? 'none' : price-26; // 刷卡全票
-	document.getElementById("RFID_half").innerHTML = price < 0 ? 'none' : Math.ceil((price-26)/2); // 刷卡半票，無條件進位
+	document.getElementById("RFID_adult").innerHTML = price < 0 ? 'none' : card_price; // 刷卡全票
+	document.getElementById("RFID_half").innerHTML = price < 0 ? 'none' : Math.ceil(card_price/2); // 刷卡半票，無條件進位
 }
 
-function print_fare_table(interval_name, fare, color){ // the function fo showing or hiding the fare table
+function print_fare_table(interval_name, fare, color, fare_type){ // the function fo showing or hiding the fare table
 	// print the button with the function showing or hiding
 	document.write('<input type="button" onClick="document.getElementById(\'fare_table\').style.display = ');
 	document.write('(document.getElementById(\'fare_table\').style.display==\'none\')?\'block\':\'none\'" ');
@@ -58,7 +62,10 @@ function print_fare_table(interval_name, fare, color){ // the function fo showin
 			if(i==j) document.write('<th>' + interval_name[i] + '</th>');
 			else if(fare[i][j]<0) document.write('<td>-</td>' );
 			else if( i>j ) fare[i][j] < 0 ? document.write('<td>-</td>') : document.write('<td>' + fare[i][j] + '</td>');
-			else fare[j][i] < 0 ? document.write('<td>-</td>') : document.write('<td>' + (fare[j][i] - 26) + '</td>');
+			else{
+				var card_price = (fare_type=='8km') ? fare[j][i] - 26 : fare[i][j];
+				(fare[j][i] < 0) ? document.write('<td>-</td>') : document.write('<td>' + card_price + '</td>');
+			}
 		}
 		document.write('</tr>');
 	}

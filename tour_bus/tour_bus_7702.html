@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '7702鹽鄉濱海線';
+	route_name_en = 'No.7702';
+	route_file_name = 'tour_bus_7702';
+	route_type = 'tour_bus';
+	route_interval = ['嘉義轉運站','北門遊客中心'];
+	route_start_stop = '嘉義轉運站';
+	route_end_stop = '北門遊客中心';
+</script>
+<link href="../css/radio_style.css" rel="stylesheet" />
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	title_name = '台灣好行';
+	title_name_en = 'Taiwan Tourist Shuttle';
+	map_display = false;
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'嘉義客運','','里程計費',['http://www.taiwantrip.com.tw/Besttour/Info/?id=42','台灣好行官方網站'],[['平日','normal'],['假日','holiday']]);
+	block_fare(10, null);
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '');
+	block_transfer(transfer_south_kunshen + transfer_beimen);
+	block_copyright();
+</script>
+</body>
+</html>

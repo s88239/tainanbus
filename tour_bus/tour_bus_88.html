@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	route_name = '台灣好行88路';
-	route_name_en = 'Taiwan Tourist Shuttle No.88';
+	route_name = '88安平線';
+	route_name_en = 'No.88';
 	route_file_name = 'tour_bus_88';
 	route_type = 'tour_bus';
 	route_interval = ['臺南公園','觀夕平台'];
@@ -14,6 +14,8 @@
 <link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
+	title_name = '台灣好行';
+	title_name_en = 'Taiwan Tourist Shuttle';
 	header_code();
 </script>
 </head>
@@ -21,52 +23,9 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map('配合本府工務局104年1月28日至1月30日、2月4日至2月11日健康路路平專案交通管制，88路公車取消停靠「大南門城」、「體育公園」、「竹溪寺(健康路)」等3站。另配合104學年度學科能力測驗，1月31日至2月3日間之影響路線皆恢復正常行駛及站位停靠。<br /><font color="blue">改道動線：原路線－南門路－府前路－開山路－大同路－原路線</font>');
-	document.write('<div id="wrapper2">\
-	<a name="info"></a>\
-	<div id="routeinfo" class="container">\
-		<div class="title">\
-			<h2>大台南公車 ─ ' + route_name + ' 路線資訊</h2>\
-			<span class="byline">Tainan Bus ' + route_name_en + ', Route Information</span>\
-		</div>\
-		<div class="content">\
-			<table border="0">\
-				<tr>\
-					<td>起迄點</td>\
-					<td>臺南公園 ─ 觀夕平台</td>\
-				</tr>\
-				<tr>\
-					<td>營運公司</td>\
-					<td>府城客運</td>\
-				</tr>\
-				<tr>\
-					<td>首／末班車發車時刻</td>\
-					<td>\
-						<font color="#FFFFFF">平日</font><br />\
-						往 觀夕平台：'+tour_bus_88_time_go[0][0]+'／'+tour_bus_88_time_go[tour_bus_88_time_go.length-1][0]+
-						'<br />\
-						往 臺南公園：'+tour_bus_88_time_return[0][0]+'／'+tour_bus_88_time_return[tour_bus_88_time_return.length-1][0]+'<br />\
-						<font color="#FFFFFF">假日</font><br />\
-						往 觀夕平台：'+tour_bus_88_holiday_time_go[0][0]+'／'+tour_bus_88_holiday_time_go[tour_bus_88_holiday_time_go.length-1][0]+
-						'<br />\
-						往 臺南公園：'+tour_bus_88_holiday_time_return[0][0]+'／'+tour_bus_88_holiday_time_return[tour_bus_88_holiday_time_return.length-1][0]+
-					'</td>\
-				</tr>\
-				<tr>\
-					<td>班距</td>\
-					<td>平日1小時1班，假日30分鐘1班</td>\
-				</tr>\
-				<tr>\
-					<td>收費方式</td>\
-					<td>一段票</td>\
-				</tr>\
-			</table>\
-			<p>　</p>\
-			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10211&locale=zh_TW" class="button">公車動態資訊</a>\
-		</div>\
-	</div>\
-</div>');
+	block_route_info(route_interval,'府城客運','假日30分鐘1班','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10211&locale=zh_TW" class="button"',[['平日','normal'],['假日','holiday'],['寒暑假平日','vacation']]);
 	block_fare(1, null);
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday'],['2、7、8月寒暑假平日','vacation']], '');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday'],['寒暑假平日','vacation']], '');
 	block_transfer(transfer_tainan_railway_station + transfer_culture_center);
 	block_copyright();
 </script>

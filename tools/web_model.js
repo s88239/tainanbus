@@ -1,3 +1,7 @@
+title_name = '大台南公車';
+title_name_en = 'Tainan Bus';
+map_display = true;
+
 switch(route_type){
 	case 'green':
 		fare_table_color = '#3eb034';
@@ -29,14 +33,13 @@ switch(route_type){
 }
 
 function header_code(){
-	document.write('<title>大台南公車 － ' + route_name + ' 路線資訊 | Tainan Bus for FUN</title>\
+	document.write('<title>' + title_name + ' － ' + route_name + ' 路線資訊 | Tainan Bus for FUN</title>\
 	<link rel="SHORTCUT ICON" href="../img/web_icon.ico">\
 	<meta name="description" content="" />\
-	<style type="text/css">\
-	@import url("../css/table_style.css");\
-	@import url("../css/default.css");\
-	@import url("../css/fare_menu_style.css");\
-	</style>\
+	<link href="../css/bus_button.css" rel="stylesheet" />\
+	<link href="../css/table_style.css" rel="stylesheet" />\
+	<link href="../css/default.css" rel="stylesheet" />\
+	<link href="../css/fare_menu_style.css" rel="stylesheet" />\
 	<script language="javascript" src="../tools/show_fare_tool.js"></script>\
 	<script language="javascript" src="../tools/show_time_schedule_tool.js"></script>\
 	<script language="javascript" src="../tools/msg.js"></script>\
@@ -72,28 +75,29 @@ function block_route_map(announce_str){
 	<div id="banner">&nbsp;</div>\
 	<div id="route">\
 		<div class="title">\
-			<h2>大台南公車 ─ ' + route_name + ' 路線圖</h2>\
-			<span class="byline">Tainan Bus ' + route_name_en + ', Route Map</span>\
+			<h2>' + title_name + ' ─ ' + route_name + ' 路線圖</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Route Map</span>\
 		</div>\
 		<img src="../route/' + route_type + '/' + route_file_name + '.jpg">');
 
 	if(announce_str!=null) Announcement(announce_str); // have something news to announce
-	document.write('<p></p>\
-		<a href="../TainanBusMap/show_map.php?route=' + route_file_name + '" target="_blank">\
+	if(map_display){
+		document.write('<p></p><a href="../TainanBusMap/show_map.php?route=' + route_file_name + '" target="_blank">\
 			<img src="../img/google_map_logo.png"><br />\
 			<strong><font color="green">查詢路線地圖 By Kagami</font></strong>\
-		</a>\
-	</div>\
+		</a>');
+	}
+	document.write('<p></p></div>\
 </div>');
 }
 
-function block_route_info(route_interval, company_name, density, charging_method, link){
+function block_route_info(route_interval, company_name, density, charging_method, button_arr, info_type_list){
 	document.write('<div id="wrapper2">\
 	<a name="info"></a>\
 	<div id="routeinfo" class="container">\
 		<div class="title">\
-			<h2>大台南公車 ─ ' + route_name + ' 路線資訊</h2>\
-			<span class="byline">Tainan Bus ' + route_name_en + ', Route Information</span>\
+			<h2>' + title_name + ' ─ ' + route_name + ' 路線資訊</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Route Information</span>\
 		</div>\
 		<div class="content">\
 			<table border="0">\
@@ -112,10 +116,21 @@ function block_route_info(route_interval, company_name, density, charging_method
 				</tr>\
 				<tr align="right">\
 					<td>首／末班車發車時刻</td>\
-					<td>\
-					往 ' + route_interval[route_interval.length-1] + '：' + eval(route_file_name+'_time_go[0][0]') + '／' + eval(route_file_name+'_time_go['+route_file_name+'_time_go.length-1][0]') + '<br />\
-					往 ' + route_interval[0] + '：' + eval(route_file_name+'_time_return[0][0]') + '／' + eval(route_file_name+'_time_return['+route_file_name+'_time_return.length-1][0]') +
-					'</td>\
+					<td>');
+	if(info_type_list==undefined){
+		document.write('往 ' + route_interval[route_interval.length-1] + '：' + eval(route_file_name +'_time_go[0][0]') + '／' + eval(route_file_name +'_time_go['+route_file_name +'_time_go.length-1][0]') + '<br />\
+					往 ' + route_interval[0] + '：' + eval(route_file_name +'_time_return[0][0]') + '／' + eval(route_file_name +'_time_return['+route_file_name +'_time_return.length-1][0]') );
+	}
+	else{
+		for(i = 0; i < info_type_list.length; ++i){
+			type = (info_type_list[i][1]=='normal') ? '' : '_'+info_type_list[i][1];
+			document.write('<div align="center"><font color="#FFFFFF">' + info_type_list[i][0] + '</font></div>\
+						往 ' + route_interval[route_interval.length-1] + '：' + eval(route_file_name + type +'_time_go[0][0]') + '／' + eval(route_file_name + type +'_time_go['+route_file_name + type +'_time_go.length-1][0]') + '<br />\
+						往 ' + route_interval[0] + '：' + eval(route_file_name + type +'_time_return[0][0]') + '／' + eval(route_file_name + type +'_time_return['+route_file_name + type +'_time_return.length-1][0]') );
+		}
+	}
+	var button_showing_value = ( Array.isArray(button_arr) ) ? button_arr[1] : '公車動態資訊';
+	document.write('</td>\
 				</tr>\
 				<tr>\
 					<td>班距</td>\
@@ -127,7 +142,7 @@ function block_route_info(route_interval, company_name, density, charging_method
 				</tr>\
 			</table>\
 			<p>　</p>\
-			<a href="' + link + '" class="button">公車動態資訊</a>\
+			<a href="' + button_arr[0] + '" class="button">' + button_showing_value + '</a>\
 		</div>\
 	</div>\
 </div>');
@@ -138,13 +153,13 @@ function block_fare(section_type, section_point){
 	<a name="fare"></a>\
 	<div id="faretable" class="container">\
 		<div class="title">\
-			<h2>大台南公車 ─ ' + route_name + ' 票價表</h2>\
-			<span class="byline">Tainan Bus ' + route_name_en + ', Bus Fare</span>\
+			<h2>' + title_name + ' ─ ' + route_name + ' 票價表</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
 		</div>\
 		<div class="content">');
 
 	if(section_type==0){ // charge by meter
-		create_select_menu( eval( route_file_name + '_interval_stop'), route_type, route_file_name);
+		create_select_menu( eval( route_file_name + '_interval_stop'), route_type, route_file_name, '8km');
 		document.write('<br/>\
 				<table id="showfareInfo">\
 					<tr>\
@@ -163,7 +178,29 @@ function block_fare(section_type, section_point){
 				</table>\
 				<p>　</p>');
 
-		print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color);
+		print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color, '8km');
+	}
+	else if(section_type==10){ // charge by meter for highway bus
+		create_select_menu( eval( route_file_name + '_interval_stop'), route_type, route_file_name, 'highway');
+		document.write('<br/>\
+				<table id="showfareInfo">\
+					<tr>\
+						<th></th><th>全票</th><th>半票</th>\
+					</tr>\
+					<tr>\
+						<td><b>投現</b></td>\
+						<td id="cash_adult">-</td>\
+						<td id="cash_half">-</td>\
+					</tr>\
+					<tr>\
+						<td><b>電子票證</b></td>\
+						<td id="RFID_adult">-</td>\
+						<td id="RFID_half">-</td>\
+					</tr>\
+				</table>\
+				<p>　</p>');
+
+		print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color, 'highway');
 	}
 	else if(section_type==1){ // charge by one section
 		document.write('<h1>全路線一段票</h1>\
@@ -205,12 +242,22 @@ function block_fare(section_type, section_point){
 			</table>');
 	}
 	document.write('<p>　</p>');
+	if(section_type==10){
+		document.write('<h3><font color="red">本路線非大台南公車，無法享有八公里免費及轉乘優惠</font></h3>');
+		document.write('<div align="left" style="margin:0 auto;	display: table;"><h3><ul>半票資格：\
+			<li>1>年滿六十五歲以上，持有國民身份證或敬老證之老人。</li>\
+			<li>2>持有殘障手冊之殘障者。</li>\
+			<li>3>身高一一五至一四五公分之孩童。</li>\
+			</ul></h3></div>\
+			免費孩童由已購票者之旅客攜帶，最多以兩人為限，逾限仍應購買半票。');
+	}
+	else{
+		if(section_type==0) document.write(MeteredMSG);
+		else document.write(CitybusMSG);
 
-	if(section_type==0) document.write(MeteredMSG);
-	else document.write(CitybusMSG);
-
-	document.write(PromotionMSG + '<p>　</p>\
-		</div>\
+		document.write(PromotionMSG + '<p>　</p>');
+	}
+	document.write('</div>\
 	</div>\
 </div>');
 }
@@ -219,8 +266,8 @@ function block_time_schedule(start_stop, end_stop, message){
 	document.write('<div id="timetable">\
 	<a name="time"></a>\
 	<div class="title">\
-		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
-		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
+		<h2>' + title_name + ' ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus schedule</span>\
 	</div>\
 	<div class="content">\
 		<h2><font color="' + time_schedule_title_color + '">' + start_stop + '-&gt;' + end_stop + '</font></h2>'
@@ -236,8 +283,8 @@ function block_multiple_time_schedule(type_list, message){
 	document.write('<div id="timetable">\
 	<a name="time"></a>\
 	<div class="title">\
-		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
-		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
+		<h2>' + title_name + ' ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus schedule</span>\
 	</div>\
 	<div class="content">');
 	create_multiple_time_schedule(type_list);
@@ -254,8 +301,8 @@ function block_transfer(transfer_stops){
 	<a name="transfer"></a>\
 	<div id="transfer" class="container">\
 		<div class="title">\
-			<h2>大台南公車 ─ ' + route_name + ' 主要轉乘點資訊</h2>\
-			<span class="byline">Tainan Bus ' + route_name_en + ', Transfer information</span>\
+			<h2>' + title_name + ' ─ ' + route_name + ' 主要轉乘點資訊</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Transfer information</span>\
 		</div>\
 		<div class="content">\
 			<table>' + transfer_stops + '</table>\

@@ -110,8 +110,9 @@ link_city_bus_19 = '<a href="../city_bus/city_bus_19.html" target="_blank">19</a
 link_city_bus_20 = '<a href="../city_bus/city_bus_20.html" target="_blank">20</a>';
 link_city_bus_21 = '<a href="../city_bus/city_bus_21.html" target="_blank">21</a>';
 
-link_tour_bus_88 = '<a href="../tour_bus/tour_bus_88.html" target="_blank">88</a>';
-link_tour_bus_99 = '<a href="../tour_bus/tour_bus_99.html" target="_blank">99</a>';
+link_tour_bus_88 = '<a href="../tour_bus/tour_bus_88.html" target="_blank">88 <div class="sub_title">安平線</div></a>';
+link_tour_bus_99 = '<a href="../tour_bus/tour_bus_99.html" target="_blank">99 <div class="sub_title">台江線</div></a>';
+link_tour_bus_7702 = '<a href="../tour_bus/tour_bus_7702.html" target="_blank">7702 <div class="sub_title">鹽鄉濱海線</div></a>';
 
 link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31(市府線)</a>';
 link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62(奇美線)</a>';
@@ -380,6 +381,12 @@ transfer_south_kunshen = '<tr><th rowspan="2">南鯤鯓</th>\
 	<td id="blue">' + link_blue_1 + '、' + link_blue_2 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'brown_transfer_logo.png"></td>\
 	<td id="brown">' + link_brown_1 + '</td></tr>';
+
+transfer_beimen = '<tr><th rowspan="2">北門</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
+	<td id="blue">' + link_blue_2 + '、<br />' + link_blue_1 + '<font color="#FFFFFF" size="-1">(需步行一站至北門橋頭轉乘)</font></td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
+	<td id="tour_bus">' + link_tour_bus_7702 + '</td></tr>';
 
 transfer_baoan_railway_station = '<tr><th rowspan="2">保安轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
