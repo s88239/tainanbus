@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '8050';
+	route_name_en = 'No.8050';
+	route_file_name = 'highway_bus_8050';
+	route_type = 'highway_bus';
+	route_interval = ['臺南火車站','旗山','佛光山'];
+	route_start_stop = '臺南火車站';
+	route_end_stop = '佛光山';
+</script>
+<link href="../css/radio_style.css" rel="stylesheet" />
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	title_name = '公路客運';
+	title_name_en = 'Highway Bus';
+	map_display = false;
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'高雄客運','','里程計費',['http://www.ksbus.com.tw/schedule/part2-8050.htm','高雄客運官方網站']);
+	//block_fare(10, null);
+	document.write('<div id="wrapper3">\
+	<a name="fare"></a>\
+	<div id="faretable" class="container">\
+		<div class="title">\
+			<h2>' + title_name + ' ─ ' + route_name + ' 票價表</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
+		</div>\
+		<div class="content">\
+			<p>&nbsp;</p>\
+			<h1><font color="red">尚無提供票價表</font></h1>\
+			<p>&nbsp;</p>\
+			<h1>不適用一卡通收費最高上限優惠</h1>\
+			<p>&nbsp;</p><p>&nbsp;</p>\
+			<h2>使用電子票證時，上下車皆須刷卡</h2>\
+			<p> </p>\
+			<p>詳情請參閱高雄客運網站</p><p></p>\
+		</div>\
+	</div>\
+</div>');
+	block_time_schedule(route_start_stop,route_end_stop,'');
+	block_transfer(transfer_tainan_railway_station);
+	block_copyright();
+</script>
+</body>
+</html>

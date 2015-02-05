@@ -120,6 +120,7 @@ link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_b
 link_highway_bus_8042 = '<a href="../highway_bus/highway_bus_8042.html" target="_blank">8042 <div class="sub_title">沙旗美月世界快線</div></a>';
 link_highway_bus_8046A = '<a href="../highway_bus/highway_bus_8046A.html" target="_blank">8046A <div class="sub_title">高南雙城快線</div></a>';
 link_highway_bus_8046 = '<a href="../highway_bus/highway_bus_8046.html" target="_blank">8046</a>';
+link_highway_bus_8050 = '<a href="../highway_bus/highway_bus_8050.html" target="_blank">8050</a>';
 
 transfer_tainan_railway_station = '<tr><th rowspan="8">臺南火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
@@ -138,7 +139,7 @@ transfer_tainan_railway_station = '<tr><th rowspan="8">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '</td></tr>';
+	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '、' + link_highway_bus_8050 + '</td></tr>';
 
 transfer_kun_shan_university = '<tr><th rowspan="2">崑山科大</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
