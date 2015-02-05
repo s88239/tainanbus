@@ -113,3 +113,7 @@ tour_bus_7702_route = '嘉義轉運站 ─ 北門遊客中心　<div class="sub_
 
 hsr_shuttle_h31_route = '臺南市政府 ─ 高鐵臺南站';
 hsr_shuttle_h62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站';
+
+highway_bus_8042_route = '高鐵台南站 ─ 阿蓮 ─ 旗山　<div class="sub_title">沙旗美月世界快線</div>';
+highway_bus_8046A_route = '臺南火車站 ─ 高鐵左營站　<div class="sub_title">高南雙城快線</div>';
+highway_bus_8046_route = '臺南火車站 ─ 高雄火車站';

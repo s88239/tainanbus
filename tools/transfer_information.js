@@ -117,8 +117,11 @@ link_tour_bus_7702 = '<a href="../tour_bus/tour_bus_7702.html" target="_blank">7
 link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31(市府線)</a>';
 link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62(奇美線)</a>';
 
+link_highway_bus_8042 = '<a href="../highway_bus/highway_bus_8042.html" target="_blank">8042 <div class="sub_title">沙旗美月世界快線</div></a>';
+link_highway_bus_8046A = '<a href="../highway_bus/highway_bus_8046A.html" target="_blank">8046A <div class="sub_title">高南雙城快線</div></a>';
+link_highway_bus_8046 = '<a href="../highway_bus/highway_bus_8046.html" target="_blank">8046</a>';
 
-transfer_tainan_railway_station = '<tr><th rowspan="7">臺南火車站</th>\
+transfer_tainan_railway_station = '<tr><th rowspan="8">臺南火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵台南站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
@@ -133,7 +136,9 @@ transfer_tainan_railway_station = '<tr><th rowspan="7">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red">' + link_red + '、' + link_red_1 + '、' + link_red_2 + '、' + link_red_3 + '、' + link_red_4 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '、' + link_orange_12 + '</td></tr>';
+	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '、' + link_orange_12 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '</td></tr>';
 
 transfer_kun_shan_university = '<tr><th rowspan="2">崑山科大</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
@@ -281,7 +286,7 @@ transfer_zuozhen_district_office = '<tr><th>左鎮公所</th>\
 	<td id="green"><p>' + link_green_12 + '、' + link_green_13 + '</p>'
 	+ link_green + '<font color="#FFFFFF" size="-1">(需步行一站至左鎮站轉乘)</font></td></tr>';
 
-transfer_hsr_tainan_station = '<tr><th rowspan="5">高鐵台南站</th>\
+transfer_hsr_tainan_station = '<tr><th rowspan="6">高鐵台南站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'HSR.png"></td>\
 	<td><font color="orange">高鐵台南站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
@@ -291,7 +296,9 @@ transfer_hsr_tainan_station = '<tr><th rowspan="5">高鐵台南站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red">' + link_red_3 + '、' + link_red_14 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
-	<td id="green">' + link_green_16 + '</td></tr>';
+	<td id="green">' + link_green_16 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_highway_bus_8042 + '</td></tr>';
 
 transfer_madou = '<tr><th rowspan="2">果菜市場</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
@@ -376,11 +383,13 @@ transfer_guanziling = '<tr><th>關子嶺</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_12 + '、' + link_yellow_13 + '、' + link_yellow_12_guanziling + '</td></tr>';
 
-transfer_south_kunshen = '<tr><th rowspan="2">南鯤鯓</th>\
+transfer_south_kunshen = '<tr><th rowspan="3">南鯤鯓</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
 	<td id="blue">' + link_blue_1 + '、' + link_blue_2 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'brown_transfer_logo.png"></td>\
-	<td id="brown">' + link_brown_1 + '</td></tr>';
+	<td id="brown">' + link_brown_1 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
+	<td id="tour_bus">' + link_tour_bus_7702 + '</td></tr>';
 
 transfer_beimen = '<tr><th rowspan="2">北門</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
