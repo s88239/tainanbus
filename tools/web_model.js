@@ -129,7 +129,12 @@ function block_route_info(route_interval, company_name, density, charging_method
 						往 ' + route_interval[0] + '：' + eval(route_file_name + type +'_time_return[0][0]') + '／' + eval(route_file_name + type +'_time_return['+route_file_name + type +'_time_return.length-1][0]') );
 		}
 	}
-	var button_showing_value = ( Array.isArray(button_arr) ) ? button_arr[1] : '公車動態資訊';
+	var button_showing_value = '公車動態資訊';
+	var button_showing_url = button_arr;
+	if( Array.isArray(button_arr) ){
+		button_showing_url = button_arr[0];
+		button_showing_value = button_arr[1];
+	}
 	document.write('</td>\
 				</tr>\
 				<tr>\
@@ -142,7 +147,7 @@ function block_route_info(route_interval, company_name, density, charging_method
 				</tr>\
 			</table>\
 			<p>　</p>\
-			<a href="' + button_arr[0] + '" class="button">' + button_showing_value + '</a>\
+			<a href="' + button_showing_url + '" class="button">' + button_showing_value + '</a>\
 		</div>\
 	</div>\
 </div>');
