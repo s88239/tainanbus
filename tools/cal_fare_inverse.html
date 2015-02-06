@@ -93,20 +93,19 @@ Number.prototype.sub = function(arg) {
 
 	var fare_per_km = 2.989;
 	var fare_per_km_old = 3.068;
-	var fare_per_km_card;
-	var interval_name = ["嘉義轉運站","嘉義高鐵站","先天宮","東石漁人碼頭","布袋遊客中心","南鯤鯓代天府","北門遊客中心"];
+	var interval_name = ["南化","金馬寮","木柵","內門","中埔","旗山"];
 	var interval_price = [
-	[25,40,101,106,140,181,190],
-	[46,25,61,66,100,141,150],
-	[115,70,25,22,38,80,89],
-	[121,75,25,25,33,75,84],
-	[159,113,44,38,25,41,50],
-	[207,161,91,85,47,25,22],
-	[217,171,101,95,57,25,25]
+	[26,26,32,45,58,73],
+	[26,26,26,26,37,52],
+	[28,26,26,26,26,41],
+	[41,26,26,26,26,28],
+	[52,37,26,26,26,26],
+	[73,58,45,32,26,26]
 	];
 	var interval_dis = [];
 	var base_dis = 8;
 	var base_cash = Math.round(base_dis.mul(fare_per_km.mul(1.05)));
+	var base_cash_old = Math.round(base_dis.mul(fare_per_km_old.mul(1.05)));
 	document.write('<table border="1">');
 	for(i=0;i<interval_price.length;++i){
 		interval_dis[i] = [];
@@ -116,13 +115,13 @@ Number.prototype.sub = function(arg) {
 		for(j=0;j<interval_price[i].length;++j){
 			document.write('<td>');
 			if(i==j) document.write(interval_name[j]);
-			else if(interval_price[i][j]==base_cash){
+			else if(interval_price[i][j]==base_cash_old){
 				tmp_dis = 8;
 				interval_dis[i].push( base_dis );
 				document.write(base_dis);
 			}
 			else if(i>j){
-				tmp_dis = interval_price[i][j].div(fare_per_km.mul(1.05)).toFixed(6);
+				tmp_dis = interval_price[i][j].div(fare_per_km_old.mul(1.05)).toFixed(6);
 				interval_dis[i].push( tmp_dis );
 				document.write( tmp_dis );
 			}
@@ -135,36 +134,44 @@ Number.prototype.sub = function(arg) {
 	document.write('<table border="1">');
 	var accumulate = 0, acc_count=0;
 	var card_fare_per_km = 2.623;
+	/*for(i=0;i<interval_dis.length;++i){
+		for(j=0;j<interval_dis[i].length;++j){
+			document.write('('+i+','+j+')='+interval_dis[i][j] + ' ');
+			//document.write(interval_dis[i][j]);
+		}
+		document.write('<br />')
+	}*/
 	for(i=0;i<interval_price.length;++i){
 		document.write('<tr>');
 		//interval_dis[i] = interval_price[i+1][i];
-		accumulate_row = 0;
-		row_count = 0;
+		//accumulate_row = 0;
+		//row_count = 0;
 		for(j=0;j<interval_price[i].length;++j){
 			document.write('<td>');
 			if(i==j) document.write(interval_name[j]);
 			else if(i<j){
-				tmp_dis = interval_dis[j][i];
+				document.write( Math.round( accMul(interval_dis[j][i],accMul(card_fare_per_km,1.05) ) ) );
+				//tmp_dis = interval_dis[j][i];
 				//interval_price[i][j].div(interval_dis[j][i].mul(1.05)).toFixed(1);
 				//interval_dis[i].push( tmp_dis );
-				document.write(accDiv(interval_price[i][j], accMul(tmp_dis,1.05) ));
+				/*document.write(accDiv(interval_price[i][j], accMul(tmp_dis,1.05) ));
 				if(	interval_price[i][j]==22) continue;
 				++row_count;
 				accumulate_row = accAdd(accumulate_row, accDiv(interval_price[i][j], accMul(tmp_dis,1.05) ) );
 				++acc_count;
-				accumulate = accAdd(accumulate, accDiv(interval_price[i][j], accMul(tmp_dis,1.05) ) );
+				accumulate = accAdd(accumulate, accDiv(interval_price[i][j], accMul(tmp_dis,1.05) ) );*/
 			}
 			else{
-				document.write( Math.round( accMul(interval_dis[i][j],accMul(card_fare_per_km,1.05) ) ) );
+				document.write( Math.round( accMul(interval_dis[i][j],accMul(fare_per_km,1.05) ) ) );
 			}
 			document.write('</td>');
 		}
-		tmp_row = accDiv(accumulate_row,row_count);
-		document.write('</tr><br />aver_fare_ration='+tmp_row);
+		//tmp_row = accDiv(accumulate_row,row_count);
+		document.write('</tr>');//<br />aver_fare_ration='+tmp_row);
 		//if()
 	}
-		tmp = accDiv(accumulate,acc_count);
-	document.write('</table><br />aver_fare_ration='+tmp);
+		//tmp = accDiv(accumulate,acc_count);
+	document.write('</table>');//<br />aver_fare_ration='+tmp);
 </script>
 </body>
 </html>

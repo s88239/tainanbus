@@ -117,6 +117,7 @@ link_tour_bus_7702 = '<a href="../tour_bus/tour_bus_7702.html" target="_blank">7
 link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31(市府線)</a>';
 link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62(奇美線)</a>';
 
+link_highway_bus_8035 = '<a href="../highway_bus/highway_bus_8035.html" target="_blank">8035</a>';
 link_highway_bus_8042 = '<a href="../highway_bus/highway_bus_8042.html" target="_blank">8042 <div class="sub_title">沙旗美月世界快線</div></a>';
 link_highway_bus_8046A = '<a href="../highway_bus/highway_bus_8046A.html" target="_blank">8046A <div class="sub_title">高南雙城快線</div></a>';
 link_highway_bus_8046 = '<a href="../highway_bus/highway_bus_8046.html" target="_blank">8046</a>';
@@ -235,12 +236,14 @@ transfer_anping_industrial_zone = '<tr><th rowspan="3">安平工業區</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green_17 + '</td></tr>';
 
-transfer_guanmiao = '<tr><th rowspan="2">關廟</th>\
+transfer_guanmiao = '<tr><th rowspan="3">關廟</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red"><p>' + link_red + '、' + link_red_1 + '、' + link_red_2 + '、' + link_red_3 + '、</p>'
 	+ link_red_10 + '、' + link_red_11 + '、' + link_red_12 + '、' + link_red_13 + '、' + link_red_14 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
-	<td id="green">' + link_green_16 + '</td></tr>';
+	<td id="green">' + link_green_16 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_highway_bus_8050 + '</td></tr>';
 
 transfer_hsinhua = '<tr><th>新化</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
@@ -286,6 +289,12 @@ transfer_zuozhen_district_office = '<tr><th>左鎮公所</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green"><p>' + link_green_12 + '、' + link_green_13 + '</p>'
 	+ link_green + '<font color="#FFFFFF" size="-1">(需步行一站至左鎮站轉乘)</font></td></tr>';
+
+transfer_nanhua_district_office = '<tr><th rowspan="2">南化公所</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
+	<td id="green">' + link_green_12 + '、' + link_green_27 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_highway_bus_8035 + '</td></tr>';
 
 transfer_hsr_tainan_station = '<tr><th rowspan="6">高鐵台南站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'HSR.png"></td>\

@@ -17,10 +17,11 @@ td{
 function get_button_string(file_name, ch_name){
 	type = file_name.split('_')[0];
 	if(type=='city') type += '_' + file_name.split('_')[1];
-	category = (type=='hsr' || type=='tour') ? type + '_' + file_name.split('_')[1] : type;
+	category = (type=='hsr' || type=='tour' || type=='highway') ? type + '_' + file_name.split('_')[1] : type;
+	if(type=='highway') type = 'tour';
 
 	line_string = '<tr><td><a href="' + category + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
-	+ ch_name + '</a></td><td>' + eval(file_name + '_route') + '</td></tr>';
+	+ ch_name + '</a></td><td>' + eval(file_name + '_route').replace('　','<br />') + '</td></tr>';
 	return line_string;
 }
 
@@ -56,6 +57,9 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('orange_3', '橘3')
 		+ get_button_string('orange_11', '橘11')
 		+ get_button_string('orange_12', '橘12')
+		+ get_button_string('highway_bus_8046A', '8046A')
+		+ get_button_string('highway_bus_8046', '8046')
+		+ get_button_string('highway_bus_8050', '8050')
 		+ '</table>\
 		<h1 align="center">臺南</h1>\
 		<table id="bg_table_overview" align="center">'
@@ -121,7 +125,8 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('red_12', '紅12')
 		+ get_button_string('red_13', '紅13')
 		+ get_button_string('red_14', '紅14')
-		+ get_button_string('green_16', '綠16');
+		+ get_button_string('green_16', '綠16')
+		+ get_button_string('highway_bus_8050', '8050');
 		break;
 	case '白河':
 		div_string += get_button_string('yellow', '黃幹線')
@@ -179,7 +184,8 @@ function get_transfer_info(bus_stop){
 	case '龍崎':
 		div_string += get_button_string('red', '紅幹線')
 		+ get_button_string('red_11', '紅11')
-		+ get_button_string('red_12', '紅12');
+		+ get_button_string('red_12', '紅12')
+		+ get_button_string('highway_bus_8050', '8050');
 		break;
 	case '歸仁':
 		div_string += get_button_string('red', '紅幹線')
@@ -190,7 +196,9 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('red_14', '紅14')
 		+ get_button_string('green_16', '綠16')
 		+ get_button_string('hsr_shuttle_h31', 'H31')
-		+ get_button_string('hsr_shuttle_h62', 'H62');
+		+ get_button_string('hsr_shuttle_h62', 'H62')
+		+ get_button_string('highway_bus_8042', '8042')
+		+ get_button_string('highway_bus_8050', '8050');
 		break;
 	case '仁德':
 		div_string += get_button_string('red', '紅幹線')
@@ -200,7 +208,11 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('red_4', '紅4')
 		+ get_button_string('red_10', '紅10')
 		+ get_button_string('hsr_shuttle_h31', 'H31')
-		+ get_button_string('hsr_shuttle_h62', 'H62');
+		+ get_button_string('hsr_shuttle_h62', 'H62')
+		+ get_button_string('highway_bus_8042', '8042')
+		+ get_button_string('highway_bus_8046A', '8046A')
+		+ get_button_string('highway_bus_8046', '8046')
+		+ get_button_string('highway_bus_8050', '8050');
 		break;
 	case '永康':
 		div_string += get_button_string('green', '綠幹線')
@@ -242,7 +254,8 @@ function get_transfer_info(bus_stop){
 	case '南化':
 		div_string += get_button_string('green_12', '綠12')
 		+ get_button_string('green_26', '綠26')
-		+ get_button_string('green_27', '綠27');
+		+ get_button_string('green_27', '綠27')
+		+ get_button_string('highway_bus_8035', '8035');
 		break;
 	case '楠西':
 		div_string += get_button_string('green_20', '綠20')
