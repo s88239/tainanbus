@@ -243,13 +243,16 @@ function block_fare(section_type, section_point){
 	}
 	document.write('<p>　</p>');
 	if(section_type==10){
-		document.write('<h3><font color="red">本路線非大台南公車，無法享有八公里免費及轉乘優惠</font></h3>');
-		document.write('<div align="left" style="margin:0 auto;	display: table;"><h3><ul>半票資格：\
+		document.write('<h3><font color="red">本路線非大台南公車，無法享有八公里免費及轉乘優惠</font></h3>\
+			<h2>使用電子票證時，上下車皆須刷卡</h2><br />\
+			<h3>本路線票價已採用2015.1.27最新公路總局公告之費率計算</h3><br />');
+		/*document.write('<div align="left" style="margin:0 auto;	display: table;"><h3><ul>半票資格：\
 			<li>1>年滿六十五歲以上，持有國民身份證或敬老證之老人。</li>\
 			<li>2>持有殘障手冊之殘障者。</li>\
 			<li>3>身高一一五至一四五公分之孩童。</li>\
 			</ul></h3></div>\
-			免費孩童由已購票者之旅客攜帶，最多以兩人為限，逾限仍應購買半票。');
+			免費孩童由已購票者之旅客攜帶，最多以兩人為限，逾限仍應購買半票。<p>&nbsp;</p>');*/
+		if(section_point) document.write(section_point);
 	}
 	else{
 		if(section_type==0) document.write(MeteredMSG);
