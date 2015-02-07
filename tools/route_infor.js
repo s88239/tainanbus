@@ -8,7 +8,7 @@ green_6_route = '新化 ─ 潭頂 ─ 大社';
 green_7_route = '新化 ─ 大營 ─ 大社';
 green_10_route = '新化 ─ 山上';
 green_11_route = '新化 ─ 山上 ─ 善化';
-green_12_route = '新化 ─ 南化';
+green_12_route = '新化 ─ 南化 ─ 玉山';
 green_13_route = '新化 ─ 岡林 ─ 左鎮';
 green_14_route = '新化 ─ 九層嶺';
 green_15_route = '新化 ─ 五甲勢';
@@ -114,8 +114,8 @@ tour_bus_7702_route = '嘉義轉運站 ─ 北門遊客中心　<div class="sub_
 hsr_shuttle_h31_route = '臺南市政府 ─ 高鐵臺南站';
 hsr_shuttle_h62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站';
 
-highway_bus_8035_route = '南化 ─ 內門 ─ 旗山';
-highway_bus_8042_route = '高鐵台南站 ─ 阿蓮 ─ 旗山　<div class="sub_title">沙旗美月世界快線</div>';
+highway_bus_8035_route = '南化 ─ 內門 ─ 旗山轉運站';
+highway_bus_8042_route = '高鐵臺南站 ─ 阿蓮 ─ 旗山　<div class="sub_title">沙旗美月世界快線</div>';
 highway_bus_8046A_route = '臺南火車站 ─ 高鐵左營站　<div class="sub_title">高南雙城快線</div>';
 highway_bus_8046_route = '臺南火車站 ─ 高雄火車站';
 highway_bus_8050_route = '臺南火車站 ─ 旗山轉運站 ─ 佛光山';
