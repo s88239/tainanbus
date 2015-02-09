@@ -114,9 +114,10 @@ link_tour_bus_88 = '<a href="../tour_bus/tour_bus_88.html" target="_blank">88 <d
 link_tour_bus_99 = '<a href="../tour_bus/tour_bus_99.html" target="_blank">99 <div class="sub_title">台江線</div></a>';
 link_tour_bus_7702 = '<a href="../tour_bus/tour_bus_7702.html" target="_blank">7702 <div class="sub_title">鹽鄉濱海線</div></a>';
 
-link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31(市府線)</a>';
-link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62(奇美線)</a>';
+link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31 <div class="sub_title">市府線</div></a>';
+link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62 <div class="sub_title">奇美線</div></a>';
 
+link_highway_bus_7214 = '<a href="../highway_bus/highway_bus_7214.html" target="_blank">7214</a>';
 link_highway_bus_8035 = '<a href="../highway_bus/highway_bus_8035.html" target="_blank">8035</a>';
 link_highway_bus_8042 = '<a href="../highway_bus/highway_bus_8042.html" target="_blank">8042 <div class="sub_title">沙旗美月世界快線</div></a>';
 link_highway_bus_8046A = '<a href="../highway_bus/highway_bus_8046A.html" target="_blank">8046A <div class="sub_title">高南雙城快線</div></a>';
@@ -346,11 +347,13 @@ transfer_annan_hospital = '<tr><th rowspan="2">安南醫院</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '</td></tr>';
 
-transfer_baihe = '<tr><th>白河</th>\
+transfer_baihe = '<tr><th rowspan="2">白河</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_10 + '、' + link_yellow_11 + '、' + link_yellow_11_1 + '、</p>\
 	<p>' + link_yellow_12 + '、' + link_yellow_12_1 + '、' + link_yellow_13 + '、' + link_yellow_14 + '、</p>'
-	+  link_yellow_14_1 + '、' + link_yellow_15 + '</td></tr>';
+	+  link_yellow_14_1 + '、' + link_yellow_15 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_highway_bus_7214 + '</td></tr>';
 
 transfer_hsinyin = '<tr><th rowspan="3">新營</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
@@ -389,9 +392,11 @@ transfer_houbi_railway_station = '<tr><th rowspan="2">後壁火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_9 + '、' + link_yellow_10 + '</td></tr>';
 
-transfer_guanziling = '<tr><th>關子嶺</th>\
+transfer_guanziling = '<tr><th rowspan="2">關子嶺</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
-	<td id="yellow">' + link_yellow_12 + '、' + link_yellow_13 + '、' + link_yellow_12_guanziling + '</td></tr>';
+	<td id="yellow">' + link_yellow_12 + '、' + link_yellow_13 + '、' + link_yellow_12_guanziling + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_highway_bus_7214 + '</td></tr>';
 
 transfer_south_kunshen = '<tr><th rowspan="3">南鯤鯓</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\

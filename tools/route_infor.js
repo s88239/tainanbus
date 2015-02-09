@@ -119,3 +119,11 @@ highway_bus_8042_route = '高鐵臺南站 ─ 阿蓮 ─ 旗山　<div class="su
 highway_bus_8046A_route = '臺南火車站 ─ 高鐵左營站　<div class="sub_title">高南雙城快線</div>';
 highway_bus_8046_route = '臺南火車站 ─ 高雄火車站';
 highway_bus_8050_route = '臺南火車站 ─ 旗山轉運站 ─ 佛光山';
+highway_bus_7207_route = '嘉義 ─ 竹子腳 ─ 鹽水';
+highway_bus_7208_route = '嘉義 ─ 重寮 ─ 鹽水';
+highway_bus_7210_route = '嘉義 ─ 白河';
+highway_bus_7214_route = '嘉義 ─ 白河 ─ 關子嶺';
+highway_bus_7229_route = '嘉義 ─ 新營 ─ 新中';
+highway_bus_7407_route = '新營 ─ 鹽水 ─ 朴子';
+highway_bus_7408_route = '新營 ─ 鹽水 ─ 南鯤鯓 ─ 好美里';
+highway_bus_7410_route = '新營 ─ 鹽水 ─ 布袋港';

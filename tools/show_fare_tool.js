@@ -42,7 +42,7 @@ function query_fare(theForm, fare_array, fare_type){
 	var fd = parseInt(theForm.from.value,10);
 	var td = parseInt(theForm.to.value,10);
 	var price = (fd<=td)?fare_array[td][fd]:fare_array[fd][td];
-	var card_price = (fare_type=='8km') ? price - 26 : (fd<=td)?fare_array[fd][td]:fare_array[td][fd];
+	var card_price = (fare_type=='8km') ? price - 26 : (fd<td) ? fare_array[fd][td]: (fd==td) ? 22 : fare_array[td][fd];
 	document.getElementById("cash_adult").innerHTML = price < 0 ? 'none' : price; // 現金全票
 	document.getElementById("cash_half").innerHTML = price < 0 ? 'none' : Math.ceil(price/2); // 現金半票，無條件進位
 	document.getElementById("RFID_adult").innerHTML = price < 0 ? 'none' : card_price; // 刷卡全票
