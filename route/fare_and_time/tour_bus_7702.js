@@ -25,7 +25,7 @@ tour_bus_7702_main_stop_name = ["嘉義<br />轉運站","嘉義<br />高鐵站",
 tour_bus_7702_main_stop_time_consume = [0,20,45,47,65,82,87];
 tour_bus_7702_important_stop = [0, 1, 6]; // 嘉義轉運站, 嘉義高鐵站, 北門遊客中心
 tour_bus_7702_time_go = [["08:30"],["13:00"]];
-tour_bus_7702_time_return = [["11:00"],["15:00"]];
+tour_bus_7702_time_return = [["11:00",['觀',[4,30]]],["15:00"]];
 // holiday schedule
 tour_bus_7702_holiday_time_go = [["08:30"],["10:00"],["14:00"],["16:00"]];
-tour_bus_7702_holiday_time_return = [["11:00"],["12:00"],["16:00"],["17:30"]];
+tour_bus_7702_holiday_time_return = [["11:00",['觀',[4,30]]],["12:00"],["16:00"],["17:30"]];
