@@ -117,6 +117,7 @@ link_tour_bus_7702 = '<a href="../tour_bus/tour_bus_7702.html" target="_blank">7
 link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31 <div class="sub_title">市府線</div></a>';
 link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62 <div class="sub_title">奇美線</div></a>';
 
+link_highway_bus_7210 = '<a href="../highway_bus/highway_bus_7210.html" target="_blank">7210</a>';
 link_highway_bus_7214 = '<a href="../highway_bus/highway_bus_7214.html" target="_blank">7214</a>';
 link_highway_bus_8035 = '<a href="../highway_bus/highway_bus_8035.html" target="_blank">8035</a>';
 link_highway_bus_8042 = '<a href="../highway_bus/highway_bus_8042.html" target="_blank">8042 <div class="sub_title">沙旗美月世界快線</div></a>';
@@ -353,7 +354,7 @@ transfer_baihe = '<tr><th rowspan="2">白河</th>\
 	<p>' + link_yellow_12 + '、' + link_yellow_12_1 + '、' + link_yellow_13 + '、' + link_yellow_14 + '、</p>'
 	+  link_yellow_14_1 + '、' + link_yellow_15 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_highway_bus_7214 + '</td></tr>';
+	<td id="tour_bus">' + link_highway_bus_7210 + '、' + link_highway_bus_7214 + '</td></tr>';
 
 transfer_hsinyin = '<tr><th rowspan="3">新營</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\

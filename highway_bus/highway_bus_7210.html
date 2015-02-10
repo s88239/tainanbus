@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '7210';
+	route_name_en = 'No.7210';
+	route_file_name = 'highway_bus_7210';
+	route_type = 'highway_bus';
+	route_interval = ['嘉義轉運站','內角','白河'];
+	route_start_stop = '嘉義轉運站';
+	route_end_stop = '白河';
+</script>
+<link href="../css/radio_style.css" rel="stylesheet" />
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	title_name = '公路客運';
+	title_name_en = 'Highway Bus';
+	map_display = false;
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'嘉義客運','','里程計費','http://taiwanbus.tw/information.aspx?Line=1656&Lang=');
+	block_fare(10, null);
+	block_time_schedule(route_start_stop,route_end_stop,'「<font color="red">繞</font>」表示行駛繞駛路線');
+	block_transfer(transfer_baihe);
+	block_copyright();
+</script>
+</body>
+</html>
