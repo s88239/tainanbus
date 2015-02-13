@@ -27,9 +27,13 @@ yellow_1_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_1_main_stop_name = ["新營","柳營","龜子港<br />(省道)","林鳳營<br />火車站","六甲","臺南藝<br />術大學"];
-yellow_1_main_stop_time_consume = [0, 9, 15, 18, 30, 45];
-yellow_1_important_stop = [0, 3, 4, 5]; // 新營, 林鳳營火車站, 六甲, 臺南藝術大學
+yellow_1_main_stop_name = ["新營","柳營","龜子港<br />(省道)","林鳳營<br />火車站","六甲","烏山頭水庫","臺南藝<br />術大學"];
+yellow_1_main_stop_time_consume = [0, 9, 15, 18, 30, 35, 45];
+yellow_1_important_stop = [0, 3, 4, 5, 6]; // 新營, 林鳳營火車站, 六甲, 烏山頭水庫, 臺南藝術大學
 var main_end_stop = 4; // 六甲
 yellow_1_time_go = [["06:00",0,main_end_stop],["06:55",0,main_end_stop],["08:30",0,main_end_stop],["09:30",0,main_end_stop],["12:20",0,main_end_stop],["13:00",0,main_end_stop],["15:00"],["17:00",0,main_end_stop],["18:15",0,main_end_stop]];
 yellow_1_time_return = [["06:35",main_end_stop,0],["07:30",main_end_stop,0],["09:05",main_end_stop,0],["10:05",main_end_stop,0],["12:55",main_end_stop,0],["13:35",main_end_stop,0],["15:50"],["17:40",main_end_stop,0],["18:50",main_end_stop,0]];
+
+var wushantou_stop = 5; // 烏山頭水庫
+yellow_1_holiday_time_go = [["06:00",0,main_end_stop],["06:55",0,main_end_stop],["08:30",0,wushantou_stop],["09:30",0,wushantou_stop],["12:20",0,wushantou_stop],["13:00",0,wushantou_stop],["15:00"],["17:00",0,main_end_stop],["18:15",0,main_end_stop]];
+yellow_1_holiday_time_return = [["06:35",main_end_stop,0],["07:30",main_end_stop,0],["09:10",wushantou_stop,0],["10:10",wushantou_stop,0],["13:00",wushantou_stop,0],["13:40",wushantou_stop,0],["15:50"],["17:40",main_end_stop,0],["18:50",main_end_stop,0]];
