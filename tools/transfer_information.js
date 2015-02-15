@@ -114,8 +114,8 @@ link_tour_bus_88 = '<a href="../tour_bus/tour_bus_88.html" target="_blank">88 <d
 link_tour_bus_99 = '<a href="../tour_bus/tour_bus_99.html" target="_blank">99 <div class="sub_title">台江線</div></a>';
 link_tour_bus_7702 = '<a href="../tour_bus/tour_bus_7702.html" target="_blank">7702 <div class="sub_title">鹽鄉濱海線</div></a>';
 
-link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31 <div class="sub_title">市府線</div></a>';
-link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62 <div class="sub_title">奇美線</div></a>';
+link_hsr_shuttle_h31 = '<a href="../hsr_shuttle/hsr_shuttle_h31.html" target="_blank">H31 <div class="sub_title"><font color="#FFFFFF">市府線</font></div></a>';
+link_hsr_shuttle_h62 = '<a href="../hsr_shuttle/hsr_shuttle_h62.html" target="_blank">H62 <div class="sub_title"><font color="#FFFFFF">奇美線</font></div></a>';
 
 link_highway_bus_7210 = '<a href="../highway_bus/highway_bus_7210.html" target="_blank">7210</a>';
 link_highway_bus_7214 = '<a href="../highway_bus/highway_bus_7214.html" target="_blank">7214</a>';
@@ -322,19 +322,23 @@ transfer_dane_district_office = '<tr><th>大內分駐所</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange + '、' + link_orange_1 + '、' + link_orange_2 + '、' + link_orange_20 + '</td></tr>';
 
-transfer_tainan_arts_university = '<tr><th>臺南藝術大學</th>\
+transfer_tainan_arts_university = '<tr><th rowspan="2">臺南藝術大學</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange_4 + '、' + link_orange_10 + '</td></tr>';
+	<td id="orange">' + link_orange_4 + '、' + link_orange_10 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
+	<td id="yellow">' + link_yellow_1 + '</td></tr>';
 
-transfer_wushantou_reservoir = '<tr><th>烏山頭水庫</th>\
+transfer_wushantou_reservoir = '<tr><th rowspan="2">烏山頭水庫</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange_4 + '、' + link_orange_10 + '</td></tr>';
+	<td id="orange">' + link_orange_4 + '、' + link_orange_10 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
+	<td id="yellow">' + link_yellow_1 + '、' + link_yellow_4 + '</td></tr>';
 
 transfer_liujia = '<tr><th rowspan="2">六甲</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_5 + '、' + link_orange_10 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
-	<td id="yellow">' + link_yellow_1 + '、' + link_yellow_2 + '</td></tr>';
+	<td id="yellow">' + link_yellow_1 + '、' + link_yellow_2 + '、' + link_yellow_4 + '</td></tr>';
 
 transfer_longtien_railway_station = '<tr><th rowspan="2">隆田火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\

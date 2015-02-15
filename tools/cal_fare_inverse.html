@@ -90,7 +90,44 @@ function accSub(arg1,arg2){
 Number.prototype.sub = function(arg) {
          return accSub(arg, this);
      }
-
+function cal_fare(fare_per_km, fare_per_km_card, interval_name, interval_dis){
+	var base_dis = 8;
+	var base_cash = Math.round(base_dis.mul(fare_per_km.mul(1.05)));
+	var base_cash_card = Math.round(base_dis.mul(fare_per_km_card.mul(1.05)));
+	var d_arr = [];
+	//document.write('<table border="1">');
+	for(var i=0;i<interval_name.length;++i){
+		d_arr[i] = [];
+		document.write('[');
+		//document.write('<tr>');
+		var sum = 0;
+		for(j=0;j<interval_name.length;++j){
+			//document.write('<td>');
+			if(i==j){
+				//document.write(interval_name[j]);
+				document.write(base_cash);
+				d_arr[i][j-i] = sum;
+			}
+			else if(i<j){
+				sum = sum.add(interval_dis[j-1]);
+				d_arr[i][j-i] = sum;
+				//document.write(d_arr[i][j-i]);
+				raw_cash = Math.round(d_arr[i][j-i].mul(fare_per_km_card.mul(1.05)));
+				document.write(',');
+				document.write( (raw_cash<base_cash_card)?base_cash_card:raw_cash );
+			}
+			else{
+				raw_cash = Math.round(d_arr[j][i-j].mul(fare_per_km.mul(1.05)));
+				//document.write(j+','+(i-j)+'='+d_arr[j][i-j]);
+				document.write( (raw_cash<base_cash)?base_cash:raw_cash );
+				document.write(',');
+			}
+			//document.write('</td>');
+		}
+			document.write('],<br />');
+		//document.write('</tr>');
+	}
+}
 	var fare_per_km = 2.989;
 	var fare_per_km_old = 3.068;
 	var interval_name = ["南化","金馬寮","木柵","內門","中埔","旗山"];
@@ -115,7 +152,7 @@ Number.prototype.sub = function(arg) {
 		for(j=0;j<interval_price[i].length;++j){
 			document.write('<td>');
 			if(i==j) document.write(interval_name[j]);
-			else if(interval_price[i][j]==base_cash_old){
+			else if(i>j && interval_price[i][j]==base_cash_old){
 				tmp_dis = 8;
 				interval_dis[i].push( base_dis );
 				document.write(base_dis);
@@ -134,13 +171,42 @@ Number.prototype.sub = function(arg) {
 	document.write('<table border="1">');
 	var accumulate = 0, acc_count=0;
 	var card_fare_per_km = 2.623;
-	/*for(i=0;i<interval_dis.length;++i){
-		for(j=0;j<interval_dis[i].length;++j){
-			document.write('('+i+','+j+')='+interval_dis[i][j] + ' ');
-			//document.write(interval_dis[i][j]);
+	var real_dis = [];
+	var count = 0, tmp_acc = 0;
+	for(i=interval_dis.length-1;i>0;--i){
+		count = 0;
+		tmp_acc = 0;
+		x = i;
+		for(j=0;j<interval_price.length-2;++j){
+			//document.write('('+i+','+j+')='+interval_dis[i][j] + '<>');
+			//document.write(interval_dis[i][j]-interval_dis[i-1][j] + ' ');
+			if(i-j<=1){
+				++x;
+				document.write('~('+x+','+(i-1)+')-'+'('+x+','+i+'); ');
+				if(interval_dis[x][i-1]!=base_dis && interval_dis[x][i]!=base_dis){
+					document.write('~~~');
+					++count;
+					tmp_acc = accAdd(tmp_acc, accSub(interval_dis[x][i-1], interval_dis[x][i]));
+				}
+			}
+			else{
+				document.write('('+i+','+j+')-'+'('+(i-1)+','+j+'); ');
+				if(interval_dis[i-1][j]!=base_dis && interval_dis[i][j]!=base_dis){
+					document.write('~~~');
+					++count;
+					tmp_acc = accAdd(tmp_acc, accSub(interval_dis[i][j], interval_dis[i-1][j]));
+				}
+			}
+			/*if(interval_dis[i][j+1]!=base_dis && interval_dis[i][j]!=base_dis){
+				++count;
+				tmp_acc += interval_dis[i][j]-interval_dis[i][j+1];
+			}*/
 		}
-		document.write('<br />')
-	}*/
+		real_dis[i-1] = accDiv(tmp_acc, count);
+		document.write(real_dis[i-1]+'::'+count+'<br />');
+	}
+	document.write(real_dis+'<br />');
+	cal_fare(3.068,2.695,interval_name,real_dis);
 	for(i=0;i<interval_price.length;++i){
 		document.write('<tr>');
 		//interval_dis[i] = interval_price[i+1][i];

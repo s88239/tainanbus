@@ -163,8 +163,19 @@ function block_fare(section_type, section_point){
 		</div>\
 		<div class="content">');
 
-	if(section_type==0){ // charge by meter
-		create_select_menu( eval( route_file_name + '_interval_stop'), route_type, route_file_name, '8km');
+	if(section_type%10==0){ // charge by meter
+		switch(section_type){
+			case 0: // 8km free
+				charge_type = '8km';
+				break;
+			case 10: // highway bus
+				charge_type = 'highway';
+				break;
+			case 20: // Kaohsiung City Bus
+				charge_type = 'Kaohsiung';
+				break;
+		}
+		create_select_menu( eval( route_file_name + '_interval_stop'), route_type, route_file_name, charge_type);
 		document.write('<br/>\
 				<table id="showfareInfo">\
 					<tr>\
@@ -182,30 +193,7 @@ function block_fare(section_type, section_point){
 					</tr>\
 				</table>\
 				<p>　</p>');
-
-		print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color, '8km');
-	}
-	else if(section_type==10){ // charge by meter for highway bus
-		create_select_menu( eval( route_file_name + '_interval_stop'), route_type, route_file_name, 'highway');
-		document.write('<br/>\
-				<table id="showfareInfo">\
-					<tr>\
-						<th></th><th>全票</th><th>半票</th>\
-					</tr>\
-					<tr>\
-						<td><b>投現</b></td>\
-						<td id="cash_adult">-</td>\
-						<td id="cash_half">-</td>\
-					</tr>\
-					<tr>\
-						<td><b>電子票證</b></td>\
-						<td id="RFID_adult">-</td>\
-						<td id="RFID_half">-</td>\
-					</tr>\
-				</table>\
-				<p>　</p>');
-
-		print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color, 'highway');
+		print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color, charge_type);
 	}
 	else if(section_type==1){ // charge by one section
 		document.write('<h1>全路線一段票</h1>\
@@ -225,7 +213,7 @@ function block_fare(section_type, section_point){
 				</tr>\
 			</table>');
 	}
-	else if(section_type==2 || section_type==22){ // charge by two section
+	else if(section_type%10==2){ // charge by two section
 		document.write('<h1>兩段票收費</h1>\
 			<h2><u>分段點：' + section_point + '</u></h2><br />\
 			<table>\
@@ -247,17 +235,12 @@ function block_fare(section_type, section_point){
 			</table>');
 	}
 	document.write('<p>　</p>');
-	if(section_type==10){
+	if(section_type==10 || section_type==20){
 		document.write('<h3><font color="red">本路線非大台南公車，無法享有八公里免費及轉乘優惠</font></h3>\
-			<h2>使用電子票證時，上下車皆須刷卡</h2><br />\
-			<h3>本路線票價已採用2015.1.27最新公路總局公告之費率計算</h3><br />');
-		/*document.write('<div align="left" style="margin:0 auto;	display: table;"><h3><ul>半票資格：\
-			<li>1>年滿六十五歲以上，持有國民身份證或敬老證之老人。</li>\
-			<li>2>持有殘障手冊之殘障者。</li>\
-			<li>3>身高一一五至一四五公分之孩童。</li>\
-			</ul></h3></div>\
-			免費孩童由已購票者之旅客攜帶，最多以兩人為限，逾限仍應購買半票。<p>&nbsp;</p>');*/
-		if(section_point) document.write(section_point);
+			<h2>使用電子票證時，上下車皆須刷卡</h2><br />');
+		if(section_type==20) document.write('<h1>本路線使用一卡通收費最高上限為60元</h1><br />');
+
+		if(section_point) document.write(section_point); // additional message
 	}
 	else{
 		if(section_type==0) document.write(MeteredMSG);

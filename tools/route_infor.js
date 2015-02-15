@@ -77,7 +77,7 @@ yellow_4_route = '新營 ─ 二重溪 ─ 六甲 ─ 烏山頭水庫';
 yellow_5_route = '新營 ─ 紅毛厝 ─ 下營';
 yellow_6_route = '新營 ─ 白沙屯 ─ 後壁火車站';
 yellow_7_route = '新營 ─ 東山 ─ 青山';
-yellow_9_route = '新營 ─ 高鐵嘉義站';
+yellow_9_route = '新營 ─ 後壁火車站 ─ 高鐵嘉義站';
 yellow_10_route = '後壁 ─ 白河 ─ 六重溪';
 yellow_11_route = '白河 ─ 東山 ─ 青山';
 yellow_11_1_route = '白河 ─ 東山 ─ 李子園';
@@ -111,8 +111,8 @@ tour_bus_88_route = '臺南公園 ─ 觀夕平台　<div class="sub_title">安�
 tour_bus_99_route = '臺南公園 ─ 四草 ─ 七股鹽山　<div class="sub_title">台江線</div>';
 tour_bus_7702_route = '嘉義轉運站 ─ 北門遊客中心　<div class="sub_title">鹽鄉濱海線</div>';
 
-hsr_shuttle_h31_route = '臺南市政府 ─ 高鐵臺南站';
-hsr_shuttle_h62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站';
+hsr_shuttle_h31_route = '臺南市政府 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷市府線</div>';
+hsr_shuttle_h62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷奇美線</div>';
 
 highway_bus_8035_route = '南化 ─ 內門 ─ 旗山轉運站';
 highway_bus_8042_route = '高鐵臺南站 ─ 阿蓮 ─ 旗山　<div class="sub_title">沙旗美月世界快線</div>';
