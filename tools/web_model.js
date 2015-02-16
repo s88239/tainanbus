@@ -153,7 +153,7 @@ function block_route_info(route_interval, company_name, density, charging_method
 </div>');
 }
 
-function block_fare(section_type, section_point){
+function block_fare(section_type, additional_message, section_point){
 	document.write('<div id="wrapper3">\
 	<a name="fare"></a>\
 	<div id="faretable" class="container">\
@@ -238,17 +238,15 @@ function block_fare(section_type, section_point){
 	if(section_type==10 || section_type==20){
 		document.write('<h3><font color="red">本路線非大台南公車，無法享有八公里免費及轉乘優惠</font></h3>\
 			<h2>使用電子票證時，上下車皆須刷卡</h2><br />');
-		if(section_type==20) document.write('<h1>本路線使用一卡通收費最高上限為60元</h1><br />');
-
-		if(section_point) document.write(section_point); // additional message
+		if(section_type==20) document.write('<h1>本路線使用一卡通收費最高上限為60元</h1>');
 	}
 	else{
 		if(section_type==0) document.write(MeteredMSG);
 		else document.write(CitybusMSG);
-
-		document.write(PromotionMSG + '<p>　</p>');
+		document.write(PromotionMSG);
 	}
-	document.write('</div>\
+	if(additional_message) document.write(additional_message); // print additional message
+	document.write('<p>　</p></div>\
 	</div>\
 </div>');
 }
