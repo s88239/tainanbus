@@ -3,13 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	route_name = '8050';
-	route_name_en = 'No.8050';
-	route_file_name = 'highway_bus_8050';
+	route_name = '7410';
+	route_name_en = 'No.7410';
+	route_file_name = 'highway_bus_7410';
 	route_type = 'highway_bus';
-	route_interval = ['臺南火車站','旗山','佛光山'];
-	route_start_stop = '臺南火車站';
-	route_end_stop = '佛光山';
+	route_interval = ['新營','鹽水','布袋港'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -23,10 +21,10 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'高雄客運','','里程計費','http://taiwanbus.tw/information.aspx?Line=9325&Lang=" target="_blank');
-	block_fare(10, '<h1>本路線不適用一卡通收費最高上限優惠</h1>');
-	block_time_schedule(route_start_stop,route_end_stop,'');
-	block_transfer(transfer_tainan_railway_station);
+	block_route_info(route_interval,'新營客運','','里程計費','http://www.taiwanbus.tw/information.aspx?Line=9498&Lang=" target="_blank');
+	block_fare(10,'<h3>刷卡票價僅供參考，誤差為1元上下</h3>');
+	block_time_schedule('新營','布袋遊客中心/布袋商港','「<font color="red">繞</font>」表示行駛繞駛新營高中');
+	block_transfer(transfer_hsinyin + transfer_yanshui);
 	block_copyright();
 </script>
 </body>

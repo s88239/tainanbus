@@ -237,7 +237,8 @@ function block_fare(section_type, additional_message, section_point){
 	document.write('<p>　</p>');
 	if(section_type==10 || section_type==20){
 		document.write('<h3><font color="red">本路線非大台南公車，無法享有八公里免費及轉乘優惠</font></h3>\
-			<h2>使用電子票證時，上下車皆須刷卡</h2><br />');
+			<h2>使用電子票證時，上下車皆須刷卡</h2><br />\
+			<h3>本路線票價已採用2015.2.14最新公路總局公告之費率計算</h3>');
 		if(section_type==20) document.write('<h1>本路線使用一卡通收費最高上限為60元</h1>');
 	}
 	else{

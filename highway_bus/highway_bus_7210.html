@@ -11,8 +11,7 @@
 	route_start_stop = '嘉義轉運站';
 	route_end_stop = '白河';
 </script>
-<link href="../css/radio_style.css" rel="stylesheet" />
-<script src="../tools/web_model.js"></script> 
+<script src="../tools/web_model.js"></script>
 <script type="text/javascript">
 	title_name = '公路客運';
 	title_name_en = 'Highway Bus';
@@ -24,8 +23,8 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'嘉義客運','','里程計費','http://taiwanbus.tw/information.aspx?Line=1656&Lang=');
-	block_fare(10, '<h3>本路線票價已採用2015.2.14最新公路總局公告之費率計算</h3><br />');
+	block_route_info(route_interval,'嘉義客運','','里程計費','http://taiwanbus.tw/information.aspx?Line=1656&Lang=" target="_blank');
+	block_fare(10, null);
 	block_time_schedule(route_start_stop,route_end_stop,'「<font color="red">繞</font>」表示行駛繞駛路線');
 	block_transfer(transfer_baihe);
 	block_copyright();

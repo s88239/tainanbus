@@ -128,16 +128,23 @@ function cal_fare(fare_per_km, fare_per_km_card, interval_name, interval_dis){
 		//document.write('</tr>');
 	}
 }
-	var fare_per_km = 2.989;
-	var fare_per_km_old = 3.068;
-	var interval_name = ["南化","金馬寮","木柵","內門","中埔","旗山"];
+	var fare_per_km = 2.892;
+	var fare_per_km_old = 2.892;
+	var interval_name = ["新營","茄苳腳","鹽水","牛稠仔","義竹<br />社區","義竹","頭竹圍","新富村","過路仔","竿仔寮","新塭","南鯤鯓","好美里"];
 	var interval_price = [
-	[26,26,32,45,58,73],
-	[26,26,26,26,37,52],
-	[28,26,26,26,26,41],
-	[41,26,26,26,26,28],
-	[52,37,26,26,26,26],
-	[73,58,45,32,26,26]
+	[24,22,22,22,22,23,31,34,39,43,49,1,1],
+[24,24,22,22,22,22,25,28,32,36,42,1,1],
+[24,24,24,22,22,22,22,23,28,32,37,1,1],
+[28,24,24,24,22,22,22,22,23,28,33,1,1],
+[32,24,24,24,24,22,22,22,22,22,26,1,1],
+[34,24,24,24,24,24,22,22,22,22,25,1,1],
+[39,24,24,24,24,24,24,22,22,22,22,1,1],
+[44,29,24,24,24,24,24,24,22,22,22,1,1],
+[53,38,29,25,24,24,24,24,24,22,22,1,1],
+[60,45,36,32,28,26,24,24,24,24,22,1,1],
+[71,56,47,43,39,37,32,26,24,24,24,1,1],
+[86,71,62,58,54,52,47,41,33,26,24,24,1],
+[80,65,56,52,48,46,41,36,27,24,24,24,24]
 	];
 	var interval_dis = [];
 	var base_dis = 8;
@@ -170,7 +177,7 @@ function cal_fare(fare_per_km, fare_per_km_card, interval_name, interval_dis){
 	document.write('</table><br />');
 	document.write('<table border="1">');
 	var accumulate = 0, acc_count=0;
-	var card_fare_per_km = 2.623;
+	var card_fare_per_km = 2.540;//accMul(fare_per_km,0.87842);
 	var real_dis = [];
 	var count = 0, tmp_acc = 0;
 	for(i=interval_dis.length-1;i>0;--i){
@@ -180,6 +187,14 @@ function cal_fare(fare_per_km, fare_per_km_card, interval_name, interval_dis){
 		for(j=0;j<interval_price.length-2;++j){
 			//document.write('('+i+','+j+')='+interval_dis[i][j] + '<>');
 			//document.write(interval_dis[i][j]-interval_dis[i-1][j] + ' ');
+			if(i-j==1){
+				document.write('!!('+i+','+j+'); ');
+				if(interval_dis[i][j]>base_dis){
+					document.write('~~~');
+					++count;
+					tmp_acc = accAdd(tmp_acc, interval_dis[i][j]);
+				}
+			}
 			if(i-j<=1){
 				++x;
 				document.write('~('+x+','+(i-1)+')-'+'('+x+','+i+'); ');
@@ -197,16 +212,12 @@ function cal_fare(fare_per_km, fare_per_km_card, interval_name, interval_dis){
 					tmp_acc = accAdd(tmp_acc, accSub(interval_dis[i][j], interval_dis[i-1][j]));
 				}
 			}
-			/*if(interval_dis[i][j+1]!=base_dis && interval_dis[i][j]!=base_dis){
-				++count;
-				tmp_acc += interval_dis[i][j]-interval_dis[i][j+1];
-			}*/
 		}
 		real_dis[i-1] = accDiv(tmp_acc, count);
 		document.write(real_dis[i-1]+'::'+count+'<br />');
 	}
 	document.write(real_dis+'<br />');
-	cal_fare(3.068,2.695,interval_name,real_dis);
+	cal_fare(fare_per_km,card_fare_per_km,interval_name,real_dis);
 	for(i=0;i<interval_price.length;++i){
 		document.write('<tr>');
 		//interval_dis[i] = interval_price[i+1][i];
@@ -217,6 +228,7 @@ function cal_fare(fare_per_km, fare_per_km_card, interval_name, interval_dis){
 			if(i==j) document.write(interval_name[j]);
 			else if(i<j){
 				document.write( Math.round( accMul(interval_dis[j][i],accMul(card_fare_per_km,1.05) ) ) );
+				//document.write(accMul(interval_price[j][i],0.87842));
 				//tmp_dis = interval_dis[j][i];
 				//interval_price[i][j].div(interval_dis[j][i].mul(1.05)).toFixed(1);
 				//interval_dis[i].push( tmp_dis );
