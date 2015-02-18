@@ -12,9 +12,9 @@ highway_bus_8042_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-highway_bus_8042_main_stop_name = ["臺南航空站<br /><font color=\"red\">(假日延駛)</font>","奇美博物館<br /><font color=\"red\">(假日延駛)</font>","高鐵臺南站","阿蓮分駐所","崗山頭","旗山轉運站","旗山北站"];
-highway_bus_8042_main_stop_time_consume = [0,2,17,32,37,62,67];
-highway_bus_8042_important_stop = [0, 1, 2, 5]; // 臺南航空站, 奇美博物站, 高鐵台南站, 旗山轉運站
+highway_bus_8042_main_stop_name = ["臺南航空站<br /><font color=\"red\">(假日延駛)</font>","奇美博物館<br /><font color=\"red\">(假日延駛)</font>","高鐵臺南站","阿蓮分駐所","崗山頭","月世界","旗山轉運站","旗山北站"];
+highway_bus_8042_main_stop_time_consume = [0,2,17,32,37,45,62,67];
+highway_bus_8042_important_stop = [0, 1, 2, 6]; // 臺南航空站, 奇美博物站, 高鐵台南站, 旗山轉運站
 highway_bus_8042_time_go = [
 ["08:48",0,3],["10:00",2,3],["10:18",0,3],["11:15",2,3],["11:08"],["12:18"],["13:53",0,3],["15:00",2,3],["15:13",0,3],
 ["16:10",2,3],["16:03"],["17:13"]

@@ -80,7 +80,13 @@ function block_route_map(announce_str){
 		</div>\
 		<img src="../route/' + route_type + '/' + route_file_name + '.jpg">');
 
-	if(announce_str!=null) Announcement(announce_str); // have something news to announce
+	emergency_str = '<h2>2015年2月18日(除夕)：</h2>\
+<div align="left">府城、興南及新營客運等各家業者所屬路線晚間7時30分(含)前班次正常發車，晚間7時30分後班次取消。</div><br />\
+<h2>2月19日(初一)至2月23日(初五)：</h2>\
+<div align="left">府城客運依假日班表(各路線首班車取消)行駛，詳<a href="http://tourguide.tainan.gov.tw:8080/images/NewsFile/565/%E6%98%A5%E7%AF%80.pdf" target="_blank">附件</a>；\
+興南客運及新營客運依假日班表(無取消班次)行駛。<br /></div>';
+	if(announce_str!=null) Announcement(emergency_str + '<br />' + announce_str); // have something news to announce
+	else Announcement(emergency_str);
 	if(map_display){
 		document.write('<p></p><a href="../TainanBusMap/show_map.php?route=' + route_file_name + '" target="_blank">\
 			<img src="../img/google_map_logo.png"><br />\
@@ -237,9 +243,9 @@ function block_fare(section_type, additional_message, section_point){
 	document.write('<p>　</p>');
 	if(section_type==10 || section_type==20){
 		document.write('<h3><font color="red">本路線非大台南公車，無法享有八公里免費及轉乘優惠</font></h3>\
-			<h2>使用電子票證時，上下車皆須刷卡</h2><br />\
-			<h3>本路線票價已採用2015.2.14最新公路總局公告之費率計算</h3>');
+			<h2>使用電子票證時，上下車皆須刷卡</h2><br />');
 		if(section_type==20) document.write('<h1>本路線使用一卡通收費最高上限為60元</h1>');
+		else document.write('<h3>本路線票價已採用2015.2.14最新公路總局公告之費率計算</h3>');
 	}
 	else{
 		if(section_type==0) document.write(MeteredMSG);
