@@ -33,7 +33,3 @@ yellow_1_important_stop = [0, 3, 4, 5, 6]; // 新營, 林鳳營火車站, 六甲
 var main_end_stop = 4; // 六甲
 yellow_1_time_go = [["06:00",0,main_end_stop],["06:55",0,main_end_stop],["08:30",0,main_end_stop],["09:30",0,main_end_stop],["12:20",0,main_end_stop],["13:00",0,main_end_stop],["15:00"],["17:00",0,main_end_stop],["18:15",0,main_end_stop]];
 yellow_1_time_return = [["06:35",main_end_stop,0],["07:30",main_end_stop,0],["09:15",main_end_stop,0],["10:15",main_end_stop,0],["13:05",main_end_stop,0],["13:45",main_end_stop,0],["15:50"],["17:40",main_end_stop,0],["18:50",main_end_stop,0]];
-
-var wushantou_stop = 5; // 烏山頭水庫
-yellow_1_holiday_time_go = [["06:00",0,main_end_stop],["06:55",0,main_end_stop],["08:30",0,wushantou_stop],["09:30",0,wushantou_stop],["12:20",0,wushantou_stop],["13:00",0,wushantou_stop],["15:00"],["17:00",0,main_end_stop],["18:15",0,main_end_stop]];
-yellow_1_holiday_time_return = [["06:35",main_end_stop,0],["07:30",main_end_stop,0],["09:10",wushantou_stop,0],["10:10",wushantou_stop,0],["13:00",wushantou_stop,0],["13:40",wushantou_stop,0],["15:50"],["17:40",main_end_stop,0],["18:50",main_end_stop,0]];

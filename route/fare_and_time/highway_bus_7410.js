@@ -32,15 +32,15 @@ highway_bus_7410_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 highway_bus_7410_main_stop_name = ["新營","鹽水","義竹","前東港","布袋<br />遊客中心","布袋商港<br /><font color=\"red\">(4-9月延駛)</font>"];
-highway_bus_7410_main_stop_time_consume = [0,18,25,37,43,46];
+highway_bus_7410_main_stop_time_consume = [0,15,20,35,42,45];
 highway_bus_7410_important_stop = [0, 1, 4]; // 新營, 鹽水, 布袋遊客中心
 stop_0 = 0; // 新營
 stop_1 = 4; // 布袋遊客中心
 highway_bus_7410_time_go = [
 ["07:10",stop_0,stop_1],["08:20"],["08:50"],["10:00",stop_0,stop_1],["11:00",stop_0,stop_1],["12:40",stop_0,stop_1],
-["15:00",stop_0,stop_1],["17:10",stop_0,stop_1,['繞']],["18:00"],["18:50",stop_0,stop_1]
+["15:00",stop_0,stop_1],["17:10",stop_0,stop_1,['繞',[1,5]]],["18:00"],["18:50",stop_0,stop_1]
 ];
 highway_bus_7410_time_return = [
-["05:58",stop_1,stop_0,['繞']],["07:58",stop_1,stop_0],["09:20"],["09:50"],["10:48",stop_1,stop_0],["11:48",stop_1,stop_0],
+["05:58",stop_1,stop_0,['繞',[0,5]]],["07:58",stop_1,stop_0],["09:20"],["09:50"],["10:48",stop_1,stop_0],["11:48",stop_1,stop_0],
 ["13:28",stop_1,stop_0],["15:48",stop_1,stop_0],["18:13",stop_1,stop_0],["19:00"]
 ];

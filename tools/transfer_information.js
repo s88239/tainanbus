@@ -346,7 +346,7 @@ transfer_wushantou_reservoir = '<tr><th rowspan="2">烏山頭水庫</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_4 + '、' + link_orange_10 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
-	<td id="yellow">' + link_yellow_1 + '、' + link_yellow_4 + '</td></tr>';
+	<td id="yellow">' + link_yellow_1 + '</td></tr>';
 
 transfer_liujia = '<tr><th rowspan="2">六甲</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
