@@ -48,7 +48,7 @@ red_10_route = '關廟 ─ 永康火車站 ─ 奇美醫院';
 red_11_route = '關廟 ─ 龍崎 ─ 牛埔農塘';
 red_12_route = '關廟 ─ 龍崎 ─ 烏山頭';
 red_13_route = '關廟 ─ 阿蓮';
-red_14_route = '關廟 ─ 歸仁 ─ 高鐵臺南站';
+red_14_route = '關廟 ─ 高鐵臺南站 ─ 長榮大學';
 
 brown_route = '新營 ─ 鹽水 ─ 學甲 ─ 佳里';
 brown_1_route = '新營 ─ 鹽水 ─ 南鯤鯓 ─ 雙春';
@@ -94,7 +94,7 @@ city_bus_0_route = '臺南火車站 ─ 臺南火車站';
 city_bus_1_route = '臺南火車站 ─ 茄萣 ─ 興達港';
 city_bus_2_route = '崑山科大 ─ 安平';
 city_bus_3_route = '海東國小 ─ 竹篙厝';
-city_bus_5_route = '鹽行 ─ 市立醫院、大甲里';
+city_bus_5_route = '桂田酒店 ─ 市立醫院、大甲里';
 city_bus_6_route = '裕聖里 ─ 新興國宅';
 city_bus_7_route = '臺南火車站 ─ 康寧大學';
 city_bus_9_route = '臺南火車站 ─ 公親里、溪埔寮';

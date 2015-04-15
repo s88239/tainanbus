@@ -7,7 +7,7 @@
 	route_name_en = 'Red 14';
 	route_file_name = 'red_14';
 	route_type = 'red';
-	route_interval = ['關廟','歸仁','高鐵臺南站'];
+	route_interval = ['關廟','高鐵臺南站','長榮大學'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -20,7 +20,7 @@
 	block_route_map(null);
 	block_route_info(route_interval,'興南客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1614&locale=zh_TW');
 	block_fare(0, null);
-	block_time_schedule('關廟','高鐵臺南站','');
+	block_time_schedule('關廟','長榮大學','');
 	block_transfer(transfer_guanmiao + transfer_hsr_tainan_station);
 	block_copyright();
 </script>

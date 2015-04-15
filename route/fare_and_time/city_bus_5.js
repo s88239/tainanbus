@@ -13,43 +13,47 @@ city_bus_5_stop_time_consume = [0,1,2,3,4,4,5,6,7,8,10,11,13,15,16,17,18,20,21,2
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_5_main_stop_name = ["鹽行","南臺<br />科大","奇美<br />醫院","崑山<br />中學","臺南<br />火車站","赤崁樓","新光三越<br />新天地","大林<br />新城","市立<br />醫院","臺南<br />航空站","嘉南<br />藥理大學","大甲里"];
-city_bus_5_main_stop_time_consume = [0, 5, 8, 15, 25, 30, 40, 50, 60, 57, 60, 65];
-city_bus_5_important_stop = [0, 2, 4, 8]; // 鹽行, 奇美醫院, 臺南火車站, 市立醫院
-city_bus_5_time_go = [["06:00",0,8,['L']],["6:10",0,9,[8]],["6:25",0,8,[[4,5]]],["6:40",[8,[4,5,9,5]]],["6:55",0,8,['生',[4,5]]],
-["7:15",0,8,['L']],["7:30",0,9,[8]],["7:50",0,8],["8:10",[8,[9,10]]],["8:35",0,8,['L']],["8:50",[8,[9,10]]],["9:05",0,9,[8]],
-["9:25",0,8],["9:55",0,8,['L']],["10:30",0,8,['生']],["10:45",[8,[9,10]]],["11:15",0,9,[8]],["11:30",0,8,['L']],["11:50",0,8],
-["12:05",0,9,[8]],["12:25",[8,[9,10]]],["12:45",0,8,['L']],["13:05",0,8,['生']],["13:25",0,8,[[4,5]]],["13:45",[8,[4,5,9,5]]],
-["14:05",0,8,['L']],["14:25",0,8],["14:50",0,8],["15:10",0,8,[[4,5]]],["15:35",0,8,[[4,5]]],["15:55",[8,[4,5,9,5]]],
-["16:10",0,8,['L',[4,5]]],["16:25",0,9,[8,[4,5]]],["16:35",[8,[4,10,9,5]]],["16:45",0,8,[[4,10]]],["17:00",0,8,['生',[4,10]]],
-["17:20",0,8,['L',[4,10]]],["17:40",[8,[4,10,9,5]]],["18:05",0,8,[[4,5]]],["18:25",0,8,[[4,5]]],["18:55",0,8],["19:20",0,8],
-["19:50",0,8],["20:20",[8,[9,10]]],["21:00",0,8,[[4,10]]],["21:30",0,4],["22:00",0,4]
+city_bus_5_main_stop_name = ["桂田<br />酒店","鹽行","南臺<br />科大","奇美<br />醫院","崑山<br />中學","臺南<br />火車站","赤崁樓","新光三越<br />新天地","大林<br />新城","市立<br />醫院","臺南<br />航空站","嘉南<br />藥理大學","大甲里"];
+city_bus_5_main_stop_time_consume = [0, 5, 10, 13, 20, 30, 35, 45, 55, 65, 62, 65, 70];
+city_bus_5_important_stop = [0, 1, 3, 5, 9]; // 桂田酒店, 鹽行, 奇美醫院, 臺南火車站, 市立醫院
+stop_start = 0;
+stop_tainan_railway_station = 5;
+stop_hospital = 9;
+stop_airport = 10;
+city_bus_5_time_go = [["05:55",stop_start,stop_hospital,['L']],["6:05",stop_start,stop_airport,[stop_hospital]],["6:20",stop_start,stop_hospital,[[5,5]]],["6:35",[stop_hospital,[5,5,10,5]]],["6:50",stop_start,stop_hospital,['<font color="red">L</font>生',[5,5]]],
+["7:10",stop_start,stop_hospital],["7:25",stop_start,stop_airport,[stop_hospital]],["7:45",stop_start,stop_hospital,['L']],["8:05",[stop_hospital,[10,10]]],["8:30",stop_start,stop_hospital,['L']],["8:45",[stop_hospital,[10,10]]],["9:00",stop_start,stop_airport,[stop_hospital]],
+["9:20",stop_start,stop_hospital,['L']],["9:50",stop_start,stop_hospital],["10:25",stop_start,stop_hospital,['生']],["10:40",[stop_hospital,[10,10]]],["11:10",stop_start,stop_airport,[stop_hospital]],["11:25",stop_start,stop_hospital],["11:45",stop_start,stop_hospital,['L']],
+["12:00",stop_start,stop_airport,[stop_hospital]],["12:20",[stop_hospital,[10,10]]],["12:40",stop_start,stop_hospital,['L']],["13:00",stop_start,stop_hospital,['生']],["13:20",stop_start,stop_hospital,[[4,5]]],["13:40",[stop_hospital,[5,5,10,5]]],
+["14:00",stop_start,stop_hospital],["14:20",stop_start,stop_hospital],["14:45",stop_start,stop_hospital,['L']],["15:05",stop_start,stop_hospital,[[5,5]]],["15:30",stop_start,stop_hospital,[[5,5]]],["15:50",[stop_hospital,[5,5,10,5]]],
+["16:05",stop_start,stop_hospital,['L',[5,5]]],["16:20",stop_start,stop_airport,[stop_hospital,[5,5]]],["16:30",[stop_hospital,[5,10,10,5]]],["16:40",stop_start,stop_hospital,[[5,10]]],["16:55",stop_start,stop_hospital,['生',[5,10]]],
+["17:15",stop_start,stop_hospital,['L',[5,10]]],["17:35",['L',stop_hospital,[5,10,10,5]]],["18:00",stop_start,stop_hospital,[[5,5]]],["18:20",stop_start,stop_hospital,[[5,5]]],["18:50",stop_start,stop_hospital],["19:15",stop_start,stop_hospital],
+["19:45",stop_start,stop_hospital],["20:15",[stop_hospital]],["20:55",stop_start,stop_hospital,[[5,10]]],["21:25",0,stop_tainan_railway_station],["21:55",0,stop_tainan_railway_station]
 ];
-city_bus_5_time_return = [["06:05",8,0,['L']],["6:20",9,0,[8,[7,-2]]],["6:30",8,0],["6:50",8,0],["7:10",8,0,['L']],
-["7:35",8,0],["7:50",9,0,[8,[7,-2]]],["8:10",8,0,['生',[6,-5]]],["8:20",[8]],["8:40",8,0,['L']],["9:15",8,0],["9:25",[8]],
-["9:50",9,0,[8,[7,-2]]],["10:05",8,0,['L']],["10:30",8,0],["10:45",9,0,[8,[7,-2]]],["10:55",[8]],["11:15",8,0,['L']],
-["12:00",8,0,['生',[6,-5]]],["12:15",[8]],["12:40",8,0,['L']],["13:00",9,0,[8,[7,-2]]],["13:20",8,0],["13:40",9,0,[8,[7,-2]]],
-["14:10",9,0,[8,[7,-2]]],["14:25",8,0,['L']],["14:40",[8]],["15:00",8,0,['生',[6,-5]]],["15:15",8,0],["15:25",[8]],
-["16:00",8,0,['L']],["16:20",8,0],["16:45",8,0],["17:05",8,0,['生',[6,-5]]],["17:20",[8]],["17:45",8,0,['L']],
-["18:00",9,0,[8,[7,-2]]],["18:10",[8]],["18:25",8,0],["19:00",8,0,['生',[6,-5]]],["19:15",[8]],
-["19:35",8,0,['L']],["20:00",9,0,[8,[7,-2]]],["20:40",8,0],["21:30",8,0],["21:40",[8,[6,-5]]],["22:05",8,4]
+city_bus_5_time_return = [["06:05",stop_hospital,stop_start],["6:20",stop_airport,stop_start,[stop_hospital,[stop_hospital,-2]]],["6:30",stop_hospital,stop_start,['L']],["6:50",stop_hospital,stop_start],["7:10",stop_hospital,stop_start,['L']],
+["7:35",stop_hospital,stop_start],["7:50",stop_airport,stop_start,[stop_hospital,[8,-2]]],["8:10",stop_hospital,stop_start,['<font color="red">L</font>生',[6,-5]]],["8:20",[stop_hospital]],["8:40",stop_hospital,stop_start],["9:15",stop_hospital,stop_start],["9:25",[stop_hospital]],
+["9:50",stop_airport,stop_start,[stop_hospital,[8,-2]]],["10:05",stop_hospital,stop_start,['L']],["10:30",stop_hospital,stop_start,['L']],["10:45",stop_airport,stop_start,[stop_hospital,[8,-2]]],["10:55",[stop_hospital]],["11:15",stop_hospital,stop_start,['L']],
+["12:00",stop_hospital,stop_start,['生',[7,-5]]],["12:15",[stop_hospital]],["12:40",stop_hospital,stop_start,['L']],["13:00",stop_airport,stop_start,[stop_hospital,[8,-2]]],["13:20",stop_hospital,stop_start,['L']],["13:40",stop_airport,stop_start,[stop_hospital,[8,-2]]],
+["14:10",stop_airport,stop_start,[stop_hospital,[8,-2]]],["14:25",stop_hospital,stop_start,['L']],["14:40",[stop_hospital]],["15:00",stop_hospital,stop_start,['生',[7,-5]]],["15:15",stop_hospital,stop_start],["15:25",[stop_hospital]],
+["16:00",stop_hospital,stop_start,['L']],["16:20",stop_hospital,stop_start,['L']],["16:45",stop_hospital,stop_start],["17:05",stop_hospital,stop_start,['生',[7,-5]]],["17:20",[stop_hospital]],["17:45",stop_hospital,stop_start,['L']],
+["18:00",stop_airport,stop_start,[stop_hospital,[8,-2]]],["18:10",[stop_hospital]],["18:25",stop_hospital,stop_start],["19:00",stop_hospital,stop_start,['生',[7,-5]]],["19:15",['L',stop_hospital]],
+["19:35",stop_hospital,stop_start,['L']],["20:00",stop_airport,stop_start,[stop_hospital,[8,-2]]],["20:40",stop_hospital,stop_start],["21:30",stop_hospital,stop_start],["21:40",[stop_hospital,[7,-5]]],["22:05",stop_hospital,stop_tainan_railway_station]
 ];
 
 // holiday schedule
-city_bus_5_holiday_time_go = [["06:05",0,9,[8]],["6:20",0,8],["6:35",[8,[9,10]]],["6:50",0,8,['生']],
-["7:20",0,8],["7:50",0,8],["8:10",0,9,[8]],["8:30",0,8,['L']],["8:45",0,9,[8]],["9:00",0,8],
-["9:35",0,8],["10:05",[8,[9,10]]],["10:30",0,8,['生']],["11:00",0,8],["11:25",0,9,[8]],["11:45",0,8],
-["12:05",0,9,[8]],["12:25",0,8,['L']],["13:05",0,8,['L']],["13:40",0,9,[[4,5]]],["14:00",0,8,[[4,5]]],
-["14:20",0,8,[[4,5]]],["14:40",0,8,['生']],["15:05",0,8,'L'],["15:30",0,8,['L']],["15:45",[8,[4,5,9,5]]],["16:00",0,9,[8,[4,5]]],
-["16:25",0,8,['L',[4,5]]],["16:50",0,8,[[4,5]]],["17:10",0,8,['生',[4,5]]],["17:30",0,8,[[4,5]]],["17:50",0,8,[[4,5]]],
-["18:15",0,8,['L',[4,5]]],["18:45",0,8,[[4,5]]],["19:25",0,8,['L']],["20:05",0,8,[[4,5]]],["20:40",0,8,[[4,5]]],["21:05",0,8,[[4,10]]],["21:30",0,4]
+city_bus_5_holiday_time_go = [["06:00",stop_start,stop_airport,[stop_hospital]],["6:15",stop_start,stop_hospital],["6:30",[stop_hospital,[10,10]]],["6:45",stop_start,stop_hospital,['生']],
+["7:15",stop_start,stop_hospital],["7:45",stop_start,stop_hospital],["8:05",stop_start,stop_airport,['L',stop_hospital]],["8:25",stop_start,stop_hospital,['L']],["8:40",stop_start,stop_airport,[stop_hospital]],["8:55",stop_start,stop_hospital],
+["9:30",stop_start,stop_hospital],["10:00",[stop_hospital,[10,10]]],["10:25",stop_start,stop_hospital,['生']],["10:55",stop_start,stop_hospital],["11:20",stop_start,stop_airport,[stop_hospital]],["11:40",stop_start,stop_hospital],
+["12:00",stop_start,stop_airport,[stop_hospital]],["12:20",stop_start,stop_hospital,['L']],["13:00",stop_start,stop_hospital,['L']],["13:35",stop_start,stop_airport,[stop_hospital,[5,5]]],["13:55",stop_start,stop_hospital,[[5,5]]],
+["14:15",stop_start,stop_hospital,[[5,5]]],["14:35",stop_start,stop_hospital,['生']],["15:00",stop_start,stop_hospital,'L'],["15:25",stop_start,stop_hospital,['L']],["15:40",[stop_hospital,[5,5,10,5]]],["15:55",stop_start,stop_airport,[stop_hospital,[5,5]]],
+["16:20",stop_start,stop_hospital,['L',[5,5]]],["16:45",stop_start,stop_hospital,[[5,5]]],["17:05",stop_start,stop_hospital,['生',[5,5]]],["17:25",stop_start,stop_hospital,[[5,5]]],["17:45",stop_start,stop_hospital,[[5,5]]],
+["18:10",stop_start,stop_hospital,['L',[5,5]]],["18:40",stop_start,stop_hospital,['L',[5,5]]],["19:20",stop_start,stop_hospital,['L']],["20:00",stop_start,stop_hospital,[[5,5]]],["20:35",stop_start,stop_hospital,[[5,5]]],["21:00",stop_start,stop_hospital,[[5,10]]],["21:25",stop_start,stop_tainan_railway_station]
 ];
-city_bus_5_holiday_time_return = [["06:15",8,0],["6:40",8,0],["7:00",8,0],["7:20",9,0,[8,[7,-2]]],
-["7:40",8,0],["8:10",8,0,['生',[6,-5]]],["8:45",[8]],["9:05",8,0],["9:35",8,0],
-["9:55",9,0,[8,[7,-2]]],["10:20",8,0],["10:35",8,0,['L']],["10:50",9,0,[8,[7,-2]]],["11:20",8,0,['L']],
-["11:55",8,0,['生',[6,-5]]],["12:05",[8]],["12:30",8,0],["13:00",9,0,[8,[7,-2]]],["13:15",8,0],["13:40",9,0,[8,[7,-2]]],
-["14:20",8,0,['L']],["14:50",8,0,['L']],["15:25",8,0],["15:40",9,0,[8,[7,-2]]],
-["16:00",8,0],["16:20",8,0,['生',[6,-5]]],["16:45",8,0,['L']],["17:05",8,0,['生',[6,-5]]],["17:20",[8]],["17:50",8,0,['L']],
-["18:10",9,0,[8,[7,-2]]],["18:30",8,0],["19:00",8,0,['生',[6,-5]]],["19:30",8,0],["20:00",9,0,[8,[7,-2]]],["20:15",8,0,['L']],
-["20:40",8,0,['L']],["21:00",8,0,['L',[6,-5]]],["21:30",8,0,[[6,-5]]],["22:00",8,4]
+city_bus_5_holiday_time_return = [["06:15",stop_hospital,stop_start],["6:40",stop_hospital,stop_start],["7:00",stop_hospital,stop_start],["7:20",stop_airport,stop_start,[stop_hospital,[8,-2]]],
+["7:40",stop_hospital,stop_start],["8:10",stop_hospital,stop_start,['生',[7,-5]]],["8:45",[stop_hospital]],["9:05",stop_hospital,stop_start],["9:35",stop_hospital,stop_start],
+["9:55",stop_airport,stop_start,[stop_hospital,[7,-2]]],["10:20",stop_hospital,stop_start],["10:35",stop_hospital,stop_start,['L']],["10:50",stop_airport,stop_start,[stop_hospital,[8,-2]]],["11:20",stop_hospital,stop_start,['L']],
+["11:55",stop_hospital,stop_start,['生',[7,-5]]],["12:05",[stop_hospital]],["12:30",stop_hospital,stop_start],["13:00",stop_airport,stop_start,[stop_hospital,[8,-2]]],["13:15",stop_hospital,stop_start],["13:40",stop_airport,stop_start,[stop_hospital,[8,-2]]],
+["14:20",stop_hospital,stop_start,['L']],["14:50",stop_hospital,stop_start,['L']],["15:25",stop_hospital,stop_start],["15:40",stop_airport,stop_start,[stop_hospital,[8,-2]]],
+["16:00",stop_hospital,stop_start],["16:20",stop_hospital,stop_start,['生',[7,-5]]],["16:45",stop_hospital,stop_start,['L']],["17:05",stop_hospital,stop_start,['<font color="red">L</font>生',[7,-5]]],["17:20",[stop_hospital]],["17:50",stop_hospital,stop_start,['L']],
+["18:10",stop_airport,stop_start,[stop_hospital,[8,-2]]],["18:30",stop_hospital,stop_start],["19:00",stop_hospital,stop_start,['生',[7,-5]]],["19:30",stop_hospital,stop_start],["20:00",stop_airport,stop_start,[stop_hospital,[8,-2]]],["20:15",stop_hospital,stop_start,['L']],
+["20:40",stop_hospital,stop_start,['L']],["21:00",stop_hospital,stop_start,['L',[7,-5]]],["21:30",stop_hospital,stop_start,[[7,-5]]],["22:00",stop_hospital,stop_tainan_railway_station]
 ];
