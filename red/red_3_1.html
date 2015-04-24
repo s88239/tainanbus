@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '紅3-1';
+	route_name_en = 'Red 3-1';
+	route_file_name = 'red_3_1';
+	route_type = 'red';
+	route_interval = ['保安轉運站','臺南航空站'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'興南客運','假日30分鐘一班','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1603&locale=zh_TW');
+	block_fare(0, null);
+	block_time_schedule('保安轉運站','臺南航空站','<font color="blue">保安轉運站始發，繞行一圈返回。返程台南航空站為預估到達時間</font><h1><font color="red">僅假日行駛</font></h1>');
+	block_transfer(transfer_baoan_railway_station);
+	block_copyright();
+</script>
+</body>
+</html>

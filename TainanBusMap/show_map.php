@@ -29,6 +29,7 @@
 			break;
 		case 'red':
 			$ch_name = (count($str_sec)==1)?'紅幹線':'紅'.$str_sec[1];
+			if(count($str_sec)>2) $branch_flag = true;
 			break;
 		case 'brown':
 			$ch_name = (count($str_sec)==1)?'棕幹線':'棕'.$str_sec[1];

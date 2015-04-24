@@ -46,6 +46,7 @@ link_red = '<a href="../red/red.html" target="_blank">紅幹線</a>';
 link_red_1 = '<a href="../red/red_1.html" target="_blank">紅1</a>';
 link_red_2 = '<a href="../red/red_2.html" target="_blank">紅2</a>';
 link_red_3 = '<a href="../red/red_3.html" target="_blank">紅3</a>';
+link_red_3_1 = '<a href="../red/red_3_1.html" target="_blank">紅3-1</a>';
 link_red_4 = '<a href="../red/red_4.html" target="_blank">紅4</a>';
 link_red_10 = '<a href="../red/red_10.html" target="_blank">紅10</a>';
 link_red_11 = '<a href="../red/red_11.html" target="_blank">紅11</a>';
@@ -449,7 +450,7 @@ transfer_baoan_railway_station = '<tr><th rowspan="2">保安轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵保安站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
-	<td id="red">' + link_red_3 + '、' + link_red_4 + '</td></tr>';
+	<td id="red">' + link_red_3 + '、' + link_red_3_1 + '、' + link_red_4 + '</td></tr>';
 
 transfer_rende_railway_station = '<tr><th rowspan="2">保安工業區</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
