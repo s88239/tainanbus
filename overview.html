@@ -84,7 +84,6 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('brown_2', '棕2')
 		+ get_button_string('brown_3', '棕3')
 		+ get_button_string('brown_3_1', '棕3-1')
-		+ get_button_string('highway_bus_7229', '7229')
 		+ get_button_string('highway_bus_7407', '7407')
 		+ get_button_string('highway_bus_7408', '7408')
 		+ get_button_string('highway_bus_7410', '7410');
@@ -211,10 +210,12 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('red_1', '紅1')
 		+ get_button_string('red_2', '紅2')
 		+ get_button_string('red_3', '紅3')
+		+ get_button_string('red_3_1', '紅3-1')
 		+ get_button_string('red_4', '紅4')
 		+ get_button_string('red_10', '紅10')
 		+ get_button_string('hsr_shuttle_h31', 'H31')
 		+ get_button_string('hsr_shuttle_h62', 'H62')
+		+ get_button_string('highway_bus_8039', '8039')
 		+ get_button_string('highway_bus_8042', '8042')
 		+ get_button_string('highway_bus_8046A', '8046A')
 		+ get_button_string('highway_bus_8046', '8046')
@@ -283,8 +284,7 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('orange_4', '橘4')
 		+ get_button_string('orange_5', '橘5')
 		+ get_button_string('orange_10', '橘10')
-		+ get_button_string('yellow_1', '黃1')
-		+ get_button_string('highway_bus_7229', '7229');
+		+ get_button_string('yellow_1', '黃1');
 		break;
 	case '下營':
 		div_string += get_button_string('yellow', '黃幹線')
@@ -297,8 +297,7 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('yellow_1', '黃1')
 		+ get_button_string('yellow_2', '黃2')
 		+ get_button_string('yellow_4', '黃4')
-		+ get_button_string('yellow_20', '黃20')
-		+ get_button_string('highway_bus_7229', '7229');
+		+ get_button_string('yellow_20', '黃20');
 		break;
 	case '柳營':
 		div_string += get_button_string('yellow', '黃幹線')
@@ -306,15 +305,13 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('yellow_2', '黃2')
 		+ get_button_string('yellow_3', '黃3')
 		+ get_button_string('yellow_4', '黃4')
-		+ get_button_string('yellow_5', '黃5')
-		+ get_button_string('highway_bus_7229', '7229');
+		+ get_button_string('yellow_5', '黃5');
 		break;
 	case '後壁':
 		div_string += get_button_string('yellow', '黃幹線')
 		+ get_button_string('yellow_6', '黃6')
 		+ get_button_string('yellow_9', '黃9')
-		+ get_button_string('yellow_10', '黃10')
-		+ get_button_string('highway_bus_7229', '7229');
+		+ get_button_string('yellow_10', '黃10');
 		break;
 	case '東山':
 		div_string += get_button_string('yellow_7', '黃7')
@@ -396,8 +393,7 @@ function get_transfer_info(bus_stop){
 	case '後壁火車站':
 		div_string += get_button_string('yellow_6', '黃6')
 		+ get_button_string('yellow_9', '黃9')
-		+ get_button_string('yellow_10', '黃10')
-		+ get_button_string('highway_bus_7229', '7229');
+		+ get_button_string('yellow_10', '黃10');
 		break;
 	case '柳營火車站':
 		div_string += get_button_string('yellow', '黃幹線')
@@ -440,7 +436,8 @@ function get_transfer_info(bus_stop){
 	case '保安火車站':
 		div_string += get_button_string('red_3', '紅3')
 		+ get_button_string('red_3_1', '紅3-1')
-		+ get_button_string('red_4', '紅4');
+		+ get_button_string('red_4', '紅4')
+		+ get_button_string('highway_bus_8039', '8039');
 		break;
 	case '仁德火車站':
 		div_string += get_button_string('red_4', '紅4');
@@ -541,7 +538,7 @@ function get_transfer_info(bus_stop){
   <td rowspan="2"><img src="img/tainan_bus_overview.png" alt="臺南市鐵路及公車路線總圖" height="600" usemap="#tainan_map"></td>
  </tr>
  <tr>
-  <td><div id="transfer_info" style="text-align:center; color: blue; width: 430px; height: 520px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"><h1>請點擊右方地圖查詢路線</h1>
+  <td><div id="transfer_info" style="text-align:center; color: blue; width: 450px; height: 520px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"><h1>請點擊右方地圖查詢路線</h1>
   <font color="red">目前憑電子票證搭乘大臺南幹支線公車享8公里免費，大臺南公車2小時內轉乘再優惠9元，台鐵轉公車亦享單向轉乘優惠9元，歡迎多加利用。
   </font>
   </div></td>
