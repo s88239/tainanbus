@@ -91,9 +91,9 @@ yellow_14_1_route = '白河 ─ 甘宅 ─ 內角';
 yellow_15_route = '白河 ─ 詔安厝';
 yellow_20_route = '麻豆 ─ 下營 ─ 林鳳營火車站';
 
-city_bus_0_route = '臺南火車站 ─ 臺南火車站';
+city_bus_0_route = '臺南火車站 ─ 體育公園 ─ 臺南火車站';
 city_bus_1_route = '臺南火車站 ─ 茄萣 ─ 興達港';
-city_bus_2_route = '崑山科大 ─ 安平';
+city_bus_2_route = '崑山科大 ─ 安平 ─ 四草、三鯤鯓';
 city_bus_3_route = '海東國小 ─ 竹篙厝';
 city_bus_5_route = '桂田酒店 ─ 市立醫院、大甲里';
 city_bus_6_route = '裕聖里 ─ 新興國宅';
@@ -104,7 +104,7 @@ city_bus_11_route = '大成路口 ─ 城西里';
 city_bus_14_route = '臺南火車站 ─ 億載金城';
 city_bus_15_route = '奇美醫院 ─ 大成國中';
 city_bus_18_route = '臺南站 ─ 塭南里 ─ 臺灣歷史博物館';
-city_bus_19_route = '安平 ─ 大灣';
+city_bus_19_route = '安平原住民文化會館 ─ 大灣高中';
 city_bus_20_route = '南紡夢時代 ─ 崑山科大 ─ 安南醫院';
 city_bus_21_route = '臺南火車站 ─ 鹽行 ─ 永康工業區';
 
