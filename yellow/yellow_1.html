@@ -7,7 +7,7 @@
 	route_name_en = 'Yellow 1';
 	route_file_name = 'yellow_1';
 	route_type = 'yellow';
-	route_interval = ['新營','柳營','六甲'];
+	route_interval = ['新營','六甲','南藝大'];
 </script>
 <script src="../tools/web_model.js"></script>
 <script type="text/javascript">
@@ -20,8 +20,8 @@
 	block_route_map(null);
 	block_route_info(route_interval,'新營客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1501&locale=zh_TW');
 	block_fare(0, null);
-	block_time_schedule('新營','六甲','');
-	block_transfer(transfer_hsinyin + transfer_linfengying_railway_station + transfer_liujia);
+	block_time_schedule('新營','六甲/南藝大','');
+	block_transfer(transfer_hsinyin + transfer_linfengying_railway_station + transfer_liujia + transfer_wushantou_reservoir + transfer_tainan_arts_university);
 	block_copyright();
 </script>
 </body>

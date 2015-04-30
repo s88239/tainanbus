@@ -31,8 +31,8 @@ yellow_4_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_4_main_stop_name = ["新營","小腳腿","山仔腳","二重溪","果毅後<br />廟前","六甲"];
-yellow_4_main_stop_time_consume = [0, 15, 23, 28, 35, 45];
-yellow_4_important_stop = [0, 5]; // 新營, 六甲
-yellow_4_time_go = [["06:40"],["10:00"],["14:00"],["16:15"],["18:20"]];
-yellow_4_time_return = [["05:50"],["07:35"],["11:05"],["15:05"],["17:20"]];
+yellow_4_main_stop_name = ["新營","法主官<br />(五軍營)","小腳腿","山仔腳","二重溪","果毅後<br />廟前","六甲"];
+yellow_4_main_stop_time_consume = [0, 13, 20, 28, 33, 40, 50];
+yellow_4_important_stop = [0, 2, 6]; // 新營, 小腳腿", 六甲
+yellow_4_time_go = [["06:40"],["10:10"],["14:00"],["16:15"],["18:20"]];
+yellow_4_time_return = [["05:50"],["07:40"],["11:05"],["14:55"],["17:15"]];
