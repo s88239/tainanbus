@@ -80,7 +80,7 @@ function block_route_map(announce_str){
 		</div>\
 		<img src="../route/' + route_type + '/' + route_file_name + '.jpg">');
 
-	important_msg = '<p>1. 2015.05.01起，實施「前門上車、後門下車」措施，且<font color="blue">上下車皆須刷卡</font>(無論段次、里程計費)，請遵守新規定，以免遭鎖卡。</p><p>2. 2015.05.01(星期五)為國定假日，僅適用勞工休假，故當天採用平常日時間表營運。</p>';
+	important_msg = '<p>2015.05.01起，實施「前門上車、後門下車」措施，且<font color="blue">上下車皆須刷卡</font>(無論段次、里程計費)，請遵守新規定，以免遭鎖卡。</p>';
 	if(announce_str!=null) Announcement(important_msg+announce_str); // have something news to announce
 	else Announcement(important_msg);
 
