@@ -1,21 +1,7 @@
 function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // print the fare menu
-	switch(color_name){
-		case 'green':
-		case 'blue':
-		case 'orange':
-			max_color_num = 6;
-			break;
-		case 'red':
-		case 'yellow':
-			max_color_num = 4;
-			break;
-		case 'brown':
-			max_color_num = 5;
-			break;
-		default:
-			color_name = 'blue';
-			max_color_num = 6;
-			break;
+	var max_color_num = 4;
+	if(color_name=='highway_bus'){
+		color_name = 'blue';
 	}
 	var menu_name = ['from','to'];
 	document.write('<form name="fare_menu">');
