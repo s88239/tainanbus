@@ -20,7 +20,7 @@
 	block_route_map(null);
 	block_route_info(route_interval,'興南客運','尖15離30','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1600&locale=zh_TW');
 	block_fare(0, null);
-	block_time_schedule('安平工業區','關廟/龍崎',L_message + '；<font color="red">「繞」</font>表示繞駛新豐高中');
+	block_time_schedule('安平工業區','關廟/龍崎',W_message + '；' + H_message + '<br />' + L_message + '；<font color="red">「繞」</font>表示繞駛新豐高中');
 	block_transfer(transfer_anping_industrial_zone + transfer_tainan_railway_station + transfer_guanmiao);
 	block_copyright();
 </script>
