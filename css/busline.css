@@ -1,14 +1,17 @@
-﻿a{
+﻿html { 
+  background: url("../img/tainan_river.jpg") no-repeat center bottom fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a{
 	text-decoration:none;
 }
 img {
 	border: 0px;
 }
 body{
- background-image:url("../img/tainan_river.jpg");
- background-repeat:no-repeat;  /*no-repeat in the background image*/
- background-attachment:fixed;  /*fix the position of the background image */
- background-position:center bottom; /*push the image on the left down side*/
  font-family: "微軟正黑體";
 }
 #bg_table{

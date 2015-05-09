@@ -1,9 +1,13 @@
-﻿body {
+﻿html { 
+	background: url("../img/background.jpg") no-repeat center top fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body {
 	margin-top: 10px;
 	font-family:"微軟正黑體";
-	background-repeat:no-repeat; /* no-repeat in the background image */
-	background-attachment:fixed; /* fix the position of the background image */
-	background-position:center top; /*push the image on the center top side*/
 }
 table{
     margin-left: auto;
