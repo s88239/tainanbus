@@ -5,7 +5,7 @@ brown_3_1_interval_stop = [
 ["紙廠"], // 紙廠
 ["太子宮郵局","太宮派出所","太南里"], // 太宮派出所
 ["五興里"], // 五興里
-["鐵線里"] // 鐵線里
+["舊廍里","鐵線里"] // 鐵線里
 ];
 brown_3_1_stop_time_consume = [0,2,4,6,8,9,9,10,11,11,14,16,18,18,20,23,25];
 brown_3_1_fare = [
@@ -19,8 +19,8 @@ brown_3_1_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-brown_3_1_main_stop_name = ["新營","台電公司","太宮<br />派出所","五興里","鐵線里"];
-brown_3_1_main_stop_time_consume = [0, 14, 18, 23, 25];
-brown_3_1_important_stop = [0, 4]; // 新營, 鐵線里
-brown_3_1_time_go = [["07:45"],["11:00"],["15:15"]];
-brown_3_1_time_return = [["08:15"],["11:30"],["15:45"]];
+brown_3_1_main_stop_name = ["新營","紙廠","太宮<br />派出所","五興里","舊廍里","鐵線里"];
+brown_3_1_main_stop_time_consume = [0, 16, 18, 23, 27, 35];
+brown_3_1_important_stop = [0, 5]; // 新營, 鐵線里
+brown_3_1_time_go = [["07:45"],["10:50"],["15:05"]];
+brown_3_1_time_return = [["08:25"],["11:30"],["15:45"]];
