@@ -7,7 +7,7 @@
 	route_name_en = 'No.1';
 	route_file_name = 'city_bus_1';
 	route_type = 'city_bus';
-	route_interval = ['臺南火車站','茄萣','興達港'];
+	route_interval = ['臺南火車站','茄萣'];
 	route_start_stop = '臺南火車站';
 	route_end_stop = '茄萣/興達港';
 </script>
@@ -21,9 +21,9 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'府城客運','尖10離30','二段票 分段點：威武廟','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10160&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
+	block_route_info(route_interval,'府城客運','尖10~15離30','二段票 分段點：威武廟','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10160&locale=zh_TW');
 	block_fare(2, null,'威武廟');
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], L_message);
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],'');
 	block_transfer(transfer_tainan_railway_station);
 	block_copyright();
 </script>
