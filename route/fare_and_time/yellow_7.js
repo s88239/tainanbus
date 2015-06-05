@@ -42,5 +42,9 @@ yellow_7_main_stop_time_consume = [0, 18, 28, 39, 45, 50, 70];
 yellow_7_important_stop = [0, 2, 5]; // 新營, 東山, 青山
 start_stop = 0; // 新營
 end_stop = 5; // 青山
-yellow_7_time_go = [["06:55"],["08:20",start_stop,end_stop,['繞']],["09:30",start_stop,end_stop],["10:40",['繞']],["11:50",start_stop,end_stop],["14:20"],["15:40",start_stop,end_stop],["16:30",start_stop,end_stop],["17:30",start_stop,end_stop,['繞']],["18:50",start_stop,end_stop]];
-yellow_7_time_return = [["05:50",end_stop,start_stop,['繞']],["08:10"],["09:15",end_stop,start_stop],["10:25",end_stop,start_stop,['繞']],["11:55"],["12:45",end_stop,start_stop,['繞']],["15:35"],["16:35",end_stop,start_stop],["17:25",end_stop,start_stop],["18:25",end_stop,start_stop]];
+yellow_7_time_go = [["06:55",start_stop,end_stop],["08:20",start_stop,end_stop,['繞']],["09:30",start_stop,end_stop],["10:40",start_stop,end_stop,['繞']],["11:50",start_stop,end_stop],["14:20",start_stop,end_stop],["15:40",start_stop,end_stop],["16:30",start_stop,end_stop],["17:30",start_stop,end_stop,['繞']],["18:50",start_stop,end_stop]];
+yellow_7_time_return = [["05:50",end_stop,start_stop,['繞']],["07:55",end_stop,start_stop],["09:15",end_stop,start_stop],["10:25",end_stop,start_stop,['繞']],["11:35",end_stop,start_stop],["12:45",end_stop,start_stop,['繞']],["15:15",end_stop,start_stop],["16:35",end_stop,start_stop],["17:25",end_stop,start_stop],["18:25",end_stop,start_stop]];
+
+// holiday schedule
+yellow_7_holiday_time_go = [["06:55"],["07:15"],["08:20",start_stop,end_stop,['繞']],["09:30",start_stop,end_stop],["10:40",['繞']],["11:50",start_stop,end_stop],["14:20"],["15:40",start_stop,end_stop],["16:30",start_stop,end_stop],["17:30",start_stop,end_stop,['繞']],["18:50",start_stop,end_stop]];
+yellow_7_holiday_time_return = [["05:50",end_stop,start_stop,['繞']],["08:10"],["08:30"],["09:15",end_stop,start_stop],["10:25",end_stop,start_stop,['繞']],["11:55"],["12:45",end_stop,start_stop,['繞']],["15:35"],["16:35",end_stop,start_stop],["17:25",end_stop,start_stop],["18:25",end_stop,start_stop]];

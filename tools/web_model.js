@@ -21,11 +21,11 @@ switch(route_type){
 		break;
 	case 'yellow':
 		fare_table_color = '#FDFF73';
-		time_schedule_title_color = 'orange';
+		time_schedule_title_color = '#888917';
 		break;
 	case 'orange':
 		fare_table_color = '#FFC991';
-		time_schedule_title_color = 'orange';
+		time_schedule_title_color = '#FA8000';
 		break;
 	default:
 		fare_table_color = '#FFFFFF';
