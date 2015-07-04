@@ -150,7 +150,8 @@ transfer_tainan_railway_station = '<tr><th rowspan="8">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '、' + link_highway_bus_8050 + '</td></tr>';
+	<td id="tour_bus"><p>' + link_highway_bus_8039 + '、' + link_highway_bus_8046 + '、' + link_highway_bus_8050 + '</p>'
+	+ link_highway_bus_8046A + '</td></tr>';
 
 transfer_kun_shan_university = '<tr><th rowspan="2">崑山科技大學</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
@@ -447,13 +448,11 @@ transfer_beimen = '<tr><th rowspan="2">北門</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_7702 + '</td></tr>';
 
-transfer_baoan_railway_station = '<tr><th rowspan="3">保安轉運站</th>\
+transfer_baoan_railway_station = '<tr><th rowspan="2">保安轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵保安站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
-	<td id="red">' + link_red_3 + '、' + link_red_3_1 + '、' + link_red_4 + '</td></tr>\
-<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_highway_bus_8039 + '</td></tr>';
+	<td id="red">' + link_red_3 + '、' + link_red_3_1 + '、' + link_red_4 + '</td></tr>';
 
 transfer_rende_railway_station = '<tr><th rowspan="2">保安工業區</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\

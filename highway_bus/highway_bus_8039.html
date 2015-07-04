@@ -7,9 +7,9 @@
 	route_name_en = 'No.8039';
 	route_file_name = 'highway_bus_8039';
 	route_type = 'highway_bus';
-	route_interval = ['保安轉運站','興達港'];
-	route_start_stop = '保安轉運站';
-	route_end_stop = '興達遠洋漁港/興達港觀光漁市';
+	route_interval = ['臺南火車站','太爺','興達遠洋漁港'];
+	route_start_stop = '臺南火車站';
+	route_end_stop = '興達遠洋漁港';
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -44,8 +44,8 @@
 		</div>\
 	</div>\
 </div>');
-	block_time_schedule(route_start_stop,route_end_stop,'<h2><font color="red">僅「假日」延駛至興達港觀光漁市</font></h2>');
-	block_transfer(transfer_baoan_railway_station);
+	block_time_schedule(route_start_stop,route_end_stop,'');
+	block_transfer(transfer_tainan_railway_station);
 	block_copyright();
 </script>
 </body>
