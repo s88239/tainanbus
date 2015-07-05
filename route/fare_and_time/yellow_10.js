@@ -33,9 +33,9 @@ yellow_10_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_10_main_stop_name = ["泰安宮","後壁<br />火車站","顯濟宮","白河國中","白河","大林","台影<br />文化城","六重溪","鎮安宮"];
-yellow_10_main_stop_time_consume = [0, 5, 12, 20, 25, 33, 40, 45, 50];
-yellow_10_important_stop = [0, 1, 4, 6, 7]; // 泰安宮, 後壁火車站, 白河, 台影文化城, 六重溪
+yellow_10_main_stop_name = ["泰安宮","後壁<br />火車站","土溝里","白河國中","白河","大林","台影<br />文化城","六重溪","鎮安宮"];
+yellow_10_main_stop_time_consume = [0, 5, 13, 20, 25, 33, 40, 45, 50];
+yellow_10_important_stop = [1, 4, 6]; // 後壁火車站, 白河, 台影文化城
 skip_stop = 3; // 白河國中
 stop_1 = 4; // 白河
 end_stop = 8; // 鎮安宮

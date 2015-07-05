@@ -80,6 +80,7 @@ link_yellow_3 = '<a href="../yellow/yellow_3.html" target="_blank">黃3</a>';
 link_yellow_4 = '<a href="../yellow/yellow_4.html" target="_blank">黃4</a>';
 link_yellow_5 = '<a href="../yellow/yellow_5.html" target="_blank">黃5</a>';
 link_yellow_6 = '<a href="../yellow/yellow_6.html" target="_blank">黃6</a>';
+link_yellow_6_1 = '<a href="../yellow/yellow_6_1.html" target="_blank">黃6-1</a>';
 link_yellow_7 = '<a href="../yellow/yellow_7.html" target="_blank">黃7</a>';
 link_yellow_9 = '<a href="../yellow/yellow_9.html" target="_blank">黃9</a>';
 link_yellow_10 = '<a href="../yellow/yellow_10.html" target="_blank">黃10</a>';
@@ -384,7 +385,7 @@ transfer_hsinyin = '<tr><th rowspan="4">新營</th>\
 	<td id="brown">' + link_brown + '、' + link_brown_1 + '、' + link_brown_2 + '、' + link_brown_3 + '、' + link_brown_3_1 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_1 + '、' + link_yellow_2 + '、' + link_yellow_3 + '、' + link_yellow_4 + '、</p>'
-	+  link_yellow_5 + '、' + link_yellow_6 + '、' + link_yellow_7 + '、' + link_yellow_9 + '</td></tr>\
+	+  link_yellow_5 + '、' + link_yellow_6 + '、' + link_yellow_6_1 + '、' + link_yellow_7 + '、' + link_yellow_9 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7229 + '、' + link_highway_bus_7407 + '、' + link_highway_bus_7408 + '、' + link_highway_bus_7410 + '</td></tr>';
 
@@ -424,7 +425,13 @@ transfer_houbi_railway_station = '<tr><th rowspan="3">後壁火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_9 + '、' + link_yellow_10 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_highway_bus_7229 + '</td></tr>';;
+	<td id="tour_bus">' + link_highway_bus_7229 + '</td></tr>';
+
+transfer_houbi_district_office = '<tr><th rowspan="2">後壁區公所</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
+	<td><font color="#00AAFF">台鐵後壁站</font></td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
+	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_6_1 + '</td></tr>';
 
 transfer_guanziling = '<tr><th rowspan="2">關子嶺</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
