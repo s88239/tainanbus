@@ -1,7 +1,7 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_6_main_stop_name = ["裕聖里","虎尾寮<br />重劃區","後甲<br />圓環","東門<br />國宅","臺南<br />一中","臺南<br />火車站","延平<br />郡王祠","永華<br />市政中心","鹽埕<br />國宅","新興<br />國宅","下鯤鯓"];
+city_bus_6_main_stop_name = ["裕聖里","虎尾寮<br />重劃區","後甲<br />圓環","東門<br />國宅","臺南<br />一中","臺南<br />火車站","延平<br />郡王祠","永華<br />市政中心","鹽埕<br />國宅","新興<br />國宅","龍崗<br />國小"];
 city_bus_6_main_stop_time_consume = [0, 2, 10, 20, 27, 32, 38, 47, 57, 62, 67];
 city_bus_6_important_stop = [0, 2, 5, 7]; // 裕聖里, 後甲圓環, 臺南火車站, 永華市政中心
 city_bus_6_time_go = [["06:00",0,9,['W',[3,-2]]],["06:18",['義']],["06:43",0,9,['義',[5,5]]],["06:58",0,9,['W']],

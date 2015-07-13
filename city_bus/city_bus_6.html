@@ -20,8 +20,9 @@
 	block_route_map(null);
 	block_route_info(route_interval,'府城客運','尖10~20離30','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10165&locale=zh_TW');
 	block_fare(1, null);
-	block_time_schedule('裕聖里','新興國宅/下鯤鯓',W_message + '；' + H_message + '</h3><br />\
-		<h3><font color="#000055">「義」表示經裕義路、南聖公園至裕聖里；「後」表示繞經後甲國中、大鵬新城</font>');
+	block_time_schedule('裕聖里','新興國宅/四鯤鯓',W_message + '；' + H_message + '</h3><br />\
+		<h3>「<font color="red">義</font>」表示繞經裕義路、南聖公園；</h3>\
+		<h3>「<font color="blue">後</font>」表示繞經後甲國中、大鵬新城');
 	block_transfer(transfer_tainan_railway_station);
 	block_copyright();
 </script>
