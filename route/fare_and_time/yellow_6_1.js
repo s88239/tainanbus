@@ -26,8 +26,8 @@ yellow_6_1_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_6_1_main_stop_name = ["新營","菁寮","後壁<br />區公所","土溝<br />代天府"];
-yellow_6_1_main_stop_time_consume = [0, 20, 32, 40];
+yellow_6_1_main_stop_name = ["新營","電力公司","菁寮","後壁<br />區公所","永安國小","土溝<br />代天府"];
+yellow_6_1_main_stop_time_consume = [0, 6, 20, 28, 35, 40];
 yellow_6_1_important_stop = [0, 3]; // 新營, 土溝
 yellow_6_1_time_go = [["08:00"],["08:30"],["09:50"],["10:20"],["12:30"],["13:30"],["14:20"],["15:30"],["16:20"],["17:20"]];
 yellow_6_1_time_return = [["08:50"],["09:20"],["10:40"],["11:10"],["13:20"],["14:20"],["15:10"],["16:20"],["17:10"],["18:10"]];
