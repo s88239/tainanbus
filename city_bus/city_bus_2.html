@@ -23,7 +23,7 @@
 	block_route_map(null);
 	block_route_info(route_interval,'府城客運','尖15離20~40','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10162&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(1, null);
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], L_message+'<p>四草發車班次寒署假不延駛，改由白鷺灣社區發車</p>');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], L_message+'<p><font color="blue">四草發車班次寒暑假不延駛，改由白鷺灣社區發車</font></p>');
 	block_transfer(transfer_kun_shan_university + transfer_tainan_railway_station);
 	block_copyright();
 </script>
