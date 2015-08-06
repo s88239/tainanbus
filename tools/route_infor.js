@@ -109,6 +109,7 @@ city_bus_19_route = '安平原住民文化會館 ─ 大灣高中';
 city_bus_20_route = '南紡夢時代 ─ 崑山科大 ─ 安南醫院';
 city_bus_21_route = '臺南火車站 ─ 鹽行 ─ 永康工業區';
 
+tour_bus_66_route = '新營 ─ 烏山頭水庫 ─ 關子嶺 ─ 新營　<div class="sub_title">關子嶺烏山頭線</div>';
 tour_bus_88_route = '臺南公園 ─ 觀夕平台　<div class="sub_title">安平線</div>';
 tour_bus_99_route = '臺南公園 ─ 四草 ─ 七股鹽山　<div class="sub_title">台江線</div>';
 tour_bus_7702_route = '嘉義轉運站 ─ 北門遊客中心　<div class="sub_title">鹽鄉濱海線</div>';

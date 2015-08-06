@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '66關子嶺烏山頭線';
+	route_name_en = 'No.66';
+	route_file_name = 'tour_bus_66';
+	route_type = 'tour_bus';
+	route_interval = ['新營','烏山頭水庫'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	title_name = '台灣好行';
+	title_name_en = 'Taiwan Tourist Shuttle';
+	map_display = false;
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map('<h2>104年8月1日「關子嶺烏山頭線」開通，八月份本路線全線免費搭乘。</h2>');
+	document.write('<div id="wrapper2">\
+	<a name="info"></a>\
+	<div id="routeinfo" class="container">\
+		<div class="title">\
+			<h2>台灣好行 ─ ' + route_name + ' 路線資訊</h2>\
+			<span class="byline">Tainan Bus ' + route_name_en + ', Route Information</span>\
+		</div>\
+		<div class="content">\
+			<table border="0">\
+				<tr>\
+					<td>起迄點</td>\
+					<td>新營 ─ 烏山頭水庫 ─ 關子嶺 ─ 新營</td>\
+				</tr>\
+				<tr>\
+					<td>營運公司</td>\
+					<td>新營客運</td>\
+				</tr>\
+				<tr>\
+					<td>首／末班車發車時刻</td>\
+					<td>\
+						往 新營站(環狀單向)：'+tour_bus_66_time_go[0][0]+'／'+tour_bus_66_time_go[tour_bus_66_time_go.length-1][0] +
+					'</td>\
+				</tr>\
+				<tr>\
+					<td>班距</td>\
+					<td>固定班次 1小時1班</td>\
+				</tr>\
+				<tr>\
+					<td>收費方式</td>\
+					<td>里程計費</td>\
+				</tr>\
+			</table>\
+			<p>　</p>\
+			<a href="http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=6066&locale=zh_TW" class="button">公車動態資訊</a>\
+		</div>\
+	</div>\
+</div>');
+	block_fare(0, '<h1>八月份免費搭乘</h1>');
+	document.write('<div id="timetable">\
+	<a name="time"></a>\
+	<div class="title">\
+		<h2>台灣好行 ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
+	</div>\
+	<div class="content">\
+		<h2><font color="red">新營-&gt;烏山頭水庫-&gt;關子嶺-&gt;新營</font></h2>'
+	+ create_time_schedule(tour_bus_66_main_stop_name, tour_bus_66_main_stop_time_consume, tour_bus_66_important_stop, tour_bus_66_time_go, false)
+	+ TimeScheduleMSG + '</div>\
+</div>');
+	block_transfer(transfer_hsinyin+transfer_wushantou_reservoir+transfer_guanziling);
+	block_copyright();
+</script>
+</body>
+</html>
