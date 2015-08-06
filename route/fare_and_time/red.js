@@ -29,23 +29,21 @@ start_stop = 0;
 stop_1 = 2; // 臺南火車站
 stop_2 = 4; // 歸仁公所
 stop_3 = 5; // 關廟
-red_time_go = [["05:30",start_stop,stop_2,['W']],["05:45",start_stop,stop_3],["06:00",start_stop,stop_3,['繞',[stop_3,5]]],
-["06:30",['L']],["06:35",start_stop,stop_1,['H']],["07:00"],["07:15",start_stop,stop_3],["07:30",start_stop,stop_1,['W']],
-["07:30",start_stop,stop_3],["08:00"],["08:30",start_stop,stop_3],["09:00"],["09:30",start_stop,stop_3,['L']],["10:00"],
-["10:30",start_stop,stop_3],["11:00"],["11:30",start_stop,stop_3],["12:00"],["12:15",start_stop,stop_3],
-["12:30",start_stop,stop_3],["13:00",['L']],["13:30",start_stop,stop_3],["14:00"],["14:30",start_stop,stop_3],["15:00"],
-["15:30",start_stop,stop_3],["15:45",start_stop,stop_3],["16:00"],["16:15",start_stop,stop_3],["16:45",start_stop,stop_3,['L']],
-["17:00"],["17:15",start_stop,stop_3],["17:30",start_stop,stop_3],["17:45",start_stop,stop_3],["18:00"],["18:30",start_stop,stop_3],
-["19:00"],["19:30",start_stop,stop_3],["20:00"],["20:30",start_stop,stop_3],["21:00",start_stop,stop_3],["21:15",start_stop,stop_3],
-["21:30"],["22:00",start_stop,stop_3]
+red_time_go = [["05:45",start_stop,stop_3],["06:00",start_stop,stop_3,['繞',[stop_3,5]]],["06:30"],["07:00"],
+["07:15",start_stop,stop_3],["07:30",start_stop,stop_3],["08:00"],["08:30",start_stop,stop_3],["09:00"],
+["09:30",start_stop,stop_3],["10:00"],["10:30",start_stop,stop_3],["11:00"],["11:30",start_stop,stop_3],["12:00"],
+["12:15",start_stop,stop_3],["12:30",start_stop,stop_3],["13:00"],["13:30",start_stop,stop_3],["14:00"],
+["14:30",start_stop,stop_3],["15:00"],["15:30",start_stop,stop_3],["15:45",start_stop,stop_3],["16:00"],
+["16:15",start_stop,stop_3],["16:45",start_stop,stop_3],["17:00"],["17:15",start_stop,stop_3],["17:30",start_stop,stop_3],
+["17:45",start_stop,stop_3],["18:00"],["18:30",start_stop,stop_3],["19:00"],["19:30",start_stop,stop_3],["20:00"],
+["20:30",start_stop,stop_3],["21:00",start_stop,stop_3],["21:15",start_stop,stop_3],["21:30"],["22:00",start_stop,stop_3]
 ];
-red_time_return = [["05:50"],["06:10",stop_3,start_stop],["06:25",stop_2,start_stop,['W']],["06:20",stop_3,start_stop],["06:20"],
-["06:40",stop_3,start_stop],["06:50",stop_3,start_stop],["06:50"],["07:30",stop_3,start_stop],["07:50",['L']],
-["08:30",stop_3,start_stop],["08:50"],["09:30",stop_3,start_stop],["09:50"],["10:30",stop_3,start_stop],["10:50"],
-["11:30",stop_3,start_stop,['L']],["11:50"],["12:15",stop_3,start_stop],["12:30",stop_3,start_stop],["12:50"],
-["13:30",stop_3,start_stop],["13:50"],["14:30",stop_3,start_stop],["14:50",['L']],["15:30",stop_3,start_stop],["15:50"],
-["16:30",stop_3,start_stop],["16:50",['繞',[stop_2,5]]],["17:15",stop_3,start_stop,['繞',[stop_2,5]]],["17:30",stop_3,start_stop],
-["17:45",stop_3,start_stop],["17:50"],["18:30",stop_3,start_stop,['L']],["19:25",stop_1,start_stop,['H']],["18:50"],
-["19:30",stop_3,start_stop],["19:50"],["20:45",stop_1,start_stop,['W']],["20:30",stop_3,start_stop],["20:45",stop_3,start_stop],
-["20:50"],["21:20"],["22:00",stop_3,start_stop]
+red_time_return = [["05:50"],["06:10",stop_3,start_stop],["06:20",stop_3,start_stop],["06:20"],["06:40",stop_3,start_stop],
+["06:50",stop_3,start_stop],["06:50"],["07:30",stop_3,start_stop],["07:50"],["08:30",stop_3,start_stop],["08:50"],
+["09:30",stop_3,start_stop],["09:50"],["10:30",stop_3,start_stop],["10:50"],["11:30",stop_3,start_stop],["11:50"],
+["12:15",stop_3,start_stop],["12:30",stop_3,start_stop],["12:50"],["13:30",stop_3,start_stop],["13:50"],
+["14:30",stop_3,start_stop],["14:50"],["15:30",stop_3,start_stop],["15:50"],["16:30",stop_3,start_stop],
+["16:50",['繞',[stop_2,5]]],["17:15",stop_3,start_stop,['繞',[stop_2,5]]],["17:30",stop_3,start_stop],
+["17:45",stop_3,start_stop],["17:50"],["18:30",stop_3,start_stop],["18:50"],["19:30",stop_3,start_stop],["19:50"],
+["20:30",stop_3,start_stop],["20:45",stop_3,start_stop],["20:50"],["21:20"],["22:00",stop_3,start_stop]
 ];
