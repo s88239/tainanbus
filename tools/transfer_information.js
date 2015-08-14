@@ -107,6 +107,7 @@ link_city_bus_10 = '<a href="../city_bus/city_bus_10.html" target="_blank">10</a
 link_city_bus_11 = '<a href="../city_bus/city_bus_11.html" target="_blank">11</a>';
 link_city_bus_14 = '<a href="../city_bus/city_bus_14.html" target="_blank">14</a>';
 link_city_bus_15 = '<a href="../city_bus/city_bus_15.html" target="_blank">15</a>';
+link_city_bus_17 = '<a href="../city_bus/city_bus_17.html" target="_blank">17</a>';
 link_city_bus_18 = '<a href="../city_bus/city_bus_18.html" target="_blank">18</a>';;
 link_city_bus_19 = '<a href="../city_bus/city_bus_19.html" target="_blank">19</a>';
 link_city_bus_20 = '<a href="../city_bus/city_bus_20.html" target="_blank">20</a>';
@@ -208,6 +209,14 @@ transfer_yongkang_railway_station = '<tr><th rowspan="4">永康火車站</th>\
 transfer_taiwan_history_museum = '<tr><th>臺灣歷史博物館</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus">' + link_city_bus_18 + '、' + link_city_bus_20 + '</td></tr>';
+
+transfer_aboriginal_culture_center = '<tr><th rowspan="3">原住民文化會館</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
+	<td id="city_bus">' + link_city_bus_17 + '、' + link_city_bus_19 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
+	<td id="hsr_shuttle">' + link_hsr_shuttle_h31 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
+	<td id="tour_bus">' + link_tour_bus_88 + '</td></tr>';
 
 transfer_jiali = '<tr><th rowspan="3">佳里</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\

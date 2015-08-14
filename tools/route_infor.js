@@ -104,6 +104,7 @@ city_bus_10_route = '臺南火車站 ─ 科工區 ─ 鹿耳門天后宮';
 city_bus_11_route = '大成路口 ─ 城西里';
 city_bus_14_route = '臺南火車站 ─ 億載金城';
 city_bus_15_route = '奇美醫院 ─ 大成國中';
+city_bus_17_route = '原住民文化會館 ─ 興達港觀光魚市';
 city_bus_18_route = '臺南站 ─ 塭南里 ─ 臺灣歷史博物館';
 city_bus_19_route = '安平原住民文化會館 ─ 大灣高中';
 city_bus_20_route = '南紡夢時代 ─ 崑山科大 ─ 安南醫院';

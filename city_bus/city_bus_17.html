@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '17路';
+	route_name_en = 'No.17';
+	route_file_name = 'city_bus_17';
+	route_type = 'city_bus';
+	route_interval = ['原住民文化會館','興達港觀光魚市'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'府城客運','每小時1班，僅假日行駛','二段票<br />分段點：「親水公園」及<br />「茄萣環保公園」之間','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10017&locale=zh_TW');
+	block_fare(2, null,'「親水公園」及「茄萣環保公園」之間');
+	block_time_schedule('原住民文化會館','興達港觀光魚市','<h1><font color="red">僅假日行駛</font></h1>');
+	block_transfer(transfer_aboriginal_culture_center);
+	block_copyright();
+</script>
+</body>
+</html>
