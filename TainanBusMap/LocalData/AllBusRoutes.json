@@ -4,14 +4,16 @@
 		"RouteName":"0左",
 		"RouteOSMRelation":4016613,
 		"RouteCode":10450,
-		"RouteCategory":1
+		"RouteCategory":1,
+		"OneWayRoute":true
 	},
 	{
 		"RouteCodeName":"0R",
 		"RouteName":"0右",
 		"RouteOSMRelation":4019261,
 		"RouteCode":10451,
-		"RouteCategory":1
+		"RouteCategory":1,
+		"OneWayRoute":true
 	},
 	{
 		"RouteCodeName":"city_bus_1",
@@ -91,6 +93,13 @@
 		"RouteCategory":1
 	},
 	{
+		"RouteCodeName":"city_bus_17",
+		"RouteName":"17路",
+		"RouteOSMRelation":5420056,
+		"RouteCode":10017,
+		"RouteCategory":1
+	},
+	{
 		"RouteCodeName":"city_bus_18",
 		"RouteName":"18路",
 		"RouteOSMRelation":3966183,
@@ -145,6 +154,14 @@
 		"RouteOSMRelation":4058217,
 		"RouteCode":1603,
 		"RouteCategory":2
+	},
+	{
+		"RouteCodeName":"red_3_1",
+		"RouteName":"奇美博物館假日公車(紅3-1)",
+		"RouteOSMRelation":5166423,
+		"RouteCode":1603,
+		"RouteCategory":2,
+		"OneWayRoute":true
 	},
 	{
 		"RouteCodeName":"red_4",
@@ -616,6 +633,13 @@
 		"RouteCategory":7
 	},
 	{
+		"RouteCodeName":"yellow_6_1",
+		"RouteName":"農村樂活公車(黃6-1)",
+		"RouteOSMRelation":5343182,
+		"RouteCode":1802,
+		"RouteCategory":7
+	},
+	{
 		"RouteCodeName":"yellow_7",
 		"RouteName":"黃7",
 		"RouteOSMRelation":4096828,
@@ -684,6 +708,14 @@
 		"RouteOSMRelation":4099165,
 		"RouteCode":10211,
 		"RouteCategory":8
+	},
+	{
+		"RouteCodeName":"tour_bus_66",
+		"RouteName":"66關子嶺線",
+		"RouteOSMRelation":5392668,
+		"RouteCode":6066,
+		"RouteCategory":8,
+		"OneWayRoute":true
 	},
 	{
 		"RouteCodeName":"tour_bus_99",

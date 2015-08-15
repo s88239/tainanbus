@@ -53,7 +53,9 @@
 			break;
 	}
 	if($branch_flag){
-		$route_name = $str_sec[0].'_'.$str_sec[1];
+		if( strcmp($route_name, 'yellow_6_1')!=0 && strcmp($route_name, 'red_3_1')!=0 ){ // y6-1 & r3-1 is independent map
+			$route_name = $str_sec[0].'_'.$str_sec[1]; // other branch is merged. e.g. y12-1 is contained in y12
+		}
 		if( strcmp($str_sec[2], 'guanziling')==0 ) $ch_name = '關子嶺假日公車';
 		else $ch_name = $ch_name.'-'.$str_sec[2];
 	}
