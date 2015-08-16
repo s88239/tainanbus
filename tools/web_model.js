@@ -80,17 +80,13 @@ function block_route_map(announce_str){
 		</div>\
 		<img src="../route/' + route_type + '/' + route_file_name + '.jpg">');
 
-	important_msg = '<p>2015.05.01起，實施「前門上車、後門下車」措施，且<font color="blue">上下車皆須刷卡</font>(無論段次、里程計費)，請遵守新規定，以免遭鎖卡。</p>';
-	if(announce_str!=null) Announcement(important_msg+announce_str); // have something news to announce
-	else Announcement(important_msg);
+	if(announce_str!=null) Announcement(announce_str); // have something news to announce
 
 	if(map_display){
 		document.write('<p></p><a href="../TainanBusMap/show_map.php?route=' + route_file_name + '" target="_blank">\
-			<img src="../img/google_map_logo.png"><br />\
-			<strong><font color="green">查詢路線地圖 By Kagami</font></strong>\
-		</a>');
+			<img src="../img/map_query_logo.png"></a>');
 	}
-	document.write('<p></p></div>\
+	document.write('</div>\
 </div>');
 }
 
