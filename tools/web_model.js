@@ -277,8 +277,8 @@ function block_multiple_time_schedule(type_list, message){
 	</div>\
 	<div class="content">');
 	create_multiple_time_schedule(type_list);
-	document.write('<br /><div id="time_schedule_panel" name="time_schedule_panel">'+ show_time_schedule('normal')+'</div>\
-		<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
+	document.write('<br /><div id="time_schedule_panel" name="time_schedule_panel">'+ show_time_schedule(type_list[0][1])+'</div>' // show the first type of time schedule
+	+ '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
 	</div>');
 	window.onload = function() { // solve the bug for refreshing input raidio still checked with previous action
 		document.getElementById('multiple_type').reset();
