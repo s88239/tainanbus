@@ -84,7 +84,7 @@ function block_route_map(announce_str){
 
 	if(map_display){
 		document.write('<p></p><a href="../TainanBusMap/show_map.php?route=' + route_file_name + '" target="_blank">\
-			<img src="../img/map_query_logo.png"></a>');
+			<img src="../img/map_query_logo.png" alt="' + route_name + '地圖查詢" title="' + route_name + '地圖查詢"></a>');
 	}
 	document.write('</div>\
 </div>');
