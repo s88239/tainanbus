@@ -340,7 +340,7 @@ transfer_hsr_chiayi_station = '<tr><th rowspan="3">高鐵嘉義站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_7702 + '</td></tr>';
 
-transfer_madou = '<tr><th rowspan="2">果菜市場</th>\
+transfer_madou = '<tr><th rowspan="2">麻豆轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange + '、' + link_orange_10 + '、' + link_orange_11 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
