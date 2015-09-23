@@ -45,23 +45,23 @@ skip_stop_1 = 2; // 吉貝耍
 skip_stop_2 = 4; // 許秀才
 yellow_7_time_go = [["06:55",start_stop,end_stop,[skip_stop_1,skip_stop_2]],["08:20",start_stop,end_stop,[skip_stop_2]],
 ["09:30",start_stop,end_stop,[skip_stop_1,skip_stop_2]],["10:40",start_stop,end_stop,[skip_stop_2]],
-["11:50",start_stop,end_stop,[skip_stop_1,[skip_stop_2+1,8]]],["14:20",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
+["11:50",start_stop,end_stop,[skip_stop_1,[skip_stop_2+1,8]]],["12:50",start_stop,end_stop,[skip_stop_1,skip_stop_2]],["14:20",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
 ["15:40",start_stop,end_stop,[skip_stop_1,skip_stop_2]],["16:30",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
 ["17:30",start_stop,end_stop,[[skip_stop_2+1,8]]],["18:50",start_stop,end_stop,[skip_stop_1,skip_stop_2]]];
 yellow_7_time_return = [["05:50",end_stop,start_stop,[[skip_stop_2,8]]],["07:55",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
 ["09:15",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["10:25",end_stop,start_stop,[skip_stop_2]],
-["11:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["12:55",end_stop,start_stop,[skip_stop_2]],
+["11:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["12:55",end_stop,start_stop,[skip_stop_2]],["13:45",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
 ["15:15",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
 ["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["18:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]]];
 
 // holiday schedule
 yellow_7_holiday_time_go = [["06:55",[skip_stop_1,skip_stop_2]],["07:15",[skip_stop_1,skip_stop_2]],
 ["08:20",start_stop,end_stop,[skip_stop_2]],["09:30",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
-["10:40",[skip_stop_2]],["11:50",start_stop,end_stop,[skip_stop_1,[skip_stop_2+1,8]]],["14:20",[skip_stop_1,skip_stop_2]],
+["10:40",[skip_stop_2]],["11:50",start_stop,end_stop,[skip_stop_1,[skip_stop_2+1,8]]],["12:50",start_stop,end_stop,[skip_stop_1,skip_stop_2]],["14:20",[skip_stop_1,skip_stop_2]],
 ["15:40",start_stop,end_stop,[skip_stop_1,skip_stop_2]],["16:30",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
 ["17:30",start_stop,end_stop,[[skip_stop_2+1,8]]],["18:50",start_stop,end_stop,[skip_stop_1,skip_stop_2]]];
 yellow_7_holiday_time_return = [["05:50",end_stop,start_stop,[[skip_stop_2,8]]],["08:10",[skip_stop_1,skip_stop_2]],
 ["08:30",[skip_stop_1,skip_stop_2]],["09:15",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
 ["10:25",end_stop,start_stop,[skip_stop_2]],["11:55",[skip_stop_1,skip_stop_2]],["12:55",end_stop,start_stop,[skip_stop_2]],
-["15:35",[skip_stop_1,skip_stop_2]],["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
+["13:45",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["15:35",[skip_stop_1,skip_stop_2]],["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
 ["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["18:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]]];
