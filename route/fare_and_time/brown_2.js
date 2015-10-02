@@ -16,7 +16,7 @@ brown_2_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-brown_2_main_stop_name = ["新營","統聯客運","鹽水","洪水國小","下中"];
+brown_2_main_stop_name = ["新營","統聯客運","鹽水","汫水國小","下中"];
 brown_2_main_stop_time_consume = [0, 12, 22, 29, 30];
 brown_2_important_stop = [0, 2, 4]; // 新營, 鹽水, 下中
 var skip_stop = 3;
