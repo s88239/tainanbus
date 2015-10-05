@@ -7,7 +7,7 @@
 	route_name_en = 'No.7229';
 	route_file_name = 'highway_bus_7229';
 	route_type = 'highway_bus';
-	route_interval = ['嘉義','新營','新中'];
+	route_interval = ['嘉義','新營','柳營奇美醫院'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -20,10 +20,10 @@
 <body>
 <script type="text/javascript">
 	block_header();
-	block_route_map('目前「【7229】嘉義-新中」營運路線仍維持正常營運，因【7229】停駛案尚在審核、評估中，後續相關異動情形，將於核定後請嘉義客運公司另行公告。');
+	block_route_map(null);
 	block_route_info(route_interval,'嘉義客運','','里程計費','http://www.taiwanbus.tw/information.aspx?Line=1749&Lang=" target="_blank');
 	block_fare(10, null);
-	block_time_schedule('嘉義','新中','');
+	block_time_schedule('嘉義火車站','柳營奇美醫院','');
 	block_transfer(transfer_houbi_railway_station + transfer_hsinyin);
 	block_copyright();
 </script>
