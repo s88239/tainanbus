@@ -20,7 +20,8 @@ highway_bus_8035_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 highway_bus_8035_main_stop_name = ["南化","茄苳橋","內門","中埔頭","旗山北站","旗山轉運站"];
-highway_bus_8035_main_stop_time_consume = [0,10,30,35,45,50];
+highway_bus_8035_main_stop_time_consume = [0,10,30,35,40,45];
 highway_bus_8035_important_stop = [0, 2, 5]; // 南化, 內門, 旗山轉運站
-highway_bus_8035_time_go = [["06:35",2,5,['W']],["06:20"],["08:20"],["10:50"],["13:20"],["17:35"]];
-highway_bus_8035_time_return = [["07:30",['W']],["10:00"],["12:30"],["16:45"],["17:25"],["18:40"]];
+var start_stop = 2, end_stop = 5;
+highway_bus_8035_time_go = [["06:35",start_stop,end_stop,['S']],["06:45",start_stop,end_stop,['S']],["06:20"],["08:20"],["10:50"],["13:20"],["17:35"]];
+highway_bus_8035_time_return = [["06:30",end_stop,start_stop,['S']],["07:35",['S']],["10:05"],["12:35"],["16:50"],["17:30"],["18:45"]];

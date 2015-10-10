@@ -8,7 +8,7 @@
 	route_file_name = 'highway_bus_8035';
 	route_type = 'highway_bus';
 	route_interval = ['南化','內門','旗山'];
-	route_start_stop = '南化';
+	route_start_stop = '南化/內門';
 	route_end_stop = '旗山轉運站';
 </script>
 <link href="../css/radio_style.css" rel="stylesheet" />
@@ -26,7 +26,7 @@
 	block_route_map(null);
 	block_route_info(route_interval,'高雄客運','','里程計費','http://ibus.tbkc.gov.tw/bus/pda/businfo.aspx?Routeid=8035&GO_OR_BACK=2&Line=All&lang=Cht');
 	block_fare(20, null);
-	block_time_schedule(route_start_stop,route_end_stop,W_message);
+	block_time_schedule(route_start_stop,route_end_stop,S_message);
 	block_transfer(transfer_nanhua_district_office);
 	block_copyright();
 </script>

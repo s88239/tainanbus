@@ -5,6 +5,7 @@ TimeScheduleMSG = '<p><h2>除了起站為發車時間，其餘站點皆為預估
 W_message = '<font color="#0000FF">W</font>表示僅平日行駛';
 L_message = '<font color="#FF0000">L</font>表示低地板公車';
 H_message = '<font color="red">H</font>表示僅假日行駛';
+S_message = '<font color="green">S</font>表示僅上課日行駛，例假日、寒暑假停駛';
 copyrightMSG = '<p>Copyright (c) 2014 Tainan Bus for FUN. All rights reserved. | Contact with <a href="mailto:tainanbusforfun@outlook.com" rel="nofollow">administrator</a>.</p>';
 
 function Announcement(str){

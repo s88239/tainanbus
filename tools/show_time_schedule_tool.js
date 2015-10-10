@@ -111,6 +111,8 @@ function get_special_tag(arr){ // add some tags of special events
 			special_event += '<font color="#0000FF">W</font>';
 		else if(arr[j]=='L' || arr[j]=='H') // use low floor bus or only drive on holiday
 			special_event += '<font color="#FF0000">' + arr[j] + '</font>';
+		else if(arr[j]=='S') // drive in school day
+			special_event += '<font color="green">' + arr[j] + '</font>';
 		else if(Array.isArray(arr[j])==true) // have offset since some important stop
 			offset = arr[j];
 		else if( !isNaN(arr[j]) ) skip_stop_array[count++] = arr[j];

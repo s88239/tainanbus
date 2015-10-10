@@ -223,27 +223,36 @@ function block_fare(section_type, additional_message, section_point){
 				<tr>\
 					<td><b>投現</b></td>\
 					<td>');
-		if(section_type==2) document.write('30');
-		else document.write('36'); // doubling
+
+		//----- 二段票現金收費價格歧異 -----//
+		if( Math.floor(section_type/10)==0 ) document.write('30'); // section_type = 2。e.g. 1、10、11路
+		else document.write('36'); // section_type = 12、22，分別為17及99路
+
 		document.write('</td><td>18</td>\
 				</tr>\
 				<tr>\
 					<td><b>電子票證</b></td>\
-					<td>27</td><td>18</td>\
+					<td>');
+
+		//----- 二段票電子票證收費價格歧異 -----//
+		if( Math.floor(section_type/10)==1 ) document.write('36'); // section_type = 12。e.g. 17路
+		else document.write('27'); // section_type = 2、22，分別為1、10、11路及99路
+
+		document.write('</td><td>18</td>\
 				</tr>\
 			</table>');
 	}
 	document.write('<p>　</p>');
-	if(section_type==10 || section_type==20){
+	if(section_type==10 || section_type==20){ // section_type = 10 is highway bus; section_type = 20 is Kaohsiung City Bus
 		document.write('<h3><font color="red">本路線非大台南公車，無法享有八公里免費及轉乘優惠</font></h3>\
 			<h2>使用電子票證時，上下車皆須刷卡</h2><br />');
-		if(section_type==20) document.write('<h1>本路線使用一卡通收費最高上限為60元</h1>');
-		else document.write('<h3>本路線票價已採用2015.2.14最新公路總局公告之費率計算</h3>');
+		if(section_type==20) document.write('<h1>本路線使用一卡通收費最高上限為60元</h1>'); // Kaohsiung City Bus
+		else document.write('<h3>本路線票價已採用2015.2.14最新公路總局公告之費率計算</h3>'); // highway bus
 	}
 	else{
-		if(section_type==0) document.write(MeteredMSG);
-		else document.write(CitybusMSG);
-		document.write(PromotionMSG);
+		if(section_type==0) document.write(MeteredMSG); // Tainan Bus and charge by meter
+		else document.write(CitybusMSG); // Tainan Bus and charge by section
+		document.write(PromotionMSG); // print the promotion message of Tainan Bus
 	}
 	if(additional_message) document.write(additional_message); // print additional message
 	document.write('<p>　</p></div>\
