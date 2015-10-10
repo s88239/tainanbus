@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	route_name = '8039';
-	route_name_en = 'No.8039';
-	route_file_name = 'highway_bus_8039';
+	route_name = '239';
+	route_name_en = 'No.239';
+	route_file_name = 'highway_bus_239';
 	route_type = 'highway_bus';
 	route_interval = ['臺南火車站','太爺','興達遠洋漁港'];
 	route_start_stop = '臺南火車站';
@@ -13,8 +13,8 @@
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
-	title_name = '公路客運';
-	title_name_en = 'Highway Bus';
+	title_name = '高雄市公車';
+	title_name_en = 'Kaohsing City Bus';
 	map_display = false;
 	header_code();
 </script>
@@ -23,7 +23,7 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'高雄客運','','里程計費','http://122.146.229.210/bus/pda/businfo.aspx?Routeid=8039&GO_OR_BACK=2&Line=All&lang=Cht');
+	block_route_info(route_interval,'高雄客運','','里程計費','http://122.146.229.210/bus/pda/businfo.aspx?Routeid=239&GO_OR_BACK=2&Line=All&lang=Cht');
 	//block_fare(10, null);
 	document.write('<div id="wrapper3">\
 	<a name="fare"></a>\
@@ -33,14 +33,26 @@
 			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
 		</div>\
 		<div class="content">\
+			<h1>兩段票收費</h1>\
+			<h2><font color="#CC2102"><u>緩衝區：牛稠仔－湖內農會</u></font></h2>\
+			<h2><u>分段點：嘉南大學</u></h2><br />\
+			<table>\
+				<tr>\
+					<th></th>\
+					<th>二段票</th><th>一段票</th>\
+				</tr>\
+				<tr>\
+					<td><b>全票</b></td>\
+					<td>24</td><td>12</td>\
+				</tr>\
+				<tr>\
+					<td><b>半票</b></td>\
+					<td>12</td><td>6</td>\
+				</tr>\
+			</table>\
 			<p>&nbsp;</p>\
-			<h1><font color="red">尚無提供票價表</font></h1>\
-			<p>&nbsp;</p>\
-			<h1>使用一卡通收費最高上限為60元</h1>\
-			<p>&nbsp;</p><p>&nbsp;</p>\
-			<h2>使用電子票證時，上下車皆須刷卡</h2>\
-			<p> </p>\
-			<p>詳情請參閱高雄客運網站</p><p></p>\
+			<h3><font color="red">本路線非大台南公車，無法享有公車轉乘優惠</font></h3>\
+			<h3>本路線不適用當日刷卡第三次起免收費(當日二次吃到飽)方案</h3>\
 		</div>\
 	</div>\
 </div>');
