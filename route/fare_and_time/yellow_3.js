@@ -25,8 +25,8 @@ yellow_3_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 yellow_3_main_stop_name = ["新營","柳營","柳營<br />火車站","小腳腿","山仔腳","二重溪","果毅後<br />廟前"];
-yellow_3_main_stop_time_consume = [0, 9, 12, 21, 30, 35, 43];
+yellow_3_main_stop_time_consume = [0, 8, 10, 17, 25, 30, 38];
 yellow_3_important_stop = [0, 2, 6]; // 新營, 柳營火車站, 果毅後
 var skip_stop = 5; // 二重溪
-yellow_3_time_go = [["05:50"],["12:20"],["14:50",[skip_stop,[skip_stop+1,-4]]],["17:15"]];
-yellow_3_time_return = [["06:35"],["13:05"],["15:30",[skip_stop,[skip_stop-1,-4]]],["18:05"]];
+yellow_3_time_go = [["05:50",[[1,-2]]],["12:20"],["14:50",[skip_stop,[3,2,4,2,skip_stop+1,-5]]],["17:15",[[1,4,2,1,3,4,4,5,skip_stop,1]]]];
+yellow_3_time_return = [["06:30",[[3,4,1,2,0,4]]],["13:05"],["15:30",[skip_stop,[skip_stop-1,-5,3,2,1,2]]],["18:10",[[1,1,0,1]]]];

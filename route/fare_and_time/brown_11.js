@@ -19,5 +19,5 @@ brown_11_fare = [
 brown_11_main_stop_name = ["學甲","新芳里","頂洲"];
 brown_11_main_stop_time_consume = [0, 15, 20];
 brown_11_important_stop = [0, 2]; // 學甲, 頂洲
-brown_11_time_go = [["06:20"],["13:35"],["17:40"]];
-brown_11_time_return = [["06:40"],["13:55"],["18:00"]];
+brown_11_time_go = [["06:20"],["10:40"],["13:35"],["17:50"]];
+brown_11_time_return = [["06:40"],["11:00"],["13:55"],["18:10"]];
