@@ -31,5 +31,5 @@ yellow_1_main_stop_name = ["新營","柳營","龜子港<br />(省道)","林鳳�
 yellow_1_main_stop_time_consume = [0, 9, 15, 18, 30, 35, 45];
 yellow_1_important_stop = [0, 3, 4, 5, 6]; // 新營, 林鳳營火車站, 六甲, 烏山頭水庫, 臺南藝術大學
 var main_end_stop = 4; // 六甲
-yellow_1_time_go = [["06:00",0,main_end_stop],["06:55",0,main_end_stop],["08:30"],["09:30"],["12:20"],["13:00"],["15:00"],["17:00",0,main_end_stop],["18:15",0,main_end_stop]];
-yellow_1_time_return = [["06:35",main_end_stop,0],["07:30",main_end_stop,0],["09:20"],["10:20"],["13:10"],["13:50"],["15:50"],["17:40",main_end_stop,0],["18:50",main_end_stop,0]];
+yellow_1_time_go = [["06:00",0,main_end_stop],["06:55",0,main_end_stop],["08:30"],["09:30"],["12:20"],["13:00"],["15:00"],["17:10",0,main_end_stop],["18:25",0,main_end_stop]];
+yellow_1_time_return = [["06:35",main_end_stop,0],["07:30",main_end_stop,0],["09:20"],["10:20"],["13:10"],["13:50"],["15:50"],["17:50",main_end_stop,0],["19:00",main_end_stop,0]];
