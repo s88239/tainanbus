@@ -20,5 +20,5 @@ brown_2_main_stop_name = ["新營","統聯客運","鹽水","汫水國小","下�
 brown_2_main_stop_time_consume = [0, 12, 22, 29, 30];
 brown_2_important_stop = [0, 2, 4]; // 新營, 鹽水, 下中
 var skip_stop = 3;
-brown_2_time_go = [["07:50",[[skip_stop+1,14]]],["09:50",[[skip_stop+1,14]]],["13:50",[skip_stop]],["15:50",[skip_stop]]];
-brown_2_time_return = [["08:40",[[skip_stop,12,skip_stop-1,2]]],["10:40",[[skip_stop,12,skip_stop-1,2]]],["14:30",[skip_stop]],["16:30",[skip_stop]]];
+brown_2_time_go = [["07:50",[[skip_stop+1,14]]],["10:00",[[skip_stop+1,14]]],["13:50",[skip_stop]],["15:50",[skip_stop]]];
+brown_2_time_return = [["08:40",[[skip_stop,12,skip_stop-1,2]]],["10:50",[[skip_stop,12,skip_stop-1,2]]],["14:30",[skip_stop]],["16:30",[skip_stop]]];
