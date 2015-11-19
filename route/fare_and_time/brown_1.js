@@ -14,7 +14,6 @@ brown_1_interval_stop = [
 ["南鯤鯓","橋北"], // 南鯤鯓
 ["永春","雙春"] // 雙春
 ];
-brown_1_stop_time_consume = [0,2,4,5,6,7,8,11,12,13,15,16,18,19,20,21,23,25,27,27,28,30,32,33,35,36,41,43,44,45];
 brown_1_fare = [
 [26],
 [26,26],
@@ -33,8 +32,8 @@ brown_1_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-brown_1_main_stop_name = ["新營","統聯<br />客運","鹽水","頑皮世界","南鯤鯓","雙春"];
-brown_1_main_stop_time_consume = [0, 8, 18, 30, 41, 45];
+brown_1_main_stop_name = ["新營","統聯客運","鹽水","頑皮世界","南鯤鯓","雙春"];
+brown_1_main_stop_time_consume = [0, 8, 18, 35, 51, 55];
 brown_1_important_stop = [0, 2, 4, 5]; // 新營, 鹽水, 南鯤鯓, 雙春
-brown_1_time_go = [["09:45"],["13:25"],["17:40"]];
-brown_1_time_return = [["06:00"],["10:40"],["14:20"]];
+brown_1_time_go = [["09:45"],["14:25"],["17:40"]];
+brown_1_time_return = [["06:00"],["10:40"],["15:20"]];
