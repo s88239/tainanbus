@@ -1,25 +1,26 @@
 hsr_shuttle_h31_interval_name = ["安億橋","臺南市政府"];
 hsr_shuttle_h31_interval_stop = [
 ["原住民文化會館"], // 安億橋延駛段
-["臺南市政府","臺南站","建興國中(孔廟)","延平郡王祠(國立臺南大學)","大林新城","生產路口","台糖嘉年華","臺南航空站","臺南都會公園","高鐵臺南站"] // 主線
+["臺南市政府","臺南站","建興國中(孔廟)","延平郡王祠(國立臺南大學)","大林新城","生產路口","台糖嘉年華","臺南航空站","奇美博物館","高鐵臺南站"] // 主線
 ];
-hsr_shuttle_h31_stop_time_consume = [0,10,15,20,23,27,30,33,36,40,60];
 
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-hsr_shuttle_h31_main_stop_name = ["原住民文化會館<br /><font color=\"red\">(假日延駛)</font>","臺南市政府","興南客運<br />臺南站","延平郡王祠<br />(國立臺南大學)","臺南航空站","臺南都會公園","高鐵臺南站"];
-hsr_shuttle_h31_main_stop_time_consume = [0, 10, 15, 23, 36, 40, 55];
-hsr_shuttle_h31_important_stop = [0, 1, 4, 6]; // 桂田酒店, 奇美醫院, 高鐵臺南站
-hsr_shuttle_h31_time_go = [["05:50",1,6],["6:05",1,6,["一"]],["6:20",1,6],["6:55",1,6],["7:10",1,6],["7:30",1,6],["7:55",1,6],
-["8:10",1,6],["8:30",1,6],["8:55",1,6],["9:10",1,6],["9:30",1,6],["9:55",1,6],["10:00"],["10:30",1,6],["10:55",1,6],["11:00"],
-["11:30",1,6],["11:55",1,6],["12:00"],["12:30",1,6],["12:55",1,6],["13:00"],["13:30",1,6],["13:55",1,6],["14:00"],["14:30",1,6],
-["14:55",1,6],["15:00"],["15:30",1,6],["15:55",1,6],["16:00"],["16:30",1,6],["16:55",1,6],["17:00"],["17:30",1,6],["17:55",1,6],
-["18:00"],["18:30",1,6],["18:55",1,6],["19:00"],["19:30",1,6],["19:40",1,6,["五"]],["19:55",1,6],["20:00"],["20:30",1,6],
-["20:55",1,6],["21:00"],["21:30",1,6],["21:55",1,6],["22:20",1,6],["22:45",1,6]];
-hsr_shuttle_h31_time_return = [["07:00",6,1],["07:05",6,1,["一"]],["7:30",6,1],["7:55",6,1],["8:10",6,1],["8:30",6,1],["8:55",6,1],
-["9:10"],["9:30",6,1],["9:55",6,1],["10:10"],["10:30",6,1],["10:55",6,1],["11:10"],["11:30",6,1],["11:55",6,1],["12:10"],
-["12:30",6,1],["12:55",6,1],["13:10"],["13:30",6,1],["13:55",6,1],["14:10"],["14:30",6,1],["14:55",6,1],["15:10"],["15:30",6,1],
-["15:55",6,1],["16:10"],["16:30",6,1],["16:55",6,1],["17:10"],["17:30",6,1],["17:55",6,1],["18:10"],["18:30",6,1],["18:55",6,1],
-["19:10"],["19:30",6,1],["19:55",6,1],["20:10"],["20:30",6,1],["20:55",6,1],["21:00",6,1,["五"]],["21:10",6,1],["21:30",6,1],
-["21:55",6,1],["22:10",6,1],["22:30",6,1],["22:55",6,1],["23:30",6,1],["23:55",6,1]];
+hsr_shuttle_h31_main_stop_name = ["原住民文化會館<br /><font color=\"red\">(假日延駛)</font>","臺南市政府","興南客運<br />臺南站","延平郡王祠<br />(國立臺南大學)","大林新城","臺南航空站","奇美博物館","高鐵臺南站"];
+hsr_shuttle_h31_main_stop_time_consume = [0, 10, 17, 25, 30, 40, 45, 60];
+hsr_shuttle_h31_important_stop = [0, 1, 5, 6, 7]; // 桂田酒店, 臺南市政府, 臺南航空站, 奇美博物館, 高鐵臺南站
+var start_stop = 1; // 臺南市政府
+var end_stop = 7; // 高鐵臺南站
+hsr_shuttle_h31_time_go = [["05:30",start_stop,end_stop],["06:00",start_stop,end_stop],["06:40",start_stop,end_stop],["07:00",start_stop,end_stop],["07:40",start_stop,end_stop],["08:00",start_stop,end_stop],["08:20",start_stop,end_stop],
+["08:40",start_stop,end_stop],["09:00",start_stop,end_stop],["09:20",start_stop,end_stop],["09:40",start_stop,end_stop],["10:00",start_stop,end_stop],["10:10"],["10:40",start_stop,end_stop],["11:00",start_stop,end_stop],["11:10"],
+["11:40",start_stop,end_stop],["12:00",start_stop,end_stop],["12:10"],["12:40",start_stop,end_stop],["13:00",start_stop,end_stop],["13:10"],["13:40",start_stop,end_stop],["14:00",start_stop,end_stop],["14:10"],["14:40",start_stop,end_stop],
+["15:00",start_stop,end_stop],["15:10"],["15:40",start_stop,end_stop],["16:00",start_stop,end_stop],["16:10"],["16:40",start_stop,end_stop],["17:00",start_stop,end_stop],["17:10"],["17:40",start_stop,end_stop],["18:00",start_stop,end_stop],
+["18:10"],["18:40",start_stop,end_stop],["19:00",start_stop,end_stop],["19:10"],["19:40",start_stop,end_stop],["20:00",start_stop,end_stop],["20:10"],["20:40",start_stop,end_stop],["21:00",start_stop,end_stop],["21:10"],
+["21:40",start_stop,end_stop],["22:00",start_stop,end_stop],["22:40",start_stop,end_stop],["22:55",start_stop,end_stop]];
+hsr_shuttle_h31_time_return = [["07:00",end_stop,start_stop],["07:40",end_stop,start_stop],["08:00",end_stop,start_stop],["08:20",end_stop,start_stop],["08:40",end_stop,start_stop],["09:00",end_stop,start_stop],["09:20"],
+["09:40",end_stop,start_stop],["10:00",end_stop,start_stop],["10:20"],["10:40",end_stop,start_stop],["11:00",end_stop,start_stop],["11:20"],["11:40",end_stop,start_stop],["12:00",end_stop,start_stop],["12:20"],["12:40",end_stop,start_stop],
+["13:00",end_stop,start_stop],["13:20"],["13:40",end_stop,start_stop],["14:00",end_stop,start_stop],["14:20"],["14:40",end_stop,start_stop],["15:00",end_stop,start_stop],["15:20"],["15:40",end_stop,start_stop],
+["16:00",end_stop,start_stop],["16:20"],["16:40",end_stop,start_stop],["17:00",end_stop,start_stop],["17:20"],["17:40",end_stop,start_stop],["18:00",end_stop,start_stop],["18:20"],["18:40",end_stop,start_stop],["19:00",end_stop,start_stop],
+["19:20"],["19:40",end_stop,start_stop],["20:00",end_stop,start_stop],["20:20"],["20:40",end_stop,start_stop],["21:00",end_stop,start_stop],["21:20",end_stop,start_stop],["21:40",end_stop,start_stop],["22:00",end_stop,start_stop],
+["22:20",end_stop,start_stop],["22:40",end_stop,start_stop],["23:20",end_stop,start_stop],["23:40",end_stop,start_stop],["00:00",end_stop,start_stop]];
