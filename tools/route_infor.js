@@ -115,7 +115,7 @@ tour_bus_88_route = '臺南公園 ─ 觀夕平台　<div class="sub_title">安�
 tour_bus_99_route = '臺南公園 ─ 四草 ─ 七股鹽山　<div class="sub_title">台江線</div>';
 tour_bus_7702_route = '嘉義轉運站 ─ 北門遊客中心　<div class="sub_title">鹽鄉濱海線</div>';
 
-hsr_shuttle_h31_route = '臺南市政府 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷市府線</div>';
+hsr_shuttle_h31_route = '安億橋 ─ 臺南市政府 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷市府線</div>';
 hsr_shuttle_h62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷奇美線</div>';
 
 highway_bus_8035_route = '南化 ─ 內門 ─ 旗山轉運站';
