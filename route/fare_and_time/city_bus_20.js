@@ -1,7 +1,7 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_20_main_stop_name = ["南紡<br />夢時代","崑山科大","永大夜市","永康<br />火車站","台南應用<br />科技大學","臺灣歷史<br />博物館","安南醫院","塭南里"];
+city_bus_20_main_stop_name = ["南紡夢時代<br />(東光路)","崑山科大","永大夜市","永康<br />火車站","台南應用<br />科技大學","臺灣歷史<br />博物館","安南醫院","塭南里"];
 city_bus_20_main_stop_time_consume = [0, 10, 17, 25, 35, 46, 50, 55];
 city_bus_20_important_stop = [0, 3, 5]; // 南紡夢時代, 永康火車站, 臺灣歷史博物館
 city_bus_20_time_go = [["06:00"],["06:20"],["06:40"],["07:10"],["07:40"],["08:00"],["08:30"],["09:00"],["09:45"],["10:30"],
