@@ -8,7 +8,10 @@
 	route_file_name = 'yellow_6';
 	route_type = 'yellow';
 	route_interval = ['新營','白沙屯','後壁火車站'];
+	route_start_stop = '新營';
+	route_end_stop = '後壁火車站';
 </script>
+<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -18,9 +21,9 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'新營客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1506&locale=zh_TW');
+	block_route_info(route_interval,'新營客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1506&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(0, null);
-	block_time_schedule('新營','後壁火車站','<font color="blue">往後壁方向終點為後壁火車站，不經後壁區公所<br />往新營方向起點為後壁區公所，不經後壁火車站</font>');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '<font color="blue">往後壁方向終點為後壁火車站，不經後壁區公所<br />往新營方向起點為後壁區公所，不經後壁火車站</font>');
 	block_transfer(transfer_hsinyin + transfer_houbi_railway_station);
 	block_copyright();
 </script>
