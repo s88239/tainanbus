@@ -8,10 +8,7 @@
 	route_file_name = 'tour_bus_7702';
 	route_type = 'tour_bus';
 	route_interval = ['嘉義轉運站','北門遊客中心'];
-	route_start_stop = '嘉義轉運站';
-	route_end_stop = '北門遊客中心';
 </script>
-<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	title_name = '台灣好行';
@@ -24,9 +21,52 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'嘉義客運','','里程計費',['http://www.taiwantrip.com.tw/Besttour/Info/?id=42" target="_blank','台灣好行官方網站'],[['平日','normal'],['假日','holiday']]);
+	block_route_info(route_interval,'嘉義客運','','里程計費',['http://www.taiwantrip.com.tw/Besttour/Info/?id=42" target="_blank','台灣好行官方網站']);
 	block_fare(10, null);
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '「<font color="red">觀</font>」表示採觀光公車模式，返程停靠布袋遊客中心40分鐘，上述時間為開車時間');
+	block_time_schedule('嘉義轉運站', '北門遊客中心', '「<font color="red">觀</font>」表示採觀光公車模式，返程停靠布袋遊客中心40分鐘，上述時間為開車時間\
+		<p>&nbsp;</p>\
+		<h2><font color="purple">郵輪式觀光公車</font><font color="red">【僅假日行駛】</font></h2>\
+		<table>\
+			<tr>\
+				<th rowspan="2">嘉義<br />轉運站</th>\
+				<th rowspan="2">嘉義<br />高鐵站</th>\
+				<th colspan="2">故宮南院</th>\
+				<th colspan="2">東石漁人碼頭</th>\
+				<th colspan="2">北門遊客中心</th>\
+				<th colspan="2">南鯤鯓代天府</th>\
+				<th colspan="2">好美里</th>\
+				<th colspan="2">布袋遊客中心</th>\
+				<th rowspan="2">嘉義<br />高鐵站</th>\
+				<th rowspan="2">嘉義<br />轉運站</th>\
+			</tr>\
+			<tr BGCOLOR="#A57C99" style="Color:#FFFFFF">\
+				<td>到站</td>\
+				<td>發車</td>\
+				<td>到站</td>\
+				<td>發車</td>\
+				<td>到站</td>\
+				<td>發車</td>\
+				<td>到站</td>\
+				<td>發車</td>\
+				<td>到站</td>\
+				<td>發車</td>\
+				<td>到站</td>\
+				<td>發車</td>\
+			</tr>\
+			<tr>\
+				<td>09:00</td>\
+				<td>09:20</td>\
+				<td>09:30</td><td>10:00</td>\
+				<td>10:20</td><td>10:50</td>\
+				<td>11:20</td><td>13:00</td>\
+				<td>13:05</td><td>13:40</td>\
+				<td>13:50</td><td>14:20</td>\
+				<td>14:30</td><td>15:30</td>\
+				<td>16:00</td>\
+				<td>16:20</td>\
+			</tr>\
+		</table>\
+		<h3>本班次採用無障礙<font color="red">低地板</font>車輛</h3>');
 	block_transfer(transfer_hsr_chiayi_station + transfer_south_kunshen + transfer_beimen);
 	block_copyright();
 </script>
