@@ -1,6 +1,6 @@
 function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // print the fare menu
 	var max_color_num = 4;
-	if(color_name=='highway_bus'){
+	if(color_name=='highway_bus' || color_name=='tour_bus'){
 		color_name = 'blue';
 	}
 	var menu_name = ['from','to'];
