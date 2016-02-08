@@ -65,3 +65,15 @@ yellow_7_holiday_time_return = [["05:50",end_stop,start_stop,[[skip_stop_2,8]]],
 ["10:25",end_stop,start_stop,[skip_stop_2]],["11:55",[skip_stop_1,skip_stop_2]],["12:55",end_stop,start_stop,[skip_stop_2]],
 ["13:45",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["15:35",[skip_stop_1,skip_stop_2]],["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
 ["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["18:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]]];
+
+// Chinese New Year
+yellow_7_spring_time_go = [["06:55",[skip_stop_1,skip_stop_2]],["07:15",[skip_stop_1,skip_stop_2]],
+["08:20",[skip_stop_2]],["09:30",[skip_stop_1,skip_stop_2]],
+["10:40",[skip_stop_2]],["11:50",[skip_stop_1,[skip_stop_2+1,8]]],["12:50",[skip_stop_1,skip_stop_2]],["14:20",[skip_stop_1,skip_stop_2]],
+["15:40",[skip_stop_1,skip_stop_2]],["16:30",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
+["17:30",start_stop,end_stop,[[skip_stop_2+1,8]]],["19:00",start_stop,end_stop,[skip_stop_1,skip_stop_2]]];
+yellow_7_spring_time_return = [["05:50",end_stop,start_stop,[[skip_stop_2,8]]],["08:10",[skip_stop_1,skip_stop_2]],
+["08:30",[skip_stop_1,skip_stop_2]],["09:35",[skip_stop_1,skip_stop_2]],
+["10:45",[skip_stop_2]],["11:55",[skip_stop_1,skip_stop_2]],["13:15",[skip_stop_2]],
+["14:05",[skip_stop_1,skip_stop_2]],["15:35",[skip_stop_1,skip_stop_2]],["16:55",[skip_stop_1,skip_stop_2]],
+["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["18:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]]];
