@@ -1,11 +1,11 @@
 yellow_7_interval_name = ["新營","頂窩","北勢寮","東河","北馬","東山","大客","武嶺","番子嶺","斑芝<br />花坑","東原","瓦厝","崎腳","青山","仙公廟"];
 yellow_7_interval_stop = [ // 2015.09.02 checked
-["新營站","三商","圓環(第一銀行)","文化中心","新營區公所","臺南市農會","中營里","東山中路"], // 新營
+["新營站","三商","圓環(第一銀行)","文化中心","新營公所","臺南市農會","中營里","東山中路"], // 新營
 ["頂窩","東營"], // 頂窩
 ["北勢寮","聖賢國小"], // 北勢寮
 ["東河","吉貝耍","枋子林"], // 東河
 ["北馬"], // 北馬
-["東山國中","東山國小","北東山","木柵","代天宮","許秀才","東山","嘉東"], // 東山
+["東山國中","北東山","木柵","代天宮","許秀才","東山","嘉東"], // 東山
 ["凹子腳","大客","下庄","科里"], // 大客
 ["武嶺"], // 武嶺
 ["番子嶺"], // 番子嶺
@@ -64,16 +64,4 @@ yellow_7_holiday_time_return = [["05:50",end_stop,start_stop,[[skip_stop_2,8]]],
 ["08:30",[skip_stop_1,skip_stop_2]],["09:15",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
 ["10:25",end_stop,start_stop,[skip_stop_2]],["11:55",[skip_stop_1,skip_stop_2]],["12:55",end_stop,start_stop,[skip_stop_2]],
 ["13:45",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["15:35",[skip_stop_1,skip_stop_2]],["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
-["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["18:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]]];
-
-// Chinese New Year
-yellow_7_spring_time_go = [["06:55",[skip_stop_1,skip_stop_2]],["07:15",[skip_stop_1,skip_stop_2]],
-["08:20",[skip_stop_2]],["09:30",[skip_stop_1,skip_stop_2]],
-["10:40",[skip_stop_2]],["11:50",[skip_stop_1,[skip_stop_2+1,8]]],["12:50",[skip_stop_1,skip_stop_2]],["14:20",[skip_stop_1,skip_stop_2]],
-["15:40",[skip_stop_1,skip_stop_2]],["16:30",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
-["17:30",start_stop,end_stop,[[skip_stop_2+1,8]]],["19:00",start_stop,end_stop,[skip_stop_1,skip_stop_2]]];
-yellow_7_spring_time_return = [["05:50",end_stop,start_stop,[[skip_stop_2,8]]],["08:10",[skip_stop_1,skip_stop_2]],
-["08:30",[skip_stop_1,skip_stop_2]],["09:35",[skip_stop_1,skip_stop_2]],
-["10:45",[skip_stop_2]],["11:55",[skip_stop_1,skip_stop_2]],["13:15",[skip_stop_2]],
-["14:05",[skip_stop_1,skip_stop_2]],["15:35",[skip_stop_1,skip_stop_2]],["16:55",[skip_stop_1,skip_stop_2]],
 ["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_2]],["18:35",end_stop,start_stop,[skip_stop_1,skip_stop_2]]];
