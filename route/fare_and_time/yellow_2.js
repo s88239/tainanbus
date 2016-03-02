@@ -13,7 +13,7 @@ yellow_2_interval_stop = [ // 2016.02.04 checked
 ["冷水寮"], // 冷水寮
 ["尖山路"], // 尖山路
 ["土地崎"], // 土地崎
-["番仔坑","王爺宮"] // 王爺宮
+["番仔坑","王爺宮","大丘派出所","匏仔寮"] // 王爺宮
 ];
 yellow_2_fare = [
 [26],
@@ -34,9 +34,13 @@ yellow_2_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_2_main_stop_name = ["新營","柳營","龜子港<br />(省道)","林鳳營<br />火車站","六甲","工研院<br />南分院","王爺宮"];
-yellow_2_main_stop_time_consume = [0, 9, 15, 18, 30, 38, 50];
+yellow_2_main_stop_name = ["新營","柳營","龜子港<br />(省道)","林鳳營<br />火車站","六甲","工研院<br />南分院","王爺宮","匏仔寮"];
+yellow_2_main_stop_time_consume = [0, 9, 15, 18, 30, 38, 50, 70];
 yellow_2_important_stop = [0, 3, 4, 6]; // 新營, 林鳳營火車站, 六甲, 王爺宮
+var start_stop = 0; // 新營
+var end_stop = 6; // 王爺宮
 var skip_stop = 5; // 工研院南分院
-yellow_2_time_go = [["07:30"],["11:00"],["14:20"],["17:45"]];
-yellow_2_time_return = [["06:00",[skip_stop]],["08:25"],["11:55"],["15:15"]];
+yellow_2_time_go = [["05:40"],["07:30",start_stop,end_stop],["11:00",start_stop,end_stop],["14:20",start_stop,end_stop],["16:40"],
+["17:45",start_stop,end_stop]];
+yellow_2_time_return = [["06:00",end_stop,start_stop,[skip_stop,[skip_stop,-5]]],["06:55",[[end_stop,-5]]],["08:25",end_stop,start_stop],
+["11:55",end_stop,start_stop],["15:15",end_stop,start_stop],["17:55",[[end_stop,-5]]]];
