@@ -120,7 +120,7 @@ hsr_shuttle_h62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站　<di
 
 highway_bus_8035_route = '南化 ─ 內門 ─ 旗山轉運站';
 highway_bus_239_route = '臺南火車站 ─ 太爺 ─ 茄萣 ─ 興達港';
-highway_bus_8042_route = '臺南航空站 ─ 高鐵臺南站 ─ 阿蓮 ─ 旗山<br /><div class="sub_title">沙旗美月世界快線</div>';
+highway_bus_8042_route = '臺南航空站 ─ 高鐵臺南站 ─ 實踐大學<br /><div class="sub_title">沙旗美月世界快線</div>';
 highway_bus_8046A_route = '臺南火車站 ─ 奇美博物館 ─ 高鐵左營站<br /><div class="sub_title">高南雙城快線</div>';
 highway_bus_8046_route = '臺南火車站 ─ 高雄火車站';
 highway_bus_8050_route = '臺南火車站 ─ 旗山轉運站 ─ 佛光山';
