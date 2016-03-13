@@ -156,7 +156,7 @@ transfer_tainan_railway_station = '<tr><th rowspan="8">臺南火車站</th>\
 	<td id="tour_bus"><p>' + link_highway_bus_239 + '、' + link_highway_bus_8046 + '、' + link_highway_bus_8050 + '</p>'
 	+ link_highway_bus_8046A + '</td></tr>';
 
-transfer_kun_shan_university = '<tr><th rowspan="2">崑山科技大學</th>\
+transfer_kun_shan_university = '<tr><th rowspan="2">崑山科大</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus">' + link_city_bus_2 + '、' + link_city_bus_19 + '、' + link_city_bus_20 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
