@@ -164,7 +164,7 @@ transfer_kun_shan_university = '<tr><th rowspan="2">崑山科大</th>\
 
 transfer_haidong_elementary_school = '<tr><th rowspan="2">海東國小</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
-	<td id="city_bus">' + link_city_bus_3 + '、' + link_city_bus_7 + '、' + link_city_bus_10 + '、' + link_city_bus_11 + '</td></tr>\
+	<td id="city_bus">' + link_city_bus_3 + '、' + link_city_bus_7 + '、' + link_city_bus_10 + '、' + link_city_bus_11 + '、' + link_city_bus_20 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
 	<td id="blue">' + link_blue_23+ '、' + link_blue_24 + '</td></tr>';
 
