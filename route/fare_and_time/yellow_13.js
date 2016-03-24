@@ -31,5 +31,5 @@ yellow_13_main_stop_time_consume = [0, 10, 15, 23, 30, 40];
 yellow_13_important_stop = [0, 1, 4, 5]; // 白河國中, 白河, 關子嶺, 南寮
 var start_stop = 1;
 var end_stop = 5;
-yellow_13_time_go = [["11:05",start_stop,end_stop],["14:05",start_stop,end_stop],["16:50",[[1,5]]],["18:25",start_stop,end_stop]];
-yellow_13_time_return = [["05:50",[[0,-5]]],["11:45",end_stop,start_stop],["14:45",end_stop,start_stop],["17:45",end_stop,start_stop]];
+yellow_13_time_go = [["11:10",start_stop,end_stop],["14:10",start_stop,end_stop],["16:50",[[1,10]]],["18:25",start_stop,end_stop]];
+yellow_13_time_return = [["05:50",[[0,-5]]],["11:50",end_stop,start_stop],["14:50",end_stop,start_stop],["17:50",end_stop,start_stop]];
