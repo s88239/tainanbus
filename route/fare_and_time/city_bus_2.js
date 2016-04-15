@@ -22,8 +22,9 @@ stop_3 = 7; // 白鷺灣社區
 stop_4 = 8; // 四草
 stop_5 = 10; // 三鯤鯓
 stop_6 = 5; // 新光三越新天地
+stop_7 = 3; // 臺南火車站
 
-city_bus_2_time_go = [["06:15",stop_1,stop_3,[[stop_1+2,-5]]],["06:25",stop_1,stop_3,['L',[stop_6,5]]],["06:40",stop_1,stop_3,[[stop_6,10]]],
+city_bus_2_time_go = [["06:15",stop_1,stop_3,[[stop_7,-5]]],["06:25",stop_1,stop_3,['L',[stop_6,5]]],["06:40",stop_1,stop_3,[[stop_6,10]]],
 ["06:55",stop_1,stop_3,[[stop_6,5]]],["07:35",stop_1,stop_4],["08:00",stop_1,stop_5,[stop_4]],["08:35",stop_1,stop_3],
 ["09:10",stop_1,stop_3,['L']],["09:30",stop_2,stop_3,[stop_1]],["09:50",stop_1,stop_3],["10:20",stop_1,stop_3],
 ["10:50",stop_1,stop_5,[stop_4]],["11:10",stop_1,stop_3,['L']],["11:30",stop_1,stop_3],["11:50",stop_1,stop_4,['L']],
@@ -32,8 +33,8 @@ city_bus_2_time_go = [["06:15",stop_1,stop_3,[[stop_1+2,-5]]],["06:25",stop_1,st
 ["15:10",stop_1,stop_3,['L']],["15:30",stop_1,stop_3],["15:50",stop_1,stop_3,['L']],["16:10",stop_2,stop_3,[stop_1]],
 ["16:30",stop_1,stop_3],["16:45",stop_1,stop_5,[stop_4]],["17:00",stop_1,stop_4],["17:15",stop_1,stop_5,['L',stop_4,[stop_6,5]]],
 ["17:30",stop_1,stop_3],["17:45",stop_1,stop_3],["18:00",stop_1,stop_3,['L']],["18:20",stop_1,stop_3],
-["19:00",stop_1,stop_3,['L']],["19:40",stop_1,stop_3],["20:20",stop_1,stop_3],["21:00",stop_1,stop_4,['L',[stop_1+1,-5]]],
-["21:20",stop_1,stop_3,['L',[stop_1+1,-5]]],["22:05",stop_1,stop_3,[[stop_1+1,-5]]]
+["19:00",stop_1,stop_3,['L']],["19:40",stop_1,stop_3],["20:20",stop_1,stop_3],["21:00",stop_1,stop_4,['L',[stop_7,-5]]],
+["21:20",stop_1,stop_3,['L',[stop_7,-5]]],["22:05",stop_1,stop_3,[[stop_7,-5]]]
 ];
 city_bus_2_time_return = [["06:00",stop_3,stop_1,[[stop_6,-2,stop_6-1,-3]]],["06:25",stop_3,stop_1,[[stop_6,-2,stop_6-1,-3]]],
 ["06:27",stop_4,stop_1,[[stop_3,1]]],["06:25",stop_5,stop_1,[stop_4,[stop_3,5]]],["07:30",stop_3,stop_2,[stop_1]],
@@ -50,8 +51,8 @@ city_bus_2_time_return = [["06:00",stop_3,stop_1,[[stop_6,-2,stop_6-1,-3]]],["06
 ];
 
 // holiday schedule
-city_bus_2_holiday_time_go = [["06:15",stop_1,stop_3,[[stop_1+2,-5]]],["06:25",stop_1,stop_3,['L']],["06:40",stop_1,stop_3],
-["07:00",stop_1,stop_3,[[stop_1+2,-5]]],["07:35",stop_1,stop_3],["08:00",stop_1,stop_5,[stop_4]],["08:35",stop_1,stop_3],
+city_bus_2_holiday_time_go = [["06:15",stop_1,stop_3,[[stop_7,-5]]],["06:25",stop_1,stop_3,['L']],["06:40",stop_1,stop_3],
+["07:00",stop_1,stop_3,[[stop_7,-5]]],["07:35",stop_1,stop_3],["08:00",stop_1,stop_5,[stop_4]],["08:35",stop_1,stop_3],
 ["09:10",stop_1,stop_3,['L']],["09:30",stop_2,stop_3,[stop_1]],["09:50",stop_1,stop_3],["10:20",stop_1,stop_3],
 ["10:50",stop_1,stop_5,[stop_4]],["11:10",stop_1,stop_3,['L']],["11:30",stop_1,stop_3],["11:50",stop_1,stop_3,['L']],
 ["12:10",stop_1,stop_5,[stop_4]],["12:30",stop_1,stop_3,['L']],["12:50",stop_2,stop_3,[stop_1]],["13:10",stop_1,stop_3],
@@ -59,8 +60,8 @@ city_bus_2_holiday_time_go = [["06:15",stop_1,stop_3,[[stop_1+2,-5]]],["06:25",s
 ["15:10",stop_1,stop_3,['L']],["15:30",stop_1,stop_3],["15:50",stop_1,stop_3,['L']],["16:10",stop_2,stop_3,[stop_1]],
 ["16:30",stop_1,stop_3],["16:45",stop_1,stop_5,[stop_4]],["17:00",stop_1,stop_3],["17:15",stop_1,stop_5,['L',stop_4]],
 ["17:30",stop_1,stop_3],["17:45",stop_1,stop_3],["18:00",stop_1,stop_3,['L']],["18:20",stop_1,stop_3],
-["19:00",stop_1,stop_3,['L']],["19:40",stop_1,stop_3],["20:20",stop_1,stop_3],["21:00",stop_1,stop_3,['L',[stop_1+2,-5]]],
-["21:20",stop_1,stop_3,['L',[stop_1+2,-5]]],["22:05",stop_1,stop_3,[[stop_1+2,-5]]]
+["19:00",stop_1,stop_3,['L']],["19:40",stop_1,stop_3],["20:20",stop_1,stop_3],["21:00",stop_1,stop_3,['L',[stop_7,-5]]],
+["21:20",stop_1,stop_3,['L',[stop_7,-5]]],["22:05",stop_1,stop_3,[[stop_7,-5]]]
 ];
 city_bus_2_holiday_time_return = [["06:00",stop_3,stop_1,[[stop_6,-2,stop_6-1,-3]]],["06:25",stop_3,stop_1,[[stop_6,-2,stop_6-1,-3]]],
 ["06:35",stop_3,stop_1],["06:25",stop_5,stop_1,[stop_4,[stop_3,5]]],["07:30",stop_3,stop_2,[stop_1]],["07:55",stop_3,stop_1,['L']],
