@@ -13,7 +13,6 @@ yellow_4_interval_stop = [ // checked 20150512
 ["果毅國小","果毅後","果毅後廟前"], // 果毅後
 ["六甲市場","六甲國中","六甲衛生所","六甲"] // 六甲
 ];
-yellow_4_stop_time_consume = [0,1,2,4,5,6,7,8,9,11,12,13,14,14,15,16,18,20,23,24,26,27,28,29,31,32,33,34,35,42,43,44,45];
 yellow_4_fare = [
 [26],
 [26,26],
@@ -31,8 +30,8 @@ yellow_4_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_4_main_stop_name = ["新營","太康里","小腳腿","山仔腳","二重溪","果毅後<br />廟前","六甲"];
-yellow_4_main_stop_time_consume = [0, 10, 20, 28, 33, 40, 50];
-yellow_4_important_stop = [0, 2, 4, 6]; // 新營, 小腳腿, 二重溪, 六甲
-yellow_4_time_go = [["06:40"],["10:10"],["14:00"],["16:15"],["18:20"]];
+yellow_4_main_stop_name = ["新營","太康里","明聖殿","小腳腿","山仔腳","二重溪","果毅後<br />廟前","六甲"];
+yellow_4_main_stop_time_consume = [0, 10, 15, 20, 28, 33, 40, 50];
+yellow_4_important_stop = [0, 3, 5, 7]; // 新營, 小腳腿, 二重溪, 六甲
+yellow_4_time_go = [["06:40"],["10:10"],["14:00"],["16:15"],["18:45"]];
 yellow_4_time_return = [["05:50"],["07:40"],["11:05"],["14:55"],["17:15"]];
