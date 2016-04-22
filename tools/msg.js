@@ -9,10 +9,10 @@ S_message = '<font color="green">S</font>表示僅上課日行駛，例假日、
 copyrightMSG = '<p>Copyright (c) 2014-'+(new Date()).getFullYear()+' Tainan Bus for FUN all rights reserved. | <a href="../intro.html" rel="nofollow">about us</a></p>';
 
 function Announcement(str){
-	document.write('<table cellSpacing=0 borderColorDark=#ffffff width=350 borderColorLight=purple border=1>\
+	document.write('<table cellSpacing=0 borderColorDark=#ffffff width=600 borderColorLight=purple border=1>\
 		<tr>\
-			<td bgColor=#e5c1fe style="padding: 30px 10px;">\
-				<font color=#FF0000 size=2>' + str + '</font>\
+			<td bgColor=#61A058 style="padding: 30px 10px;">\
+				<font color=#FFFFFF size=3>' + str + '</font>\
 			</td>\
 		</tr>\
 	</table>');

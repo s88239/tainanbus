@@ -80,7 +80,13 @@ function block_route_map(announce_str){
 		</div>\
 		<img src="../route/' + route_type + '/' + route_file_name + '.jpg">');
 
-	if(announce_str!=null) Announcement(announce_str); // have something news to announce
+	var news_20160501 = '<h1>【105年5月1日大台南公車優惠新制】</h1><br />\
+<p align="left">◎台南市65歲以上市民須使用「市民卡敬老卡」；身心障礙市民須使用「市民卡愛心卡」刷卡乘車才享有免費優惠（持身分證或身心障礙手冊仍需購買半票）。</p>\
+<p align="left">◎台南市民搭乘台灣好行觀光公車 88, 99路使用「市民卡」刷卡乘車可享有半價優惠（未使用市民卡照原價計費）。</p>\
+<p align="left">◎台南市民搭乘市區公車0, 1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 15, 17, 18, 19, 20, 21, 77路使用「市民卡」刷卡乘車可享有半價優惠（本項優惠至105年底止，未使用市民卡照原價計費）。</p>';
+
+	if(announce_str!=null) Announcement(news_20160501+announce_str); // have something news to announce
+	else Announcement(news_20160501);
 
 	if(map_display){
 		document.write('<p></p><a href="../TainanBusMap/show_map.php?route=' + route_file_name + '" target="_blank">\
