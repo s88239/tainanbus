@@ -46,7 +46,7 @@ var end_stop = 3; // 白沙屯
 yellow_6_time_go = [["05:55",start_stop,end_stop,[skip_stop]],["06:45",start_stop,end_stop,[skip_stop]],
 ["08:00",['繞',[skip_stop+1,11]]],["11:00",['繞',[skip_stop+1,11]]],["13:05",['繞',[skip_stop+1,11]]],["15:20",[skip_stop]],["17:40",[skip_stop]]];
 yellow_6_time_return = [["06:20",end_stop,start_stop,[skip_stop]],["07:10",end_stop,start_stop,[skip_stop]],
-["08:55",[[skip_stop,11]]],["11:55",[[skip_stop,11]]],["14:00",[[skip_stop,11]]],["16:05",[skip_stop]],["18:30",[skip_stop]]];
+["08:55",['繞',[skip_stop,11]]],["11:55",['繞',[skip_stop,11]]],["14:00",['繞',[skip_stop,11]]],["16:05",[skip_stop]],["18:30",[skip_stop]]];
 // holiday schedule
 yellow_6_holiday_time_go = [["05:55",start_stop,end_stop,[skip_stop]],["06:45",start_stop,end_stop,[skip_stop]],
 ["08:00",[skip_stop]],["11:00",[skip_stop]],["13:05",[skip_stop]],["15:20",[skip_stop]],["17:40",[skip_stop]]];
