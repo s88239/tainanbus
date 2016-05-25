@@ -259,7 +259,7 @@ transfer_anping_industrial_zone = '<tr><th rowspan="3">安平工業區</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green_17 + '</td></tr>';
 
-transfer_guanmiao = '<tr><th rowspan="3">關廟</th>\
+transfer_guanmiao = '<tr><th rowspan="3">關廟轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red"><p>' + link_red + '、' + link_red_1 + '、' + link_red_2 + '、' + link_red_3 + '、</p>'
 	+ link_red_10 + '、' + link_red_11 + '、' + link_red_12 + '、' + link_red_13 + '、' + link_red_14 + '</td></tr>\
