@@ -385,9 +385,9 @@ transfer_annan_hospital = '<tr><th rowspan="2">安南醫院</th>\
 
 transfer_baihe = '<tr><th rowspan="2">白河</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
-	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_10 + '、' + link_yellow_11 + '、' + link_yellow_11_1 + '、</p>\
-	<p>' + link_yellow_12 + '、' + link_yellow_12_1 + '、' + link_yellow_13 + '、' + link_yellow_14 + '、</p>'
-	+  link_yellow_14_1 + '、' + link_yellow_15 + '</td></tr>\
+	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_6_1 + '、' + link_yellow_10 + '、' + link_yellow_11 + '、</p>\
+	<p>' + link_yellow_11_1 + '、' + link_yellow_12 + '、' + link_yellow_12_1 + '、</p>'
+	+ link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、' + link_yellow_15 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7210 + '、' + link_highway_bus_7214 + '</td></tr>';
 

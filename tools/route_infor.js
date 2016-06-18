@@ -77,7 +77,7 @@ yellow_3_route = '新營 ─ 柳營 ─ 果毅後';
 yellow_4_route = '新營 ─ 二重溪 ─ 六甲';
 yellow_5_route = '新營 ─ 紅毛厝 ─ 下營';
 yellow_6_route = '新營 ─ 白沙屯 ─ 後壁火車站';
-yellow_6_1_route = '新營 ─ 菁寮 ─ 土溝<br /><div class="sub_title">農村樂活公車</div>';
+yellow_6_1_route = '新營 ─ 菁寮 ─ 土溝 ─ 白河<br /><div class="sub_title">假日農村樂活公車</div>';
 yellow_7_route = '新營 ─ 東山 ─ 青山 ─ 仙公廟';
 yellow_9_route = '新營 ─ 後壁火車站 ─ 高鐵嘉義站';
 yellow_10_route = '後壁 ─ 白河 ─ 六重溪';

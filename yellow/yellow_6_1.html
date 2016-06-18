@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	route_name = '黃6-1農村樂活公車';
+	route_name = '黃6-1假日農村樂活公車';
 	route_name_en = 'Yellow 6-1';
 	route_file_name = 'yellow_6_1';
 	route_type = 'yellow';
-	route_interval = ['新營','菁寮','土溝'];
+	route_interval = ['新營','菁寮','土溝','白河'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -20,8 +20,8 @@
 	block_route_map(null);
 	block_route_info(route_interval,'新營客運','僅假日行駛','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1802&locale=zh_TW');
 	block_fare(0, null);
-	block_time_schedule('新營','土溝代天府','<h1><font color="red">僅假日行駛</font></h1>');
-	block_transfer(transfer_hsinyin + transfer_houbi_district_office);
+	block_time_schedule('新營','白河','<h1><font color="red">僅假日行駛</font></h1>');
+	block_transfer(transfer_hsinyin + transfer_houbi_district_office + transfer_baihe);
 	block_copyright();
 </script>
 </body>
