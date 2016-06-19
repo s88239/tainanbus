@@ -1,47 +1,41 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_1_main_stop_name = ["臺南<br />火車站","新光三越<br />新天地","鹽埕","喜樹","威武廟","茄萣","興達港","興達<br />遠洋漁港"];
-city_bus_1_interval_stop = [
-["臺南火車站","臺南醫院","中山、民權路口","民生綠園","林百貨(中正路)","中正、西門路口","西門、友愛街口","小西門(大億麗緻)",
-"新光三越新天地","西門路一段","臺南站","新興國小","新興路","南稅三村","三官廟","北鹽埕","日新國小","鹽埕","新都路口",
-"金華路一段","日新橋","南區區公所","明興路","風櫃門","勞工住宅","北喜樹","喜樹","喜南里","省躬國小","寮仔","興農公園",
-"馬鎮宮","同安宮","同安里","南萣橋北","南萣橋南","白砂崙","白砂崙廟口","茄萣農會","茄萣電信局","威武廟"],
-["茄萣國中","茄萣國小","曾厝","頂茄萣","下茄萣","光萣","成功橋","衛生所","茄萣","北崎漏","崎漏","崎漏茄萣農會",
-"崎漏電信局","興達國小","海巡基地站","興達港","情人碼頭","假日市集","興達遠洋漁港"]
-];
-city_bus_1_stop_time_consume = [0,1,3,4,5,6,7,9,10,12,13,15,16,16,17,18,20,20,20,21,23,24,25,26,28,28,29,29,31,32,34,34,35,35,36,38,39,40,40,40,41,42,42,43,45,46,47,48,49,50,51,51,52,53,53,54,55,57,58,60];
+city_bus_1_main_stop_name = ["臺南<br />火車站","新光三越<br />新天地","鹽埕","喜樹","威武廟","茄萣<br />衛生所","崎漏<br />電信局","興達<br />遠洋漁港"];
 city_bus_1_main_stop_time_consume = [0, 10, 20, 29, 41, 50, 55, 60];
-city_bus_1_important_stop = [0, 5]; // 臺南火車站, 茄萣
-city_bus_1_time_go = [["06:40",0,5],["06:55",0,5],["07:10",0,5],["07:20",0,5],["07:30",0,5],["07:40",0,5],
-["07:55",0,5],["08:10",0,5],["08:25",0,5],["08:40",0,5],["08:55",0,5],["09:20",0,5],["09:50",0,5],
-["10:20",0,5],["10:50",0,5],["11:20",0,5],["11:50",0,5],["12:20",0,5],["12:50",0,5],["13:20",0,5],
-["13:50",0,5],["14:20",0,5],["14:50",0,5],["15:20",0,5],["15:50",0,5],["16:10",0,5],["16:30",0,5],
-["16:50",0,5],["17:20",0,6],["17:30",0,6],["17:40",0,5],["17:50",0,5],["18:10",0,5],["18:30",0,5],
-["18:50",0,5],["19:10",0,5],["19:30",0,5],["19:50",0,5],["20:20",0,5],["21:00",0,5],["21:20",0,6],
-["21:50",0,6],["22:20",0,5]
+city_bus_1_important_stop = [0, 5, 7]; // 臺南火車站, 茄萣衛生所, 興達遠洋漁港
+var start_stop = 0; // 臺南火車站
+var end_stop_1 = 5; // 茄萣衛生所
+var end_stop_2 = 6; // 崎漏電信局
+city_bus_1_time_go = [["06:40",start_stop,end_stop_1],["06:55",start_stop,end_stop_1],["07:10",start_stop,end_stop_1],["07:20",start_stop,end_stop_1],["07:30",start_stop,end_stop_1],["07:40",start_stop,end_stop_1],
+["07:55",start_stop,end_stop_1],["08:10",start_stop,end_stop_1],["08:25",start_stop,end_stop_1],["08:40",start_stop,end_stop_1],["08:55",start_stop,end_stop_1],["09:20",start_stop,end_stop_1],["09:50",start_stop,end_stop_1],
+["10:20",start_stop,end_stop_1],["10:50",start_stop,end_stop_1],["11:20",start_stop,end_stop_1],["11:50",start_stop,end_stop_1],["12:20",start_stop,end_stop_1],["12:50",start_stop,end_stop_1],["13:20",start_stop,end_stop_1],
+["13:50",start_stop,end_stop_1],["14:20",start_stop,end_stop_1],["14:50",start_stop,end_stop_1],["15:20",start_stop,end_stop_1],["15:50",start_stop,end_stop_1],["16:10",start_stop,end_stop_1],["16:30",start_stop,end_stop_2],
+["16:50",start_stop,end_stop_1],["17:05",start_stop,end_stop_1],["17:20",start_stop,end_stop_2],["17:30",start_stop,end_stop_2],["17:50",start_stop,end_stop_1],["18:00",start_stop,end_stop_1],["18:20",start_stop,end_stop_1],
+["18:30",start_stop,end_stop_1],["18:50",start_stop,end_stop_1],["19:10",start_stop,end_stop_1],["19:30",start_stop,end_stop_1],["19:50",start_stop,end_stop_1],["20:20",start_stop,end_stop_1],["21:00",start_stop,end_stop_1],
+["21:20",start_stop,end_stop_2],["21:50",start_stop,end_stop_2],["22:20",start_stop,end_stop_1]
 ];
-city_bus_1_time_return = [["05:55",6,0],["06:05",6,0],["06:15",6,0],["06:25",6,0],["06:40",5,0,[6]],
-["06:50",5,0,[6]],["07:05",5,0,[6]],["07:20",5,0,[6]],["07:35",5,0,[6]],["07:50",5,0,[6]],["08:05",5,0,[6]],
-["08:30",5,0,[6]],["09:00",5,0,[6]],["09:30",5,0,[6]],["10:00",5,0,[6]],["10:30",5,0,[6]],["11:00",5,0,[6]],
-["11:30",5,0,[6]],["12:00",5,0,[6]],["12:30",5,0,[6]],["13:00",5,0,[6]],["13:30",5,0,[6]],["14:00",5,0,[6]],
-["14:30",5,0,[6]],["15:00",5,0,[6]],["15:20",5,0,[6]],["15:40",5,0,[6]],["16:00",5,0,[6]],["16:15",5,0,[6]],
-["16:30",5,0,[6]],["16:40",5,0,[6]],["16:50",5,0,[6]],["17:00",5,0,[6]],["17:20",5,0,[6]],["17:40",5,0,[6]],
-["18:00",5,0,[6]],["18:15",6,0],["18:40",5,0,[6]],["19:00",5,0,[6]],["19:30",5,0,[6]],["20:00",5,0,[6]],
-["20:30",5,0,[6]],["21:00",5,0,[6]],["21:30",5,0,[6]]
+city_bus_1_time_return = [["05:55",end_stop_2,start_stop],["06:05",end_stop_2,start_stop],["06:15",end_stop_1,start_stop],["06:15",end_stop_2,start_stop],["06:25",end_stop_2,start_stop],["06:40",end_stop_1,start_stop],
+["06:50",end_stop_1,start_stop],["07:00",end_stop_2,start_stop],["07:20",end_stop_1,start_stop],["07:35",end_stop_1,start_stop],["07:50",end_stop_1,start_stop],["08:05",end_stop_1,start_stop],
+["08:30",end_stop_1,start_stop],["09:00",end_stop_1,start_stop],["09:30",end_stop_1,start_stop],["10:00",end_stop_1,start_stop],["10:30",end_stop_1,start_stop],["11:00",end_stop_1,start_stop],
+["11:30",end_stop_1,start_stop],["12:00",end_stop_1,start_stop],["12:30",end_stop_1,start_stop],["13:00",end_stop_1,start_stop],["13:30",end_stop_1,start_stop],["14:00",end_stop_1,start_stop],
+["14:30",end_stop_1,start_stop],["15:00",end_stop_1,start_stop],["15:20",end_stop_1,start_stop],["15:40",end_stop_1,start_stop],["16:00",end_stop_1,start_stop],["16:15",end_stop_1,start_stop],
+["16:30",end_stop_1,start_stop],["16:40",end_stop_1,start_stop],["17:00",end_stop_1,start_stop],["17:10",end_stop_1,start_stop],["17:30",end_stop_1,start_stop],["17:40",end_stop_1,start_stop],
+["18:00",end_stop_1,start_stop],["18:15",end_stop_2,start_stop],["18:40",end_stop_1,start_stop],["19:00",end_stop_1,start_stop],["19:30",end_stop_1,start_stop],["20:00",end_stop_1,start_stop],
+["20:30",end_stop_1,start_stop],["21:00",end_stop_1,start_stop],["21:30",end_stop_1,start_stop]
 ];
 
 // holiday schedule
-city_bus_1_holiday_time_go = [["06:40",0,5],["07:05",0,5],["07:30",0,5],["07:50",0,5],["08:10",0,5],
-["08:30",0,5],["08:50",0,5],["09:10",0,5],["09:30",0,5],["09:50",0,5],["10:20"],["10:50",0,5],["11:20",0,5],
-["11:50",0,5],["12:20",0,5],["12:50",0,5],["13:20",0,5],["13:50",0,5],["14:20"],["14:50",0,5],["15:20",0,5],
-["15:50",0,5],["16:10",0,5],["16:30",0,5],["16:50",0,6],["17:10",0,5],["17:30",0,6],["17:50",0,5],
-["18:10",0,5],["18:30",0,5],["18:50",0,5],["19:20",0,5],["19:50",0,5],["20:20",0,5],["20:50",0,5],
-["21:20",0,6],["21:50",0,6],["22:20",0,5]
+city_bus_1_holiday_time_go = [["06:40",start_stop,end_stop_1],["07:05",start_stop,end_stop_1],["07:30",start_stop,end_stop_1],["07:50",start_stop,end_stop_1],["08:10",start_stop,end_stop_1],
+["08:30",start_stop,end_stop_1],["08:50",start_stop,end_stop_1],["09:10",start_stop,end_stop_1],["09:30",start_stop,end_stop_1],["09:50",start_stop,end_stop_1],["10:20"],["10:50",start_stop,end_stop_1],["11:20",start_stop,end_stop_1],
+["11:50",start_stop,end_stop_1],["12:20",start_stop,end_stop_1],["12:50",start_stop,end_stop_1],["13:20",start_stop,end_stop_1],["13:50",start_stop,end_stop_1],["14:20"],["14:50",start_stop,end_stop_1],["15:20",start_stop,end_stop_1],
+["15:50",start_stop,end_stop_1],["16:10",start_stop,end_stop_1],["16:30",start_stop,end_stop_2],["16:50",start_stop,end_stop_2],["17:10",start_stop,end_stop_1],["17:30",start_stop,end_stop_2],["17:50",start_stop,end_stop_1],
+["18:10",start_stop,end_stop_1],["18:30",start_stop,end_stop_1],["18:50",start_stop,end_stop_1],["19:20",start_stop,end_stop_1],["19:50",start_stop,end_stop_1],["20:20",start_stop,end_stop_1],["20:50",start_stop,end_stop_1],
+["21:20",start_stop,end_stop_2],["21:50",start_stop,end_stop_2],["22:20",start_stop,end_stop_1]
 ];
-city_bus_1_holiday_time_return = [["05:55",6,0],["06:15",6,0],["06:35",6,0],["06:55",6,0],["07:20",5,0],["07:40",5,0],
-["08:00",5,0],["08:20",5,0],["08:40",5,0],["09:00",5,0],["09:30",5,0],["10:00",5,0],["10:30",5,0],["11:00",5,0],
-["11:30",5,0],["12:00",5,0],["12:30",5,0],["12:50"],["13:30",5,0],["14:00",5,0],["14:30",5,0],["15:00",5,0],
-["15:20",5,0],["15:40",5,0],["16:00",5,0],["16:20",5,0],["16:40",5,0],["16:50"],["17:20",5,0],["17:40",5,0],
-["18:00",5,0],["18:30",5,0],["19:00",5,0],["19:30",5,0],["20:00",5,0],["20:30",5,0],["21:00",5,0],["21:30",5,0]
+city_bus_1_holiday_time_return = [["05:55",end_stop_2,start_stop],["06:15",end_stop_2,start_stop],["06:35",end_stop_2,start_stop],["06:55",end_stop_2,start_stop],["07:15",end_stop_2,start_stop],["07:40",end_stop_1,start_stop],
+["08:00",end_stop_1,start_stop],["08:20",end_stop_1,start_stop],["08:40",end_stop_1,start_stop],["09:00",end_stop_1,start_stop],["09:30",end_stop_1,start_stop],["10:00",end_stop_1,start_stop],["10:30",end_stop_1,start_stop],["11:00",end_stop_1,start_stop],
+["11:30",end_stop_1,start_stop],["12:00",end_stop_1,start_stop],["12:30",end_stop_1,start_stop],["12:50"],["13:30",end_stop_1,start_stop],["14:00",end_stop_1,start_stop],["14:30",end_stop_1,start_stop],["15:00",end_stop_1,start_stop],
+["15:20",end_stop_1,start_stop],["15:40",end_stop_1,start_stop],["16:00",end_stop_1,start_stop],["16:20",end_stop_1,start_stop],["16:40",end_stop_1,start_stop],["16:50"],["17:20",end_stop_1,start_stop],["17:40",end_stop_1,start_stop],
+["18:00",end_stop_1,start_stop],["18:30",end_stop_1,start_stop],["19:00",end_stop_1,start_stop],["19:30",end_stop_1,start_stop],["20:00",end_stop_1,start_stop],["20:30",end_stop_1,start_stop],["21:00",end_stop_1,start_stop],["21:30",end_stop_1,start_stop]
 ];
