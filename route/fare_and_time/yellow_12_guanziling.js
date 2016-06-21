@@ -22,7 +22,7 @@ yellow_12_guanziling_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_12_guanziling_main_stop_name = ["關子嶺","南寮<br />路口","水火<br />同源","火山<br /><font face=\"標楷體\">碧</font>雲寺","大仙寺","仙草埔","寶泉橋","關子嶺"];
-yellow_12_guanziling_main_stop_time_consume = [0, 5, 9, 12, 23, 25, 32, 35];
+yellow_12_guanziling_main_stop_name = ["關子嶺","南寮<br />路口","水火<br />同源","火山<br /><font face=\"新細明體\">碧雲寺</font>","大仙寺","仙草埔","寶泉橋","關子嶺<br />(迄站)"];
+yellow_12_guanziling_main_stop_time_consume = [0, 4, 8, 10, 18, 20, 27, 30];
 yellow_12_guanziling_important_stop = [0, 7]; // 關子嶺, 關子嶺
-yellow_12_guanziling_time_go = [["07:40"],["08:40"],["09:40"],["10:40"],["11:40"],["12:40"],["13:40"],["14:40"],["15:40"],["16:20"]];
+yellow_12_guanziling_time_go = [["07:40"],["08:50"],["09:50"],["10:50"],["11:50"],["12:50"],["13:50"],["14:50"],["15:50"],["16:25"]];
