@@ -133,3 +133,5 @@ highway_bus_7229_route = '嘉義 ─ 後壁 ─ 新營 ─ 柳營奇美醫院';
 highway_bus_7407_route = '新營 ─ 鹽水 ─ 朴子';
 highway_bus_7408_route = '新營 ─ 鹽水 ─ 南鯤鯓 ─ 好美里';
 highway_bus_7410_route = '新營 ─ 鹽水 ─ 布袋港';
+
+STSP_green_route = '南科Park 17商場 ─ 高鐵臺南站　<div class="sub_title">南科巡迴巴士高鐵線</div>';

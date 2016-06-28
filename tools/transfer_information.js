@@ -137,6 +137,8 @@ link_highway_bus_8046A = '<a href="../highway_bus/highway_bus_8046A.html" target
 link_highway_bus_8046 = '<a href="../highway_bus/highway_bus_8046.html" target="_blank">8046</a>';
 link_highway_bus_8050 = '<a href="../highway_bus/highway_bus_8050.html" target="_blank">8050</a>';
 
+link_STSP_green = '<a href="../STSP/STSP_green.html" target="_blank">南科綠線</a>';
+
 transfer_tainan_railway_station = '<tr><th rowspan="8">臺南火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵臺南站</font></td></tr>\
@@ -319,7 +321,7 @@ transfer_nanhua_district_office = '<tr><th rowspan="2">南化公所</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_8035 + '</td></tr>';
 
-transfer_hsr_tainan_station = '<tr><th rowspan="6">高鐵臺南站</th>\
+transfer_hsr_tainan_station = '<tr><th rowspan="7">高鐵臺南站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'HSR.png"></td>\
 	<td><font color="orange">高鐵臺南站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
@@ -330,6 +332,8 @@ transfer_hsr_tainan_station = '<tr><th rowspan="6">高鐵臺南站</th>\
 	<td id="red">' + link_red_3 + '、' + link_red_14 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green_16 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'STSP_logo.png"></td>\
+	<td id="green">' + link_STSP_green + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_8042 + '</td></tr>';
 
