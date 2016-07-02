@@ -106,10 +106,11 @@ city_bus_14_route = '臺南火車站 ─ 億載金城';
 city_bus_15_route = '奇美醫院 ─ 大成國中';
 city_bus_17_route = '原住民文化會館 ─ 興達港觀光魚市';
 city_bus_18_route = '臺南站 ─ 塭南里 ─ 臺灣歷史博物館';
-city_bus_19_route = '安平原住民文化會館 ─ 大灣高中';
-city_bus_20_route = '南紡夢時代 ─ 安南醫院 ─ 海東國小';
+city_bus_19_route = '原住民文化會館 ─ 大灣高中';
+city_bus_20_route = '南紡購物中心 ─ 安南醫院 ─ 海東國小';
 city_bus_21_route = '臺南火車站 ─ 鹽行 ─ 永康工業區';
-city_bus_77_route = '安平原住民文化會館 ─ 南紡夢時代';
+city_bus_77_route = '原住民文化會館 ─ 南紡購物中心';
+city_bus_77_1_route = '原住民文化會館 ─ 安平古堡、億載金城<br /><div class="sub_title">安平環線假日公車</div>';
 
 tour_bus_66_route = '新營 ─ 烏山頭水庫 ─ 關子嶺 ─ 新營　<div class="sub_title">關子嶺烏山頭線</div>';
 tour_bus_88_route = '臺南公園 ─ 觀夕平台　<div class="sub_title">安平線</div>';
