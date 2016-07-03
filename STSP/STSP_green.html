@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,7 +12,7 @@
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	title_name = '南科巡迴巴士';
-	title_name_en = 'South Taiwan Science Park Bus';
+	title_name_en = 'South Taiwan Science Park Shuttle Bus';
 	map_display = false;
 	header_code();
 </script>
@@ -26,8 +26,8 @@
 	<a name="fare"></a>\
 	<div id="faretable" class="container">\
 		<div class="title">\
-			<h2>大台南公車 ─ ' + route_name + ' 票價表</h2>\
-			<span class="byline">Tainan Bus ' + route_name_en + ', Bus Fare</span>\
+			<h2>' + title_name + ' ─ ' + route_name + ' 票價表</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
 		</div>\
 		<div class="content">\
 			<h1><font color="red">FREE</font></h1>\
@@ -42,7 +42,7 @@
 	</div>\
 </div>');
 	block_time_schedule('Park 17商場','高鐵臺南站','<h1><font color="red">例假日及國定假日不行駛</font></h1>');
-	block_transfer(transfer_hsr_tainan_station);
+	block_transfer(transfer_park17 + transfer_hsr_tainan_station);
 	block_copyright();
 </script>
 </body>
