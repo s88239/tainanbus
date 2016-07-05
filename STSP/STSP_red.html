@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '紅線(北環東線)';
+	route_name_en = 'Red Line (North East Ring)';
+	route_file_name = 'STSP_red';
+	route_type = 'STSP';
+	route_interval = ['臺鐵南科站','台達電','Park 17商場'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	title_name = '南科巡迴巴士';
+	title_name_en = 'South Taiwan Science Park Shuttle Bus';
+	map_display = false;
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'科技之星交通','尖15~20離45~60','免費','http://www.pharoscloud.com/SmartBus/STSP_Bus/#');
+	document.write('<div id="wrapper3">\
+	<a name="fare"></a>\
+	<div id="faretable" class="container">\
+		<div class="title">\
+			<h2>' + title_name + ' ─ ' + route_name + ' 票價表</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
+		</div>\
+		<div class="content">\
+			<h1><font color="red">FREE</font></h1>\
+			<h1>免費</h1>\
+			<p>&nbsp;</p>\
+			<h3><font color="blue">17:00前行駛方向為臺鐵南科站到北環東線各廠</font></h3>\
+			<h3><font color="red">17:01後行駛方向為北環東線各廠到臺鐵南科站</font></h3>\
+			<h3>06:30~07:15上學時段部分班次行駛<span style="color: purple;">馨園宿舍-南科實中/臺鐵南科站</span>區間車</h3>\
+			<p>&nbsp;</p>\
+			<h3><font color="#333333"><u>臺鐵南科站搭乘位置：臺鐵南科站西側出口陸橋下</u></font></h3><p></p>\
+		</div>\
+	</div>\
+</div>');
+	block_time_schedule_diffreturn('臺鐵南科站-&gt;台達電-&gt;Park 17商場','Park 17商場-&gt;台達電-&gt;臺鐵南科站','<h1><font color="red">例假日及國定假日不行駛</font></h1>')
+	block_transfer(transfer_nanke_railway_station + transfer_NNKIEH + transfer_park17);
+	block_copyright();
+</script>
+</body>
+</html>

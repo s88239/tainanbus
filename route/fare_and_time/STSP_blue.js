@@ -4,13 +4,13 @@
 STSP_blue_main_stop_name = ["Park 17<br />商場","南科<br />實中","民生<br />水塔","臺鐵<br />南科站","南科<br />實中","社區<br />中心","育成<br />中心","聯電","群創<br />D廠","迎曦湖","Park 17<br />商場"];
 STSP_blue_main_stop_time_consume = [0, 5, 3, 7, 10, 13, 16, 17, 19, 21, 24];
 STSP_blue_important_stop = [0, 3, 5, 7]; // Park 17商場, 臺鐵南科站, 社區中心, 聯電
-var skip_stop = 1;
+var skip_stop = 1; // 南科實中
 var TRA_NK = 3;
-STSP_blue_time_go = [["06:20",[skip_stop]],["06:40",[skip_stop]],["07:05",[skip_stop]],["07:18",[skip_stop]],["07:20",[skip_stop]],
-["07:48",[skip_stop]],["07:56",[skip_stop]],["07:58",[skip_stop]],["08:21",[skip_stop]],["08:25",[skip_stop]],["09:05",[skip_stop]],
+STSP_blue_time_go = [["06:20",[skip_stop]],["06:40",[skip_stop]],["07:05",[skip_stop,[TRA_NK+1,1]]],["07:18",[skip_stop,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["07:20",[skip_stop,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],
+["07:48",[skip_stop,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["07:56",[skip_stop,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["07:58",[skip_stop,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["08:21",[skip_stop,[TRA_NK+1,1]]],["08:25",[skip_stop,[TRA_NK+1,1]]],["09:05",[skip_stop]],
 ["09:23",[skip_stop]],["10:37",[skip_stop]],["11:05",[skip_stop]],["11:32",[skip_stop]],["12:11",[skip_stop]],["13:30",[skip_stop]],
-["14:35",[skip_stop]],["15:22",[skip_stop]],["16:06",[[skip_stop+1,5]]],["16:35",[skip_stop]],["17:00",0,TRA_NK,[[skip_stop+1,5]]],
-["17:00",0,TRA_NK,[[skip_stop+1,5]]],["17:20",skip_stop,TRA_NK,[[skip_stop+1,5]]],["17:20",skip_stop,TRA_NK,[[skip_stop+1,5]]]
+["14:35",[skip_stop]],["15:22",[skip_stop]],["16:06",[[skip_stop+1,5]]],["16:35",[skip_stop]],["17:00",0,TRA_NK,[[skip_stop+1,5,TRA_NK,1]]],
+["17:00",0,TRA_NK,[[skip_stop+1,5,TRA_NK,1]]],["17:20",skip_stop,TRA_NK,[[skip_stop+1,5]]],["17:20",skip_stop,TRA_NK,[[skip_stop+1,5]]]
 ];
 
 // The name of return stops are different

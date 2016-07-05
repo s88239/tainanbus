@@ -138,7 +138,7 @@ link_highway_bus_8046A = '<a href="../highway_bus/highway_bus_8046A.html" target
 link_highway_bus_8046 = '<a href="../highway_bus/highway_bus_8046.html" target="_blank">8046</a>';
 link_highway_bus_8050 = '<a href="../highway_bus/highway_bus_8050.html" target="_blank">8050</a>';
 
-link_STSP_red = '<a href="#transfer">南科紅線</a>';
+link_STSP_red = '<a href="../STSP/STSP_red.html" target="_blank">南科紅線</a>';
 link_STSP_orange = '<a href="#transfer">南科橘線</a>';
 link_STSP_blue = '<a href="../STSP/STSP_blue.html" target="_blank">南科藍線</a>';
 link_STSP_green = '<a href="../STSP/STSP_green.html" target="_blank">南科綠線</a>';
@@ -304,12 +304,11 @@ transfer_shanhua_railway_station = '<tr><th rowspan="3">善化轉運站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green_1 + '、' + link_green_2 + '、' + link_green_3 + '、' + link_green_4 + '、' + link_green_11 + '</td></tr>';
 
-transfer_nanke_railway_station = '<tr><th rowspan="3">南科火車站</th>\
+transfer_nanke_railway_station = '<tr><th rowspan="3">臺鐵南科站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵南科站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'STSP_logo.png"></td>\
-	<td id="tour_bus"><p>' + link_STSP_red + '、' + link_STSP_orange + '、' + link_STSP_blue + '、</p>'
-	+ link_STSP_green + '</td></tr>\
+	<td id="tour_bus">' + link_STSP_red + '、' + link_STSP_orange + '、' + link_STSP_blue + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green_4 + ' <font color="#FFFFFF" size="-1">(臺鐵南科站東側陸橋下)</font></td></tr>';
 
