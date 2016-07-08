@@ -139,7 +139,7 @@ link_highway_bus_8046 = '<a href="../highway_bus/highway_bus_8046.html" target="
 link_highway_bus_8050 = '<a href="../highway_bus/highway_bus_8050.html" target="_blank">8050</a>';
 
 link_STSP_red = '<a href="../STSP/STSP_red.html" target="_blank">南科紅線</a>';
-link_STSP_orange = '<a href="#transfer">南科橘線</a>';
+link_STSP_orange = '<a href="../STSP/STSP_orange.html" target="_blank">南科橘線</a>';
 link_STSP_blue = '<a href="../STSP/STSP_blue.html" target="_blank">南科藍線</a>';
 link_STSP_green = '<a href="../STSP/STSP_green.html" target="_blank">南科綠線</a>';
 

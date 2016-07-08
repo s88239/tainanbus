@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	route_name = '藍線(南環線)';
-	route_name_en = 'Blue Line';
-	route_file_name = 'STSP_blue';
+	route_name = '橘線(北環西線)';
+	route_name_en = 'Orange Line';
+	route_file_name = 'STSP_orange';
 	route_type = 'STSP';
-	route_interval = ['臺鐵南科站','聯電','Park 17商場'];
+	route_interval = ['臺鐵南科站','台積電','Park 17商場'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -33,15 +33,14 @@
 			<h1><font color="red">FREE</font></h1>\
 			<h1>免費</h1>\
 			<p>&nbsp;</p>\
-			<h3><font color="blue">17:00前行駛方向為臺鐵南科站到南環各廠</font></h3>\
-			<h3><font color="red">17:01後行駛方向為南環各廠到臺鐵南科站</font></h3>\
-			<h3>16:00~17:00放學時段部分班次先經南科實中再到臺鐵南科站</h3>\
+			<h3><font color="blue">17:00前行駛方向為臺鐵南科站到北環西線各廠</font></h3>\
+			<h3><font color="red">17:01後行駛方向為北環西線各廠到臺鐵南科站</font></h3>\
 			<p>&nbsp;</p>\
 			<h3><font color="#333333"><u>臺鐵南科站搭乘位置：臺鐵南科站西側出口陸橋下</u></font></h3><p></p>\
 		</div>\
 	</div>\
 </div>');
-	block_time_schedule_diffreturn('臺鐵南科站-&gt;聯電-&gt;Park 17商場','Park 17商場-&gt;聯電-&gt;臺鐵南科站','<h1><font color="red">例假日及國定假日不行駛</font></h1><h3><font color="#2231FF">臺鐵南科站時刻為離站時刻</font></h3>')
+	block_time_schedule_diffreturn('臺鐵南科站-&gt;台積電-&gt;Park 17商場','Park 17商場-&gt;台積電-&gt;臺鐵南科站','<h1><font color="red">例假日及國定假日不行駛</font></h1><p><span style="font-weight: bold">「*」班次：11:57到臺鐵南科站，12:18臺鐵南科站開</span></p>')
 	block_transfer(transfer_nanke_railway_station + transfer_NNKIEH + transfer_park17);
 	block_copyright();
 </script>
