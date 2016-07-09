@@ -81,6 +81,7 @@ yellow_6_1_route = '新營 ─ 菁寮 ─ 土溝 ─ 白河<br /><div class="sub
 yellow_7_route = '新營 ─ 東山 ─ 青山 ─ 仙公廟';
 yellow_9_route = '新營 ─ 後壁火車站 ─ 高鐵嘉義站';
 yellow_10_route = '後壁 ─ 白河 ─ 六重溪';
+yellow_10_1_route = '白河 ─ 六重溪 ─ 檳榔腳';
 yellow_11_route = '白河 ─ 東山 ─ 青山';
 yellow_11_1_route = '白河 ─ 東山 ─ 李子園';
 yellow_12_route = '白河 ─ 關子嶺';

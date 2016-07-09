@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '黃10-1';
+	route_name_en = 'Yellow 10-1';
+	route_file_name = 'yellow_10_1';
+	route_type = 'yellow';
+	route_interval = ['白河','六重溪','檳榔腳'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'新營客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1510&locale=zh_TW');
+	block_fare(0, null);
+	block_time_schedule('白河','檳榔腳','<p>「南勢仔」、「頂埔」、「鎮安宮」、「六戶仔」、「崁下仔」、「檳榔腳」、「石牌」為單邊設站</p>\
+		<p><span style="color: darkblue;">考量該路線道路較為狹窄及維護人、車安全因素，將以九人座小巴提供行駛服務</span></p>');
+	block_transfer(transfer_baihe);
+	block_copyright();
+</script>
+</body>
+</html>
