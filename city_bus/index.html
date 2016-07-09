@@ -8,17 +8,10 @@
 	<script src="../tools/route_infor.js"></script>
 </head>
 <body>
-<div align="center">
- <table>
- <tr>
-  <td ><a href="../index.html"><img src="../img/city_bus_logo.png"/></a></td><td></td>
- </tr>
- <tr>
-  <td align="center">
-    <table id="bg_table">
-      <br />
-      <script type="text/javascript">
-      	document.write('<tr><td><a href="city_bus_0.html" class="city_busButton">0</a></td><td>'+ city_bus_0_route +'</td>\
+<a href="../index.html"><img id="logo" src="../img/city_bus_logo.png"/></a>
+<table align="center" id="bg_table">
+	<script type="text/javascript">
+		document.write('<tr><td><a href="city_bus_0.html" class="city_busButton">0</a></td><td>'+ city_bus_0_route +'</td>\
 			<td><a href="city_bus_15.html" class="city_busButton">15</a></td><td>'+ city_bus_15_route +'</td></tr>\
 		<tr><td><a href="city_bus_1.html" class="city_busButton">1</a></td><td>'+ city_bus_1_route +'</td>\
 			<td><a href="city_bus_17.html" class="city_busButton">17</a></td><td>'+ city_bus_17_route +'</td></tr>\
@@ -36,22 +29,17 @@
 			<td><a href="city_bus_77_1.html" class="city_busButton">77-1</a></td><td>'+ city_bus_77_1_route +'</td></tr>\
 		<tr><td><a href="city_bus_10.html" class="city_busButton">10</a></td><td>'+ city_bus_10_route +'</td>\
 			<td><a href="../tour_bus/tour_bus_88.html" class="tourButton">88</a></td><td>'+ tour_bus_88_route +'</td></tr>\
-      	<tr><td><a href="city_bus_11.html" class="city_busButton">11</a></td><td>'+ city_bus_11_route +'</td>\
+		<tr><td><a href="city_bus_11.html" class="city_busButton">11</a></td><td>'+ city_bus_11_route +'</td>\
 			<td><a href="../tour_bus/tour_bus_99.html" class="tourButton">99</a></td><td>'+ tour_bus_99_route +'</td></tr>\
 		<tr><td><a href="city_bus_14.html" class="city_busButton">14</a></td><td>'+ city_bus_14_route +'</td>\
-      		<td><a href="../highway_bus/highway_bus_239.html" class="tourButton">239</a></td><td>'+ highway_bus_239_route +'</td></tr>');
-	  </script>
-	</table>
-	<p>&nbsp;</p><p>&nbsp;</p>
-  </td>
- </tr>
- <tr>
-   <td valign="top"><a href="../map_overview.php?type=city_bus" target="_blank">
-	 <img src="../route/overview/city_bus_s.jpg" width="900"></a>
-	 <p>&nbsp;</p><p>&nbsp;</p>
-   </td>
- </tr>
- </table>
+			<td><a href="../highway_bus/highway_bus_239.html" class="tourButton">239</a></td><td>'+ highway_bus_239_route +'</td></tr>');
+	</script>
+</table>
+<div id="map">
+	<a href="../map_overview.php?type=city_bus" target="_blank">
+		<img src="../route/overview/city_bus_s.jpg">
+	</a>
 </div>
+
 </body>
 </html>

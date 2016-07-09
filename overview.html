@@ -5,11 +5,15 @@
 <title>大台南公車 － 總覽 | Tainan Bus for FUN</title>
 <link rel="SHORTCUT ICON" href="img/web_icon.ico">
 <script src="tools/route_infor.js"></script>
+<script type="text/javascript" src="tools/jquery.min.js"></script>
 <style type="text/css">
 @import url("css/busline.css");
 @import url("css/bus_button.css");
-td{
-	padding: 8px;
+html, body {
+	margin: 0;
+}
+#transfer_info td {
+	padding: 6px;
 }
 </style>
 </head>
@@ -19,6 +23,7 @@ function get_button_string(file_name, ch_name){
 	if(type=='city') type += '_' + file_name.split('_')[1];
 	category = (type=='hsr' || type=='tour' || type=='highway') ? type + '_' + file_name.split('_')[1] : type;
 	if(type=='highway') type = 'tour';
+	if(type=='STSP') type = file_name.split('_')[1];
 
 	line_string = '<tr><td><a href="' + category + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
 	+ ch_name + '</a></td><td>' + eval(file_name + '_route').replace('　','<br />') + '</td></tr>';
@@ -67,6 +72,7 @@ function get_transfer_info(bus_stop){
 		<table id="bg_table_overview" align="center">'
 		+ get_button_string('city_bus_15', '15')
 		+ get_button_string('city_bus_17', '17')
+		+ get_button_string('city_bus_77_1', '77-1')
 		+ get_button_string('blue_23', '藍23')
 		+ get_button_string('blue_24', '藍24')
 		+ get_button_string('hsr_shuttle_h31', 'H31')
@@ -106,7 +112,12 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('green_2', '綠2')
 		+ get_button_string('green_3', '綠3')
 		+ get_button_string('green_4', '綠4')
-		+ get_button_string('green_11', '綠11');
+		+ get_button_string('green_11', '綠11')
+		+ '</table>\
+		<h1 align="center">善化區南科</h1>\
+		<table id="bg_table_overview" align="center">'
+		+ get_button_string('STSP_red', '南科紅線')
+		+ get_button_string('STSP_orange', '南科橘線');
 		break;
 	case '佳里':
 		div_string += get_button_string('blue', '藍幹線')
@@ -140,6 +151,7 @@ function get_transfer_info(bus_stop){
 	case '白河':
 		div_string += get_button_string('yellow', '黃幹線')
 		+ get_button_string('yellow_10', '黃10')
+		+ get_button_string('yellow_10_1', '黃10-1')
 		+ get_button_string('yellow_11', '黃11')
 		+ get_button_string('yellow_11_1', '黃11-1')
 		+ get_button_string('yellow_12', '黃12')
@@ -210,7 +222,8 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('hsr_shuttle_h31', 'H31')
 		+ get_button_string('hsr_shuttle_h62', 'H62')
 		+ get_button_string('highway_bus_8042', '8042')
-		+ get_button_string('highway_bus_8050', '8050');
+		+ get_button_string('highway_bus_8050', '8050')
+		+ get_button_string('STSP_green', '南科綠線');;
 		break;
 	case '仁德':
 		div_string += get_button_string('red', '紅幹線')
@@ -251,7 +264,11 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('green_6', '綠6')
 		+ get_button_string('green_7', '綠7')
 		+ get_button_string('green_11', '綠11')
-		+ get_button_string('orange_12', '橘12');
+		+ get_button_string('orange_12', '橘12')
+		+ get_button_string('STSP_red', '南科紅線')
+		+ get_button_string('STSP_orange', '南科橘線')
+		+ get_button_string('STSP_blue', '南科藍線')
+		+ get_button_string('STSP_green', '南科綠線');
 		break;
 	case '山上':
 		div_string += get_button_string('green', '綠幹線')
@@ -434,7 +451,10 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('orange_12', '橘12');
 		break;
 	case '南科火車站':
-		div_string += get_button_string('green_4', '綠4');
+		div_string += get_button_string('STSP_red', '南科紅線')
+		+ get_button_string('STSP_orange', '南科橘線')
+		+ get_button_string('STSP_blue', '南科藍線')
+		+ get_button_string('green_4', '綠4');
 		break;
 	case '永康火車站':
 		div_string += get_button_string('city_bus_20', '20')
@@ -470,7 +490,8 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('red_3', '紅3')
 		+ get_button_string('red_14', '紅14')
 		+ get_button_string('green_16', '綠16')
-		+ get_button_string('highway_bus_8042', '8042');
+		+ get_button_string('highway_bus_8042', '8042')
+		+ get_button_string('STSP_green', '南科綠線');;
 		break;
 	}
 	div_string += '</table>';
@@ -545,20 +566,26 @@ function get_transfer_info(bus_stop){
 	<area shape="rect" coords="209,535,279,551.79" href="javascript:get_transfer_info('長榮大學火車站')" />
 	<area shape="rect" coords="257,519,299,535.79" href="javascript:get_transfer_info('沙崙火車站')" />
 </map>
-<div align="center">
- <table>
- <tr>
-  <td><a href="index.html"><img src="img/Tainan_City_bus.png" width="242" height="60"/></a></td>
-  <td rowspan="2"><img src="img/tainan_bus_overview.png" alt="臺南市鐵路及公車路線總圖" height="600" usemap="#tainan_map"></td>
- </tr>
- <tr>
-  <td><div id="transfer_info" style="text-align:center; color: blue; width: 450px; height: 520px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"><h1>請點擊右方地圖查詢路線</h1>
-  <font color="red">目前憑電子票證搭乘大臺南幹支線公車享8公里免費，大臺南公車2小時內轉乘再優惠9元，台鐵轉公車亦享單向轉乘優惠9元，歡迎多加利用。
-  </font>
-  </div></td>
- </tr>
- </table>
-</div>
+
+<table align="center" height="100%" width="90%">
+	<tr>
+		<td>
+			<a href="index.html"><img src="img/tainanbusforfun.png" height="50px" style="margin-top: 5px;" /></a>
+			<div id="transfer_info" style="text-align:center; color: blue; width: 100%; height: 520px; top: 100px; left:0; right:0; margin-left:auto; margin-right:auto; overflow-y: auto;"><h1>請點擊右方地圖查詢路線</h1>
+				<font color="red">目前憑電子票證搭乘大臺南幹支線公車享8公里免費，大臺南公車2小時內轉乘再優惠9元，台鐵轉公車亦享單向轉乘優惠9元，歡迎多加利用。</font>
+			</div>
+		</td>
+		<td rowspan="2" width="742px">
+			<img src="img/tainan_bus_overview.png" alt="臺南市鐵路及公車路線總圖" width="742px" height="600px" usemap="#tainan_map">
+		</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+$(document).ready(function($) {
+	$('#transfer_info').height($(window).height()-$('img').eq(0).height()-15);
+})
+</script>
 </body>
 
 </html>

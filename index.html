@@ -6,13 +6,18 @@
 	<link rel="SHORTCUT ICON" href="img/web_icon.ico" />
 	<link href="bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/main.css" rel="stylesheet" type="text/css" />
-	<script src="tools/jquery-2.1.4.min.js"></script>
+	<script src="tools/jquery.min.js"></script>
 	<script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
 	<script src="bootstrap-3.2.0/js/bootstrap-typeahead.js"></script>
-	<meta name="description" content="大台南公車 時刻表、路線圖、票價表，興南客運、新營客運、府城客運" />
+	<meta name="description" content="大台南公車 時刻表、路線圖、票價表，興南客運、新營客運、府城客運、四方電巴、高雄客運、嘉義客運，紅幹線、綠幹線、藍幹線、橘幹線、黃幹線、棕幹線、台南市公車、高鐵接駁車、南科接駁車、台灣好行、公路客運，悠遊卡、一卡通、台南市民卡" />
 </head>
+<style type="text/css">
+html, body {
+	margin: 0;
+}
+</style>
 <script type="text/javascript">
-route_arr = ["0左/0右","1","2","3","5","6","7","9","10","11","14","15","17","18","19","20","21","66 (關子嶺烏山頭線)","77","88 (安平線)","99 (台江線)","7702 (鹽鄉濱海線)","綠幹線 (green)","綠1 (g1)","綠2 (g2)","綠3 (g3)","綠4 (g4)","綠5 (g5)","綠6 (g6)","綠7 (g7)","綠10 (g10)","綠11 (g11)","綠12 (g12)","綠13 (g13)","綠14 (g14)","綠15 (g15)","綠16 (g16)","綠17 (g17)","綠20 (g20)","綠20-1 (g20-1)","綠21 (g21)","綠22 (g22)","綠23 (g23)","綠24 (g24)","綠25 (g25)","綠26 (g26)","綠27 (g27)","藍幹線 (blue)","藍1 (b1)","藍2 (b2)","藍3 (b3)","藍10 (b10)","藍11 (b11)","藍12 (b12)","藍13 (b13)","藍20 (b20)","藍21 (b21)","藍22 (b22)","藍23 (b23)","藍24 (b24)","藍25 (b25)","紅幹線 (red)","紅1 (r1)","紅2 (r2)","紅3 (r3)","紅3-1 (r3-1)","紅4 (r4)","紅10 (r10)","紅11 (r11)","紅12 (r12)","紅13 (r13)","紅14 (r14)","橘幹線 (orange)","橘1 (o1)","橘2 (o2)","橘3 (o3)","橘4 (o4)","橘5 (o5)","橘10 (o10)","橘11 (o11)","橘12 (o12)","橘20 (o20)","棕幹線 (brown)","棕1 (br1)","棕2 (br2)","棕3 (br3)","棕3-1 (br3-1)","棕10 (br10)","棕11 (br11)","黃幹線 (yellow)","黃1 (y1)","黃2 (y2)","黃3 (y3)","黃4 (y4)","黃5 (y5)","黃6 (y6)","黃6-1 (y6-1)","黃7 (y7)","黃9 (y9)","黃10 (y10)","黃11 (y11)","黃11-1 (y11-1)","黃12 (y12)","黃12-1 (y12-1)","黃13 (y13)","黃14 (y14)","黃14-1 (y14-1)","黃15 (y15)","黃20 (y20)","關子嶺假日公車","高鐵快捷H31(市府線)","高鐵快捷H62(奇美線)","239","8035","8042 (沙旗美月世界快線)","8046A (高南雙城快線)","8046","8050","7207","7208","7210","7214","7229","7407","7408","7410"];
+route_arr = ["0左/0右","1","2","3","5","6","7","9","10","11","14","15","17","18","19","20","21","66 (關子嶺烏山頭線)","77","77-1","88 (安平線)","99 (台江線)","7702 (鹽鄉濱海線)","綠幹線 (green)","綠1 (g1)","綠2 (g2)","綠3 (g3)","綠4 (g4)","綠5 (g5)","綠6 (g6)","綠7 (g7)","綠10 (g10)","綠11 (g11)","綠12 (g12)","綠13 (g13)","綠14 (g14)","綠15 (g15)","綠16 (g16)","綠17 (g17)","綠20 (g20)","綠20-1 (g20-1)","綠21 (g21)","綠22 (g22)","綠23 (g23)","綠24 (g24)","綠25 (g25)","綠26 (g26)","綠27 (g27)","藍幹線 (blue)","藍1 (b1)","藍2 (b2)","藍3 (b3)","藍10 (b10)","藍11 (b11)","藍12 (b12)","藍13 (b13)","藍20 (b20)","藍21 (b21)","藍22 (b22)","藍23 (b23)","藍24 (b24)","藍25 (b25)","紅幹線 (red)","紅1 (r1)","紅2 (r2)","紅3 (r3)","紅3-1 (r3-1)","紅4 (r4)","紅10 (r10)","紅11 (r11)","紅12 (r12)","紅13 (r13)","紅14 (r14)","橘幹線 (orange)","橘1 (o1)","橘2 (o2)","橘3 (o3)","橘4 (o4)","橘5 (o5)","橘10 (o10)","橘11 (o11)","橘12 (o12)","橘20 (o20)","棕幹線 (brown)","棕1 (br1)","棕2 (br2)","棕3 (br3)","棕3-1 (br3-1)","棕10 (br10)","棕11 (br11)","黃幹線 (yellow)","黃1 (y1)","黃2 (y2)","黃3 (y3)","黃4 (y4)","黃5 (y5)","黃6 (y6)","黃6-1 (y6-1)","黃7 (y7)","黃9 (y9)","黃10 (y10)","黃10-1 (y10-1)","黃11 (y11)","黃11-1 (y11-1)","黃12 (y12)","黃12-1 (y12-1)","黃13 (y13)","黃14 (y14)","黃14-1 (y14-1)","黃15 (y15)","黃20 (y20)","關子嶺假日公車","高鐵快捷H31(市府線)","高鐵快捷H62(奇美線)","239","8035","8042 (沙旗美月世界快線)","8046A (高南雙城快線)","8046","8050","7207","7208","7210","7214","7229","7407","7408","7410","南科紅線(北環東線)","南科橘線(北環西線)","南科藍線(南環線)","南科綠線(高鐵線)"];
 function search_route(route_str){
 	isFinished = false;
 	route_str = route_str.split(' ')[0];
@@ -47,6 +52,11 @@ function search_route(route_str){
 			if(route_str=='高鐵快捷H31(市府線)') route = 'hsr_shuttle/hsr_shuttle_h31';
 			else if(route_str=='高鐵快捷H62(奇美線)') route = 'hsr_shuttle/hsr_shuttle_h62';
 			else if(route_str=='66'||route_str=='88'||route_str=='99'||route_str=='7702') route = 'tour_bus/tour_bus_' + route_str; // tour bus
+			else if(route_str=='77-1') route = 'city_bus/city_bus_77_1';
+			else if(route_str=='南科紅線(北環東線)') route = 'STSP/STSP_red';
+			else if(route_str=='南科橘線(北環西線)') route = 'STSP/STSP_orange';
+			else if(route_str=='南科藍線(南環線)') route = 'STSP/STSP_blue';
+			else if(route_str=='南科綠線(高鐵線)') route = 'STSP/STSP_green';
 			else if(!isNaN(route_str) && route_str.length<=2) route = 'city_bus/city_bus_' + route_str; // city_bus
 			else route = 'highway_bus/highway_bus_' + route_str; // highway_bus
 			isFinished = true;
@@ -66,7 +76,7 @@ $(document).ready(function($) {
    };
  
    $('#route_search').typeahead({
-      items: 99,
+      items: 20,
       source: function(query, process) {
          return route_arr;
       },
@@ -79,109 +89,106 @@ $(document).ready(function($) {
 })
 </script>
 <body>
-<table>
-	<tr>
-		<td>
-			<table>
-				<tr>
-					<td>
-						<img src="img/Tainan_City_bus.png" align="left" height="80">
-					</td>
-					<td style="padding: 0 50px 0 30px;">
-						<font face="Segoe Print" color="#FFFFFF" size="5">Tainan Bus for FUN</font>
-					</td>
-					<td>
-						<label for="route_search"><font size="4">路線快速搜尋：</font></label>
-						<input id="route_search" type="text" data-provide="typeahead" placeholder="請輸入欲搜尋的路線名稱">
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<table class="button">
-				<tr>
-					<td colspan="2" bgcolor="#2c397d" onMouseOver="this.style.backgroundColor='#2c00DF';" onMouseOut="this.style.backgroundColor='#2c397d';">
-						<a href="overview.html" id="box2">
-							<span id="text">大台南公車總覽</span><br/>
-							<span id="entext">Overview</span>
-						</a>
-					</td>
-					<td bgcolor="#fc5656" onMouseOver="this.style.backgroundColor='#BC3C56';" onMouseOut="this.style.backgroundColor='#fc5656';">
-						<a href="tour_bus/index.html" id="box">
-							<span id="text">台灣好行</span><br/>
-							<span id="entext">Taiwan Tourist</span>
-						</a>
-					</td>
-					<td bgcolor="#337c56" onMouseOver="this.style.backgroundColor='#49C347';" onMouseOut="this.style.backgroundColor='#337c56';">
-						<a href="highway_bus/index.html" id="box">
-							<span id="text">公路客運</span><br/>
-							<span id="entext">Highway Bus</span>
-						</a>
-					</td>
-					<td bgcolor="#fc7cc6" onMouseOver="this.style.backgroundColor='#E942C6';" onMouseOut="this.style.backgroundColor='#fc7cc6';">
-						<a href="hsr_shuttle/index.html" id="box">
-							<span id="text">高鐵接駁車</span><br/>
-							<span id="entext">HSR Shuttle Bus</span>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td bgcolor="#3eb034" onMouseOver="this.style.backgroundColor='#009900';" onMouseOut="this.style.backgroundColor='#3eb034';">
-						<a href="green/index.html" id="box">
-							<span id="text">綠線</span><br/>
-							<span id="entext">Green Line</span>
-						</a>
-					</td>
-					<td bgcolor="#0191d8" onMouseOver="this.style.backgroundColor='#00CCFF';" onMouseOut="this.style.backgroundColor='#0191d8';">
-						<a href="blue/index.html" id="box">
-							<span id="text">藍線</span><br/>
-							<span id="entext">Blue Line</span>
-						</a>
-					</td>
-					<td bgcolor="#e22500" onMouseOver="this.style.backgroundColor='#882700';" onMouseOut="this.style.backgroundColor='#e22500';">
-						<a href="red/index.html" id="box">
-							<span id="text">紅線</span><br/>
-							<span id="entext">Red Line</span>
-						</a>
-					</td>
-					<td colspan="2" bgcolor="#884556" onMouseOver="this.style.backgroundColor='#C1587C';" onMouseOut="this.style.backgroundColor='#884556';">
-						<a href="STSP/index.html" id="box2">
-							<span id="text">南科接駁車</span><br/>
-							<span id="entext">South Taiwan Science Park Shuttle Bus</span>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2" bgcolor="#509197" onMouseOver="this.style.backgroundColor='#50DD97';" onMouseOut="this.style.backgroundColor='#509197';">
-						<a href="city_bus/index.html" id="box2">
-							<span id="text">市區公車</span><br/>
-							<span id="entext">Urban Bus</span>
-						</a>
-					</td>
-					<td bgcolor="#ff7f05" onMouseOver="this.style.backgroundColor='#FF9E34';" onMouseOut="this.style.backgroundColor='#ff7f05';">
-						<a href="orange/index.html" id="box">
-							<span id="text">橘線</span><br/>
-							<span id="entext">Orange Line</span>
-						</a>
-					</td>
-					<td bgcolor="#6b3b37" onMouseOver="this.style.backgroundColor='#7C6C37';" onMouseOut="this.style.backgroundColor='#6b3b37';">
-						<a href="brown/index.html" id="box">
-							<span id="text">棕線</span><br/>
-							<span id="entext">Brown Line</span>
-						</a>
-					</td>
-					<td bgcolor="#fdd100" onMouseOver="this.style.backgroundColor='#DC9700';" onMouseOut="this.style.backgroundColor='#fdd100';">
-						<a href="yellow/index.html" id="box">
-							<span id="text">黃線</span><br/>
-							<span id="entext">Yellow Line</span>
-						</a>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
+<div id="info">
+	<p>
+		<a href="https://github.com/s88239/tainanbus/commits/gh-pages">網站更新紀錄</a> | 
+		<a href="intro.html" rel="nofollow">關於本站</a>
+	</p>
+</div>
+<div id="header">
+	<img src="img/tainanbusforfun.png" />
+	<div id="search">
+		<label for="route_search"><font size="4">路線快速搜尋：</font></label>
+		<input id="route_search" size="30" type="text" data-provide="typeahead" placeholder="請輸入欲搜尋的路線名稱" />
+	</div>
+</div>
+<div class="button">
+	<table>
+		<tr>
+			<td colspan="2" bgcolor="#5500DD" onMouseOver="this.style.backgroundColor='#0000AA';" onMouseOut="this.style.backgroundColor='#5500DD';">
+				<a href="overview.html" class="box2">
+					<span class="text">大台南公車總覽</span><br/>
+					<span class="entext">Overview</span>
+				</a>
+			</td>
+			<td bgcolor="#fc5656" onMouseOver="this.style.backgroundColor='#BC3C56';" onMouseOut="this.style.backgroundColor='#fc5656';">
+				<a href="tour_bus/index.html" class="box">
+					<span class="text">台灣好行</span><br/>
+					<span class="entext">Taiwan Tourist</span>
+				</a>
+			</td>
+			<td bgcolor="#337c56" onMouseOver="this.style.backgroundColor='#49C347';" onMouseOut="this.style.backgroundColor='#337c56';">
+				<a href="highway_bus/index.html" class="box">
+					<span class="text">公路客運</span><br/>
+					<span class="entext">Highway Bus</span>
+				</a>
+			</td>
+			<td bgcolor="#fc7cc6" onMouseOver="this.style.backgroundColor='#E942C6';" onMouseOut="this.style.backgroundColor='#fc7cc6';">
+				<a href="hsr_shuttle/index.html" class="box">
+					<span class="text">高鐵接駁車</span><br/>
+					<span class="entext">HSR Shuttle Bus</span>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#3eb034" onMouseOver="this.style.backgroundColor='#009900';" onMouseOut="this.style.backgroundColor='#3eb034';">
+				<a href="green/index.html" class="box">
+					<span class="text">綠線</span><br/>
+					<span class="entext">Green Line</span>
+				</a>
+			</td>
+			<td bgcolor="#0191d8" onMouseOver="this.style.backgroundColor='#00CCFF';" onMouseOut="this.style.backgroundColor='#0191d8';">
+				<a href="blue/index.html" class="box">
+					<span class="text">藍線</span><br/>
+					<span class="entext">Blue Line</span>
+				</a>
+			</td>
+			<td bgcolor="#e22500" onMouseOver="this.style.backgroundColor='#882700';" onMouseOut="this.style.backgroundColor='#e22500';">
+				<a href="red/index.html" class="box">
+					<span class="text">紅線</span><br/>
+					<span class="entext">Red Line</span>
+				</a>
+			</td>
+			<td colspan="2" bgcolor="#509197" onMouseOver="this.style.backgroundColor='#50DD97';" onMouseOut="this.style.backgroundColor='#509197';">
+				<a href="STSP/index.html" class="box2">
+					<span class="text">南科接駁車</span><br/>
+					<span class="entext">Southern Taiwan Science Park Shuttle Bus</span>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" bgcolor="#B94FFF" onMouseOver="this.style.backgroundColor='#A500CC';" onMouseOut="this.style.backgroundColor='#B94FFF';">
+				<a href="city_bus/index.html" class="box2">
+					<span class="text">市區公車</span><br/>
+					<span class="entext">Urban Bus</span>
+				</a>
+			</td>
+			<td bgcolor="#ff7f05" onMouseOver="this.style.backgroundColor='#FF9E34';" onMouseOut="this.style.backgroundColor='#ff7f05';">
+				<a href="orange/index.html" class="box">
+					<span class="text">橘線</span><br/>
+					<span class="entext">Orange Line</span>
+				</a>
+			</td>
+			<td bgcolor="#6b3b37" onMouseOver="this.style.backgroundColor='#7C6C37';" onMouseOut="this.style.backgroundColor='#6b3b37';">
+				<a href="brown/index.html" class="box">
+					<span class="text">棕線</span><br/>
+					<span class="entext">Brown Line</span>
+				</a>
+			</td>
+			<td bgcolor="#fdd100" onMouseOver="this.style.backgroundColor='#DC9700';" onMouseOut="this.style.backgroundColor='#fdd100';">
+				<a href="yellow/index.html" class="box">
+					<span class="text">黃線</span><br/>
+					<span class="entext">Yellow Line</span>
+				</a>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="tailer">
+	<script type="text/javascript">
+		document.write('Copyright (c) 2014-'+(new Date()).getFullYear()+' Tainan Bus for FUN all rights reserved.');
+	</script>
+</div>
+
 </body>
 </html>

@@ -8,20 +8,13 @@
 	<script src="../tools/route_infor.js"></script>
 </head>
 <body>
-<div align="center">
-<table>
-  <tr>
-  	<td><a href="../index.html"><img src="../img/blue_logo.png"/></a></td>
-  </tr>
-  <tr>
- 	<td align="center">
-	  <br />
-	  <table id="bg_table">
-	    <script type="text/javascript">
-	  	document.write('<tr><td><a href="blue.html" class="blueButton">藍幹線</a></td><td>'+ blue_route +'</td>\
-	  		<td><a href="blue_13.html" class="blueButton">藍13</a></td><td>'+ blue_13_route +'</td></tr>\
-	 	<tr><td><a href="blue_1.html" class="blueButton">藍1</a></td><td>'+ blue_1_route +'</td>\
-	 		<td><a href="blue_20.html" class="blueButton">藍20</a></td><td>'+ blue_20_route +'</td></tr>\
+<a href="../index.html"><img id="logo" src="../img/blue_logo.png"/></a>
+<table id="bg_table">
+	<script type="text/javascript">
+		document.write('<tr><td><a href="blue.html" class="blueButton">藍幹線</a></td><td>'+ blue_route +'</td>\
+			<td><a href="blue_13.html" class="blueButton">藍13</a></td><td>'+ blue_13_route +'</td></tr>\
+		<tr><td><a href="blue_1.html" class="blueButton">藍1</a></td><td>'+ blue_1_route +'</td>\
+			<td><a href="blue_20.html" class="blueButton">藍20</a></td><td>'+ blue_20_route +'</td></tr>\
 		<tr><td><a href="blue_2.html" class="blueButton">藍2</a></td><td>'+ blue_2_route +'</td>\
 			<td><a href="blue_21.html" class="blueButton">藍21</a></td><td>'+ blue_21_route +'</td></tr>\
 		<tr><td><a href="blue_3.html" class="blueButton">藍3</a></td><td>'+ blue_3_route +'</td>\
@@ -32,18 +25,12 @@
 			<td><a href="blue_24.html" class="blueButton">藍24</a></td><td>'+ blue_24_route +'</td></tr>\
 		<tr><td><a href="blue_12.html" class="blueButton">藍12</a></td><td>'+ blue_12_route +'</td>\
 			<td><a href="blue_25.html" class="blueButton">藍25</a></td><td>'+ blue_25_route +'</td></tr>');
-  		</script>
-		</table>
-		<p>&nbsp;</p><p>&nbsp;</p>
-	  </td>
-	</tr>
-	<tr>
-  	  <td valign="top"><a href="../map_overview.php?type=blue" target="_blank">
-		<img src="../route/overview/blue.jpg" alt="台南市藍幹線公車及其支線公車路線總圖" width="800"></a>
-		<p>&nbsp;</p><p>&nbsp;</p>
-	  </td>
-	</tr>
- </table>
+	</script>
+</table>
+<div id="map">
+	<a href="../map_overview.php?type=blue" target="_blank">
+		<img src="../route/overview/blue.jpg" alt="台南市藍幹線公車及其支線公車路線總圖" width="80%" />
+	</a>
 </div>
 </body>
 </html>

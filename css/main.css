@@ -1,51 +1,74 @@
-﻿html { 
-	background: url("../img/background.jpg") no-repeat center top fixed; 
+﻿html {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 body {
-	margin-top: 10px;
-	font-family:"微軟正黑體";
+	font-family: "微軟正黑體";
+	text-align: center;
 }
-table{
+#info {
+	position: absolute;
+	right: 20px;
+	top: 5px;
+	display: inline-block;
+	text-align: right;
+}
+#header {
+	border-bottom: 5px solid #DD7732;
+	background: url('../img/title_banner.png') no-repeat left top fixed;
+	padding: 15px;
+}
+#tailer {
+	border-top: 5px solid #DD7732;
+	color: white;
+	background-color: #AA0000;
+	padding: 20px;
+}
+#search {
+	background-color: #CCFF99;
+	display: inline-block;
+	border: 1px solid #000000;
+	padding: 10px;
+	margin-left: 50px;
+	border-radius: 6px;
+}
+.button {
+	background-color: #333333;
+	padding: 50px;
+}
+.button table {
     margin-left: auto;
     margin-right: auto;
-}
-table .button{ 
     border-spacing: 5px;
     border-collapse: separate;
 }
-td{
+td {
 	text-align:center;
 	border-width: 9px;
 }
-td a{
-	display:inline-block;
+.button a {
+	display: inline-block;
 	padding-top: 50px;
 	padding-bottom: 50px;
-}
-#box{
+	text-decoration:none;
 	color: white;
+}
+.button td {
+	-webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+.box {
 	width:180px;
-	text-decoration:none;
 }
-#box2{
-	color: white;
+.box2 {
 	width:365px;
-	text-decoration:none;
 }
-#box3{
-	color: white;
-	width:550px;
-	text-decoration:none;
-}
-#entext{
+.entext {
 	font-family:Verdana;
 	font-size:16px;
 }
-#text{
+.text {
 	font-size:20px;
-	color: white;
 }
