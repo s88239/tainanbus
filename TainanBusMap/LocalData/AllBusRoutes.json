@@ -135,6 +135,14 @@
 		"RouteCategory":1
 	},
 	{
+		"RouteCodeName":"city_bus_77_1",
+		"RouteName":"安平假日環線公車(77-1路)",
+		"RouteOSMRelation":6384303,
+		"RouteCode":1803,
+		"RouteCategory":1,
+		"OneWayRoute":true
+	},
+	{
 		"RouteCodeName":"red",
 		"RouteName":"紅幹線",
 		"RouteOSMRelation":3905767,
