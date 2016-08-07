@@ -24,7 +24,10 @@
 			$ch_name = '黃幹支線';
 			break;
 		case 'hsr_shuttle':
-			$ch_name = '高鐵轉乘公車';
+			$ch_name = '高鐵接駁車';
+			break;
+		case 'STSP':
+			$ch_name = '南科巡迴巴士';
 			break;
 		case 'city_bus':
 			$ch_name = '市區公車';
@@ -40,13 +43,8 @@
 <script language="javascript" src="tools/zoom.js"></script>
 </head>
 <body>
-<div>
-	<input type="button" onclick="calculate(1);" value="＋" />
-	<input type="button" onclick="calculate(-1);" value="－" />
-	<input type="button" onclick="calculate(0);" value="原始大小" />
-</div>
 <div class="map_img" id="route_map" style="overflow:auto;">
-	<img class="map_img" src="route/overview/<?php echo $type_name; ?>.jpg" alt="台南市<?php echo $ch_name; ?>路線總覽" />
+	<img class="map_img" src="http://www.csie.ntu.edu.tw/~b00902098/tainanbus/route/overview/<?php echo $type_name; ?>.jpg" alt="台南市<?php echo $ch_name; ?>路線總覽" title="滾動滑鼠以縮放圖片大小" />
 </div>
 
 </body>

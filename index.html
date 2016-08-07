@@ -41,30 +41,28 @@ function search_route(route_str){
 			route = 'yellow/yellow';
 			break;
 		case '關': // 關子嶺假日公車
-			route = 'yellow/yellow_12_guanziling';
+			route = 'yellow/yellow_12-2';
 			isFinished = true;
 			break;
 		case '0': // 0左/右
-			route = 'city_bus/city_bus_0';
+			route = 'urban/0';
 			isFinished = true;
 			break;
 		default:
-			if(route_str=='高鐵快捷H31(市府線)') route = 'hsr_shuttle/hsr_shuttle_h31';
-			else if(route_str=='高鐵快捷H62(奇美線)') route = 'hsr_shuttle/hsr_shuttle_h62';
-			else if(route_str=='66'||route_str=='88'||route_str=='99'||route_str=='7702') route = 'tour_bus/tour_bus_' + route_str; // tour bus
-			else if(route_str=='77-1') route = 'city_bus/city_bus_77_1';
+			if(route_str=='高鐵快捷H31(市府線)') route = 'hsr_shuttle/H31';
+			else if(route_str=='高鐵快捷H62(奇美線)') route = 'hsr_shuttle/H62';
+			else if(route_str=='66'||route_str=='88'||route_str=='99'||route_str=='7702') route = 'tourist/' + route_str; // Taiwan Tourist Shuttle
 			else if(route_str=='南科紅線(北環東線)') route = 'STSP/STSP_red';
 			else if(route_str=='南科橘線(北環西線)') route = 'STSP/STSP_orange';
 			else if(route_str=='南科藍線(南環線)') route = 'STSP/STSP_blue';
 			else if(route_str=='南科綠線(高鐵線)') route = 'STSP/STSP_green';
-			else if(!isNaN(route_str) && route_str.length<=2) route = 'city_bus/city_bus_' + route_str; // city_bus
-			else route = 'highway_bus/highway_bus_' + route_str; // highway_bus
+			else if(!isNaN(route_str) && route_str.length<=3 || route_str=='77-1') route = 'urban/' + route_str; // urban bus
+			else route = 'highway/' + route_str; // highway bus
 			isFinished = true;
 			break;
 	}
 	if(!isFinished){
-		if(!isNaN(route_str.substring(1,route_str.length))) route = route + '_' +route_str.substring(1,route_str.length);
-		else if(route_str.indexOf("-")!=-1) route = route + '_' + route_str.replace("-","_").substring(1,route_str.length);
+		if(!isNaN(route_str[1])) route = route + '_' +route_str.substring(1,route_str.length); // handle number for branch line e.g. green_1
 	}
 	location.assign(route + ".html");
 }
@@ -112,13 +110,13 @@ $(document).ready(function($) {
 				</a>
 			</td>
 			<td bgcolor="#fc5656" onMouseOver="this.style.backgroundColor='#BC3C56';" onMouseOut="this.style.backgroundColor='#fc5656';">
-				<a href="tour_bus/index.html" class="box">
+				<a href="tourist/index.html" class="box">
 					<span class="text">台灣好行</span><br/>
 					<span class="entext">Taiwan Tourist</span>
 				</a>
 			</td>
 			<td bgcolor="#337c56" onMouseOver="this.style.backgroundColor='#49C347';" onMouseOut="this.style.backgroundColor='#337c56';">
-				<a href="highway_bus/index.html" class="box">
+				<a href="highway/index.html" class="box">
 					<span class="text">公路客運</span><br/>
 					<span class="entext">Highway Bus</span>
 				</a>
@@ -158,7 +156,7 @@ $(document).ready(function($) {
 		</tr>
 		<tr>
 			<td colspan="2" bgcolor="#B94FFF" onMouseOver="this.style.backgroundColor='#A500CC';" onMouseOut="this.style.backgroundColor='#B94FFF';">
-				<a href="city_bus/index.html" class="box2">
+				<a href="urban/index.html" class="box2">
 					<span class="text">市區公車</span><br/>
 					<span class="entext">Urban Bus</span>
 				</a>

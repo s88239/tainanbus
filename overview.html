@@ -18,483 +18,489 @@ html, body {
 </style>
 </head>
 <script type="text/javascript">
-function get_button_string(file_name, ch_name){
-	type = file_name.split('_')[0];
-	if(type=='city') type += '_' + file_name.split('_')[1];
-	category = (type=='hsr' || type=='tour' || type=='highway') ? type + '_' + file_name.split('_')[1] : type;
-	if(type=='highway') type = 'tour';
-	if(type=='STSP') type = file_name.split('_')[1];
-
+function get_button_string(category, file_name, ch_name){
+	var type = (category=='STSP') ? file_name.split('_')[1] : (category=='highway') ? 'tourist' : category;
+	var route_infor_str = (category=='urban' || category=='highway' || category=='tourist' || category=='hsr_shuttle') ? (category + '_') : '';
+	route_infor_str += file_name.replace('-','_') + '_route';
 	line_string = '<tr><td><a href="' + category + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
-	+ ch_name + '</a></td><td>' + eval(file_name + '_route').replace('　','<br />') + '</td></tr>';
+	+ ch_name + '</a></td><td>' + eval(route_infor_str).replace('　','<br />') + '</td></tr>';
 	return line_string;
 }
 
 function get_transfer_info(bus_stop){
-	var div_string = '<table id="bg_table_overview" align="center">';
+	var div_string = '<table class="bg_table_overview" align="center">';
 
 	switch(bus_stop){
 		case '臺南火車站':
-		div_string += get_button_string('green', '綠幹線')
-		+ get_button_string('blue', '藍幹線')
-		+ get_button_string('red', '紅幹線')
-		+ get_button_string('city_bus_0', '0')
-		+ get_button_string('city_bus_1', '1')
-		+ get_button_string('city_bus_2', '2')
-		+ get_button_string('city_bus_3', '3')
-		+ get_button_string('city_bus_5', '5')
-		+ get_button_string('city_bus_6', '6')
-		+ get_button_string('city_bus_7', '7')
-		+ get_button_string('city_bus_9', '9')
-		+ get_button_string('city_bus_10', '10')
-		+ get_button_string('city_bus_11', '11')
-		+ get_button_string('city_bus_14', '14')
-		+ get_button_string('city_bus_18', '18')
-		+ get_button_string('city_bus_19', '19')
-		+ get_button_string('city_bus_21', '21')
-		+ get_button_string('city_bus_77', '77')
-		+ get_button_string('tour_bus_88', '88')
-		+ get_button_string('tour_bus_99', '99')
-		+ get_button_string('green_17', '綠17')
-		+ get_button_string('red_1', '紅1')
-		+ get_button_string('red_2', '紅2')
-		+ get_button_string('red_3', '紅3')
-		+ get_button_string('red_4', '紅4')
-		+ get_button_string('orange_3', '橘3')
-		+ get_button_string('orange_11', '橘11')
-		+ get_button_string('orange_12', '橘12')
-		+ get_button_string('highway_bus_239', '239')
-		+ get_button_string('highway_bus_8046A', '8046A')
-		+ get_button_string('highway_bus_8046', '8046')
-		+ get_button_string('highway_bus_8050', '8050')
+		div_string += get_button_string('green', 'green', '綠幹線')
+		+ get_button_string('blue', 'blue', '藍幹線')
+		+ get_button_string('red', 'red', '紅幹線')
+		+ get_button_string('urban', '0', '0')
+		+ get_button_string('urban', '1', '1')
+		+ get_button_string('urban', '2', '2')
+		+ get_button_string('urban', '3', '3')
+		+ get_button_string('urban', '5', '5')
+		+ get_button_string('urban', '6', '6')
+		+ get_button_string('urban', '7', '7')
+		+ get_button_string('urban', '9', '9')
+		+ get_button_string('urban', '10', '10')
+		+ get_button_string('urban', '11', '11')
+		+ get_button_string('urban', '14', '14')
+		+ get_button_string('urban', '18', '18')
+		+ get_button_string('urban', '19', '19')
+		+ get_button_string('urban', '21', '21')
+		+ get_button_string('urban', '77', '77')
+		+ get_button_string('tourist', '88', '88')
+		+ get_button_string('tourist', '99', '99')
+		+ get_button_string('urban', '239', '239')
+		+ get_button_string('green', 'green_17', '綠17')
+		+ get_button_string('red', 'red_1', '紅1')
+		+ get_button_string('red', 'red_2', '紅2')
+		+ get_button_string('red', 'red_3', '紅3')
+		+ get_button_string('red', 'red_4', '紅4')
+		+ get_button_string('orange', 'orange_3', '橘3')
+		+ get_button_string('orange', 'orange_11', '橘11')
+		+ get_button_string('orange', 'orange_12', '橘12')
+		+ get_button_string('highway', '8046A', '8046A')
+		+ get_button_string('highway', '8046', '8046')
+		+ get_button_string('highway', '8050', '8050')
 		+ '</table>\
-		<h1 align="center">臺南</h1>\
-		<table id="bg_table_overview" align="center">'
-		+ get_button_string('city_bus_15', '15')
-		+ get_button_string('city_bus_17', '17')
-		+ get_button_string('city_bus_77_1', '77-1')
-		+ get_button_string('blue_23', '藍23')
-		+ get_button_string('blue_24', '藍24')
-		+ get_button_string('hsr_shuttle_h31', 'H31')
-		+ get_button_string('hsr_shuttle_h62', 'H62');
+		<h1 align="center">臺南市區</h1>\
+		<table class="bg_table_overview" align="center">'
+		+ get_button_string('urban', '15', '15')
+		+ get_button_string('urban', '17', '17')
+		+ get_button_string('urban', '77-1', '77-1')
+		+ get_button_string('blue', 'blue_23', '藍23')
+		+ get_button_string('blue', 'blue_24', '藍24')
+		+ get_button_string('hsr_shuttle', 'H31', 'H31')
+		+ get_button_string('hsr_shuttle', 'H62', 'H62');
 		break;
-	case '新營':
-		div_string += get_button_string('yellow', '黃幹線')
-		+ get_button_string('brown', '棕幹線')
-		+ get_button_string('yellow_1', '黃1')
-		+ get_button_string('yellow_2', '黃2')
-		+ get_button_string('yellow_3', '黃3')
-		+ get_button_string('yellow_4', '黃4')
-		+ get_button_string('yellow_5', '黃5')
-		+ get_button_string('yellow_6', '黃6')
-		+ get_button_string('yellow_6_1', '黃6-1')
-		+ get_button_string('yellow_7', '黃7')
-		+ get_button_string('yellow_9', '黃9')
-		+ get_button_string('brown_1', '棕1')
-		+ get_button_string('brown_2', '棕2')
-		+ get_button_string('brown_3', '棕3')
-		+ get_button_string('brown_3_1', '棕3-1')
-		+ get_button_string('tour_bus_66', '66')
-		+ get_button_string('highway_bus_7229', '7229')
-		+ get_button_string('highway_bus_7407', '7407')
-		+ get_button_string('highway_bus_7408', '7408')
-		+ get_button_string('highway_bus_7410', '7410');
-		break;
-	case '善化火車站':
-		div_string += get_button_string('orange', '橘幹線')
-		+ get_button_string('orange_1', '橘1')
-		+ get_button_string('orange_2', '橘2')
-		+ get_button_string('orange_3', '橘3')
-		+ get_button_string('orange_4', '橘4')
-		+ get_button_string('orange_5', '橘5')
-		+ get_button_string('orange_12', '橘12')
-		+ get_button_string('green_1', '綠1')
-		+ get_button_string('green_2', '綠2')
-		+ get_button_string('green_3', '綠3')
-		+ get_button_string('green_4', '綠4')
-		+ get_button_string('green_11', '綠11')
+	case '新營轉運站':
+		div_string += get_button_string('yellow', 'yellow', '黃幹線')
+		+ get_button_string('brown', 'brown', '棕幹線')
+		+ get_button_string('yellow', 'yellow_1', '黃1')
+		+ get_button_string('yellow', 'yellow_2', '黃2')
+		+ get_button_string('yellow', 'yellow_3', '黃3')
+		+ get_button_string('yellow', 'yellow_4', '黃4')
+		+ get_button_string('yellow', 'yellow_5', '黃5')
+		+ get_button_string('yellow', 'yellow_6', '黃6')
+		+ get_button_string('yellow', 'yellow_6-1', '黃6-1')
+		+ get_button_string('yellow', 'yellow_7', '黃7')
+		+ get_button_string('yellow', 'yellow_9', '黃9')
+		+ get_button_string('brown', 'brown_1', '棕1')
+		+ get_button_string('brown', 'brown_2', '棕2')
+		+ get_button_string('brown', 'brown_3', '棕3')
+		+ get_button_string('brown', 'brown_3-1', '棕3-1')
+		+ get_button_string('tourist', '66', '66')
+		+ get_button_string('highway', '7407', '7407')
+		+ get_button_string('highway', '7408', '7408')
+		+ get_button_string('highway', '7410', '7410')
 		+ '</table>\
-		<h1 align="center">善化區南科</h1>\
-		<table id="bg_table_overview" align="center">'
-		+ get_button_string('STSP_red', '南科紅線')
-		+ get_button_string('STSP_orange', '南科橘線');
+		<h1 align="center">新營區</h1>\
+		<table class="bg_table_overview" align="center">'
+		+ get_button_string('highway', '7229', '7229');
 		break;
-	case '佳里':
-		div_string += get_button_string('blue', '藍幹線')
-		+ get_button_string('brown', '棕幹線')
-		+ get_button_string('orange', '橘幹線')
-		+ get_button_string('blue_1', '藍1')
-		+ get_button_string('blue_2', '藍2')
-		+ get_button_string('blue_3', '藍3')
-		+ get_button_string('blue_10', '藍10')
-		+ get_button_string('blue_11', '藍11')
-		+ get_button_string('blue_12', '藍12')
-		+ get_button_string('blue_13', '藍13')
-		+ get_button_string('blue_20', '藍20')
-		+ get_button_string('blue_21', '藍21')
-		+ get_button_string('blue_22', '藍22')
-		+ get_button_string('blue_25', '藍25');
+	case '善化轉運站':
+		div_string += get_button_string('orange', 'orange', '橘幹線')
+		+ get_button_string('orange', 'orange_1', '橘1')
+		+ get_button_string('orange', 'orange_2', '橘2')
+		+ get_button_string('orange', 'orange_3', '橘3')
+		+ get_button_string('orange', 'orange_4', '橘4')
+		+ get_button_string('orange', 'orange_5', '橘5')
+		+ get_button_string('orange', 'orange_12', '橘12')
+		+ get_button_string('green', 'green_1', '綠1')
+		+ get_button_string('green', 'green_2', '綠2')
+		+ get_button_string('green', 'green_3', '綠3')
+		+ get_button_string('green', 'green_4', '綠4')
+		+ get_button_string('green', 'green_11', '綠11')
+		+ '</table>\
+		<h1 align="center">善化區</h1>\
+		<table class="bg_table_overview" align="center">'
+		+ get_button_string('STSP', 'STSP_red', '南科紅線')
+		+ get_button_string('STSP', 'STSP_orange', '南科橘線');
 		break;
-	case '關廟':
-		div_string += get_button_string('red', '紅幹線')
-		+ get_button_string('red_1', '紅1')
-		+ get_button_string('red_2', '紅2')
-		+ get_button_string('red_3', '紅3')
-		+ get_button_string('red_10', '紅10')
-		+ get_button_string('red_11', '紅11')
-		+ get_button_string('red_12', '紅12')
-		+ get_button_string('red_13', '紅13')
-		+ get_button_string('red_14', '紅14')
-		+ get_button_string('green_16', '綠16')
-		+ get_button_string('highway_bus_8050', '8050');
+	case '佳里轉運站':
+		div_string += get_button_string('blue', 'blue', '藍幹線')
+		+ get_button_string('brown', 'brown', '棕幹線')
+		+ get_button_string('orange', 'orange', '橘幹線')
+		+ get_button_string('blue', 'blue_1', '藍1')
+		+ get_button_string('blue', 'blue_2', '藍2')
+		+ get_button_string('blue', 'blue_3', '藍3')
+		+ get_button_string('blue', 'blue_10', '藍10')
+		+ get_button_string('blue', 'blue_11', '藍11')
+		+ get_button_string('blue', 'blue_12', '藍12')
+		+ get_button_string('blue', 'blue_13', '藍13')
+		+ get_button_string('blue', 'blue_20', '藍20')
+		+ get_button_string('blue', 'blue_21', '藍21')
+		+ get_button_string('blue', 'blue_22', '藍22')
+		+ get_button_string('blue', 'blue_25', '藍25');
 		break;
-	case '白河':
-		div_string += get_button_string('yellow', '黃幹線')
-		+ get_button_string('yellow_10', '黃10')
-		+ get_button_string('yellow_10_1', '黃10-1')
-		+ get_button_string('yellow_11', '黃11')
-		+ get_button_string('yellow_11_1', '黃11-1')
-		+ get_button_string('yellow_12', '黃12')
-		+ get_button_string('yellow_12_1', '黃12-1')
-		+ get_button_string('yellow_13', '黃13')
-		+ get_button_string('yellow_14', '黃14')
-		+ get_button_string('yellow_14_1', '黃14-1')
-		+ get_button_string('yellow_15', '黃15')
-		+ get_button_string('yellow_12_guanziling', '關子嶺<br />假日公車')
-		+ get_button_string('tour_bus_66', '66')
-		+ get_button_string('highway_bus_7210', '7210')
-		+ get_button_string('highway_bus_7214', '7214');
+	case '關廟轉運站':
+		div_string += get_button_string('red', 'red', '紅幹線')
+		+ get_button_string('red', 'red_1', '紅1')
+		+ get_button_string('red', 'red_2', '紅2')
+		+ get_button_string('red', 'red_3', '紅3')
+		+ get_button_string('red', 'red_10', '紅10')
+		+ get_button_string('red', 'red_11', '紅11')
+		+ get_button_string('red', 'red_12', '紅12')
+		+ get_button_string('red', 'red_13', '紅13')
+		+ get_button_string('red', 'red_14', '紅14')
+		+ get_button_string('green', 'green_16', '綠16')
+		+ get_button_string('highway', '8050', '8050');
 		break;
-	case '麻豆':
-		div_string += get_button_string('orange', '橘幹線')
-		+ get_button_string('yellow', '黃幹線')
-		+ get_button_string('orange_10', '橘10')
-		+ get_button_string('orange_11', '橘11')
-		+ get_button_string('orange_12', '橘12')
-		+ get_button_string('yellow_20', '黃20')
-		+ get_button_string('brown_10', '棕10');
+	case '白河轉運站':
+		div_string += get_button_string('yellow', 'yellow', '黃幹線')
+		+ get_button_string('yellow', 'yellow_10', '黃10')
+		+ get_button_string('yellow', 'yellow_10-1', '黃10-1')
+		+ get_button_string('yellow', 'yellow_11', '黃11')
+		+ get_button_string('yellow', 'yellow_11-1', '黃11-1')
+		+ get_button_string('yellow', 'yellow_12', '黃12')
+		+ get_button_string('yellow', 'yellow_12-1', '黃12-1')
+		+ get_button_string('yellow', 'yellow_13', '黃13')
+		+ get_button_string('yellow', 'yellow_14', '黃14')
+		+ get_button_string('yellow', 'yellow_14-1', '黃14-1')
+		+ get_button_string('yellow', 'yellow_15', '黃15')
+		+ '</table>\
+		<h1 align="center">白河區</h1>\
+		<table class="bg_table_overview" align="center">'
+		+ get_button_string('yellow', 'yellow_12-2', '關子嶺')
+		+ get_button_string('tourist', '66', '66')
+		+ get_button_string('highway', '7210', '7210')
+		+ get_button_string('highway', '7214', '7214');
 		break;
-	case '玉井':
-		div_string += get_button_string('green', '綠幹線')
-		+ get_button_string('orange', '橘幹線')
-		+ get_button_string('green_20', '綠20')
-		+ get_button_string('green_20_1', '綠20-1')
-		+ get_button_string('green_21', '綠21')
-		+ get_button_string('green_22', '綠22')
-		+ get_button_string('green_23', '綠23')
-		+ get_button_string('green_24', '綠24')
-		+ get_button_string('green_25', '綠25')
-		+ get_button_string('green_26', '綠26')
-		+ get_button_string('green_27', '綠27')
-		+ get_button_string('orange_20', '橘20');
+	case '麻豆轉運站':
+		div_string += get_button_string('orange', 'orange', '橘幹線')
+		+ get_button_string('yellow', 'yellow', '黃幹線')
+		+ get_button_string('orange', 'orange_10', '橘10')
+		+ get_button_string('orange', 'orange_11', '橘11')
+		+ get_button_string('orange', 'orange_12', '橘12')
+		+ get_button_string('yellow', 'yellow_20', '黃20')
+		+ '</table>\
+		<h1 align="center">麻豆區</h1>\
+		<table class="bg_table_overview" align="center">'
+		+ get_button_string('brown', 'brown_10', '棕10');
 		break;
-	case '新化':
-		div_string += get_button_string('green', '綠幹線')
-		+ get_button_string('green_1', '綠1')
-		+ get_button_string('green_2', '綠2')
-		+ get_button_string('green_3', '綠3')
-		+ get_button_string('green_4', '綠4')
-		+ get_button_string('green_6', '綠6')
-		+ get_button_string('green_7', '綠7')
-		+ get_button_string('green_10', '綠10')
-		+ get_button_string('green_11', '綠11')
-		+ get_button_string('green_12', '綠12')
-		+ get_button_string('green_13', '綠13')
-		+ get_button_string('green_14', '綠14')
-		+ get_button_string('green_15', '綠15')
-		+ get_button_string('green_16', '綠16')
-		+ get_button_string('green_17', '綠17');
+	case '玉井轉運站':
+		div_string += get_button_string('green', 'green', '綠幹線')
+		+ get_button_string('orange', 'orange', '橘幹線')
+		+ get_button_string('green', 'green_20', '綠20')
+		+ get_button_string('green', 'green_20-1', '綠20-1')
+		+ get_button_string('green', 'green_21', '綠21')
+		+ get_button_string('green', 'green_22', '綠22')
+		+ get_button_string('green', 'green_23', '綠23')
+		+ get_button_string('green', 'green_24', '綠24')
+		+ get_button_string('green', 'green_25', '綠25')
+		+ get_button_string('green', 'green_26', '綠26')
+		+ get_button_string('green', 'green_27', '綠27')
+		+ get_button_string('orange', 'orange_20', '橘20');
+		break;
+	case '新化轉運站':
+		div_string += get_button_string('green', 'green', '綠幹線')
+		+ get_button_string('green', 'green_1', '綠1')
+		+ get_button_string('green', 'green_2', '綠2')
+		+ get_button_string('green', 'green_3', '綠3')
+		+ get_button_string('green', 'green_4', '綠4')
+		+ get_button_string('green', 'green_6', '綠6')
+		+ get_button_string('green', 'green_7', '綠7')
+		+ get_button_string('green', 'green_10', '綠10')
+		+ get_button_string('green', 'green_11', '綠11')
+		+ get_button_string('green', 'green_12', '綠12')
+		+ get_button_string('green', 'green_13', '綠13')
+		+ get_button_string('green', 'green_14', '綠14')
+		+ get_button_string('green', 'green_15', '綠15')
+		+ get_button_string('green', 'green_16', '綠16')
+		+ get_button_string('green', 'green_17', '綠17');
 		break;
 	case '龍崎':
-		div_string += get_button_string('red', '紅幹線')
-		+ get_button_string('red_11', '紅11')
-		+ get_button_string('red_12', '紅12')
-		+ get_button_string('highway_bus_8050', '8050');
+		div_string += get_button_string('red', 'red', '紅幹線')
+		+ get_button_string('red', 'red_11', '紅11')
+		+ get_button_string('red', 'red_12', '紅12')
+		+ get_button_string('highway', '8050', '8050');
 		break;
 	case '歸仁':
-		div_string += get_button_string('red', '紅幹線')
-		+ get_button_string('red_1', '紅1')
-		+ get_button_string('red_2', '紅2')
-		+ get_button_string('red_3', '紅3')
-		+ get_button_string('red_10', '紅10')
-		+ get_button_string('red_14', '紅14')
-		+ get_button_string('green_16', '綠16')
-		+ get_button_string('hsr_shuttle_h31', 'H31')
-		+ get_button_string('hsr_shuttle_h62', 'H62')
-		+ get_button_string('highway_bus_8042', '8042')
-		+ get_button_string('highway_bus_8050', '8050')
-		+ get_button_string('STSP_green', '南科綠線');;
+		div_string += get_button_string('red', 'red', '紅幹線')
+		+ get_button_string('red', 'red_1', '紅1')
+		+ get_button_string('red', 'red_2', '紅2')
+		+ get_button_string('red', 'red_3', '紅3')
+		+ get_button_string('red', 'red_10', '紅10')
+		+ get_button_string('red', 'red_14', '紅14')
+		+ get_button_string('green', 'green_16', '綠16')
+		+ get_button_string('hsr_shuttle', 'H31', 'H31')
+		+ get_button_string('hsr_shuttle', 'H62', 'H62')
+		+ get_button_string('highway', '8042', '8042')
+		+ get_button_string('highway', '8050', '8050')
+		+ get_button_string('STSP', 'STSP_green', '南科綠線');;
 		break;
 	case '仁德':
-		div_string += get_button_string('red', '紅幹線')
-		+ get_button_string('red_1', '紅1')
-		+ get_button_string('red_2', '紅2')
-		+ get_button_string('red_3', '紅3')
-		+ get_button_string('red_3_1', '紅3-1')
-		+ get_button_string('red_4', '紅4')
-		+ get_button_string('red_10', '紅10')
-		+ get_button_string('hsr_shuttle_h31', 'H31')
-		+ get_button_string('hsr_shuttle_h62', 'H62')
-		+ get_button_string('highway_bus_239', '239')
-		+ get_button_string('highway_bus_8042', '8042')
-		+ get_button_string('highway_bus_8046A', '8046A')
-		+ get_button_string('highway_bus_8046', '8046')
-		+ get_button_string('highway_bus_8050', '8050');
+		div_string += get_button_string('red', 'red', '紅幹線')
+		+ get_button_string('red', 'red_1', '紅1')
+		+ get_button_string('red', 'red_2', '紅2')
+		+ get_button_string('red', 'red_3', '紅3')
+		+ get_button_string('red', 'red_3-1', '紅3-1')
+		+ get_button_string('red', 'red_4', '紅4')
+		+ get_button_string('red', 'red_10', '紅10')
+		+ get_button_string('hsr_shuttle', 'H31', 'H31')
+		+ get_button_string('hsr_shuttle', 'H62', 'H62')
+		+ get_button_string('urban', '239', '239')
+		+ get_button_string('highway', '8042', '8042')
+		+ get_button_string('highway', '8046A', '8046A')
+		+ get_button_string('highway', '8046', '8046')
+		+ get_button_string('highway', '8050', '8050');
 		break;
 	case '永康':
-		div_string += get_button_string('green', '綠幹線')
-		+ get_button_string('city_bus_2', '2')
-		+ get_button_string('city_bus_5', '5')
-		+ get_button_string('city_bus_15', '15')
-		+ get_button_string('city_bus_19', '19')
-		+ get_button_string('city_bus_20', '20')
-		+ get_button_string('city_bus_21', '21')
-		+ get_button_string('hsr_shuttle_h62', 'H62')
-		+ get_button_string('green_5', '綠5')
-		+ get_button_string('green_17', '綠17')
-		+ get_button_string('red_10', '紅10')
-		+ get_button_string('orange_12', '橘12');
+		div_string += get_button_string('green', 'green', '綠幹線')
+		+ get_button_string('urban', '2', '2')
+		+ get_button_string('urban', '5', '5')
+		+ get_button_string('urban', '15', '15')
+		+ get_button_string('urban', '19', '19')
+		+ get_button_string('urban', '20', '20')
+		+ get_button_string('urban', '21', '21')
+		+ get_button_string('hsr_shuttle', 'H62', 'H62')
+		+ get_button_string('green', 'green_5', '綠5')
+		+ get_button_string('green', 'green_17', '綠17')
+		+ get_button_string('red', 'red_10', '紅10')
+		+ get_button_string('orange', 'orange_12', '橘12');
 		break;
 	case '新市':
-		div_string += get_button_string('green_1', '綠1')
-		+ get_button_string('green_2', '綠2')
-		+ get_button_string('green_3', '綠3')
-		+ get_button_string('green_4', '綠4')
-		+ get_button_string('green_5', '綠5')
-		+ get_button_string('green_6', '綠6')
-		+ get_button_string('green_7', '綠7')
-		+ get_button_string('green_11', '綠11')
-		+ get_button_string('orange_12', '橘12')
-		+ get_button_string('STSP_red', '南科紅線')
-		+ get_button_string('STSP_orange', '南科橘線')
-		+ get_button_string('STSP_blue', '南科藍線')
-		+ get_button_string('STSP_green', '南科綠線');
+		div_string += get_button_string('green', 'green_1', '綠1')
+		+ get_button_string('green', 'green_2', '綠2')
+		+ get_button_string('green', 'green_3', '綠3')
+		+ get_button_string('green', 'green_4', '綠4')
+		+ get_button_string('green', 'green_5', '綠5')
+		+ get_button_string('green', 'green_6', '綠6')
+		+ get_button_string('green', 'green_7', '綠7')
+		+ get_button_string('green', 'green_11', '綠11')
+		+ get_button_string('orange', 'orange_12', '橘12')
+		+ get_button_string('STSP', 'STSP_red', '南科紅線')
+		+ get_button_string('STSP', 'STSP_orange', '南科橘線')
+		+ get_button_string('STSP', 'STSP_blue', '南科藍線')
+		+ get_button_string('STSP', 'STSP_green', '南科綠線');
 		break;
 	case '山上':
-		div_string += get_button_string('green', '綠幹線')
-		+ get_button_string('green_2', '綠2')
-		+ get_button_string('green_10', '綠10')
-		+ get_button_string('green_11', '綠11')
-		+ get_button_string('green_12', '綠12');
+		div_string += get_button_string('green', 'green', '綠幹線')
+		+ get_button_string('green', 'green_2', '綠2')
+		+ get_button_string('green', 'green_10', '綠10')
+		+ get_button_string('green', 'green_11', '綠11')
+		+ get_button_string('green', 'green_12', '綠12');
 		break;
 	case '左鎮':
-		div_string += get_button_string('green', '綠幹線')
-		+ get_button_string('green_12', '綠12')
-		+ get_button_string('green_13', '綠13');
+		div_string += get_button_string('green', 'green', '綠幹線')
+		+ get_button_string('green', 'green_12', '綠12')
+		+ get_button_string('green', 'green_13', '綠13');
 		break;
 	case '南化':
-		div_string += get_button_string('green_12', '綠12')
-		+ get_button_string('green_26', '綠26')
-		+ get_button_string('green_27', '綠27')
-		+ get_button_string('highway_bus_8035', '8035');
+		div_string += get_button_string('green', 'green_12', '綠12')
+		+ get_button_string('green', 'green_26', '綠26')
+		+ get_button_string('green', 'green_27', '綠27')
+		+ get_button_string('highway', '8035', '8035');
 		break;
 	case '楠西':
-		div_string += get_button_string('green_20', '綠20')
-		+ get_button_string('green_21', '綠21')
-		+ get_button_string('green_22', '綠22')
-		+ get_button_string('green_23', '綠23')
-		+ get_button_string('green_24', '綠24')
-		+ get_button_string('green_25', '綠25');
+		div_string += get_button_string('green', 'green_20', '綠20')
+		+ get_button_string('green', 'green_21', '綠21')
+		+ get_button_string('green', 'green_22', '綠22')
+		+ get_button_string('green', 'green_23', '綠23')
+		+ get_button_string('green', 'green_24', '綠24')
+		+ get_button_string('green', 'green_25', '綠25');
 		break;
 	case '大內':
-		div_string += get_button_string('orange', '橘幹線')
-		+ get_button_string('orange_1', '橘1')
-		+ get_button_string('orange_2', '橘2')
-		+ get_button_string('orange_20', '橘20');
+		div_string += get_button_string('orange', 'orange', '橘幹線')
+		+ get_button_string('orange', 'orange_1', '橘1')
+		+ get_button_string('orange', 'orange_2', '橘2')
+		+ get_button_string('orange', 'orange_20', '橘20');
 		break;
 	case '官田':
-		div_string += get_button_string('orange_1', '橘1')
-		+ get_button_string('orange_2', '橘2')
-		+ get_button_string('orange_4', '橘4')
-		+ get_button_string('orange_5', '橘5')
-		+ get_button_string('orange_10', '橘10')
-		+ get_button_string('yellow_1', '黃1')
-		+ get_button_string('tour_bus_66', '66');
+		div_string += get_button_string('orange', 'orange_1', '橘1')
+		+ get_button_string('orange', 'orange_2', '橘2')
+		+ get_button_string('orange', 'orange_4', '橘4')
+		+ get_button_string('orange', 'orange_5', '橘5')
+		+ get_button_string('orange', 'orange_10', '橘10')
+		+ get_button_string('yellow', 'yellow_1', '黃1')
+		+ get_button_string('tourist', '66', '66');
 		break;
 	case '下營':
-		div_string += get_button_string('yellow', '黃幹線')
-		+ get_button_string('orange_11', '橘11')
-		+ get_button_string('yellow_5', '黃5')
-		+ get_button_string('yellow_20', '黃20');
+		div_string += get_button_string('yellow', 'yellow', '黃幹線')
+		+ get_button_string('orange', 'orange_11', '橘11')
+		+ get_button_string('yellow', 'yellow_5', '黃5')
+		+ get_button_string('yellow', 'yellow_20', '黃20');
 		break;
 	case '六甲':
-		div_string += get_button_string('yellow', '黃幹線')
-		+ get_button_string('yellow_1', '黃1')
-		+ get_button_string('yellow_2', '黃2')
-		+ get_button_string('yellow_4', '黃4')
-		+ get_button_string('yellow_20', '黃20');
+		div_string += get_button_string('yellow', 'yellow', '黃幹線')
+		+ get_button_string('yellow', 'yellow_1', '黃1')
+		+ get_button_string('yellow', 'yellow_2', '黃2')
+		+ get_button_string('yellow', 'yellow_4', '黃4')
+		+ get_button_string('yellow', 'yellow_20', '黃20');
 		break;
 	case '柳營':
-		div_string += get_button_string('yellow', '黃幹線')
-		+ get_button_string('yellow_1', '黃1')
-		+ get_button_string('yellow_2', '黃2')
-		+ get_button_string('yellow_3', '黃3')
-		+ get_button_string('yellow_4', '黃4')
-		+ get_button_string('yellow_5', '黃5')
-		+ get_button_string('tour_bus_66', '66')
-		+ get_button_string('highway_bus_7229', '7229');
+		div_string += get_button_string('yellow', 'yellow', '黃幹線')
+		+ get_button_string('yellow', 'yellow_1', '黃1')
+		+ get_button_string('yellow', 'yellow_2', '黃2')
+		+ get_button_string('yellow', 'yellow_3', '黃3')
+		+ get_button_string('yellow', 'yellow_4', '黃4')
+		+ get_button_string('yellow', 'yellow_5', '黃5')
+		+ get_button_string('tourist', '66', '66')
+		+ get_button_string('highway', '7229', '7229');
 		break;
 	case '後壁':
-		div_string += get_button_string('yellow', '黃幹線')
-		+ get_button_string('yellow_6', '黃6')
-		+ get_button_string('yellow_6_1', '黃6-1')
-		+ get_button_string('yellow_9', '黃9')
-		+ get_button_string('yellow_10', '黃10')
-		+ get_button_string('highway_bus_7229', '7229');
+		div_string += get_button_string('yellow', 'yellow', '黃幹線')
+		+ get_button_string('yellow', 'yellow_6', '黃6')
+		+ get_button_string('yellow', 'yellow_6-1', '黃6-1')
+		+ get_button_string('yellow', 'yellow_9', '黃9')
+		+ get_button_string('yellow', 'yellow_10', '黃10')
+		+ get_button_string('highway', '7229', '7229');
 		break;
 	case '東山':
-		div_string += get_button_string('yellow_7', '黃7')
-		+ get_button_string('yellow_11', '黃11')
-		+ get_button_string('yellow_11_1', '黃11-1')
-		+ get_button_string('tour_bus_66', '66');
+		div_string += get_button_string('yellow', 'yellow_7', '黃7')
+		+ get_button_string('yellow', 'yellow_11', '黃11')
+		+ get_button_string('yellow', 'yellow_11-1', '黃11-1')
+		+ get_button_string('tourist', '66', '66');
 		break;
 	case '鹽水':
-		div_string += get_button_string('brown', '棕幹線')
-		+ get_button_string('brown_1', '棕1')
-		+ get_button_string('brown_2', '棕2')
-		+ get_button_string('brown_3', '棕3')
-		+ get_button_string('highway_bus_7207', '7207')
-		+ get_button_string('highway_bus_7208', '7208')
-		+ get_button_string('highway_bus_7407', '7407')
-		+ get_button_string('highway_bus_7408', '7408')
-		+ get_button_string('highway_bus_7410', '7410');
+		div_string += get_button_string('brown', 'brown', '棕幹線')
+		+ get_button_string('brown', 'brown_1', '棕1')
+		+ get_button_string('brown', 'brown_2', '棕2')
+		+ get_button_string('brown', 'brown_3', '棕3')
+		+ get_button_string('highway', '7207', '7207')
+		+ get_button_string('highway', '7208', '7208')
+		+ get_button_string('highway', '7407', '7407')
+		+ get_button_string('highway', '7408', '7408')
+		+ get_button_string('highway', '7410', '7410');
 		break;
 	case '學甲':
-		div_string += get_button_string('brown', '棕幹線')
-		+ get_button_string('blue_1', '藍1')
-		+ get_button_string('blue_2', '藍2')
-		+ get_button_string('blue_3', '藍3')
-		+ get_button_string('brown_10', '棕10')
-		+ get_button_string('brown_11', '棕11');
+		div_string += get_button_string('brown', 'brown', '棕幹線')
+		+ get_button_string('blue', 'blue_1', '藍1')
+		+ get_button_string('blue', 'blue_2', '藍2')
+		+ get_button_string('blue', 'blue_3', '藍3')
+		+ get_button_string('brown', 'brown_10', '棕10')
+		+ get_button_string('brown', 'brown_11', '棕11');
 		break;
 	case '北門':
-		div_string += get_button_string('blue_1', '藍1')
-		+ get_button_string('blue_2', '藍2')
-		+ get_button_string('blue_3', '藍3')
-		+ get_button_string('brown_2', '棕2')
-		+ get_button_string('highway_bus_7408', '7408')
-		+ get_button_string('tour_bus_7702', '7702');
+		div_string += get_button_string('blue', 'blue_1', '藍1')
+		+ get_button_string('blue', 'blue_2', '藍2')
+		+ get_button_string('blue', 'blue_3', '藍3')
+		+ get_button_string('brown', 'brown_2', '棕2')
+		+ get_button_string('highway', '7408', '7408')
+		+ get_button_string('tourist', '7702', '7702');
 		break;
 	case '將軍':
-		div_string += get_button_string('blue_1', '藍1')
-		+ get_button_string('blue_10', '藍10')
-		+ get_button_string('blue_11', '藍11')
-		+ get_button_string('blue_12', '藍12')
-		+ get_button_string('blue_13', '藍13')
-		+ get_button_string('blue_20', '藍20');
+		div_string += get_button_string('blue', 'blue_1', '藍1')
+		+ get_button_string('blue', 'blue_10', '藍10')
+		+ get_button_string('blue', 'blue_11', '藍11')
+		+ get_button_string('blue', 'blue_12', '藍12')
+		+ get_button_string('blue', 'blue_13', '藍13')
+		+ get_button_string('blue', 'blue_20', '藍20');
 		break;
 	case '七股':
-		div_string += get_button_string('blue_13', '藍13')
-		+ get_button_string('blue_20', '藍20')
-		+ get_button_string('blue_21', '藍21')
-		+ get_button_string('blue_22', '藍22')
-		+ get_button_string('blue_23', '藍23')
-		+ get_button_string('blue_25', '藍25')
-		+ get_button_string('tour_bus_99', '99');
+		div_string += get_button_string('blue', 'blue_13', '藍13')
+		+ get_button_string('blue', 'blue_20', '藍20')
+		+ get_button_string('blue', 'blue_21', '藍21')
+		+ get_button_string('blue', 'blue_22', '藍22')
+		+ get_button_string('blue', 'blue_23', '藍23')
+		+ get_button_string('blue', 'blue_25', '藍25')
+		+ get_button_string('tourist', '99', '99');
 		break;
 	case '西港':
-		div_string += get_button_string('blue', '藍幹線')
-		+ get_button_string('blue_21', '藍21')
-		+ get_button_string('blue_22', '藍22')
-		+ get_button_string('orange_11', '橘11')
-		+ get_button_string('city_bus_9', '9');
+		div_string += get_button_string('blue', 'blue', '藍幹線')
+		+ get_button_string('blue', 'blue_21', '藍21')
+		+ get_button_string('blue', 'blue_22', '藍22')
+		+ get_button_string('orange', 'orange_11', '橘11')
+		+ get_button_string('urban', '9', '9');
 		break;
 	case '安定':
-		div_string += get_button_string('blue', '藍幹線')
-		+ get_button_string('orange_3', '橘3')
-		+ get_button_string('orange_11', '橘11');
+		div_string += get_button_string('blue', 'blue', '藍幹線')
+		+ get_button_string('orange', 'orange_3', '橘3')
+		+ get_button_string('orange', 'orange_11', '橘11');
 		break;
 	case '安南':
-		div_string += get_button_string('blue', '藍幹線')
-		+ get_button_string('city_bus_3', '3')
-		+ get_button_string('city_bus_7', '7')
-		+ get_button_string('city_bus_9', '9')
-		+ get_button_string('city_bus_10', '10')
-		+ get_button_string('city_bus_11', '11')
-		+ get_button_string('city_bus_18', '18')
-		+ get_button_string('city_bus_20', '20')
-		+ get_button_string('tour_bus_99', '99')
-		+ get_button_string('orange_3', '橘3')
-		+ get_button_string('orange_11', '橘11')
-		+ get_button_string('blue_23', '藍23')
-		+ get_button_string('blue_24', '藍24')
-		+ get_button_string('blue_25', '藍25');
+		div_string += get_button_string('blue', 'blue', '藍幹線')
+		+ get_button_string('urban', '3', '3')
+		+ get_button_string('urban', '7', '7')
+		+ get_button_string('urban', '9', '9')
+		+ get_button_string('urban', '10', '10')
+		+ get_button_string('urban', '11', '11')
+		+ get_button_string('urban', '18', '18')
+		+ get_button_string('urban', '20', '20')
+		+ get_button_string('tourist', '99', '99')
+		+ get_button_string('orange', 'orange_3', '橘3')
+		+ get_button_string('orange', 'orange_11', '橘11')
+		+ get_button_string('blue', 'blue_23', '藍23')
+		+ get_button_string('blue', 'blue_24', '藍24')
+		+ get_button_string('blue', 'blue_25', '藍25');
 		break;
 	case '後壁火車站':
-		div_string += get_button_string('yellow_6', '黃6')
-		+ get_button_string('yellow_6_1', '黃6-1')
-		+ get_button_string('yellow_9', '黃9')
-		+ get_button_string('yellow_10', '黃10')
-		+ get_button_string('highway_bus_7229', '7229');
+		div_string += get_button_string('yellow', 'yellow_6', '黃6')
+		+ get_button_string('yellow', 'yellow_6-1', '黃6-1')
+		+ get_button_string('yellow', 'yellow_9', '黃9')
+		+ get_button_string('yellow', 'yellow_10', '黃10')
+		+ get_button_string('highway', '7229', '7229');
 		break;
 	case '柳營火車站':
-		div_string += get_button_string('yellow', '黃幹線')
-		+ get_button_string('yellow_3', '黃3')
-		+ get_button_string('yellow_5', '黃5');
+		div_string += get_button_string('yellow', 'yellow', '黃幹線')
+		+ get_button_string('yellow', 'yellow_3', '黃3')
+		+ get_button_string('yellow', 'yellow_5', '黃5');
 		break;
 	case '林鳳營火車站':
-		div_string += get_button_string('yellow_1', '黃1')
-		+ get_button_string('yellow_2', '黃2')
-		+ get_button_string('yellow_20', '黃20');
+		div_string += get_button_string('yellow', 'yellow_1', '黃1')
+		+ get_button_string('yellow', 'yellow_2', '黃2')
+		+ get_button_string('yellow', 'yellow_20', '黃20');
 		break;
 	case '隆田火車站':
-		div_string += get_button_string('orange_10', '橘10');
+		div_string += get_button_string('orange', 'orange_10', '橘10');
 		break;
 	case '新市火車站':
-		div_string += get_button_string('green_1', '綠1')
-		+ get_button_string('green_2', '綠2')
-		+ get_button_string('green_3', '綠3')
-		+ get_button_string('green_4', '綠4')
-		+ get_button_string('green_5', '綠5')
-		+ get_button_string('green_6', '綠6')
-		+ get_button_string('green_7', '綠7')
-		+ get_button_string('orange_12', '橘12');
+		div_string += get_button_string('green', 'green_1', '綠1')
+		+ get_button_string('green', 'green_2', '綠2')
+		+ get_button_string('green', 'green_3', '綠3')
+		+ get_button_string('green', 'green_4', '綠4')
+		+ get_button_string('green', 'green_5', '綠5')
+		+ get_button_string('green', 'green_6', '綠6')
+		+ get_button_string('green', 'green_7', '綠7')
+		+ get_button_string('orange', 'orange_12', '橘12');
 		break;
 	case '南科火車站':
-		div_string += get_button_string('STSP_red', '南科紅線')
-		+ get_button_string('STSP_orange', '南科橘線')
-		+ get_button_string('STSP_blue', '南科藍線')
-		+ get_button_string('green_4', '綠4');
+		div_string += get_button_string('STSP', 'STSP_red', '南科紅線')
+		+ get_button_string('STSP', 'STSP_orange', '南科橘線')
+		+ get_button_string('STSP', 'STSP_blue', '南科藍線')
+		+ get_button_string('green', 'green_4', '綠4');
 		break;
 	case '永康火車站':
-		div_string += get_button_string('city_bus_20', '20')
-		+ get_button_string('green_5', '綠5')
-		+ get_button_string('red_10', '紅10');
+		div_string += get_button_string('urban', '20', '20')
+		+ get_button_string('green', 'green_5', '綠5')
+		+ get_button_string('red', 'red_10', '紅10');
 		break;
 	case '大橋火車站':
-		div_string += get_button_string('city_bus_5', '5')
-		+ get_button_string('city_bus_15', '15')
-		+ get_button_string('hsr_shuttle_h62', 'H62')
-		+ get_button_string('red_10', '紅10')
-		+ get_button_string('orange_12', '橘12');
+		div_string += get_button_string('urban', '5', '5')
+		+ get_button_string('urban', '15', '15')
+		+ get_button_string('hsr_shuttle', 'H62', 'H62')
+		+ get_button_string('red', 'red_10', '紅10')
+		+ get_button_string('orange', 'orange_12', '橘12');
 		break;
 	case '保安火車站':
-		div_string += get_button_string('red_3', '紅3')
-		+ get_button_string('red_3_1', '紅3-1')
-		+ get_button_string('red_4', '紅4');
+		div_string += get_button_string('red', 'red_3', '紅3')
+		+ get_button_string('red', 'red_3-1', '紅3-1')
+		+ get_button_string('red', 'red_4', '紅4');
 		break;
 	case '仁德火車站':
-		div_string += get_button_string('red_4', '紅4');
+		div_string += get_button_string('red', 'red_4', '紅4');
 		break;
 	case '中洲火車站':
-		div_string += get_button_string('red_3', '紅3');
+		div_string += get_button_string('red', 'red_3', '紅3');
 		break;
 	case '長榮大學火車站':
-		div_string += get_button_string('red_3', '紅3')
-		+ get_button_string('red_14', '紅14');
+		div_string += get_button_string('red', 'red_14', '紅14');
 		break;
 	case '沙崙火車站':
 		div_string += '<tr><td><img src="route/transfer/HSR.png"></td><td valign="center"><font color="orange" size="+2">台灣高鐵</font></td></tr>'
-		+ get_button_string('hsr_shuttle_h31', 'H31')
-		+ get_button_string('hsr_shuttle_h62', 'H62')
-		+ get_button_string('red_3', '紅3')
-		+ get_button_string('red_14', '紅14')
-		+ get_button_string('green_16', '綠16')
-		+ get_button_string('highway_bus_8042', '8042')
-		+ get_button_string('STSP_green', '南科綠線');;
+		+ get_button_string('hsr_shuttle', 'H31', 'H31')
+		+ get_button_string('hsr_shuttle', 'H62', 'H62')
+		+ get_button_string('red', 'red_3', '紅3')
+		+ get_button_string('red', 'red_14', '紅14')
+		+ get_button_string('green', 'green_16', '綠16')
+		+ get_button_string('highway', '8042', '8042')
+		+ get_button_string('STSP', 'STSP_green', '南科綠線');;
 		break;
 	}
 	div_string += '</table>';
+	if(bus_stop.length==2) bus_stop += '區';
 	document.getElementById('transfer_info').innerHTML = '<h1>' + bus_stop + '</h1>' + div_string;
 	document.getElementById('transfer_info').scrollTop = 0; // Scroll back to the top of div
 }
@@ -505,14 +511,14 @@ function get_transfer_info(bus_stop){
 	<area shape="rect" coords="X1,Y1,X2,Y2" href="#" />
 	<area shape="poly" coords="X1,Y1,X2,Y2,...,Xn,Yn" href="#" />-->
 	<area shape="circle" coords="175,429,34" href="javascript:get_transfer_info('臺南火車站')" />
-	<area shape="circle" coords="135,240,34" href="javascript:get_transfer_info('佳里')" />
-	<area shape="circle" coords="287,270,34" href="javascript:get_transfer_info('麻豆')" />
-	<area shape="circle" coords="417,292,34" href="javascript:get_transfer_info('善化火車站')" />
-	<area shape="circle" coords="600,299,34" href="javascript:get_transfer_info('玉井')" />
-	<area shape="circle" coords="350,74,34" href="javascript:get_transfer_info('新營')" />
-	<area shape="circle" coords="499,62,34" href="javascript:get_transfer_info('白河')" />
-	<area shape="circle" coords="416,394,34" href="javascript:get_transfer_info('新化')" />
-	<area shape="circle" coords="330,514,34" href="javascript:get_transfer_info('關廟')" />
+	<area shape="circle" coords="135,240,34" href="javascript:get_transfer_info('佳里轉運站')" />
+	<area shape="circle" coords="287,270,34" href="javascript:get_transfer_info('麻豆轉運站')" />
+	<area shape="circle" coords="417,292,34" href="javascript:get_transfer_info('善化轉運站')" />
+	<area shape="circle" coords="600,299,34" href="javascript:get_transfer_info('玉井轉運站')" />
+	<area shape="circle" coords="350,74,34" href="javascript:get_transfer_info('新營轉運站')" />
+	<area shape="circle" coords="499,62,34" href="javascript:get_transfer_info('白河轉運站')" />
+	<area shape="circle" coords="416,394,34" href="javascript:get_transfer_info('新化轉運站')" />
+	<area shape="circle" coords="330,514,34" href="javascript:get_transfer_info('關廟轉運站')" />
 	<area shape="circle" coords="169.5,172.5,18.5" href="javascript:get_transfer_info('學甲')" />
 	<area shape="circle" coords="264.5,108.5,18.5" href="javascript:get_transfer_info('鹽水')" />
 	<area shape="circle" coords="124.5,298.5,18.5" href="javascript:get_transfer_info('西港')" />

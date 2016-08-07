@@ -1,4 +1,4 @@
-.hsrButton {
+.hsr_shuttleButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #fbafe3;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #fbafe3;
 	box-shadow:inset 0px 1px 0px 0px #fbafe3;
@@ -24,7 +24,7 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #c70067;
 }
-.hsrButton:hover {
+.hsr_shuttleButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff5bb0));
 	background:-moz-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
 	background:-webkit-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
@@ -179,7 +179,7 @@
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#634b30', endColorstr='#7d5d3b',GradientType=0);
 	background-color:#634b30;
 }
-.city_busButton {
+.urbanButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #e184f3;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #e184f3;
 	box-shadow:inset 0px 1px 0px 0px #e184f3;
@@ -205,7 +205,7 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #9b14b3;
 }
-.city_busButton:hover {
+.urbanButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a20dbd), color-stop(1, #c123de));
 	background:-moz-linear-gradient(top, #a20dbd 5%, #c123de 100%);
 	background:-webkit-linear-gradient(top, #a20dbd 5%, #c123de 100%);
@@ -216,7 +216,7 @@
 	background-color:#a20dbd;
 }
 
-.tourButton {
+.touristButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	box-shadow:inset 0px 1px 0px 0px #f29c93;
@@ -242,7 +242,7 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
 }
-.tourButton:hover {
+.touristButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
 	background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
 	background:-webkit-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
@@ -324,7 +324,7 @@
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#faab4b',GradientType=0);
 	background-color:#fb9e25;
 }
-.hsrButton:active .greenButton:active .redButton:active .orangeButton:active .yellowButton:active .blueButton:active .brownButton:active .city_busButton:active .tourButton:active{
+.hsr_shuttleButton:active .greenButton:active .redButton:active .orangeButton:active .yellowButton:active .blueButton:active .brownButton:active .urbanButton:active .touristButton:active{
 	position:relative;
 	top:1px;
 }

@@ -1,5 +1,5 @@
 ﻿html { 
-  background: url("../img/tainan_river.jpg") no-repeat center bottom fixed; 
+  background: url("../img/tainan_river.jpg") no-repeat center bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -29,11 +29,12 @@ table {
 	padding-bottom: 8px;
 	padding-right: 10px;
 }
-#bg_table_overview{
+.bg_table_overview {
 	background: rgba(30%,0%,0%,0.6);
 	border-radius: 10px;
 	color: white;
 	padding: 10px;
+	margin-bottom: 30px;
 }
 #logo {
 	margin: 20px 0 30px 15%;
@@ -41,4 +42,8 @@ table {
 #map {
 	margin: 50px;
 	text-align: center;
+	color: blue;
+}
+#map a {
+	color: inherit;
 }
