@@ -41,5 +41,5 @@ yellow_3_main_stop_time_consume = [0, 8, 10, 17, 25, 30, 38, 44];
 yellow_3_important_stop = [0, 2, 6, 7]; // 新營, 柳營火車站, 果毅後廟前, 德元埤
 var start_stop = 0; // 新營
 var end_stop = 6; // 果毅後廟前
-yellow_3_time_go = [["05:50",start_stop,end_stop,[[1,-2]]],["12:20"],["14:35"],["17:15",start_stop,end_stop,[[1,4,2,1,3,4,4,5,5,1]]]];
-yellow_3_time_return = [["06:30",end_stop,start_stop,[[3,4,1,2,0,4]]],["13:10"],["15:25"],["18:15",end_stop,start_stop,[[0,2]]]];
+yellow_3_time_go = [["05:50",start_stop,end_stop,[[1,-2]]],["09:20"],["12:20"],["14:35"],["17:15",start_stop,end_stop,[[1,4,2,1,3,4,4,5,5,1]]]];
+yellow_3_time_return = [["06:30",end_stop,start_stop,[[3,4,1,2,0,4]]],["10:10"],["13:10"],["15:25"],["18:15",end_stop,start_stop,[[0,2]]]];
