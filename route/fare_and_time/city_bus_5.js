@@ -1,7 +1,7 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_5_main_stop_name = ["桂田<br />酒店","鹽行","南臺<br />科大","奇美<br />醫院","崑山<br />中學","臺南<br />火車站","赤崁樓","新光三越<br />新天地","大林<br />新城","市立<br />醫院","臺南<br />航空站","嘉南<br />藥理大學","大甲里"];
+city_bus_5_main_stop_name = ["桂田<br />酒店","鹽行","尚頂里","奇美<br />醫院","崑山<br />中學","臺南<br />火車站","赤崁樓","新光三越<br />新天地","大林<br />新城","市立<br />醫院","臺南<br />航空站","嘉南<br />藥理大學","大甲里"];
 city_bus_5_main_stop_time_consume = [0, 5, 10, 13, 20, 30, 35, 45, 55, 65, 67, 70, 75];
 city_bus_5_important_stop = [0, 1, 3, 5, 9, 11]; // 桂田酒店, 鹽行, 奇美醫院, 臺南火車站, 市立醫院, 嘉南藥理大學
 stop_start = 0; // 桂田酒店
