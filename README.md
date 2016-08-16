@@ -1,4 +1,6 @@
-tainanbus
+Tainan Bus for FUN
 =========
 
-Tainan tourism planning and introduction through bus
+http://tainanbus.info/
+
+本站整合大台南公車各路線資訊，包含興南客運、新營客運、府城客運、四方電巴、高雄客運、嘉義客運、南科巡迴巴士，各路線頁面有路線圖、地圖、路線資訊、時刻表、票價表及主要轉乘點資訊，另外大台南公車總覽則提供依照台南市各行政區來查詢公車路線。
