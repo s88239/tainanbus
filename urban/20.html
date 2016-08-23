@@ -18,8 +18,8 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'府城客運','尖30離60','一段票','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10020&locale=zh_TW');
-	block_fare(1, null);
+	block_route_info(route_interval,'府城客運','尖30離60','兩段票 分段點：塭南里<br />緩衝區：安南醫院 ─ 嘉綠寶社區','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10020&locale=zh_TW');
+	block_fare(2, null,'分段點：塭南里<br /><font color="#CC2102"><u>緩衝區：安南醫院－嘉綠寶社區</u></font><br /><font color="green">乘車起迄點跨越緩衝區以二段票收費</font>');
 	block_time_schedule('南紡購物中心','海東國小',W_message);
 	block_transfer(transfer_kun_shan_university + transfer_yongkang_railway_station + transfer_yanhang + transfer_taiwan_history_museum + transfer_annan_hospital + transfer_haidong_elementary_school);
 	block_copyright();
