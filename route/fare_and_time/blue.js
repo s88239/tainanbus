@@ -25,7 +25,7 @@ blue_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-blue_main_stop_name = ["安平<br />工業區","永華站","臺南<br />火車站","延平市場","安順","舊和順","和順","中崙","海寮","西港","佳里"];
+blue_main_stop_name = ["安平<br />工業區","永華站","臺南<br />火車站","延平市場","安順","安順國中","和順","中崙","海寮","西港","佳里"];
 blue_main_stop_time_consume = [0, 10, 20, 28, 38, 42, 48, 53, 58, 65, 75];
 blue_important_stop = [0, 2, 9, 10]; // 安平工業區, 臺南火車站, 西港, 佳里
 blue_time_go = [["06:00"],["06:15"],["06:30"],["06:45"],["07:15"],["07:30"],["07:45"],["08:00"],["08:15"],["08:45"],
