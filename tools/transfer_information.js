@@ -288,12 +288,14 @@ transfer_yujing = '<tr><th rowspan="2">玉井站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange + '、' + link_orange_20 + '</td></tr>';
 
-transfer_hsinhsih_railway_station = '<tr><th rowspan="2">新市火車站</th>\
+transfer_hsinhsih_railway_station = '<tr><th rowspan="3">新市火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵新市站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green"><p>' + link_green_1 + '、' + link_green_2 + '、' + link_green_3 + '、' + link_green_4 + '、' + link_green_5 + '、</p>'
-	+ link_green_6 + '、' + link_green_7 + '</td></tr>';
+	+ link_green_6 + '、' + link_green_7 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
+	<td id="orange">' + link_orange_12 + '</td></tr>';
 
 transfer_shanhua_railway_station = '<tr><th rowspan="3">善化轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
