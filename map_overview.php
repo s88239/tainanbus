@@ -44,7 +44,7 @@
 </head>
 <body>
 <div class="map_img" id="route_map" style="overflow:auto;">
-	<img class="map_img" src="http://www.csie.ntu.edu.tw/~b00902098/tainanbus/route/overview/<?php echo $type_name; ?>.jpg" alt="台南市<?php echo $ch_name; ?>路線總覽" title="滾動滑鼠以縮放圖片大小" />
+	<img class="map_img" src="route/overview/<?php echo $type_name; ?>.jpg" alt="台南市<?php echo $ch_name; ?>路線總覽" title="滾動滑鼠以縮放圖片大小" />
 </div>
 
 </body>
