@@ -1,11 +1,11 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_1_main_stop_name = ["臺南<br />火車站","新光三越<br />新天地","鹽埕","喜樹","威武廟","茄萣<br />衛生所","崎漏<br />電信局","興達<br />遠洋漁港"];
+city_bus_1_main_stop_name = ["臺南<br />火車站","新光三越<br />新天地","鹽埕","喜樹","威武廟","成功橋","崎漏<br />電信局","興達<br />遠洋漁港"];
 city_bus_1_main_stop_time_consume = [0, 10, 20, 29, 41, 50, 55, 60];
-city_bus_1_important_stop = [0, 5, 7]; // 臺南火車站, 茄萣衛生所, 興達遠洋漁港
+city_bus_1_important_stop = [0, 5, 7]; // 臺南火車站, 成功橋, 興達遠洋漁港
 var start_stop = 0; // 臺南火車站
-var end_stop_1 = 5; // 茄萣衛生所
+var end_stop_1 = 5; // 成功橋
 var end_stop_2 = 6; // 崎漏電信局
 city_bus_1_time_go = [["06:40",start_stop,end_stop_1],["06:55",start_stop,end_stop_1],["07:10",start_stop,end_stop_1],["07:20",start_stop,end_stop_1],["07:30",start_stop,end_stop_1],["07:40",start_stop,end_stop_1],
 ["07:55",start_stop,end_stop_1],["08:10",start_stop,end_stop_1],["08:25",start_stop,end_stop_1],["08:40",start_stop,end_stop_1],["08:55",start_stop,end_stop_1],["09:20",start_stop,end_stop_1],["09:50",start_stop,end_stop_1],
