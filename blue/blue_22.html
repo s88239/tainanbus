@@ -8,10 +8,7 @@
 	route_file_name = 'blue_22';
 	route_type = 'blue';
 	route_interval = ['佳里','七十二份','九塊厝'];
-	route_start_stop = '佳里';
-	route_end_stop = '九塊厝/黑面琵鷺賞鳥亭';
 </script>
-<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -21,17 +18,9 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'興南客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1222&locale=zh_TW',[['5月~9月','normal'],['10月~4月延駛賞鳥區','bird']]);
+	block_route_info(route_interval,'興南客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1222&locale=zh_TW');
 	block_fare(0, null);
-	var today_date = new Date(); // get the date today
-	var today_month = today_date.getMonth() + 1; // get the month today
-	if( 5 <= today_month && today_month <= 9 ){ // get the month today
-		mutiple_list = [['<font color="#0000AA">5月~9月</font>','normal'],['<font color="#CC0000">10月~4月延駛賞鳥區</font>','bird']];
-	}
-	else{
-		mutiple_list = [['<font color="#CC0000">10月~4月延駛賞鳥區</font>','bird'],['<font color="#0000AA">5月~9月</font>','normal']];
-	}
-	block_multiple_time_schedule(mutiple_list,'');
+	block_time_schedule('佳里','九塊厝','');
 	block_transfer(transfer_jiali + transfer_jiukuaicuo);
 	block_copyright();
 </script>
