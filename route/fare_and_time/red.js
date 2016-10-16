@@ -28,8 +28,8 @@ start_stop = 0;
 stop_1 = 2; // 臺南火車站
 stop_2 = 4; // 歸仁公所
 stop_3 = 6; // 關廟轉運站
-red_time_go = [["05:35",start_stop,stop_2,['W']],["05:45",start_stop,stop_3],["05:55",start_stop,stop_3],
-["06:00",start_stop,stop_3,['繞',[stop_3,5]]],["06:30"],["07:00"],["07:15",start_stop,stop_3],["07:30",start_stop,stop_3],
+red_time_go = [["05:35",start_stop,stop_2,['W']],["05:45",start_stop,stop_3],["06:00",start_stop,stop_3,['繞',[stop_3,5]]],
+["06:15",start_stop,stop_3],["06:30"],["07:00"],["07:15",start_stop,stop_3],["07:30",start_stop,stop_3],
 ["08:00"],["08:30",start_stop,stop_3],["09:00"],["09:30",start_stop,stop_3],["10:00"],["10:30",start_stop,stop_3],["11:00"],
 ["11:30",start_stop,stop_3],["11:45",start_stop,stop_3],["12:00"],["12:15",start_stop,stop_3],["12:30",start_stop,stop_3],
 ["13:00"],["13:30",start_stop,stop_3],["14:00"],["14:30",start_stop,stop_3],["15:00"],["15:30",start_stop,stop_3],

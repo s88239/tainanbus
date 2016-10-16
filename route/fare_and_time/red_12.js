@@ -25,5 +25,5 @@ red_12_main_stop_time_consume = [0, 5, 10, 20, 25];
 red_12_important_stop = [0, 1, 2, 4]; // 關廟國中, 關廟轉運站, 龍崎, 烏山頭
 var start_stop = 1;
 var end_stop = 4;
-red_12_time_go = [["06:00"],["13:00"],["17:30"]];
-red_12_time_return = [["06:30"],["13:25"],["18:05"]];
+red_12_time_go = [["06:00"],["12:45"],["17:30"]];
+red_12_time_return = [["06:30"],["13:10"],["18:05"]];
