@@ -16,5 +16,5 @@ highway_bus_8046A_main_stop_name = ["臺南<br />火車站","西門路<br />二�
 highway_bus_8046A_main_stop_time_consume = [0,6,15,22,25,28,35,40,45,60,80,90];
 highway_bus_8046A_important_stop = [0, 4, 7, 9, 11]; // 臺南火車站, 奇美博物館, 大湖火車站, 岡山轉運站, 高鐵左營站
 var skip_stop = 6; // 樹人醫專
-highway_bus_8046A_time_go = [["07:30"],["11:30"],["14:00"],["17:45",[skip_stop]]];
-highway_bus_8046A_time_return = [["08:00"],["10:00"],["12:20"],["15:50",[skip_stop]]];
+highway_bus_8046A_time_go = [["07:30"],["11:30"],["14:00"],["17:45",['*',skip_stop]]];
+highway_bus_8046A_time_return = [["08:00"],["10:00"],["12:20",['*',skip_stop]],["15:50"]];
