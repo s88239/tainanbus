@@ -8,10 +8,7 @@
 	route_file_name = 'yellow_12';
 	route_type = 'yellow';
 	route_interval = ['白河','關子嶺'];
-	route_start_stop = '白河';
-	route_end_stop = '關子嶺';
 </script>
-<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -21,10 +18,9 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'新營客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1512&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
+	block_route_info(route_interval,'新營客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1512&locale=zh_TW');
 	block_fare(0, null);
-	//block_time_schedule('白河','關子嶺',H_message);
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],H_message+'；<p></p>「<span style="color: blue;">溫</span>」表示配合「2016關子嶺溫泉節」行駛之假日加班車，<br />行駛時間為105/9/24~105/10/23之星期六、日以及國慶日');
+	block_time_schedule('白河','關子嶺',H_message);
 	block_transfer(transfer_baihe + transfer_nianfohui + transfer_guanziling);
 	block_copyright();
 </script>
