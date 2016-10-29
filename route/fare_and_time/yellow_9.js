@@ -19,11 +19,14 @@ yellow_9_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_9_main_stop_name = ["新營","臺南市政府<br />民治中心","南安<br />溪寮","後壁<br />高中","後壁<br />火車站","上茄苳","南靖<br />火車站","高鐵<br />嘉義站"];
-yellow_9_main_stop_time_consume = [0, 3, 11, 16, 17, 21, 24, 40];
-yellow_9_important_stop = [0, 4, 7]; // 新營, 後壁火車站, 高鐵嘉義站
+yellow_9_main_stop_name = ["新營","臺南市政府<br />民治中心","南安<br />溪寮","後壁<br />高中","後壁<br />火車站","上茄苳","南靖<br />火車站","高鐵<br />嘉義站","故宮南院<br /><span style='color:red;'>【11/4起】</span>"];
+yellow_9_main_stop_time_consume = [0, 3, 11, 16, 17, 21, 24, 40, 50];
+yellow_9_important_stop = [0, 4, 7, 8]; // 新營, 後壁火車站, 高鐵嘉義站, 故宮南院
+var start_stop = 0; // 新營
+var skip_stop = 1; // 臺南市政府民治中心
 var stop_1 = 5; // 上茄苳
-yellow_9_time_go = [["06:00",[1,'W']],["06:40",[[stop_1,5,stop_1+1,5]]],["07:00"],["08:00"],["09:00"],["10:00"],["11:00"],["12:00"],["13:00"],["14:00"],["15:00"],
-["16:00"],["17:00",[[stop_1,5,stop_1+1,5]]],["17:40",['五']],["18:00"],["18:40",[1,'五']],["19:00",[1]],["19:40",[1,'五']],["20:00",[1]],["20:40",[1,'五']]];
-yellow_9_time_return = [["07:15",['W']],["07:55"],["08:25"],["09:25"],["10:25"],["11:25"],["12:25"],["13:25"],["14:25"],["15:25"],["16:25"],
-["17:25"],["18:25",[1]],["19:00",[1,'五']],["19:25",[1]],["20:00",[1,'五']],["20:25",[1]],["21:00",[1,'五']],["21:25",[1]],["22:00",[1,'五']]];
+var hsr_chiayi = 7;
+yellow_9_time_go = [["06:00",start_stop,hsr_chiayi,[skip_stop,'W']],["06:40",start_stop,hsr_chiayi,[[stop_1,5,stop_1+1,5]]],["07:00",start_stop,hsr_chiayi],["08:00"],["09:00"],["10:00"],["11:00"],["12:00"],["13:00"],["14:00"],["15:00"],
+["16:00"],["17:00",[[stop_1,5,stop_1+1,5]]],["17:40",start_stop,hsr_chiayi,['五']],["18:00",start_stop,hsr_chiayi],["18:40",start_stop,hsr_chiayi,[skip_stop,'五']],["19:00",start_stop,hsr_chiayi,[skip_stop]],["19:40",start_stop,hsr_chiayi,[skip_stop,'五']],["20:00",start_stop,hsr_chiayi,[skip_stop]],["20:40",start_stop,hsr_chiayi,[skip_stop,'五']]];
+yellow_9_time_return = [["07:15",hsr_chiayi,start_stop,['W']],["07:55",hsr_chiayi,start_stop],["08:25",hsr_chiayi,start_stop],["09:10",[[hsr_chiayi,5]]],["10:10",[[hsr_chiayi,5]]],["11:10",[[hsr_chiayi,5]]],["12:10",[[hsr_chiayi,5]]],["13:10",[[hsr_chiayi,5]]],["14:10",[[hsr_chiayi,5]]],["15:10",[[hsr_chiayi,5]]],["16:10",[[hsr_chiayi,5]]],
+["17:10",[[hsr_chiayi,5]]],["18:10",[skip_stop,[hsr_chiayi,5]]],["19:00",hsr_chiayi,start_stop,[skip_stop,'五']],["19:25",hsr_chiayi,start_stop,[skip_stop]],["20:00",hsr_chiayi,start_stop,[skip_stop,'五']],["20:25",hsr_chiayi,start_stop,[skip_stop]],["21:00",hsr_chiayi,start_stop,[skip_stop,'五']],["21:25",hsr_chiayi,start_stop,[skip_stop]],["22:00",hsr_chiayi,start_stop,[skip_stop,'五']]];
