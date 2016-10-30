@@ -181,7 +181,7 @@ function block_fare(section_type, additional_message, section_point){
 						<th></th><th>全票</th><th>半票</th>\
 					</tr>\
 					<tr>\
-						<td><b>投現</b></td>\
+						<td><b>現金</b></td>\
 						<td id="cash_adult">-</td>\
 						<td id="cash_half">-</td>\
 					</tr>\
@@ -203,7 +203,7 @@ function block_fare(section_type, additional_message, section_point){
 					<th>全票</th><th>半票</th>\
 				</tr>\
 				<tr>\
-					<td><b>投現</b></td>\
+					<td><b>現金</b></td>\
 					<td>18</td><td>9</td>\
 				</tr>\
 				<tr>\
@@ -221,7 +221,7 @@ function block_fare(section_type, additional_message, section_point){
 					<th>二段票</th><th>一段票</th>\
 				</tr>\
 				<tr>\
-					<td><b>投現</b></td>\
+					<td><b>現金</b></td>\
 					<td>');
 
 		//----- 二段票現金收費價格歧異 -----//
@@ -253,6 +253,58 @@ function block_fare(section_type, additional_message, section_point){
 		else document.write(CitybusMSG); // Tainan Bus and charge by section
 		document.write(PromotionMSG); // print the promotion message of Tainan Bus
 	}
+	if(additional_message) document.write(additional_message); // print additional message
+	document.write('<p>　</p></div>\
+	</div>\
+</div>');
+}
+
+function block_fare_highway(charge_type, additional_message){
+	// charge_type:
+	// (1) 'Full': 現金及刷卡票價皆取自陣列
+	// (2) 'Highway': 刷卡票價取自(現金*刷卡費率)
+	// (3) 'Tainan': 刷卡票價取自(現金*刷卡費率 - 台南市優惠票價)
+	// (4) 'Kaohsiung': 刷卡票價取自(現金*刷卡費率)，另一卡通刷卡最高上限$60
+	// (5) '8050': 刷卡票價取自(現金*刷卡費率)，另台南市民卡刷卡票價 = (現金*刷卡費率 - 基本里程費率)
+	document.write('<div id="wrapper3">\
+	<a name="fare"></a>\
+	<div id="faretable" class="container">\
+		<div class="title">\
+			<h2>' + title_name + ' ─ ' + route_name + ' 票價表</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
+		</div>\
+		<div class="content">');
+
+	create_select_menu( eval( route_file_name + '_interval_stop'), route_type, route_file_name, charge_type);
+	document.write('<br/>\
+			<table id="showfareInfo">\
+				<tr>\
+					<th></th><th>全票</th><th>半票</th>\
+				</tr>\
+				<tr>\
+					<td><b>現金</b></td>\
+					<td id="cash_adult">-</td>\
+					<td id="cash_half">-</td>\
+				</tr>\
+				<tr>\
+					<td><b>電子票證</b></td>\
+					<td id="RFID_adult">-</td>\
+					<td id="RFID_half">-</td>\
+				</tr>');
+	if(charge_type == 'Kaohsiung' || charge_type == '8050') {
+		var card_name = (charge_type == 'Kaohsiung') ? "一卡通" : "臺南市市民卡";
+		document.write('<tr><td><b>'+card_name+'</b></td>\
+					<td id="card_adult">-</td>\
+					<td id="card_half">-</td>\
+				</tr>');
+	}
+	document.write('</table>\
+			<p>　</p>');
+	print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color, charge_type);
+
+	document.write('<p>　</p>\
+		<h2>使用電子票證時，上下車皆須刷卡</h2><br />\
+		<h3>刷電子票證票價僅供參考，誤差為1元上下</h3>');
 	if(additional_message) document.write(additional_message); // print additional message
 	document.write('<p>　</p></div>\
 	</div>\

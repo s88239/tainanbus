@@ -8,8 +8,6 @@
 	route_file_name = 'highway_bus_8050';
 	route_type = 'highway_bus';
 	route_interval = ['臺南火車站','旗山','佛光山'];
-	route_start_stop = '臺南火車站';
-	route_end_stop = '佛光山';
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -24,9 +22,12 @@
 	block_header();
 	block_route_map(null);
 	block_route_info(route_interval,'高雄客運','','里程計費','http://taiwanbus.tw/information.aspx?Line=9325&Lang=" target="_blank');
-	block_fare(10, '<h1>本路線不適用一卡通收費最高上限優惠</h1>');
-	block_time_schedule(route_start_stop,route_end_stop,'');
-	block_transfer(transfer_tainan_railway_station);
+	block_fare_highway("8050",'<h1>本路線不適用一卡通收費最高上限優惠</h1>\
+<center><div style="text-align: left; width: 550px; border:solid 1px; margin-top: 30px; background-color: #BBFFBB; padding: 15px;"><h3>1. 持市民卡所有卡種刷卡搭乘8050公車享基本里程免費，以及2小時內大台南公車及8050雙向轉乘9元優惠。</h3>\
+<h3>2. 臺南市65歲以上市民使用「市民卡敬老卡」、身心障礙市民使用「市民卡愛心卡」刷卡乘車超過基本里程依半票金額扣款。</h3>\
+<h3>3. 臺南市學生使用「市民卡學生卡」無額外85折優惠。</h3></div></center>');
+	block_time_schedule('臺南火車站/旗山轉運站','佛光山','');
+	block_transfer(transfer_tainan_railway_station + transfer_guanmiao);
 	block_copyright();
 </script>
 </body>

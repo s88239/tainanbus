@@ -1,3 +1,6 @@
+var HIGHWAY_CARD_PRICE_RATIO = 0.87842; // Card price = Cash price * HIGHWAY_CARD_PRICE_RATIO
+var HIGHWAY_CARD_PRICE_BASE = 21; // The card price for distance within 8 km
+
 function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // print the fare menu
 	var max_color_num = 4;
 	if(color_name=='highway_bus' || color_name=='tour_bus'){
@@ -24,10 +27,10 @@ function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // pr
 }
 
 function query_fare(theForm, fare_array, fare_type){
-	//alert('fuck');
 	var fd = parseInt(theForm.from.value,10);
 	var td = parseInt(theForm.to.value,10);
 	var price = (fd<=td)?fare_array[td][fd]:fare_array[fd][td];
+	
 	switch(fare_type){
 		case '8km':
 			card_price = price - 26;
@@ -37,6 +40,12 @@ function query_fare(theForm, fare_array, fare_type){
 			break;
 		case 'highway':
 			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 21 : fare_array[td][fd];
+			break;
+		case '8050':
+			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO);
+			var citizen_card_price = card_price - HIGHWAY_CARD_PRICE_BASE;
+			document.getElementById("card_adult").innerHTML = citizen_card_price;
+			document.getElementById("card_half").innerHTML = Math.ceil(citizen_card_price/2);
 			break;
 	}
 	document.getElementById("cash_adult").innerHTML = price < 0 ? 'none' : price; // 現金全票
@@ -59,12 +68,21 @@ function print_fare_table(interval_name, fare, color, fare_type){ // the functio
 			else if(fare[i][j]<0) document.write('<td>-</td>' );
 			else if( i>j ) fare[i][j] < 0 ? document.write('<td>-</td>') : document.write('<td>' + fare[i][j] + '</td>');
 			else{
-				var card_price = (fare_type=='8km') ? fare[j][i] - 26 : fare[i][j];
+				switch(fare_type) {
+					case '8km':
+						card_price = fare[j][i] - 26;
+						break;
+					case '8050':
+						card_price = Math.round(fare[j][i] * HIGHWAY_CARD_PRICE_RATIO);
+						break;
+					default:
+						card_price = fare[i][j];
+				}
 				(fare[j][i] < 0) ? document.write('<td>-</td>') : document.write('<td>' + card_price + '</td>');
 			}
 		}
 		document.write('</tr>');
 	}
 	document.write('</table>');
-	document.write('<b>左方為現金價格，右方為刷卡價格</b><br /></div>');
+	document.write('<b>左方為現金價格，右方為刷電子票證價格</b><br /></div>');
 }
