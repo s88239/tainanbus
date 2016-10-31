@@ -488,13 +488,11 @@ transfer_guanziling = '<tr><th rowspan="3">關子嶺</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_66 + '<br /><font color="#FFFFFF" size="-1">(需步行一站至嶺頂資訊站搭乘)</font></td></tr>';
 
-transfer_south_kunshen = '<tr><th rowspan="4">南鯤鯓</th>\
+transfer_south_kunshen = '<tr><th rowspan="3">南鯤鯓</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
 	<td id="blue">' + link_blue_1 + '、' + link_blue_2 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'brown_transfer_logo.png"></td>\
 	<td id="brown">' + link_brown_1 + '</td></tr>\
-<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
-	<td id="tour_bus">' + link_tour_bus_7702 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7408 + '</td></tr>';
 

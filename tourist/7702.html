@@ -24,53 +24,164 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'嘉義客運','','里程計費',['http://www.taiwantrip.com.tw/line/42?x=3&y=1" target="_blank','台灣好行官方網站'],[['平日','normal'],['假日','holiday']]);
-	block_fare(10, null);
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],
-		'「<font color="red">觀</font>」表示採觀光公車模式，返程停靠高跟鞋教堂40分鐘，上述時間為開車時間\
-		<p>&nbsp;</p>\
-		<h2><font color="purple">郵輪式觀光公車</font><font color="red">【僅假日行駛】</font></h2>\
-		<table>\
-			<tr>\
-				<th rowspan="2">嘉義<br />轉運站</th>\
-				<th rowspan="2">嘉義<br />高鐵站</th>\
-				<th colspan="2">故宮南院</th>\
-				<th colspan="2">東石漁人碼頭</th>\
-				<th colspan="2">高跟鞋教堂</th>\
-				<th colspan="2">北門遊客中心</th>\
-				<th>南鯤鯓代天府</th>\
-				<th colspan="2">好美里</th>\
-				<th rowspan="2">嘉義<br />高鐵站</th>\
-				<th rowspan="2">嘉義<br />轉運站</th>\
-			</tr>\
-			<tr BGCOLOR="#A57C99" style="Color:#FFFFFF">\
-				<td>到站</td>\
-				<td>發車</td>\
-				<td>到站</td>\
-				<td>發車</td>\
-				<td>到站</td>\
-				<td>發車</td>\
-				<td>到站</td>\
-				<td>發車</td>\
-				<td>到站</td>\
-				<td>到站</td>\
-				<td>發車</td>\
-			</tr>\
-			<tr>\
-				<td>09:00</td>\
-				<td>09:20</td>\
-				<td>09:35</td><td>10:30</td>\
-				<td>10:50</td><td>11:20</td>\
-				<td>11:38</td><td>13:15</td>\
-				<td>13:35</td><td>14:45</td>\
-				<td>14:50</td>\
-				<td>15:00</td><td>15:40</td>\
-				<td>16:20</td>\
-				<td>16:50</td>\
-			</tr>\
-		</table>\
-		<h3>本班次採用無障礙<font color="red">低地板</font>車輛</h3>');
-	block_transfer(transfer_hsr_chiayi_station + transfer_south_kunshen + transfer_beimen);
+	block_route_info(route_interval,'嘉義客運','','一日交通票',['http://www.taiwantrip.com.tw/line/42?x=3&y=1" target="_blank','台灣好行官方網站']);
+	block_fare(10,'<h1>郵輪式列車請購買一日交通票200元：可在全家Fami-port購票。</h1>\
+<h3>所有班次採全預約制，請於搭乘前七天向嘉義客運預約(05-2750895#333/331，平日上班時間)。</h3>');
+
+function show_7702_time_table(isMonday) {
+	document.getElementById("monday_7702").style.display = (isMonday) ? '' : 'none';
+	document.getElementById("normal_7702").style.display = (isMonday) ? 'none' : '';
+}
+</script>
+
+<div id="timetable">
+	<a name="time"></a>
+	<div class="title">
+
+<script type="text/javascript">
+	document.write('<h2>' + title_name + ' ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus schedule</span>');
+</script>
+
+	</div>
+	<div class="content">
+		<div class="radio-toolbar">
+			<form id="multiple_type">
+				<input type="radio" id="radio0" name="radios" onClick="show_7702_time_table(0);" checked />
+				<label for="radio0">
+					<font color="#CC0000">星期二~日</font>
+				</label>
+				<input type="radio" id="radio1" name="radios" onClick="show_7702_time_table(1);" />
+				<label for="radio1">
+					<font color="#0000AA">星期一</font>
+				</label>
+			</form>
+		</div>
+		<br />
+		<div id="time_schedule_panel" name="time_schedule_panel">
+			<h2><font color="purple">嘉義轉運站->北門遊客中心->嘉義轉運站</font><font color="red">【郵輪式觀光公車】</font></h2>
+			<table id="normal_7702">
+				<tr>
+					<th rowspan="2">班次</th>
+					<th rowspan="2">嘉義<br />轉運站</th>
+					<th rowspan="2">嘉義<br />高鐵站</th>
+					<th colspan="2">故宮南院</th>
+					<th colspan="2">東石漁人碼頭</th>
+					<th colspan="2">高跟鞋教堂</th>
+					<th colspan="2">好美里</th>
+					<th colspan="2">北門遊客中心</th>
+					<th rowspan="2">嘉義<br />高鐵站</th>
+					<th rowspan="2">嘉義<br />轉運站</th>
+				</tr>
+				<tr BGCOLOR="#A57C99" style="color:#FFFFFF">
+					<td>到站</td>
+					<td>發車</td>
+					<td>到站</td>
+					<td>發車</td>
+					<td>到站</td>
+					<td>發車</td>
+					<td>到站</td>
+					<td>發車</td>
+					<td>到站</td>
+					<td>發車</td>
+				</tr>
+				<tr>
+					<td><span style="font-weight: bold;">1</span></td>
+					<td>09:00</td>
+					<td>09:20</td>
+					<td>09:30</td><td>10:20</td>
+					<td>10:40</td><td>11:10</td>
+					<td>11:28</td><td>12:30</td>
+					<td>12:50</td><td>13:30</td>
+					<td>13:45</td><td>15:00</td>
+					<td>15:40</td>
+					<td>16:00</td>
+				</tr>
+				<tr>
+					<td><span style="color: red; font-weight: bold;">L</span><span style="font-weight: bold;">2</span></td>
+					<td>11:30</td>
+					<td>11:50</td>
+					<td>12:00</td><td>12:50</td>
+					<td>13:10</td><td>13:40</td>
+					<td>13:58</td><td>15:00</td>
+					<td>15:20</td><td>16:00</td>
+					<td>16:15</td><td>17:30</td>
+					<td>18:10</td>
+					<td>18:30</td>
+				</tr>
+			</table>
+			<table id="monday_7702" style="display: none;">
+				<tr>
+					<th rowspan="2">班次</th>
+					<th rowspan="2">嘉義<br />轉運站</th>
+					<th rowspan="2">嘉義<br />高鐵站</th>
+					<th colspan="2">故宮南院</th>
+					<th colspan="2">東石漁人碼頭</th>
+					<th colspan="2">高跟鞋教堂</th>
+					<th colspan="2">好美里</th>
+					<th colspan="2">北門遊客中心</th>
+					<th rowspan="2">嘉義<br />高鐵站</th>
+					<th rowspan="2">嘉義<br />轉運站</th>
+				</tr>
+				<tr BGCOLOR="#A57C99" style="color:#FFFFFF">
+					<td>到站</td>
+					<td>發車</td>
+					<td>到站</td>
+					<td>發車</td>
+					<td>到站</td>
+					<td>發車</td>
+					<td>到站</td>
+					<td>發車</td>
+					<td>到站</td>
+					<td>發車</td>
+				</tr>
+				<tr>
+					<td><span style="font-weight: bold;">1</span></td>
+					<td>09:00</td>
+					<td>09:20</td>
+					<td rowspan="2" colspan="2"><span style="font-weight: bold;">休館<br />不停靠</span></td>
+					<td>09:50</td><td>10:50</td>
+					<td>11:08</td><td>12:30</td>
+					<td>12:50</td><td>13:30</td>
+					<td>13:45</td><td>15:00</td>
+					<td>15:40</td>
+					<td>16:00</td>
+				</tr>
+				<tr>
+					<td><span style="color: red; font-weight: bold;">L</span><span style="font-weight: bold;">2</span></td>
+					<td>11:30</td>
+					<td>11:50</td>
+					<td>12:20</td><td>13:20</td>
+					<td>13:38</td><td>15:00</td>
+					<td>15:20</td><td>16:00</td>
+					<td>16:15</td><td>17:30</td>
+					<td>18:10</td>
+					<td>18:30</td>
+				</tr>
+			</table>
+			<h3><span style="color: red; font-weight: bold;">L</span>表示該班次採用無障礙<span style="color: red;">低地板</span>車輛</h3>
+		</div>
+		<p> </p>
+		<h2><span style="color:red;">臺灣好行鹽鄉濱海線-郵輪式列車搭乘相關規定如下：</span></h2>
+		<center><div style="text-align: left; width: 650px; border:solid 1px; background-color: #BBFFBB; padding: 15px; line-height: 36px;">
+		<h3>1.平假日皆為2班次，行駛時間分為星期二~星期日及星期一兩種(配合故宮南院星期一休館)</h3>
+		<h3>2.每日第一班次(09：00)使用中型巴士，開放19個座位供乘客搭乘。</h3>
+		<h3>3.每日第二班次(11：30)使用低地板無障礙公車，開放27個座位+2位無障礙輪椅席。
+		<h3>4.乘客統一於嘉義轉運站/嘉義高鐵站上車，由司機核對名單。
+		<h3>5.郵輪式列車採原車去回，並依照時刻表行駛，逾時不候，不得2班次交互搭乘，若後續要自行轉乘其他交通工具，視為放棄後段行程，亦不接受短程乘客搭乘，經使用後不能退票。</h3>
+		<h3>6.預約方式為平日時間早上8點半到中午12點，下午1點到下午4點半，開放預約出發前7日之郵輪式公車。預約專線請播打嘉義客運專線：05-2750895轉333蔡小姐或331邱先生。</h3>
+		<h3>7.因本路線行駛82快速道路(故宮南院站-東石漁人碼頭)與61快速道路(東石漁人碼頭-高跟鞋教堂站，為乘客安全及遵守高速公路及快速公路交通管制規則第九條第七項，得拒絕乘客上車。</h3>
+		<h3>8.例假日有安排導覽志工於車上進行解說導覽，各景點由乘客自由行動。</h3>
+		</div></center>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	window.onload = function() { // solve the bug for refreshing input raidio still checked with previous action
+		document.getElementById('multiple_type').reset();
+	}
+
+	block_transfer(transfer_hsr_chiayi_station + transfer_beimen);
 	block_copyright();
 </script>
 </body>
