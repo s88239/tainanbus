@@ -36,7 +36,10 @@ function query_fare(theForm, fare_array, fare_type){
 			card_price = price - 26;
 			break;
 		case 'Kaohsiung':
-			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 23 : fare_array[td][fd];
+			card_price = price;
+			var ipass_price = price - 12; // 使用「一卡通」上車刷卡現折12元
+			document.getElementById("card_adult").innerHTML = (ipass_price > 60) ? 60 : ipass_price; // 收費最高上限60元
+			document.getElementById("card_half").innerHTML = Math.ceil(price / 2); // 半票不適用一卡通優惠
 			break;
 		case 'highway':
 			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 21 : fare_array[td][fd];
@@ -71,6 +74,9 @@ function print_fare_table(interval_name, fare, color, fare_type){ // the functio
 				switch(fare_type) {
 					case '8km':
 						card_price = fare[j][i] - 26;
+						break;
+					case 'Kaohsiung':
+						card_price = fare[j][i];
 						break;
 					case '8050':
 						card_price = Math.round(fare[j][i] * HIGHWAY_CARD_PRICE_RATIO);

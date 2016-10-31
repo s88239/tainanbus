@@ -24,26 +24,7 @@
 	block_header();
 	block_route_map(null);
 	block_route_info(route_interval,'高雄客運','','里程計費','http://ibus.tbkc.gov.tw/bus/pda/businfo.aspx?Routeid=8046&GO_OR_BACK=2&Line=All&lang=Cht');
-	//block_fare(10, null);
-	document.write('<div id="wrapper3">\
-	<a name="fare"></a>\
-	<div id="faretable" class="container">\
-		<div class="title">\
-			<h2>' + title_name + ' ─ ' + route_name + ' 票價表</h2>\
-			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
-		</div>\
-		<div class="content">\
-			<p>&nbsp;</p>\
-			<h1><font color="red">尚無提供票價表</font></h1>\
-			<p>&nbsp;</p>\
-			<h1>使用一卡通收費最高上限為60元</h1>\
-			<p>&nbsp;</p><p>&nbsp;</p>\
-			<h2>使用電子票證時，上下車皆須刷卡</h2>\
-			<p> </p>\
-			<p>詳情請參閱高雄客運網站</p><p></p>\
-		</div>\
-	</div>\
-</div>');
+	block_fare_highway("Kaohsiung","");
 	block_time_schedule(route_start_stop,route_end_stop,'');
 	block_transfer(transfer_tainan_railway_station);
 	block_copyright();

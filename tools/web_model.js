@@ -302,9 +302,21 @@ function block_fare_highway(charge_type, additional_message){
 			<p>　</p>');
 	print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color, charge_type);
 
-	document.write('<p>　</p>\
-		<h2>使用電子票證時，上下車皆須刷卡</h2><br />\
-		<h3>刷電子票證票價僅供參考，誤差為1元上下</h3>');
+	var fare_notice = '<h2>使用電子票證時，上下車皆須刷卡</h2><br />';
+	if(charge_type=='Kaohsiung') {
+		fare_notice += '<h3><span style="color: red;">本路線非大台南公車，無法享有八公里免費及轉乘優惠</span></h3>\
+		<h1>本路線使用「一卡通」刷卡現折12元，且單趟收費最高上限為60元</h1>\
+		<p><span style="color: blue; font-weight: bold;">(僅一卡通普卡、學生卡享此優惠，已享優惠之卡種如半票不適用)</span></p>';
+	}
+	else if(charge_type=='8050') {
+		fare_notice += '<h3>刷電子票證票價僅供參考，誤差為1元上下</h3>\
+						<h1>本路線不適用一卡通折12元及收費最高上限優惠</h1>';
+	}
+	else {
+		fare_notice += '<h3><span style="color:red;">本路線非大台南公車，無法享有八公里免費及轉乘優惠</span></h3>\
+						<h3>刷電子票證票價僅供參考，誤差為1元上下</h3>';
+	}
+	document.write('<p>　</p>' + fare_notice);
 	if(additional_message) document.write(additional_message); // print additional message
 	document.write('<p>　</p></div>\
 	</div>\
