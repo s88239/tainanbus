@@ -9,9 +9,9 @@ var skip_stop_2 = 2; // 南科實中
 var stop_1 = 3; // 民生水塔
 var TRA_NK = 4;
 STSP_blue_time_go = [["06:20",[skip_stop,skip_stop_2]],["06:40",[skip_stop,skip_stop_2]],["06:57",[[stop_1,8,TRA_NK+1,1]]],["07:12",[[stop_1,8,TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["07:16",[[stop_1,8,TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],
-["07:50",[skip_stop,skip_stop_2,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["07:56",[skip_stop,skip_stop_2,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["07:58",[skip_stop,skip_stop_2,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["08:21",[skip_stop,skip_stop_2,[TRA_NK+1,1]]],["08:25",[skip_stop,skip_stop_2,[TRA_NK+1,1]]],["09:05",[skip_stop,skip_stop_2]],
+["07:49",[skip_stop,skip_stop_2,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["07:56",[skip_stop,skip_stop_2,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["07:58",[skip_stop,skip_stop_2,[TRA_NK+1,1,TRA_NK+2,2,TRA_NK+3,1]]],["08:19",[skip_stop,skip_stop_2,[TRA_NK+1,1]]],["08:25",[skip_stop,skip_stop_2,[TRA_NK+1,1]]],["09:05",[skip_stop,skip_stop_2]],
 ["09:26",[skip_stop,skip_stop_2]],["10:25",[skip_stop,skip_stop_2]],["11:05",[skip_stop,skip_stop_2]],["11:32",[skip_stop,skip_stop_2]],["12:11",[skip_stop,skip_stop_2]],["13:30",[skip_stop,skip_stop_2]],
-["14:39",[skip_stop,skip_stop_2]],["15:22",[skip_stop,skip_stop_2]],["16:06",[skip_stop,[skip_stop_2,-3,stop_1,8]]],["16:35",[skip_stop,skip_stop_2]],["17:00",0,TRA_NK,[skip_stop,[skip_stop_2,-3,stop_1,8,TRA_NK,1]]],
+["14:39",[skip_stop,skip_stop_2]],["15:22",[skip_stop,skip_stop_2]],["16:06",[skip_stop,[skip_stop_2,-3,stop_1,8]]],["16:37",[skip_stop,skip_stop_2]],["17:00",0,TRA_NK,[skip_stop,[skip_stop_2,-3,stop_1,8,TRA_NK,1]]],
 ["17:00",0,TRA_NK,[skip_stop,[skip_stop_2,-3,stop_1,8,TRA_NK,1]]],["17:18",skip_stop_2,TRA_NK,[[stop_1,8]]],["17:18",skip_stop_2,TRA_NK,[[stop_1,8]]]
 ];
 
