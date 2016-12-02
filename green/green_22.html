@@ -8,7 +8,10 @@
 	route_file_name = 'green_22';
 	route_type = 'green';
 	route_interval = ['玉井','楠西','梅嶺'];
+	route_start_stop = '玉井';
+	route_end_stop = '梅嶺';
 </script>
+<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -18,9 +21,10 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'興南客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1122&locale=zh_TW');
+	block_route_info(route_interval,'興南客運','','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1122&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(0, null);
-	block_time_schedule('玉井','梅嶺',H_message);
+	//block_time_schedule('玉井','梅嶺',H_message);
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],'');
 	block_transfer(transfer_yujing);
 	block_copyright();
 </script>
