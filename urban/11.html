@@ -20,7 +20,7 @@
 	block_route_map(null);
 	block_route_info(route_interval,'府城客運','','二段票 分段點：海東國小','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=10169&locale=zh_TW');
 	block_fare(2, null,'海東國小');
-	block_time_schedule('大成路口','城西里',W_message);
+	block_time_schedule('大成路口','城西里',W_message+'<p></p><span style="color: darkgreen;">大成路口15:23與之後發車班次</span>及<span style="color: darkgreen;">城西里15:50與之後發車班次</span><span style="color: red;">週四</span><span style="color: darkblue;">不停靠<br />城東里、土城國小、聖母廟東、鹿耳門聖母廟、青砂街一段</span>');
 	block_transfer(transfer_tainan_railway_station + transfer_haidong_elementary_school);
 	block_copyright();
 </script>
