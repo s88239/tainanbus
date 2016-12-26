@@ -32,5 +32,5 @@ yellow_11_important_stop = [0, 1, 3, 6]; // 白河, 東山, 宅子內, 青山
 var start_stop = 0; // 白河
 var stop_1 = 2; // 嶺南里
 var stop_2 = 3; // 宅子內
-yellow_11_time_go = [["06:00",[stop_1,stop_2]],["06:15",start_stop,stop_2],["07:20",[stop_1,stop_2]],["09:10",[stop_1,stop_2]],["10:40",[stop_1,stop_2]],["11:40",[[stop_2+1,13]]],["13:30",[stop_1,stop_2]],["15:00",[stop_1,stop_2]],["16:20",[stop_1,stop_2]],["17:15",[stop_1,stop_2]],["17:30",start_stop,stop_2],["18:15",[stop_1,stop_2]]];
-yellow_11_time_return = [["06:35",[stop_1,stop_2]],["06:45",stop_2,start_stop],["07:50",[stop_1,stop_2]],["09:40",[stop_1,stop_2]],["11:10",[stop_1,stop_2]],["12:25",[[stop_2,13]]],["14:00",[stop_1,stop_2]],["15:30",[stop_1,stop_2]],["16:50",[stop_1,stop_2]],["17:50",[stop_1,stop_2]],["18:00",stop_2,start_stop],["18:50",[stop_1,stop_2]]];
+yellow_11_time_go = [["06:00",[stop_1,stop_2]],["06:05",[[stop_2+1,13]]],["07:20",[stop_1,stop_2]],["09:10",[stop_1,stop_2]],["10:40",[[stop_2+1,13]]],["12:00",[stop_1,stop_2]],["13:40",[stop_1,stop_2]],["15:00",[stop_1,stop_2]],["16:20",[stop_1,stop_2]],["17:15",[stop_1,stop_2]],["17:40",[[stop_2+1,13]]],["18:15",[stop_1,stop_2]]];
+yellow_11_time_return = [["06:35",[stop_1,stop_2]],["06:50",[[stop_2,13]]],["07:50",[stop_1,stop_2]],["09:40",[stop_1,stop_2]],["11:25",[[stop_2,13]]],["12:30",[stop_1,stop_2]],["14:10",[stop_1,stop_2]],["15:30",[stop_1,stop_2]],["16:55",[[stop_2,13]]],["17:50",[stop_1,stop_2]],["18:25",[stop_1,stop_2]],["18:50",[stop_1,stop_2]]];
