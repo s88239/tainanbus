@@ -33,7 +33,7 @@ green_12_main_stop_time_consume = [0, 8, 14, 17, 19, 21, 24, 30, 38, 46, 55];
 green_12_important_stop = [0, 3, 7, 10]; // 新化, 左鎮化石館, 南化, 玉山
 start_stop = 0; // 新化
 end_stop = 7; // 南化
-green_12_time_go = [["05:25",start_stop,end_stop],["07:00",start_stop,end_stop,['W']],["08:10"],["08:35",start_stop,end_stop,['W']],
+green_12_time_go = [["05:25",start_stop,end_stop],["07:00",start_stop,end_stop,['W']],["08:00",start_stop,end_stop,['W']],["08:10"],["08:35",start_stop,end_stop,['W']],
 ["10:30"],["12:20"],["14:05",['W']],["15:40",start_stop,end_stop,['W']],["17:25",start_stop,end_stop,['W']],["18:10"],["21:20"]];
-green_12_time_return = [["05:55",end_stop,start_stop],["07:30",end_stop,start_stop,['W']],["09:05",end_stop,start_stop,['W']],["09:10"],
+green_12_time_return = [["05:55",end_stop,start_stop],["07:30",end_stop,start_stop,['W']],["08:30",end_stop,start_stop,['W']],["09:05",end_stop,start_stop,['W']],["09:10"],
 ["11:30"],["13:20"],["15:00",['W']],["16:15",end_stop,start_stop,['W']],["17:55",end_stop,start_stop,['W']],["19:10"],["22:15"]];

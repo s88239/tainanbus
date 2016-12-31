@@ -55,22 +55,7 @@
 	</div>\
 </div>');
 	block_fare(0, null);
-	document.write('<div id="timetable">\
-	<a name="time"></a>\
-	<div class="title">\
-		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
-		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
-	</div>\
-	<div class="content">\
-		<h2><font color="orange">白河-&gt;二坑埔-&gt;李子園-&gt;青山-&gt;白河</font></h2>'
-	+ create_time_schedule(yellow_11_1_main_stop_name, yellow_11_1_main_stop_time_consume, yellow_11_1_important_stop, yellow_11_1_time_go, false)
-	+ '<p>　</p>\
-		<h2><font color="orange">白河-&gt;青山-&gt;李子園-&gt;二坑埔-&gt;白河</font></h2>'
-	+ create_time_schedule(yellow_11_1_main_stop_name_reverse, yellow_11_1_main_stop_time_consume_reverse, yellow_11_1_important_stop, yellow_11_1_time_return, false)
-	+ TimeScheduleMSG
-	+ 	'<h1><font color="blue">僅週一至週五行駛</font></h1>\
-	</div>\
-</div>');
+	block_time_schedule_diffreturn('白河-&gt;二坑埔-&gt;李子園-&gt;青山-&gt;白河','白河-&gt;青山-&gt;李子園-&gt;二坑埔-&gt;白河','');
 	block_transfer(transfer_baihe);
 	block_copyright();
 </script>

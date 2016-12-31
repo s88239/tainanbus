@@ -1,14 +1,16 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_15_main_stop_name = ["奇美<br />醫院","臺南<br />高工","中華、<br />小東路口","南紡<br />夢時代","中華東、<br />東門路口","巴克禮<br />公園","大林<br />國宅","國民、<br />大成路口","家齊<br />女中","大成<br />國中","大成<br />路口"];
+city_bus_15_main_stop_name = ["奇美<br />醫院","臺南<br />高工","中華、<br />小東路口","南紡購<br />物中心","中華東、<br />東門路口","巴克禮<br />公園","大林<br />國宅","國民、<br />大成路口","家齊<br />高中","大成<br />國中","大成<br />路口"];
 city_bus_15_main_stop_time_consume = [0, 5, 10, 12, 17, 21, 25, 27, 30, 33, 35];
 city_bus_15_important_stop = [0, 1, 3, 5, 8]; // 大成路口, 臺南站, 臺南火車站, 海東國小, 聖母廟, 城西里
-city_bus_15_time_go = [["06:00",0,9,['W']],["06:20",0,9],["06:45",0,9],["07:15"],["07:35",0,9],["08:15",0,9],["08:50",0,9],
-["09:20"],["09:55",0,9],["10:35",0,9],["11:00"],["11:35",0,9],["12:15",0,9],["12:50"],["13:20",0,9],["14:00",0,9],["14:40"],
-["15:10",0,9],["15:40",0,9],["16:20",0,9],["16:40"],["17:20",0,9],["17:55",0,9],["18:25"],["19:00",0,9],["19:35",0,9],
-["20:10",0,9],["20:40",0,9],["21:20",0,9],["22:00",0,9]];
-city_bus_15_time_return = [["06:10",9,0],["06:35",9,0],["06:55",9,0],["07:35",9,0],["08:08"],["08:40",9,0],["09:15",9,0],
-["09:55",9,0],["10:18"],["10:55",9,0],["11:35",9,0],["12:03"],["12:35",9,0],["13:15",9,0],["13:48"],["14:30",9,0],
-["15:00",9,0],["15:33"],["16:00",9,0],["16:35",9,0],["17:10",9,0],["17:33"],["18:15",9,0],["18:55",9,0],["19:28"],
-["20:00",9,0],["20:40",9,0],["21:20",9,0],["22:00",9,0]];
+var start_stop = 0; // 奇美醫院
+var end_stop = 9; // 大成國中
+city_bus_15_time_go = [["06:00",start_stop,end_stop,['W']],["06:15",start_stop,end_stop,['W']],["06:20",start_stop,end_stop,['H']],["06:30",start_stop,end_stop,['W']],["06:45",start_stop,end_stop],["07:15"],["07:35",start_stop,end_stop],["08:15",start_stop,end_stop],["08:50",start_stop,end_stop],
+["09:20"],["09:55",start_stop,end_stop],["10:35",start_stop,end_stop],["11:00"],["11:35",start_stop,end_stop],["12:15",start_stop,end_stop],["12:50"],["13:20",start_stop,end_stop],["14:00",start_stop,end_stop],["14:40"],
+["15:10",start_stop,end_stop],["15:40",start_stop,end_stop],["16:20",start_stop,end_stop],["16:40"],["17:20",start_stop,end_stop],["17:55",start_stop,end_stop],["18:25"],["19:00",start_stop,end_stop],["19:35",start_stop,end_stop],
+["20:10",start_stop,end_stop],["20:40",start_stop,end_stop],["21:20",start_stop,end_stop],["22:00",start_stop,end_stop]];
+city_bus_15_time_return = [["06:10",end_stop,start_stop],["06:20",end_stop,start_stop,['W']],["06:35",end_stop,start_stop],["06:55",end_stop,start_stop],["07:35",end_stop,start_stop],["08:08"],["08:40",end_stop,start_stop],["09:15",end_stop,start_stop],
+["09:55",end_stop,start_stop],["10:18"],["10:55",end_stop,start_stop],["11:35",end_stop,start_stop],["12:03"],["12:35",end_stop,start_stop],["13:15",end_stop,start_stop],["13:48"],["14:30",end_stop,start_stop],
+["15:00",end_stop,start_stop],["15:33"],["16:00",end_stop,start_stop],["16:35",end_stop,start_stop],["17:10",end_stop,start_stop],["17:33"],["18:15",end_stop,start_stop],["18:55",end_stop,start_stop],["19:28"],
+["20:00",end_stop,start_stop],["20:40",end_stop,start_stop],["21:20",end_stop,start_stop],["22:00",end_stop,start_stop]];

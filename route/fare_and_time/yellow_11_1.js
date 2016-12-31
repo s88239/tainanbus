@@ -19,7 +19,6 @@ yellow_11_1_interval_stop = [
 ["東原國中","瓦厝"],
 ["東原"]*/
 ];
-yellow_11_1_stop_time_consume = [0,1,2,3,4,5,7,8,8,9,9,10,11,14,14,15,15,16,17,18,20,22,23,24,24,25,26,27];
 yellow_11_1_fare = [
 [26],
 [26,26],
@@ -40,12 +39,12 @@ yellow_11_1_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_11_1_main_stop_name = ["白河","東山","東原","南寮口","二坑埔","李子園","北寮","青山","東原","白河"];
-yellow_11_1_main_stop_time_consume = [0, 5, 22, 31, 36, 50, 55, 62, 68, 90];
+yellow_11_1_main_stop_name = ["白河","東山","東原","南寮口","二坑埔","檳榔宅","李子園","北寮","青山","東原國中","白河"];
+yellow_11_1_main_stop_time_consume = [0, 5, 22, 31, 36, 39, 50, 55, 62, 68, 90];
+yellow_11_1_important_stop = [0, 4, 6, 8, 10]; // 白河, 二坑埔, 李子園, 青山, 白河
 yellow_11_1_time_go = [["06:10"]];
 
-yellow_11_1_main_stop_name_reverse = ["白河","東山","東原","青山","北寮","李子園","二坑埔","南寮口","東原","白河"];
-yellow_11_1_main_stop_time_consume_reverse = [0, 5, 22, 27, 35, 40, 54, 59, 68, 90];
+yellow_11_1_main_stop_name_return = ["白河","東山","東原","青山","北寮","李子園","檳榔宅","二坑埔","南寮口","東原國中","白河"];
+yellow_11_1_main_stop_time_consume_return = [0, 5, 22, 28, 35, 40, 51, 54, 59, 68, 90];
+yellow_11_1_important_stop_return = [0, 3, 5, 7, 10]; // 白河, 青山, 李子園, 二坑埔, 白河
 yellow_11_1_time_return = [["12:40"],["16:40"]];
-
-yellow_11_1_important_stop = [0, 3, 4, 5, 6, 7]; // 白河, 二坑埔 李子園, 青山

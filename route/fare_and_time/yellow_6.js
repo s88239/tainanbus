@@ -38,18 +38,18 @@ yellow_6_holiday_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 yellow_6_main_stop_name = ["新營","竹新里","仕安里","鎮安堂","菁寮","白沙屯","後壁火車站/<br />後壁區公所"];
-yellow_6_main_stop_time_consume = [0, 13, 15, 17, 21, 26, 41];
+yellow_6_main_stop_time_consume = [0, 13, 15, 16, 20, 25, 40];
 yellow_6_important_stop = [0, 4, 6]; // 新營, 菁寮, 後壁火車站
 var start_stop = 0; // 新營
 var skip_stop = 1; // 竹新里
 var skip_stop_2 = 3; // 鎮安堂
 var end_stop = 5; // 白沙屯
 yellow_6_time_go = [["05:50",start_stop,end_stop,[skip_stop,skip_stop_2]],["06:45",start_stop,end_stop,[skip_stop,skip_stop_2]],
-["08:00",['繞',[skip_stop+1,12,skip_stop_2,2]]],["11:00",['繞',[skip_stop+1,12,skip_stop_2,2]]],["13:05",['繞',[skip_stop+1,12,skip_stop_2,2]]],["15:20",[skip_stop,skip_stop_2]],["17:40",[skip_stop,skip_stop_2]]];
+["07:50",['繞',[skip_stop+1,12,skip_stop_2,3]]],["11:00",['繞',[skip_stop+1,12,skip_stop_2,3]]],["13:05",['繞',[skip_stop+1,12,skip_stop_2,3]]],["15:20",[skip_stop,skip_stop_2]],["17:40",[skip_stop,skip_stop_2]]];
 yellow_6_time_return = [["06:20",end_stop,start_stop,[skip_stop,skip_stop_2]],["07:10",end_stop,start_stop,[skip_stop,skip_stop_2]],
-["09:00",['繞',[skip_stop_2-1,2,skip_stop,12]]],["12:00",['繞',[skip_stop_2-1,2,skip_stop,12]]],["14:05",['繞',[skip_stop_2-1,2,skip_stop,12]]],["16:05",[skip_stop,skip_stop_2]],["18:30",[skip_stop,skip_stop_2]]];
+["08:50",['繞',[skip_stop_2-1,3,skip_stop,12]]],["12:00",['繞',[skip_stop_2-1,3,skip_stop,12]]],["14:05",['繞',[skip_stop_2-1,3,skip_stop,12]]],["16:05",[skip_stop,skip_stop_2]],["18:30",[skip_stop,skip_stop_2]]];
 // holiday schedule
 yellow_6_holiday_time_go = [["05:50",start_stop,end_stop,[skip_stop,skip_stop_2]],["06:45",start_stop,end_stop,[skip_stop,skip_stop_2]],
-["08:00",[skip_stop,skip_stop_2]],["11:00",[skip_stop,skip_stop_2]],["13:05",[skip_stop,skip_stop_2]],["15:20",[skip_stop,skip_stop_2]],["17:40",[skip_stop,skip_stop_2]]];
+["07:50",[skip_stop,skip_stop_2]],["11:00",[skip_stop,skip_stop_2]],["13:05",[skip_stop,skip_stop_2]],["15:20",[skip_stop,skip_stop_2]],["17:40",[skip_stop,skip_stop_2]]];
 yellow_6_holiday_time_return = [["06:20",end_stop,start_stop,[skip_stop,skip_stop_2]],["07:10",end_stop,start_stop,[skip_stop,skip_stop_2]],
-["08:45",[skip_stop,skip_stop_2]],["11:45",[skip_stop,skip_stop_2]],["13:50",[skip_stop,skip_stop_2]],["16:05",[skip_stop,skip_stop_2]],["18:30",[skip_stop,skip_stop_2]]];
+["08:35",[skip_stop,skip_stop_2]],["11:45",[skip_stop,skip_stop_2]],["13:50",[skip_stop,skip_stop_2]],["16:05",[skip_stop,skip_stop_2]],["18:30",[skip_stop,skip_stop_2]]];
