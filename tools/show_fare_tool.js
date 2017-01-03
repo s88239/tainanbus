@@ -35,6 +35,9 @@ function query_fare(theForm, fare_array, fare_type){
 		case '8km':
 			card_price = price - 26;
 			break;
+		case '8km18':
+			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO) - (HIGHWAY_CARD_PRICE_BASE - 18);
+			break;
 		case 'Kaohsiung':
 			card_price = price;
 			var ipass_price = price - 12; // 使用「一卡通」上車刷卡現折12元
@@ -74,6 +77,9 @@ function print_fare_table(interval_name, fare, color, fare_type){ // the functio
 				switch(fare_type) {
 					case '8km':
 						card_price = fare[j][i] - 26;
+						break;
+					case '8km18':
+						card_price = Math.round(fare[j][i] * HIGHWAY_CARD_PRICE_RATIO) - (HIGHWAY_CARD_PRICE_BASE - 18);
 						break;
 					case 'Kaohsiung':
 						card_price = fare[j][i];
