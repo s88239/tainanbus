@@ -24,5 +24,5 @@ yellow_15_fare = [
 yellow_15_main_stop_name = ["白河","玉豐","枋子林","詔安厝"];
 yellow_15_main_stop_time_consume = [0, 8, 11, 15];
 yellow_15_important_stop = [0, 3]; // 白河, 三層崎
-yellow_15_time_go = [["06:45"],["10:50"],["18:35"]];
-yellow_15_time_return = [["06:25"],["07:05"],["11:10"]];
+yellow_15_time_go = [["06:45"],["10:50",['L']],["18:35",['L']]];
+yellow_15_time_return = [["06:25"],["07:05"],["11:10",['L']]];

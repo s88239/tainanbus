@@ -34,16 +34,19 @@ yellow_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 yellow_main_stop_name = ["白河","蘭花園區","新營","柳營<br />奇美醫院","柳營<br />火車站","麻豆寮","下營公所","一商前","麻豆<br />轉運站"];
-yellow_main_stop_time_consume = [0, 9, 25, 37, 40, 50, 58, 76, 85];
-yellow_important_stop = [0, 2, 8]; // 白河, 新營, 麻豆轉運站
+yellow_main_stop_time_consume = [0, 9, 25, 33, 36, 46, 53, 71, 80];
+yellow_important_stop = [0, 2, 4, 8]; // 白河, 新營, 柳營火車站, 麻豆轉運站
+var start_stop = 0; // 白河
 var hsinyin = 2; // 新營
-yellow_time_go = [["06:00",[1]],["06:20",0,2,[1]],["06:30",[1]],["06:45",0,3,[1]],["07:15",0,2,[1]],["07:30",[1]],
-["08:00",0,2],["08:30"],["08:50",0,2],["09:30"],["10:00",0,2],["10:30"],["11:00",0,2],["11:30"],["12:00",0,2],
-["12:30"],["13:00",0,2],["13:30"],["14:00",0,2],["14:30"],["15:00",0,2],["15:30"],["16:00",0,2],["16:30"],
-["17:00",0,2],["17:30",['繞',1]],["18:00",[1]],["18:15",0,2,[1]],["18:30",0,2,[1]],["19:00",[1]],["20:00",[1]]
+var skip_stop = 1; // 蘭花園區
+var chimei = 3; // 柳營奇美醫院
+yellow_time_go = [["06:00",[skip_stop,'L']],["06:20",start_stop,hsinyin,[skip_stop,'L']],["06:30",[skip_stop,'L']],["06:45",start_stop,chimei,[skip_stop]],["07:15",start_stop,hsinyin,[skip_stop]],["07:30",[skip_stop,'L']],
+["08:00",start_stop,hsinyin],["08:30"],["08:50",start_stop,hsinyin,['L']],["09:30"],["10:00",start_stop,hsinyin],["10:30",['L']],["11:00",start_stop,hsinyin,['L']],["11:30",['L']],["12:00",start_stop,hsinyin],
+["12:30",['L']],["13:00",start_stop,hsinyin],["13:30",['L']],["14:00",start_stop,hsinyin,['L']],["14:30"],["15:00",start_stop,hsinyin,['L']],["15:30"],["16:00",start_stop,hsinyin],["16:30",['L']],
+["17:00",start_stop,hsinyin,['L']],["17:30",['<span style="color: red;">L</span>繞',skip_stop,]],["18:00",[skip_stop,'L']],["18:15",start_stop,hsinyin,[skip_stop]],["18:30",start_stop,hsinyin,[skip_stop]],["19:00",[skip_stop]],["20:00",[skip_stop]]
 ];
-yellow_time_return = [["06:10",2,0,[1]],["06:45",2,0,[1]],["06:50",2,0,[1]],["06:00",['繞',1,[hsinyin,-5]]],["06:30",[1]],["07:55",2,0],
-["07:30"],["08:55",2,0],["08:30"],["09:55",2,0],["09:30"],["10:55",2,0],["10:30"],["11:55",2,0],["11:30"],["13:00",2,0],
-["12:30"],["13:55",2,0],["13:30"],["14:55",2,0],["14:30"],["15:55",2,0],["16:20",2,0],["15:30"],["17:00",2,0],["16:40",[1]],
-["17:40",2,0,[1]],["17:30",[1]],["18:10",[1]],["19:10",[1]],["20:00",[1,[hsinyin,-5]]]
+yellow_time_return = [["06:10",hsinyin,start_stop,[skip_stop]],["06:45",hsinyin,start_stop,[skip_stop,'L']],["06:50",hsinyin,start_stop,[skip_stop]],["06:00",['繞',skip_stop]],["06:30",[skip_stop,[hsinyin,5]]],["07:55",hsinyin,start_stop],
+["07:30",['L',[hsinyin,5]]],["08:55",hsinyin,start_stop],["08:30",['L',[hsinyin,5]]],["09:55",hsinyin,start_stop,['L']],["09:30",['L',[hsinyin,5]]],["10:55",hsinyin,start_stop],["10:30",['L',[hsinyin,5]]],["11:55",hsinyin,start_stop],["11:30",[[hsinyin,5]]],["13:00",hsinyin,start_stop,['L']],
+["12:30",[[hsinyin,5]]],["13:55",hsinyin,start_stop],["13:30",['L',[hsinyin,5]]],["14:55",hsinyin,start_stop,['L']],["14:30",['L',[hsinyin,5]]],["15:55",hsinyin,start_stop,['L']],["16:20",hsinyin,start_stop],["15:30",['L',[hsinyin,5]]],["17:00",hsinyin,start_stop],["16:40",[skip_stop]],
+["17:40",hsinyin,start_stop,[skip_stop]],["17:30",[skip_stop,[hsinyin,5]]],["18:10",[skip_stop,'L',[hsinyin,5]]],["19:10",[skip_stop,'L',[hsinyin,5]]],["20:00",[skip_stop,'L']]
 ];
