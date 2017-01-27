@@ -27,6 +27,7 @@ function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // pr
 }
 
 function query_fare(theForm, fare_array, fare_type){
+	console.log("fare_type="+fare_type);
 	var fd = parseInt(theForm.from.value,10);
 	var td = parseInt(theForm.to.value,10);
 	var price = (fd<=td)?fare_array[td][fd]:fare_array[fd][td];
@@ -52,6 +53,9 @@ function query_fare(theForm, fare_array, fare_type){
 			var citizen_card_price = card_price - HIGHWAY_CARD_PRICE_BASE;
 			document.getElementById("card_adult").innerHTML = citizen_card_price;
 			document.getElementById("card_half").innerHTML = Math.ceil(citizen_card_price/2);
+			break;
+		default:
+			card_price = price;
 			break;
 	}
 	document.getElementById("cash_adult").innerHTML = price < 0 ? 'none' : price; // 現金全票
@@ -87,8 +91,12 @@ function print_fare_table(interval_name, fare, color, fare_type){ // the functio
 					case '8050':
 						card_price = Math.round(fare[j][i] * HIGHWAY_CARD_PRICE_RATIO);
 						break;
-					default:
+					case 'highway':
 						card_price = fare[i][j];
+						break;
+					default:
+						card_price = fare[j][i];
+						break;
 				}
 				(fare[j][i] < 0) ? document.write('<td>-</td>') : document.write('<td>' + card_price + '</td>');
 			}

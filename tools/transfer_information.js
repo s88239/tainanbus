@@ -123,6 +123,7 @@ link_tour_bus_7702 = '<a href="../tourist/7702.html" target="_blank">7702 <div c
 
 link_hsr_shuttle_H31 = '<a href="../hsr_shuttle/H31.html" target="_blank">H31 <div class="sub_title"><font color="#FFFFFF">市府線</font></div></a>';
 link_hsr_shuttle_H62 = '<a href="../hsr_shuttle/H62.html" target="_blank">H62 <div class="sub_title"><font color="#FFFFFF">奇美線</font></div></a>';
+link_hsr_shuttle_166 = '<a href="../hsr_shuttle/166.html" target="_blank">166</a>';
 
 link_highway_bus_7207 = '<a href="../highway/7207.html" target="_blank">7207</a>';
 link_highway_bus_7208 = '<a href="../highway/7208.html" target="_blank">7208</a>';
@@ -359,11 +360,13 @@ transfer_hsr_tainan_station = '<tr><th rowspan="7">高鐵臺南站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_8042 + '</td></tr>';
 
-transfer_hsr_chiayi_station = '<tr><th rowspan="3">高鐵嘉義站</th>\
+transfer_hsr_chiayi_station = '<tr><th rowspan="4">高鐵嘉義站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'HSR.png"></td>\
 	<td><font color="orange">高鐵嘉義站</font></td></tr>\
 <tr><td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_9 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
+	<td id="hsr_shuttle">' + link_hsr_shuttle_166 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_7702 + '</td></tr>';
 
@@ -431,13 +434,16 @@ transfer_hsinyin = '<tr><th rowspan="4">新營站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7229 + '、' + link_highway_bus_7407 + '、' + link_highway_bus_7408 + '、' + link_highway_bus_7410 + '</td></tr>';
 
-transfer_yanshui = '<tr><th rowspan="2">鹽水</th>\
+transfer_yanshui = '<tr><th rowspan="3">鹽水</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'brown_transfer_logo.png"></td>\
 	<td id="brown">' + link_brown + '、' + link_brown_1 + '、' + link_brown_2 + '、' + link_brown_3 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
-	<td id="tour_bus"><p>' + link_highway_bus_7407 + '、' + link_highway_bus_7408 + '、' + link_highway_bus_7410 + '、</p>'
+	<td id="tour_bus"><p>' + link_highway_bus_7407 + '、</p><p>' + link_highway_bus_7408 + '、' + link_highway_bus_7410 + '、<br />\
+	<font color="white" size="-1">(步行一站至鹽水分駐所搭乘)</font></p>'
 	+ link_highway_bus_7207 + '、' + link_highway_bus_7208 + '<br />\
-	<font color="white" size="-1">(嘉客至清泉路站牌搭乘)</font></td></tr>';
+	<font color="white" size="-1">(嘉客至清泉路站牌搭乘)</font></td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
+	<td id="hsr_shuttle">' + link_hsr_shuttle_166 + '</td></tr>';
 
 transfer_liouying_railway_station = '<tr><th rowspan="2">柳營火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
