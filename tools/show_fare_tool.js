@@ -27,7 +27,6 @@ function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // pr
 }
 
 function query_fare(theForm, fare_array, fare_type){
-	console.log("fare_type="+fare_type);
 	var fd = parseInt(theForm.from.value,10);
 	var td = parseInt(theForm.to.value,10);
 	var price = (fd<=td)?fare_array[td][fd]:fare_array[fd][td];

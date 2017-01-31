@@ -40,13 +40,13 @@ var start_stop = 0; // 白河
 var hsinyin = 2; // 新營
 var skip_stop = 1; // 蘭花園區
 var chimei = 3; // 柳營奇美醫院
-yellow_time_go = [["06:00",[skip_stop,'L']],["06:20",start_stop,hsinyin,[skip_stop,'L']],["06:30",[skip_stop,'L']],["06:45",start_stop,chimei,[skip_stop]],["07:15",start_stop,hsinyin,[skip_stop]],["07:30",[skip_stop,'L']],
+yellow_time_go = [["06:00",['L']],["06:20",start_stop,hsinyin,['L']],["06:30",['L']],["06:45",start_stop,chimei],["07:15",start_stop,hsinyin],["07:30",['L']],
 ["08:00",start_stop,hsinyin],["08:30"],["08:50",start_stop,hsinyin,['L']],["09:30"],["10:00",start_stop,hsinyin],["10:30",['L']],["11:00",start_stop,hsinyin,['L']],["11:30",['L']],["12:00",start_stop,hsinyin],
 ["12:30",['L']],["13:00",start_stop,hsinyin],["13:30",['L']],["14:00",start_stop,hsinyin,['L']],["14:30"],["15:00",start_stop,hsinyin,['L']],["15:30"],["16:00",start_stop,hsinyin],["16:30",['L']],
-["17:00",start_stop,hsinyin,['L']],["17:30",['<span style="color: red;">L</span>繞',skip_stop,]],["18:00",[skip_stop,'L']],["18:15",start_stop,hsinyin,[skip_stop]],["18:30",start_stop,hsinyin,[skip_stop]],["19:00",[skip_stop]],["20:00",[skip_stop]]
+["17:00",start_stop,hsinyin,['L']],["17:30",['<span style="color: red;">L</span>繞',]],["18:00",['L']],["18:15",start_stop,hsinyin],["18:30",start_stop,hsinyin],["19:00"],["20:00"]
 ];
-yellow_time_return = [["06:10",hsinyin,start_stop,[skip_stop]],["06:45",hsinyin,start_stop,[skip_stop,'L']],["06:50",hsinyin,start_stop,[skip_stop]],["06:00",['繞',skip_stop]],["06:30",[skip_stop,[hsinyin,5]]],["07:55",hsinyin,start_stop],
+yellow_time_return = [["06:10",hsinyin,start_stop],["06:45",hsinyin,start_stop,['L']],["06:50",hsinyin,start_stop],["06:00",['繞']],["06:30",[[hsinyin,5]]],["07:55",hsinyin,start_stop],
 ["07:30",['L',[hsinyin,5]]],["08:55",hsinyin,start_stop],["08:30",['L',[hsinyin,5]]],["09:55",hsinyin,start_stop,['L']],["09:30",['L',[hsinyin,5]]],["10:55",hsinyin,start_stop],["10:30",['L',[hsinyin,5]]],["11:55",hsinyin,start_stop],["11:30",[[hsinyin,5]]],["13:00",hsinyin,start_stop,['L']],
-["12:30",[[hsinyin,5]]],["13:55",hsinyin,start_stop],["13:30",['L',[hsinyin,5]]],["14:55",hsinyin,start_stop,['L']],["14:30",['L',[hsinyin,5]]],["15:55",hsinyin,start_stop,['L']],["16:20",hsinyin,start_stop],["15:30",['L',[hsinyin,5]]],["17:00",hsinyin,start_stop],["16:40",[skip_stop]],
-["17:40",hsinyin,start_stop,[skip_stop]],["17:30",[skip_stop,[hsinyin,5]]],["18:10",[skip_stop,'L',[hsinyin,5]]],["19:10",[skip_stop,'L',[hsinyin,5]]],["20:00",[skip_stop,'L']]
+["12:30",[[hsinyin,5]]],["13:55",hsinyin,start_stop],["13:30",['L',[hsinyin,5]]],["14:55",hsinyin,start_stop,['L']],["14:30",['L',[hsinyin,5]]],["15:55",hsinyin,start_stop,['L']],["16:20",hsinyin,start_stop],["15:30",['L',[hsinyin,5]]],["17:00",hsinyin,start_stop],["16:40"],
+["17:40",hsinyin,start_stop],["17:30",[[hsinyin,5]]],["18:10",['L',[hsinyin,5]]],["19:10",['L',[hsinyin,5]]],["20:00",['L']]
 ];
