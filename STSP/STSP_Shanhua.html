@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '善化線';
+	route_name_en = 'Shanhua Line';
+	route_file_name = 'STSP_Shanhua';
+	route_type = 'STSP';
+	route_interval = ['臺鐵善化站','台積電','Park 17商場'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	title_name = '南科巡迴巴士';
+	title_name_en = 'Southern Taiwan Science Park Shuttle Bus';
+	map_display = false;
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'科技之星交通','','免費','http://www.pharoscloud.com/SmartBus/STSP_Bus/#');
+	document.write('<div id="wrapper3">\
+	<a name="fare"></a>\
+	<div id="faretable" class="container">\
+		<div class="title">\
+			<h2>' + title_name + ' ─ ' + route_name + ' 票價表</h2>\
+			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
+		</div>\
+		<div class="content">\
+			<h1><font color="red">FREE</font></h1>\
+			<h1>免費</h1>\
+			<p>&nbsp;</p>\
+			<h3><font color="blue">17:00前行駛方向為臺鐵善化站到南科各廠</font></h3>\
+			<h3><font color="red">17:01後行駛方向為南科各廠到臺鐵善化站</font></h3>\
+			<p>&nbsp;</p>\
+		</div>\
+	</div>\
+</div>');
+	block_time_schedule_diffreturn('臺鐵善化站-&gt;台積電-&gt;Park 17商場','Park 17商場-&gt;台積電-&gt;臺鐵善化站','<h1><font color="red">例假日及國定假日不行駛</font></h1>');
+	block_transfer(transfer_shanhua_railway_station + transfer_park17);
+	block_copyright();
+</script>
+</body>
+</html>

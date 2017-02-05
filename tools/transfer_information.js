@@ -143,6 +143,7 @@ link_STSP_red = '<a href="../STSP/STSP_red.html" target="_blank">南科紅線</a
 link_STSP_orange = '<a href="../STSP/STSP_orange.html" target="_blank">南科橘線</a>';
 link_STSP_blue = '<a href="../STSP/STSP_blue.html" target="_blank">南科藍線</a>';
 link_STSP_green = '<a href="../STSP/STSP_green.html" target="_blank">南科綠線</a>';
+link_STSP_Shanhua = '<a href="../STSP/STSP_Shanhua.html" target="_blank">南科善化線</a>';
 
 transfer_tainan_railway_station = '<tr><th rowspan="8">臺南火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
@@ -297,14 +298,16 @@ transfer_hsinhsih_railway_station = '<tr><th rowspan="3">新市火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_12 + '</td></tr>';
 
-transfer_shanhua_railway_station = '<tr><th rowspan="3">善化轉運站</th>\
+transfer_shanhua_railway_station = '<tr><th rowspan="4">善化轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵善化站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange"><p>' + link_orange + '、' + link_orange_1 + '、' + link_orange_2 + '、' + link_orange_3 + '、' + link_orange_4 + '、</p>'
 	+ link_orange_5 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
-	<td id="green">' + link_green_1 + '、' + link_green_2 + '、' + link_green_3 + '、' + link_green_4 + '、' + link_green_11 + '</td></tr>';
+	<td id="green">' + link_green_1 + '、' + link_green_2 + '、' + link_green_3 + '、' + link_green_4 + '、' + link_green_11 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'STSP_logo.png"></td>\
+	<td id="tour_bus">' + link_STSP_Shanhua + '</td></tr>';
 
 transfer_nanke_railway_station = '<tr><th rowspan="3">臺鐵南科站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
@@ -325,7 +328,7 @@ transfer_NNKIEH = '<tr><th rowspan="3">南科實中</th>\
 transfer_park17 = '<tr><th rowspan="2">Park 17商場</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'STSP_logo.png"></td>\
 	<td id="tour_bus"><p>' + link_STSP_red + '、' + link_STSP_orange + '、' + link_STSP_blue + '、</p>'
-	+ link_STSP_green + '</td></tr>\
+	+ link_STSP_green + '、' + link_STSP_Shanhua + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green_1 + '</td></tr>';
 

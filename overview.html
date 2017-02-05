@@ -20,6 +20,7 @@ html, body {
 <script type="text/javascript">
 function get_button_string(category, file_name, ch_name){
 	var type = (category=='STSP') ? file_name.split('_')[1] : (category=='highway') ? 'tourist' : category;
+	if(file_name=='STSP_Shanhua') type = 'blue';
 	var route_infor_str = (category=='urban' || category=='highway' || category=='tourist' || category=='hsr_shuttle') ? (category + '_') : '';
 	route_infor_str += file_name.replace('-','_') + '_route';
 	line_string = '<tr><td><a href="' + category + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
@@ -113,6 +114,7 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('green', 'green_3', '綠3')
 		+ get_button_string('green', 'green_4', '綠4')
 		+ get_button_string('green', 'green_11', '綠11')
+		+ get_button_string('STSP', 'STSP_Shanhua', '南科善化線')
 		+ '</table>\
 		<h1 align="center">善化區</h1>\
 		<table class="bg_table_overview" align="center">'
@@ -273,7 +275,8 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('STSP', 'STSP_red', '南科紅線')
 		+ get_button_string('STSP', 'STSP_orange', '南科橘線')
 		+ get_button_string('STSP', 'STSP_blue', '南科藍線')
-		+ get_button_string('STSP', 'STSP_green', '南科綠線');
+		+ get_button_string('STSP', 'STSP_green', '南科綠線')
+		+ get_button_string('STSP', 'STSP_Shanhua', '南科善化線');
 		break;
 	case '山上':
 		div_string += get_button_string('green', 'green', '綠幹線')

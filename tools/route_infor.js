@@ -140,3 +140,4 @@ STSP_green_route = '南科Park 17商場 ─ 高鐵臺南站　<div class="sub_ti
 STSP_red_route = '臺鐵南科站 ─ 台達電 ─ Park 17商場　<div class="sub_title">南科巡迴巴士北環東線</div>';
 STSP_orange_route = '臺鐵南科站 ─ 台積電 ─ Park 17商場　<div class="sub_title">南科巡迴巴士北環西線</div>';
 STSP_blue_route = '臺鐵南科站 ─ 聯電 ─ Park 17商場　<div class="sub_title">南科巡迴巴士南環線</div>';
+STSP_Shanhua_route = '臺鐵善化站 ─ 台積電 ─ Park 17商場　<div class="sub_title">南科巡迴巴士善化線</div>';
