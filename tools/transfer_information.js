@@ -474,15 +474,9 @@ transfer_houbi_railway_station = '<tr><th rowspan="3">後壁火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵後壁站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
-	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_9 + '、' + link_yellow_10 + '</td></tr>\
+	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_6_1 + '、' + link_yellow_9 + '、' + link_yellow_10 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7229 + '</td></tr>';
-
-transfer_houbi_district_office = '<tr><th rowspan="2">後壁區公所</th>\
-<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
-	<td><font color="#00AAFF">台鐵後壁站</font></td></tr>\
-<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
-	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_6_1 + '</td></tr>';
 
 transfer_guanziling = '<tr><th rowspan="2">關子嶺</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
