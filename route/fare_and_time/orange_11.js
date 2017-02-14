@@ -48,6 +48,6 @@ var AnNan_hospital = 8; // 安南醫院
 orange_11_time_go = [["05:45",start_stop,end_stop],["05:50",[AnNan_hospital]],["06:30",start_stop,end_stop],["06:35",Hsiaying,AnNan_hospital],["08:30",start_stop,end_stop],["09:40",[AnNan_hospital]],
 ["10:40",start_stop,end_stop],["10:50",Hsiaying,AnNan_hospital],["12:30",start_stop,end_stop],["13:45",start_stop,end_stop],["14:50",[AnNan_hospital]],["17:00",start_stop,end_stop],["16:50",Hsiaying,AnNan_hospital],["18:35",start_stop,end_stop],
 ["19:15",start_stop,end_stop],["21:00",start_stop,end_stop],["22:05",start_stop,end_stop]];
-orange_11_time_return = [["06:15",end_stop,start_stop],["06:55",end_stop,start_stop],["08:00",AnNan_hospital,Hsiaying],["09:00",end_stop,start_stop],["08:45",[AnNan_hospital]],["11:15",end_stop,start_stop],
+orange_11_time_return = [["06:15",end_stop,start_stop],["07:10",end_stop,start_stop],["08:00",AnNan_hospital,Hsiaying],["09:00",end_stop,start_stop],["08:45",[AnNan_hospital]],["11:15",end_stop,start_stop],
 ["12:25",AnNan_hospital,Hsiaying],["13:10",end_stop,start_stop],["12:35",[AnNan_hospital]],["14:15",end_stop,start_stop],["17:20",end_stop,start_stop],["17:35",[AnNan_hospital]],["18:45",AnNan_hospital,Hsiaying],["19:45",end_stop,start_stop],
 ["20:40",end_stop,start_stop],["21:40",end_stop,start_stop],["22:40",end_stop,start_stop]];
