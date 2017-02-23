@@ -22,7 +22,7 @@ var return_end = 9; // 海東國小
 var return_skip = 2; // 復興國中
 var return_tra_tainan = 5; // 臺南火車站
 city_bus_3_main_stop_name_return = ["全福新城","竹篙厝","復興國中","市立醫院","文化中心","臺南<br />火車站","赤崁樓","特力屋、<br />好市多","海東橋","海東國小"];
-city_bus_3_main_stop_time_consume_return = [0, 5, 20, 12, 20, 35, 40, 50, 55, 60];
+city_bus_3_main_stop_time_consume_return = [0, 5, 20, 12, 20, 35, 40, 50, 55, 65];
 city_bus_3_important_stop_return = [0, 1, 5, 9]; // 全福新城, 竹篙厝, 臺南火車站, 海東國小
 city_bus_3_time_return = [["06:00",return_start,return_end,['W',return_skip]],["06:00",return_start,return_end,[[return_skip+1,20]]],["06:30",return_start,return_end,['W',return_skip]],
 ["06:30",return_start,return_end,[[return_skip+1,20]]],["07:10",return_start,return_end,[return_skip]],["07:30",return_start,return_end,['L',return_skip]],

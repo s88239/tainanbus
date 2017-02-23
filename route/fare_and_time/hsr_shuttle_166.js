@@ -28,13 +28,13 @@ hsr_shuttle_166_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-hsr_shuttle_166_main_stop_name = ["鹽水","義竹","竹子腳","鹿草","高鐵<br />嘉義站","嘉義<br />縣政府","故宮南院"];
-hsr_shuttle_166_main_stop_time_consume = [0, 8, 18, 20, 33, 40, 45];
+hsr_shuttle_166_main_stop_name = ["鹽水","義竹","頂潭","鹿草","高鐵<br />嘉義站","嘉義<br />縣政府","故宮南院"];
+hsr_shuttle_166_main_stop_time_consume = [0, 8, 20, 25, 38, 45, 50];
 hsr_shuttle_166_important_stop = [0, 4, 6]; // 鹽水, 高鐵嘉義站, 故宮南院
 hsr_shuttle_166_time_go = [["07:15"],["09:00"],["10:00"],["11:00"],["15:00"],["16:00"],["17:00"],["18:00"],["19:00"]];
 
 // The name of return stops are different
-hsr_shuttle_166_main_stop_name_return = ["高鐵<br />嘉義站","故宮南院","嘉義<br />縣政府","鹿草","竹子腳","義竹","鹽水"];
-hsr_shuttle_166_main_stop_time_consume_return = [0, 8, 13, 25, 27, 37, 45];
+hsr_shuttle_166_main_stop_name_return = ["高鐵<br />嘉義站","故宮南院","嘉義<br />縣政府","鹿草","頂潭","義竹","鹽水"];
+hsr_shuttle_166_main_stop_time_consume_return = [0, 8, 16, 30, 35, 47, 55];
 hsr_shuttle_166_important_stop_return = [0, 1, 6]; // 高鐵嘉義站, 故宮南院, 鹽水
 hsr_shuttle_166_time_return = [["06:00"],["07:30"],["08:30"],["09:30"],["10:30"],["14:30"],["15:30"],["16:30"],["17:30"]];
