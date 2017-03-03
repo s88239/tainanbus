@@ -8,8 +8,11 @@
 	route_file_name = 'yellow';
 	route_type = 'yellow';
 	route_interval = ['白河','新營','麻豆'];
+	route_start_stop = '白河/蘭花園區';
+	route_end_stop = '新營/麻豆';
 </script>
-<script src="../tools/web_model.js"></script> 
+<script src="../tools/web_model.js"></script>
+<link href="../css/radio_style.css" rel="stylesheet" />
 <script type="text/javascript">
 	header_code();
 </script>
@@ -18,9 +21,10 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map('為配合2017台灣國際蘭展，03/04~03/13黃幹線加開「新營站－蘭花園區」區間車，整合時刻表請參閱<a href="http://www.singing168.com.tw/news410.html" target="_blank">新營客運</a>');
-	block_route_info(route_interval,'新營客運、興南客運','尖30離60','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1500&locale=zh_TW');
-	block_fare(0, null);
-	block_time_schedule('白河','新營/麻豆','「<span style="color: blue;">繞</span>」表示繞駛白河商工；'+L_message);
+	block_route_info(route_interval,'新營客運、興南客運','尖30離60<br />新營－蘭花園區5~15分一班','里程計費','http://2384.tainan.gov.tw:8080/AGPSRemoteQuery3/ajaxBus.jsp?pathId=1500&locale=zh_TW');
+	block_fare(0, '<h3><span style="color: navy;">蘭展期間(106年3月4日~106年3月13日)新營地區各站(南光中學－土庫里)至「蘭花園區」使用電子票證免費</span></h3>');
+	//block_time_schedule('白河','新營/麻豆','「<span style="color: blue;">繞</span>」表示繞駛白河商工；'+L_message);
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],'「<span style="color: blue;">繞</span>」表示繞駛白河商工；'+L_message+'</h3><br /><h3>「<span style="color: blue;">蘭</span>」表示於2017臺灣國際蘭展期間(106年3月4日~106年3月13日)行駛之「<span style="color: navy;">新營－蘭花園區</span>」區間車</h3><h3>106年3月13日加班車停開班次：16:45新營發、17:24蘭花園區發');
 	block_transfer(transfer_baihe + transfer_hsinyin + transfer_liouying_railway_station + transfer_liouying + transfer_shiayin_district_office + transfer_madou);
 	block_copyright();
 </script>
