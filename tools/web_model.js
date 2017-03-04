@@ -309,8 +309,7 @@ function block_fare_highway(charge_type, additional_message){
 		<p><span style="color: blue; font-weight: bold;">(僅一卡通普卡、學生卡享此優惠，已享優惠之卡種如半票不適用)</span></p>';
 	}
 	else if(charge_type=='8050') {
-		fare_notice += '<h3>刷電子票證票價僅供參考，誤差為1元上下</h3>\
-						<h1>本路線不適用一卡通折12元及收費最高上限優惠</h1>';
+		fare_notice += '<h1>本路線不適用一卡通折12元及收費最高上限優惠</h1>';
 	}
 	else {
 		fare_notice += '<h3><span style="color:red;">本路線非大台南公車，無法享有八公里免費及轉乘優惠</span></h3>\

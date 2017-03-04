@@ -1,5 +1,6 @@
 var HIGHWAY_CARD_PRICE_RATIO = 0.87842; // Card price = Cash price * HIGHWAY_CARD_PRICE_RATIO
 var HIGHWAY_CARD_PRICE_BASE = 21; // The card price for distance within 8 km
+var HIGHWAY_CARD_PRICE_DISCOUNT = 5; // Discount for the highway bus of Hsinyin Bus
 
 function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // print the fare menu
 	var max_color_num = 4;
@@ -36,7 +37,7 @@ function query_fare(theForm, fare_array, fare_type){
 			card_price = price - 26;
 			break;
 		case '8km18':
-			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO) - (HIGHWAY_CARD_PRICE_BASE - 18);
+			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO) - HIGHWAY_CARD_PRICE_DISCOUNT;
 			break;
 		case 'Kaohsiung':
 			card_price = price;
@@ -48,10 +49,10 @@ function query_fare(theForm, fare_array, fare_type){
 			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 21 : fare_array[td][fd];
 			break;
 		case '8050':
-			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO);
+			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 21 : fare_array[td][fd];
 			var citizen_card_price = card_price - HIGHWAY_CARD_PRICE_BASE;
 			document.getElementById("card_adult").innerHTML = citizen_card_price;
-			document.getElementById("card_half").innerHTML = Math.ceil(citizen_card_price/2);
+			document.getElementById("card_half").innerHTML = Math.floor(citizen_card_price/2);
 			break;
 		default:
 			card_price = price;
@@ -82,14 +83,12 @@ function print_fare_table(interval_name, fare, color, fare_type){ // the functio
 						card_price = fare[j][i] - 26;
 						break;
 					case '8km18':
-						card_price = Math.round(fare[j][i] * HIGHWAY_CARD_PRICE_RATIO) - (HIGHWAY_CARD_PRICE_BASE - 18);
+						card_price = Math.round(fare[j][i] * HIGHWAY_CARD_PRICE_RATIO) - HIGHWAY_CARD_PRICE_DISCOUNT;
 						break;
 					case 'Kaohsiung':
 						card_price = fare[j][i];
 						break;
 					case '8050':
-						card_price = Math.round(fare[j][i] * HIGHWAY_CARD_PRICE_RATIO);
-						break;
 					case 'highway':
 						card_price = fare[i][j];
 						break;
