@@ -45,7 +45,10 @@ function query_fare(theForm, fare_array, fare_type){
 			document.getElementById("card_adult").innerHTML = (ipass_price > 60) ? 60 : ipass_price; // 收費最高上限60元
 			document.getElementById("card_half").innerHTML = Math.ceil(price / 2); // 半票不適用一卡通優惠
 			break;
-		case 'highway':
+		case 'Highway': // estimated price for using RFID card by multiplying HIGHWAY_CARD_PRICE_RATIO
+			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO);
+			break;
+		case 'highway': // real price for using RFID card
 			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 21 : fare_array[td][fd];
 			break;
 		case '8050':
