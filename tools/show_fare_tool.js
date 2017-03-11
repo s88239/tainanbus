@@ -41,8 +41,7 @@ function query_fare(theForm, fare_array, fare_type){
 			break;
 		case 'Kaohsiung':
 			card_price = price;
-			var ipass_price = price - 12; // 使用「一卡通」上車刷卡現折12元
-			document.getElementById("card_adult").innerHTML = (ipass_price > 60) ? 60 : ipass_price; // 收費最高上限60元
+			document.getElementById("card_adult").innerHTML = (card_price > 60) ? 60 : card_price; // 收費最高上限60元
 			document.getElementById("card_half").innerHTML = Math.ceil(price / 2); // 半票不適用一卡通優惠
 			break;
 		case 'Highway': // estimated price for using RFID card by multiplying HIGHWAY_CARD_PRICE_RATIO
