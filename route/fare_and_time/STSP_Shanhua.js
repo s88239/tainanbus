@@ -11,4 +11,4 @@ STSP_Shanhua_time_go = [["07:20",[[TRA_Shanhua,1]]],["07:38"],["08:05"]];
 STSP_Shanhua_main_stop_name_return = ["Park 17<br />商場","聯電","霞客湖<br />停車場","南茂科技","群創C廠","台達電","臺鐵<br />善化站","Park 17<br />商場"];
 STSP_Shanhua_main_stop_time_consume_return = [0, 2, 5, 7, 9, 12, 22, 37];
 STSP_Shanhua_important_stop_return = [0, 3, 6]; // Park 17商場, 南茂科技, 臺鐵善化站
-STSP_Shanhua_time_return = [["17:20"],["17:55"],["18:16"],["19:03"],["19:33"],["19:48"]];
+STSP_Shanhua_time_return = [["17:22"],["17:55"],["18:16"],["19:03"],["19:30"],["19:48"]];
