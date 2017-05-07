@@ -28,5 +28,5 @@ red_2_main_stop_time_consume = [0, 10, 15, 32, 43, 54, 60, 65];
 red_2_important_stop = [0, 2, 5, 7]; // 臺南站, 臺南火車站, 歸仁公所, 關廟轉運站
 var start_stop = 1; // 臺南公園
 var end_stop = 7;
-red_2_time_go = [["07:15",[start_stop]],["08:55",start_stop,end_stop],["12:25",start_stop,end_stop],["17:40",start_stop,end_stop],["21:25",start_stop,end_stop]];
-red_2_time_return = [["06:00",[start_stop]],["07:45",end_stop,start_stop],["13:45",end_stop,start_stop],["17:30",end_stop,start_stop],["18:45",end_stop,start_stop]];
+red_2_time_go = [["07:10",[start_stop]],["09:25",start_stop,end_stop],["12:25",start_stop,end_stop],["17:40",start_stop,end_stop],["21:25",start_stop,end_stop]];
+red_2_time_return = [["06:00",[start_stop]],["08:15",end_stop,start_stop],["13:45",end_stop,start_stop],["17:30",end_stop,start_stop],["19:00",end_stop,start_stop]];
