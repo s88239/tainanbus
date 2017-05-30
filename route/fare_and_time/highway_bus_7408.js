@@ -35,7 +35,7 @@ highway_bus_7408_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 highway_bus_7408_main_stop_name = ["新營","鹽水<br />分駐所","義竹","新塭","南鯤鯓<br />(代天府)","好美里"];
-highway_bus_7408_main_stop_time_consume = [0,21,27,48,57,70];
+highway_bus_7408_main_stop_time_consume = [0,24,30,48,56,67];
 highway_bus_7408_important_stop = [0, 1, 4, 5]; // 新營, 鹽水分駐所, 南鯤鯓(代天府), 好美里
 highway_bus_7408_time_go = [["07:00"],["08:00"],["09:20"],["11:10",['L']],["12:40"],["14:25"],["17:30"],["18:40"]];
 highway_bus_7408_time_return = [["06:00"],["08:15"],["09:15"],["10:35"],["12:25",['L']],["13:55"],["15:40"],["18:45"]];
