@@ -25,5 +25,5 @@ yellow_14_1_fare = [
 yellow_14_1_main_stop_name = ["白河","三間厝","竹圍子","甘宅","關帝廟","內角"];
 yellow_14_1_main_stop_time_consume = [0, 5, 10, 15, 19, 23];
 yellow_14_1_important_stop = [0, 5]; // 白河, 內角
-yellow_14_1_time_go = [["07:50"],["10:50"],["15:30"]];
-yellow_14_1_time_return = [["08:15"],["11:15"],["15:55"]];
+yellow_14_1_time_go = [["07:40"],["10:50"],["15:30"]];
+yellow_14_1_time_return = [["08:05"],["11:15"],["15:55"]];

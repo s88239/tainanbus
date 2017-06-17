@@ -30,5 +30,5 @@ yellow_10_1_main_stop_name = ["白河","大林","台影<br />文化城","六重�
 yellow_10_1_main_stop_time_consume = [0, 8, 15, 20, 23, 27];
 yellow_10_1_important_stop = [0, 2, 5]; // 白河, 台影文化城, 檳榔腳
 var skip_stop = 4; // 鎮安宮
-yellow_10_1_time_go = [["08:50"],["12:00"],["14:00"]];
-yellow_10_1_time_return = [["09:17",[skip_stop,[skip_stop,-4]]],["12:27",[skip_stop,[skip_stop,-4]]],["14:27",[skip_stop,[skip_stop,-4]]]];
+yellow_10_1_time_go = [["08:35"],["12:00"],["14:00"]];
+yellow_10_1_time_return = [["09:02",[skip_stop,[skip_stop,-4]]],["12:27",[skip_stop,[skip_stop,-4]]],["14:27",[skip_stop,[skip_stop,-4]]]];
