@@ -23,4 +23,4 @@ brown_10_main_stop_time_consume = [0, 2, 25, 33, 40];
 brown_10_important_stop = [0, 1, 4]; // 學甲(民權路), 學甲, 麻豆國中
 var skip_stop = 2; // 港仔尾
 brown_10_time_go = [["06:40",[[3,4]]],["07:00",['L',skip_stop,[3,4,4,2]]],["09:10",['L',skip_stop]],["11:35",['L',skip_stop]],["14:35",['L',skip_stop]],["16:15",['L',skip_stop]],["16:25",[skip_stop]]];
-brown_10_time_return = [["07:40",[skip_stop]],["07:50",['L',skip_stop]],["10:00",['L',skip_stop]],["12:20",['L',skip_stop]],["15:20",['L',skip_stop]],["17:05",['L',skip_stop,[3,2,2,5]]],["17:15",[[3,2,2,8]]]];
+brown_10_time_return = [["07:40",[skip_stop]],["07:50",['L',skip_stop]],["10:00",['L',skip_stop]],["12:20",['L',[2,8,1,2]]],["15:20",['L',skip_stop]],["17:05",['L',skip_stop,[3,2,2,5]]],["17:15",[skip_stop,[3,2,2,3]]]];
