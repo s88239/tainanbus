@@ -90,7 +90,7 @@ yellow_12_2_route = '關子嶺 ─ 水火同源 ─ 關子嶺<br /><div class="s
 yellow_13_route = '白河 ─ 關子嶺 ─ 南寮';
 yellow_14_route = '白河 ─ 三層崎';
 yellow_14_1_route = '白河 ─ 甘宅 ─ 內角';
-yellow_15_route = '白河 ─ 蓮花公園 ─ 詔安厝';
+yellow_15_route = '白河 ─ 詔安厝';
 yellow_20_route = '麻豆 ─ 下營 ─ 林鳳營火車站';
 
 urban_0_route = '臺南火車站 ─ 體育公園 ─ 臺南火車站';
