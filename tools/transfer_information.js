@@ -117,6 +117,7 @@ link_city_bus_77 = '<a href="../urban/77.html" target="_blank">77</a>';
 link_city_bus_77_1 = '<a href="../urban/77-1.html" target="_blank">77-1</a>';
 link_city_bus_239 = '<a href="../urban/239.html" target="_blank">239</a>';
 
+link_tour_bus_33 = '<a href="../tourist/33.html" target="_blank">33 <div class="sub_title">關子嶺線</div></a>';
 link_tour_bus_88 = '<a href="../tourist/88.html" target="_blank">88 <div class="sub_title">安平線</div></a>';
 link_tour_bus_99 = '<a href="../tourist/99.html" target="_blank">99 <div class="sub_title">台江線</div></a>';
 link_tour_bus_7702 = '<a href="../tourist/7702.html" target="_blank">7702 <div class="sub_title">鹽鄉濱海線</div></a>';
@@ -371,7 +372,7 @@ transfer_hsr_chiayi_station = '<tr><th rowspan="4">高鐵嘉義站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
 	<td id="hsr_shuttle">' + link_hsr_shuttle_166 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
-	<td id="tour_bus">' + link_tour_bus_7702 + '</td></tr>';
+	<td id="tour_bus">' + link_tour_bus_33 + '、' + link_tour_bus_7702 + '</td></tr>';
 
 transfer_madou = '<tr><th rowspan="2">麻豆轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
@@ -413,11 +414,13 @@ transfer_annan_hospital = '<tr><th rowspan="2">安南醫院</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '</td></tr>';
 
-transfer_baihe = '<tr><th>白河站</th>\
+transfer_baihe = '<tr><th rowspan="2">白河站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_6_1 + '、' + link_yellow_10 + '、' + link_yellow_10_1 + '、</p>\
 	<p>' + link_yellow_11 + '、' + link_yellow_11_1 + '、' + link_yellow_12 + '、' + link_yellow_12_1 + '、</p>'
-	+ link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、' + link_yellow_15 + '</td></tr>';
+	+ link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、' + link_yellow_15 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
+	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>';
 
 transfer_nianfohui = '<tr><th rowspan="2">念佛會</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
@@ -426,7 +429,7 @@ transfer_nianfohui = '<tr><th rowspan="2">念佛會</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7210 + '、' + link_highway_bus_7214 + ' <font color="white" size="-1">(嘉客白河站)</font></td></tr>';
 
-transfer_hsinyin = '<tr><th rowspan="4">新營站</th>\
+transfer_hsinyin = '<tr><th rowspan="5">新營站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵新營站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'brown_transfer_logo.png"></td>\
@@ -434,6 +437,8 @@ transfer_hsinyin = '<tr><th rowspan="4">新營站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_1 + '、' + link_yellow_2 + '、' + link_yellow_3 + '、' + link_yellow_4 + '、</p>'
 	+  link_yellow_5 + '、' + link_yellow_6 + '、' + link_yellow_6_1 + '、' + link_yellow_7 + '、' + link_yellow_9 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
+	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7229 + '、' + link_highway_bus_7407 + '、' + link_highway_bus_7408 + '、' + link_highway_bus_7410 + '</td></tr>';
 
@@ -470,17 +475,21 @@ transfer_linfengying_railway_station = '<tr><th rowspan="2">林鳳營火車站</
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_1 + '、' + link_yellow_2 + '、' + link_yellow_20 + '</td>';
 
-transfer_houbi_railway_station = '<tr><th rowspan="3">後壁火車站</th>\
+transfer_houbi_railway_station = '<tr><th rowspan="4">後壁火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵後壁站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_6_1 + '、' + link_yellow_9 + '、' + link_yellow_10 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
+	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7229 + '</td></tr>';
 
-transfer_guanziling = '<tr><th rowspan="2">關子嶺</th>\
+transfer_guanziling = '<tr><th rowspan="3">關子嶺</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_12 + '、' + link_yellow_13 + '、' + link_yellow_12_2 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
+	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7214 + '<br /><font color="#FFFFFF" size="-1">(需至嘉義客運嶺頂公園站搭乘)</font></td></tr>';
 
