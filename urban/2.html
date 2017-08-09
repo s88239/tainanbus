@@ -8,10 +8,7 @@
 	route_file_name = 'city_bus_2';
 	route_type = 'city_bus';
 	route_interval = ['崑山科大','安平白鷺灣社區'];
-	route_start_stop = '崑山科大/復華里';
-	route_end_stop = '白鷺灣社區/四草/三鯤鯓';
 </script>
-<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -21,9 +18,11 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'府城客運','尖15離20~40','一段票','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10162&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
+	block_route_info(route_interval,'府城客運','尖15離20~40','一段票','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10162&locale=zh_TW');
 	block_fare(1, null);
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], L_message+'<p><font color="blue">四草發車班次寒暑假不延駛，改由白鷺灣社區發車</font></p>');
+	block_time_schedule('崑山科大','白鷺灣社區/四草/三鯤鯓','<p>'+L_message+'<br />延駛四草班次僅於平日行駛，假日、寒暑假不延駛四草，改由白鷺灣社區發車<br />「<span style="color: blue;">崇</span>」表示此班由崇義社區折返，其餘延駛三鯤鯓班次由白鷺灣社區折返</p>');
+	route_start_stop = '崑山科大';
+	route_end_stop = '白鷺灣社區/四草/三鯤鯓';
 	block_transfer(transfer_kun_shan_university + transfer_tainan_railway_station);
 	block_copyright();
 </script>
