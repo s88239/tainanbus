@@ -16,7 +16,7 @@ STSP_blue_time_go = [["06:20",[skip_stop,skip_stop_2]],["06:40",[skip_stop,skip_
 ];
 
 // The name of return stops are different
-STSP_blue_main_stop_name_return = ["Park 17<br />商場","迎曦湖","和鑫<br />光電","瀚宇<br />彩晶","動物<br />中心","華園<br />宿舍","民生<br />水塔","臺鐵<br />南科站","南科<br />實中","社區<br />中心","Park 17<br />商場"];
+STSP_blue_main_stop_name_return = ["Park 17<br />商場","迎曦湖","群創<br />D廠","瀚宇<br />彩晶","動物<br />中心","華園<br />宿舍","民生<br />水塔","臺鐵<br />南科站","南科<br />實中","社區<br />中心","Park 17<br />商場"];
 STSP_blue_main_stop_time_consume_return = [0, 2, 4, 7, 8, 11, 13, 17, 20, 22, 25];
 STSP_blue_important_stop_return = [0, 3, 5, 7]; // Park 17商場, 瀚宇彩晶, 華園宿舍, 臺鐵南科站
 STSP_blue_time_return = [["17:07"],["17:35"],["17:40"],["17:50"],["18:03"],["18:20"],["18:27"],["18:57"],["19:17"],["19:44"],
