@@ -90,6 +90,17 @@ function block_route_map(announce_str){
 </div>');
 }
 
+function show_update_date(route_str) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("last_mod").innerHTML = this.responseText;
+        }
+    };
+    xmlhttp.open("GET", "../tools/get_update_date.php?route=" + route_str, true);
+    xmlhttp.send();
+}
+
 function block_route_info(route_interval, company_name, density, charging_method, button_arr, info_type_list){
 	document.write('<div id="wrapper2">\
 	<a name="info"></a>\
@@ -144,12 +155,17 @@ function block_route_info(route_interval, company_name, density, charging_method
 					<td>收費方式</td>\
 					<td>' + charging_method + '</td>\
 				</tr>\
+				<tr>\
+					<td>最後修改日期</td>\
+					<td id="last_mod"></td>\
+				</tr>\
 			</table>\
 			<p>　</p>\
 			<a href="' + button_showing_url + '" class="button">' + button_showing_value + '</a>\
 		</div>\
 	</div>\
 </div>');
+	show_update_date(route_file_name);
 }
 
 function block_fare(section_type, additional_message, section_point){
