@@ -18,43 +18,7 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	document.write('<div id="wrapper2">\
-	<a name="info"></a>\
-	<div id="routeinfo" class="container">\
-		<div class="title">\
-			<h2>大台南公車 ─ ' + route_name + ' 路線資訊</h2>\
-			<span class="byline">Tainan Bus ' + route_name_en + ', Route Information</span>\
-		</div>\
-		<div class="content">\
-			<table border="0">\
-				<tr>\
-					<td>起訖點</td>\
-					<td>關子嶺 ─ 水火同源 ─ 關子嶺</td>\
-				</tr>\
-				<tr>\
-					<td>營運公司</td>\
-					<td>新營客運</td>\
-				</tr>\
-				<tr>\
-					<td>首／末班車發車時刻</td>\
-					<td>\
-						往 關子嶺：'+yellow_12_2_time_go[0][0]+'／'+yellow_12_2_time_go[yellow_12_2_time_go.length-1][0] +
-					'</td>\
-				</tr>\
-				<tr>\
-					<td>班距</td>\
-					<td>固定班次</td>\
-				</tr>\
-				<tr>\
-					<td>收費方式</td>\
-					<td>里程計費</td>\
-				</tr>\
-			</table>\
-			<p>　</p>\
-			<a href="http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1805&locale=zh_TW" class="button">公車動態資訊</a>\
-		</div>\
-	</div>\
-</div>');
+	block_route_info(route_interval,'新營客運','平日停駛<br />假日一小時1班','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1805&locale=zh_TW');
 	block_fare(0, null);
 	document.write('<div id="timetable">\
 	<a name="time"></a>\

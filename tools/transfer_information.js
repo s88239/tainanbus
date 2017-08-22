@@ -94,6 +94,7 @@ link_yellow_13 = '<a href="../yellow/yellow_13.html" target="_blank">黃13</a>';
 link_yellow_14 = '<a href="../yellow/yellow_14.html" target="_blank">黃14</a>';
 link_yellow_14_1 = '<a href="../yellow/yellow_14-1.html" target="_blank">黃14-1</a>';
 link_yellow_15 = '<a href="../yellow/yellow_15.html" target="_blank">黃15</a>';
+link_yellow_16 = '<a href="../yellow/yellow_16.html" target="_blank">黃16</a>';
 link_yellow_20 = '<a href="../yellow/yellow_20.html" target="_blank">黃20</a>';
 
 link_city_bus_0 = '<a href="../urban/0.html" target="_blank">0左/右</a>';
@@ -400,7 +401,7 @@ transfer_liujia = '<tr><th rowspan="2">六甲</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_5 + '、' + link_orange_10 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
-	<td id="yellow">' + link_yellow_1 + '、' + link_yellow_2 + '、' + link_yellow_4 + '</td></tr>';
+	<td id="yellow">' + link_yellow_1 + '、' + link_yellow_2 + '、' + link_yellow_4 + '、' + link_yellow_16 + '</td></tr>';
 
 transfer_longtien_railway_station = '<tr><th rowspan="2">隆田火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
@@ -417,8 +418,8 @@ transfer_annan_hospital = '<tr><th rowspan="2">安南醫院</th>\
 transfer_baihe = '<tr><th rowspan="2">白河站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_6_1 + '、' + link_yellow_10 + '、' + link_yellow_10_1 + '、</p>\
-	<p>' + link_yellow_11 + '、' + link_yellow_11_1 + '、' + link_yellow_12 + '、' + link_yellow_12_1 + '、</p>'
-	+ link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、' + link_yellow_15 + '</td></tr>\
+	<p>' + link_yellow_11 + '、' + link_yellow_11_1 + '、' + link_yellow_12 + '、' + link_yellow_12_1 + '、</p><p>'
+	+ link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、' + link_yellow_15 + '、</p>' + link_yellow_16 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>';
 

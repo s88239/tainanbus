@@ -50,6 +50,10 @@
 					<td>收費方式</td>\
 					<td>一段票</td>\
 				</tr>\
+				<tr>\
+					<td>最後修改日期</td>\
+					<td id="last_mod"></td>\
+				</tr>\
 			</table>\
 			<p>　</p>\
 			<a href="http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10450&locale=zh_TW" class="button"><font color="red">0左</font>公車動態資訊</a>\
@@ -57,6 +61,7 @@
 			</div>\
 	</div>\
 </div>');
+	show_update_date(route_file_name);
 	block_fare(1, null);
 	document.write('<div id="timetable">\
 	<a name="time"></a>\

@@ -49,11 +49,16 @@
 					<td>收費方式</td>\
 					<td>里程計費</td>\
 				</tr>\
+				<tr>\
+					<td>最後修改日期</td>\
+					<td id="last_mod"></td>\
+				</tr>\
 			</table>\
 			<p>　</p>\
 			<a href="http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1511&locale=zh_TW" class="button">公車動態資訊</a> </div>\
 	</div>\
 </div>');
+	show_update_date(route_file_name);
 	block_fare(0, null);
 	block_time_schedule_diffreturn('白河-&gt;二坑埔-&gt;李子園-&gt;青山-&gt;白河','白河-&gt;青山-&gt;李子園-&gt;二坑埔-&gt;白河','');
 	block_transfer(transfer_baihe);

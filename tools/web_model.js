@@ -128,8 +128,11 @@ function block_route_info(route_interval, company_name, density, charging_method
 					<td>首／末班車發車時刻</td>\
 					<td>');
 	if(info_type_list==undefined){
-		document.write('往 ' + route_interval[route_interval.length-1] + '：' + eval(route_file_name +'_time_go[0][0]') + '／' + eval(route_file_name +'_time_go['+route_file_name +'_time_go.length-1][0]') + '<br />\
-					往 ' + route_interval[0] + '：' + eval(route_file_name +'_time_return[0][0]') + '／' + eval(route_file_name +'_time_return['+route_file_name +'_time_return.length-1][0]') );
+		document.write('往 ' + route_interval[route_interval.length-1] + '：' + eval(route_file_name +'_time_go[0][0]') + '／' + eval(route_file_name +'_time_go['+route_file_name +'_time_go.length-1][0]') );
+		try {
+			document.write('<br />往 ' + route_interval[0] + '：' + eval(route_file_name +'_time_return[0][0]') + '／' + eval(route_file_name +'_time_return['+route_file_name +'_time_return.length-1][0]') );
+		}
+		catch(e) { } // single way, don't show return information
 	}
 	else{
 		for(i = 0; i < info_type_list.length; ++i){

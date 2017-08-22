@@ -684,10 +684,18 @@
 	},
 	{
 		"RouteCodeName":"yellow_12",
-		"RouteName":"黃12(含假日公車)",
+		"RouteName":"黃12",
 		"RouteOSMRelation":4098557,
 		"RouteCode":1512,
 		"RouteCategory":7
+	},
+	{
+		"RouteCodeName":"yellow_12_2",
+		"RouteName":"關子嶺假日公車(黃12-2)",
+		"RouteOSMRelation":7487521,
+		"RouteCode":1805,
+		"RouteCategory":7,
+		"OneWayRoute":true
 	},
 	{
 		"RouteCodeName":"yellow_13",
@@ -704,10 +712,24 @@
 		"RouteCategory":7
 	},
 	{
+		"RouteCodeName":"yellow_14_1",
+		"RouteName":"內角生活公車(黃14-1)",
+		"RouteOSMRelation":7487582,
+		"RouteCode":1806,
+		"RouteCategory":7
+	},
+	{
 		"RouteCodeName":"yellow_15",
 		"RouteName":"黃15",
 		"RouteOSMRelation":4094323,
 		"RouteCode":1515,
+		"RouteCategory":7
+	},
+	{
+		"RouteCodeName":"yellow_16",
+		"RouteName":"黃16",
+		"RouteOSMRelation":7487502,
+		"RouteCode":1516,
 		"RouteCategory":7
 	},
 	{
@@ -725,12 +747,11 @@
 		"RouteCategory":8
 	},
 	{
-		"RouteCodeName":"tour_bus_66",
-		"RouteName":"66關子嶺線",
-		"RouteOSMRelation":5392668,
-		"RouteCode":6066,
-		"RouteCategory":8,
-		"OneWayRoute":true
+		"RouteCodeName":"tour_bus_33",
+		"RouteName":"33關子嶺線",
+		"RouteOSMRelation":7487321,
+		"RouteCode":1033,
+		"RouteCategory":8
 	},
 	{
 		"RouteCodeName":"tour_bus_99",
