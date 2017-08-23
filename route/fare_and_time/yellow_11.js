@@ -1,6 +1,6 @@
 yellow_11_interval_name = ["白河","東山","大客","武嶺","番子嶺","斑芝<br />花坑","東原","瓦厝","崎腳","青山"];
 yellow_11_interval_stop = [
-["白河站","安養院"], // 白河
+["白河商工","白河分局","白河站","安養院"], // 白河
 ["東山加油站","民眾服務社","北東山","東山","嘉東"], // 東山
 ["凹子腳","大客","下庄","科里"], // 大客
 ["武嶺"], // 武嶺
@@ -9,7 +9,7 @@ yellow_11_interval_stop = [
 ["三塊厝","嶺南里路口","頭前園仔","西勢角","嶺南里","北大廳","宅子內","西東原","東原"], // 東原
 ["瓦厝","東原國中","竹圍埔"], // 瓦厝
 ["崎腳"], // 崎腳
-["店子前","下子店","青山"] // 青山
+["店子前","下子店","青山","高原社區","墩子腳","車關寮","公厝","水井","科頭","科尾"] // 青山
 ];
 yellow_11_fare = [
 [26],
@@ -26,11 +26,14 @@ yellow_11_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_11_main_stop_name = ["白河","東山","嶺南里","宅子內","斑花橋","東原","青山"];
-yellow_11_main_stop_time_consume = [0, 5, 25, 27, 16, 22, 27];
-yellow_11_important_stop = [0, 1, 3, 6]; // 白河, 東山, 宅子內, 青山
-var start_stop = 0; // 白河
-var stop_1 = 2; // 嶺南里
-var stop_2 = 3; // 宅子內
-yellow_11_time_go = [["06:00",[stop_1,stop_2]],["06:05",[[stop_2+1,13]]],["07:20",[stop_1,stop_2]],["09:10",[stop_1,stop_2]],["10:40",[[stop_2+1,13]]],["12:00",[stop_1,stop_2]],["13:40",[stop_1,stop_2]],["15:00",[stop_1,stop_2]],["16:20",[stop_1,stop_2]],["17:15",[stop_1,stop_2]],["17:40",[[stop_2+1,13]]],["18:15",[stop_1,stop_2]]];
-yellow_11_time_return = [["06:35",[stop_1,stop_2]],["06:50",[[stop_2,13]]],["07:50",[stop_1,stop_2]],["09:40",[stop_1,stop_2]],["11:25",[[stop_2,13]]],["12:30",[stop_1,stop_2]],["14:10",[stop_1,stop_2]],["15:30",[stop_1,stop_2]],["16:55",[[stop_2,13]]],["17:50",[stop_1,stop_2]],["18:25",[stop_1,stop_2]],["18:50",[stop_1,stop_2]]];
+yellow_11_main_stop_name = ["白河商工","白河","東山","嶺南里","宅子內","斑花橋","東原","青山","科尾"];
+yellow_11_main_stop_time_consume = [0, 2, 7, 27, 29, 18, 24, 29, 32];
+yellow_11_important_stop = [0, 1, 2, 7]; // 白河商工, 白河, 東山, 青山
+var start_stop = 1; // 白河
+var start_stop_2 = 0; // 白河商工
+var end_stop = 7; // 青山
+var end_stop_2 = 8; // 科尾
+var stop_1 = 3; // 嶺南里
+var stop_2 = 4; // 宅子內
+yellow_11_time_go = [["06:00",start_stop,end_stop,[stop_1,stop_2]],["06:05",start_stop,end_stop,[[stop_2+1,13]]],["07:20",start_stop,end_stop,[stop_1,stop_2]],["09:10",start_stop,end_stop,[stop_1,stop_2]],["09:30",start_stop,end_stop_2,[[stop_2+1,13]]],["10:40",start_stop,end_stop,[[stop_2+1,13]]],["12:00",start_stop,end_stop,[stop_1,stop_2]],["13:40",start_stop,end_stop,[stop_1,stop_2]],["15:00",start_stop,end_stop,[stop_1,stop_2]],["16:18",start_stop_2,end_stop,[stop_1,stop_2]],["17:13",start_stop_2,end_stop,[stop_1,stop_2]],["17:40",start_stop,end_stop,[[stop_2+1,13]]],["18:15",start_stop,end_stop,[stop_1,stop_2]]];
+yellow_11_time_return = [["06:35",end_stop,start_stop,[stop_1,stop_2]],["06:50",end_stop,start_stop_2,[[stop_2,13]]],["07:50",end_stop,start_stop,[stop_1,stop_2]],["09:40",end_stop,start_stop,[stop_1,stop_2]],["10:20",end_stop_2,start_stop,[[stop_2,13]]],["11:25",end_stop,start_stop,[[stop_2,13]]],["12:30",end_stop,start_stop,[stop_1,stop_2]],["14:10",end_stop,start_stop,[stop_1,stop_2]],["15:30",end_stop,start_stop,[stop_1,stop_2]],["16:55",end_stop,start_stop,[[stop_2,13]]],["17:50",end_stop,start_stop,[stop_1,stop_2]],["18:25",end_stop,start_stop,[stop_1,stop_2]],["18:50",end_stop,start_stop,[stop_1,stop_2]]];
