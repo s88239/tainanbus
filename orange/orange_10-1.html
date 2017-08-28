@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '橘10-1';
+	route_name_en = 'Orange 10-1';
+	route_file_name = 'orange_10_1';
+	route_type = 'orange';
+	route_interval = ['麻豆','隆田火車站','官田工業區'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	map_display = false;
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'興南客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1807&locale=zh_TW');
+	block_fare(0, null);
+	block_time_schedule('麻豆轉運站','勞動力發展署','');
+	block_transfer(transfer_madou + transfer_longtien_railway_station);
+	block_copyright();
+</script>
+</body>
+</html>

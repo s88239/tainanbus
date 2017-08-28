@@ -108,6 +108,7 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('orange', 'orange_2', '橘2')
 		+ get_button_string('orange', 'orange_3', '橘3')
 		+ get_button_string('orange', 'orange_4', '橘4')
+		+ get_button_string('orange', 'orange_4-1', '橘4-1')
 		+ get_button_string('orange', 'orange_5', '橘5')
 		+ get_button_string('orange', 'orange_12', '橘12')
 		+ get_button_string('green', 'green_1', '綠1')
@@ -168,7 +169,7 @@ function get_transfer_info(bus_stop){
 		+ '</table>\
 		<h1 align="center">白河區</h1>\
 		<table class="bg_table_overview" align="center">'
-		+ get_button_string('yellow', 'yellow_12-2', '關子嶺')
+		+ get_button_string('yellow', 'yellow_12-2', '黃12-2')
 		+ get_button_string('highway', '7210', '7210')
 		+ get_button_string('highway', '7214', '7214');
 		break;
@@ -176,6 +177,7 @@ function get_transfer_info(bus_stop){
 		div_string += get_button_string('orange', 'orange', '橘幹線')
 		+ get_button_string('yellow', 'yellow', '黃幹線')
 		+ get_button_string('orange', 'orange_10', '橘10')
+		+ get_button_string('orange', 'orange_10-1', '橘10-1')
 		+ get_button_string('orange', 'orange_11', '橘11')
 		+ get_button_string('orange', 'orange_12', '橘12')
 		+ get_button_string('yellow', 'yellow_20', '黃20')
@@ -317,8 +319,10 @@ function get_transfer_info(bus_stop){
 		div_string += get_button_string('orange', 'orange_1', '橘1')
 		+ get_button_string('orange', 'orange_2', '橘2')
 		+ get_button_string('orange', 'orange_4', '橘4')
+		+ get_button_string('orange', 'orange_4-1', '橘4-1')
 		+ get_button_string('orange', 'orange_5', '橘5')
 		+ get_button_string('orange', 'orange_10', '橘10')
+		+ get_button_string('orange', 'orange_10-1', '橘10-1')
 		+ get_button_string('yellow', 'yellow_1', '黃1');
 		break;
 	case '下營':
@@ -453,7 +457,11 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('yellow', 'yellow_20', '黃20');
 		break;
 	case '隆田火車站':
-		div_string += get_button_string('orange', 'orange_10', '橘10');
+		div_string += get_button_string('orange', 'orange_10', '橘10')
+		+ get_button_string('orange', 'orange_10-1', '橘10-1');
+		break;
+	case '拔林火車站':
+		div_string += get_button_string('orange', 'orange_10-1', '橘10-1');
 		break;
 	case '新市火車站':
 		div_string += get_button_string('green', 'green_1', '綠1')

@@ -67,8 +67,10 @@ link_orange_1 = '<a href="../orange/orange_1.html" target="_blank">橘1</a>';
 link_orange_2 = '<a href="../orange/orange_2.html" target="_blank">橘2</a>';
 link_orange_3 = '<a href="../orange/orange_3.html" target="_blank">橘3</a>';
 link_orange_4 = '<a href="../orange/orange_4.html" target="_blank">橘4</a>';
+link_orange_4_1 = '<a href="../orange/orange_4-1.html" target="_blank">橘4-1</a>';
 link_orange_5 = '<a href="../orange/orange_5.html" target="_blank">橘5</a>';
 link_orange_10 = '<a href="../orange/orange_10.html" target="_blank">橘10</a>';
+link_orange_10_1 = '<a href="../orange/orange_10-1.html" target="_blank">橘10-1</a>';
 link_orange_11 = '<a href="../orange/orange_11.html" target="_blank">橘11</a>';
 link_orange_12 = '<a href="../orange/orange_12.html" target="_blank">橘12</a>';
 link_orange_20 = '<a href="../orange/orange_20.html" target="_blank">橘20</a>';
@@ -305,7 +307,7 @@ transfer_shanhua_railway_station = '<tr><th rowspan="4">善化轉運站</th>\
 	<td><font color="#00AAFF">台鐵善化站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange"><p>' + link_orange + '、' + link_orange_1 + '、' + link_orange_2 + '、' + link_orange_3 + '、' + link_orange_4 + '、</p>'
-	+ link_orange_5 + '、' + link_orange_12 + '</td></tr>\
+	+ link_orange_4_1 + '、' + link_orange_5 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green_1 + '、' + link_green_2 + '、' + link_green_3 + '、' + link_green_4 + '、' + link_green_11 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'STSP_logo.png"></td>\
@@ -377,7 +379,8 @@ transfer_hsr_chiayi_station = '<tr><th rowspan="4">高鐵嘉義站</th>\
 
 transfer_madou = '<tr><th rowspan="2">麻豆轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange + '、' + link_orange_10 + '、' + link_orange_11 + '、' + link_orange_12 + '</td></tr>\
+	<td id="orange"><p>' + link_orange + '、' + link_orange_10 + '、' + link_orange_10_1 + '、' + link_orange_11 + '、</p>'
+	+ link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow + '、' + link_yellow_20 + '</td></tr>';
 
@@ -407,7 +410,7 @@ transfer_longtien_railway_station = '<tr><th rowspan="2">隆田火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵隆田站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange_10 + '</td></tr>';
+	<td id="orange">' + link_orange_10 + '、' + link_orange_10_1 + '</td></tr>';
 
 transfer_annan_hospital = '<tr><th rowspan="2">安南醫院</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
