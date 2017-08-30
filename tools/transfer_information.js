@@ -138,6 +138,7 @@ link_highway_bus_7407 = '<a href="../highway/7407.html" target="_blank">7407</a>
 link_highway_bus_7408 = '<a href="../highway/7408.html" target="_blank">7408</a>';
 link_highway_bus_7410 = '<a href="../highway/7410.html" target="_blank">7410</a>';
 link_highway_bus_8035 = '<a href="../highway/8035.html" target="_blank">8035</a>';
+link_highway_bus_8041C = '<a href="../highway/8041C.html" target="_blank">8041C</a>';
 link_highway_bus_8042 = '<a href="../highway/8042.html" target="_blank">8042 <div class="sub_title">沙旗美月世界快線</div></a>';
 link_highway_bus_8046A = '<a href="../highway/8046A.html" target="_blank">8046A <div class="sub_title">高南雙城快線</div></a>';
 link_highway_bus_8046 = '<a href="../highway/8046.html" target="_blank">8046</a>';
@@ -534,3 +535,11 @@ transfer_CJCU_railway_station = '<tr><th rowspan="2">南大潭</th>\
 	<td><font color="#00AAFF">台鐵長榮大學站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red">' + link_red_3 + '</td></tr>';
+
+transfer_Chia_Nan_University = '<tr><th rowspan="3">嘉南藥理大學</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
+	<td id="city_bus">' + link_city_bus_5 + '、' + link_city_bus_239 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
+	<td id="red">' + link_red_3 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_highway_bus_8041C + '、' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '</td></tr>';

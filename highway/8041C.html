@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	route_name = '8046';
-	route_name_en = 'No.8046';
-	route_file_name = 'highway_bus_8046';
+	route_name = '8041C';
+	route_name_en = 'No.8041C';
+	route_file_name = 'highway_bus_8041C';
 	route_type = 'highway_bus';
-	route_interval = ['臺南火車站','岡山','高雄火車站'];
-	route_start_stop = '臺南火車站';
-	route_end_stop = '高雄火車站';
+	route_interval = ['鳳山','嘉南藥大','茄萣'];
+	route_start_stop = '鳳山';
+	route_end_stop = '茄萣';
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -23,10 +23,10 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'高雄客運','','里程計費','http://ibus.tbkc.gov.tw/bus/pda/businfo.aspx?Routeid=8046&GO_OR_BACK=2&Line=All&lang=Cht');
+	block_route_info(route_interval,'高雄客運','','里程計費','http://ibus.tbkc.gov.tw/cms/driving-map?route_id=8041&GO_OR_BACK=1&Line=Al&lang=Cht');
 	block_fare_highway("Kaohsiung","");
 	block_time_schedule(route_start_stop,route_end_stop,'');
-	block_transfer(transfer_tainan_railway_station + transfer_Chia_Nan_University);
+	block_transfer(transfer_Chia_Nan_University);
 	block_copyright();
 </script>
 </body>
