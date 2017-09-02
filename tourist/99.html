@@ -22,10 +22,10 @@
 <body>
 <script type="text/javascript">
 	block_header();
-	block_route_map('配合106年度暑假7月1日(星期六)至8月31日(星期四)，本市觀光公車臺灣好行88、99路於暑假期間平日(週一至週五)將以「<span style="color: green; background: #FFFFFF; font-weight: bold;">暑假平日時刻表</span>」行駛，假日(週六、日)以「<span style="color: red; background: #FFFFFF; font-weight: bold;">假日時刻表</span>」行駛，請乘車民眾多加留意發車時間。');
-	block_route_info(route_interval,'府城客運','假日30分鐘1班','二段票<br />分段點：四草野生動物保護區','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10210&locale=zh_TW',[['寒暑假平日','vacation'],['假日','holiday'],['平日','normal']]);
+	block_route_map(null);
+	block_route_info(route_interval,'府城客運','假日30分鐘1班','二段票<br />分段點：四草野生動物保護區','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10210&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(22,'<h1>台南市民刷「市民卡」搭乘台灣好行88、99路享半價優惠</h1>','四草野生動物保護區');
-	block_multiple_time_schedule( [['寒暑假平日','vacation'],['假日班表','holiday'],['平日班表','normal']], '');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '');
 	block_transfer(transfer_tainan_railway_station);
 	block_copyright();
 </script>
