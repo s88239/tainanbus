@@ -1,9 +1,9 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-tour_bus_88_main_stop_name = ["臺南公園<br />(公園路)","臺南<br />火車站","延平郡王祠<br />(開山路)","文化<br />中心","孔廟","赤崁樓","神農街","市政中心<br />(永華路)","億載<br />金城","安平古堡<br />(安北路)","觀夕<br />平台"];
-tour_bus_88_main_stop_time_consume = [0, 5, 12, 18, 30, 35, 38, 47, 53, 63, 70];
-tour_bus_88_important_stop = [0, 1, 10]; // 臺南公園(公園路), 臺南火車站, 觀夕平台
+tour_bus_88_main_stop_name = ["臺南公園<br />(公園路)","臺南<br />火車站","延平<br />郡王祠","文化中心","葉石濤文<br />學紀念館","赤崁樓","神農街、<br />水仙宮","小西門<br />(大億麗緻)","億載<br />金城","原住民<br />文化會館","安平古堡<br />(安北路)","觀夕<br />平台"];
+tour_bus_88_main_stop_time_consume = [0, 5, 12, 18, 30, 35, 38, 43, 53, 56, 63, 70];
+tour_bus_88_important_stop = [0, 1, 3, 5, 9, 11]; // 臺南公園(公園路), 臺南火車站, 文化中心, 赤崁樓, 原住民文化會館, 觀夕平台
 skip_stop = 3; // 孔廟
 tour_bus_88_time_go = [["09:00",[skip_stop,[skip_stop,-10]]],["10:00",[skip_stop,[skip_stop,-10]]],
 ["11:00",[skip_stop,[skip_stop,-10]]],["12:00",[skip_stop,[skip_stop,-10]]],["13:00",[skip_stop,[skip_stop,-10]]],
