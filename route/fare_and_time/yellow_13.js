@@ -33,3 +33,7 @@ var start_stop = 1;
 var end_stop = 5;
 yellow_13_time_go = [["08:40",start_stop,end_stop],["11:10",start_stop,end_stop],["14:10",start_stop,end_stop],["16:50",['L',[1,10]]],["18:35",start_stop,end_stop]];
 yellow_13_time_return = [["05:50",[[0,-5]]],["09:20",end_stop,start_stop],["11:50",end_stop,start_stop],["14:50",end_stop,start_stop],["17:50",end_stop,start_stop,['L']]];
+
+// holiday schedule
+yellow_13_holiday_time_go = [["07:30",start_stop,end_stop,['溫']],["08:40",start_stop,end_stop],["11:10",start_stop,end_stop],["14:10",start_stop,end_stop],["16:35",start_stop,end_stop,['溫']],["16:50",['L',[1,10]]],["18:35",start_stop,end_stop]];
+yellow_13_holiday_time_return = [["05:50",[[0,-5]]],["08:10",end_stop,start_stop,['溫']],["09:20",end_stop,start_stop],["11:50",end_stop,start_stop],["14:50",end_stop,start_stop],["17:15",end_stop,start_stop,['溫']],["17:50",end_stop,start_stop,['L']]];

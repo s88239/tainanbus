@@ -8,8 +8,11 @@
 	route_file_name = 'yellow_12';
 	route_type = 'yellow';
 	route_interval = ['白河','關子嶺'];
+	route_start_stop = '白河';
+	route_end_stop = '關子嶺';
 </script>
-<script src="../tools/web_model.js"></script> 
+<link href="../css/radio_style.css" rel="stylesheet" />
+<script src="../tools/web_model.js"></script>
 <script type="text/javascript">
 	header_code();
 </script>
@@ -18,9 +21,10 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1512&locale=zh_TW');
+	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1512&locale=zh_TW',[['平日','normal'],['假日','holiday'],['9/23&10/07','activity']]);
 	block_fare(0, null);
-	block_time_schedule('白河','關子嶺',H_message+'；'+L_message);
+	//block_time_schedule('白河','關子嶺',H_message+'；'+L_message);
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday'],['9/23&10/07','activity']], L_message+'<h3>「<span style="color: blue;">溫</span>」表示於關子嶺溫泉節期間(2017/09/23~2017/10/22)之<span style="color: red;">假日</span>行駛</h3><br /><h3><span style="color: green;">9/23&10/07班表</span>僅適用於2017/09/23及2017/10/07兩天，為假日班表再加開20:30關子嶺發車班次</h3><br /><h1>關子嶺公車整合時刻表：</h1><img src="http://www.singing168.com.tw/images/1060919(2).jpg" width="800px" />');
 	block_transfer(transfer_baihe + transfer_nianfohui + transfer_guanziling);
 	block_copyright();
 </script>
