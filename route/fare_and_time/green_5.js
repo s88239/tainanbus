@@ -21,7 +21,7 @@ green_5_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 green_5_main_stop_name = ["永康<br />火車站","永康","王行","新市<br />火車站","新市","潭頂","大社"];
-green_5_main_stop_time_consume = [0, 1, 5, 10, 13, 21, 25];
+green_5_main_stop_time_consume = [0, 1, 5, 10, 13, 31, 35];
 green_5_important_stop = [0, 3, 6]; // 永康火車站, 新市火車站, 大社
-green_5_time_go = [["08:15"],["12:35"],["17:05"],["18:40"]];
-green_5_time_return = [["07:25"],["12:00"],["16:30"],["17:50"]];
+green_5_time_go = [["08:25"],["12:35"],["17:10"],["18:40"]];
+green_5_time_return = [["07:40"],["12:00"],["16:30"],["17:55"]];
