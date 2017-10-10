@@ -564,6 +564,13 @@
 		"RouteCategory":6
 	},
 	{
+		"RouteCodeName":"orange_4_1",
+		"RouteName":"橘4-1",
+		"RouteOSMRelation":7641175,
+		"RouteCode":1808,
+		"RouteCategory":6
+	},
+	{
 		"RouteCodeName":"orange_5",
 		"RouteName":"橘5",
 		"RouteOSMRelation":4071565,
@@ -575,6 +582,13 @@
 		"RouteName":"橘10",
 		"RouteOSMRelation":4072047,
 		"RouteCode":1410,
+		"RouteCategory":6
+	},
+	{
+		"RouteCodeName":"orange_10_1",
+		"RouteName":"橘10-1",
+		"RouteOSMRelation":7641360,
+		"RouteCode":1807,
 		"RouteCategory":6
 	},
 	{
