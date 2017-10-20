@@ -25,7 +25,18 @@
 	block_route_map(null);
 	block_route_info(route_interval,'府城客運','假日30分鐘1班','二段票<br />分段點：四草野生動物保護區','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10210&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(22,'<h1>台南市民刷「市民卡」搭乘台灣好行88、99路享半價優惠</h1>','四草野生動物保護區');
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '<h3>「*」班次表示不經「海寮紅樹林驛站、海寮碼頭、七股鹽山、台灣鹽博物館、龍山村」，終點站為臺南公園</h3><p>&nbsp;</p>\
+		<h2><font color="blue">七股鹽山 ─ 黑面琵鷺賞鳥亭</font></h2>\
+		<h3>黑面琵鷺賞鳥路線【10月-隔年4月】</h3>\
+		<h3><span style="color:red;">【自106年10月21日起至107年4月29日止，每逢假日(包含寒假平日)行駛】</span></h3>\
+		<table>\
+			<tr><th>七股鹽山<br />發車</th><th>黑面琵鷺賞鳥亭<br />發車</th></tr>\
+			<tr><td>10:55</td><td>11:40</td></tr>\
+			<tr><td>12:25</td><td>13:10</td></tr>\
+			<tr><td>13:55</td><td>14:40</td></tr>\
+			<tr><td>15:25</td><td>16:10</td></tr>\
+			<tr><td>16:55</td><td><span style="font-weight: bold;">*17:40</span><br />(至臺南公園)</td></tr>\
+		</table><h3>本賞鳥季班表已整合到假日班表中</h3><br /><h3>「*」班次表示抵達六孔管理站後，下一站接到99台江線-「鹿耳門聖母廟」站往臺南公園</h3>');
 	block_transfer(transfer_tainan_railway_station);
 	block_copyright();
 </script>
