@@ -143,6 +143,12 @@
 		"OneWayRoute":true
 	},
 	{
+		"RouteCodeName":"city_bus_239",
+		"RouteName":"239",
+		"RouteOSMRelation":5437435,
+		"RouteCategory":1
+	},
+	{
 		"RouteCodeName":"red",
 		"RouteName":"紅幹線",
 		"RouteOSMRelation":3905767,
@@ -775,6 +781,12 @@
 		"RouteCategory":8
 	},
 	{
+		"RouteCodeName":"tour_bus_7702",
+		"RouteName":"7702鹽鄉濱海線",
+		"RouteOSMRelation":5424028,
+		"RouteCategory":8
+	},
+	{
 		"RouteCodeName":"hsr_shuttle_h31",
 		"RouteName":"高鐵市府線",
 		"RouteOSMRelation":4101308,
@@ -786,6 +798,12 @@
 		"RouteName":"高鐵奇美線",
 		"RouteOSMRelation":4102806,
 		"RouteCode":10265,
+		"RouteCategory":9
+	},
+	{
+		"RouteCodeName":"highway_bus_8042",
+		"RouteName":"8042(沙旗美月世界快線)",
+		"RouteOSMRelation":5716934,
 		"RouteCategory":9
 	}
 ]
