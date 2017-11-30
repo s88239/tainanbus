@@ -324,8 +324,7 @@ function block_fare_highway(charge_type, additional_message){
 	var fare_notice = '<h2>使用電子票證時，上下車皆須刷卡</h2><br />';
 	if(charge_type=='Kaohsiung') {
 		fare_notice += '<h3><span style="color: red;">本路線非大台南公車，無法享有八公里免費及轉乘優惠</span></h3>\
-		<h1>本路線使用「一卡通」刷卡單趟收費最高上限為60元</h1>\
-		<p><span style="color: blue; font-weight: bold;">(僅一卡通普卡、學生卡享此優惠，已享優惠之卡種如半票不適用)</span></p>';
+		<h1>2017年12月起至2018年2月底止，本路線刷電子票證免費搭乘</h1>';
 	}
 	else if(charge_type=='8050') {
 		fare_notice += '<h1>本路線不適用一卡通折12元及收費最高上限優惠</h1>';
