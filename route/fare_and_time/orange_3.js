@@ -43,6 +43,6 @@ orange_3_time_go = [
 ];
 orange_3_time_return = [
 ["06:30",end_stop,start_stop,[stop_1]],["07:30",[end_stop,[stop_1,5]]],["09:55",end_stop,start_stop,[stop_1]],
-["13:00",end_stop,start_stop,[stop_1]],["15:30",end_stop,start_stop,[stop_1]],["17:45",end_stop,start_stop,[stop_1]],
+["13:00",end_stop,start_stop,[stop_1]],["15:30",end_stop,start_stop,[stop_1]],["18:10",end_stop,start_stop,[stop_1]],
 ["17:40",[end_stop,[stop_1,5]]],["21:20",[end_stop,[stop_1,5]]]
 ];
