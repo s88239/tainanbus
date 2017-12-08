@@ -20,7 +20,7 @@ html, body {
 <script type="text/javascript">
 function get_button_string(category, file_name, ch_name){
 	var type = (category=='STSP') ? file_name.split('_')[1] : (category=='highway') ? 'tourist' : category;
-	if(file_name=='STSP_Shanhua') type = 'blue';
+	if(file_name=='STSP_Shanhua') type = 'brown';
 	var route_infor_str = (category=='urban' || category=='highway' || category=='tourist' || category=='hsr_shuttle') ? (category + '_') : '';
 	route_infor_str += file_name.replace('-','_') + '_route';
 	line_string = '<tr><td><a href="' + category + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'

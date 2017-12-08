@@ -49,6 +49,14 @@
 		case 'tour':
 			$ch_name = '台灣好行'.$str_sec[2].'路';
 			break;
+		case 'STSP':
+			if($str_sec[1]=='red') $ch_route_name = '紅線(北環東線)';
+			else if($str_sec[1]=='orange') $ch_route_name = '橘線(北環西線)';
+			else if($str_sec[1]=='blue') $ch_route_name = '藍線(南環線)';
+			else if($str_sec[1]=='green') $ch_route_name = '綠線(高鐵線)';
+			else if($str_sec[1]=='Shanhua') $ch_route_name = '善化線';
+			$ch_name = '南科巡迴巴士'.$ch_route_name;
+			break;
 		default:
 			if(count($str_sec)>3) $ch_name = $str_sec[2].'-'.$str_sec[3].'路'; // e.g. 77-1
 			else $ch_name = $str_sec[2].'路';

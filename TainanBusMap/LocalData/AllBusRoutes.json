@@ -801,6 +801,36 @@
 		"RouteCategory":9
 	},
 	{
+		"RouteCodeName":"STSP_red",
+		"RouteName":"南科巡迴巴紅線(北環東線)",
+		"RouteOSMRelation":7792170,
+		"RouteCategory":2
+	},
+	{
+		"RouteCodeName":"STSP_orange",
+		"RouteName":"南科巡迴巴橘線(北環西線)",
+		"RouteOSMRelation":7792232,
+		"RouteCategory":6
+	},
+	{
+		"RouteCodeName":"STSP_blue",
+		"RouteName":"南科巡迴巴藍線(南環線)",
+		"RouteOSMRelation":7792246,
+		"RouteCategory":3
+	},
+	{
+		"RouteCodeName":"STSP_green",
+		"RouteName":"南科巡迴巴綠線(高鐵線)",
+		"RouteOSMRelation":7792324,
+		"RouteCategory":4
+	},
+	{
+		"RouteCodeName":"STSP_Shanhua",
+		"RouteName":"南科巡迴巴士善化線",
+		"RouteOSMRelation":7792087,
+		"RouteCategory":5
+	},
+	{
 		"RouteCodeName":"highway_bus_8042",
 		"RouteName":"8042(沙旗美月世界快線)",
 		"RouteOSMRelation":5716934,
