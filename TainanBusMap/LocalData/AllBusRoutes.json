@@ -444,6 +444,13 @@
 		"RouteCategory":4
 	},
 	{
+		"RouteCodeName":"green_20_1",
+		"RouteName":"綠20-1",
+		"RouteOSMRelation":7885569,
+		"RouteCode":1804,
+		"RouteCategory":4
+	},
+	{
 		"RouteCodeName":"green_21",
 		"RouteName":"綠21",
 		"RouteOSMRelation":4109182,

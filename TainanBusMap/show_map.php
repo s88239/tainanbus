@@ -63,7 +63,7 @@
 			break;
 	}
 	if($branch_flag){
-		if( strcmp($route_name, 'yellow_6_1')!=0 && strcmp($route_name, 'yellow_14_1')!=0 && strcmp($route_name, 'yellow_12_2')!=0 && strcmp($route_name, 'red_3_1')!=0 && strcmp($route_name, 'orange_4_1')!=0 && strcmp($route_name, 'orange_10_1')!=0 ){ // y6-1 & r3-1 is independent map
+		if( strcmp($route_name, 'yellow_6_1')!=0 && strcmp($route_name, 'yellow_14_1')!=0 && strcmp($route_name, 'yellow_12_2')!=0 && strcmp($route_name, 'red_3_1')!=0 && strcmp($route_name, 'orange_4_1')!=0 && strcmp($route_name, 'orange_10_1')!=0 && strcmp($route_name, 'green_20_1')!=0 ){ // y6-1 & r3-1 is independent map
 			$route_name = $str_sec[0].'_'.$str_sec[1]; // other branch is merged. e.g. y12-1 is contained in y12
 		}
 		$ch_name = $ch_name.'-'.$str_sec[2];
