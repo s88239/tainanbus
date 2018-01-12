@@ -178,11 +178,10 @@
 	},
 	{
 		"RouteCodeName":"red_3_1",
-		"RouteName":"奇美博物館假日公車(紅3-1)",
+		"RouteName":"紅3-1(奇美博物館假日公車)",
 		"RouteOSMRelation":5166423,
 		"RouteCode":1603,
-		"RouteCategory":2,
-		"OneWayRoute":true
+		"RouteCategory":2
 	},
 	{
 		"RouteCodeName":"red_4",

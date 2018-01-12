@@ -32,6 +32,8 @@ yellow_14_fare = [
 // [time, start_stop, end_stop, other]
 yellow_14_main_stop_name = ["白河","三間厝","林子內<br />教會","鹿寮水庫","三層崎"];
 yellow_14_main_stop_time_consume = [0, 5, 12, 20, 27];
-yellow_14_important_stop = [0, 4]; // 白河, 三層崎
-yellow_14_time_go = [["06:35"],["07:50"],["10:20"],["17:40"]];
-yellow_14_time_return = [["06:00"],["07:10"],["08:25"],["10:55"]];
+yellow_14_important_stop = [0, 2, 4]; // 白河, 林子內教會, 三層崎
+var start_stop = 0; // 白河
+var end_stop = 2; // 林子內教會
+yellow_14_time_go = [["06:35"],["07:50"],["10:20"],["16:00",start_stop,end_stop],["17:40"]];
+yellow_14_time_return = [["06:00"],["07:10"],["08:25"],["10:55"],["16:25",end_stop,start_stop]];
