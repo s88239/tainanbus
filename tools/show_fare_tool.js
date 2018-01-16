@@ -1,6 +1,6 @@
 var HIGHWAY_CARD_PRICE_RATIO = 0.87842; // Card price = Cash price * HIGHWAY_CARD_PRICE_RATIO
-var HIGHWAY_CARD_PRICE_BASE = 21; // The card price for distance within 8 km
-var HIGHWAY_CARD_PRICE_DISCOUNT = 5; // Discount for the highway bus of Hsinyin Bus
+var HIGHWAY_CARD_PRICE_BASE = 22; // The card price for distance within 8 km
+var HIGHWAY_CARD_PRICE_DISCOUNT = 0; // Discount for the highway bus of Hsinyin Bus
 
 function create_select_menu(name_array, color_name, LINE_NAME, fare_type){ // print the fare menu
 	var max_color_num = 4;
@@ -48,10 +48,10 @@ function query_fare(theForm, fare_array, fare_type){
 			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO);
 			break;
 		case 'highway': // real price for using RFID card
-			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 21 : fare_array[td][fd];
+			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 22 : fare_array[td][fd];
 			break;
 		case '8050':
-			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 21 : fare_array[td][fd];
+			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 22 : fare_array[td][fd];
 			var citizen_card_price = card_price - HIGHWAY_CARD_PRICE_BASE;
 			document.getElementById("card_adult").innerHTML = citizen_card_price;
 			document.getElementById("card_half").innerHTML = Math.floor(citizen_card_price/2);
