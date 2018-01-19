@@ -837,6 +837,12 @@
 		"RouteCategory":5
 	},
 	{
+		"RouteCodeName":"highway_bus_8035",
+		"RouteName":"8035",
+		"RouteOSMRelation":7915385,
+		"RouteCategory":9
+	},
+	{
 		"RouteCodeName":"highway_bus_8042",
 		"RouteName":"8042(沙旗美月世界快線)",
 		"RouteOSMRelation":5716934,
