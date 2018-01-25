@@ -42,6 +42,46 @@ tour_bus_99_holiday_time_return = [["10:15",stop_1,start_stop],["11:15",stop_1,s
 ["14:40",bird_watching,end_stop],["15:55",end_stop,start_stop,[[stop_2,-5]]],["17:15",stop_1,start_stop],
 ["16:10",bird_watching,end_stop],["16:55",end_stop,start_stop,[[stop_2,-5]]],["18:00",stop_1,start_stop],
 ["18:15",stop_1,start_stop],["17:40",bird_watching,start_stop,['*',end_stop,[stop_2,-25]]],["18:10",end_stop,start_stop,[[stop_2,-5]]]];
-// vacation schedule
-tour_bus_99_vacation_time_go = [["08:45",[[tra_tainan,-12,tra_tainan+1,12]]],["09:45",[[tra_tainan,-12,tra_tainan+1,12]]],["10:45",[[tra_tainan,-12,tra_tainan+1,12]]],["11:45",[[tra_tainan,-12,tra_tainan+1,12]]],["12:45",[[tra_tainan,-12,tra_tainan+1,12]]],["13:45",[[tra_tainan,-12,tra_tainan+1,12]]],["14:45",[[tra_tainan,-12,tra_tainan+1,12]]],["15:45",[[tra_tainan,-12,tra_tainan+1,12]]]];
-tour_bus_99_vacation_time_return = [["10:55",[[stop_2,-5]]],["11:55",[[stop_2,-5]]],["12:55",[[stop_2,-5]]],["13:55",[[stop_2,-5]]],["14:55",[[stop_2,-5]]],["15:55",[[stop_2,-5]]],["16:55",[[stop_2,-5]]],["18:10",[[stop_2,-5]]]];
+// winter vacation schedule
+tour_bus_99_wintervacation_time_go = [
+["08:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],["10:55",end_stop,bird_watching],
+["09:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["10:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],["12:25",end_stop,bird_watching],
+["11:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],["13:55",end_stop,bird_watching],
+["12:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["13:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],["15:25",end_stop,bird_watching],
+["14:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],["16:55",end_stop,bird_watching],
+["15:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]]
+];
+tour_bus_99_wintervacation_time_return = [
+["10:55",end_stop,start_stop,[[stop_2,-5]]],
+["11:55",end_stop,start_stop,[[stop_2,-5]]],
+["11:40",bird_watching,end_stop],["12:55",end_stop,start_stop,[[stop_2,-5]]],
+["13:10",bird_watching,end_stop],["13:55",end_stop,start_stop,[[stop_2,-5]]],
+["14:55",end_stop,start_stop,[[stop_2,-5]]],
+["14:40",bird_watching,end_stop],["15:55",end_stop,start_stop,[[stop_2,-5]]],
+["16:10",bird_watching,end_stop],["16:55",end_stop,start_stop,[[stop_2,-5]]],
+["17:40",bird_watching,start_stop,['*',end_stop,[stop_2,-25]]],
+["18:10",end_stop,start_stop,[[stop_2,-5]]]
+];
+// summer vacation schedule
+tour_bus_99_summervacation_time_go = [
+["08:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["09:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["10:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["11:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["12:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["13:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["14:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]],
+["15:45",start_stop,end_stop,[[tra_tainan,-12,tra_tainan+1,12]]]
+];
+tour_bus_99_summervacation_time_return = [
+["10:55",end_stop,start_stop,[[stop_2,-5]]],
+["11:55",end_stop,start_stop,[[stop_2,-5]]],
+["12:55",end_stop,start_stop,[[stop_2,-5]]],
+["13:55",end_stop,start_stop,[[stop_2,-5]]],
+["14:55",end_stop,start_stop,[[stop_2,-5]]],
+["15:55",end_stop,start_stop,[[stop_2,-5]]],
+["16:55",end_stop,start_stop,[[stop_2,-5]]],
+["18:10",end_stop,start_stop,[[stop_2,-5]]]
+];

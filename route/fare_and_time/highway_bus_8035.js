@@ -29,6 +29,6 @@ highway_bus_8035_time_go = [
 ["06:20",[skip_stop,[skip_stop,-10]]],["08:20"],["10:50"],["13:20"],["17:35"]
 ];
 highway_bus_8035_time_return = [
-["06:30",end_stop,start_stop,['S',skip_stop,[skip_stop,-10]]],["07:35",['S',skip_stop,[skip_stop,-10]]],["10:05"],["12:35"],
+["06:30",end_stop,start_stop,['S',skip_stop,[skip_stop,-10]]],["07:35",['W',skip_stop,[skip_stop,-10]]],["10:05"],["12:35"],
 ["16:50"],["17:30"],["18:45"]
 ];
