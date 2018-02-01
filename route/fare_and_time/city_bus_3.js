@@ -1,7 +1,7 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_3_main_stop_name = ["海東國小","海東橋","特力屋、<br />好市多","赤崁樓","臺南<br />火車站","文化中心","市立醫院","竹篙厝","全福新城","復興國中"];
+city_bus_3_main_stop_name = ["海東國小","海東橋","特力屋、<br />好市多","赤崁樓","臺南<br />火車站","文化中心(台<br />糖長榮酒店)","市立醫院","竹篙厝","全福新城","復興國中"];
 city_bus_3_main_stop_time_consume = [0, 10, 15, 25, 35, 50, 58, 65, 65, 75];
 city_bus_3_important_stop = [0, 4, 7, 8]; // 海東國小, 臺南火車站, 竹篙厝, 全福新城
 var start_stop = 0; // 海東國小
@@ -21,7 +21,7 @@ var return_start = 1; // 竹篙厝
 var return_end = 9; // 海東國小
 var return_skip = 2; // 復興國中
 var return_tra_tainan = 5; // 臺南火車站
-city_bus_3_main_stop_name_return = ["全福新城","竹篙厝","復興國中","市立醫院","文化中心","臺南<br />火車站","赤崁樓","特力屋、<br />好市多","海東橋","海東國小"];
+city_bus_3_main_stop_name_return = ["全福新城","竹篙厝","復興國中","市立醫院","文化中心(台<br />糖長榮酒店)","臺南<br />火車站","赤崁樓","特力屋、<br />好市多","海東橋","海東國小"];
 city_bus_3_main_stop_time_consume_return = [0, 5, 20, 12, 20, 35, 40, 50, 55, 65];
 city_bus_3_important_stop_return = [0, 1, 5, 9]; // 全福新城, 竹篙厝, 臺南火車站, 海東國小
 city_bus_3_time_return = [["06:00",return_start,return_end,['W',return_skip]],["06:00",return_start,return_end,[[return_skip+1,20]]],["06:30",return_start,return_end,['W',return_skip]],

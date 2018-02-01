@@ -1,7 +1,7 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-hsr_shuttle_h62_main_stop_name = ["桂田酒店","奇美醫院","兵仔市","南紡<br />購物中心","文化中心","富農街口","仁德交流道","義林一街口","高鐵臺南站"];
+hsr_shuttle_h62_main_stop_name = ["桂田酒店","奇美醫院","兵仔市","南紡<br />購物中心","文化中心(台<br />糖長榮酒店)","富農街口","仁德交流道","義林一街口","高鐵臺南站"];
 hsr_shuttle_h62_main_stop_time_consume = [0, 15, 23, 27, 40, 47, 50, 55, 75];
 hsr_shuttle_h62_important_stop = [0, 1, 3, 6, 8]; // 桂田酒店, 奇美醫院, 南紡購物中心, 仁德交流道, 高鐵臺南站
 var start_stop = 1; // 奇美醫院
