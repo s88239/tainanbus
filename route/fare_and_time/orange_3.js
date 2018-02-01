@@ -37,7 +37,7 @@ start_stop = 0;
 end_stop = 7;
 stop_1 = 3;
 orange_3_time_go = [
-["06:00",start_stop,end_stop,[stop_1]],["06:10",[end_stop,[stop_1+1,5]]],["09:15",start_stop,end_stop,[stop_1]],
+["05:55",start_stop,end_stop,[stop_1]],["06:10",[end_stop,[stop_1+1,5]]],["09:15",start_stop,end_stop,[stop_1]],
 ["12:15",start_stop,end_stop,[stop_1]],["14:40",start_stop,end_stop,[stop_1]],["15:45",[end_stop,[stop_1+1,5]]],
 ["17:15",start_stop,end_stop,[stop_1]],["19:45",[end_stop,[stop_1+1,5]]]
 ];
