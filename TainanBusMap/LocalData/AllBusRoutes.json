@@ -847,5 +847,17 @@
 		"RouteName":"8042(沙旗美月世界快線)",
 		"RouteOSMRelation":5716934,
 		"RouteCategory":9
+	},
+	{
+		"RouteCodeName":"highway_bus_8046",
+		"RouteName":"8046(高南雙城快線)",
+		"RouteOSMRelation":7998024,
+		"RouteCategory":9
+	},
+	{
+		"RouteCodeName":"highway_bus_8046A",
+		"RouteName":"8046A(高南雙城快線)",
+		"RouteOSMRelation":7997617,
+		"RouteCategory":9
 	}
 ]
