@@ -40,9 +40,8 @@ function query_fare(theForm, fare_array, fare_type){
 			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO) - HIGHWAY_CARD_PRICE_DISCOUNT;
 			break;
 		case 'Kaohsiung':
-			card_price = price;
-			document.getElementById("card_adult").innerHTML = (card_price > 60) ? 60 : card_price; // 收費最高上限60元
-			document.getElementById("card_half").innerHTML = Math.ceil(price / 2); // 半票不適用一卡通優惠
+			card_price = (price > 60) ? 60 : price; // 收費最高上限60元
+			card_price_half = Math.ceil(price/2); // 半票不適用優惠
 			break;
 		case 'Highway': // estimated price for using RFID card by multiplying HIGHWAY_CARD_PRICE_RATIO
 			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO);
@@ -61,10 +60,11 @@ function query_fare(theForm, fare_array, fare_type){
 			card_price = price;
 			break;
 	}
+	if(typeof(card_price_half)=='undefined') card_price_half = Math.ceil(card_price/2);
 	document.getElementById("cash_adult").innerHTML = price < 0 ? 'none' : price; // 現金全票
 	document.getElementById("cash_half").innerHTML = price < 0 ? 'none' : Math.ceil(price/2); // 現金半票，無條件進位
 	document.getElementById("RFID_adult").innerHTML = price < 0 ? 'none' : card_price; // 刷卡全票
-	document.getElementById("RFID_half").innerHTML = price < 0 ? 'none' : Math.ceil(card_price/2); // 刷卡半票，無條件進位
+	document.getElementById("RFID_half").innerHTML = price < 0 ? 'none' : card_price_half; // 刷卡半票，無條件進位
 }
 
 function print_fare_table(interval_name, fare, color, fare_type){ // the function fo showing or hiding the fare table
@@ -89,7 +89,7 @@ function print_fare_table(interval_name, fare, color, fare_type){ // the functio
 						card_price = Math.round(fare[j][i] * HIGHWAY_CARD_PRICE_RATIO) - HIGHWAY_CARD_PRICE_DISCOUNT;
 						break;
 					case 'Kaohsiung':
-						card_price = fare[j][i];
+						card_price = (fare[j][i] > 60) ? 60 : fare[j][i];
 						break;
 					case '8050':
 					case 'highway':
