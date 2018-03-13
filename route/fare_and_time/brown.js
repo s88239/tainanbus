@@ -34,22 +34,21 @@ brown_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-brown_main_stop_name = ["新營","民治<br />市政中心","統聯<br />客運","橋南老街","鹽水","歡雅","大埔","麻油寮","學甲公所","奇美<br />佳里分院","佳里"];
-brown_main_stop_time_consume = [0, 3, 8, 17, 18, 26, 33, 33, 43, 53, 60];
-brown_important_stop = [0, 3, 4, 8, 10]; // 新營, 橋南老街, 鹽水, 學甲公所, 佳里
+brown_main_stop_name = ["新營","民治<br />市政中心","統聯<br />客運","鹽水","歡雅","大埔","麻油寮","學甲公所","奇美<br />佳里分院","佳里"];
+brown_main_stop_time_consume = [0, 3, 8, 18, 26, 33, 33, 43, 53, 60];
+brown_important_stop = [0, 3, 7, 9]; // 新營, 鹽水, 學甲公所, 佳里
 var start_stop = 0; // 新營
-var end_stop = 4; // 鹽水
-var skip_stop_1 = 6; // 大埔
-var skip_stop_2 = 7; // 麻油寮
-var end_stop_2 = 8; // 學甲公所
-var chiaonan = 3; // 橋南老街
+var end_stop = 3; // 鹽水
+var skip_stop_1 = 5; // 大埔
+var skip_stop_2 = 6; // 麻油寮
+var end_stop_2 = 7; // 學甲公所
 brown_time_go = [["05:50",start_stop,end_stop_2,[skip_stop_1]],["06:00",start_stop,end_stop,['L',[end_stop,2]]],["06:05",[skip_stop_2,'L']],["06:35",[skip_stop_1,'L']],["07:05",[skip_stop_2]],["07:35",[skip_stop_2]],["08:05",[skip_stop_1]],["08:35",[skip_stop_2]],["09:05",[skip_stop_2]],["09:35",[skip_stop_2,'L']],
 ["10:05",[skip_stop_1,'L']],["10:35",[skip_stop_2]],["11:05",[skip_stop_2]],["11:35",[skip_stop_2]],["12:05",[skip_stop_2]],["12:35",[skip_stop_1]],["13:05",[skip_stop_2,'L']],["14:05",[skip_stop_2]],["14:35",[skip_stop_1,'L']],
 ["15:05",[skip_stop_2]],["15:20",start_stop,end_stop_2,[skip_stop_1]],["15:35",[skip_stop_2,'L']],["16:05",[skip_stop_2,'L']],["16:35",[skip_stop_2]],["17:05",start_stop,end_stop,[[end_stop,5]]],["17:10",[skip_stop_1]],["17:35",[skip_stop_2,'L']],["18:15",[skip_stop_2]],
-["18:35",start_stop,chiaonan,['燈']],["18:55",start_stop,chiaonan,['燈']],["19:05",[skip_stop_2]],["19:25",start_stop,chiaonan,['燈']],["19:45",start_stop,chiaonan,['燈']],["20:05",[skip_stop_2]],["20:35",start_stop,chiaonan,['燈']],["21:05",start_stop,chiaonan,['燈']],["21:40",start_stop,chiaonan,['燈']]
+["19:05",[skip_stop_2]],["20:05",[skip_stop_2]]
 ];
 brown_time_return = [["06:30",end_stop,start_stop,['L',[start_stop,5]]],["06:00",[skip_stop_2]],["06:35",[skip_stop_1]],["07:05",[skip_stop_2]],["07:35",[skip_stop_2,'L']],["08:05",[skip_stop_1,'L']],["08:30",end_stop_2,start_stop,[skip_stop_1]],["08:35",[skip_stop_2]],["09:05",[skip_stop_2]],["09:35",[skip_stop_2]],
 ["10:05",[skip_stop_1]],["10:35",[skip_stop_2]],["11:05",[skip_stop_2,'L']],["11:35",[skip_stop_1,'L']],["12:05",[skip_stop_2]],["12:35",[skip_stop_2]],["13:05",[skip_stop_2]],["14:05",[skip_stop_1]],["14:35",[skip_stop_2,'L']],
 ["15:05",[skip_stop_2]],["15:35",[skip_stop_2]],["16:05",[skip_stop_1,'L']],["16:35",[skip_stop_2]],["17:40",end_stop,start_stop,[[start_stop,5]]],["17:05",[skip_stop_2,'L']],["17:35",[skip_stop_2,'L']],["18:15",end_stop_2,start_stop,[skip_stop_1]],["18:05",[skip_stop_1]],
-["19:05",chiaonan,start_stop,['燈']],["19:25",chiaonan,start_stop,['燈']],["19:05",[skip_stop_2,'L']],["19:55",chiaonan,start_stop,['燈']],["20:15",chiaonan,start_stop,['燈']],["20:05",[skip_stop_2]],["21:05",chiaonan,start_stop,['燈']],["21:35",chiaonan,start_stop,['燈']],["22:10",chiaonan,start_stop,['燈']]
+["19:05",[skip_stop_2,'L']],["20:05",[skip_stop_2]]
 ];
