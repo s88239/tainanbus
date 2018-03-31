@@ -1,5 +1,5 @@
-yellow_13_interval_name = ["白河","河東","虎子墓","木屐寮","仙草埔","關子嶺","頂關<br />子嶺","南寮<br />路口","坪頂","南寮"];
-yellow_13_interval_stop = [ // 2017.06.13 checked
+yellow_13_interval_name = ["白河","河東","虎子墓","木屐寮","仙草埔","關子嶺","頂關<br />子嶺","南寮<br />路口","坪頂","南寮","大鋤<br />花間","檳榔宅","仙公廟"];
+yellow_13_interval_stop = [ // 2018.03.30 checked
 ["白河國中","白河站","念佛會"], // 白河
 ["凹底","畚箕湖","東畚箕湖","河東","河東國小"], // 河東
 ["潭墘","虎子墓(虎山里)"], // 虎子墓
@@ -9,7 +9,10 @@ yellow_13_interval_stop = [ // 2017.06.13 checked
 ["關子嶺教會","頂關子嶺"], // 頂關子嶺
 ["南寮路口"], // 南寮路口
 ["坪頂"], // 坪頂
-["後坑","石埤","南寮"] // 南寮
+["後坑","石埤","南寮","崁頂福安宮"], // 南寮
+["穆聖","李子園小舖","大鋤花間"], // 大鋤花間
+["檳榔宅"], // 檳榔宅
+["仙公廟牌樓","凍腳","仙公廟"] // 仙公廟
 ];
 yellow_13_fare = [
 [26],
@@ -21,15 +24,20 @@ yellow_13_fare = [
 [39,31,26,26,26,26,26],
 [44,36,30,26,26,26,26,26],
 [45,37,31,27,26,26,26,26,26],
-[51,43,37,33,27,26,26,26,26,26]
+[51,43,37,33,27,26,26,26,26,26],
+[70,62,56,52,46,34,31,26,26,26,26],
+[77,69,63,59,53,41,39,33,32,26,26,26],
+[86,78,72,67,62,49,47,42,40,35,26,26,26]
 ];
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_13_main_stop_name = ["白河國中","白河","河東國小","仙草埔","關子嶺","南寮"];
-yellow_13_main_stop_time_consume = [0, 10, 15, 23, 30, 40];
-yellow_13_important_stop = [0, 1, 4, 5]; // 白河國中, 白河, 關子嶺, 南寮
+yellow_13_main_stop_name = ["白河國中","白河","河東國小","仙草埔","關子嶺","南寮","大鋤花間","仙公廟"];
+yellow_13_main_stop_time_consume = [0, 10, 15, 23, 30, 40, 51, 60];
+yellow_13_important_stop = [0, 1, 4, 5, 7]; // 白河國中, 白河, 關子嶺, 南寮, 仙公廟
 var start_stop = 1;
+var start_stop_2 = 0;
 var end_stop = 5;
-yellow_13_time_go = [["08:40",start_stop,end_stop],["11:10",start_stop,end_stop],["14:10",start_stop,end_stop],["16:50",['L',[1,10]]],["18:35",start_stop,end_stop]];
-yellow_13_time_return = [["05:50",[[0,-5]]],["09:20",end_stop,start_stop],["11:50",end_stop,start_stop],["14:50",end_stop,start_stop],["17:50",end_stop,start_stop,['L']]];
+var end_stop_2 = 7;
+yellow_13_time_go = [["08:30",start_stop,end_stop],["08:50",start_stop,end_stop_2,['H']],["10:50",start_stop,end_stop_2,['H']],["11:10",start_stop,end_stop],["13:20",start_stop,end_stop_2,['H']],["14:10",start_stop,end_stop],["16:50",start_stop_2,end_stop,['L',[1,10]]],["18:35",start_stop,end_stop]];
+yellow_13_time_return = [["05:50",end_stop,start_stop_2,[[0,-5]]],["09:10",end_stop,start_stop],["09:50",end_stop_2,start_stop,['H']],["11:50",end_stop,start_stop],["11:50",end_stop_2,start_stop,['H']],["14:20",end_stop_2,start_stop,['H']],["14:50",end_stop,start_stop],["17:50",end_stop,start_stop,['L']]];

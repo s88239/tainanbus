@@ -23,5 +23,5 @@ yellow_5_main_stop_time_consume = [0, 14, 19, 22, 35, 38, 40];
 yellow_5_important_stop = [0, 1, 6]; // 新營, 柳營火車站, 下營廟前
 var start_stop = 0; // 新營
 var stop_1 = 5; // 下營公所
-yellow_5_time_go = [["08:20"],["09:30",['L']],["15:45",['L']]];
-yellow_5_time_return = [["09:10",[[stop_1,-1,start_stop,1]]],["12:30",['L',[stop_1,-1,start_stop,1]]],["16:35",['L',[stop_1,-1,start_stop,1]]]];
+yellow_5_time_go = [["08:20"],["09:30",['L']],["12:15",['H']],["15:45",['L']],["17:15",['H']]];
+yellow_5_time_return = [["09:10",[[stop_1,-1,start_stop,1]]],["12:30",['L',[stop_1,-1,start_stop,1]]],["13:05",['H',[stop_1,-1,start_stop,1]]],["16:35",['L',[stop_1,-1,start_stop,1]]],["18:10",['H',[stop_1,-1,start_stop,1]]]];
