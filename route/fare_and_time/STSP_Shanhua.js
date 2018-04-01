@@ -5,10 +5,10 @@ STSP_Shanhua_main_stop_name = ["Park 17<br />商場","善化高中","臺鐵<br /
 STSP_Shanhua_main_stop_time_consume = [0, 10, 15, 18, 20, 26, 29, 31, 33, 36, 38];
 STSP_Shanhua_important_stop = [0, 2, 7]; // Park 17商場, 臺鐵善化站, 台積電
 var TRA_Shanhua = 2; // 臺鐵善化站
-STSP_Shanhua_time_go = [["07:20",[[TRA_Shanhua,1]]],["07:38"],["08:13"]];
+STSP_Shanhua_time_go = [["07:20",[[TRA_Shanhua,1]]],["07:38"],["08:01",[[TRA_Shanhua,12]]]];
 
 // The name of return stops are different
 STSP_Shanhua_main_stop_name_return = ["Park 17<br />商場","聯電","霞客湖<br />停車場","南茂科技","群創C廠","台達電","麥當勞旁","善化高中","臺鐵<br />善化站","牙醫診所","Park 17<br />商場"];
 STSP_Shanhua_main_stop_time_consume_return = [0, 2, 5, 7, 9, 12, 18, 20, 23, 25, 38];
 STSP_Shanhua_important_stop_return = [0, 3, 8]; // Park 17商場, 南茂科技, 臺鐵善化站
-STSP_Shanhua_time_return = [["17:22"],["17:55"],["18:16"],["18:56"],["19:32"]];
+STSP_Shanhua_time_return = [["17:22"],["17:55"],["18:16"],["18:45"],["19:32"]];

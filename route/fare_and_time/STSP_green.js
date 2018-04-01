@@ -12,4 +12,4 @@ STSP_green_main_stop_name_return = ["高鐵<br />臺南站","群創<br />D廠","
 STSP_green_main_stop_time_consume_return = [0, 33, 35, 37, 39];
 STSP_green_important_stop_return = [0, 4]; // 高鐵臺南站, Park 17商場
 var hsr_tainan_return = 0;
-STSP_green_time_return = [["06:50"],["08:20"],["09:30"],["10:25"],["11:25",['綠',[hsr_tainan_return+1,12]]],["12:50"],["14:25"],["15:50"],["16:50"],["17:50"],["18:50"],["19:50"]];
+STSP_green_time_return = [["07:05"],["08:20"],["09:30"],["10:25"],["11:25",['綠',[hsr_tainan_return+1,12]]],["12:50"],["14:25"],["15:50"],["16:50"],["17:50"],["18:50"],["19:50"]];

@@ -14,9 +14,9 @@ STSP_red_time_go = [["06:19",[stop_1,stop_2,[stop_4+3,1]]],["06:30",stop_1,TRA_N
 ["06:40",[stop_1,stop_2]],["06:56",stop_1,TRA_NK+1,[stop_3,[TRA_NK,6]]],["07:11",[stop_1,stop_2]],
 ["07:18",stop_1,TRA_NK+1,[stop_3,[TRA_NK,5]]],["07:23",[stop_1,stop_2,[TRA_NK+2,1,TRA_NK+3,1]]],
 ["07:45",[stop_1,stop_2,[TRA_NK+2,1,TRA_NK+3,1]]],["07:49",[stop_1,stop_2,[TRA_NK+2,1,TRA_NK+3,1]]],
-["07:56",[stop_1,stop_2,[TRA_NK+2,1,TRA_NK+3,1]]],["08:18",[stop_1,stop_2]],["08:26",[stop_1,stop_2]],["09:08",[stop_1,stop_2]],
+["07:56",[stop_1,stop_2,[TRA_NK+3,1]]],["08:18",[stop_1,stop_2]],["08:26",[stop_1,stop_2]],["09:08",[stop_1,stop_2]],
 ["09:27",[stop_1,stop_2]],["10:00",[stop_1,stop_2]],["10:35",[stop_1,stop_2]],["11:33",[stop_1,stop_2]],["12:30",[stop_1,stop_2]],
-["13:32",[stop_1,stop_2]],["14:02",[stop_1,stop_2]],["14:40",[stop_1,stop_2]],["15:28",[stop_1,stop_2]],["16:25",[stop_1,stop_2]]
+["13:32",[stop_1,stop_2]],["14:40",[stop_1,stop_2]],["15:28",[stop_1,stop_2]],["16:25",[stop_1,stop_2]]
 ];
 
 // The name of return stops are different
