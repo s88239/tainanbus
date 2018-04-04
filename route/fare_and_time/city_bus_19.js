@@ -24,7 +24,7 @@ city_bus_19_time_return = [["05:50",tra_tainan,start_stop],["06:10",tra_tainan,s
 ["09:30",end_stop,start_stop,[[tra_tainan,-5]]],["10:15",end_stop,start_stop],["11:00",end_stop,start_stop],["11:45",end_stop,start_stop],
 ["12:20",end_stop,start_stop,[[tra_tainan+1,-5]]],["13:05",end_stop,start_stop],["13:50",end_stop,start_stop,[[tra_tainan+1,-5]]],
 ["14:35",end_stop,start_stop],["15:20",end_stop,start_stop],["16:00",['W',[tra_tainan,5]]],["16:00",end_stop,start_stop,['H',[tra_tainan,5]]],
-["16:35",end_stop,start_stop,[[tra_tainan,5]]],["17:15",end_stop,start_stop],["17:45",end_stop,start_stop],["18:00",end_stop,start_stop,[[tra_tainan,5]]],
+["16:35",end_stop,start_stop,[[tra_tainan,5]]],["17:15",end_stop,start_stop],["17:45",end_stop,start_stop],["18:10",end_stop,start_stop,[[tra_tainan,5]]],
 ["18:55",end_stop,start_stop,[[tra_tainan,5]]],["19:40",end_stop,start_stop],["20:25",end_stop,start_stop],["21:10",end_stop,start_stop],
 ["21:30",end_stop,tra_tainan],["22:00",end_stop,start_stop,[[tra_tainan+1,-5]]]
 ];
