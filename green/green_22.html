@@ -20,10 +20,19 @@
 <body>
 <script type="text/javascript">
 	block_header();
-	block_route_map(null);
+	block_route_map('<div style="text-align:left;">為配合「2018梅嶺賞螢季」活動，活動期間107年04月21-107年05月06日，本公司綠22-「玉井-梅嶺」線，每日增開1往返2車班，時間如下：<br />\
+　　<span style="color:blue;font-weight:bold;background-color:white;">一、「玉井」開20：50往「梅嶺」。</span><br />\
+　　<span style="color:blue;font-weight:bold;background-color:white;">二、「梅嶺」開21：30往「玉井」。</span><br /><br />\
+活動期間逢假日（4/21、4/22、4/28、4/29、5/5、5/6)再由綠20－「玉井-楠西」線延駛入梅嶺，暫不停靠永興吊橋（雙向）時間如下:<br />\
+　　<span style="color:blue;font-weight:bold;background-color:white;">一、「玉井」開20：10往「梅嶺」。</span><br />\
+　　<span style="color:blue;font-weight:bold;background-color:white;">二、「梅嶺」開20：50往「玉井」。</span><br /><br />\
+賞螢季期間為輸運人潮興南客運綠幹線調整時間如下：<br />\
+玉井發車21：15調整為21：30<br />\
+玉井發車21：30調整為22：00<br />\
+玉井發車22：00調整為22：15</div>');
 	block_route_info(route_interval,'興南客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1122&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(0, null);
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],'');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],'「<span style="color:green;">螢</span>」表示僅於107年04月21-107年05月06日「2018梅嶺賞螢季」活動期間行駛');
 	block_transfer(transfer_yujing);
 	block_copyright();
 </script>
