@@ -54,7 +54,7 @@
 			else if($str_sec[1]=='orange') $ch_route_name = '橘線(北環西線)';
 			else if($str_sec[1]=='blue') $ch_route_name = '藍線(南環線)';
 			else if($str_sec[1]=='green') $ch_route_name = '綠線(高鐵線)';
-			else if($str_sec[1]=='Shanhua') $ch_route_name = '善化線';
+			else if($str_sec[1]=='Shanhua') $ch_route_name = '棕線(善化線)';
 			$ch_name = '南科巡迴巴士'.$ch_route_name;
 			break;
 		default:

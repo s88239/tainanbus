@@ -148,7 +148,7 @@ link_STSP_red = '<a href="../STSP/STSP_red.html" target="_blank">南科紅線</a
 link_STSP_orange = '<a href="../STSP/STSP_orange.html" target="_blank">南科橘線</a>';
 link_STSP_blue = '<a href="../STSP/STSP_blue.html" target="_blank">南科藍線</a>';
 link_STSP_green = '<a href="../STSP/STSP_green.html" target="_blank">南科綠線</a>';
-link_STSP_Shanhua = '<a href="../STSP/STSP_Shanhua.html" target="_blank">南科善化線</a>';
+link_STSP_Shanhua = '<a href="../STSP/STSP_Shanhua.html" target="_blank">南科棕線(善化線)</a>';
 
 transfer_tainan_railway_station = '<tr><th rowspan="8">臺南火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
