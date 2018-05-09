@@ -22,7 +22,7 @@ red_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 red_main_stop_name = ["安平<br />工業區","新光三越<br />新天地","臺南<br />火車站","仁德","歸仁公所","關廟國中","關廟<br />轉運站","龍崎"];
-red_main_stop_time_consume = [0, 15, 30, 55, 65, 70, 75, 80];
+red_main_stop_time_consume = [0, 15, 25, 52, 65, 70, 75, 80];
 red_important_stop = [0, 2, 4, 6, 7]; // 安平工業區, 臺南火車站, 歸仁公所, 關廟轉運站, 龍崎
 start_stop = 0;
 stop_1 = 2; // 臺南火車站
