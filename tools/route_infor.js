@@ -115,7 +115,7 @@ urban_20_route = '南紡購物中心 ─ 安南醫院 ─ 海東國小';
 urban_21_route = '臺南火車站 ─ 鹽行 ─ 永康工業區';
 urban_77_route = '安平原住民文化會館 ─ 南紡購物中心';
 urban_77_1_route = '原住民文化會館 ─ 安平古堡、億載金城<br /><div class="sub_title">安平環線假日公車</div>';
-urban_239_route = '臺南火車站 ─ 太爺 ─ 茄萣 ─ 興達港';
+urban_239_route = '臺南火車站 ─ 太爺 ─ 茄萣';
 
 tourist_33_route = '新營 ─ 故宮南院 ─ 高鐵嘉義站 ─ 關子嶺　<div class="sub_title">關子嶺故宮南院線</div>';
 tourist_88_route = '臺南公園 ─ 觀夕平台　<div class="sub_title">安平線</div>';
