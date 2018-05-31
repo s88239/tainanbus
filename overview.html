@@ -19,9 +19,9 @@ html, body {
 </head>
 <script type="text/javascript">
 function get_button_string(category, file_name, ch_name){
-	var type = (category=='STSP') ? file_name.split('_')[1] : (category=='highway') ? 'tourist' : category;
+	var type = (category=='STSP') ? file_name.split('_')[1] : (category=='highway' || category=='sightseeing') ? 'tourist' : category;
 	if(file_name=='STSP_Shanhua') type = 'brown';
-	var route_infor_str = (category=='urban' || category=='highway' || category=='tourist' || category=='hsr_shuttle') ? (category + '_') : '';
+	var route_infor_str = (category=='urban' || category=='highway' || category=='tourist' || category=='hsr_shuttle' || category=='sightseeing') ? (category + '_') : '';
 	route_infor_str += file_name.replace('-','_') + '_route';
 	line_string = '<tr><td><a href="' + category + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
 	+ ch_name + '</a></td><td>' + eval(route_infor_str).replace('　','<br />') + '</td></tr>';
@@ -65,6 +65,8 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('highway', '8046A', '8046A')
 		+ get_button_string('highway', '8046', '8046')
 		+ get_button_string('highway', '8050', '8050')
+		+ get_button_string('sightseeing', 'eastern', '東環線')
+		+ get_button_string('sightseeing', 'western', '西環線')
 		+ '</table>\
 		<h1 align="center">臺南市區</h1>\
 		<table class="bg_table_overview" align="center">'

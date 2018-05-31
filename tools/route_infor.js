@@ -146,3 +146,6 @@ STSP_red_route = '臺鐵南科站 ─ 台達電 ─ Park 17商場　<div class="
 STSP_orange_route = '臺鐵南科站 ─ 台積電 ─ Park 17商場　<div class="sub_title">南科巡迴巴士北環西線</div>';
 STSP_blue_route = '臺鐵南科站 ─ 聯電 ─ Park 17商場　<div class="sub_title">南科巡迴巴士南環線</div>';
 STSP_Shanhua_route = '臺鐵善化站 ─ 台積電 ─ Park 17商場　<div class="sub_title">南科巡迴巴士善化線</div>';
+
+sightseeing_eastern_route = '臺南火車站 ─ 南紡購物中心 ─ 臺南火車站<br /><div class="sub_title">雙層巴士東環線</div>';
+sightseeing_western_route = '臺南火車站 ─ 安平漁人碼頭 ─ 臺南火車站<br /><div class="sub_title">雙層巴士西環線</div>';

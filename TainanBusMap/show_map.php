@@ -57,6 +57,11 @@
 			else if($str_sec[1]=='Shanhua') $ch_route_name = '棕線(善化線)';
 			$ch_name = '南科巡迴巴士'.$ch_route_name;
 			break;
+		case 'sightseeing':
+			if($str_sec[1]=='eastern') $ch_route_name = '東環線';
+			else if($str_sec[1]=='western') $ch_route_name = '西環線';
+			$ch_name = '臺南雙層巴士'.$ch_route_name;
+			break;
 		default:
 			if(count($str_sec)>3) $ch_name = $str_sec[2].'-'.$str_sec[3].'路'; // e.g. 77-1
 			else $ch_name = $str_sec[2].'路';
