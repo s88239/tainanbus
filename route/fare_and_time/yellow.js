@@ -21,14 +21,14 @@ yellow_fare = [
 [26,26,26],
 [26,26,26,26],
 [26,26,26,26,26],
-[46,40,37,29,26,26],
-[54,49,46,38,32,26,26],
-[70,64,61,53,47,26,26,26],
-[79,74,71,63,57,34,26,26,26],
-[85,80,77,69,63,39,31,26,26,26],
-[98,92,89,81,75,52,43,28,26,26,26],
-[109,103,101,92,87,63,54,39,30,26,26,26],
-[139,134,131,123,117,94,85,70,60,54,42,31,26]
+[45,39,36,29,26,26],
+[53,48,45,38,32,26,26],
+[69,63,60,53,47,26,26,26],
+[78,73,70,63,57,34,26,26,26],
+[84,79,76,69,63,39,31,26,26,26],
+[97,91,88,81,75,52,43,28,26,26,26],
+[108,102,100,92,87,63,54,39,30,26,26,26],
+[139,134,131,124,118,94,86,71,61,55,43,31,26]
 ];
 // format = [time at the start stop] or
 // [time, other] or
@@ -38,15 +38,14 @@ yellow_main_stop_time_consume = [0, 9, 25, 33, 36, 46, 53, 71, 80];
 yellow_important_stop = [0, 2, 4, 8]; // 白河, 新營, 柳營火車站, 麻豆轉運站
 var start_stop = 0; // 白河
 var hsinyin = 2; // 新營
-var skip_stop = 1; // 蘭花園區
 var chimei = 3; // 柳營奇美醫院
-yellow_time_go = [["06:00",['L',skip_stop]],["06:20",start_stop,hsinyin,['L',skip_stop]],["06:30",['L',skip_stop]],["06:45",start_stop,chimei,[skip_stop]],["07:15",start_stop,hsinyin,[skip_stop]],["07:30",['L',skip_stop]],
+yellow_time_go = [["06:00",['L']],["06:20",start_stop,hsinyin,['L']],["06:30",['L']],["06:45",start_stop,chimei],["07:15",start_stop,hsinyin],["07:30",['L']],
 ["08:00",start_stop,hsinyin],["08:30"],["08:50",start_stop,hsinyin,['L']],["09:10",start_stop,hsinyin,['L']],["09:30"],["10:00",start_stop,hsinyin],["10:30",['L']],["11:00",start_stop,hsinyin,['L']],["11:30",['L']],["12:00",start_stop,hsinyin],
 ["12:30",['L']],["13:00",start_stop,hsinyin],["13:30",['L']],["14:00",start_stop,hsinyin,['L']],["14:30"],["15:00",start_stop,hsinyin,['L']],["15:20",start_stop,hsinyin,['H']],["15:30"],["16:00",start_stop,hsinyin,['繞']],["16:30",['<span style="color: red;">L</span>繞']],
-["16:55",start_stop,hsinyin,['<span style="color: red;">L</span>繞']],["17:30",['<span style="color: red;">L</span>繞',skip_stop]],["18:00",['L',skip_stop]],["18:15",start_stop,hsinyin,[skip_stop]],["18:30",start_stop,hsinyin,[skip_stop]],["19:00",[skip_stop]],["20:00",[skip_stop]]
+["16:55",start_stop,hsinyin,['<span style="color: red;">L</span>繞']],["17:30",['<span style="color: red;">L</span>繞']],["18:00",['L']],["18:15",start_stop,hsinyin],["18:30",start_stop,hsinyin],["19:00"],["20:00"]
 ];
-yellow_time_return = [["06:10",hsinyin,start_stop,[skip_stop]],["06:35",hsinyin,start_stop,['L',skip_stop]],["06:50",hsinyin,start_stop,[skip_stop]],["06:00",['繞',skip_stop]],["07:15",hsinyin,start_stop,['<span style="color: red;">L</span>繞',skip_stop]],["07:25",hsinyin,start_stop,['H',skip_stop]],["06:30",[skip_stop,[hsinyin,5]]],["07:55",hsinyin,start_stop],
+yellow_time_return = [["06:10",hsinyin,start_stop],["06:35",hsinyin,start_stop,['L']],["06:50",hsinyin,start_stop],["06:00",['繞']],["07:15",hsinyin,start_stop,['<span style="color: red;">L</span>繞']],["07:25",hsinyin,start_stop,['H']],["06:30",[[hsinyin,5]]],["07:55",hsinyin,start_stop],
 ["07:30",['L',[hsinyin,5]]],["08:55",hsinyin,start_stop],["08:30",['L',[hsinyin,5]]],["09:55",hsinyin,start_stop,['L']],["09:30",['L',[hsinyin,5]]],["10:55",hsinyin,start_stop],["10:30",['L',[hsinyin,5]]],["11:55",hsinyin,start_stop],["11:30",[[hsinyin,5]]],["13:00",hsinyin,start_stop,['L']],
-["12:30",[[hsinyin,5]]],["13:55",hsinyin,start_stop],["13:30",['L',[hsinyin,5]]],["14:55",hsinyin,start_stop,['L']],["14:30",['L',[hsinyin,5]]],["15:55",hsinyin,start_stop,['L']],["16:20",hsinyin,start_stop],["15:30",['L',[hsinyin,5]]],["17:00",hsinyin,start_stop],["16:40",[skip_stop]],
-["17:40",hsinyin,start_stop,[skip_stop]],["17:30",[skip_stop,[hsinyin,5]]],["18:10",['L',skip_stop,[hsinyin,5]]],["19:10",['L',skip_stop,[hsinyin,5]]],["20:00",['L',skip_stop]]
+["12:30",[[hsinyin,5]]],["13:55",hsinyin,start_stop],["13:30",['L',[hsinyin,5]]],["14:55",hsinyin,start_stop,['L']],["14:30",['L',[hsinyin,5]]],["15:55",hsinyin,start_stop,['L']],["16:20",hsinyin,start_stop],["15:30",['L',[hsinyin,5]]],["17:00",hsinyin,start_stop],["16:40"],
+["17:40",hsinyin,start_stop],["17:30",[[hsinyin,5]]],["18:10",['L',[hsinyin,5]]],["19:10",['L',[hsinyin,5]]],["20:00",['L']]
 ];
