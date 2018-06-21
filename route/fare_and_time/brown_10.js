@@ -19,8 +19,8 @@ brown_10_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 brown_10_main_stop_name = ["學甲<br />(民權路)","學甲","港仔尾","一商前","麻豆國中"];
-brown_10_main_stop_time_consume = [0, 2, 25, 33, 40];
+brown_10_main_stop_time_consume = [0, 2, 10, 24, 30];
 brown_10_important_stop = [0, 1, 4]; // 學甲(民權路), 學甲, 麻豆國中
-var skip_stop = 2; // 港仔尾
-brown_10_time_go = [["06:40",[[3,8,4,2]]],["07:00",['L',skip_stop,[3,4,4,2]]],["09:10",['L',skip_stop]],["11:35",['L',skip_stop]],["14:35",['L',skip_stop]],["16:15",['L',skip_stop]],["16:25",[skip_stop]]];
-brown_10_time_return = [["07:40",[skip_stop]],["07:50",['L',skip_stop]],["10:00",['L',skip_stop]],["12:20",['L',skip_stop]],["15:20",['L',skip_stop]],["17:05",['L',skip_stop,[3,2,2,5]]],["17:15",[[3,2,2,8]]]];
+var stop_1 = 2; // 港仔尾
+brown_10_time_go = [["06:40",[[stop_1,2,stop_1+1,3]]],["07:00",['L',[stop_1,2,stop_1+1,3]]],["09:20",['L']],["11:35",['L']],["14:30",['L']],["16:15",['L']],["16:35"]];
+brown_10_time_return = [["07:25"],["07:45",['L']],["10:00",['L']],["12:15",['L']],["15:10",['L']],["17:05",['L',[stop_1+1,4,stop_1,4,stop_1-1,2]]],["17:15",[[stop_1+1,4,stop_1,4]]]];

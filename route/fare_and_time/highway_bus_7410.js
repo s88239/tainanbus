@@ -39,7 +39,7 @@ stop_0 = 0; // 新營
 stop_1 = 4; // 布袋遊客中心
 highway_bus_7410_time_go = [
 ["07:30",stop_0,stop_1],["08:20"],["08:50",['L']],["10:20",stop_0,stop_1],["12:10",stop_0,stop_1],["13:50",stop_0,stop_1],
-["15:10",stop_0,stop_1],["17:05",stop_0,stop_1],["18:00"],["18:50",stop_0,stop_1]
+["15:00",stop_0,stop_1],["17:05",stop_0,stop_1],["18:00"],["18:50",stop_0,stop_1]
 ];
 highway_bus_7410_time_return = [
 ["06:00",stop_1,stop_0],["08:20",stop_1,stop_0],["09:20"],["09:50",['L']],["11:10",stop_1,stop_0],["13:00",stop_1,stop_0],
