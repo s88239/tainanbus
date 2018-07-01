@@ -93,13 +93,6 @@
 		"RouteCategory":1
 	},
 	{
-		"RouteCodeName":"city_bus_17",
-		"RouteName":"17路",
-		"RouteOSMRelation":5420056,
-		"RouteCode":10017,
-		"RouteCategory":1
-	},
-	{
 		"RouteCodeName":"city_bus_18",
 		"RouteName":"18路",
 		"RouteOSMRelation":3966183,
@@ -141,6 +134,13 @@
 		"RouteCode":1803,
 		"RouteCategory":1,
 		"OneWayRoute":true
+	},
+	{
+		"RouteCodeName":"city_bus_77_2",
+		"RouteName":"77-2路",
+		"RouteOSMRelation":5420056,
+		"RouteCode":10017,
+		"RouteCategory":1
 	},
 	{
 		"RouteCodeName":"city_bus_239",

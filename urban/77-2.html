@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '77-2路';
+	route_name_en = 'No.77-2';
+	route_file_name = 'city_bus_77_2';
+	route_type = 'city_bus';
+	route_interval = ['安平漁人碼頭','興達港觀光魚市'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'四方電巴','每小時1班，僅假日行駛','免費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1811&locale=zh_TW');
+	
+	document.write('<div id="wrapper3">\
+	<a name="fare"></a>\
+	<div id="faretable" class="container">\
+		<div class="title">\
+			<h2>大台南公車 ─ ' + route_name + ' 票價表</h2>\
+			<span class="byline">Tainan Bus ' + route_name_en + ', Bus Fare</span>\
+		</div>\
+		<div class="content">\
+			<p>&nbsp;</p>\
+			<h1><font color="red">FREE</font></h1>\
+			<h1>免費</h1>\
+			<p>&nbsp;</p><p>&nbsp;</p>\
+			<h2>77-2路「安平漁人碼頭－興達港觀光魚市」為免費接駁路線！</h2>\
+			<p>&nbsp;</p><p>&nbsp;</p>\
+		</div>\
+	</div>\
+</div>');
+	block_time_schedule('安平漁人碼頭','興達港觀光魚市','<h1><font color="red">僅假日行駛：星期六、日，以及國定假日</font></h1>');
+	block_transfer(transfer_anping_fishermans_wharf + transfer_aboriginal_culture_center);
+	block_copyright();
+</script>
+</body>
+</html>

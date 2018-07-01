@@ -111,13 +111,13 @@ link_city_bus_10 = '<a href="../urban/10.html" target="_blank">10</a>';
 link_city_bus_11 = '<a href="../urban/11.html" target="_blank">11</a>';
 link_city_bus_14 = '<a href="../urban/14.html" target="_blank">14</a>';
 link_city_bus_15 = '<a href="../urban/15.html" target="_blank">15</a>';
-link_city_bus_17 = '<a href="../urban/17.html" target="_blank">17</a>';
 link_city_bus_18 = '<a href="../urban/18.html" target="_blank">18</a>';
 link_city_bus_19 = '<a href="../urban/19.html" target="_blank">19</a>';
 link_city_bus_20 = '<a href="../urban/20.html" target="_blank">20</a>';
 link_city_bus_21 = '<a href="../urban/21.html" target="_blank">21</a>';
 link_city_bus_77 = '<a href="../urban/77.html" target="_blank">77</a>';
 link_city_bus_77_1 = '<a href="../urban/77-1.html" target="_blank">77-1</a>';
+link_city_bus_77_2 = '<a href="../urban/77-2.html" target="_blank">77-2</a>';
 link_city_bus_239 = '<a href="../urban/239.html" target="_blank">239</a>';
 
 link_tour_bus_33 = '<a href="../tourist/33.html" target="_blank">33 <div class="sub_title">關子嶺線</div></a>';
@@ -230,11 +230,17 @@ transfer_taiwan_history_museum = '<tr><th>臺灣歷史博物館</th>\
 
 transfer_aboriginal_culture_center = '<tr><th rowspan="3">原住民文化會館</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
-	<td id="city_bus">' + link_city_bus_17 + '、' + link_city_bus_19 + '、' + link_city_bus_77 + '、' + link_city_bus_77_1 + '</td></tr>\
+	<td id="city_bus">' + link_city_bus_19 + '、' + link_city_bus_77 + '、' + link_city_bus_77_2 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
 	<td id="hsr_shuttle">' + link_hsr_shuttle_H31 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_88 + '</td></tr>';
+
+transfer_anping_fishermans_wharf = '<tr><th rowspan="2">安平漁人碼頭</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
+	<td id="city_bus">' + link_city_bus_77_1 + '、' + link_city_bus_77_2 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_sightseeing_western + '</td></tr>';
 
 transfer_jiali = '<tr><th rowspan="3">佳里站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
