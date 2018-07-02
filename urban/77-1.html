@@ -39,16 +39,20 @@
 				<tr>\
 					<td>首／末班車發車時刻</td>\
 					<td>\
-						往 安平：10:00／19:00\
+						往 安平：11:00／17:00\
 					</td>\
 				</tr>\
 				<tr>\
 					<td>班距</td>\
-					<td>20分鐘一班 僅假日行駛</td>\
+					<td>30分鐘一班 僅假日行駛</td>\
 				</tr>\
 				<tr>\
 					<td>收費方式</td>\
 					<td>免費</td>\
+				</tr>\
+				<tr>\
+					<td>最後修改日期</td>\
+					<td>2018/07/02</td>\
 				</tr>\
 			</table>\
 			<p>　</p>\
@@ -80,19 +84,13 @@
 		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
 	</div>\
 	<div class="content">\
-		<p>&nbsp;</p>\
-		<h2><font color="purple">安平漁人碼頭-&gt;安平古堡-&gt;億載金城-&gt;安平漁人碼頭</font></h2>\
-		<p>&nbsp;</p>\
-		<h1><font color="blue">每20分鐘一班</font></h1>\
-		<h3>發車時間：10:00~19:00</h3>\
-		<p>&nbsp;</p>\
-		<h2><font color="red">僅假日行駛：星期六、日，以及國定假日</font></h2\
-		<p>&nbsp;</p>\
-		<p>&nbsp;</p>\
-		<p>&nbsp;</p>\
+		<h2><font color="purple">安平漁人碼頭→安平古堡→安平漁人碼頭</font></h2>'
+	+ create_time_schedule(city_bus_77_1_main_stop_name, city_bus_77_1_main_stop_time_consume, city_bus_77_1_important_stop, city_bus_77_1_time_go, false)
+	+ TimeScheduleMSG
+	+ '<h2><font color="red">僅假日行駛：星期六、日，以及國定假日</font></h2>\
 	</div>\
 </div>');
-	block_transfer(transfer_aboriginal_culture_center);
+	block_transfer(transfer_anping_fishermans_wharf);
 	block_copyright();
 </script>
 </body>
