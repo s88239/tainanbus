@@ -149,9 +149,9 @@ function get_time(time_str, offset){ // get the time of the stop
 
 function show_time_schedule(type){
 	type = (type=='normal') ? '' : '_'+type;
-	str = '<h2><font color="' + time_schedule_title_color + '">' + route_start_stop + '-&gt;' + route_end_stop + '</font></h2>'
+	str = '<h2><font color="' + time_schedule_title_color + '">' + route_start_stop + ' → ' + route_end_stop + '</font></h2>'
 	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'), eval(route_file_name + '_important_stop'), eval(route_file_name + type + '_time_go'), false)
-	+ '<p>　</p><h2><font color="' + time_schedule_title_color + '">' + route_end_stop + '-&gt;' + route_start_stop + '</font></h2>'
+	+ '<p>　</p><h2><font color="' + time_schedule_title_color + '">' + route_end_stop + ' → ' + route_start_stop + '</font></h2>'
 	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'), eval(route_file_name + '_important_stop'), eval(route_file_name + type + '_time_return'), true);
 	return str;
 }

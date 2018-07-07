@@ -352,10 +352,10 @@ function block_time_schedule(start_stop, end_stop, message){
 		<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus schedule</span>\
 	</div>\
 	<div class="content">\
-		<h2><font color="' + time_schedule_title_color + '">' + start_stop + '-&gt;' + end_stop + '</font></h2>'
+		<h2><font color="' + time_schedule_title_color + '">' + start_stop + ' → ' + end_stop + '</font></h2>'
 	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_go'), false)
 	+ '<p>　</p>\
-		<h2><font color="' + time_schedule_title_color + '">' + end_stop + '-&gt;' + start_stop + '</font></h2>'
+		<h2><font color="' + time_schedule_title_color + '">' + end_stop + ' → ' + start_stop + '</font></h2>'
 	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_return'), true)
 	+ '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
 </div>');

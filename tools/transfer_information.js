@@ -352,12 +352,12 @@ transfer_yongkang = '<tr><th>永康</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green + '、' + link_green_5 + '</td></tr>';
 
-transfer_zuozhen_district_office = '<tr><th>左鎮公所</th>\
+transfer_zuozhen_district_office = '<tr><th>左鎮區公所</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green"><p>' + link_green_12 + '、' + link_green_13 + '</p>'
 	+ link_green + '<font color="#FFFFFF" size="-1">(需步行一站至左鎮站搭乘)</font></td></tr>';
 
-transfer_nanhua_district_office = '<tr><th rowspan="2">南化公所</th>\
+transfer_nanhua_district_office = '<tr><th rowspan="2">南化區公所</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green_12 + '、' + link_green_27 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
@@ -479,7 +479,7 @@ transfer_liouying = '<tr><th>柳營</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow + '、' + link_yellow_1 + '、' + link_yellow_2 + '、' + link_yellow_3 + '</td></tr>';
 
-transfer_shiayin_district_office = '<tr><th rowspan="2">下營公所</th>\
+transfer_shiayin_district_office = '<tr><th rowspan="2">下營區公所</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow + '、' + link_yellow_5 + '、' + link_yellow_20 + '</td>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
