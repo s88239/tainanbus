@@ -7,7 +7,7 @@
 	route_name_en = 'No.166';
 	route_file_name = 'hsr_shuttle_166';
 	route_type = 'hsr_shuttle';
-	route_interval = ['鹽水','高鐵嘉義站','故宮南院'];
+	route_interval = ['鹽水','高鐵嘉義站'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -20,10 +20,10 @@
 <body>
 <script type="text/javascript">
 	block_header();
-	block_route_map(null);
+	block_route_map('<p>166路 嘉義高鐵站-經長庚醫院-鹽水，<span style="color:blue;background-color:white;font-weight:bold;">107.07.01-107.12.31 搭乘只需要1元</span></p><p><img src="http://www.ropobus.com/storage/uploads/image/2018/06/28/9a8c80035a47b2dd0b357f870ab2b0b4.jpg" alt="阿里山客運1元乘車" /></p><p>來源：<a href="http://www.ropobus.com/news_detail?news_id=66" target="_blank">ROPO-阿里山客運公告</a></p>');
 	block_route_info(route_interval,'阿里山客運','','里程計費','http://www.taiwanbus.tw/information.aspx?Lang=Cht&Line=10342');
-	block_fare(10, null);
-	block_time_schedule_diffreturn('鹽水-&gt;故宮南院','高鐵嘉義站-&gt;鹽水','');
+	block_fare(10, '<span style="color:blue;font-size:24px;font-weight:bold;">107.07.01-107.12.31 搭乘只需要1元</span>');
+	block_time_schedule('鹽水','高鐵嘉義站','');
 	block_transfer(transfer_yanshui + transfer_hsr_chiayi_station);
 	block_copyright();
 </script>

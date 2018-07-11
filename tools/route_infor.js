@@ -125,7 +125,7 @@ tourist_7702_route = '嘉義轉運站 ─ 嘉義高鐵站 ─ 北門遊客中心
 
 hsr_shuttle_H31_route = '安億橋 ─ 臺南市政府 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷市府線</div>';
 hsr_shuttle_H62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷奇美線</div>';
-hsr_shuttle_166_route = '鹽水 ─ 高鐵嘉義站 ─ 故宮南院';
+hsr_shuttle_166_route = '鹽水 ─ 故宮南院 ─ 高鐵嘉義站';
 
 highway_8035_route = '南化 ─ 內門 ─ 旗山轉運站';
 highway_8041C_route = '鳳山 ─ 嘉南藥大 ─ 茄萣';
