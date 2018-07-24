@@ -68,7 +68,7 @@
 			break;
 	}
 	if($branch_flag){
-		if( strcmp($route_name, 'yellow_10_1')==0 || strcmp($route_name, 'yellow_12_1')==0 ){
+		if( strcmp($route_name, 'yellow_12_1')==0 ){
 			$route_name = $str_sec[0].'_'.$str_sec[1]; // other branch is merged. e.g. y12-1 is contained in y12
 		}
 		$ch_name = $ch_name.'-'.$str_sec[2];

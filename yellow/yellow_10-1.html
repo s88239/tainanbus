@@ -18,9 +18,20 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1510&locale=zh_TW');
+	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1812&locale=zh_TW');
 	block_fare(0, null);
-	block_time_schedule('白河','檳榔腳','<span style="color: darkblue;">考量本路線道路較為狹窄及為維護人、車安全因素，將以九人座小巴提供行駛服務</span>');
+	document.write('<div id="timetable">\
+	<a name="time"></a>\
+	<div class="title">\
+		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
+	</div>\
+	<div class="content">\
+		<h2><span style="color:#888917;">白河 → 檳榔腳 → 白河</span></h2>'
+	+ create_time_schedule(yellow_10_1_main_stop_name, yellow_10_1_main_stop_time_consume, yellow_10_1_important_stop, yellow_10_1_time_go, false)
+	+ TimeScheduleMSG + '<span style="color: darkblue; font-size: 20px; font-weight: bold;">考量本路線道路較為狹窄及為維護人、車安全因素，將以九人座小巴提供行駛服務</span>\
+	</div>\
+</div>');
 	block_transfer(transfer_baihe + transfer_nianfohui);
 	block_copyright();
 </script>

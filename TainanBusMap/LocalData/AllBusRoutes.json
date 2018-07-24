@@ -709,6 +709,13 @@
 		"RouteCategory":7
 	},
 	{
+		"RouteCodeName":"yellow_10_1",
+		"RouteName":"黃10-1",
+		"RouteOSMRelation":8473130,
+		"RouteCode":1812,
+		"RouteCategory":7
+	},
+	{
 		"RouteCodeName":"yellow_11",
 		"RouteName":"黃11",
 		"RouteOSMRelation":4096850,
