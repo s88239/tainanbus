@@ -27,6 +27,3 @@ var start_stop = 0; // 白河
 var end_stop = 3; // 蓮花公園
 yellow_15_time_go = [["06:45",[end_stop]],["10:50",[end_stop]],["18:35",[end_stop]]];
 yellow_15_time_return = [["06:25",[end_stop]],["07:05",[end_stop]],["11:10",[end_stop]]];
-
-yellow_15_holiday_time_go = [["06:45",[end_stop]],["08:10",start_stop,end_stop],["09:10",start_stop,end_stop],["10:10",start_stop,end_stop],["10:50",[end_stop]],["11:10",start_stop,end_stop],["12:10",start_stop,end_stop],["13:10",start_stop,end_stop],["14:10",start_stop,end_stop],["15:10",start_stop,end_stop],["16:10",start_stop,end_stop],["17:10",start_stop,end_stop],["18:10",start_stop,end_stop],["18:35",[end_stop]]];
-yellow_15_holiday_time_return = [["06:25",[end_stop]],["07:05",[end_stop]],["08:30",end_stop,start_stop],["09:30",end_stop,start_stop],["10:30",end_stop,start_stop],["11:10",[end_stop]],["11:30",end_stop,start_stop],["12:30",end_stop,start_stop],["13:30",end_stop,start_stop],["14:30",end_stop,start_stop],["15:30",end_stop,start_stop],["16:30",end_stop,start_stop],["17:30",end_stop,start_stop],["18:30",end_stop,start_stop]]; 
