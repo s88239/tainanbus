@@ -1,6 +1,6 @@
 MeteredMSG = '<h3><font color="red">刷電子票證(悠遊卡、一卡通)8公里免費</font></h3>';
-CitybusMSG = '<h3><font color="red">台南市民搭乘市區公車刷「市民卡」享有半價($9)優惠，且兩小時內轉乘市區公車免費</font></h3>';
-PromotionMSG = '<h2>使用電子票證時，上下車皆須刷卡</h2><br /><h3><font color="#7F3310">台鐵、公車2小時內轉乘公車減免9元(需使用電子票證，公車轉台鐵無優惠)</font></h3><h3>65歲以上長者刷台南市民卡敬老卡及身障人士刷台南市民卡愛心卡，可享大台南公車全線免費搭乘</h3>';
+CitybusMSG = '<span style="color: red;font-size:20px;font-weight:bold;">台南市民搭乘市區公車(0~99路，33路除外)，並且上、下車都刷市民卡，第1段半價(9元)，當日第2段起免費！</span><br /><span style="color: red;font-size:18px;font-weight:bold;">（本項優惠至107年底止，下車未刷卡時，當日搭乘下一段次仍維持半價9元計費）</span><p></p>';
+PromotionMSG = '<h2>使用電子票證時，上下車皆須刷卡</h2><br /><span style="color:#7F3310;font-size:20px;font-weight:bold;">搭乘台鐵及大台南公車，並且上、下車都刷卡，<br />4小時內轉乘市區公車1段票免費、轉乘幹支線公車8公里免費再折扣9元(需使用電子票證，公車轉台鐵無優惠)</span><p></p><h3>65歲以上長者刷台南市民卡敬老卡及身障人士刷台南市民卡愛心卡，可享大台南公車全線免費搭乘</h3>';
 TimeScheduleMSG = '<p><h2>除了起站為發車時間，其餘站點皆為預估時間，敬請提早候車。</h2></p>';
 W_message = '<font color="#0000FF">W</font>表示僅平日行駛';
 L_message = '<font color="#FF0000">L</font>表示低地板公車';
