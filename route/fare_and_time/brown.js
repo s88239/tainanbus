@@ -7,7 +7,7 @@ brown_interval_stop = [
 ["大莊里","歡雅","松子腳"], // 歡雅
 ["中洲寮","田寮"], // 田寮
 ["大埔路口"], // 大埔路口
-["大豐國小","大埔","大埔橋"], // 大埔
+["大豐國小","大豐南天宮","大埔橋"], // 大埔
 ["學甲寮","平西里","飯店里","麻油寮"], // 學甲寮, 麻油寮
 ["宅子港","德安寮"], // 宅子港
 ["學甲國中","學甲郵局","學甲","學甲區公所","東寮"], // 學甲
@@ -34,12 +34,12 @@ brown_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-brown_main_stop_name = ["新營","民治<br />市政中心","統聯<br />客運","鹽水","歡雅","大埔","麻油寮","學甲<br />區公所","奇美<br />佳里分院","佳里"];
+brown_main_stop_name = ["新營","民治<br />市政中心","統聯<br />客運","鹽水","歡雅","大豐<br />南天宮","麻油寮","學甲<br />區公所","奇美<br />佳里分院","佳里"];
 brown_main_stop_time_consume = [0, 3, 8, 18, 26, 33, 33, 43, 53, 60];
 brown_important_stop = [0, 3, 7, 9]; // 新營, 鹽水, 學甲區公所, 佳里
 var start_stop = 0; // 新營
 var end_stop = 3; // 鹽水
-var skip_stop_1 = 5; // 大埔
+var skip_stop_1 = 5; // 大豐南天宮
 var skip_stop_2 = 6; // 麻油寮
 var end_stop_2 = 7; // 學甲區公所
 brown_time_go = [["05:50",start_stop,end_stop_2,[skip_stop_1]],["06:00",start_stop,end_stop,['L',[end_stop,2]]],["06:05",[skip_stop_2,'L']],["06:10",start_stop,end_stop_2,[skip_stop_1]],["06:35",[skip_stop_1,'L']],["07:05",[skip_stop_2]],["07:35",[skip_stop_2]],["08:05",[skip_stop_1]],["08:35",[skip_stop_2]],["09:05",[skip_stop_2]],["09:35",[skip_stop_2,'L']],
