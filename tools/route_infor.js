@@ -86,6 +86,7 @@ yellow_10_route = '後壁 ─ 白河 ─ 六重溪';
 yellow_10_1_route = '白河 ─ 六重溪 ─ 檳榔腳';
 yellow_11_route = '白河 ─ 東山 ─ 青山';
 yellow_11_1_route = '白河 ─ 東山 ─ 李子園';
+yellow_11_2_route = '白河 ─ 東山 ─ 碧蓮寺';
 yellow_12_route = '白河 ─ 關子嶺';
 yellow_12_1_route = '白河 ─ 虎山里';
 yellow_12_2_route = '關子嶺 ─ 水火同源 ─ 關子嶺<br /><div class="sub_title">關子嶺假日環狀公車</div>';

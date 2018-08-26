@@ -89,6 +89,7 @@ link_yellow_10 = '<a href="../yellow/yellow_10.html" target="_blank">黃10</a>';
 link_yellow_10_1 = '<a href="../yellow/yellow_10-1.html" target="_blank">黃10-1</a>';
 link_yellow_11 = '<a href="../yellow/yellow_11.html" target="_blank">黃11</a>';
 link_yellow_11_1 = '<a href="../yellow/yellow_11-1.html" target="_blank">黃11-1</a>';
+link_yellow_11_2 = '<a href="../yellow/yellow_11-2.html" target="_blank">黃11-2</a>';
 link_yellow_12 = '<a href="../yellow/yellow_12.html" target="_blank">黃12</a>';
 link_yellow_12_1 = '<a href="../yellow/yellow_12-1.html" target="_blank">黃12-1</a>';
 link_yellow_12_2 = '<a href="../yellow/yellow_12-2.html" target="_blank">關子嶺假日公車</a>';
@@ -433,8 +434,8 @@ transfer_annan_hospital = '<tr><th rowspan="2">安南醫院</th>\
 transfer_baihe = '<tr><th rowspan="2">白河站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_6_1 + '、' + link_yellow_10 + '、' + link_yellow_10_1 + '、</p>\
-	<p>' + link_yellow_11 + '、' + link_yellow_11_1 + '、' + link_yellow_12 + '、' + link_yellow_12_1 + '、</p><p>'
-	+ link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、' + link_yellow_15 + '、</p>' + link_yellow_16 + '</td></tr>\
+	<p>' + link_yellow_11 + '、' + link_yellow_11_1 + '、' + link_yellow_11_2 + '、' + link_yellow_12 + '、</p><p>'
+	+ link_yellow_12_1 + '、' + link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、</p>' + link_yellow_15 + '、' + link_yellow_16 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>';
 
