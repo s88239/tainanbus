@@ -52,7 +52,7 @@ red_13_route = '關廟 ─ 阿蓮';
 red_14_route = '關廟 ─ 高鐵臺南站 ─ 長榮大學';
 
 brown_route = '新營 ─ 鹽水 ─ 學甲 ─ 佳里';
-brown_1_route = '新營 ─ 鹽水 ─ 南鯤鯓 ─ 雙春';
+brown_1_route = '新營 ─ 鹽水 ─ 南鯤鯓 ─ 雙春、北門';
 brown_2_route = '新營 ─ 鹽水 ─ 下中';
 brown_3_route = '新營 ─ 鹽水 ─ 南港里';
 brown_3_1_route = '新營 ─ 鐵線里';
