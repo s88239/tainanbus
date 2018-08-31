@@ -3,7 +3,7 @@ yellow_7_interval_stop = [ // 2018.07.03 checked
 ["新營站","興業里","圓環(第一銀行)","文化中心","新營區公所","臺南市農會"], // 新營
 ["中營里","東山中路","頂窩","東營"], // 頂窩
 ["北勢寮","聖賢國小"], // 北勢寮
-["東河","吉貝耍","枋子林"], // 東河
+["東河","吉貝耍","枋子林","崁下寮","水雲天后宮","牛肉崎","雲天宮"], // 東河
 ["北馬"], // 北馬
 ["東山國中","東山國小","北東山","木柵","代天宮","許秀才","東山","嘉東"], // 東山
 ["凹子腳","大客","下庄","科里"], // 大客
@@ -40,63 +40,72 @@ yellow_7_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_7_main_stop_name = ["新營","東河","吉貝耍","北東山","許秀才","東山","斑花橋","東原","青山","仙公廟<br /><font color=\"red\">(假日延駛)</font>"];
-yellow_7_main_stop_time_consume = [0, 18, 19, 26, 30, 28, 39, 45, 50, 70];
-yellow_7_important_stop = [0, 5, 8, 9]; // 新營, 東山, 青山, 仙公廟
+yellow_7_main_stop_name = ["新營","東河","吉貝耍","牛肉崎","北東山","許秀才","東山","斑花橋","東原","青山","仙公廟<br /><font color=\"red\">(假日延駛)</font>"];
+yellow_7_main_stop_time_consume = [0, 18, 19, 24, 26, 30, 28, 39, 45, 50, 70];
+yellow_7_important_stop = [0, 6, 9, 10]; // 新營, 東山, 青山, 仙公廟
 start_stop = 0; // 新營
-end_stop = 8; // 青山
-end_stop_2 = 5; // 東山
+end_stop = 9; // 青山
+end_stop_2 = 6; // 東山
 skip_stop_1 = 2; // 吉貝耍
-skip_stop_2 = 4; // 許秀才
-yellow_7_time_go = [["05:45",start_stop,end_stop_2,[skip_stop_1,skip_stop_2,[start_stop+1,-3,start_stop+3,-1,end_stop_2,1]]],
-["06:55",start_stop,end_stop,[skip_stop_1,skip_stop_2,[start_stop+1,2,start_stop+3,2,end_stop,1]]],
-["08:20",start_stop,end_stop,[skip_stop_2,[start_stop+1,3,start_stop+3,3]]],
-["09:30",start_stop,end_stop,[skip_stop_1,skip_stop_2,[end_stop-1,-2]]],
-["10:40",start_stop,end_stop,[skip_stop_2]],
-["11:50",start_stop,end_stop,[skip_stop_1,[skip_stop_2,-1,skip_stop_2+1,7,end_stop_2+1,-3]]],
-["12:50",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
-["14:20",start_stop,end_stop,[skip_stop_1,skip_stop_2,[end_stop_2+1,-2,end_stop,-1]]],
-["15:35",start_stop,end_stop,[skip_stop_1,skip_stop_2,[start_stop+1,-1,start_stop+3,-2,end_stop_2,1]]],
-["16:30",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
-["17:30",start_stop,end_stop,[[skip_stop_2+1,8]]],
-["18:40",start_stop,end_stop,[skip_stop_1,skip_stop_2,[end_stop_2+1,-2]]]];
-yellow_7_time_return = [["06:10",end_stop_2,start_stop,[skip_stop_1,skip_stop_2,[start_stop+3,1,start_stop,-4]]],
-["05:50",end_stop,start_stop,[[skip_stop_2,6,skip_stop_2-1,2]]],
-["07:55",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
-["09:30",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
-["10:25",end_stop,start_stop,[skip_stop_2,[end_stop_2,-2,start_stop,2]]],
-["11:35",end_stop,start_stop,[skip_stop_1,skip_stop_2,[end_stop_2,-1,start_stop,1]]],
-["12:55",end_stop,start_stop,[skip_stop_2]],
-["13:45",end_stop,start_stop,[skip_stop_1,skip_stop_2,[end_stop-1,-1,end_stop_2,-3,start_stop+3,-1,start_stop+1,1,start_stop,-1]]],
-["15:15",end_stop,start_stop,[skip_stop_1,skip_stop_2,[end_stop_2,-2,start_stop,2]]],
-["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_2,[end_stop_2,-2,start_stop+1,-1,start_stop,-2]]],
-["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
-["18:45",end_stop,start_stop,[skip_stop_1,skip_stop_2,[end_stop_2,-3,start_stop+1,-1,start_stop,-1]]]];
+skip_stop_beef = 3; // 牛肉崎
+skip_stop_2 = 5; // 許秀才
+yellow_7_time_go = [["05:45",start_stop,end_stop_2,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-3,start_stop+3,-1,end_stop_2,1]]],
+["06:55",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,2,start_stop+3,2,end_stop,1]]],
+["08:20",start_stop,end_stop,[skip_stop_beef,skip_stop_2,[start_stop+1,3,start_stop+3,3]]],
+["08:55",start_stop,end_stop_2,[skip_stop_2,[start_stop+1,-1,skip_stop_beef,1,skip_stop_beef+1,17]]],
+["09:30",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop-1,-2]]],
+["10:40",start_stop,end_stop,[skip_stop_beef,skip_stop_2]],
+["11:50",start_stop,end_stop,[skip_stop_1,skip_stop_beef,[skip_stop_2,-1,skip_stop_2+1,7,end_stop_2+1,-3]]],
+["12:30",start_stop,end_stop_2,[skip_stop_2,[start_stop+1,-1,skip_stop_beef,1,skip_stop_beef+1,17]]],
+["12:50",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["14:20",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2+1,-2,end_stop,-1]]],
+["15:35",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-1,start_stop+3,-2,end_stop_2,1]]],
+["16:30",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["17:30",start_stop,end_stop,[skip_stop_beef,[skip_stop_2+1,8]]],
+["18:40",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2+1,-2]]]];
+yellow_7_time_return = [["06:10",end_stop_2,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+3,1,start_stop,-4]]],
+["05:50",end_stop,start_stop,[skip_stop_beef,[skip_stop_2,6,skip_stop_2-1,2]]],
+["07:55",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["09:45",end_stop_2,start_stop,[skip_stop_2,[skip_stop_beef,17,skip_stop_beef-1,1,start_stop,-1]]],
+["09:30",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["10:25",end_stop,start_stop,[skip_stop_beef,skip_stop_2,[end_stop_2,-2,start_stop,2]]],
+["11:35",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2,-1,start_stop,1]]],
+["12:55",end_stop,start_stop,[skip_stop_beef,skip_stop_2]],
+["13:20",end_stop_2,start_stop,[skip_stop_2,[skip_stop_beef,17,skip_stop_beef-1,1,start_stop,-1]]],
+["13:45",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop-1,-1,end_stop_2,-3,start_stop+3,-1,start_stop+1,1,start_stop,-1]]],
+["15:15",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2,-2,start_stop,2]]],
+["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2,-2,start_stop+1,-1,start_stop,-2]]],
+["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["18:45",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2,-3,start_stop+1,-1,start_stop,-1]]]];
 
 // holiday schedule
-yellow_7_holiday_time_go = [["05:45",start_stop,end_stop_2,[skip_stop_1,skip_stop_2,[start_stop+1,-3,start_stop+3,-1,end_stop_2,1]]],
-["06:55",[skip_stop_1,skip_stop_2,[start_stop+1,2,start_stop+3,2,end_stop,1,end_stop+1,-5]]],
-["07:15",[skip_stop_1,skip_stop_2]],
-["08:20",start_stop,end_stop,[skip_stop_2,[start_stop+1,3,start_stop+3,3]]],
-["09:30",start_stop,end_stop,[skip_stop_1,skip_stop_2,[end_stop-1,-2]]],
-["10:40",[skip_stop_2]],
-["11:50",[skip_stop_1,[skip_stop_2,-1,skip_stop_2+1,7,end_stop_2+1,-3,end_stop,-3]]],
-["12:50",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
-["14:20",[skip_stop_1,skip_stop_2,[end_stop_2+1,-2,end_stop,-1,end_stop+1,3]]],
-["15:35",start_stop,end_stop,[skip_stop_1,skip_stop_2,[start_stop+1,-1,start_stop+3,-2,end_stop_2,1]]],
-["16:30",start_stop,end_stop,[skip_stop_1,skip_stop_2]],
-["17:30",start_stop,end_stop,[[skip_stop_2+1,8]]],
-["18:40",start_stop,end_stop,[skip_stop_1,skip_stop_2,[end_stop_2+1,-2]]]];
-yellow_7_holiday_time_return = [["06:10",end_stop_2,start_stop,[skip_stop_1,skip_stop_2,[start_stop+3,1,start_stop,-4]]],
-["05:50",end_stop,start_stop,[[skip_stop_2,6,skip_stop_2-1,2]]],
-["08:10",[skip_stop_1,skip_stop_2]],
-["08:30",[skip_stop_1,skip_stop_2]],
-["09:30",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
-["10:25",end_stop,start_stop,[skip_stop_2,[end_stop_2,-2,start_stop,2]]],
-["11:55",[skip_stop_1,skip_stop_2,[end_stop_2,-2,start_stop,2]]],
-["13:05",[skip_stop_2,[end_stop,-4,start_stop+1,-1]]],
-["13:45",end_stop,start_stop,[skip_stop_1,skip_stop_2,[end_stop-1,-1,end_stop_2,-3,start_stop+3,-1,start_stop+1,1,start_stop,-1]]],
-["15:35",[skip_stop_1,skip_stop_2]],
-["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_2,[end_stop_2,-2,start_stop+1,-1,start_stop,-2]]],
-["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_2]],
-["18:45",end_stop,start_stop,[skip_stop_1,skip_stop_2,[end_stop_2,-3,start_stop+1,-1,start_stop,-1]]]];
+yellow_7_holiday_time_go = [["05:45",start_stop,end_stop_2,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-3,start_stop+3,-1,end_stop_2,1]]],
+["06:55",[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,2,start_stop+3,2,end_stop,1,end_stop+1,-5]]],
+["07:15",[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["08:20",start_stop,end_stop,[skip_stop_beef,skip_stop_2,[start_stop+1,3,start_stop+3,3]]],
+["08:55",start_stop,end_stop_2,[skip_stop_2,[start_stop+1,-1,skip_stop_beef,1,skip_stop_beef+1,17]]],
+["09:30",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop-1,-2]]],
+["10:40",[skip_stop_beef,skip_stop_2]],
+["11:50",[skip_stop_1,skip_stop_beef,[skip_stop_2,-1,skip_stop_2+1,7,end_stop_2+1,-3,end_stop,-3]]],
+["12:30",start_stop,end_stop_2,[skip_stop_2,[start_stop+1,-1,skip_stop_beef,1,skip_stop_beef+1,17]]],
+["12:50",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["14:20",[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2+1,-2,end_stop,-1,end_stop+1,3]]],
+["15:35",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-1,start_stop+3,-2,end_stop_2,1]]],
+["16:30",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["17:30",start_stop,end_stop,[skip_stop_beef,[skip_stop_2+1,8]]],
+["18:40",start_stop,end_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2+1,-2]]]];
+yellow_7_holiday_time_return = [["06:10",end_stop_2,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+3,1,start_stop,-4]]],
+["05:50",end_stop,start_stop,[skip_stop_beef,[skip_stop_2,6,skip_stop_2-1,2]]],
+["08:10",[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["08:30",[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["09:45",end_stop_2,start_stop,[skip_stop_2,[skip_stop_beef,17,skip_stop_beef-1,1,start_stop,-1]]],
+["09:30",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["10:25",end_stop,start_stop,[skip_stop_beef,skip_stop_2,[end_stop_2,-2,start_stop,2]]],
+["11:55",[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2,-2,start_stop,2]]],
+["13:20",end_stop_2,start_stop,[skip_stop_2,[skip_stop_beef,17,skip_stop_beef-1,1,start_stop,-1]]],
+["13:05",[skip_stop_beef,skip_stop_2,[end_stop,-4,start_stop+1,-1]]],
+["13:45",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop-1,-1,end_stop_2,-3,start_stop+3,-1,start_stop+1,1,start_stop,-1]]],
+["15:35",[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["16:35",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2,-2,start_stop+1,-1,start_stop,-2]]],
+["17:25",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["18:45",end_stop,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[end_stop_2,-3,start_stop+1,-1,start_stop,-1]]]];
