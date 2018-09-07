@@ -419,11 +419,13 @@ transfer_liujia = '<tr><th rowspan="2">六甲</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_1 + '、' + link_yellow_2 + '、' + link_yellow_4 + '、' + link_yellow_16 + '</td></tr>';
 
-transfer_longtien_railway_station = '<tr><th rowspan="2">隆田火車站</th>\
+transfer_longtien_railway_station = '<tr><th rowspan="3">隆田火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵隆田站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange_10 + '、' + link_orange_10_1 + '</td></tr>';
+	<td id="orange">' + link_orange_10 + '、' + link_orange_10_1 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
+	<td id="yellow">' + link_yellow_16 + '</td></tr>';
 
 transfer_annan_hospital = '<tr><th rowspan="2">安南醫院</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\

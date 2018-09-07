@@ -7,7 +7,7 @@
 	route_name_en = 'Yellow 16';
 	route_file_name = 'yellow_16';
 	route_type = 'yellow';
-	route_interval = ['白河','東山','六甲'];
+	route_interval = ['白河','東山','隆田火車站'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -20,8 +20,8 @@
 	block_route_map(null);
 	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1516&locale=zh_TW');
 	block_fare(0, null);
-	block_time_schedule('白河商工','六甲','');
-	block_transfer(transfer_baihe + transfer_liujia);
+	block_time_schedule('白河商工','隆田火車站','');
+	block_transfer(transfer_baihe + transfer_liujia + transfer_longtien_railway_station);
 	block_copyright();
 </script>
 </body>
