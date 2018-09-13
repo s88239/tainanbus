@@ -26,5 +26,5 @@ yellow_11_2_fare = [
 yellow_11_2_main_stop_name = ["白河站","東山","西東原","南勢里<br />活動中心",'<span style="font-family:新細明體;">碧蓮寺</span>'];
 yellow_11_2_main_stop_time_consume = [0, 5, 20, 26, 32];
 yellow_11_2_important_stop = [0, 1, 4]; // 白河站河, 東山, 碧蓮寺
-yellow_11_2_time_go = [["08:10"],["11:30"],["14:40"]];
-yellow_11_2_time_return = [["08:50"],["12:10"],["15:20"]];
+yellow_11_2_time_go = [["06:20"],["08:10"],["14:40"],["16:45"]];
+yellow_11_2_time_return = [["07:00"],["08:50"],["15:20"],["17:25"]];
