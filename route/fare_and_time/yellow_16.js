@@ -31,7 +31,13 @@ yellow_16_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 yellow_16_main_stop_name = ["白河商工","白河站","東山","北馬","吉貝耍","山仔腳","旭山里","瓦窯<br />(柳營)","果毅後","六甲","二鎮","隆田<br />火車站"];
-yellow_16_main_stop_time_consume = [0, 5, 10, 14, 17, 22, 23, 24, 26, 36, 43, 51];
+yellow_16_main_stop_time_consume = [0, 5, 10, 13, 15, 19, 21, 23, 25, 35, 43, 51];
 yellow_16_important_stop = [0, 1, 2, 6, 9, 11]; // 白河商工, 白河站, 東山, 旭山里, 六甲, 隆田火車站
-yellow_16_time_go = [["05:55"],["16:00"],["17:00"]];
-yellow_16_time_return = [["06:50"],["16:55"],["17:55"]];
+var Baihe = 1; // 白河站
+var Dongshan = 2; // 東山
+var Syushan_Vil = 6; // 旭山里
+var Guoyihou = 8; // 果毅後
+var Lioujia = 9; // 六甲
+var Longtian_Train_Station = 11; // 隆田火車站
+yellow_16_time_go = [["05:55"],["16:00",[[Baihe,1,Dongshan,1,Dongshan+1,1,Guoyihou,1,Lioujia,2,Longtian_Train_Station,1]]],["17:00",[[Dongshan,1,Dongshan+1,1,Dongshan+3,-1,Lioujia,2]]]];
+yellow_16_time_return = [["06:50",[[Guoyihou,2,Syushan_Vil+1,1,Syushan_Vil,-1,Syushan_Vil-1,1,Baihe,1]]],["17:05",[[Longtian_Train_Station-1,2,Guoyihou,2,Syushan_Vil+1,1,Syushan_Vil-1,1,Syushan_Vil-2,-1,Dongshan,1,Baihe,1]]],["18:00",[[Longtian_Train_Station-1,1,Lioujia,-1,Baihe,1]]]];
