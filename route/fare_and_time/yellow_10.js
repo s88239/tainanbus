@@ -34,11 +34,12 @@ yellow_10_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_10_main_stop_name = ["泰安宮","後壁<br />火車站","土溝里","白河國中","白河","大林","台影<br />文化城","六重溪","鎮安宮"];
+yellow_10_main_stop_name = ["泰安宮","後壁<br />火車站","土溝里","白河國中","白河站","大林","台影<br />文化城","六重溪","鎮安宮"];
 yellow_10_main_stop_time_consume = [0, 5, 13, 20, 25, 33, 40, 45, 50];
-yellow_10_important_stop = [1, 4, 6]; // 後壁火車站, 白河, 台影文化城
-skip_stop = 3; // 白河國中
-stop_1 = 4; // 白河
-end_stop = 8; // 鎮安宮
-yellow_10_time_go = [["07:20",[skip_stop]],["10:00",[skip_stop]],["13:30",[skip_stop]],["15:40",[skip_stop]],["17:00",skip_stop,end_stop],["17:25",[[skip_stop,5]]]];
-yellow_10_time_return = [["06:15",[[skip_stop-1,5]]],["08:15",[skip_stop]],["11:00",[skip_stop]],["14:30",[skip_stop]],["16:30",[skip_stop]],["17:30",end_stop,stop_1]];
+yellow_10_important_stop = [1, 4, 8]; // 後壁火車站, 白河站, 鎮安宮
+var Houbi_Train_Station = 1; // 後壁火車站
+var Baihe_Junior_High_School = 3; // 白河國中
+var Baihe = 4; // 白河站
+var Jhen_an_Temple = 8; // 鎮安宮
+yellow_10_time_go = [["07:30",[Baihe_Junior_High_School]],["10:00",[Baihe_Junior_High_School]],["13:40",[Baihe_Junior_High_School]],["15:40",[Baihe_Junior_High_School]],["16:20",Houbi_Train_Station,Baihe,[Baihe_Junior_High_School]],["17:00",Baihe_Junior_High_School,Jhen_an_Temple],["17:25",[[Baihe_Junior_High_School,5]]]];
+yellow_10_time_return = [["06:15",[[Baihe_Junior_High_School-1,5]]],["08:20",[Baihe_Junior_High_School]],["10:55",[Baihe_Junior_High_School]],["14:30",[Baihe_Junior_High_School]],["15:55",Baihe,Houbi_Train_Station,[Baihe_Junior_High_School]],["16:30",[Baihe_Junior_High_School]],["17:30",Jhen_an_Temple,Baihe]];
