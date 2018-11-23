@@ -39,5 +39,5 @@ var Syushan_Vil = 6; // 旭山里
 var Guoyihou = 8; // 果毅後
 var Lioujia = 9; // 六甲
 var Longtian_Train_Station = 11; // 隆田火車站
-yellow_16_time_go = [["05:55"],["16:00",[[Baihe,1,Dongshan,1,Dongshan+1,1,Guoyihou,1,Lioujia,2,Longtian_Train_Station,1]]],["17:00",[[Dongshan,1,Dongshan+1,1,Dongshan+3,-1,Lioujia,2]]]];
-yellow_16_time_return = [["06:50",[[Guoyihou,2,Syushan_Vil+1,1,Syushan_Vil,-1,Syushan_Vil-1,1,Baihe,1]]],["17:05",[[Longtian_Train_Station-1,2,Guoyihou,2,Syushan_Vil+1,1,Syushan_Vil-1,1,Syushan_Vil-2,-1,Dongshan,1,Baihe,1]]],["18:00",[[Longtian_Train_Station-1,1,Lioujia,-1,Baihe,1]]]];
+yellow_16_time_go = [["05:55"],["16:00",[[Baihe,1,Dongshan,1,Dongshan+1,1,Guoyihou,1,Lioujia,2,Longtian_Train_Station,1]]],["17:05",[[Dongshan,1,Dongshan+1,1,Dongshan+3,-1,Lioujia,2,Longtian_Train_Station,1]]]];
+yellow_16_time_return = [["06:50",[[Guoyihou,2,Syushan_Vil+1,1,Syushan_Vil,-1,Syushan_Vil-1,1,Baihe,1]]],["17:05",[[Longtian_Train_Station-1,2,Guoyihou,2,Syushan_Vil+1,1,Syushan_Vil-1,1,Syushan_Vil-2,-1,Dongshan,1,Baihe,1]]],["18:05",[[Longtian_Train_Station-1,1,Lioujia,-1,Baihe,1]]]];

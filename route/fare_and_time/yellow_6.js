@@ -26,10 +26,10 @@ yellow_6_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_6_main_stop_name = ["新營","新營<br />區公所","埤寮","竹新里","仕安里","鎮安堂","菁寮","白沙屯","後壁<br />火車站","後壁<br />區公所"];
+yellow_6_main_stop_name = ["新營站","新營<br />區公所","埤寮","竹新里","仕安里","鎮安堂","菁寮","白沙屯","後壁<br />火車站","後壁<br />區公所"];
 yellow_6_main_stop_time_consume = [0, 5, 10, 13, 13, 16, 17, 21, 34, 34];
-yellow_6_important_stop = [0, 6, 8]; // 新營, 菁寮, 後壁火車站
-var start_stop = 0; // 新營
+yellow_6_important_stop = [0, 6, 8]; // 新營站, 菁寮, 後壁火車站
+var start_stop = 0; // 新營站
 var skip_stop = 3; // 竹新里
 var skip_stop_2 = 5; // 鎮安堂
 var end_stop = 7; // 白沙屯
@@ -37,15 +37,15 @@ var houbi_train_station = 8; // 後壁火車站
 yellow_6_time_go = [["05:50",start_stop,end_stop,[skip_stop,skip_stop_2,[start_stop+1,-3,skip_stop_2,1]]],["06:45",start_stop,end_stop,[skip_stop,skip_stop_2]],
 ["07:50",start_stop,houbi_train_station,['繞',[skip_stop+1,12,skip_stop_2+1,2]]],["11:00",start_stop,houbi_train_station,['繞',[skip_stop+1,12,skip_stop_2+1,2]]],
 ["13:05",start_stop,houbi_train_station,['繞',[skip_stop+1,12,skip_stop_2+1,2]]],["15:20",start_stop,houbi_train_station,[skip_stop,skip_stop_2]],
-["17:40",start_stop,houbi_train_station,[skip_stop,skip_stop_2,[start_stop+2,4,skip_stop_2,1,end_stop,1]]]];
+["17:45",start_stop,houbi_train_station,[skip_stop,skip_stop_2,[start_stop+2,4,skip_stop_2,2,end_stop,1,houbi_train_station,-1]]]];
 yellow_6_time_return = [["06:15",end_stop,start_stop,[skip_stop,skip_stop_2,[skip_stop_2,-1,start_stop,5]]],["07:10",end_stop,start_stop,[skip_stop,skip_stop_2,[skip_stop_2,1,start_stop,3]]],
 ["08:45",['繞',[end_stop,-1,skip_stop_2,2,skip_stop,12,start_stop,2]]],["11:55",['繞',[end_stop,-1,skip_stop_2,2,skip_stop,12]]],["14:00",['繞',[end_stop,-1,skip_stop_2,2,skip_stop,12,start_stop,2]]],
-["16:05",[skip_stop,skip_stop_2,[end_stop,-1,start_stop,4]]],["18:30",[skip_stop,skip_stop_2,[end_stop,-2,start_stop,2]]]];
+["16:05",[skip_stop,skip_stop_2,[end_stop,-1,start_stop,4]]],["18:45",[skip_stop,skip_stop_2,[end_stop,-3,end_stop-1,1,start_stop,3]]]];
 // holiday schedule
 yellow_6_holiday_time_go = [["05:50",start_stop,end_stop,[skip_stop,skip_stop_2,[start_stop+1,-3,skip_stop_2,1]]],["06:45",start_stop,end_stop,[skip_stop,skip_stop_2]],
 ["07:50",start_stop,houbi_train_station,[skip_stop,skip_stop_2]],["11:00",start_stop,houbi_train_station,[skip_stop,skip_stop_2]],
 ["13:05",start_stop,houbi_train_station,[skip_stop,skip_stop_2]],["15:20",start_stop,houbi_train_station,[skip_stop,skip_stop_2]],
-["17:40",start_stop,houbi_train_station,[skip_stop,skip_stop_2,[start_stop+2,4,skip_stop_2,1,end_stop,1]]]];
+["17:45",start_stop,houbi_train_station,[skip_stop,skip_stop_2,[start_stop+2,4,skip_stop_2,2,end_stop,1,houbi_train_station,-1]]]];
 yellow_6_holiday_time_return = [["06:15",end_stop,start_stop,[skip_stop,skip_stop_2,[skip_stop_2,-1,start_stop,5]]],["07:10",end_stop,start_stop,[skip_stop,skip_stop_2,[skip_stop_2,1,start_stop,3]]],
 ["08:35",[skip_stop,skip_stop_2,[end_stop,-1,skip_stop_2,1,start_stop,2]]],["11:45",[skip_stop,skip_stop_2,[end_stop,-1,skip_stop_2,1,start_stop,2]]],["13:50",[skip_stop,skip_stop_2,[end_stop,-1,skip_stop_2,1,start_stop,2]]],
-["16:05",[skip_stop,skip_stop_2,[end_stop,-1,start_stop,4]]],["18:30",[skip_stop,skip_stop_2,[end_stop,-2,start_stop,2]]]];
+["16:05",[skip_stop,skip_stop_2,[end_stop,-1,start_stop,4]]],["18:45",[skip_stop,skip_stop_2,[end_stop,-3,end_stop-1,1,start_stop,3]]]];
