@@ -1,9 +1,9 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_6_main_stop_name = ["仁德<br />轉運站","虎尾寮<br />重劃區","南紡購物中<br />心(裕農路)","東門<br />國宅","臺南<br />一中","臺南<br />火車站","延平<br />郡王祠","永華市政中<br />心(府前路)","鹽埕<br />國宅","新興<br />國宅","龍崗<br />國小"];
-city_bus_6_main_stop_time_consume = [0, 5, 13, 23, 30, 35, 41, 50, 65, 70, 75];
-city_bus_6_important_stop = [0, 2, 5, 7, 9]; // 仁德轉運站, 南紡購物中心(裕農路), 臺南火車站, 永華市政中心(府前路), 新興國宅
+city_bus_6_main_stop_name = ["仁德<br />轉運站","虎尾寮<br />重劃區","南紡購物中<br />心(裕農路)","東門<br />國宅","臺南<br />一中","臺南<br />火車站","延平<br />郡王祠","臺南市<br />美術館2館","永華市政中<br />心(府前路)","鹽埕<br />國宅","新興<br />國宅","龍崗<br />國小"];
+city_bus_6_main_stop_time_consume = [0, 5, 13, 23, 30, 35, 41, 42, 50, 65, 70, 75];
+city_bus_6_important_stop = [0, 2, 5, 8, 10]; // 仁德轉運站, 南紡購物中心(裕農路), 臺南火車站, 永華市政中心(府前路), 新興國宅
 var start_stop = 0;
 var end_stop = 9;
 var tsmall = 2;

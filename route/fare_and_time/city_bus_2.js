@@ -1,7 +1,7 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_2_main_stop_name = ["崑山<br />科大","復華里","四份子","臺南<br />火車站","孔廟(台灣<br />文學館)","新光三越<br />新天地","安平<br />古堡","崇義社區","白鷺灣<br />社區","四草<br /><span style='color: blue;'>(平日延駛)</span>","億載<br />金城","三鯤鯓"];
+city_bus_2_main_stop_name = ["崑山<br />科大","復華里","四份子","臺南<br />火車站","孔廟(台灣文<br />學館、臺南市<br />美術館1館)","新光三越<br />新天地","安平<br />古堡","崇義社區","白鷺灣<br />社區","四草<br /><span style='color: blue;'>(平日延駛)</span>","億載<br />金城","三鯤鯓"];
 city_bus_2_main_stop_time_consume = [0, 5, 5, 20, 27, 35, 50, 53, 55, 62, 75, 80];
 city_bus_2_important_stop = [0, 3, 6, 8]; // 崑山科大, 臺南火車站, 安平古堡, 白鷺灣社區
 stop_1 = 0; // 崑山科技大學
