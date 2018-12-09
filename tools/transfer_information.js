@@ -120,6 +120,7 @@ link_city_bus_77 = '<a href="../urban/77.html" target="_blank">77</a>';
 link_city_bus_77_1 = '<a href="../urban/77-1.html" target="_blank">77-1</a>';
 link_city_bus_77_2 = '<a href="../urban/77-2.html" target="_blank">77-2</a>';
 link_city_bus_239 = '<a href="../urban/239.html" target="_blank">239</a>';
+link_tainan_tourist = '<a href="../urban/tainan_tourist.html" target="_blank">府城觀光巡迴巴士</a>';
 
 link_tour_bus_33 = '<a href="../tourist/33.html" target="_blank">33 <div class="sub_title">關子嶺線</div></a>';
 link_tour_bus_88 = '<a href="../tourist/88.html" target="_blank">88 <div class="sub_title">安平線</div></a>';
@@ -163,7 +164,8 @@ transfer_tainan_railway_station = '<tr><th rowspan="9">臺南火車站</th>\
 	<td id="tour_bus">' + link_sightseeing_eastern + '、' + link_sightseeing_western + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus"><p>' + link_city_bus_0 + '、' + link_city_bus_1 + '、' + link_city_bus_2 + '、' + link_city_bus_3 + '、' + link_city_bus_5 + '、' + link_city_bus_6 + '、' + link_city_bus_7 + '、' + link_city_bus_9 + '、</p>'
-		+ link_city_bus_10 + '、' + link_city_bus_11 + '、' + link_city_bus_14 + '、' + link_city_bus_18 + '、' + link_city_bus_19 + '、' + link_city_bus_21 + '、' + link_city_bus_239 + '</td></tr>\
+		+ '<p>' + link_city_bus_10 + '、' + link_city_bus_11 + '、' + link_city_bus_14 + '、' + link_city_bus_18 + '、' + link_city_bus_19 + '、' + link_city_bus_21 + '、' + link_city_bus_239 + '、' + '</p>'
+		+ link_tainan_tourist + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green + '、' + link_green_17 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\

@@ -149,6 +149,13 @@
 		"RouteCategory":1
 	},
 	{
+		"RouteCodeName":"tainan_tourist",
+		"RouteName":"府城觀光巡迴巴士",
+		"RouteOSMRelation":8907322,
+		"RouteCategory":8,
+		"OneWayRoute":true
+	},
+	{
 		"RouteCodeName":"red",
 		"RouteName":"紅幹線",
 		"RouteOSMRelation":3905767,
