@@ -36,13 +36,28 @@ yellow_2_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_2_main_stop_name = ["新營","柳營","龜子港<br />(省道)","林鳳營<br />火車站","六甲","工研院<br />南分院","王爺宮","匏仔寮"];
-yellow_2_main_stop_time_consume = [0, 9, 15, 18, 30, 38, 50, 70];
-yellow_2_important_stop = [0, 3, 4, 6]; // 新營, 林鳳營火車站, 六甲, 王爺宮
-var start_stop = 0; // 新營
-var end_stop = 6; // 王爺宮
-var skip_stop = 5; // 工研院南分院
-yellow_2_time_go = [["05:40"],["07:30",start_stop,end_stop],["11:00",start_stop,end_stop],["14:20",start_stop,end_stop],["16:40"],
-["17:45",start_stop,end_stop]];
-yellow_2_time_return = [["06:00",end_stop,start_stop,[skip_stop,[skip_stop,-5]]],["06:55",[[end_stop,-5]]],["08:25",end_stop,start_stop],
-["11:55",end_stop,start_stop],["15:15",end_stop,start_stop],["17:55",[[end_stop,-5]]]];
+yellow_2_main_stop_name = ["新營站","柳營","龜子港<br />(省道)","林鳳營<br />火車站","六甲","工研院<br />南分院","王爺宮","西港湖","北勢<br />坑口","匏仔寮"];
+yellow_2_main_stop_time_consume = [0, 9, 15, 18, 30, 37, 50, 55, 59, 70];
+yellow_2_important_stop = [0, 3, 4, 6]; // 新營站, 林鳳營火車站, 六甲, 王爺宮
+var Sinying = 0; // 新營站
+var Liouying = 1; // 柳營
+var Gueizihgang = 2; // 龜子港(省道)
+var TRA_Linfongying = 3; // 林鳳營火車站
+var Lioujia = 4; // 六甲
+var ITRI = 5; // 工研院南分院
+var Wangye_Temple = 6; // 王爺宮
+var Sigang_Lake = 7; // 西港湖
+var Beishihkengkou = 8; // 北勢坑口
+var Paozihlaio = 9; // 匏仔寮
+yellow_2_time_go = [["05:40",[[Liouying,-3,Liouying+1,-3,Lioujia,-4,Wangye_Temple,-3,Paozihlaio,-2]]],
+["07:30",Sinying,Wangye_Temple,[[Liouying,1,Gueizihgang,-1]]],
+["11:00",[[Gueizihgang,-1,Lioujia,1]]],
+["14:20",Sinying,Wangye_Temple,[[Gueizihgang,-2,Lioujia,2]]],
+["16:40",[[Liouying,1,Gueizihgang,-1,TRA_Linfongying,1,Lioujia,1,ITRI,1,Wangye_Temple,-3,Sigang_Lake,-1,Paozihlaio,1]]],
+["17:45",Sinying,Wangye_Temple,[[Liouying,5,TRA_Linfongying,3,Lioujia,4,ITRI,2,Wangye_Temple,1]]]];
+yellow_2_time_return = [["06:00",Wangye_Temple,Sinying,[ITRI,[ITRI,-5]]],
+["06:40",[[Beishihkengkou,-6,ITRI,-4,Liouying,-1,Sinying,6]]],
+["08:25",Wangye_Temple,Sinying,[[ITRI,-3,Lioujia,1,TRA_Linfongying,1,Gueizihgang,1]]],
+["12:15",[[Beishihkengkou,-6,ITRI,-3,Lioujia,1,TRA_Linfongying,1,Gueizihgang,1,Sinying,1]]],
+["15:15",Wangye_Temple,Sinying,[[ITRI,-3,Lioujia,1,Gueizihgang,1,Liouying,-1,Sinying,2]]],
+["17:55",[[Beishihkengkou,-5,Wangye_Temple,-1,ITRI,-3,Lioujia,1,TRA_Linfongying,1,Liouying,-1,Sinying,3]]]];
