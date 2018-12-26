@@ -24,8 +24,8 @@ blue_22_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-blue_22_main_stop_name = ["佳里","南勢","劉厝","塭子內","樹子腳","七十二份","永吉","三股","九塊厝"];
+blue_22_main_stop_name = ["佳里站","南勢","劉厝","塭子內","樹子腳","七十二份","永吉","三股","九塊厝"];
 blue_22_main_stop_time_consume = [0, 4, 7, 10, 12, 16, 19, 22, 30];
-blue_22_important_stop = [0, 8]; // 佳里, 九塊厝
-blue_22_time_go = [["09:40"],["13:00"],["18:30"]];
+blue_22_important_stop = [0, 8]; // 佳里站, 九塊厝
+blue_22_time_go = [["09:40"],["13:00"],["18:40"]];
 blue_22_time_return = [["10:25"],["13:50"],["19:15"]];

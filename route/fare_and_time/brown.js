@@ -34,21 +34,23 @@ brown_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-brown_main_stop_name = ["新營","民治<br />市政中心","統聯<br />客運","鹽水","歡雅","大豐<br />南天宮","麻油寮","學甲<br />區公所","奇美<br />佳里分院","佳里"];
-brown_main_stop_time_consume = [0, 3, 8, 18, 26, 33, 33, 43, 53, 60];
-brown_important_stop = [0, 3, 7, 9]; // 新營, 鹽水, 學甲區公所, 佳里
-var start_stop = 0; // 新營
-var end_stop = 3; // 鹽水
+brown_main_stop_name = ["新營站","民治<br />市政中心","統聯<br />客運","鹽水","歡雅","大豐<br />南天宮","麻油寮","學甲","學甲<br />區公所","奇美<br />佳里分院","佳里站"];
+brown_main_stop_time_consume = [0, 3, 8, 18, 26, 33, 33, 43, 44, 53, 60];
+brown_important_stop = [0, 3, 7, 10]; // 新營站, 鹽水, 學甲, 佳里站
+var Sinying = 0; // 新營站
+var Yanshuei = 3; // 鹽水
 var skip_stop_1 = 5; // 大豐南天宮
 var skip_stop_2 = 6; // 麻油寮
-var end_stop_2 = 7; // 學甲區公所
-brown_time_go = [["05:50",start_stop,end_stop_2,[skip_stop_1]],["06:00",start_stop,end_stop,['L',[end_stop,2]]],["06:05",[skip_stop_2,'L']],["06:10",start_stop,end_stop_2,[skip_stop_1]],["06:35",[skip_stop_1,'L']],["07:05",[skip_stop_2]],["07:35",[skip_stop_2]],["08:05",[skip_stop_1]],["08:35",[skip_stop_2]],["09:05",[skip_stop_2]],["09:35",[skip_stop_2,'L']],
-["10:05",[skip_stop_1,'L']],["10:35",[skip_stop_2]],["11:05",[skip_stop_2]],["11:35",[skip_stop_2]],["12:05",[skip_stop_2]],["12:35",[skip_stop_1]],["13:05",[skip_stop_2,'L']],["14:05",[skip_stop_2]],["14:35",[skip_stop_1,'L']],
-["15:05",[skip_stop_2]],["15:20",start_stop,end_stop_2,[skip_stop_1]],["15:35",[skip_stop_2,'L']],["16:05",[skip_stop_2,'L']],["16:10",start_stop,end_stop_2,[skip_stop_1]],["16:35",[skip_stop_2]],["17:05",start_stop,end_stop,[[end_stop,5]]],["17:10",[skip_stop_1]],["17:35",[skip_stop_2,'L']],["18:15",[skip_stop_2]],
+var Syuejia = 7; // 學甲
+var Syuejia_District_Office = 8; // 學甲區公所
+var Jiali = 10; // 佳里站
+brown_time_go = [["05:50",Sinying,Syuejia_District_Office,[skip_stop_1,[Yanshuei,-3,Syuejia,-6]]],["05:55",[skip_stop_1,[Yanshuei,-3,Syuejia_District_Office,1,Jiali,2]]],["06:00",Sinying,Yanshuei,['L',[Yanshuei,-3]]],["06:05",[skip_stop_2,'L',[Yanshuei,-3,Syuejia_District_Office,1,Jiali,2]]],["06:10",Sinying,Syuejia_District_Office,[skip_stop_1,[Yanshuei,-3,Syuejia,-1]]],["06:35",[skip_stop_1,'L']],["07:05",[skip_stop_2,[Yanshuei,2,Syuejia,-1,Jiali,-1]]],["07:35",[skip_stop_2]],["08:05",[skip_stop_1]],["08:35",[skip_stop_2]],["09:05",[skip_stop_2,[Syuejia,-3,Jiali,3]]],["09:35",[skip_stop_2,'L',[Syuejia,-3,Jiali,3]]],
+["10:05",[skip_stop_1,'L',[Syuejia,-3,Jiali,3]]],["10:35",[skip_stop_2,[Syuejia,-3,Jiali,3]]],["11:05",[skip_stop_2]],["11:35",[skip_stop_2]],["12:05",[skip_stop_2]],["12:35",[skip_stop_1,[Syuejia,-3,Jiali,3]]],["13:05",[skip_stop_2,'L',[Syuejia,-3,Jiali,3]]],["14:05",[skip_stop_2]],["14:35",[skip_stop_1,'L',[Syuejia,-3,Jiali,3]]],
+["15:05",[skip_stop_2]],["15:20",Sinying,Syuejia_District_Office,[skip_stop_1,[Yanshuei,2,Syuejia,-2,Syuejia_District_Office,1]]],["15:35",[skip_stop_2,'L',[Yanshuei,2,Jiali,3]]],["16:05",[skip_stop_2,'L',[Yanshuei,2,Syuejia,-2,Jiali,5]]],["16:10",Sinying,Syuejia_District_Office,[skip_stop_1,[Yanshuei,2,Syuejia,-2,Syuejia_District_Office,1]]],["16:35",[skip_stop_2]],["17:05",Sinying,Yanshuei,[[Yanshuei,7]]],["17:10",[skip_stop_1]],["17:15",[skip_stop_1,[Yanshuei,4,Syuejia,-2,Syuejia_District_Office,1,Jiali,-3]]],["17:35",[skip_stop_2,'L',[Yanshuei,4,Syuejia,-2,Syuejia_District_Office,1,Jiali,-3]]],["18:15",[skip_stop_2,[Yanshuei,2,Syuejia,-5,Jiali,3]]],
 ["19:05",[skip_stop_2]],["20:05",[skip_stop_2]]
 ];
-brown_time_return = [["06:30",end_stop,start_stop,['L',[start_stop,5]]],["06:00",[skip_stop_2]],["06:35",[skip_stop_1]],["07:05",[skip_stop_2]],["07:35",[skip_stop_2,'L']],["08:00",end_stop_2,start_stop,[skip_stop_1]],["08:05",[skip_stop_1,'L']],["08:30",end_stop_2,start_stop,[skip_stop_1]],["08:35",[skip_stop_2]],["09:05",[skip_stop_2]],["09:35",[skip_stop_2]],
-["10:05",[skip_stop_1]],["10:35",[skip_stop_2]],["11:05",[skip_stop_2,'L']],["11:35",[skip_stop_1,'L']],["12:05",[skip_stop_2]],["12:35",[skip_stop_2]],["13:05",[skip_stop_2]],["14:05",[skip_stop_1]],["14:35",[skip_stop_2,'L']],
-["15:05",[skip_stop_2]],["15:35",[skip_stop_2]],["16:05",[skip_stop_1,'L']],["16:35",[skip_stop_2]],["17:40",end_stop,start_stop,[[start_stop,5]]],["17:05",[skip_stop_2,'L']],["17:35",[skip_stop_2,'L']],["18:00",end_stop_2,start_stop,[skip_stop_1]],["18:15",end_stop_2,start_stop,[skip_stop_1]],["18:05",[skip_stop_1]],
-["19:05",[skip_stop_2,'L']],["20:15",[skip_stop_2]]
+brown_time_return = [["06:30",Yanshuei,Sinying,['L',[Sinying,2]]],["06:00",[skip_stop_2]],["06:35",[skip_stop_1]],["07:05",[skip_stop_2]],["07:20",[skip_stop_1,[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["07:35",[skip_stop_2,'L',[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["08:00",Syuejia_District_Office,Sinying,[skip_stop_1,[Yanshuei,-4]]],["08:05",[skip_stop_1,'L',[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["08:30",Syuejia_District_Office,Sinying,[skip_stop_1,[Yanshuei,-4]]],["08:35",[skip_stop_2,[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["09:05",[skip_stop_2]],["09:35",[skip_stop_2]],
+["10:05",[skip_stop_1]],["10:35",[skip_stop_2,[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["11:05",[skip_stop_2,'L',[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["11:35",[skip_stop_1,'L',[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["12:15",[skip_stop_2]],["12:45",[skip_stop_2]],["13:05",[skip_stop_2,[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["14:05",[skip_stop_1,[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["14:35",[skip_stop_2,'L',[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],
+["15:05",[skip_stop_2]],["15:35",[skip_stop_2]],["16:05",[skip_stop_1,'L']],["16:35",[skip_stop_2]],["17:40",Yanshuei,Sinying,[[Sinying,7]]],["17:05",[skip_stop_2,'L',[Syuejia_District_Office,2,Syuejia,1,Sinying,7]]],["17:35",[skip_stop_2,'L',[Syuejia_District_Office,1,Syuejia,1,Yanshuei,-2]]],["18:00",Syuejia_District_Office,Sinying,[skip_stop_1,[Yanshuei,-3,Sinying,4]]],["18:15",Syuejia_District_Office,Sinying,[skip_stop_1,[Yanshuei,-3,Sinying,4]]],["18:05",[skip_stop_1]],
+["18:35",[skip_stop_1,[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["19:05",[skip_stop_2,'L',[Syuejia_District_Office,-2,Yanshuei,-3,Sinying,5]]],["20:15",[skip_stop_2,[Syuejia_District_Office,-2,Yanshuei,-5,Sinying,-3]]]
 ];

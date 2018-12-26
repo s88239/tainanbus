@@ -34,4 +34,4 @@ orange_10_important_stop = [0, 2, 5, 7, 9]; // 大地莊園, 麻豆轉運站, �
 start_stop = 0; // 大地莊園
 end_stop = 5; // 隆田火車站
 orange_10_time_go = [["07:05",start_stop,end_stop],["08:00"],["09:20"],["12:50"],["16:45",start_stop,end_stop],["17:20"]];
-orange_10_time_return = [["07:50",end_stop,start_stop],["09:25"],["10:40"],["14:25"],["17:30",end_stop,start_stop],["19:00"]];
+orange_10_time_return = [["08:00",end_stop,start_stop],["09:25"],["10:40"],["14:25"],["17:30",end_stop,start_stop],["19:00"]];
