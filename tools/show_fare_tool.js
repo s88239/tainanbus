@@ -54,9 +54,6 @@ function query_fare(theForm, fare_array, fare_type){
 		case '8050':
 			var HIGHWAY_CARD_PRICE_BASE_8050 = 21;
 			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? HIGHWAY_CARD_PRICE_BASE_8050 : fare_array[td][fd];
-			var citizen_card_price = card_price - HIGHWAY_CARD_PRICE_BASE_8050;
-			document.getElementById("card_adult").innerHTML = citizen_card_price;
-			document.getElementById("card_half").innerHTML = Math.floor(citizen_card_price/2);
 			break;
 		default:
 			card_price = price;

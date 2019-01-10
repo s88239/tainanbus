@@ -313,13 +313,6 @@ function block_fare_highway(charge_type, additional_message){
 					<td id="RFID_adult">-</td>\
 					<td id="RFID_half">-</td>\
 				</tr>');
-	if(charge_type == '8050') {
-		var card_name = "臺南市市民卡";
-		document.write('<tr><td><b>'+card_name+'</b></td>\
-					<td id="card_adult">-</td>\
-					<td id="card_half">-</td>\
-				</tr>');
-	}
 	document.write('</table>\
 			<p>　</p>');
 	print_fare_table( eval(route_file_name + '_interval_name'), eval(route_file_name + '_fare'), fare_table_color, charge_type);
@@ -393,6 +386,36 @@ function block_multiple_time_schedule(type_list, message){
 	window.onload = function() { // solve the bug for refreshing input raidio still checked with previous action
 		document.getElementById('multiple_type').reset();
 	}
+}
+
+function block_multiple_time_schedule_diffreturn(type_list, message){
+	document.write('<div id="timetable">\
+	<a name="time"></a>\
+	<div class="title">\
+		<h2>' + title_name + ' ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus schedule</span>\
+	</div>\
+	<div class="content">');
+	create_multiple_time_schedule(type_list);
+	document.write('<br /><div id="time_schedule_panel" name="time_schedule_panel">'+ show_time_schedule(type_list[0][1])+'</div>' // show the first type of time schedule
+	+ '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
+	</div>');
+	window.onload = function() { // solve the bug for refreshing input raidio still checked with previous action
+		document.getElementById('multiple_type').reset();
+	}
+
+	document.write('<div id="timetable">\
+		<h2>' + title_name + ' ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus schedule</span>\
+	</div>\
+	<div class="content">\
+		<h2><font color="' + time_schedule_title_color + '">' + go_title + '</font></h2>'
+	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_go'), false)
+	+ '<p>　</p>\
+		<h2><font color="' + time_schedule_title_color + '">' + return_title + '</font></h2>'
+	+ create_time_schedule( eval(route_file_name + '_main_stop_name_return'), eval(route_file_name + '_main_stop_time_consume_return'),	eval(route_file_name + '_important_stop_return'), eval(route_file_name + '_time_return'), false)
+	+ '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
+</div>');
 }
 
 function block_transfer(transfer_stops){
