@@ -49,11 +49,8 @@ function query_fare(theForm, fare_array, fare_type){
 			card_price = Math.round(price * HIGHWAY_CARD_PRICE_RATIO);
 			break;
 		case 'highway': // real price for using RFID card
-			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? 22 : fare_array[td][fd];
-			break;
 		case '8050':
-			var HIGHWAY_CARD_PRICE_BASE_8050 = 21;
-			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? HIGHWAY_CARD_PRICE_BASE_8050 : fare_array[td][fd];
+			card_price = (fd<td) ? fare_array[fd][td]: (fd==td) ? HIGHWAY_CARD_PRICE_BASE : fare_array[td][fd];
 			break;
 		default:
 			card_price = price;
