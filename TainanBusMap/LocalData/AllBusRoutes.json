@@ -822,12 +822,6 @@
 		"RouteCategory":8
 	},
 	{
-		"RouteCodeName":"tour_bus_7702",
-		"RouteName":"7702鹽鄉濱海線",
-		"RouteOSMRelation":5424028,
-		"RouteCategory":8
-	},
-	{
 		"RouteCodeName":"sightseeing_eastern",
 		"RouteName":"臺南雙層巴士東環線",
 		"RouteOSMRelation":8341790,

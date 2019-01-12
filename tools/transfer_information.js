@@ -125,7 +125,6 @@ link_tainan_tourist = '<a href="../urban/tainan_tourist.html" target="_blank">�
 link_tour_bus_33 = '<a href="../tourist/33.html" target="_blank">33 <div class="sub_title">關子嶺線</div></a>';
 link_tour_bus_88 = '<a href="../tourist/88.html" target="_blank">88 <div class="sub_title">安平線</div></a>';
 link_tour_bus_99 = '<a href="../tourist/99.html" target="_blank">99 <div class="sub_title">台江線</div></a>';
-link_tour_bus_7702 = '<a href="../tourist/7702.html" target="_blank">7702 <div class="sub_title">鹽鄉濱海線</div></a>';
 
 link_hsr_shuttle_H31 = '<a href="../hsr_shuttle/H31.html" target="_blank">H31 <div class="sub_title"><font color="#FFFFFF">市府線</font></div></a>';
 link_hsr_shuttle_H62 = '<a href="../hsr_shuttle/H62.html" target="_blank">H62 <div class="sub_title"><font color="#FFFFFF">奇美線</font></div></a>';
@@ -390,7 +389,7 @@ transfer_hsr_chiayi_station = '<tr><th rowspan="4">高鐵嘉義站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
 	<td id="hsr_shuttle">' + link_hsr_shuttle_166 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
-	<td id="tour_bus">' + link_tour_bus_33 + '、' + link_tour_bus_7702 + '</td></tr>';
+	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>';
 
 transfer_madou = '<tr><th rowspan="2">麻豆轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
@@ -522,11 +521,9 @@ transfer_south_kunshen = '<tr><th rowspan="3">南鯤鯓</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_7408 + '</td></tr>';
 
-transfer_beimen = '<tr><th rowspan="2">北門</th>\
+transfer_beimen = '<tr><th>北門</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
-	<td id="blue">' + link_blue_2 + '、<br />' + link_blue_1 + '<font color="#FFFFFF" size="-1">(需步行一站至北門橋頭搭乘)</font></td></tr>\
-<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
-	<td id="tour_bus">' + link_tour_bus_7702 + '</td></tr>';
+	<td id="blue">' + link_blue_2 + '、<br />' + link_blue_1 + '<font color="#FFFFFF" size="-1">(需步行一站至北門橋頭搭乘)</font></td></tr>';
 
 transfer_baoan_railway_station = '<tr><th rowspan="2">保安轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
