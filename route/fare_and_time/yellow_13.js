@@ -32,12 +32,16 @@ yellow_13_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_13_main_stop_name = ["白河國中","白河","河東國小","仙草埔","關子嶺","南寮","大鋤花間","仙公廟"];
-yellow_13_main_stop_time_consume = [0, 10, 15, 23, 30, 40, 51, 60];
-yellow_13_important_stop = [0, 1, 4, 5, 7]; // 白河國中, 白河, 關子嶺, 南寮, 仙公廟
-var start_stop = 1;
-var start_stop_2 = 0;
-var end_stop = 5;
-var end_stop_2 = 7;
-yellow_13_time_go = [["08:30",start_stop,end_stop],["08:50",start_stop,end_stop_2,['H']],["10:50",start_stop,end_stop_2,['H']],["11:10",start_stop,end_stop],["13:20",start_stop,end_stop_2,['H']],["14:10",start_stop,end_stop],["16:50",start_stop_2,end_stop,['L',[1,10]]],["18:35",start_stop,end_stop]];
-yellow_13_time_return = [["05:50",end_stop,start_stop_2,[[0,-5]]],["09:10",end_stop,start_stop],["09:50",end_stop_2,start_stop,['H']],["11:50",end_stop,start_stop],["11:50",end_stop_2,start_stop,['H']],["14:20",end_stop_2,start_stop,['H']],["14:50",end_stop,start_stop],["17:50",end_stop,start_stop,['L']]];
+yellow_13_main_stop_name = ["白河國中","白河站","河東國小","仙草埔","關子嶺","南寮","大鋤花間","仙公廟"];
+yellow_13_main_stop_time_consume = [0, 10, 14, 21, 29, 37, 46, 60];
+yellow_13_important_stop = [0, 1, 4, 5, 7]; // 白河國中, 白河站, 關子嶺, 南寮, 仙公廟
+var Baihe_Junior_High_School = 0; // 白河國中
+var Baihe = 1; // 白河站
+var Hedong_Elementary_School = 2; // 河東國小
+var Siancaopu = 3; // 仙草埔
+var Guanzihling = 4; // 關子嶺
+var Nanliao = 5; // 南寮
+var Daichu_Farm = 6; // 大鋤花間
+var Siangong_Temple = 7; // 仙公廟
+yellow_13_time_go = [["08:30",Baihe,Nanliao,[[Nanliao,3]]],["08:50",Baihe,Siangong_Temple],["11:00",Baihe,Siangong_Temple],["11:10",Baihe,Nanliao,[[Nanliao,3]]],["13:20",Baihe,Siangong_Temple],["14:10",Baihe,Nanliao,[[Nanliao,3]]],["16:50",Baihe_Junior_High_School,Nanliao,['L',[Baihe,10,Hedong_Elementary_School,1,Siancaopu,1,Guanzihling,-1,Nanliao,2]]],["18:35",Baihe,Nanliao,[[Nanliao,3]]]];
+yellow_13_time_return = [["05:50",Nanliao,Baihe_Junior_High_School,[[Guanzihling,2,Siancaopu,1,Hedong_Elementary_School,1,Baihe,2,Baihe_Junior_High_School,-3]]],["09:10",Nanliao,Baihe,[[Siancaopu,-1,Baihe,4]]],["09:50",Siangong_Temple,Baihe,[[Daichu_Farm,-6,Nanliao,-1,Guanzihling,1,Siancaopu,1,Hedong_Elementary_School,1,Baihe,4]]],["11:50",Nanliao,Baihe,[[Baihe,3]]],["12:00",Siangong_Temple,Baihe,[[Daichu_Farm,-6,Nanliao,-1,Guanzihling,1,Siancaopu,1,Hedong_Elementary_School,1,Baihe,4]]],["14:20",Siangong_Temple,Baihe,[[Daichu_Farm,-6,Nanliao,-1,Guanzihling,1,Siancaopu,1,Hedong_Elementary_School,1,Baihe,4]]],["14:50",Nanliao,Baihe,[[Baihe,3]]],["17:50",Nanliao,Baihe,['L',[Guanzihling,2,Siancaopu,-1,Hedong_Elementary_School,1,Baihe,1]]]];
