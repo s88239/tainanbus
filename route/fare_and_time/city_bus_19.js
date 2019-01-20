@@ -1,8 +1,8 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_19_main_stop_name = ["臺南海事","原住民<br />文化會館","億載金城","市政中心<br />(永華路)","林百貨<br />(中正路)","臺南<br />火車站","成功大學","崑山科大","大灣高中"];
-city_bus_19_main_stop_time_consume = [0, 7, 11, 17, 29, 37, 41, 57, 67];
+city_bus_19_main_stop_name = ["臺南海事","原住民<br />文化會館","億載金城","市政中心<br />(永華路)","林百貨<br />(中正路)","臺南<br />火車站","成大醫院<br />(勝利路)","崑山科大","大灣高中"];
+city_bus_19_main_stop_time_consume = [0, 7, 11, 17, 29, 37, 42, 57, 67];
 city_bus_19_important_stop = [0, 1, 5, 8]; // 臺南海事, 原住民文化會館, 臺南火車站, 大灣高中
 var tra_tainan = 5; // 臺南火車站
 var start_stop = 1; // 原住民文化會館
