@@ -14,8 +14,8 @@ green_21_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-green_21_main_stop_name = ["玉井","鹿陶","龜丹里","龜丹<br />溫泉","龜丹<br />油礦"];
-green_21_main_stop_time_consume = [0, 7, 13, 15, 20];
-green_21_important_stop = [0, 3, 4]; // 玉井, 龜丹溫泉, 龜丹油礦
-green_21_time_go = [["08:45"],["11:45"],["14:50"]];
-green_21_time_return = [["09:10"],["12:10"],["15:15"]];
+green_21_main_stop_name = ["玉井站","鹿陶","龜丹里","龜丹<br />溫泉","龜丹<br />油礦"];
+green_21_main_stop_time_consume = [0, 7, 13, 15, 25];
+green_21_important_stop = [0, 3, 4]; // 玉井站, 龜丹溫泉, 龜丹油礦
+green_21_time_go = [["08:30"],["11:30"],["13:00"],["16:20"]];
+green_21_time_return = [["08:55"],["11:55"],["13:25"],["16:45"]];
