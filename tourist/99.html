@@ -22,11 +22,10 @@
 <body>
 <script type="text/javascript">
 	block_header();
-	block_route_map('<div style="text-align: left; line-height: 28px; margin: 0px 10px 25px 10px;">1. 配合107年黑面琵鷺賞鳥季到來，本市<span style="color:blue;font-weight:bold;background-color:white;">台灣好行99台江線之賞鳥路線</span>(七股鹽山至黑面琵鷺賞鳥亭，途經海寮紅樹林驛站、海寮碼頭、六孔管理站及黑面琵鷺生態展示館站)，<span style="color:blue;font-weight:bold;background-color:white;">自107年10月27日星期六起，每逢假日開行10班次(寒假期間則每日開行)</span>。</div>\
-		<div style="text-align: left; line-height: 28px; margin: 0px 10px;">2. 配合108年<span style="color:blue;font-weight:bold;background-color:white;">寒假期間為1月21日(星期一)起至2月10日(星期日)</span>，本市台灣好行88安平線、99台江線於上述期間行駛班表如下：<br />一、平日(週一至週五)以「寒假平日時刻表」行駛。<br />二、假日(週六、週日)以「假日時刻表」行駛。</div>');
-	block_route_info(route_interval,'府城客運','<br />寒假平日1小時1班<br />假日30分鐘1班','二段票<br />分段點：四草野生動物保護區','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10210&locale=zh_TW',[['寒假平日','wintervacation'],['假日','holiday']]);
+	block_route_map('<p>配合107年黑面琵鷺賞鳥季到來，本市<span style="color:blue;font-weight:bold;background-color:white;">台灣好行99台江線之賞鳥路線</span>(七股鹽山至黑面琵鷺賞鳥亭，途經海寮紅樹林驛站、海寮碼頭、六孔管理站及黑面琵鷺生態展示館站)，<span style="color:blue;font-weight:bold;background-color:white;">自107年10月27日星期六起，每逢假日開行10班次</span>。</p>');
+	block_route_info(route_interval,'府城客運','<br />平日2~3小時1班<br />假日30分鐘1班','二段票<br />分段點：四草野生動物保護區','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10210&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(22,'','四草野生動物保護區');
-	block_multiple_time_schedule( [['寒假平日','wintervacation'],['假日班表','holiday']], '<p>&nbsp;</p>\
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '<p>&nbsp;</p>\
 		<h2><font color="blue">七股鹽山 ─ 黑面琵鷺賞鳥亭</font></h2>\
 		<h3>黑面琵鷺賞鳥路線【10月-隔年4月】</h3>\
 		<h3><span style="color:red;">【自107年10月27日起，每逢假日(包含寒假平日)行駛】</span></h3>\
@@ -37,7 +36,7 @@
 			<tr><td>13:55</td><td>14:40</td></tr>\
 			<tr><td>15:25</td><td>16:10</td></tr>\
 			<tr><td>16:55</td><td><span style="font-weight: bold;">*17:40</span><br />(至臺南公園)</td></tr>\
-		</table><h3>本賞鳥季班表已整合到假日班表與寒假平日班表中</h3><br /><h3>「*」班次表示抵達六孔管理站後，下一站接到99台江線-「鹿耳門聖母廟」站往臺南公園</h3>');
+		</table><h3>本賞鳥季班表已整合到假日班表中</h3><br /><h3>「*」班次表示抵達六孔管理站後，下一站接到99台江線-「鹿耳門聖母廟」站往臺南公園</h3>');
 	block_transfer(transfer_tainan_railway_station);
 	block_copyright();
 </script>

@@ -22,10 +22,10 @@
 <body>
 <script type="text/javascript">
 	block_header();
-	block_route_map('<div style="text-align: left; line-height: 28px; margin: 0px 10px;">配合108年<span style="color:blue;font-weight:bold;background-color:white;">寒假期間為1月21日(星期一)起至2月10日(星期日)</span>，本市台灣好行88安平線、99台江線於上述期間行駛班表如下：<br />一、平日(週一至週五)以「寒假平日時刻表」行駛。<br />二、假日(週六、週日)以「假日時刻表」行駛。</div>');
-	block_route_info(route_interval,'府城客運','平日1小時一班<br />假日30分鐘一班','一段票','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10211&locale=zh_TW',[['寒假平日','vacation'],['假日','holiday']]);
+	block_route_map(null);
+	block_route_info(route_interval,'府城客運','平日1小時一班<br />假日30分鐘一班','一段票','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10211&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(1,'');
-	block_multiple_time_schedule( [['寒假平日','vacation'],['假日班表','holiday']], '');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '');
 	block_transfer(transfer_aboriginal_culture_center + transfer_tainan_railway_station + transfer_culture_center);
 	block_copyright();
 </script>
