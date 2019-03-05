@@ -1,6 +1,6 @@
 brown_1_interval_name = ["新營","茄苳腳","鹽水","後寮","番子寮","孫厝寮","羊稠厝","頂洲","紅茄萣","新芳里","紅茄里","北紅茄萣","新渡子頭","渡子頭","南鯤鯓","雙春","雙春濱海<br />遊憩區"];
 brown_1_interval_stop = [ // 2017.12.08 checked
-["新營站","興業里","第一市場","中山路","圓環(第一銀行)","新營醫院","齊普","新營魚市場","太子路口","統聯客運"], // 新營
+["新營站","中營興業里","第一市場","中山路","圓環(第一銀行)","新營醫院","齊普","新營魚市場","太子路口","統聯客運"], // 新營
 ["茄苳腳","新營工業區","明達中學"], // 茄苳腳
 ["竹圍尾","橋南里","護庇宮","鹽水","鹽水地政事務所","月津國小","鹽水壽園"], // 鹽水
 ["後寮"], // 後寮
@@ -41,11 +41,16 @@ brown_1_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 brown_1_main_stop_name = ["新營站","第一市場","鹽水","頑皮世界","新芳里","南鯤鯓","北門國中","雙春","雙春濱海<br />休憩園區"];
-brown_1_main_stop_time_consume = [0, 4, 21, 34, 39, 53, 60, 57, 60];
+brown_1_main_stop_time_consume = [0, 4, 22, 34, 39, 52, 60, 57, 60];
 brown_1_important_stop = [0, 2, 3, 5, 8]; // 新營站, 鹽水, 頑皮世界, 南鯤鯓, 雙春濱海休憩園區
-var start_stop = 0; // 新營
+var Sinying = 0; // 新營
+var First_Market = 1; // 第一市場
+var Yanshuei = 2; // 鹽水
+var Wanpi_World = 3; // 頑皮世界
+var Sinfang_Vil = 4; // 新芳里
+var Nankunshen = 5; // 南鯤鯓
 var beimen_juniorhigh = 6; // 北門國中
-var end_stop = 7; // 雙春
-var stop_1 = 2; // 鹽水
-brown_1_time_go = [["06:20",start_stop,beimen_juniorhigh],["07:20",[beimen_juniorhigh]],["09:45",[beimen_juniorhigh]],["10:20",[beimen_juniorhigh]],["11:45",[beimen_juniorhigh]],["14:25",[beimen_juniorhigh]],["16:05",start_stop,beimen_juniorhigh],["17:50",[beimen_juniorhigh,[stop_1+1,2,stop_1+2,1,beimen_juniorhigh-1,4,end_stop+1,1]]]];
-brown_1_time_return = [["05:50",end_stop,start_stop,[beimen_juniorhigh,[beimen_juniorhigh-2,1,stop_1+1,3,stop_1,3,start_stop,1]]],["07:25",beimen_juniorhigh,start_stop],["08:35",[beimen_juniorhigh,[stop_1,2]]],["11:00",[beimen_juniorhigh,[stop_1,2]]],["11:35",[beimen_juniorhigh,[stop_1,2]]],["13:00",[beimen_juniorhigh,[stop_1,2]]],["15:40",[beimen_juniorhigh,[stop_1,2]]],["17:10",beimen_juniorhigh,start_stop]];
+var Shuangchun = 7; // 雙春
+var Shuangchun_Area = 8; // 雙春濱海休憩園區
+brown_1_time_go = [["06:20",Sinying,beimen_juniorhigh,[[Yanshuei,-1,Nankunshen,1]]],["07:20",[beimen_juniorhigh,[Yanshuei,-1,Wanpi_World,1,Shuangchun,-1,Shuangchun_Area,1]]],["09:45",[beimen_juniorhigh,[Wanpi_World,1,Nankunshen,1,Shuangchun,-1,Shuangchun_Area,4]]],["10:20",[beimen_juniorhigh,[Yanshuei,-1,Nankunshen,1,Shuangchun_Area,5]]],["11:05",Sinying,beimen_juniorhigh],["11:45",[beimen_juniorhigh,[Wanpi_World,1,Nankunshen,1,Shuangchun,-1,Shuangchun_Area,4]]],["14:25",[beimen_juniorhigh,[Wanpi_World,1,Sinfang_Vil,1,Nankunshen,1,Shuangchun_Area,2]]],["16:05",Sinying,beimen_juniorhigh,[[Wanpi_World,1,Sinfang_Vil,1,beimen_juniorhigh,-2]]],["17:50",[beimen_juniorhigh,[First_Market,1,Yanshuei,4,Wanpi_World,4,Sinfang_Vil,1,Nankunshen,3,Shuangchun,-1,Shuangchun_Area,3]]]];
+brown_1_time_return = [["05:50",Shuangchun,Sinying,[beimen_juniorhigh,[Sinfang_Vil,1,Wanpi_World,3,Yanshuei,4]]],["07:25",beimen_juniorhigh,Sinying,[[Nankunshen,-1,Sinfang_Vil,1,Yanshuei,1,First_Market,-1]]],["08:35",[beimen_juniorhigh,[Yanshuei,1,First_Market,2,Sinying,2]]],["11:00",[beimen_juniorhigh,[Nankunshen,1,Yanshuei,2,Sinying,2]]],["11:35",[beimen_juniorhigh,[Nankunshen,1,Yanshuei,2,Sinying,2]]],["12:10",beimen_juniorhigh,Sinying,[[Nankunshen,-1,Sinfang_Vil,1,Wanpi_World,1,Yanshuei,1,First_Market,-1,Sinying,-1]]],["13:00",[beimen_juniorhigh,[Nankunshen,1,Yanshuei,2,Sinying,2]]],["15:40",[beimen_juniorhigh,[Nankunshen,1,Sinfang_Vil,1,Yanshuei,3]]],["17:10",beimen_juniorhigh,Sinying,[[Nankunshen,1,Yanshuei,1,First_Market,6,Sinying,2]]]];

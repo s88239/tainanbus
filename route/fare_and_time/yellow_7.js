@@ -1,9 +1,9 @@
 yellow_7_interval_name = ["新營","頂窩","北勢寮","東河","北馬","東山","大客","武嶺","番子嶺","斑芝<br />花坑","東原","瓦厝","崎腳","青山","南寮口","二坑埔","仙公廟"];
 yellow_7_interval_stop = [ // 2018.07.03 checked
-["新營站","興業里","圓環(第一銀行)","新營文化中心","新營區公所","臺南市農會"], // 新營
+["新營站","中營興業里","圓環(第一銀行)","新營文化中心","新營區公所","臺南市農會"], // 新營
 ["中營里","東山中路","頂窩","東營"], // 頂窩
 ["北勢寮","聖賢國小"], // 北勢寮
-["東河","吉貝耍","枋子林","崁下寮","水雲天后宮","牛肉崎","雲天宮"], // 東河
+["東河","吉貝耍","枋子林","崁下寮","水雲天后宮","牛肉崎","牛山橋","油礦","雲天宮"], // 東河
 ["北馬"], // 北馬
 ["東山國中","東山國小","北東山","木柵","代天宮","許秀才","東山","嘉東"], // 東山
 ["凹子腳","大客","下庄","科里"], // 大客
@@ -22,27 +22,27 @@ yellow_7_fare = [
 [26],
 [26,26],
 [26,26,26],
-[26,26,26,26],
-[30,26,26,26,26],
-[40,31,26,26,26,26],
-[47,38,33,26,26,26,26],
-[51,42,36,27,26,26,26,26],
-[53,44,39,29,26,26,26,26,26],
-[63,54,49,39,33,26,26,26,26,26],
-[73,64,59,49,43,33,26,26,26,26,26],
-[75,66,61,51,45,35,28,26,26,26,26,26],
-[80,71,66,56,50,40,33,29,27,26,26,26,26],
-[83,74,69,59,53,43,36,33,30,26,26,26,26,26],
-[87,78,73,63,57,47,41,37,34,26,26,26,26,26,26],
-[96,87,82,72,65,55,49,45,43,33,26,26,26,26,26,26],
-[109,100,95,85,79,69,62,58,56,46,36,34,29,26,26,26,26]
+[32,26,26,26],
+[38,26,26,26,26],
+[48,32,26,26,26,26],
+[53,36,31,26,26,26,26],
+[59,42,36,27,26,26,26,26],
+[62,45,39,30,26,26,26,26,26],
+[70,53,47,38,32,26,26,26,26,26],
+[80,63,57,48,42,32,27,26,26,26,26],
+[82,65,59,50,43,33,28,26,26,26,26,26],
+[87,70,64,55,48,38,34,28,26,26,26,26,26],
+[90,73,67,58,51,41,36,31,28,26,26,26,26,26],
+[94,78,72,63,56,46,41,35,33,26,26,26,26,26,26],
+[103,86,80,71,64,54,50,44,41,33,26,26,26,26,26,26],
+[116,99,93,84,78,68,63,57,54,46,36,34,29,26,26,26,26]
 ];
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_7_main_stop_name = ["新營","東河","吉貝耍","牛肉崎","北東山","許秀才","東山","斑花橋","東原","青山","仙公廟<br /><font color=\"red\">(假日延駛)</font>"];
+yellow_7_main_stop_name = ["新營站","東河","吉貝耍","牛肉崎","北東山","許秀才","東山","斑花橋","東原","青山","仙公廟<br /><font color=\"red\">(假日延駛)</font>"];
 yellow_7_main_stop_time_consume = [0, 17, 18, 24, 24, 28, 26, 36, 40, 45, 60];
-yellow_7_important_stop = [0, 6, 9, 10]; // 新營, 東山, 青山, 仙公廟
+yellow_7_important_stop = [0, 6, 9, 10]; // 新營站, 東山, 青山, 仙公廟
 start_stop = 0; // 新營
 cingshan = 9; // 青山
 dongshan = 6; // 東山
@@ -65,7 +65,7 @@ yellow_7_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_beef,ski
 ["15:35",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
 ["16:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,1,skip_stop_beef+1,1]]],
 ["17:30",start_stop,cingshan,[skip_stop_beef,[start_stop+1,1,skip_stop_beef+1,1,dongshan,8,dongshan+1,3]]],
-["18:40",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]]];
+["18:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]]];
 yellow_7_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-1]]],
 ["05:50",cingshan,start_stop,[skip_stop_beef,[dongshan,3,skip_stop_2,6,skip_stop_2-1,2,start_stop,2]]],
 ["07:55",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[dongshan,2,start_stop,3]]],
@@ -98,7 +98,7 @@ yellow_7_holiday_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_
 ["15:35",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
 ["16:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,1,skip_stop_beef+1,1]]],
 ["17:30",start_stop,cingshan,[skip_stop_beef,[start_stop+1,1,skip_stop_beef+1,1,dongshan,8,dongshan+1,3]]],
-["18:40",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]]];
+["18:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]]];
 yellow_7_holiday_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-1]]],
 ["05:50",cingshan,start_stop,[skip_stop_beef,[dongshan,3,skip_stop_2,6,skip_stop_2-1,2,start_stop,2]]],
 ["08:10",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,2,start_stop,2]]],
