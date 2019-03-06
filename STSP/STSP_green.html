@@ -8,7 +8,10 @@
 	route_file_name = 'STSP_green';
 	route_type = 'STSP';
 	route_interval = ['Park 17商場','高鐵臺南站'];
+	route_start_stop = 'Park 17商場';
+	route_end_stop = '高鐵臺南站';
 </script>
+<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	title_name = '南科巡迴巴士';
@@ -20,7 +23,7 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'科技之星交通','約1小時一班<br />官方最新時刻表：<a href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=359" target="_blank">南科管理局</a>','免費','http://ibus.stsp.gov.tw/PAGE/RouteQuery/');
+	block_route_info(route_interval,'科技之星交通','約1小時一班<br />官方最新時刻表：<a href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=693" target="_blank">南科管理局</a>','免費','http://ibus.stsp.gov.tw/PAGE/RouteQuery/',[['平日','normal'],['假日','holiday']]);
 	document.write('<div id="wrapper3">\
 	<a name="fare"></a>\
 	<div id="faretable" class="container">\
@@ -29,18 +32,18 @@
 			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
 		</div>\
 		<div class="content">\
-			<h1><font color="red">FREE</font></h1>\
+			<h1><span style="color:red;">FREE</span></h1>\
 			<h1>免費</h1>\
 			<p>&nbsp;</p>\
 			<h2>南科 ─ 高鐵臺南站直達車</h2>\
 			<p></p>\
 			<h3>行經國道八號、國道三號及台86快速公路</h3>\
 			<p style="color:red; font-weight: bold; font-size: 20px;">單趟行駛約為40分鐘，視道路狀況而定；<br />綠能班次因行駛高鐵橋下平面道路，故單趟行駛時間約為50分鐘</p>\
-			<h3><font color="#333333"><u>高鐵臺南站搭乘位置：6號月台</u></font></h3><p></p>\
+			<h3><span style="color:#333333;"><u>高鐵臺南站搭乘位置：6號月台</u></span></h3><p></p>\
 		</div>\
 	</div>\
 </div>');
-	block_time_schedule_diffreturn('Park 17商場-&gt;高鐵臺南站','高鐵臺南站-&gt;Park 17商場','<h1><span style="color: red;">例假日及國定假日不行駛</span></h1>\
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '<h1><span style="color: red;">假日班表僅行駛收假上班前一日</span></h1>\
 		<h3>「<span style="color: green;">綠</span>」表示綠能班次，以電動車行駛平面道路(高鐵橋下道路)</h3>\
 		<center><div style="text-align: left; width: 520px; border:solid 1px; margin-top: 30px; background-color: #BBFFBB; padding: 15px;"><h3>◎巡巴相關問題詢問專線：<span style="color: red;">0800-523-550</span></h3><h3>\
 		◎如需<span style="color: blue;">到廠接送服務</span>(DRTS)，請提前2小時撥打免付費專線</div></center>');

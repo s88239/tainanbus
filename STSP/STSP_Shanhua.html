@@ -20,7 +20,7 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'科技之星交通','<br />官方最新時刻表：<a href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=359" target="_blank">南科管理局</a>','免費','http://ibus.stsp.gov.tw/PAGE/RouteQuery/');
+	block_route_info(route_interval,'科技之星交通','<br />官方最新時刻表：<a href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=693" target="_blank">南科管理局</a>','免費','http://ibus.stsp.gov.tw/PAGE/RouteQuery/');
 	document.write('<div id="wrapper3">\
 	<a name="fare"></a>\
 	<div id="faretable" class="container">\
@@ -29,16 +29,16 @@
 			<span class="byline">' + title_name_en + ' ' + route_name_en + ', Bus Fare</span>\
 		</div>\
 		<div class="content">\
-			<h1><font color="red">FREE</font></h1>\
+			<h1><span style="color:red;">FREE</span></h1>\
 			<h1>免費</h1>\
 			<p>&nbsp;</p>\
-			<h3><font color="blue">17:00前行駛方向為臺鐵善化站到南科各廠</font></h3>\
-			<h3><font color="red">17:01後行駛方向為南科各廠到臺鐵善化站</font></h3>\
+			<h3><span style="color:blue;">17:00前行駛方向為臺鐵善化站到南科各廠</span></h3>\
+			<h3><span style="color:red;">17:01後行駛方向為南科各廠到臺鐵善化站</span></h3>\
 			<p>&nbsp;</p>\
 		</div>\
 	</div>\
 </div>');
-	block_time_schedule_diffreturn('臺鐵善化站-&gt;台積電-&gt;Park 17商場','Park 17商場-&gt;台積電-&gt;臺鐵善化站','<h1><font color="red">例假日及國定假日不行駛</font></h1>');
+	block_time_schedule_diffreturn('臺鐵善化站 → 台積電 → Park 17商場','Park 17商場 → 台積電 → 臺鐵善化站','<h1><span style="color:red;">例假日及國定假日不行駛</span></h1>');
 	block_transfer(transfer_shanhua_railway_station + transfer_park17);
 	block_copyright();
 </script>

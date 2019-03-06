@@ -149,9 +149,26 @@ function get_time(time_str, offset){ // get the time of the stop
 
 function show_time_schedule(type){
 	type = (type=='normal') ? '' : '_'+type;
-	str = '<h2><font color="' + time_schedule_title_color + '">' + route_start_stop + ' → ' + route_end_stop + '</font></h2>'
-	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'), eval(route_file_name + '_important_stop'), eval(route_file_name + type + '_time_go'), false)
-	+ '<p>　</p><h2><font color="' + time_schedule_title_color + '">' + route_end_stop + ' → ' + route_start_stop + '</font></h2>'
-	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'), eval(route_file_name + '_important_stop'), eval(route_file_name + type + '_time_return'), true);
+	var go_main_stop = eval(route_file_name + type + '_main_stop_name');;
+	var go_time_consume = eval(route_file_name + type + '_main_stop_time_consume');;
+	var go_important_stop = eval(route_file_name + type + '_important_stop');;
+	var return_main_stop = null;
+	var return_time_consume = null;
+	var return_important_stop = null;
+	var isReturn = false;
+	try {
+		return_main_stop = eval(route_file_name + type + '_main_stop_name_return');
+		return_time_consume = eval(route_file_name + type + '_main_stop_time_consume_return');
+		return_important_stop = eval(route_file_name + type + '_important_stop_return');
+	} catch(e) {
+		return_main_stop = go_main_stop;
+		return_time_consume = go_time_consume;
+		return_important_stop = go_important_stop;
+		isReturn = true;
+	}
+	var str = '<h2><span style="color:' + time_schedule_title_color + ';">' + route_start_stop + ' → ' + route_end_stop + '</span></h2>'
+	+ create_time_schedule(go_main_stop, go_time_consume, go_important_stop, eval(route_file_name + type + '_time_go'), false)
+	+ '<p>　</p><h2><span style="color:' + time_schedule_title_color + '">' + route_end_stop + ' → ' + route_start_stop + '</span></h2>'
+	+ create_time_schedule(return_main_stop, return_time_consume, return_important_stop, eval(route_file_name + type + '_time_return'), isReturn);
 	return str;
 }
