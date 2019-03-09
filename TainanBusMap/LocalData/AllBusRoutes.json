@@ -873,9 +873,16 @@
 	},
 	{
 		"RouteCodeName":"STSP_Shanhua",
-		"RouteName":"南科巡迴巴士善化線",
+		"RouteName":"南科巡迴巴士棕線(善化線)",
 		"RouteOSMRelation":7792087,
 		"RouteCategory":5
+	},
+	{
+		"RouteCodeName":"STSP_holiday",
+		"RouteName":"南科巡迴巴士假日線",
+		"RouteOSMRelation":9383301,
+		"RouteCategory":1,
+		"OneWayRoute":true
 	},
 	{
 		"RouteCodeName":"highway_bus_8035",

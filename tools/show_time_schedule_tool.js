@@ -167,8 +167,11 @@ function show_time_schedule(type){
 		isReturn = true;
 	}
 	var str = '<h2><span style="color:' + time_schedule_title_color + ';">' + route_start_stop + ' → ' + route_end_stop + '</span></h2>'
-	+ create_time_schedule(go_main_stop, go_time_consume, go_important_stop, eval(route_file_name + type + '_time_go'), false)
-	+ '<p>　</p><h2><span style="color:' + time_schedule_title_color + '">' + route_end_stop + ' → ' + route_start_stop + '</span></h2>'
-	+ create_time_schedule(return_main_stop, return_time_consume, return_important_stop, eval(route_file_name + type + '_time_return'), isReturn);
+	+ create_time_schedule(go_main_stop, go_time_consume, go_important_stop, eval(route_file_name + type + '_time_go'), false);
+	try {
+		// show return time table when eval(route_file_name + type + '_time_return') exists.
+		str += '<p>　</p><h2><span style="color:' + time_schedule_title_color + '">' + route_end_stop + ' → ' + route_start_stop + '</span></h2>'
+		+ create_time_schedule(return_main_stop, return_time_consume, return_important_stop, eval(route_file_name + type + '_time_return'), isReturn);
+	} catch(e) {}
 	return str;
 }

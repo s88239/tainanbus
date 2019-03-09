@@ -21,6 +21,7 @@ html, body {
 function get_button_string(category, file_name, ch_name){
 	var type = (category=='STSP') ? file_name.split('_')[1] : (category=='highway' || category=='sightseeing') ? 'tourist' : category;
 	if(file_name=='STSP_Shanhua') type = 'brown';
+	else if(file_name=='STSP_holiday') type = 'urban';
 	var route_infor_str = (category=='urban' || category=='highway' || category=='tourist' || category=='hsr_shuttle' || category=='sightseeing') ? (category + '_') : '';
 	route_infor_str += file_name.replace('-','_') + '_route';
 	line_string = '<tr><td><a href="' + category + '/' + file_name + '.html" class="' + type + 'Button" target="_blank">'
@@ -239,7 +240,7 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('hsr_shuttle', 'H62', 'H62')
 		+ get_button_string('highway', '8042', '8042')
 		+ get_button_string('highway', '8050', '8050')
-		+ get_button_string('STSP', 'STSP_green', '南科綠線');;
+		+ get_button_string('STSP', 'STSP_green', '南科綠線');
 		break;
 	case '仁德':
 		div_string += get_button_string('red', 'red', '紅幹線')
@@ -286,7 +287,8 @@ function get_transfer_info(bus_stop){
 		+ get_button_string('STSP', 'STSP_orange', '南科橘線')
 		+ get_button_string('STSP', 'STSP_blue', '南科藍線')
 		+ get_button_string('STSP', 'STSP_green', '南科綠線')
-		+ get_button_string('STSP', 'STSP_Shanhua', '南科棕線');
+		+ get_button_string('STSP', 'STSP_Shanhua', '南科棕線')
+		+ get_button_string('STSP', 'STSP_holiday', '南科假日');
 		break;
 	case '山上':
 		div_string += get_button_string('green', 'green', '綠幹線')
@@ -484,6 +486,7 @@ function get_transfer_info(bus_stop){
 		div_string += get_button_string('STSP', 'STSP_red', '南科紅線')
 		+ get_button_string('STSP', 'STSP_orange', '南科橘線')
 		+ get_button_string('STSP', 'STSP_blue', '南科藍線')
+		+ get_button_string('STSP', 'STSP_holiday', '南科假日')
 		+ get_button_string('green', 'green_4', '綠4');
 		break;
 	case '永康火車站':

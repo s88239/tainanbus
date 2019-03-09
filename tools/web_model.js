@@ -338,7 +338,7 @@ function block_fare_highway(charge_type, additional_message){
 }
 
 function block_time_schedule(start_stop, end_stop, message){
-	document.write('<div id="timetable">\
+	var str = '<div id="timetable">\
 	<a name="time"></a>\
 	<div class="title">\
 		<h2>' + title_name + ' ─ ' + route_name + ' 時刻表</h2>\
@@ -346,16 +346,20 @@ function block_time_schedule(start_stop, end_stop, message){
 	</div>\
 	<div class="content">\
 		<h2><font color="' + time_schedule_title_color + '">' + start_stop + ' → ' + end_stop + '</font></h2>'
-	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_go'), false)
-	+ '<p>　</p>\
+	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'), eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_go'), false);
+	try {
+		// show return time table when eval(route_file_name + type + '_time_return') exists.
+		str += '<p>　</p>\
 		<h2><font color="' + time_schedule_title_color + '">' + end_stop + ' → ' + start_stop + '</font></h2>'
-	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_return'), true)
-	+ '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
-</div>');
+		+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'), eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_return'), true);
+	} catch(e) {}
+	str += '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
+</div>'
+	document.write(str);
 }
 
 function block_time_schedule_diffreturn(go_title, return_title, message){
-	document.write('<div id="timetable">\
+	var str = '<div id="timetable">\
 	<a name="time"></a>\
 	<div class="title">\
 		<h2>' + title_name + ' ─ ' + route_name + ' 時刻表</h2>\
@@ -363,12 +367,16 @@ function block_time_schedule_diffreturn(go_title, return_title, message){
 	</div>\
 	<div class="content">\
 		<h2><font color="' + time_schedule_title_color + '">' + go_title + '</font></h2>'
-	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'),	eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_go'), false)
-	+ '<p>　</p>\
+	+ create_time_schedule( eval(route_file_name + '_main_stop_name'), eval(route_file_name + '_main_stop_time_consume'), eval(route_file_name + '_important_stop'), eval(route_file_name + '_time_go'), false);
+	try {
+		// show return time table when eval(route_file_name + type + '_time_return') exists.
+		str += '<p>　</p>\
 		<h2><font color="' + time_schedule_title_color + '">' + return_title + '</font></h2>'
-	+ create_time_schedule( eval(route_file_name + '_main_stop_name_return'), eval(route_file_name + '_main_stop_time_consume_return'),	eval(route_file_name + '_important_stop_return'), eval(route_file_name + '_time_return'), false)
-	+ '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
-</div>');
+		+ create_time_schedule( eval(route_file_name + '_main_stop_name_return'), eval(route_file_name + '_main_stop_time_consume_return'), eval(route_file_name + '_important_stop_return'), eval(route_file_name + '_time_return'), false);
+	} catch(e) {}
+	str += '<p>' + TimeScheduleMSG + '<h3>' + message + '</h3></p></div>\
+</div>'
+	document.write(str);
 }
 
 function block_multiple_time_schedule(type_list, message){
