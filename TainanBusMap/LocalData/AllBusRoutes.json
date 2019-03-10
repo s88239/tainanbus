@@ -121,6 +121,13 @@
 		"RouteCategory":1
 	},
 	{
+		"RouteCodeName":"city_bus_70",
+		"RouteName":"70路(中華環線)",
+		"RouteOSMRelation":9385330,
+		"RouteCode":1070,
+		"RouteCategory":1
+	},
+	{
 		"RouteCodeName":"city_bus_77",
 		"RouteName":"77路",
 		"RouteOSMRelation":6072564,

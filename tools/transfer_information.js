@@ -116,6 +116,7 @@ link_city_bus_18 = '<a href="../urban/18.html" target="_blank">18</a>';
 link_city_bus_19 = '<a href="../urban/19.html" target="_blank">19</a>';
 link_city_bus_20 = '<a href="../urban/20.html" target="_blank">20</a>';
 link_city_bus_21 = '<a href="../urban/21.html" target="_blank">21</a>';
+link_city_bus_70 = '<a href="../urban/70.html" target="_blank">70</a>';
 link_city_bus_77 = '<a href="../urban/77.html" target="_blank">77</a>';
 link_city_bus_77_1 = '<a href="../urban/77-1.html" target="_blank">77-1</a>';
 link_city_bus_77_2 = '<a href="../urban/77-2.html" target="_blank">77-2</a>';
@@ -177,6 +178,16 @@ transfer_tainan_railway_station = '<tr><th rowspan="9">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '、' + link_highway_bus_8050 + '</td></tr>';
 
+transfer_Shangrila = '<tr><th rowspan="4">香格里拉大飯店</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
+	<td><span style="color:#00AAFF;">台鐵臺南站</span></td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
+	<td id="tour_bus">' + link_tour_bus_99 + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
+	<td id="tour_bus">' + link_sightseeing_eastern + '</td></tr>\
+<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
+	<td id="city_bus">' + link_city_bus_70 + '、' + link_city_bus_77 + '</td></tr>';
+
 transfer_kun_shan_university = '<tr><th rowspan="2">崑山科大</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus">' + link_city_bus_2 + '、' + link_city_bus_19 + '、' + link_city_bus_20 + '</td></tr>\
@@ -211,7 +222,7 @@ transfer_chimei_hospital = '<tr><th rowspan="5">奇美醫院</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
 	<td id="hsr_shuttle">' + link_hsr_shuttle_H62 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
-	<td id="city_bus">' + link_city_bus_5 + '、' + link_city_bus_15 + '</td></tr>\
+	<td id="city_bus">' + link_city_bus_5 + '、' + link_city_bus_15 + '、' + link_city_bus_70 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red">' + link_red_10 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '70路中華環線電動巴士';
+	route_name_en = 'No.70';
+	route_file_name = 'city_bus_70';
+	route_type = 'city_bus';
+	route_interval = ['健康路','中華北路'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	document.write('<div id="wrapper2">\
+	<a name="info"></a>\
+	<div id="routeinfo" class="container">\
+		<div class="title">\
+			<h2>大台南公車 ─ ' + route_name + ' 路線資訊</h2>\
+			<span class="byline">Tainan Bus ' + route_name_en + ', Route Information</span>\
+		</div>\
+		<div class="content">\
+			<table border="0">\
+				<tr>\
+					<td>起迄點</td>\
+					<td>永華市政中心 ─ 永華市政中心</td>\
+				</tr>\
+				<tr>\
+					<td>營運公司</td>\
+					<td>興南客運</td>\
+				</tr>\
+				<tr>\
+					<td>首／末班車發車時刻</td>\
+					<td>\
+						70右：' + city_bus_70_time_go[0][0]+'／'+city_bus_70_time_go[city_bus_70_time_go.length-1][0] + '<br />\
+						70左：' + city_bus_70_time_return[0][0]+'／'+city_bus_70_time_return[city_bus_70_time_return.length-1][0] +
+					'</td>\
+				</tr>\
+				<tr>\
+					<td>班距</td>\
+					<td>固定班次 尖20離30~60</td>\
+				</tr>\
+				<tr>\
+					<td>收費方式</td>\
+					<td>一段票</td>\
+				</tr>\
+				<tr>\
+					<td>最後修改日期</td>\
+					<td id="last_mod"></td>\
+				</tr>\
+			</table>\
+			<p>　</p>\
+			<a href="http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1070&locale=zh_TW" class="button">公車動態資訊</a>\
+			</div>\
+	</div>\
+</div>');
+	show_update_date(route_file_name);
+	block_fare(1, '<p><span style="font-size:22px; color:blue; font-weight:bold;">通車前三個月(2019/03/05-2019/06/04)持電子票證或現金均可享半價$9優惠，持市民卡則可免費搭乘。</span></p>');
+	document.write('<div id="timetable">\
+	<a name="time"></a>\
+	<div class="title">\
+		<h2>大台南公車 ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
+	</div>\
+	<div class="content">\
+		<h2><span style="color:purple;">70右</span> 往中華北路順時針方向</h2>');
+	document.write(create_time_schedule(city_bus_70_main_stop_name, city_bus_70_main_stop_time_consume, city_bus_70_important_stop, city_bus_70_time_go, false)
+	+ '<p>　</p>\
+		<h2><span style="color:purple;">70左</span> 往健康路逆時針方向</h2>'
+	+ create_time_schedule(city_bus_70_main_stop_name, city_bus_70_main_stop_time_consume, city_bus_70_important_stop, city_bus_70_time_return, true)
+	+ TimeScheduleMSG
+	+ '</div>\
+</div>');
+	block_transfer(transfer_chimei_hospital + transfer_Shangrila);
+	block_copyright();
+</script>
+</body>
+</html>
