@@ -1,21 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	route_name = '88安平線';
+	route_name = '88府城巡迴線';
 	route_name_en = 'No.88';
 	route_file_name = 'tour_bus_88';
 	route_type = 'tour_bus';
-	route_interval = ['臺南公園','觀夕平台'];
-	route_start_stop = '臺南公園';
-	route_end_stop = '觀夕平台';
+	route_interval = ['臺南火車站','臺南火車站'];
 </script>
-<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	title_name = '台灣好行';
-	title_name_en = 'Taiwan Tourist Shuttle';
 	header_code();
 </script>
 </head>
@@ -23,10 +19,62 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'府城客運','平日1小時一班<br />假日30分鐘一班','一段票','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=10211&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
+
+	document.write('<div id="wrapper2">\
+	<a name="info"></a>\
+	<div id="routeinfo" class="container">\
+		<div class="title">\
+			<h2>' + title_name + ' ─ ' + route_name + ' 路線資訊</h2>\
+			<span class="byline">Tainan Bus ' + route_name_en + ', Route Information</span>\
+		</div>\
+		<div class="content">\
+			<table border="0">\
+				<tr>\
+					<td>起迄點</td>\
+					<td>臺南火車站 ─ 臺南火車站</td>\
+				</tr>\
+				<tr>\
+					<td>營運公司</td>\
+					<td>府城客運</td>\
+				</tr>\
+				<tr>\
+					<td>首／末班車發車時刻</td>\
+					<td>\
+						往 臺南火車站：10:00／20:00\
+					</td>\
+				</tr>\
+				<tr>\
+					<td>班距</td>\
+					<td>20分鐘一班</td>\
+				</tr>\
+				<tr>\
+					<td>收費方式</td>\
+					<td>一段票</td>\
+				</tr>\
+				<tr>\
+					<td>最後修改日期</td>\
+					<td>2019/04/02</td>\
+				</tr>\
+			</table>\
+			<p>　</p>\
+			<a href="http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1088&locale=zh_TW" class="button">公車動態資訊</a>\
+		</div>\
+	</div>\
+</div>');
 	block_fare(1,'');
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']], '');
-	block_transfer(transfer_aboriginal_culture_center + transfer_tainan_railway_station + transfer_culture_center);
+	document.write('<div id="timetable">\
+	<a name="time"></a>\
+	<div class="title">\
+		<h2>' + title_name + ' ─ ' + route_name + ' 時刻表</h2>\
+		<span class="byline">Tainan Bus ' + route_name_en + ', Bus schedule</span>\
+	</div>\
+	<div class="content">\
+		<h2><span style="color:purple;">臺南火車站 → 臺南火車站</span></h2>'
+	+ create_time_schedule(tour_bus_88_main_stop_name, tour_bus_88_main_stop_time_consume, tour_bus_88_important_stop, tour_bus_88_time_go, false)
+	+ TimeScheduleMSG
+	+ '</div>\
+</div>');
+	block_transfer(transfer_tainan_railway_station);
 	block_copyright();
 </script>
 </body>

@@ -149,13 +149,22 @@ function get_time(time_str, offset){ // get the time of the stop
 
 function show_time_schedule(type){
 	type = (type=='normal') ? '' : '_'+type;
-	var go_main_stop = eval(route_file_name + type + '_main_stop_name');;
-	var go_time_consume = eval(route_file_name + type + '_main_stop_time_consume');;
-	var go_important_stop = eval(route_file_name + type + '_important_stop');;
+	var go_main_stop = null;
+	var go_time_consume = null;
+	var go_important_stop = null;
 	var return_main_stop = null;
 	var return_time_consume = null;
 	var return_important_stop = null;
 	var isReturn = false;
+	try {
+		go_main_stop = eval(route_file_name + type + '_main_stop_name');
+		go_time_consume = eval(route_file_name + type + '_main_stop_time_consume');
+		go_important_stop = eval(route_file_name + type + '_important_stop');
+	} catch(e) {
+		go_main_stop = eval(route_file_name + '_main_stop_name');
+		go_time_consume = eval(route_file_name + '_main_stop_time_consume');
+		go_important_stop = eval(route_file_name + '_important_stop');
+	}
 	try {
 		return_main_stop = eval(route_file_name + type + '_main_stop_name_return');
 		return_time_consume = eval(route_file_name + type + '_main_stop_time_consume_return');

@@ -119,11 +119,10 @@ urban_77_route = '安平原住民文化會館 ─ 南紡購物中心';
 urban_77_1_route = '安平漁人碼頭 ─ 安平古堡 ─ 安平漁人碼頭<br /><div class="sub_title">安平環線假日公車</div>';
 urban_77_2_route = '安平漁人碼頭 ─ 漁光島 ─ 興達港觀光魚市';
 urban_239_route = '臺南火車站 ─ 太爺 ─ 茄萣';
-urban_tainan_tourist_route = '臺南火車站 ─ 臺南火車站';
 
 tourist_33_route = '新營 ─ 故宮南院 ─ 高鐵嘉義站 ─ 關子嶺　<div class="sub_title">關子嶺故宮南院線</div>';
-tourist_88_route = '臺南公園 ─ 觀夕平台　<div class="sub_title">安平線</div>';
-tourist_99_route = '臺南公園 ─ 四草 ─ 七股鹽山　<div class="sub_title">台江線</div>';
+tourist_88_route = '臺南火車站 ─ 臺南火車站　<div class="sub_title">府城巡迴線</div>';
+tourist_99_route = '臺南公園 ─ 四草 ─ 七股鹽山　<div class="sub_title">安平台江線</div>';
 
 hsr_shuttle_H31_route = '安億橋 ─ 臺南市政府 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷市府線</div>';
 hsr_shuttle_H62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷奇美線</div>';
