@@ -156,13 +156,6 @@
 		"RouteCategory":1
 	},
 	{
-		"RouteCodeName":"tainan_tourist",
-		"RouteName":"府城觀光巡迴巴士",
-		"RouteOSMRelation":8907322,
-		"RouteCategory":8,
-		"OneWayRoute":true
-	},
-	{
 		"RouteCodeName":"red",
 		"RouteName":"紅幹線",
 		"RouteOSMRelation":3905767,
@@ -809,10 +802,11 @@
 	},
 	{
 		"RouteCodeName":"tour_bus_88",
-		"RouteName":"88安平線",
+		"RouteName":"88府城巡迴線",
 		"RouteOSMRelation":4099165,
 		"RouteCode":10211,
-		"RouteCategory":8
+		"RouteCategory":8,
+		"OneWayRoute":true
 	},
 	{
 		"RouteCodeName":"tour_bus_33",
@@ -823,7 +817,7 @@
 	},
 	{
 		"RouteCodeName":"tour_bus_99",
-		"RouteName":"99台江線",
+		"RouteName":"99安平台江線",
 		"RouteOSMRelation":4100797,
 		"RouteCode":10210,
 		"RouteCategory":8
