@@ -176,11 +176,9 @@ transfer_tainan_railway_station = '<tr><th rowspan="9">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '、' + link_highway_bus_8050 + '</td></tr>';
 
-transfer_Shangrila = '<tr><th rowspan="4">香格里拉大飯店</th>\
+transfer_Shangrila = '<tr><th rowspan="3">香格里拉大飯店</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><span style="color:#00AAFF;">台鐵臺南站</span></td></tr>\
-<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
-	<td id="tour_bus">' + link_tour_bus_99 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_sightseeing_eastern + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
@@ -240,13 +238,11 @@ transfer_taiwan_history_museum = '<tr><th>臺灣歷史博物館</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus">' + link_city_bus_18 + '、' + link_city_bus_20 + '</td></tr>';
 
-transfer_aboriginal_culture_center = '<tr><th rowspan="3">原住民文化會館</th>\
+transfer_aboriginal_culture_center = '<tr><th rowspan="2">原住民文化會館</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus">' + link_city_bus_19 + '、' + link_city_bus_77 + '、' + link_city_bus_77_2 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
-	<td id="hsr_shuttle">' + link_hsr_shuttle_H31 + '</td></tr>\
-<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
-	<td id="tour_bus">' + link_tour_bus_88 + '</td></tr>';
+	<td id="hsr_shuttle">' + link_hsr_shuttle_H31 + '</td></tr>';
 
 transfer_anping_fishermans_wharf = '<tr><th rowspan="2">安平漁人碼頭</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\

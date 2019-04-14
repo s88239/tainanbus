@@ -74,7 +74,7 @@ orange_20_route = '大內 ─ 環湖 ─ 玉井';
 
 yellow_route = '白河 ─ 新營 ─ 柳營 ─ 麻豆';
 yellow_1_route = '新營 ─ 柳營 ─ 六甲 ─ 南藝大';
-yellow_2_route = '新營 ─ 柳營 ─ 六甲 ─ 王爺宮';
+yellow_2_route = '新營 ─ 六甲 ─ 王爺宮 ─ 西口小瑞士';
 yellow_3_route = '新營 ─ 柳營 ─ 果毅後 ─ 德元埤';
 yellow_4_route = '新營 ─ 二重溪 ─ 六甲';
 yellow_5_route = '新營 ─ 紅毛厝 ─ 下營';

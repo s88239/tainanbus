@@ -26,9 +26,15 @@ yellow_1_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-yellow_1_main_stop_name = ["新營站","柳營","龜子港<br />(省道)","林鳳營<br />火車站","六甲","烏山頭<br />水庫","臺南<br />藝術大學"];
+yellow_1_main_stop_name = ["新營站","柳營","龜子港<br />(省道)","林鳳營","六甲","烏山頭<br />水庫","臺南<br />藝術大學"];
 yellow_1_main_stop_time_consume = [0, 9, 14, 17, 29, 34, 40];
-yellow_1_important_stop = [0, 3, 4, 5, 6]; // 新營站, 林鳳營火車站, 六甲, 烏山頭水庫, 臺南藝術大學
-var main_end_stop = 4; // 六甲
-yellow_1_time_go = [["06:00",0,main_end_stop],["06:50",0,main_end_stop],["08:25"],["09:30"],["12:20"],["13:10"],["15:10"],["17:20",0,main_end_stop],["18:50",0,main_end_stop]];
-yellow_1_time_return = [["06:35",main_end_stop,0],["07:30",main_end_stop,0],["09:15"],["10:20"],["13:10"],["14:00"],["16:00"],["18:10",main_end_stop,0],["19:30",main_end_stop,0]];
+yellow_1_important_stop = [0, 4, 5, 6]; // 新營站, 六甲, 烏山頭水庫, 臺南藝術大學
+var Sinying = 0; // 新營站
+var Liouying = 1; // 柳營
+var Gueizihgang = 2; // 龜子港(省道)
+var Linfongying = 3; // 林鳳營
+var Lioujia = 4; // 六甲
+yellow_1_time_go = [["06:00",Sinying,Lioujia],["06:50",Sinying,Lioujia],["08:25"],["09:30"],["12:20"],["13:10"],["15:10"],["17:20",Sinying,Lioujia],["18:50",Sinying,Lioujia],
+["21:10",Sinying,Lioujia,[[Liouying,-2,Gueizihgang,-1,Lioujia,-1]]]];
+yellow_1_time_return = [["06:35",Lioujia,Sinying],["07:30",Lioujia,Sinying],["09:15"],["10:20"],["13:10"],["14:00"],["16:00"],["18:10",Lioujia,Sinying],["19:30",Lioujia,Sinying],
+["21:40",Lioujia,Sinying,[[Linfongying,-3,Liouying,-2,Sinying,-2]]]];

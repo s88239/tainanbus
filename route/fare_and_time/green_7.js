@@ -22,5 +22,5 @@ green_7_main_stop_time_consume = [0, 10, 13, 18, 21, 25];
 green_7_important_stop = [0, 1, 5]; // 新化, 新市火車站, 大社
 var start_stop = 0; // 新化
 var end_stop = 1; // 新市火車站
-green_7_time_go = [["06:50",start_stop,end_stop],["07:10"],["10:00"],["17:25"],["17:40",start_stop,end_stop]];
+green_7_time_go = [["06:50",start_stop,end_stop],["07:20"],["10:00"],["17:25"],["17:40",start_stop,end_stop]];
 green_7_time_return = [["06:25"],["07:00",end_stop,start_stop],["13:10"],["15:35"],["17:50",end_stop,start_stop]];

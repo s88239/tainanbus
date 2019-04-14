@@ -33,13 +33,13 @@ green_16_time_go = [["05:50",start_stop,stop_2,[skip_stop,'豐']],["07:00",start
 ["10:00",start_stop,stop_1,[skip_stop]],["11:00",[skip_stop]],["12:00",start_stop,stop_1,[[2,5]]],
 ["13:00",start_stop,stop_1,[skip_stop]],["14:00",[skip_stop]],["15:00",start_stop,stop_1,[skip_stop]],
 ["16:10",start_stop,stop_1,[skip_stop]],["17:25",start_stop,stop_1,[[2,5]]],["18:55",[skip_stop]],
-["19:10",start_stop,stop_1,[skip_stop]],["20:00",start_stop,stop_1,[skip_stop]],["21:00",start_stop,stop_1,[skip_stop]],
-["21:30",start_stop,stop_1,[skip_stop]]
+["19:20",start_stop,stop_1,[skip_stop]],["20:00",start_stop,stop_1,[skip_stop]],["21:00",start_stop,stop_1,[skip_stop]],
+["22:00",start_stop,stop_1,[skip_stop]]
 ];
 green_16_time_return = [["06:20",stop_2,start_stop,[skip_stop,'豐']],["07:30",stop_1,start_stop,[[skip_stop,5]]],
 ["09:15",[skip_stop]],["10:25",stop_1,start_stop,[skip_stop]],["11:45",[skip_stop]],["12:30",stop_1,start_stop,[[skip_stop,5]]],
 ["13:25",stop_1,start_stop,[skip_stop]],["14:45",[skip_stop]],["15:25",stop_1,start_stop,[skip_stop]],
-["16:35",stop_1,start_stop,[skip_stop]],["17:55",stop_1,start_stop,[[skip_stop,5]]],["19:35",stop_1,start_stop,[skip_stop]],
+["16:35",stop_1,start_stop,[skip_stop]],["17:55",stop_1,start_stop,[[skip_stop,5]]],["19:40",stop_1,start_stop,[skip_stop]],
 ["19:40",[skip_stop]],["20:25",stop_1,start_stop,[skip_stop]],["21:25",stop_1,start_stop,[skip_stop]],
-["21:55",stop_1,start_stop,[skip_stop]]
+["22:25",stop_1,start_stop,[skip_stop]]
 ];

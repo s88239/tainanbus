@@ -31,12 +31,24 @@ yellow_4_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 yellow_4_main_stop_name = ["新營站","柳營奇<br />美醫院","法主宮","明聖殿","小腳腿","山仔腳","二重溪","果毅後<br />廟前","六甲"];
-yellow_4_main_stop_time_consume = [0, 13, 17, 19, 23, 30, 34, 40, 50];
+yellow_4_main_stop_time_consume = [0, 11, 17, 19, 23, 28, 33, 40, 50];
 yellow_4_important_stop = [0, 1, 4, 8]; // 新營站, 柳營奇美醫院, 小腳腿, 六甲
 var Sinying = 0; // 新營站
 var Liouying_Chi_Mei_Hospital = 1; // 柳營奇美醫院
+var Fajhu_Temple = 2; // 法主宮
+var Mingsheng_Temple = 3; // 明聖殿
 var Siaojiaotuei = 4; // 小腳腿
+var Shanzihjiao = 5; // 山仔腳
+var Erchong_River = 6; // 二重溪
+var Guoyihou_Temple = 7; // 果毅後廟前
 var Lioujia = 8; // 六甲
-yellow_4_time_go = [["06:40"],["08:40"],["10:10"],["12:10"],["14:00"],["16:15"],["18:45"]];
-yellow_4_time_return = [["05:50",[Liouying_Chi_Mei_Hospital,[Lioujia-1,-2,Lioujia-2,2]]],["07:40",[[Siaojiaotuei,1,Liouying_Chi_Mei_Hospital,1,Sinying,-2]]],["09:40",[[Siaojiaotuei,1,Liouying_Chi_Mei_Hospital,1,Sinying,-2]]],
-["11:10",[[Lioujia-1,-1,Liouying_Chi_Mei_Hospital,1,Sinying,-2]]],["13:10",[[Lioujia-1,-1,Liouying_Chi_Mei_Hospital,1,Sinying,-2]]],["14:55",[[Liouying_Chi_Mei_Hospital,1,Sinying,-1]]],["17:15",[[Siaojiaotuei,1,Liouying_Chi_Mei_Hospital,1,Sinying,-2]]]];
+yellow_4_time_go = [["06:40",[[Liouying_Chi_Mei_Hospital,-1,Mingsheng_Temple,1,Siaojiaotuei,-1,Erchong_River,-1,Guoyihou_Temple,2]]],
+["08:40"],["10:10"],["12:10"],["14:00"],["16:15",[[Liouying_Chi_Mei_Hospital,1,Shanzihjiao,1,Lioujia,-2]]],
+["18:45",[[Shanzihjiao,1,Guoyihou_Temple,-1]]]];
+yellow_4_time_return = [["05:50",[Liouying_Chi_Mei_Hospital,[Guoyihou_Temple,-2,Fajhu_Temple,1,Sinying,1]]],
+["07:45",[[Guoyihou_Temple,-1,Erchong_River,-1,Fajhu_Temple,1,Sinying,1]]],
+["09:45",[[Guoyihou_Temple,-1,Erchong_River,-1,Fajhu_Temple,1,Sinying,1]]],
+["11:15",[[Guoyihou_Temple,-1,Erchong_River,-1,Fajhu_Temple,1,Liouying_Chi_Mei_Hospital,-1,Sinying,2]]],
+["13:15",[[Guoyihou_Temple,-1,Erchong_River,-1,Fajhu_Temple,1,Liouying_Chi_Mei_Hospital,-1,Sinying,2]]],
+["15:05",[[Guoyihou_Temple,-1,Fajhu_Temple,1,Liouying_Chi_Mei_Hospital,-1,Sinying,1]]],
+["17:25",[[Guoyihou_Temple,-1,Fajhu_Temple,1]]]];
