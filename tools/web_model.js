@@ -53,10 +53,9 @@ function header_code(){
 function block_header(){
 	document.write('<div id="header-wrapper">\
 	<div id="header" class="container">\
-		<div id="logo">\
-			<h1><a href="../index.html">Tainan Bus for FUN</a></h1>\
+		<div id="logo" style="padding-top: 10px;">\
 			<p align="center">\
-			<a href="index.html"><img src="../img/' + route_type + '_logo.png"></a>\
+			<a href="index.html"><img src="../img/' + route_type + '_logo.png" alt="Tainan Bus for FUN"></a>\
 			</p>\
 		</div>\
 		<div id="menu">\
