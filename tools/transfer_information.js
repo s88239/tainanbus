@@ -72,6 +72,7 @@ link_orange_5 = '<a href="../orange/orange_5.html" target="_blank">橘5</a>';
 link_orange_10 = '<a href="../orange/orange_10.html" target="_blank">橘10</a>';
 link_orange_10_1 = '<a href="../orange/orange_10-1.html" target="_blank">橘10-1</a>';
 link_orange_11 = '<a href="../orange/orange_11.html" target="_blank">橘11</a>';
+link_orange_11_1 = '<a href="../orange/orange_11-1.html" target="_blank">橘11-1</a>';
 link_orange_12 = '<a href="../orange/orange_12.html" target="_blank">橘12</a>';
 link_orange_20 = '<a href="../orange/orange_20.html" target="_blank">橘20</a>';
 
@@ -172,7 +173,7 @@ transfer_tainan_railway_station = '<tr><th rowspan="9">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red">' + link_red + '、' + link_red_1 + '、' + link_red_2 + '、' + link_red_3 + '、' + link_red_4 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '、' + link_orange_12 + '</td></tr>\
+	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '、' + link_orange_11_1 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '、' + link_highway_bus_8050 + '</td></tr>';
 
@@ -270,7 +271,7 @@ transfer_shigang = '<tr><th rowspan="2">西港</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
 	<td id="blue">' + link_blue + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange_11 + '</td></tr>';
+	<td id="orange">' + link_orange_11 + '、' + link_orange_11_1 + '</td></tr>';
 
 transfer_syuejia = '<tr><th rowspan="2">學甲</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'brown_transfer_logo.png"></td>\
@@ -402,7 +403,7 @@ transfer_hsr_chiayi_station = '<tr><th rowspan="4">高鐵嘉義站</th>\
 transfer_madou = '<tr><th rowspan="2">麻豆轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange"><p>' + link_orange + '、' + link_orange_10 + '、' + link_orange_10_1 + '、' + link_orange_11 + '、</p>'
-	+ link_orange_12 + '</td></tr>\
+	+ link_orange_11_1 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow + '、' + link_yellow_20 + '</td></tr>';
 

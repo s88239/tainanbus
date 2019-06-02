@@ -69,6 +69,7 @@ orange_5_route = '善化轉運站 ─ 官田 ─ 六甲';
 orange_10_route = '大地莊園 ─ 麻豆 ─ 官田 ─ 南藝大';
 orange_10_1_route = '麻豆 ─ 隆田火車站 ─ 官田工業區';
 orange_11_route = '下營 ─ 麻豆 ─ 西港 ─ 臺南公園';
+orange_11_1_route = '下營 ─ 麻豆 ─ 西港 ─ 臺南公園<br /><div class="sub_title">麻豆臺南直達車</div>';
 orange_12_route = '麻豆 ─ 善化 ─ 新市 ─ 臺南公園';
 orange_20_route = '大內 ─ 環湖 ─ 玉井';
 
