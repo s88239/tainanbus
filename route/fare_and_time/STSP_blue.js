@@ -24,5 +24,5 @@ STSP_blue_main_stop_time_consume_return = [0, 2, 4, 5, 8, 9, 12, 14, 18, 24, 26,
 STSP_blue_important_stop_return = [0, 4, 6, 8]; // Park 17商場, 瀚宇彩晶, 華園宿舍, 臺鐵南科站
 var LM_list = [9, 10, 11];
 var return_stop_1 = 12;
-STSP_blue_time_return = [["17:15",LM_list],["17:37",LM_list],["17:42",[[return_stop_1,11]]],["17:53",LM_list],["18:08",LM_list],["18:45",LM_list],["18:46",LM_list],["18:53",LM_list],["19:14",LM_list],["19:40",LM_list],
+STSP_blue_time_return = [["17:15",LM_list],["17:37",LM_list],["17:42",[[return_stop_1,11]]],["17:53",LM_list],["18:08",LM_list],["18:21",LM_list],["18:46",LM_list],["18:53",LM_list],["19:14",LM_list],["19:40",LM_list],
 ["20:09",LM_list],["20:39",LM_list],["21:05",LM_list]];
