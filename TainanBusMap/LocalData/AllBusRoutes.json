@@ -816,6 +816,13 @@
 		"OneWayRoute":true
 	},
 	{
+		"RouteCodeName":"tour_bus_33",
+		"RouteName":"33關子嶺線",
+		"RouteOSMRelation":7487321,
+		"RouteCode":1033,
+		"RouteCategory":8
+	},
+	{
 		"RouteCodeName":"tour_bus_99",
 		"RouteName":"99安平台江線",
 		"RouteOSMRelation":4100797,
