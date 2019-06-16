@@ -1,7 +1,7 @@
 yellow_6_1_interval_name = ["新營","埤寮","新港東","頂長<br />短樹","菁寮","後壁<br />區公所","大路墘","土溝<br />代天府","顯濟宮","小南海<br />風景區","林初埤","大排竹","白河站"];
 yellow_6_1_interval_stop = [ // 2015.7.5 checked
 ["新營站","中營興業里","圓環(第一銀行)","新營文化中心","新營區公所","新營高工","中正世家"], // 新營
-["電力公司","許丑","埤寮"], // 埤寮
+["電力公司","許丑","埤寮","天鵝湖公園"], // 埤寮
 ["新港東"], // 新港東
 ["下長短樹","頂長短樹"], // 頂長短樹
 ["菁寮","菁寮國小","菁豐里"], // 菁寮
@@ -33,7 +33,12 @@ yellow_6_1_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 yellow_6_1_main_stop_name = ["新營站","電力公司","菁寮","後壁<br />火車站","土溝<br />代天府","小南海<br />風景區","林初埤","白河站"];
-yellow_6_1_main_stop_time_consume = [0, 6, 20, 28, 35, 44, 55, 63];
+yellow_6_1_main_stop_time_consume = [0, 6, 17, 25, 30, 36, 47, 60];
 yellow_6_1_important_stop = [0, 3, 7]; // 新營站, 後壁區公所, 白河站
+var Sinying = 0; // 新營站
+var Linchu_Reservoir = 6; // 林初埤
 yellow_6_1_time_go = [["07:30"],["08:30"],["10:10"],["11:10"],["13:10"],["14:10"],["15:40"],["16:40"]];
-yellow_6_1_time_return = [["08:40"],["09:40"],["11:20"],["12:20"],["14:20"],["15:20"],["16:50"],["17:50"]];
+yellow_6_1_time_return = [["08:40",[[Linchu_Reservoir,-5,Sinying,5]]],["09:40",[[Linchu_Reservoir,-5,Sinying,5]]],
+["11:20",[[Linchu_Reservoir,-5,Sinying,5]]],["12:20",[[Linchu_Reservoir,-5,Sinying,5]]],
+["14:20",[[Linchu_Reservoir,-5,Sinying,5]]],["15:20",[[Linchu_Reservoir,-5,Sinying,5]]],
+["16:50",[[Linchu_Reservoir,-5,Sinying,5]]],["17:50",[[Linchu_Reservoir,-5,Sinying,5]]]];
