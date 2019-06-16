@@ -121,7 +121,7 @@ urban_77_1_route = '安平漁人碼頭 ─ 安平古堡 ─ 安平漁人碼頭<b
 urban_77_2_route = '安平漁人碼頭 ─ 漁光島 ─ 興達港觀光魚市';
 urban_239_route = '臺南火車站 ─ 太爺 ─ 茄萣';
 
-tourist_33_route = '新營 ─ 故宮南院 ─ 高鐵嘉義站 ─ 關子嶺　<div class="sub_title">關子嶺故宮南院線</div>';
+tourist_33_route = '高鐵嘉義站 ─ 故宮南院 ─ 關子嶺　<div class="sub_title">關子嶺故宮南院線</div>';
 tourist_88_route = '臺南火車站 ─ 臺南火車站　<div class="sub_title">府城巡迴線</div>';
 tourist_99_route = '臺南公園 ─ 觀夕平台 ─ 七股鹽山　<div class="sub_title">安平台江線</div>';
 
