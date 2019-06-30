@@ -808,19 +808,26 @@
 		"RouteCategory":7
 	},
 	{
+		"RouteCodeName":"tour_bus_33",
+		"RouteName":"33關子嶺線",
+		"RouteOSMRelation":7487321,
+		"RouteCode":1033,
+		"RouteCategory":8
+	},
+	{
+		"RouteCodeName":"tour_bus_61",
+		"RouteName":"61西濱線",
+		"RouteOSMRelation":9212563,
+		"RouteCode":1061,
+		"RouteCategory":8
+	},
+	{
 		"RouteCodeName":"tour_bus_88",
 		"RouteName":"88府城巡迴線",
 		"RouteOSMRelation":4099165,
 		"RouteCode":10211,
 		"RouteCategory":8,
 		"OneWayRoute":true
-	},
-	{
-		"RouteCodeName":"tour_bus_33",
-		"RouteName":"33關子嶺線",
-		"RouteOSMRelation":7487321,
-		"RouteCode":1033,
-		"RouteCategory":8
 	},
 	{
 		"RouteCodeName":"tour_bus_99",

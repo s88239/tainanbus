@@ -14,6 +14,33 @@ tour_bus_99_time_go = [["08:45",start_stop,end_stop],["10:45",start_stop,end_sto
 tour_bus_99_time_return = [["10:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-8,Sunset_Platform,-2]]],["12:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-8,Sunset_Platform,-2]]],["16:15",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-8,Sunset_Platform,-2]]]];
 // holiday schedule
 tour_bus_99_holiday_time_go = [
+["08:20",start_stop,end_stop],["08:50",start_stop,end_stop],
+["09:20",start_stop,end_stop],["09:50",start_stop,end_stop],["10:20",start_stop,end_stop],
+["10:50",start_stop,end_stop],["11:20",start_stop,end_stop],["11:50",start_stop,end_stop],
+["12:20",start_stop,end_stop],["12:50",start_stop,end_stop],["13:20",start_stop,end_stop],
+["13:50",start_stop,end_stop],["14:20",start_stop,end_stop],["14:50",start_stop,end_stop],
+["15:20",start_stop,end_stop],["15:50",start_stop,end_stop],["16:20",start_stop,end_stop],
+["16:50",start_stop,Sunset_Platform],["17:20",start_stop,Sunset_Platform],["17:50",start_stop,Sunset_Platform],
+["18:20",start_stop,Sunset_Platform],["19:00",start_stop,Sunset_Platform]
+];
+tour_bus_99_holiday_time_return = [
+["10:30",end_stop,start_stop],["11:00",end_stop,start_stop],
+["11:30",end_stop,start_stop],["12:00",end_stop,start_stop],
+["12:30",end_stop,start_stop],["13:00",end_stop,start_stop],
+["13:30",end_stop,start_stop],
+["14:00",end_stop,start_stop],["14:30",end_stop,start_stop],
+["15:00",end_stop,start_stop],
+["15:30",end_stop,start_stop],["16:00",end_stop,start_stop],
+["16:30",end_stop,start_stop],
+["17:00",end_stop,start_stop],["17:30",end_stop,start_stop],
+["18:00",Sunset_Platform,start_stop],
+["18:00",end_stop,start_stop],
+["18:30",Sunset_Platform,start_stop],
+["18:30",end_stop,start_stop],
+["19:00",Sunset_Platform,start_stop],["19:30",Sunset_Platform,start_stop]
+];
+// holiday schedule with bird watching
+tour_bus_99_holidaybird_time_go = [
 ["08:30",start_stop,end_stop],["09:00",start_stop,end_stop],
 ["10:55",end_stop,bird_watching],
 ["09:30",start_stop,end_stop],["10:00",start_stop,end_stop],["10:30",start_stop,end_stop],
@@ -28,7 +55,7 @@ tour_bus_99_holiday_time_go = [
 ["17:00",start_stop,Sunset_Platform],["17:30",start_stop,Sunset_Platform],["18:00",start_stop,Sunset_Platform],
 ["18:30",start_stop,Sunset_Platform],["19:00",start_stop,Sunset_Platform]
 ];
-tour_bus_99_holiday_time_return = [
+tour_bus_99_holidaybird_time_return = [
 ["10:20",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-8,Sunset_Platform,-2]]],["10:50",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-8,Sunset_Platform,-2]]],
 ["11:20",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-8,Sunset_Platform,-2]]],["11:50",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-8,Sunset_Platform,-2]]],
 ["11:40",bird_watching,end_stop],
@@ -90,5 +117,5 @@ tour_bus_99_summervacation_time_return = [
 ["14:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
 ["15:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
 ["16:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
-["18:10",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]]
+["18:15",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]]
 ];

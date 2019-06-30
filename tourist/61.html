@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '61西濱快線';
+	route_name_en = 'No.61';
+	route_file_name = 'tour_bus_61';
+	route_type = 'tour_bus';
+	route_interval = ['新營','布袋商港','臺灣鹽博物館'];
+</script>
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	title_name = '台灣好行';
+	title_name_en = 'Taiwan Tourist Shuttle';
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1061&locale=zh_TW');
+	block_fare(0,'');
+	block_time_schedule('新營站','臺灣鹽博物館','<span style="color:red;font-weight:bold;font-size:28px;">每週五、六、日、一與國定假日行駛</span>\
+		<center><div style="text-align: left; width: 520px; border:solid 1px; margin-top: 30px; background-color: #BBFFBB; padding: 15px;"><span style="color:navy;font-weight:bold;font-size:20px;">DRTS預約班次(為郵輪式列車，每周­二、三、四):</span><br /><br />\
+			1. 12-14人以上成行(預約人數最多22人)<br />\
+			2. 每人收費500元(含保險，餐食自理。)<br />\
+			3. 由遊客自行規劃時間行程(巴士運行時間以10:00-18:00為主)，如執行上有疑問，將另有專人與您聯繫。<br />\
+			4. 電話預約，出發日10天前截止報名。遊程當天於新營客運總站繳交現金。<br />\
+			5. DRTS班次預約:(02)8773-0236#231。</div></center>');
+	block_transfer(transfer_hsinyin + transfer_yanshui + transfer_south_kunshen + transfer_beimen_district_office + transfer_jiangjyun_fish_port + transfer_cigu_salt_mountain);
+	block_copyright();
+</script>
+</body>
+</html>
