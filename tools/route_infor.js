@@ -57,7 +57,7 @@ brown_2_route = '新營 ─ 鹽水 ─ 下中';
 brown_3_route = '新營 ─ 鹽水 ─ 南港里';
 brown_3_1_route = '新營 ─ 鐵線里';
 brown_10_route = '學甲 ─ 麻豆';
-brown_11_route = '學甲 ─ 頂洲';
+brown_11_route = '學甲 ─ 頑皮世界';
 
 orange_route = '佳里 ─ 麻豆 ─ 善化 ─ 玉井';
 orange_1_route = '善化轉運站 ─ 大內 ─ 環湖 ─ 蒙正';
