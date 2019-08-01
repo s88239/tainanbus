@@ -364,6 +364,11 @@ transfer_yongkang = '<tr><th>永康</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green">' + link_green + '、' + link_green_5 + '</td></tr>';
 
+transfer_zuozhen_agricultural_product_market = '<tr><th>左鎮果菜市場</th>\
+<td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
+	<td id="green"><p>' + link_green + '、' + link_green_12 + '</p>'
+	+ link_green_13 + '<font color="#FFFFFF" size="-1">(需步行一站至左鎮區公所搭乘)</font></td></tr>';
+
 transfer_zuozhen_district_office = '<tr><th>左鎮區公所</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'green_transfer_logo.png"></td>\
 	<td id="green"><p>' + link_green_12 + '、' + link_green_13 + '</p>'
