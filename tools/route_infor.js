@@ -94,7 +94,7 @@ yellow_12_2_route = '關子嶺 ─ 水火同源 ─ 關子嶺<br /><div class="s
 yellow_13_route = '白河 ─ 關子嶺 ─ 南寮';
 yellow_14_route = '白河 ─ 三層崎';
 yellow_14_1_route = '白河 ─ 甘宅 ─ 內角';
-yellow_15_route = '白河 ─ 蓮花公園 ─ 詔安厝<br /><div class="sub_title">假日賞蓮公車</div>';
+yellow_15_route = '白河 ─ 詔安厝';
 yellow_16_route = '白河 ─ 東山 ─ 六甲 ─ 隆田火車站';
 yellow_20_route = '麻豆 ─ 下營 ─ 林鳳營火車站';
 
