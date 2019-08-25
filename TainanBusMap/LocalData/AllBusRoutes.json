@@ -863,6 +863,12 @@
 		"RouteCategory":9
 	},
 	{
+		"RouteCodeName":"hsr_shuttle_166",
+		"RouteName":"166",
+		"RouteOSMRelation":9965005,
+		"RouteCategory":9
+	},
+	{
 		"RouteCodeName":"STSP_red",
 		"RouteName":"南科巡迴巴紅線(北環東線)",
 		"RouteOSMRelation":7792170,

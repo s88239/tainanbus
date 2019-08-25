@@ -44,7 +44,8 @@
 			if(count($str_sec)>2) $branch_flag = true;
 			break;
 		case 'hsr':
-			$ch_name = '高鐵快捷公車'.strtoupper($str_sec[2]);
+			if($str_sec[2]=='166') $ch_name = '嘉義縣市區公車-'.strtoupper($str_sec[2]).'路電動巴士';
+			else $ch_name = '高鐵快捷公車'.strtoupper($str_sec[2]);
 			break;
 		case 'tour':
 			$ch_name = '台灣好行'.$str_sec[2].'路';

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	route_name = '166電動巴士';
+	route_name = '166路電動巴士';
 	route_name_en = 'No.166';
 	route_file_name = 'hsr_shuttle_166';
 	route_type = 'hsr_shuttle';
@@ -13,7 +13,6 @@
 <script type="text/javascript">
 	title_name = '嘉義縣市區公車';
 	title_name_en = 'Urban Bus of Chiayi County';
-	map_display = false;
 	header_code();
 </script>
 </head>
@@ -22,7 +21,7 @@
 	block_header();
 	block_route_map(null);
 	block_route_info(route_interval,'阿里山客運','','里程計費','http://www.taiwanbus.tw/information.aspx?Lang=Cht&Line=10342');
-	block_fare(10, '');
+	block_fare(10, '<h3>108年7月1日至108年12月31日止，搭乘166路公車只需要10元(不限里程)。</h3>');
 	block_time_schedule('鹽水','高鐵嘉義站','');
 	block_transfer(transfer_yanshui + transfer_hsr_chiayi_station);
 	block_copyright();
