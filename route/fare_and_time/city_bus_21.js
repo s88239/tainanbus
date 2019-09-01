@@ -1,7 +1,7 @@
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-city_bus_21_main_stop_name = ["臺南<br />火車站","臺南公園<br />(公園路)","小北商場","六甲頂","南臺科大","鹽行","蔦松","永康工業區<br />服務中心","台灣金屬<br />創意館","永康休閒<br />育樂中心"];
+city_bus_21_main_stop_name = ["臺南<br />火車站","臺南<br />轉運站","小北商場","六甲頂","南臺科大","鹽行","蔦松","永康工業區<br />服務中心","台灣金屬<br />創意館","永康休閒<br />育樂中心"];
 city_bus_21_main_stop_time_consume = [0, 5, 9, 15, 22, 30, 40, 50, 53, 55];
 city_bus_21_important_stop = [0, 4, 5, 9]; // 臺南火車站, 南臺科大, 鹽行, 永康休閒娛樂中心
 city_bus_21_time_go = [["06:15"],["06:40"],["07:15"],["07:55"],["08:40"],["09:20"],["10:00"],["10:40"],
