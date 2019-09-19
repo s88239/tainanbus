@@ -918,14 +918,14 @@
 		"RouteCategory":9
 	},
 	{
-		"RouteCodeName":"highway_bus_8046",
-		"RouteName":"8046(高南雙城快線)",
+		"RouteCodeName":"highway_bus_8046A",
+		"RouteName":"8046A",
 		"RouteOSMRelation":7998024,
 		"RouteCategory":9
 	},
 	{
-		"RouteCodeName":"highway_bus_8046A",
-		"RouteName":"8046A(高南雙城快線)",
+		"RouteCodeName":"highway_bus_8046B",
+		"RouteName":"8046B(高南雙城快線)",
 		"RouteOSMRelation":7997617,
 		"RouteCategory":9
 	}

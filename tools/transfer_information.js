@@ -143,8 +143,8 @@ link_highway_bus_7410 = '<a href="../highway/7410.html" target="_blank">7410</a>
 link_highway_bus_8035 = '<a href="../highway/8035.html" target="_blank">8035</a>';
 link_highway_bus_8041C = '<a href="../highway/8041C.html" target="_blank">8041C</a>';
 link_highway_bus_8042 = '<a href="../highway/8042.html" target="_blank">8042 <div class="sub_title">沙旗美月世界快線</div></a>';
-link_highway_bus_8046A = '<a href="../highway/8046A.html" target="_blank">8046A <div class="sub_title">高南雙城快線</div></a>';
-link_highway_bus_8046 = '<a href="../highway/8046.html" target="_blank">8046</a>';
+link_highway_bus_8046A = '<a href="../highway/8046A.html" target="_blank">8046A</a>';
+link_highway_bus_8046B = '<a href="../highway/8046B.html" target="_blank">8046B <div class="sub_title">高南雙城快線</div></a>';
 link_highway_bus_8050 = '<a href="../highway/8050.html" target="_blank">8050</a>';
 
 link_STSP_red = '<a href="../STSP/STSP_red.html" target="_blank">南科紅線</a>';
@@ -176,7 +176,7 @@ transfer_tainan_railway_station = '<tr><th rowspan="9">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
 	<td id="orange">' + link_orange_3 + '、' + link_orange_11 + '、' + link_orange_11_1 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '、' + link_highway_bus_8050 + '</td></tr>';
+	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046B + '、' + link_highway_bus_8050 + '</td></tr>';
 
 transfer_Shangrila = '<tr><th rowspan="3">香格里拉大飯店</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
@@ -584,7 +584,7 @@ transfer_Chia_Nan_University = '<tr><th rowspan="3">嘉南藥理大學</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
 	<td id="red">' + link_red_3 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_highway_bus_8041C + '、' + link_highway_bus_8046A + '、' + link_highway_bus_8046 + '</td></tr>';
+	<td id="tour_bus">' + link_highway_bus_8041C + '、' + link_highway_bus_8046A + '、' + link_highway_bus_8046B + '</td></tr>';
 
 transfer_cigu_salt_mountain = '<tr><th rowspan="2">七股鹽山</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'blue_transfer_logo.png"></td>\
