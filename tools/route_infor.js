@@ -96,6 +96,7 @@ yellow_14_route = '白河 ─ 三層崎';
 yellow_14_1_route = '白河 ─ 甘宅 ─ 內角';
 yellow_15_route = '白河 ─ 詔安厝';
 yellow_16_route = '白河 ─ 東山 ─ 六甲 ─ 隆田火車站';
+yellow_16_1_route = '白河 ─ 後壁火車站 ─ 高鐵嘉義站';
 yellow_20_route = '麻豆 ─ 下營 ─ 林鳳營火車站';
 
 urban_0_route = '臺南火車站 ─ 體育公園 ─ 臺南火車站';
@@ -125,6 +126,7 @@ tourist_33_route = '高鐵嘉義站 ─ 故宮南院 ─ 關子嶺　<div class=
 tourist_61_route = '新營 ─ 布袋商港 ─ 臺灣鹽博物館　<div class="sub_title">西濱快線</div>';
 tourist_88_route = '臺南火車站 ─ 臺南火車站　<div class="sub_title">府城巡迴線</div>';
 tourist_99_route = '臺南轉運站 ─ 觀夕平台 ─ 七股鹽山　<div class="sub_title">安平台江線</div>';
+tourist_the_making_of_an_ordinary_woman_route = '高鐵嘉義站 ─ 菁寮';
 
 hsr_shuttle_H31_route = '安億橋 ─ 臺南市政府 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷市府線</div>';
 hsr_shuttle_H62_route = '桂田酒店 ─ 奇美醫院 ─ 高鐵臺南站　<div class="sub_title">高鐵快捷奇美線</div>';

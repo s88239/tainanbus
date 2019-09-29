@@ -99,6 +99,7 @@ link_yellow_14 = '<a href="../yellow/yellow_14.html" target="_blank">黃14</a>';
 link_yellow_14_1 = '<a href="../yellow/yellow_14-1.html" target="_blank">黃14-1</a>';
 link_yellow_15 = '<a href="../yellow/yellow_15.html" target="_blank">黃15</a>';
 link_yellow_16 = '<a href="../yellow/yellow_16.html" target="_blank">黃16</a>';
+link_yellow_16_1 = '<a href="../yellow/yellow_16-1.html" target="_blank">黃16-1</a>';
 link_yellow_20 = '<a href="../yellow/yellow_20.html" target="_blank">黃20</a>';
 
 link_city_bus_0 = '<a href="../urban/0.html" target="_blank">0左/右</a>';
@@ -127,6 +128,7 @@ link_tour_bus_33 = '<a href="../tourist/33.html" target="_blank">33 <div class="
 link_tour_bus_61 = '<a href="../tourist/61.html" target="_blank">61 <div class="sub_title">西濱快線</div></a>';
 link_tour_bus_88 = '<a href="../tourist/88.html" target="_blank">88 <div class="sub_title">府城巡迴線</div></a>';
 link_tour_bus_99 = '<a href="../tourist/99.html" target="_blank">99 <div class="sub_title">安平台江線</div></a>';
+link_tour_bus_the_making_of_an_ordinary_woman_route = '<a href="../tourist/the_making_of_an_ordinary_woman.html" target="_blank">俗女養成記接駁車</a>';
 
 link_hsr_shuttle_H31 = '<a href="../hsr_shuttle/H31.html" target="_blank">H31 <div class="sub_title"><font color="#FFFFFF">市府線</font></div></a>';
 link_hsr_shuttle_H62 = '<a href="../hsr_shuttle/H62.html" target="_blank">H62 <div class="sub_title"><font color="#FFFFFF">奇美線</font></div></a>';
@@ -400,11 +402,11 @@ transfer_hsr_chiayi_station = '<tr><th rowspan="4">高鐵嘉義站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'HSR.png"></td>\
 	<td><font color="orange">高鐵嘉義站</font></td></tr>\
 <tr><td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>\
-	<td id="yellow">' + link_yellow_9 + '</td></tr>\
+	<td id="yellow">' + link_yellow_9 + '、' + link_yellow_16_1 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
 	<td id="hsr_shuttle">' + link_hsr_shuttle_166 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
-	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>';
+	<td id="tour_bus">' + link_tour_bus_33 + '、' + link_tour_bus_the_making_of_an_ordinary_woman_route + '</td></tr>';
 
 transfer_madou = '<tr><th rowspan="2">麻豆轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
@@ -453,7 +455,7 @@ transfer_baihe = '<tr><th rowspan="2">白河站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow"><p>' + link_yellow + '、' + link_yellow_6_1 + '、' + link_yellow_10 + '、' + link_yellow_10_1 + '、</p>\
 	<p>' + link_yellow_11 + '、' + link_yellow_11_1 + '、' + link_yellow_11_2 + '、' + link_yellow_12 + '、</p><p>'
-	+ link_yellow_12_1 + '、' + link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、</p>' + link_yellow_15 + '、' + link_yellow_16 + '</td></tr>\
+	+ link_yellow_12_1 + '、' + link_yellow_13 + '、' + link_yellow_14 + '、' +  link_yellow_14_1 + '、</p>' + link_yellow_15 + '、' + link_yellow_16 + '、' + link_yellow_16_1 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>';
 
@@ -516,7 +518,7 @@ transfer_houbi_railway_station = '<tr><th rowspan="4">後壁火車站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><font color="#00AAFF">台鐵後壁站</font></td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
-	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_6_1 + '、' + link_yellow_9 + '、' + link_yellow_10 + '</td></tr>\
+	<td id="yellow">' + link_yellow_6 + '、' + link_yellow_6_1 + '、' + link_yellow_9 + '、' + link_yellow_10 + '、' + link_yellow_16_1 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_33 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\

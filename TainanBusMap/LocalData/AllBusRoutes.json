@@ -801,6 +801,13 @@
 		"RouteCategory":7
 	},
 	{
+		"RouteCodeName":"yellow_16_1",
+		"RouteName":"黃16-1",
+		"RouteOSMRelation":10092030,
+		"RouteCode":1815,
+		"RouteCategory":7
+	},
+	{
 		"RouteCodeName":"yellow_20",
 		"RouteName":"黃20",
 		"RouteOSMRelation":4094110,
@@ -834,6 +841,13 @@
 		"RouteName":"99安平台江線",
 		"RouteOSMRelation":4100797,
 		"RouteCode":10210,
+		"RouteCategory":8
+	},
+	{
+		"RouteCodeName":"tour_bus_the_making_of_an_ordinary_woman",
+		"RouteName":"俗女養成記接駁車",
+		"RouteOSMRelation":10092029,
+		"RouteCode":1904,
 		"RouteCategory":8
 	},
 	{
