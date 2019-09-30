@@ -44,74 +44,76 @@ yellow_7_main_stop_name = ["新營站","東河","吉貝耍","牛肉崎","北東�
 yellow_7_main_stop_time_consume = [0, 17, 18, 24, 24, 28, 26, 36, 40, 45, 60];
 yellow_7_important_stop = [0, 6, 9, 10]; // 新營站, 東山, 青山, 仙公廟
 start_stop = 0; // 新營
-cingshan = 9; // 青山
-dongshan = 6; // 東山
+Donghe = 1; // 東河
 skip_stop_1 = 2; // 吉貝耍
 skip_stop_beef = 3; // 牛肉崎
 skip_stop_2 = 5; // 許秀才
+dongshan = 6; // 東山
+Dongyuan = 8; // 東原
+cingshan = 9; // 青山
 siangong_temple = 10; // 仙公廟
 
-yellow_7_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-4]]],
-["06:55",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,3,skip_stop_beef+1,2,cingshan,1]]],
-["08:20",start_stop,cingshan,[skip_stop_beef,skip_stop_2,[start_stop+1,1,skip_stop_1+2,4,dongshan+1,1,cingshan,1]]],
-["08:30",start_stop,dongshan,[skip_stop_2,[skip_stop_beef+1,19]]],
-["09:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+yellow_7_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,-4]]],
+["06:55",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,3,skip_stop_beef+1,2,Dongyuan,1,cingshan,1]]],
+["07:30",start_stop,dongshan,[skip_stop_2,[Donghe,1,skip_stop_beef+1,20]]],
+["08:20",start_stop,cingshan,[skip_stop_beef,skip_stop_2,[Donghe,1,skip_stop_1+2,2,dongshan+1,1,cingshan,1]]],
+["09:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]],
 ["10:40",start_stop,cingshan,[skip_stop_beef,skip_stop_2,[cingshan-2,1]]],
 ["11:30",start_stop,dongshan,[skip_stop_2,[skip_stop_beef+1,19]]],
-["11:50",start_stop,cingshan,[skip_stop_1,skip_stop_beef,[skip_stop_2+1,6]]],
-["12:50",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["11:50",start_stop,cingshan,[skip_stop_1,skip_stop_beef,[skip_stop_2,-1,skip_stop_2+1,6]]],
+["12:50",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]],
 ["14:20",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
 ["15:00",start_stop,dongshan,[skip_stop_2,[skip_stop_beef+1,19]]],
-["15:35",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
-["16:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,1,skip_stop_beef+1,1]]],
-["17:30",start_stop,cingshan,[skip_stop_beef,[start_stop+1,1,skip_stop_beef+1,1,dongshan,8,dongshan+1,3]]],
-["18:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]]];
-yellow_7_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-1]]],
-["05:50",cingshan,start_stop,[skip_stop_beef,[dongshan,3,skip_stop_2,6,skip_stop_2-1,2,start_stop,2]]],
-["07:55",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[dongshan,2,start_stop,3]]],
-["09:20",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
-["09:30",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,2,start_stop,2]]],
-["10:25",cingshan,start_stop,[skip_stop_beef,skip_stop_2,[cingshan-1,-1,skip_stop_1,-1,start_stop,2]]],
+["15:35",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]],
+["16:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,1,skip_stop_beef+1,1,Dongyuan,1]]],
+["17:30",start_stop,cingshan,[skip_stop_beef,[Donghe,2,skip_stop_beef+1,1,skip_stop_2,1,dongshan,8,dongshan+1,1]]],
+["18:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]]];
+yellow_7_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,-1]]],
+["05:50",cingshan,start_stop,[skip_stop_beef,[dongshan,3,skip_stop_2,5,skip_stop_2-1,2,start_stop,3]]],
+["07:55",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[dongshan,1,start_stop,6]]],
+["08:20",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
+["09:30",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
+["10:25",cingshan,start_stop,[skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["11:35",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["12:20",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
 ["12:55",cingshan,start_stop,[skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
-["13:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop+1,-1,start_stop,1]]],
-["15:15",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop+1,-1,start_stop,1]]],
+["13:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
+["15:15",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["15:50",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
-["16:35",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,start_stop+1,-2,start_stop,1]]],
-["17:25",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop+1,-1,start_stop,1]]],
-["18:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,skip_stop_beef+1,-1,start_stop+1,-1,start_stop,1]]]];
+["16:35",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,3]]],
+["17:25",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
+["18:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,skip_stop_beef+1,-1,start_stop,2]]]];
 
 // holiday schedule
-yellow_7_holiday_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-4]]],
-["06:55",[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,3,skip_stop_beef+1,2,cingshan,1,siangong_temple,-1]]],
-["07:15",[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,1,skip_stop_beef+1,1,cingshan,1,siangong_temple,-1]]],
-["08:20",start_stop,cingshan,[skip_stop_beef,skip_stop_2,[start_stop+1,1,skip_stop_1+2,4,dongshan+1,1,cingshan,1]]],
-["08:30",start_stop,dongshan,[skip_stop_2,[skip_stop_beef+1,19]]],
-["09:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+yellow_7_holiday_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,-4]]],
+["06:55",[skip_stop_1,skip_stop_beef,skip_stop_2,[skip_stop_beef+1,1,Dongyuan,1,siangong_temple,1]]],
+["07:15",[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1,siangong_temple,1]]],
+["07:30",start_stop,dongshan,[skip_stop_2,[Donghe,1,skip_stop_beef+1,20]]],
+["08:20",start_stop,cingshan,[skip_stop_beef,skip_stop_2,[Donghe,1,skip_stop_1+2,2,dongshan+1,1,cingshan,1]]],
+["09:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]],
 ["10:40",[skip_stop_beef,skip_stop_2,[cingshan-2,1,siangong_temple,1]]],
 ["11:30",start_stop,dongshan,[skip_stop_2,[skip_stop_beef+1,19]]],
-["11:50",[skip_stop_1,skip_stop_beef,[skip_stop_2+1,6]]],
-["12:50",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
+["11:50",[skip_stop_1,skip_stop_beef,[skip_stop_2,-1,skip_stop_2+1,6]]],
+["12:50",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]],
 ["14:20",[skip_stop_1,skip_stop_beef,skip_stop_2]],
 ["15:00",start_stop,dongshan,[skip_stop_2,[skip_stop_beef+1,19]]],
-["15:35",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]],
-["16:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,1,skip_stop_beef+1,1]]],
-["17:30",start_stop,cingshan,[skip_stop_beef,[start_stop+1,1,skip_stop_beef+1,1,dongshan,8,dongshan+1,3]]],
-["18:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2]]];
-yellow_7_holiday_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[start_stop+1,-1]]],
-["05:50",cingshan,start_stop,[skip_stop_beef,[dongshan,3,skip_stop_2,6,skip_stop_2-1,2,start_stop,2]]],
-["08:10",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,2,start_stop,2]]],
-["08:30",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,2,start_stop,2]]],
-["09:20",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
-["09:30",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,2,start_stop,2]]],
-["10:25",cingshan,start_stop,[skip_stop_beef,skip_stop_2,[cingshan-1,-1,skip_stop_1,-1,start_stop,2]]],
+["15:35",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]],
+["16:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,1,skip_stop_beef+1,1,Dongyuan,1]]],
+["17:30",start_stop,cingshan,[skip_stop_beef,[Donghe,2,skip_stop_beef+1,1,skip_stop_2,1,dongshan,8,dongshan+1,1]]],
+["18:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]]];
+yellow_7_holiday_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,-1]]],
+["05:50",cingshan,start_stop,[skip_stop_beef,[dongshan,3,skip_stop_2,5,skip_stop_2-1,2,start_stop,3]]],
+["08:10",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
+["08:20",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
+["08:30",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
+["09:30",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
+["10:25",cingshan,start_stop,[skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["12:20",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
 ["11:55",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["13:05",[skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
-["13:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop+1,-1,start_stop,1]]],
+["13:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["15:50",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
 ["15:35",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
-["16:35",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,start_stop+1,-2,start_stop,1]]],
-["17:25",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop+1,-1,start_stop,1]]],
-["18:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,skip_stop_beef+1,-1,start_stop+1,-1,start_stop,1]]]];
+["16:35",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,3]]],
+["17:25",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
+["18:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,skip_stop_beef+1,-1,start_stop,2]]]];
