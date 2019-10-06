@@ -39,5 +39,5 @@ var Cigu_Salt_Mountain = 11;
 var Mashagou = 10;
 var Budai_Port = 3;
 var Yanshuei = 1;
-tour_bus_61_time_go = [["10:40"],["14:30"]];
-tour_bus_61_time_return = [["13:00",[[Cigu_Salt_Mountain,-2,Mashagou,-1,Budai_Port,1,Yanshuei,2]]],["16:40",[[Cigu_Salt_Mountain,-2,Mashagou,-1,Budai_Port,1,Yanshuei,2]]]];
+tour_bus_61_time_go = [["10:40"],["12:30"],["14:30"]];
+tour_bus_61_time_return = [["13:00",[[Cigu_Salt_Mountain,-2,Mashagou,-1,Budai_Port,1,Yanshuei,2]]],["14:40",[[Cigu_Salt_Mountain,-2,Mashagou,-1,Budai_Port,1,Yanshuei,2]]],["16:40",[[Cigu_Salt_Mountain,-2,Mashagou,-1,Budai_Port,1,Yanshuei,2]]]];
