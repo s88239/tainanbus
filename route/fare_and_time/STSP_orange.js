@@ -16,7 +16,7 @@ var park17_end = 11; // Park 17商場
 STSP_orange_time_go = [["06:30",[stop_01,stop_02]],["07:15",[stop_01,stop_02,[stop_2,1,stop_3,1]]],["07:15",[[stop_02+1,11,stop_2,1,stop_3,1]]],
 ["07:46",[stop_01,stop_02]],["07:58",[stop_01,stop_02]],["08:17",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],["09:18",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],
 ["10:02",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],["11:05",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],["12:00",[stop_01,stop_02,'*',[TRA_NK,23,InnoLux,-1,park17_end,1]]],["12:49",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],["13:45",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],["14:21",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],
-["15:18",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],["16:08",[stop_01,[stop_02,-6,stop_02+1,11,InnoLux,-1,park17_end,1]]],["17:03",[stop_01,stop_02]],["17:00",start_stop,TRA_NK,[stop_01,[stop_02,-3,stop_02+1,8,TRA_NK,1]]],["17:18",stop_02,TRA_NK,[[stop_02+1,5,TRA_NK,6]]]
+["15:18",[stop_01,stop_02,[InnoLux,-1,park17_end,1]]],["16:08",[stop_01,[stop_02,-6,stop_02+1,11,InnoLux,-1,park17_end,1]]],["17:03",[stop_01,stop_02]],["17:00",start_stop,TRA_NK,[stop_01,[stop_02,-6,stop_02+1,11,TRA_NK,1]]],["17:00",start_stop,TRA_NK,[stop_01,[stop_02,-6,stop_02+1,11,TRA_NK,1]]],["17:18",stop_02,TRA_NK,[[stop_02+1,5,TRA_NK,6]]]
 ];
 
 var return_stop_1 = 6; // 南科實中校門口
