@@ -61,8 +61,7 @@
 			$ch_name = '南科巡迴巴士'.$ch_route_name;
 			break;
 		case 'sightseeing':
-			if($str_sec[1]=='eastern') $ch_route_name = '東環線';
-			else if($str_sec[1]=='western') $ch_route_name = '西環線';
+			if($str_sec[1]=='western') $ch_route_name = '西環線';
 			$ch_name = '臺南雙層巴士'.$ch_route_name;
 			break;
 		default:

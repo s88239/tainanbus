@@ -20,7 +20,7 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'科技之星交通','<br />官方最新時刻表：<a href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=693" target="_blank">南科管理局</a>','免費','http://ibus.stsp.gov.tw/PAGE/RouteQuery/');
+	block_route_info(route_interval,'科技之星交通','僅收假上班前一日行駛<br />官方最新時刻表：<a href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=693" target="_blank">南科管理局</a>','免費','http://ibus.stsp.gov.tw/PAGE/RouteQuery/');
 	document.write('<div id="wrapper3">\
 	<a name="fare"></a>\
 	<div id="faretable" class="container">\
@@ -37,7 +37,7 @@
 		</div>\
 	</div>\
 </div>');
-	block_time_schedule_diffreturn('臺鐵南科站 → 社區中心 → 臺鐵南科站','','<h1><span style="color:red;">僅收假上班前一日行駛</span></h1>')
+	block_time_schedule_diffreturn('臺鐵南科站 → 社區中心 → 臺鐵南科站','','<h1><span style="color:red;">僅收假上班前一日行駛</span></h1><h3>一般周末僅於周日行駛；若遇連續假日，則僅行駛最後一天假日</h3>')
 	block_transfer(transfer_nanke_railway_station + transfer_NNKIEH);
 	block_copyright();
 </script>

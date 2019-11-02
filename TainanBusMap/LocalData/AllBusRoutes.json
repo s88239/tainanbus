@@ -851,12 +851,6 @@
 		"RouteCategory":8
 	},
 	{
-		"RouteCodeName":"sightseeing_eastern",
-		"RouteName":"臺南雙層巴士東環線",
-		"RouteOSMRelation":8341790,
-		"RouteCategory":8
-	},
-	{
 		"RouteCodeName":"sightseeing_western",
 		"RouteName":"臺南雙層巴士西環線",
 		"RouteOSMRelation":8339810,

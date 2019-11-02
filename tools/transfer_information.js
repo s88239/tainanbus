@@ -156,7 +156,6 @@ link_STSP_green = '<a href="../STSP/STSP_green.html" target="_blank">南科綠�
 link_STSP_Shanhua = '<a href="../STSP/STSP_Shanhua.html" target="_blank">南科棕線(善化線)</a>';
 link_STSP_holiday = '<a href="../STSP/STSP_holiday.html" target="_blank">南科假日線</a>';
 
-link_sightseeing_eastern = '<a href="../sightseeing/eastern.html" target="_blank">雙層巴士東環線</a>';
 link_sightseeing_western = '<a href="../sightseeing/western.html" target="_blank">雙層巴士西環線</a>';
 
 transfer_tainan_railway_station = '<tr><th rowspan="9">臺南火車站</th>\
@@ -165,7 +164,7 @@ transfer_tainan_railway_station = '<tr><th rowspan="9">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
 	<td id="tour_bus">' + link_tour_bus_88 + '、' + link_tour_bus_99 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_sightseeing_eastern + '、' + link_sightseeing_western + '</td></tr>\
+	<td id="tour_bus">' + link_sightseeing_western + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus"><p>' + link_city_bus_0 + '、' + link_city_bus_1 + '、' + link_city_bus_2 + '、' + link_city_bus_3 + '、' + link_city_bus_5 + '、' + link_city_bus_6 + '、' + link_city_bus_7 + '、' + link_city_bus_9 + '、</p>'
 		+ link_city_bus_10 + '、' + link_city_bus_11 + '、' + link_city_bus_14 + '、' + link_city_bus_18 + '、' + link_city_bus_19 + '、' + link_city_bus_21 + '、' + link_city_bus_239 + '</td></tr>\
@@ -180,11 +179,9 @@ transfer_tainan_railway_station = '<tr><th rowspan="9">臺南火車站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_8046A + '、' + link_highway_bus_8046B + '、' + link_highway_bus_8050 + '</td></tr>';
 
-transfer_Shangrila = '<tr><th rowspan="3">香格里拉大飯店</th>\
+transfer_Shangrila = '<tr><th rowspan="2">香格里拉大飯店</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'railway.png"></td>\
 	<td><span style="color:#00AAFF;">台鐵臺南站</span></td></tr>\
-<tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'red_transfer_logo.png"></td>\
-	<td id="tour_bus">' + link_sightseeing_eastern + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'city_bus_transfer_logo.png"></td>\
 	<td id="city_bus">' + link_city_bus_70 + '、' + link_city_bus_77 + '</td></tr>';
 
