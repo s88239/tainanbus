@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	route_name = '橘9';
+	route_name_en = 'Orange 9';
+	route_file_name = 'orange_9';
+	route_type = 'orange';
+	route_interval = ['麻豆','佳里','高鐵嘉義站'];
+	route_start_stop = '麻豆轉運站';
+	route_end_stop = '高鐵嘉義站';
+</script>
+<link href="../css/radio_style.css" rel="stylesheet" />
+<script src="../tools/web_model.js"></script> 
+<script type="text/javascript">
+	header_code();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	block_header();
+	block_route_map(null);
+	block_route_info(route_interval,'漢程客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1409&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
+	block_fare(0, '<span style="color: blue; font-size: 24px; font-weight: bold;">上路首月（108年12月5日至109年1月4日）採各站均一優惠票價100元，<br />而第2~3月（109年1月5日至109年3月4日）為各站均一現金優惠票價130元，<br />另持電子票證搭乘可再享有8公里免費（省26元）</span>');
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],'');
+	block_transfer(transfer_madou + transfer_jiali + transfer_hsr_chiayi_station);
+	block_copyright();
+</script>
+</body>
+</html>

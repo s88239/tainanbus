@@ -69,6 +69,7 @@ link_orange_3 = '<a href="../orange/orange_3.html" target="_blank">橘3</a>';
 link_orange_4 = '<a href="../orange/orange_4.html" target="_blank">橘4</a>';
 link_orange_4_1 = '<a href="../orange/orange_4-1.html" target="_blank">橘4-1</a>';
 link_orange_5 = '<a href="../orange/orange_5.html" target="_blank">橘5</a>';
+link_orange_9 = '<a href="../orange/orange_9.html" target="_blank">橘9</a>';
 link_orange_10 = '<a href="../orange/orange_10.html" target="_blank">橘10</a>';
 link_orange_10_1 = '<a href="../orange/orange_10-1.html" target="_blank">橘10-1</a>';
 link_orange_11 = '<a href="../orange/orange_11.html" target="_blank">橘11</a>';
@@ -257,7 +258,7 @@ transfer_jiali = '<tr><th rowspan="3">佳里站</th>\
 	<p>' + link_blue_11 + '、' + link_blue_12 + '、' + link_blue_13 + '、' + link_blue_20 + '、' + '</p>'
 	+ link_blue_21 + '、' + link_blue_22 + '、' + link_blue_25 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange">' + link_orange + '</td></tr>\
+	<td id="orange">' + link_orange + '、' + link_orange_9 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'brown_transfer_logo.png"></td>\
 	<td id="brown">' + link_brown + '</td></tr>';
 
@@ -395,11 +396,13 @@ transfer_hsr_tainan_station = '<tr><th rowspan="7">高鐵臺南站</th>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'highway_bus_transfer_logo.png"></td>\
 	<td id="tour_bus">' + link_highway_bus_8042 + '</td></tr>';
 
-transfer_hsr_chiayi_station = '<tr><th rowspan="4">高鐵嘉義站</th>\
+transfer_hsr_chiayi_station = '<tr><th rowspan="5">高鐵嘉義站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'HSR.png"></td>\
 	<td><font color="orange">高鐵嘉義站</font></td></tr>\
 <tr><td style="text-align: center"><img src="../route/transfer/yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow_9 + '、' + link_yellow_16_1 + '</td></tr>\
+<tr><td style="text-align: center"><img src="../route/transfer/orange_transfer_logo.png"></td>\
+	<td id="orange">' + link_orange_9 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'hsr_shuttle_logo.png"></td>\
 	<td id="hsr_shuttle">' + link_hsr_shuttle_166 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'taiwantrip_logo.png"></td>\
@@ -407,8 +410,8 @@ transfer_hsr_chiayi_station = '<tr><th rowspan="4">高鐵嘉義站</th>\
 
 transfer_madou = '<tr><th rowspan="2">麻豆轉運站</th>\
 <td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'orange_transfer_logo.png"></td>\
-	<td id="orange"><p>' + link_orange + '、' + link_orange_10 + '、' + link_orange_10_1 + '、' + link_orange_11 + '、</p>'
-	+ link_orange_11_1 + '、' + link_orange_12 + '</td></tr>\
+	<td id="orange"><p>' + link_orange + '、' + link_orange_9 + '、' + link_orange_10 + '、' + link_orange_10_1 + '、</p>'
+	+ link_orange_11 + '、' + link_orange_11_1 + '、' + link_orange_12 + '</td></tr>\
 <tr><td style="text-align: center"><img src="' + LOGO_DIR_PATH + 'yellow_transfer_logo.png"></td>\
 	<td id="yellow">' + link_yellow + '、' + link_yellow_20 + '</td></tr>';
 
