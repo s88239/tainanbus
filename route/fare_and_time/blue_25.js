@@ -20,8 +20,10 @@ blue_25_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-blue_25_main_stop_name = ["佳里","多摩市<br />社區","篤加里","七股","聖母廟<br />(安中路)","成大<br />安南校區","中央<br />軸帶公園","工業、<br />本田路口","南臺灣<br />創新園區"];
-blue_25_main_stop_time_consume = [0, 5, 11, 17, 34, 38, 43, 46, 50];
-blue_25_important_stop = [0, 8, 9]; // 佳里, 九塊厝, 黑面琵鷺賞鳥亭
-blue_25_time_go = [["13:20"],["14:40"],["17:20"]];
-blue_25_time_return = [["14:10"],["15:40"],["18:10"]];
+blue_25_main_stop_name = ["佳里站","多摩市<br />社區","篤加里","七股","聖母廟<br />(安中路)","土城子","成大<br />安南校區","中央<br />軸帶公園","工業、<br />本田路口","南臺灣<br />創新園區"];
+blue_25_main_stop_time_consume = [0, 5, 10, 17, 34, 35, 38, 43, 46, 50];
+blue_25_important_stop = [0, 5, 9]; // 佳里站, 土城子, 南臺灣創新園區
+var Jiali = 0;
+var Dujia_Vil = 2;
+blue_25_time_go = [["07:00",Jiali,Dujia_Vil],["10:00",Jiali,Dujia_Vil],["13:20"],["14:40"],["17:20"]];
+blue_25_time_return = [["07:15",Dujia_Vil,Jiali],["10:15",Dujia_Vil,Jiali],["14:10"],["15:40"],["18:10"]];
