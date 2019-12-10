@@ -11,7 +11,7 @@ stop_4 = 9; // 四草
 stop_5 = 11; // 三鯤鯓
 stop_6 = 5; // 新光三越新天地
 stop_7 = 3; // 臺南火車站
-city_bus_2_time_go = [["06:15",stop_1,stop_3,[stop_2,[stop_7,-5]]],["06:25",stop_1,stop_3,[stop_2,'L',[stop_6,5]]],["06:32",stop_1,stop_3,[stop_2,'W',[stop_6,5]]],["06:40",stop_1,stop_3,[stop_2,[stop_6,10]]],
+city_bus_2_time_go = [["06:15",stop_1,stop_3,[stop_2,[stop_7,-5]]],["06:25",stop_1,stop_3,[stop_2,'L',[stop_6,5]]],["06:32",stop_1,stop_3,['W',[stop_2+1,5,stop_6,5]]],["06:40",stop_1,stop_3,[stop_2,[stop_6,10]]],
 ["06:55",stop_1,stop_3,[stop_2,[stop_6,5]]],["07:35",stop_1,stop_4,[stop_2]],["08:00",stop_1,stop_5,[stop_2,stop_4]],["08:35",stop_1,stop_3,[stop_2]],
 ["09:10",stop_1,stop_3,['L',stop_2]],["09:25",stop_1,stop_3,[[stop_2+1,5]]],["09:50",stop_1,stop_3,[stop_2]],["10:20",stop_1,stop_3,[stop_2]],
 ["10:50",stop_1,stop_5,[stop_2,stop_4]],["11:10",stop_1,stop_3,[stop_2,'L']],["11:30",stop_1,stop_3,[stop_2]],["11:50",stop_1,stop_4,['L',stop_2]],
@@ -31,7 +31,7 @@ city_bus_2_time_return = [["06:00",stop_3,stop_1,[stop_2,[stop_6,-2,stop_6-1,-3]
 ["12:05",stop_5,stop_1,[stop_2,stop_4]],["12:50",stop_3,stop_1,['L',stop_2]],["13:03",stop_4,stop_1,['L',stop_2]],["13:30",stop_3,stop_1,[stop_2]],
 ["13:25",stop_5,stop_1,[stop_2,stop_4]],["14:10",stop_3,stop_1,['L',stop_2]],["14:30",stop_3,stop_1,[[stop_2,5]]],["14:50",stop_3,stop_1,[stop_2]],
 ["15:10",stop_3,stop_1,[stop_2]],["15:30",stop_3,stop_1,[stop_2]],["15:50",stop_3,stop_1,['L',stop_2]],["16:10",stop_3,stop_1,[stop_2]],["16:30",stop_3,stop_1,[stop_2]],
-["16:45",stop_3,stop_1,['L',stop_2,[stop_6-1,5]]],["17:00",stop_3,stop_1,[stop_2,[stop_6-1,5]]],["17:15",stop_3,stop_1,['L',stop_2,[stop_6-1,5]]],
+["16:45",stop_3,stop_1,['L',stop_2,[stop_6-1,5]]],["17:00",stop_3,stop_1,[stop_2,[stop_6-1,5]]],["17:10",stop_3,stop_1,['W',stop_2,[stop_6-1,5]]],["17:15",stop_3,stop_1,['L',stop_2,[stop_6-1,5]]],
 ["17:35",stop_3,stop_1,[stop_2,[stop_6-1,5]]],["17:55",stop_3,stop_1,[stop_2]],["18:00",stop_5,stop_1,[stop_2,stop_4]],["18:38",stop_4,stop_1,[stop_2,[stop_6,-2,stop_6-1,-3]]],
 ["18:45",stop_5,stop_1,['L',stop_2,stop_4,[stop_6,-2,stop_6-1,-3]]],["19:50",stop_3,stop_1,['L',stop_2,[stop_6,-2,stop_6-1,-3]]],["20:25",stop_3,stop_1,[stop_2,[stop_6,-2,stop_6-1,-3]]],
 ["21:10",stop_3,stop_1,[[stop_2,5,stop_6,-2,stop_6-1,-3]]],["22:00",stop_4,stop_1,['L',stop_2,[stop_3,-2,stop_6,-2,stop_6-1,-3]]]
