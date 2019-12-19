@@ -11,10 +11,10 @@ var skip_list_2 = [4, 5, 6, 7]; // 聯電宿舍, 善新西路, 蓮潭北二街, 
 var skip_list_3 = [...skip_list_1, ...skip_list_2];
 var stop_1 = 3; // 民生水塔
 var TRA_NK = 8;
-STSP_blue_time_go = [["06:30",skip_list_3],["06:54",skip_list_3],["07:13",[...skip_list_3]],["07:08",[...skip_list_2,[stop_1,10,TRA_NK+2,1,TRA_NK+3,1]]],["07:20",[...skip_list_2,[skip_stop_2,1,stop_1,10,TRA_NK+2,1,TRA_NK+3,1]]],
+STSP_blue_time_go = [["06:30",skip_list_3],["06:53",skip_list_3],["07:15",[...skip_list_3]],["07:08",[...skip_list_2,[stop_1,10,TRA_NK+2,1,TRA_NK+3,1]]],["07:20",[...skip_list_2,[skip_stop_2,1,stop_1,10,TRA_NK+2,1,TRA_NK+3,1]]],
 ["07:46",[...skip_list_3]],["07:48",[...skip_list_1,[TRA_NK,11]]],["08:03",[...skip_list_3]],["08:19",[...skip_list_3,[TRA_NK+1,1]]],["08:25",[...skip_list_3]],["09:09",skip_list_3],
-["09:37",skip_list_3],["10:42",skip_list_3],["11:26",skip_list_3],["12:23",skip_list_3],["13:33",skip_list_3],
-["14:45",skip_list_3],["15:15",skip_list_3],["16:03",[skip_stop,...skip_list_2,[skip_stop_2,-5,stop_1,10]]],["16:35",skip_list_3],["17:00",0,TRA_NK,[skip_stop,...skip_list_2,[skip_stop_2,-5,stop_1,10,TRA_NK,1]]],
+["09:45",skip_list_3],["10:42",skip_list_3],["11:26",skip_list_3],["12:23",skip_list_3],["13:33",skip_list_3],
+["14:45",skip_list_3],["15:15",skip_list_3],["16:05",[skip_stop,...skip_list_2,[skip_stop_2,-5,stop_1,10]]],["16:44",skip_list_3],["17:00",0,TRA_NK,[skip_stop,...skip_list_2,[skip_stop_2,-5,stop_1,10,TRA_NK,1]]],
 ["17:00",0,TRA_NK,[skip_stop,...skip_list_2,[skip_stop_2,-5,stop_1,10,TRA_NK,1]]],["17:18",skip_stop_2,TRA_NK,[...skip_list_2,[stop_1,10]]],["17:18",skip_stop_2,TRA_NK,[...skip_list_2,[stop_1,10]]]
 ];
 
@@ -25,5 +25,5 @@ STSP_blue_important_stop_return = [0, 5, 7, 9]; // Park 17商場, 瀚宇彩晶, 
 var LM_list = [10, 11, 12, 13];
 var return_stop_1 = 14;
 var TRA_NK_return = 9;
-STSP_blue_time_return = [["17:15",LM_list],["17:37",LM_list],["17:42",[[return_stop_1,12]]],["17:53",LM_list],["18:08",LM_list],["18:21",LM_list],["18:44",LM_list],["18:53",LM_list],["19:14",LM_list],["19:40",LM_list],
+STSP_blue_time_return = [["17:13",LM_list],["17:37",LM_list],["17:42",[[return_stop_1,12]]],["17:50",LM_list],["18:08",LM_list],["18:20",LM_list],["18:44",LM_list],["18:53",LM_list],["19:14",LM_list],["19:40",LM_list],
 ["20:08",LM_list],["20:38",LM_list],["21:05",[...LM_list,'*',[TRA_NK_return,10]]]];
