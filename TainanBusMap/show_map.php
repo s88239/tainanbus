@@ -48,8 +48,7 @@
 			else $ch_name = '高鐵快捷公車'.strtoupper($str_sec[2]);
 			break;
 		case 'tour':
-			if($route_name=='tour_bus_the_making_of_an_ordinary_woman') $ch_name = '俗女養成記接駁車';
-			else $ch_name = '台灣好行'.$str_sec[2].'路';
+			$ch_name = '台灣好行'.$str_sec[2].'路';
 			break;
 		case 'STSP':
 			if($str_sec[1]=='red') $ch_route_name = '紅線(北環東線)';

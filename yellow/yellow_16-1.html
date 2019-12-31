@@ -7,7 +7,7 @@
 	route_name_en = 'Yellow 16-1';
 	route_file_name = 'yellow_16_1';
 	route_type = 'yellow';
-	route_interval = ['白河','後壁','高鐵嘉義站'];
+	route_interval = ['白河','菁寮','高鐵嘉義站'];
 </script>
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
@@ -20,8 +20,8 @@
 	block_route_map(null);
 	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1815&locale=zh_TW');
 	block_fare(0, null);
-	block_time_schedule('白河站','高鐵嘉義站','');
-	block_transfer(transfer_baihe + transfer_houbi_railway_station + transfer_hsr_chiayi_station);
+	block_time_schedule('白河站','高鐵嘉義站',H_message);
+	block_transfer(transfer_baihe + transfer_hsr_chiayi_station);
 	block_copyright();
 </script>
 </body>

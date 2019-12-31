@@ -851,13 +851,6 @@
 		"RouteCategory":8
 	},
 	{
-		"RouteCodeName":"tour_bus_the_making_of_an_ordinary_woman",
-		"RouteName":"俗女養成記接駁車",
-		"RouteOSMRelation":10092029,
-		"RouteCode":1904,
-		"RouteCategory":8
-	},
-	{
 		"RouteCodeName":"sightseeing_western",
 		"RouteName":"臺南雙層巴士西環線",
 		"RouteOSMRelation":8339810,
