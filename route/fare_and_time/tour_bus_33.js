@@ -24,7 +24,7 @@ tour_bus_33_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-tour_bus_33_main_stop_name = ["高鐵<br />嘉義站","故宮<br />南院","高鐵<br />嘉義站","南靖<br />火車站","後壁<br />火車站","白河<br />轉運站","白河<br />水庫","寶泉橋","關子嶺"];
+tour_bus_33_main_stop_name = ["高鐵<br />嘉義站","故宮南院<br /><span style='color:red;'>(周一不停)</span>","高鐵<br />嘉義站","南靖<br />火車站","後壁<br />火車站","白河<br />轉運站","白河<br />水庫","寶泉橋","關子嶺"];
 tour_bus_33_main_stop_time_consume = [0, 9, 18, 30, 36, 45, 55, 63, 66];
 tour_bus_33_important_stop = [0, 5, 8]; // 高鐵嘉義站, 白河轉運站, 關子嶺
 tour_bus_33_time_go = [["10:00"],["12:00"],["14:00"]];

@@ -12,7 +12,7 @@ yellow_7_interval_stop = [ // 2018.07.03 checked
 ["斑芝花坑","斑花橋","柿子寮"], // 斑芝花坑
 ["三塊厝","嶺南里路口","西東原","東原","前大埔"], // 東原
 ["瓦厝","東原國中","竹圍埔"], // 瓦厝
-["崎腳","店子前"], // 崎腳
+["崎腳","崎腳子龍廟","店子前"], // 崎腳
 ["下子店","青山"], // 青山
 ["田寮仔","南寮口","鴨母寮","內埔仔","下二坑"], // 南寮口
 ["二坑埔","仙公廟牌樓","凍腳"], // 二坑埔
@@ -54,7 +54,7 @@ cingshan = 9; // 青山
 siangong_temple = 10; // 仙公廟
 
 yellow_7_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,-4]]],
-["06:55",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,3,skip_stop_beef+1,2,Dongyuan,1,cingshan,1]]],
+["06:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,3,skip_stop_beef+1,3,cingshan,4]]],
 ["07:30",start_stop,dongshan,[skip_stop_2,[Donghe,1,skip_stop_beef+1,20]]],
 ["08:20",start_stop,cingshan,[skip_stop_beef,skip_stop_2,[Donghe,1,skip_stop_1+2,2,dongshan+1,1,cingshan,1]]],
 ["09:30",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]],
@@ -70,7 +70,7 @@ yellow_7_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_beef,ski
 ["18:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]]];
 yellow_7_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,-1]]],
 ["05:50",cingshan,start_stop,[skip_stop_beef,[dongshan,3,skip_stop_2,5,skip_stop_2-1,2,start_stop,3]]],
-["07:55",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[dongshan,1,start_stop,6]]],
+["07:45",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[dongshan,1,start_stop,6]]],
 ["08:20",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
 ["09:30",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["10:25",cingshan,start_stop,[skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
@@ -86,7 +86,7 @@ yellow_7_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef
 
 // holiday schedule
 yellow_7_holiday_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,-4]]],
-["06:55",[skip_stop_1,skip_stop_beef,skip_stop_2,[skip_stop_beef+1,1,Dongyuan,1,siangong_temple,1]]],
+["06:45",[skip_stop_1,skip_stop_beef,skip_stop_2,[skip_stop_beef+1,1,Dongyuan,-1]]],
 ["07:15",[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1,siangong_temple,1]]],
 ["07:30",start_stop,dongshan,[skip_stop_2,[Donghe,1,skip_stop_beef+1,20]]],
 ["08:20",start_stop,cingshan,[skip_stop_beef,skip_stop_2,[Donghe,1,skip_stop_1+2,2,dongshan+1,1,cingshan,1]]],
@@ -103,8 +103,8 @@ yellow_7_holiday_time_go = [["05:45",start_stop,dongshan,[skip_stop_1,skip_stop_
 ["18:45",start_stop,cingshan,[skip_stop_1,skip_stop_beef,skip_stop_2,[Dongyuan,1]]]];
 yellow_7_holiday_time_return = [["06:10",dongshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[Donghe,-1]]],
 ["05:50",cingshan,start_stop,[skip_stop_beef,[dongshan,3,skip_stop_2,5,skip_stop_2-1,2,start_stop,3]]],
-["08:10",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["08:20",dongshan,start_stop,[skip_stop_2,[skip_stop_beef,19]]],
+["08:00",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan,-1,dongshan,1,start_stop,2]]],
 ["08:30",[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["09:30",cingshan,start_stop,[skip_stop_1,skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
 ["10:25",cingshan,start_stop,[skip_stop_beef,skip_stop_2,[cingshan-1,-1,dongshan,1,start_stop,2]]],
