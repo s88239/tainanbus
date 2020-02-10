@@ -16,8 +16,9 @@ green_6_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-green_6_main_stop_name = ["新化","新市<br />火車站","新市","潭頂","大社"];
-green_6_main_stop_time_consume = [0, 10, 13, 21, 25];
-green_6_important_stop = [0, 1, 4]; // 新化, 新市火車站, 大社
-green_6_time_go = [["06:00"],["11:25"],["15:10"]];
-green_6_time_return = [["09:05"],["10:25"],["19:25"]];
+green_6_main_stop_name = ["新化站","新市<br />火車站","新市","潭頂","大社"];
+green_6_main_stop_time_consume = [0, 10, 15, 21, 25];
+green_6_important_stop = [0, 1, 4]; // 新化站, 新市火車站, 大社
+var Tanding = 3; // 潭頂
+green_6_time_go = [["06:00"],["11:25",[[Tanding,5]]],["15:10"]];
+green_6_time_return = [["09:00"],["10:30"],["17:55"],["19:35"]];

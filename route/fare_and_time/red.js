@@ -32,10 +32,10 @@ red_time_go = [["05:25",start_stop,stop_2,['W']],["05:45",start_stop,stop_3],["0
 ["06:10",start_stop,stop_3],["06:30"],["07:00",start_stop,stop_3],["07:20"],["07:40",start_stop,stop_3],
 ["08:00"],["08:30"],["09:00",start_stop,stop_3],["09:30"],["10:00",start_stop,stop_3],["10:30"],["11:00",start_stop,stop_3],
 ["11:30"],["11:45",start_stop,stop_3],["12:00",start_stop,stop_3],["12:15",start_stop,stop_3],["12:30"],
-["13:00",start_stop,stop_3],["13:30"],["14:00",start_stop,stop_3],["14:30"],["15:00",start_stop,stop_3,['W']],["15:00",['H']],["15:30",[[stop_2,10]]],
-["15:45",start_stop,stop_3,['W']],["15:45",['H']],["16:00",[[stop_2,10]]],["16:15",[[stop_2,10]]],["16:40",start_stop,stop_3,[[stop_2,10]]],["16:45",start_stop,stop_3,[[stop_2,10]]],["16:50",start_stop,stop_3,['W',[stop_2,10]]],["16:50",['H',[stop_2,10]]],
-["17:00",start_stop,stop_3,[[stop_2,10]]],["17:15",start_stop,stop_3,[[stop_2,10]]],["17:30",[[stop_2,10]]],["17:55",start_stop,stop_3,[[stop_2,10]]],["18:15",start_stop,stop_3,['W']],["18:15",['H']],
-["18:45"],["19:10"],["19:30",start_stop,stop_3],["20:00"],["20:30",start_stop,stop_3,['W']],["20:30",['H']],
+["13:00",start_stop,stop_3],["13:30"],["14:00",start_stop,stop_3],["14:30"],["15:00",start_stop,stop_3],["15:30",[[stop_2,10]]],
+["15:45",start_stop,stop_3],["16:00",[[stop_2,10]]],["16:15",[[stop_2,10]]],["16:40",start_stop,stop_3,[[stop_2,10]]],["16:45",start_stop,stop_3,[[stop_2,10]]],["16:50",start_stop,stop_3,[[stop_2,10]]],
+["17:00",start_stop,stop_3,[[stop_2,10]]],["17:15",start_stop,stop_3,[[stop_2,10]]],["17:30",[[stop_2,10]]],["17:55",start_stop,stop_3,[[stop_2,10]]],["18:15",start_stop,stop_3],
+["18:45"],["19:10"],["19:30",start_stop,stop_3],["20:00"],["20:30",start_stop,stop_3],
 ["21:00",start_stop,stop_3],["21:15",start_stop,stop_3],["21:30"],["22:10",start_stop,stop_3]
 ];
 red_time_return = [["05:50"],["06:10",stop_3,start_stop],["06:20",stop_3,start_stop],["06:30",stop_2,start_stop,['W']],["06:20"],
@@ -45,6 +45,6 @@ red_time_return = [["05:50"],["06:10",stop_3,start_stop],["06:20",stop_3,start_s
 ["13:30",stop_3,start_stop],["13:55",stop_3,start_stop],["14:15",stop_3,start_stop],["14:25"],["14:55",stop_3,start_stop],
 ["15:25"],["16:00",stop_3,start_stop,[[stop_1,10]]],["16:30",stop_3,start_stop,[[stop_1,10]]],["16:50",['繞',[stop_2,5,stop_1,20]]],
 ["17:10",['繞',[stop_2,5,stop_1,20]]],["17:30",stop_3,start_stop,[[stop_1,10]]],["17:40",[[stop_1,10]]],["17:50",[[stop_1,10]]],
-["18:20",stop_3,start_stop,[[stop_1,10]]],["18:30",stop_3,start_stop],["18:45",stop_3,start_stop,['W',[stop_1,10]]],["18:40",['H',[stop_1,10]]],["18:55",stop_3,start_stop],["19:25"],["19:45",['H']],["19:55",stop_3,start_stop,['W']],
-["20:20"],["20:50",stop_3,start_stop],["20:50"],["21:25"],["22:00",stop_3,start_stop,['W']],["22:00",['H']]
+["18:20",stop_3,start_stop,[[stop_1,10]]],["18:30",stop_3,start_stop],["18:45",stop_3,start_stop,[[stop_1,10]]],["18:55",stop_3,start_stop],["19:25"],["19:55",stop_3,start_stop],
+["20:20"],["20:50",stop_3,start_stop],["20:50"],["21:25"],["22:00",stop_3,start_stop]
 ];

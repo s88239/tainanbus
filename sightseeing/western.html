@@ -38,11 +38,15 @@
 					<td>營運公司</td>\
 					<td>府城客運</td>\
 				</tr>\
-				<tr>\
+				<tr align="right">\
 					<td>首／末班車發車時刻</td>\
 					<td>\
-						往 安平漁人碼頭：09:00／18:00<br />\
-						往 神農街：18:20／19:40\
+						<div align="center"><font color="#FFFFFF">平日</font></div>\
+						往 安平漁人碼頭：09:00／17:00<br />\
+						往 神農街：10:00／18:30<br />\
+						<div align="center"><font color="#FFFFFF">假日</font></div>\
+						往 安平漁人碼頭：08:30／18:00<br />\
+						往 神農街：10:00／18:30\
 					</td>\
 				</tr>\
 				<tr>\
@@ -51,11 +55,11 @@
 				</tr>\
 				<tr>\
 					<td>收費方式</td>\
-					<td>一日票、4小時票</td>\
+					<td>24小時票、48小時票</td>\
 				</tr>\
 				<tr>\
 					<td>最後修改日期</td>\
-					<td>2019/01/30</td>\
+					<td>2020/01/19</td>\
 				</tr>\
 			</table>\
 			<p>　</p>\
@@ -71,9 +75,10 @@
 			<span class="byline">Tainan Bus ' + route_name_en + ', Bus Fare</span>\
 		</div>\
 		<div class="content">\
-			<h1>單日票：全票500元、優待票250元</h1>\
+			<h1>24小時票：全票150元、優待票75元、臺南市民票99元</h1>\
 			<p>&nbsp;</p>\
-			<h1>4小時票：全票300元、優待票150元</h1>\
+			<h1>48小時票：全票250元、優待票125元</h1>\
+			<p><span style="font-weight: bold; font-size: 16px; color: red;">以上票價優惠活動日期：2020.01.20 - 2020.04.19</span></p>\
 			<p>&nbsp;</p>\
 			<h2>憑雙層巴士票根，當日可免費轉乘大台南公車</h2>\
 		</div>\
@@ -89,9 +94,9 @@
 		<h2><span style="color:purple;">臺南火車站→安平漁人碼頭→臺南火車站</span></h2>'
 	+ create_time_schedule(sightseeing_western_main_stop_name, sightseeing_western_main_stop_time_consume, sightseeing_western_important_stop, sightseeing_western_time_go, false)
 		+ '<p>　</p>\
-			<h2><span style="color:purple;">臺南火車站→神農街→臺南火車站</span> <span style="color:blue">(星光班次)</span></h2>'
+			<h2><span style="color:purple;">臺南火車站→神農街→臺南火車站</span></h2>'
 	+ create_time_schedule(sightseeing_western_main_stop_name_night, sightseeing_western_main_stop_time_consume_night, sightseeing_western_important_stop_night, sightseeing_western_time_go_night, false)
-	+ TimeScheduleMSG + '</div>\
+	+ TimeScheduleMSG + '<h3>' + W_message + '；' + H_message + '</h3>' + '</div>\
 </div>');
 	block_transfer(transfer_tainan_railway_station + transfer_anping_fishermans_wharf);
 	block_copyright();

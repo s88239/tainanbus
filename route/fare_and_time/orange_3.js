@@ -31,18 +31,18 @@ orange_3_fare = [
 // [time, other] or
 // [time, start_stop, end_stop, other]
 orange_3_main_stop_name = ["善化<br />轉運站","蘇厝","安定","許中營","港口","中崙","和順","安南<br />醫院","中洲寮<br />保安宮","安通<br />路口","臺南<br />火車站","臺南<br />轉運站"];
-orange_3_main_stop_time_consume = [0, 12, 16, 23, 21, 25, 29, 30, 30, 45, 60, 65];
+orange_3_main_stop_time_consume = [0, 12, 16, 23, 21, 25, 32, 35, 35, 45, 60, 65];
 orange_3_important_stop = [0, 2, 7, 8, 10, 11]; // 善化轉運站, 安定, 安南醫院, 中洲寮保安宮, 臺南火車站, 臺南轉運站
-start_stop = 0;
-end_stop = 7;
-stop_1 = 3;
+var TRA_Shanhua = 0; // 善化轉運站
+var Annan_Hospital = 7; // 安南醫院
+var Syujhongying = 3; // 許中營
 orange_3_time_go = [
-["05:55",start_stop,end_stop,[stop_1]],["06:10",[end_stop,[stop_1+1,5]]],["09:15",start_stop,end_stop,[stop_1]],
-["12:15",start_stop,end_stop,[stop_1]],["14:40",start_stop,end_stop,[stop_1]],["15:45",[end_stop,[stop_1+1,5]]],
-["17:15",start_stop,end_stop,[stop_1]],["19:45",[end_stop,[stop_1+1,5]]]
+["05:55",TRA_Shanhua,Annan_Hospital,[Syujhongying]],["06:10",[Annan_Hospital,[Syujhongying+1,5]]],["09:15",TRA_Shanhua,Annan_Hospital,[Syujhongying]],["10:30",[Syujhongying,Annan_Hospital]],
+["12:15",TRA_Shanhua,Annan_Hospital,[Syujhongying]],["14:40",TRA_Shanhua,Annan_Hospital,[Syujhongying]],["15:45",[Annan_Hospital,[Syujhongying+1,5]]],
+["17:15",TRA_Shanhua,Annan_Hospital,[Syujhongying]],["19:45",[Annan_Hospital,[Syujhongying+1,5]]]
 ];
 orange_3_time_return = [
-["06:30",end_stop,start_stop,[stop_1]],["07:30",[end_stop,[stop_1,5]]],["09:55",end_stop,start_stop,[stop_1]],
-["13:00",end_stop,start_stop,[stop_1]],["15:30",end_stop,start_stop,[stop_1]],["18:10",end_stop,start_stop,[stop_1]],
-["17:40",[end_stop,[stop_1,5]]],["21:20",[end_stop,[stop_1,5]]]
+["06:30",Annan_Hospital,TRA_Shanhua,[Syujhongying]],["07:30",[Annan_Hospital,[Syujhongying,5]]],["09:55",Annan_Hospital,TRA_Shanhua,[Syujhongying]],["11:40",[Annan_Hospital,Syujhongying]],
+["13:00",Annan_Hospital,TRA_Shanhua,[Syujhongying]],["15:30",Annan_Hospital,TRA_Shanhua,[Syujhongying]],["18:10",Annan_Hospital,TRA_Shanhua,[Syujhongying]],
+["17:40",[Annan_Hospital,[Syujhongying,5]]],["21:20",[Annan_Hospital,[Syujhongying,5]]]
 ];
