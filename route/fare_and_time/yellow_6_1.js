@@ -37,8 +37,8 @@ yellow_6_1_main_stop_time_consume = [0, 6, 17, 25, 30, 36, 47, 60];
 yellow_6_1_important_stop = [0, 3, 7]; // 新營站, 後壁區公所, 白河站
 var Sinying = 0; // 新營站
 var Linchu_Reservoir = 6; // 林初埤
-yellow_6_1_time_go = [["07:30"],["08:30"],["10:10"],["11:10"],["13:10"],["14:10"],["15:40"],["16:40"]];
-yellow_6_1_time_return = [["08:40",[[Linchu_Reservoir,-5,Sinying,5]]],["09:40",[[Linchu_Reservoir,-5,Sinying,5]]],
-["11:20",[[Linchu_Reservoir,-5,Sinying,5]]],["12:20",[[Linchu_Reservoir,-5,Sinying,5]]],
-["14:20",[[Linchu_Reservoir,-5,Sinying,5]]],["15:20",[[Linchu_Reservoir,-5,Sinying,5]]],
-["16:50",[[Linchu_Reservoir,-5,Sinying,5]]],["17:50",[[Linchu_Reservoir,-5,Sinying,5]]]];
+yellow_6_1_time_go = [["07:30"],["08:00",['加']],["08:30"],["10:10"],["10:40",['加']],["11:10"],["13:10"],["13:40",['加']],["14:10"],["15:40"],["16:10",['加']],["16:40"]];
+yellow_6_1_time_return = [["08:40",[[Linchu_Reservoir,-5,Sinying,5]]],["09:10",['加',[Linchu_Reservoir,-5,Sinying,5]]],["09:40",[[Linchu_Reservoir,-5,Sinying,5]]],
+["11:20",[[Linchu_Reservoir,-5,Sinying,5]]],["11:50",['加',[Linchu_Reservoir,-5,Sinying,5]]],["12:20",[[Linchu_Reservoir,-5,Sinying,5]]],
+["14:20",[[Linchu_Reservoir,-5,Sinying,5]]],["14:50",['加',[Linchu_Reservoir,-5,Sinying,5]]],["15:20",[[Linchu_Reservoir,-5,Sinying,5]]],
+["16:50",[[Linchu_Reservoir,-5,Sinying,5]]],["17:20",['加',[Linchu_Reservoir,-5,Sinying,5]]],["17:50",[[Linchu_Reservoir,-5,Sinying,5]]]];

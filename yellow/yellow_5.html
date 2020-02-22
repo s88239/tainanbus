@@ -8,7 +8,10 @@
 	route_file_name = 'yellow_5';
 	route_type = 'yellow';
 	route_interval = ['新營','紅毛厝','下營'];
+	route_start_stop = '新營';
+	route_end_stop = '下營';
 </script>
+<link href="../css/radio_style.css" rel="stylesheet" />
 <script src="../tools/web_model.js"></script> 
 <script type="text/javascript">
 	header_code();
@@ -18,9 +21,10 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1505&locale=zh_TW');
+	block_route_info(route_interval,'新營客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1505&locale=zh_TW',[['平日','normal'],['假日','holiday']]);
 	block_fare(0, null);
-	block_time_schedule('新營','下營',H_message+'；'+L_message);
+	//block_time_schedule('新營','下營',H_message+'；'+L_message);
+	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holiday']],'');
 	block_transfer(transfer_hsinyin + transfer_liouying_railway_station + transfer_shiayin_district_office);
 	block_copyright();
 </script>
