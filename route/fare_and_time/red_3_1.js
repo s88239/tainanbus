@@ -2,7 +2,7 @@ red_3_1_interval_name = ["保安<br />轉運站","臺南都<br />會公園","臺
 red_3_1_interval_stop = [
 ["保安轉運站"], // 保安轉運站
 ["奇美博物館","十鼓文化村","臺南都會公園"], // 臺南都會公園
-["台糖嘉年華","臺南航空站(奇美幸福工廠)"] // 臺南航空站
+["家樂福新仁店","臺南航空站(奇美幸福工廠)"] // 臺南航空站
 ];
 red_3_1_fare = [
 [26],
@@ -12,7 +12,7 @@ red_3_1_fare = [
 // format = [time at the start stop] or
 // [time, other] or
 // [time, start_stop, end_stop, other]
-red_3_1_main_stop_name = ["保安轉運站","奇美<br />博物館","十鼓<br />文化村","臺南<br />都會公園","台糖<br />嘉年華","臺南航空站<br />(奇美幸福工廠)"];
+red_3_1_main_stop_name = ["保安轉運站","奇美<br />博物館","十鼓<br />文化村","臺南<br />都會公園","家樂福<br />新仁店","臺南航空站<br />(奇美幸福工廠)"];
 red_3_1_main_stop_time_consume = [0, 3, 4, 6, 8, 10];
 skip_stop_list = [2,4];
 red_3_1_important_stop = [0, 1, 5]; // 保安轉運站, 奇美博物館, 臺南航空站

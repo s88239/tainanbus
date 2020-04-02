@@ -22,7 +22,7 @@
 	block_header();
 	block_route_map(null);
 	block_route_info(route_interval,'漢程客運','','里程計費','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1409&locale=zh_TW',[['一~四','normal'],['五~日','holiday']]);
-	block_fare(0, '<span style="color: blue; font-size: 24px; font-weight: bold;">上路首月（108年12月5日至109年1月4日）採各站均一優惠票價100元，<br />而第2~3月（109年1月5日至109年3月4日）為各站均一現金優惠票價130元，<br />另持電子票證搭乘可再享有8公里免費（省26元）</span>');
+	block_fare(0, null);
 	block_multiple_time_schedule( [['<span style="color: blue;">一~四</span>','normal'],['<span style="color: red;">五~日</span>','holiday']],'<span style="color: blue; font-size: 24px;">一~四：於星期一～星期四行駛，但不含國定假日</span><br /><span style="color: red; font-size: 24px;">五~日：於星期五、六、日行駛，且包含國定假日</span>');
 	block_transfer(transfer_madou + transfer_jiali + transfer_hsr_chiayi_station);
 	block_copyright();
