@@ -21,7 +21,7 @@ STSP_orange_time_go = [["06:30",[stop_01,stop_02]],["07:15",[stop_01,stop_02,[st
 
 var return_stop_1 = 6; // 南科實中校門口
 // The name of return stops are different
-STSP_orange_main_stop_name_return = ["Park 17<br />商場","聯電","霞客湖<br />停車場","南茂<br />科技","商務<br />會館","華園<br />宿舍","南科實中<br />校門口","民生<br />水塔","臺鐵<br />南科站","南科<br />實中","社區<br />中心","Park 17<br />商場"];
-STSP_orange_main_stop_time_consume_return = [0, 2, 4, 6, 9, 11, 15, 13, 17, 20, 22, 25];
+STSP_orange_main_stop_name_return = ["Park 17<br />商場","聯電","霞客湖<br />停車場","南茂<br />科技","商務<br />會館","華園<br />宿舍","南科實中<br />校門口","民生<br />水塔","臺鐵<br />南科站","南科<br />實中","社區<br />中心","璞園<br />宿舍","Park 17<br />商場"];
+STSP_orange_main_stop_time_consume_return = [0, 2, 4, 6, 9, 11, 15, 13, 17, 20, 22, 22, 26];
 STSP_orange_important_stop_return = [0, 3, 5, 8]; // Park 17商場, 南茂科技, 華園宿舍, 臺鐵南科站
 STSP_orange_time_return = [["17:15",[return_stop_1]],["17:41",[return_stop_1]],["17:51",[return_stop_1]],["18:10",[return_stop_1]],["18:45",[return_stop_1]],["20:00",[return_stop_1]],["20:33",[[return_stop_1+1,5]]],["21:05",[return_stop_1]]];
