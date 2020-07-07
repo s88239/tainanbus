@@ -49,5 +49,5 @@ orange_11_time_go = [["05:40",[AnNan_hospital]],["06:30",start_stop,end_stop],["
 ["10:50",Hsiaying,AnNan_hospital],["14:50",[AnNan_hospital]],["16:55",start_stop,end_stop],["16:50",Hsiaying,AnNan_hospital]
 ];
 orange_11_time_return = [["07:10",end_stop,start_stop],["08:00",AnNan_hospital,Hsiaying],["08:25",[AnNan_hospital]],
-["12:25",AnNan_hospital,Hsiaying],["12:35",[AnNan_hospital]],["17:20",end_stop,start_stop],["17:35",[AnNan_hospital]],["18:45",AnNan_hospital,Hsiaying],
+["12:25",AnNan_hospital,Hsiaying],["12:35",[AnNan_hospital]],["17:30",end_stop,start_stop],["17:35",[AnNan_hospital]],["18:45",AnNan_hospital,Hsiaying],
 ];

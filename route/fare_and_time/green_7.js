@@ -24,4 +24,4 @@ var TRA_Sinshih = 1; // 新市火車站
 var Sinshih = 2; // 新市
 var Fongrong = 3; // 豐榮
 green_7_time_go = [["06:50",Sinhua,TRA_Sinshih],["07:00",[[Fongrong,5]]],["10:00"],["17:25",[[Fongrong,5]]],["17:30"]];
-green_7_time_return = [["06:25",[[Sinshih,5]]],["07:00",TRA_Sinshih,Sinhua],["13:10"],["15:35"]];
+green_7_time_return = [["06:25",[[Sinshih,5]]],["07:00",TRA_Sinshih,Sinhua],["13:10"],["15:45"]];
