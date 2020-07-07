@@ -38,5 +38,5 @@ highway_bus_7408_main_stop_name = ["新營站","鹽水<br />分駐所","義竹",
 highway_bus_7408_main_stop_time_consume = [0, 24, 30, 46, 53, 63];
 highway_bus_7408_important_stop = [0, 1, 4, 5]; // 新營站, 鹽水分駐所, 南鯤鯓(代天府), 好美里
 var Sinying = 0; // 新營站
-highway_bus_7408_time_go = [["07:00"],["08:00"],["09:20"],["11:10",['L']],["12:40"],["14:25"],["17:30"],["18:40"]];
-highway_bus_7408_time_return = [["05:55",[[Sinying,2]]],["08:15",[[Sinying,2]]],["09:15",[[Sinying,2]]],["10:35",[[Sinying,2]]],["12:25",['L',[Sinying,2]]],["13:55",[[Sinying,2]]],["15:40",[[Sinying,2]]],["18:45",[[Sinying,2]]]];
+highway_bus_7408_time_go = [["07:00"],["09:20"],["11:10",['L']],["12:40"],["14:25"],["15:10"],["17:30"],["18:40"]];
+highway_bus_7408_time_return = [["05:55",[[Sinying,2]]],["08:15",[[Sinying,2]]],["10:35",[[Sinying,2]]],["12:25",['L',[Sinying,2]]],["13:55",[[Sinying,2]]],["15:40",[[Sinying,2]]],["16:25",[[Sinying,2]]],["18:45",[[Sinying,2]]]];
