@@ -24,7 +24,7 @@ tour_bus_99_holiday_time_go = [
 ["13:50",start_stop,end_stop],["14:20",start_stop,end_stop],["14:50",start_stop,end_stop],
 ["15:20",start_stop,end_stop],["15:50",start_stop,end_stop],["16:20",start_stop,end_stop],
 ["16:50",start_stop,Sunset_Platform],["17:20",start_stop,Sunset_Platform],["17:50",start_stop,Sunset_Platform],
-["18:20",start_stop,Sunset_Platform],["19:00",start_stop,Sunset_Platform]
+["18:20",start_stop,Sunset_Platform]
 ];
 tour_bus_99_holiday_time_return = [
 ["10:30",end_stop,start_stop],["11:00",end_stop,start_stop],
@@ -113,12 +113,12 @@ tour_bus_99_summervacation_time_go = [
 ["15:45",start_stop,end_stop]
 ];
 tour_bus_99_summervacation_time_return = [
-["10:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
-["11:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
-["12:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
-["13:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
-["14:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
-["15:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
-["16:55",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]],
-["18:15",end_stop,start_stop,[[Sihcao_Wildlife_Conservation_Area,-5]]]
+["10:55",end_stop,start_stop],
+["11:55",end_stop,start_stop],
+["12:55",end_stop,start_stop],
+["13:55",end_stop,start_stop],
+["14:55",end_stop,start_stop],
+["15:55",end_stop,start_stop],
+["16:55",end_stop,start_stop],
+["18:15",end_stop,start_stop]
 ];

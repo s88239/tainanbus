@@ -23,12 +23,12 @@
 <script type="text/javascript">
 	block_header();
 	block_route_map(null);
-	block_route_info(route_interval,'府城客運','<br />平日1~2小時1班<br />假日30分鐘1班','二段票<br />緩衝區：觀夕平台－四草野生動物保護區','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1099&locale=zh_TW',[['平日','normal'],['假日','holidaybird']]);
+	block_route_info(route_interval,'府城客運','<br />暑假平日1小時1班<br />假日30分鐘1班','二段票<br />緩衝區：觀夕平台－四草野生動物保護區','http://www.2384.com.tw/ebus/jsp/ajaxBus.jsp?pathId=1099&locale=zh_TW',[['暑假平日','summervacation'],['假日','holiday']]);
 	block_fare(22,'','觀夕平台<br /><span style="color:#CC2102;"><u>緩衝區：觀夕平台－四草野生動物保護區</u></span><br /><span style="color:green;">乘車起迄點跨越緩衝區以二段票收費</span>');
-	block_multiple_time_schedule( [['平日班表','normal'],['假日班表','holidaybird']], '<p>逢<span style="color: red;">星期四</span>城北路、城安路段聖母廟夜市，安明路四段直駛台17線；<br />週四七股鹽山17:15發班次不停靠「聖母廟(城安路)」。</p>\
+	block_multiple_time_schedule( [['暑假平日','summervacation'],['假日班表','holiday']], '<p>逢<span style="color: red;">星期四</span>城北路、城安路段聖母廟夜市，安明路四段直駛台17線；<br />週四七股鹽山17:15發班次不停靠「聖母廟(城安路)」。</p>\
 		<h2><font color="blue">七股鹽山 ─ 黑面琵鷺賞鳥亭</font></h2>\
 		<h3>黑面琵鷺賞鳥路線【10月-隔年4月】</h3>\
-		<h3><span style="color:red;">【自108年11月02日起，每逢假日(包含寒假平日)行駛】</span></h3>\
+		<h3><span style="color:red;">【108年11月02日至109年03月31日，每逢假日(包含寒假平日)行駛】</span></h3>\
 		<table>\
 			<tr><th>七股鹽山<br />發車</th><th>黑面琵鷺賞鳥亭<br />發車</th></tr>\
 			<tr><td>10:55</td><td>11:40</td></tr>\
@@ -36,7 +36,7 @@
 			<tr><td>13:55</td><td>14:40</td></tr>\
 			<tr><td>15:25</td><td>16:10</td></tr>\
 			<tr><td>16:55</td><td><span style="font-weight: bold;">*17:40</span><br />(至臺南轉運站)</td></tr>\
-		</table><h3>本賞鳥季班表已整合到假日班表中</h3><br /><h3>「*」班次表示抵達六孔管理站後，下一站接到99安平台江線-「聖母廟(城安路)」站往臺南轉運站</h3>');
+		</table><br /><h3>「*」班次表示抵達六孔管理站後，下一站接到99安平台江線-「聖母廟(城安路)」站往臺南轉運站</h3>');
 	block_transfer(transfer_tainan_railway_station + transfer_cigu_salt_mountain);
 	block_copyright();
 </script>
